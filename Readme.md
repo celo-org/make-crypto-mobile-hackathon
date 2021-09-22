@@ -1,6 +1,6 @@
 # ⚡ Mobile📱 DeFi Hackathon ⚡
 
-DeFi Hackathon is a 4-week hackathon, focused on growing Mobile DeFi, NFT's and developer tooling on the Celo platform.
+Mobile DeFi Hackathon is a 4-week hackathon, focused on growing Mobile DeFi, NFT's and developer tooling on the Celo platform.
 
 ## Timeline
 
@@ -38,7 +38,7 @@ DeFi Hackathon is a 4-week hackathon, focused on growing Mobile DeFi, NFT's and 
     -  Utilize your project name as the title for your initial pull Requests
     -  Provide a brief project description within the pull request comment
 
-***Congrats, your officially a Make Crypto Mobile Hackathon participant!***
+***Congrats, your officially a Mobile DeFi Hackathon participant!***
 
 
 ## Developer tools and resources
