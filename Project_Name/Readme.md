@@ -6,6 +6,8 @@ Please [__fork this repo__](https://help.github.com/articles/fork-a-repo/) and u
 ## Project Name
 ### Team name
 
+##### Region location
+
 ##### Team Members
 - Teammate 1, role
 - Teammate 2, role
