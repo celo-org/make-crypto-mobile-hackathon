@@ -1,14 +1,30 @@
-# ⚡ Mobile📱 DeFi Hackathon ⚡
+# ⚡ Make Crypto Mobile 📱 Hackathon ⚡
 
-Mobile DeFi Hackathon is a 4-week hackathon, focused on growing Mobile DeFi, NFT's and developer tooling on the Celo platform.
+Make Crypto Mobile Hackathon is a 4-week hackathon, focused on growing Mobile DeFi (#MoFi), NFT's and developer tooling on the Celo platform.
+
+## Hackathon Tracks: 
+
+ - __DeFi Track:__ 
+ 	- Build decentralized finance applications
+ 	- Tools
+ 	- Infrastructure
+ - __NFT, Gaming and Creator Track:__ 
+ 	- Build an application to mint, sell or manage non-fungible tokens
+ - __Infrastructure and Web3 Track:__ 
+ 	- Build or update existing decentralize web applications
+ - __Green Track:__ 
+ 	- Build or update an SDK to improve developer resources
+ - __Interoperability Track:__ 
+ 	- Build or update cross-chain applications
+ 	- Cross-chain tooling
 
 ## Timeline
 
- - Hackathon Oct 1 - Oct 29
- - Hackathon Kick off - Oct 1, 2021
- - Submissions Due - Oct 29, 2021
- - Evaluations - November 1-9, 2021
- - Winners announced - November 10, 2021
+ - Hackathon Oct 8th - Nov 5th, 2021
+ - Hackathon Kick off - Oct 8th, 2021
+ - Submissions Due - Nov 5th, 2021
+ - Evaluations - November 6th-14th, 2021
+ - Winners announced - November 15th, 2021
 
 ## Process
 **Hackathon participats will need to:**
