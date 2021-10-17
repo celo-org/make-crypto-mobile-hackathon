@@ -6,7 +6,7 @@
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "rootDir": "farm-bot/codebase/src",
+    "rootDir": "./",
     "outDir": "farm-bot/codebase/dist",
     "baseUrl": "./",
     "sourceMap": true,
