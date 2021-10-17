@@ -66,3 +66,12 @@ _site
 vendor
 _config.gh-pages.yml
 Gemfile.lock
+
+# IDE
+.idea/
+
+# dist
+farm-bot/codebase/dist/
+
+# node
+node_modules/
