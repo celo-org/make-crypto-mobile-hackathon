@@ -75,3 +75,7 @@ farm-bot/codebase/dist/
 
 # node
 node_modules/
+
+# hardhat
+farm-bot/codebase/artifacts
+farm-bot/codebase/hardhat-cache

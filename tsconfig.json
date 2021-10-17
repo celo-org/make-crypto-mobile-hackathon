@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
+    "target": "es2018",
     "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "rootDir": "farm-bot/codebase/src",
+    "rootDir": "./",
     "outDir": "farm-bot/codebase/dist",
     "baseUrl": "./",
     "sourceMap": true,
     "strict": true,
-    "target": "es2017",
-    "lib": ["es7", "es2017"],
-    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },
   "include": [
     "farm-bot/codebase/src/**/*.ts",
+    "farm-bot/codebase/scripts/**/*.ts",
+    "farm-bot/codebase/test/**/*.ts",
+    "./typechain"
   ],
-  "exclude": ["node_modules/**/*"]
+  "exclude": ["node_modules/**/*", "farm-bot/codebase/dist"],
+  "files": ["./hardhat.config.ts"]
 }
