@@ -68,7 +68,7 @@ _config.gh-pages.yml
 Gemfile.lock
 
 # IDE
-.idea
+.idea/
 
 # dist
-farm-bot/codebase/dist
+farm-bot/codebase/dist/
