@@ -1,0 +1,20 @@
+{
+  "name": "farm-bot",
+  "version": "0.0.0",
+  "description": "Decentralized platform for re-investment of yield farming rewards to gain compound interest automatically on Ubeswap",
+  "main": "farm-bot/codebase/dist/index.js",
+  "repository": "git@github.com:lisaqyli/make-crypto-mobile-hackathon.git",
+  "contributors": [
+    {
+      "name": "Charlie Andrews-Jubelt"
+    },
+    {
+      "name": "Lisa Li"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
+}
