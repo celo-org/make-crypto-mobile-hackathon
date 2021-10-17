@@ -72,3 +72,6 @@ Gemfile.lock
 
 # dist
 farm-bot/codebase/dist/
+
+# node
+node_modules/
