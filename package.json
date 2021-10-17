@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {},
   "scripts": {
+    "compile-contracts": "yarn hardhat compile",
     "test": "ts-mocha ./farm-bot/codebase/test/**/*.ts"
   },
   "devDependencies": {

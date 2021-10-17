@@ -38,6 +38,11 @@ const config: HardhatUserConfig = {
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
+  paths: {
+    sources: "./farm-bot/codebase/contracts",
+    artifacts: "./farm-bot/codebase/artifacts",
+    cache: "./farm-bot/codebase/hardhat-cache",
+  },
 };
 
 export default config;
