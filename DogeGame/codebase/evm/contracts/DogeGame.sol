@@ -45,7 +45,7 @@ contract Punchline is Ownable {
     uint score;
   }
 
-  uint constant noOfWinners = 10;
+  uint constant noOfWinners = 8;
   Winner[noOfWinners] public lastWinners;
 
   struct Allowance {
@@ -58,9 +58,7 @@ contract Punchline is Ownable {
   mapping (address => Allowance) public addressToAllowance;
 
   // STATE VARIABLES
-  uint public price = 40000000 gwei;  // 0.04 BNB
-  uint public prizePoolCut = 39000000 gwei; // 0.049 BNB
-
+  uint public price = 1 ether;  // 0.04 BNB
   uint public prizePool;
 
   string constant public defaultPunchline = 'Take Me Over!';
@@ -121,15 +119,6 @@ contract Punchline is Ownable {
   }
 
   function fullWithdrawal() public onlyOwner whenPaused {
-    // all allowances not withdrawn for 1 year check
-    uint allowanceAddressesLen = allowanceAddresses.length;
-    // @todo: limit array length
-    for(uint i = 0; i < allowanceAddressesLen; i++) {
-      if(addressToAllowance[allowanceAddresses[i]].timestamp > block.timestamp - 52 weeks) {
-        revert('Allowances must be untouched for 52 weeks to allow full balance withdrawal');
-      }
-    }
-
     uint amount = address(this).balance;
     if(amount == 0) {
       return;
@@ -139,11 +128,6 @@ contract Punchline is Ownable {
   }
 
   function ownerWithdraw(address _player) public onlyOwner {
-    // allowance not withdrawn for 1 year check
-    if(addressToAllowance[_player].timestamp > block.timestamp - 52 weeks) {
-      revert('Player`s allowance must be untouched for 52 weeks to allow withdrawal by owner');
-    }
-
     uint amount = addressToAllowance[_player].value;
     if(amount == 0) {
       return;
@@ -186,9 +170,8 @@ contract Punchline is Ownable {
     personIdToPerson[_personId].image = _image;
   }
 
-  function setPrices(uint _price, uint _prizePoolCut) external onlyOwner whenPaused {
+  function setPrice(uint _price) external onlyOwner whenPaused {
     price = _price;
-    prizePoolCut = _prizePoolCut;
   }
 
   function getPerson(uint _personId) public view returns(Person memory person) {
@@ -222,9 +205,7 @@ contract Punchline is Ownable {
     person.timestamp = block.timestamp;
 
     // distribute payment
-    prizePool += prizePoolCut;
-    addressToAllowance[owner()].value += msg.value - prizePoolCut;
-
+    prizePool += price
     emit Purchase(msg.sender, _personId, _punchline);
   }
 
@@ -238,9 +219,10 @@ contract Punchline is Ownable {
       if(person.owner != owner()) {
         uint score = block.timestamp - person.timestamp;
         increaseScore(person.owner, score);
+        // update timestamp
+        person.timestamp = block.timestamp;
+        person.owner = owner()
       }
-      // update timestamp
-      person.timestamp = block.timestamp;
     }
     state = State.retaken;
   }
@@ -248,20 +230,20 @@ contract Punchline is Ownable {
   function distributePrizePool() external onlyOwner whenPaused {
     require(state == State.retaken, "state should be retaken");
     address[] memory winners = getTop(noOfWinners);
-
     uint[] memory prizes = new uint[](noOfWinners);
 
-    prizes[0] = prizePool * 21 / 50; // 42%
-    prizes[1] = prizePool * 11 / 50; // 22%
-    prizes[2] = prizes[1] / 2; // 11%
-    prizes[3] = prizePool * 7 / 100; // 7%
-    prizes[4] = prizePool / 20;
-    prizes[5] = prizePool / 25;
-    prizes[6] = prizePool * 3 / 100;
-    prizes[7] = prizePool / 40;
-    prizes[8] = prizePool / 50;
-    prizes[9] = prizePool - prizes[0] - prizes[1]
+    prizes[0] = prizePool * 16 / 50;  // 32%
+    prizes[1] = prizePool * 11 / 50;  // 22%
+    prizes[2] = prizes[1] / 2;        // 11%
+    prizes[3] = prizePool * 2 / 25;   // 8%
+    prizes[4] = prizePool * 3 / 50;   // 6%
+    prizes[5] = prizePool / 20;       // 5%
+    prizes[6] = prizePool / 25;       // 4%
+    prizes[7] = prizePool / 50;       // 2%
+/*
+    uint devCut  = prizePool - prizes[0] - prizes[1]
       - prizes[2] - prizes[3] - prizes[4] - prizes[5] - prizes[6] - prizes[7] - prizes[8];
+*/
 
     for(uint i = 0; i < noOfWinners; i++) {
       address winner = winners[i];
@@ -281,6 +263,11 @@ contract Punchline is Ownable {
         score: scores[winner]
       });
     }
+
+    // give money to the dev
+    addressToAllowance[owner()].value += prizePool - prizes[0] - prizes[1]
+      - prizes[2] - prizes[3] - prizes[4] - prizes[5] - prizes[6] - prizes[7];
+    addressToAllowance[owner()].timestamp = block.timestamp;
 
     prizePool = 0;
     state = State.distributed;
