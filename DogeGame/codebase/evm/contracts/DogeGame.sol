@@ -205,7 +205,7 @@ contract Punchline is Ownable {
     person.timestamp = block.timestamp;
 
     // distribute payment
-    prizePool += price
+    prizePool += price;
     emit Purchase(msg.sender, _personId, _punchline);
   }
 
@@ -221,7 +221,7 @@ contract Punchline is Ownable {
         increaseScore(person.owner, score);
         // update timestamp
         person.timestamp = block.timestamp;
-        person.owner = owner()
+        person.owner = owner();
       }
     }
     state = State.retaken;
@@ -240,10 +240,6 @@ contract Punchline is Ownable {
     prizes[5] = prizePool / 20;       // 5%
     prizes[6] = prizePool / 25;       // 4%
     prizes[7] = prizePool / 50;       // 2%
-/*
-    uint devCut  = prizePool - prizes[0] - prizes[1]
-      - prizes[2] - prizes[3] - prizes[4] - prizes[5] - prizes[6] - prizes[7] - prizes[8];
-*/
 
     for(uint i = 0; i < noOfWinners; i++) {
       address winner = winners[i];
