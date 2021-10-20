@@ -1,7 +1,9 @@
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
-require("@nomiclabs/hardhat-ethers");
+require("@nomiclabs/hardhat-ethers")
+require("@ubeswap/hardhat-celo")
+const { fornoURLs, ICeloNetwork } = require("@ubeswap/hardhat-celo")
 
 const mnemonic = process.env.NOMIC
 
@@ -27,6 +29,16 @@ const mnemonic = process.env.NOMIC
       accounts: {
         mnemonic
       },
+    },
+    alfajores: {
+      url: fornoURLs[ICeloNetwork.ALFAJORES],
+      accounts: {
+        mnemonic
+      },
+      chainId: ICeloNetwork.ALFAJORES,
+      live: true,
+      gasPrice: 101 * 10 ** 6,
+      gas: 8000000,
     },
   },
   paths: {
