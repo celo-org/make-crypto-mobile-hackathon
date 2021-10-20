@@ -1,0 +1,162 @@
+.App {
+  text-align: center;
+}
+
+/* bootstrap layout hacks */
+
+div.container {
+  padding: 0;
+}
+
+div.row {
+  margin: 0;
+}
+
+/* rules-update */
+
+.rules-update {
+  border-bottom: 2px solid;
+  border-top: 2px solid;
+  font: courier
+}
+
+/* cross */
+
+.person.btn-light, header, #paused, .telegram, .rules-update {
+  background: rgba(248,249,250, 0.4);
+}
+
+img.icon {
+  width: 20px !important;
+  height: 20px;
+  vertical-align: sub;
+}
+
+/* header */
+
+header {
+  font-family: 'Special Elite', cursive;
+  padding-bottom: 2px;
+  border-bottom: 2px solid;
+}
+
+header h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 2.6rem;
+  padding: 0 5px;
+}
+
+header .currency {
+  line-height: 22px;
+}
+
+header .col, header .col-1, header .col-10, header .col-11, header .col-12, header .col-2, header .col-3, header .col-4, header .col-5, header .col-6, header .col-7, header .col-8, header .col-9, header .col-auto, header .col-lg, header .col-lg-1, header .col-lg-10, header .col-lg-11, header .col-lg-12, header .col-lg-2, header .col-lg-3, header .col-lg-4, header .col-lg-5, header .col-lg-6, header .col-lg-7, header .col-lg-8, header .col-lg-9, header .col-lg-auto, header .col-md, header .col-md-1, header .col-md-10, header .col-md-11, header .col-md-12, header .col-md-2, header .col-md-3, header .col-md-4, header .col-md-5, header .col-md-6, header .col-md-7, header .col-md-8, header .col-md-9, header .col-md-auto, header .col-sm, header .col-sm-1, header .col-sm-10, header .col-sm-11, header .col-sm-12, header .col-sm-2, header .col-sm-3, header .col-sm-4, header .col-sm-5, header .col-sm-6, header .col-sm-7, header .col-sm-8, header .col-sm-9, header .col-sm-auto, header .col-xl, header .col-xl-1, header .col-xl-10, header .col-xl-11, header .col-xl-12, header .col-xl-2, header .col-xl-3, header .col-xl-4, header .col-xl-5, header .col-xl-6, header .col-xl-7, header .col-xl-8, header .col-xl-9, header .col-xl-auto {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+header .endsin div:last-child {
+  font-size: 14px;
+}
+
+/* person */
+
+.rect{
+  width: 100%;
+  padding-bottom: 111.11%;
+  position: relative;
+}
+
+.portrait {
+  width: 100%;
+}
+
+.rect .portrait {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 48%;
+  border-bottom-right-radius: 48%;
+}
+
+.rect .circle {
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  width: 100%;
+  background: rgba(255, 240, 240, 0.5);
+  border-width: 10px;
+  border-color: #020202;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+
+.person {
+  width: 100%;
+}
+
+.person .punchline {
+  border: 10px solid #00C0E8;
+  border-radius: 10px;
+  background: #8ADBFF;
+  transform: skew(-10deg, 0deg);
+  overflow: overlay;
+}
+
+.person .punchline table {
+  width: 100%;
+}
+
+.person .punchline td {
+  height: 80px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.yours {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 23px;
+}
+
+/* currency */
+
+.currency {
+    max-width: 15ch;
+    font-size: 18px;
+    text-align: right;
+    line-height: 18px;
+    font-weight: 500;
+    vertical-align: middle;
+    background: no-repeat url('/bnb.svg');
+    background-size:contain;
+    padding-left: 22px;
+    font-family: Arial;
+}
+
+.currency.matic {
+  background: no-repeat url('/matic.png');
+  background-size:contain;
+  padding-left: 26px;
+}
+
+/* rules */
+#rules {
+  font-size: 12px
+}
+
+#rules .general {
+  font-size: 16px
+}
+
+#telegram img {
+  height: 24px;
+  margin-right: 2px;
+}
+
+/* leaderboard */
+.modal-body {
+  overflow: scroll;
+}
