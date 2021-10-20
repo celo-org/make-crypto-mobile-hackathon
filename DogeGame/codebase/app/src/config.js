@@ -7,17 +7,17 @@ const isTestnet = window.location.href.includes('testnet')
 const wsProvider = (() => {
   if(isDev) return 'ws://localhost:8545'
   if(isTestnet) return 'wss://speedy-nodes-nyc.moralis.io/92fd62a6c099c05d87a5e3c0/bsc/testnet/ws'
-  return 'wss://speedy-nodes-nyc.moralis.io/92fd62a6c099c05d87a5e3c0/bsc/mainnet/ws'
+  return 'wss://alfajores-forno.celo-testnet.org/ws'
 })()
 
 const networkId = (() => {
     if(isDev) return 31337
     if(isTestnet) return 97
-    return 56
+    return 44787
 })()
 
 const telegramUrl = (() => {
-  return '//t.me/OxPunchline'
+  return '//t.me/TheDogeGame'
 })()
 
 console.log(`isDev: ${isDev}`)
@@ -47,8 +47,8 @@ module.exports = {
         onTimeout: false
     }
   },
-  leaderboardSize: 12,
-  rpc: {
+  leaderboardSize: 10,
+  rpc: { // for wallet connect
     31337: 'http://localhost:8545',
     56: 'https://speedy-nodes-nyc.moralis.io/92fd62a6c099c05d87a5e3c0/bsc/mainnet',
     97: 'https://speedy-nodes-nyc.moralis.io/92fd62a6c099c05d87a5e3c0/bsc/testnet'
