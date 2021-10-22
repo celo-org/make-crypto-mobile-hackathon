@@ -79,7 +79,7 @@ const Header = ({web3Store: { web3User, owner, score, prizePool, scoreNow, setBa
             }
           }
         }>
-          0xPunchline
+          DogeGame
         </h1>
         <ButtonGroup className='mb-2'>
           <Button variant='outline-dark'onClick={() => {

@@ -49,6 +49,7 @@ module.exports = {
   },
   leaderboardSize: 10,
   rpc: { // for wallet connect
+    44787: 'http://localhost:8545',
     31337: 'http://localhost:8545',
     56: 'https://speedy-nodes-nyc.moralis.io/92fd62a6c099c05d87a5e3c0/bsc/mainnet',
     97: 'https://speedy-nodes-nyc.moralis.io/92fd62a6c099c05d87a5e3c0/bsc/testnet'

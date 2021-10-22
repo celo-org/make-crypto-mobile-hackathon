@@ -3,7 +3,7 @@
 import Web3 from "web3";
 import { observable, decorate , when } from "mobx";
 import { toJS  } from "mobx";
-import PunchlineAbi from "../abis/Punchline.json";
+import PunchlineAbi from "../abis/DogeGame.json";
 import config from '../config'
 import personsOverride from '../personsOverride'
 import WalletConnectProvider from "@walletconnect/web3-provider";
@@ -47,7 +47,7 @@ class Web3Store {
   punchlineAddress
 
   constructor() {
-    this.PunchlineAddress = require( "../abis/Punchline." + config.networkId + ".json")
+    this.PunchlineAddress = require( "../abis/DogeGame." + config.networkId + ".json")
     this.setWeb3WS()
     this.setPunchlineWSInstance()
     this.setEndsOn()
