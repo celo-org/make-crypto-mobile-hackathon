@@ -4,6 +4,7 @@
 require("@nomiclabs/hardhat-ethers")
 require("@ubeswap/hardhat-celo")
 const { fornoURLs, ICeloNetwork } = require("@ubeswap/hardhat-celo")
+require("./tasks/unpause")
 
 const mnemonic = process.env.NOMIC
 

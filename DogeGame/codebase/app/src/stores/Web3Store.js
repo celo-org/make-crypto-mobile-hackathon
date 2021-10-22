@@ -373,7 +373,7 @@ console.log(toJS(this.lastWinners))
         return alert(config.noWalletMessage)
       }
 
-      const value = this.owner === this.web3User ? 0 : this.price
+      const value = this.price
 
       await this.punchlineActionInstance.methods.buy(id, punch).send({
         from: this.web3User,
