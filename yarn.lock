@@ -30,6 +30,11 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@celo-tools/celo-ethers-wrapper@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@celo-tools/celo-ethers-wrapper/-/celo-ethers-wrapper-0.0.5.tgz#a0bd4553e59c0fc4e97dcec97f719fd27dc4498b"
+  integrity sha512-an5TaLv/esjQLEYtF79f8isBUtHEN+ZiHci2H4gVTEAgRgS+nSp5QCq8/LV/biAh9kJJEpojEzlxJALSKu8Klg==
+
 "@cspotcode/source-map-consumer@0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-consumer/-/source-map-consumer-0.8.0.tgz#33bf4b7b39c178821606f669bbc447a6a629786b"
@@ -1088,6 +1093,19 @@
   dependencies:
     "@typescript-eslint/types" "4.33.0"
     eslint-visitor-keys "^2.0.0"
+
+"@ubeswap/hardhat-celo@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@ubeswap/hardhat-celo/-/hardhat-celo-0.9.0.tgz#5734cdd20a078fe985ee2987bd4227b18fc0fc9c"
+  integrity sha512-sfCV1JuWXZey/fkKtmgX2ML8Rdbba9SPul2V+Nfpe/oNWCNnIZoAQpTZhJj9QklaCG5MFUR60E2dS0uXIcN1yA==
+  dependencies:
+    "@celo-tools/celo-ethers-wrapper" "^0.0.5"
+    "@ubeswap/solidity-create2-deployer" "^0.6.1"
+
+"@ubeswap/solidity-create2-deployer@^0.6.1":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@ubeswap/solidity-create2-deployer/-/solidity-create2-deployer-0.6.2.tgz#243673edf8ec546de06898b4e5e73302ee85be2c"
+  integrity sha512-0akBfsjNyaC+ZUuZ5eJhK4MFmNo3kiogvFgVSmFpHyEQFNkNuKI2KPJ+0STg8wH+zLhOiuIomvMLNqfWF7qpRg==
 
 "@yarnpkg/lockfile@^1.1.0":
   version "1.1.0"
