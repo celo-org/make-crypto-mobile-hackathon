@@ -79,7 +79,7 @@ import {
   // LendOverview,
   // LendToken,
   Settings,
-  // Stream,
+  NewGrant,
   // Swap,
   Dashboard,
 } from '../_pages';
@@ -92,12 +92,13 @@ export default function App() {
           <Route exact path="/" component={Dashboard} />
           <Route path="/settings" component={Settings} />
           <Route path="/transfer" component={Transfer} />
+          <Route path="/new-grant" component={NewGrant} />
           {/*<Route path="/earn" component={Earn} />
           <Route path="/vote" component={Vote} />
           <Route exact path="/lend" component={LendOverview} />
           <Route path="/lend/:token" component={LendToken} />
           
-          <Route path="/stream" component={Stream} />
+          
           <Route path="/swap" component={Swap} /> */}
         </Switch>
       </WithLayout>

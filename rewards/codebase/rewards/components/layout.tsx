@@ -189,7 +189,7 @@ const tabs: SidebarOption[] = [
     link: '/vote',
   },
   {
-    name: 'Stream',
+    name: 'New Grant',
     icon: (
       <svg
         className="h-4"
@@ -212,8 +212,7 @@ const tabs: SidebarOption[] = [
         />
       </svg>
     ),
-    link: '/stream',
-    badge: 'BETA',
+    link: '/new-grant',
   },
   {
     name: 'Settings',

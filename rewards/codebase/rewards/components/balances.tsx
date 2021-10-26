@@ -42,7 +42,6 @@ export function Balances() {
           headers={[
             { displayName: 'Token', sortableProperty: 'name' },
             { displayName: 'Balance', sortableProperty: 'balance' },
-            { displayName: 'Value', sortableProperty: 'value' },
           ]}
           onHeaderClick={(property, desc) => {
             setSort({ property, desc });
@@ -69,7 +68,6 @@ export function Balances() {
                   </div>
                 </div>,
                 <span className={''}>{formatAmount(balances[ticker])}</span>,
-                <span className={''}>Coming soon...</span>,
               ];
             })}
         />
