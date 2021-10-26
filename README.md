@@ -10,6 +10,8 @@ The additional packages required are:
 - [Web3](https://www.npmjs.com/package/web3)
 - [Contractkit](https://www.npmjs.com/package/@celo/contractkit)
 
+[Install Valora here.](https://valoraapp.com/)
+
 ## Run it
 
 Install dependencies with
@@ -24,11 +26,12 @@ Run the demo application with
 yarn start
 ```
 
-The app should show a "Connect" button when there is not a wallet connected. It should show a "Send cUSD" button when there is a wallet connected. The recipient and amount of the transaction are hardcoded, but feel free to update and edit.
+The app should show a "Connect" button when there is not a wallet connected. A wallet connect modal will appear that you should scan with Valora.
 
-##
+Once the app is connected, it should show a "Send cUSD" button. Click the button and Valora will ask you to approve the transaction. The recipient and amount of the transaction are hardcoded, but feel free to edit and test. The transaction receipt will be logged in the browser console.
+
+## Additional Info
 
 You can [read more about using Wallet Connect v1 here](https://docs.walletconnect.com/1.0/).
-
 
 This example was started with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html). Unnecessary files were deleted.
