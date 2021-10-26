@@ -1,0 +1,293 @@
+{
+  "contractName": "ReleaseGoldProxy",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "ImplementationSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerSet",
+      "type": "event"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_getImplementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_getOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "callbackData",
+          "type": "bytes"
+        }
+      ],
+      "name": "_setAndInitializeImplementation",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "_setImplementation",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "_transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.13+commit.5b0b510c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"ImplementationSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"OwnerSet\",\"type\":\"event\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"constant\":true,\"inputs\":[],\"name\":\"_getImplementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_getOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"callbackData\",\"type\":\"bytes\"}],\"name\":\"_setAndInitializeImplementation\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"_setImplementation\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"_transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"_setAndInitializeImplementation(address,bytes)\":{\"details\":\"Throws if the initialization callback fails.If the target contract does not need initialization, use setImplementation instead.\",\"params\":{\"callbackData\":\"The abi-encoded function call to perform in the implementation contract.\",\"implementation\":\"Address of the new target contract.\"}},\"_setImplementation(address)\":{\"details\":\"If the target contract needs to be initialized, call setAndInitializeImplementation instead.\",\"params\":{\"implementation\":\"Address of the new target contract.\"}},\"_transferOwnership(address)\":{\"params\":{\"newOwner\":\"Address of the new owner account.\"}}}},\"userdoc\":{\"methods\":{\"_getImplementation()\":{\"notice\":\"Returns the implementation address.\"},\"_getOwner()\":{\"notice\":\"Returns the Proxy owner's address.\"},\"_setAndInitializeImplementation(address,bytes)\":{\"notice\":\"Sets the address of the implementation contract and calls into it.\"},\"_setImplementation(address)\":{\"notice\":\"Sets the address of the implementation contract.\"},\"_transferOwnership(address)\":{\"notice\":\"Transfers ownership of Proxy to a new owner.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/alex/celo/celo-monorepo/packages/protocol/contracts/governance/proxies/ReleaseGoldProxy.sol\":\"ReleaseGoldProxy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/alex/celo/celo-monorepo/packages/protocol/contracts/common/Proxy.sol\":{\"keccak256\":\"0x6c84c5def8e1d1cc3b5ee67a65701a1bd606caa8e48e9be10a651b7ffa6f04fb\",\"urls\":[\"bzz-raw://b24af34d9f16a7d84670f94840f76a599bb7a6796883d634cf45c4aaed41f880\",\"dweb:/ipfs/QmbnzXNnc5G5jUKtegabxK1BnPcSWJkyJtv8N7n238paWB\"]},\"/Users/alex/celo/celo-monorepo/packages/protocol/contracts/governance/proxies/ReleaseGoldProxy.sol\":{\"keccak256\":\"0xe5f8254e0c1900a18f7c51f95118f2d9cd0a953509208da4c149259bb5ba507c\",\"urls\":[\"bzz-raw://3573b6e9f364640d04e9d8c2409c13e08e4c89970e2042467ab6a96e3868d458\",\"dweb:/ipfs/QmVewnbiwMj6dFzVE9BCL97Rdm5uxGtuUxmJQkeUiJNSSf\"]},\"openzeppelin-solidity/contracts/utils/Address.sol\":{\"keccak256\":\"0x1a8e5072509c5ea7365eb1d48030b9be865140c8fb779968da0a459a0e174a11\",\"urls\":[\"bzz-raw://03335b7b07c7c8c8d613cfdd8ec39a0b5ec133ee510bf2fe6cc5a496767bef4b\",\"dweb:/ipfs/Qmebp4nzPja645c9yXSdJkGq96oU3am3LUnG2K3R7XxyKf\"]}},\"version\":1}",
+  "bytecode": "0x60806040526100133361001860201b60201c565b610148565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100bb576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260118152602001807f6f776e65722063616e6e6f74206265203000000000000000000000000000000081525060200191505060405180910390fd5b6000600160405180807f656970313936372e70726f78792e61646d696e000000000000000000000000008152506013019050604051809103902060001c0360001b90508181558173ffffffffffffffffffffffffffffffffffffffff167f50146d0e3c60aa1d17a70635b05494f864e86144a2201275021014fbf08bafe260405160405180910390a25050565b610a22806101576000396000f3fe60806040526004361061004a5760003560e01c806303386ba3146101e757806342404e0714610280578063bb913f41146102d7578063d29d44ee14610328578063f7e6af8014610379575b6000600160405180807f656970313936372e70726f78792e696d706c656d656e746174696f6e00000000815250601c019050604051809103902060001c0360001b9050600081549050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610136576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260158152602001807f4e6f20496d706c656d656e746174696f6e20736574000000000000000000000081525060200191505060405180910390fd5b61013f816103d0565b6101b1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260188152602001807f496e76616c696420636f6e74726163742061646472657373000000000000000081525060200191505060405180910390fd5b60405136810160405236600082376000803683855af43d604051818101604052816000823e82600081146101e3578282f35b8282fd5b61027e600480360360408110156101fd57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019064010000000081111561023a57600080fd5b82018360208201111561024c57600080fd5b8035906020019184600183028401116401000000008311171561026e57600080fd5b909192939192939050505061041b565b005b34801561028c57600080fd5b506102956105c1565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156102e357600080fd5b50610326600480360360208110156102fa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061060d565b005b34801561033457600080fd5b506103776004803603602081101561034b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506107bd565b005b34801561038557600080fd5b5061038e610871565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008060007fc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a47060001b9050833f915080821415801561041257506000801b8214155b92505050919050565b610423610871565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146104c3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f73656e64657220776173206e6f74206f776e657200000000000000000000000081525060200191505060405180910390fd5b6104cc8361060d565b600060608473ffffffffffffffffffffffffffffffffffffffff168484604051808383808284378083019250505092505050600060405180830381855af49150503d8060008114610539576040519150601f19603f3d011682016040523d82523d6000602084013e61053e565b606091505b508092508193505050816105ba576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f696e697469616c697a6174696f6e2063616c6c6261636b206661696c6564000081525060200191505060405180910390fd5b5050505050565b600080600160405180807f656970313936372e70726f78792e696d706c656d656e746174696f6e00000000815250601c019050604051809103902060001c0360001b9050805491505090565b610615610871565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146106b5576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f73656e64657220776173206e6f74206f776e657200000000000000000000000081525060200191505060405180910390fd5b6000600160405180807f656970313936372e70726f78792e696d706c656d656e746174696f6e00000000815250601c019050604051809103902060001c0360001b9050610701826103d0565b610773576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260188152602001807f496e76616c696420636f6e74726163742061646472657373000000000000000081525060200191505060405180910390fd5b8181558173ffffffffffffffffffffffffffffffffffffffff167fab64f92ab780ecbf4f3866f57cee465ff36c89450dcce20237ca7a8d81fb7d1360405160405180910390a25050565b6107c5610871565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610865576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f73656e64657220776173206e6f74206f776e657200000000000000000000000081525060200191505060405180910390fd5b61086e816108bd565b50565b600080600160405180807f656970313936372e70726f78792e61646d696e000000000000000000000000008152506013019050604051809103902060001c0360001b9050805491505090565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610960576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260118152602001807f6f776e65722063616e6e6f74206265203000000000000000000000000000000081525060200191505060405180910390fd5b6000600160405180807f656970313936372e70726f78792e61646d696e000000000000000000000000008152506013019050604051809103902060001c0360001b90508181558173ffffffffffffffffffffffffffffffffffffffff167f50146d0e3c60aa1d17a70635b05494f864e86144a2201275021014fbf08bafe260405160405180910390a2505056fea265627a7a72315820b994a6301209f08d5fb7a18cf56d4ae6808e52f621cf1b8a1ae6421c5b58ed3464736f6c634300050d0032",
+  "deployedBytecode": "0x60806040526004361061004a5760003560e01c806303386ba3146101e757806342404e0714610280578063bb913f41146102d7578063d29d44ee14610328578063f7e6af8014610379575b6000600160405180807f656970313936372e70726f78792e696d706c656d656e746174696f6e00000000815250601c019050604051809103902060001c0360001b9050600081549050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610136576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260158152602001807f4e6f20496d706c656d656e746174696f6e20736574000000000000000000000081525060200191505060405180910390fd5b61013f816103d0565b6101b1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260188152602001807f496e76616c696420636f6e74726163742061646472657373000000000000000081525060200191505060405180910390fd5b60405136810160405236600082376000803683855af43d604051818101604052816000823e82600081146101e3578282f35b8282fd5b61027e600480360360408110156101fd57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019064010000000081111561023a57600080fd5b82018360208201111561024c57600080fd5b8035906020019184600183028401116401000000008311171561026e57600080fd5b909192939192939050505061041b565b005b34801561028c57600080fd5b506102956105c1565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156102e357600080fd5b50610326600480360360208110156102fa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061060d565b005b34801561033457600080fd5b506103776004803603602081101561034b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506107bd565b005b34801561038557600080fd5b5061038e610871565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008060007fc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a47060001b9050833f915080821415801561041257506000801b8214155b92505050919050565b610423610871565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146104c3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f73656e64657220776173206e6f74206f776e657200000000000000000000000081525060200191505060405180910390fd5b6104cc8361060d565b600060608473ffffffffffffffffffffffffffffffffffffffff168484604051808383808284378083019250505092505050600060405180830381855af49150503d8060008114610539576040519150601f19603f3d011682016040523d82523d6000602084013e61053e565b606091505b508092508193505050816105ba576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f696e697469616c697a6174696f6e2063616c6c6261636b206661696c6564000081525060200191505060405180910390fd5b5050505050565b600080600160405180807f656970313936372e70726f78792e696d706c656d656e746174696f6e00000000815250601c019050604051809103902060001c0360001b9050805491505090565b610615610871565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146106b5576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f73656e64657220776173206e6f74206f776e657200000000000000000000000081525060200191505060405180910390fd5b6000600160405180807f656970313936372e70726f78792e696d706c656d656e746174696f6e00000000815250601c019050604051809103902060001c0360001b9050610701826103d0565b610773576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260188152602001807f496e76616c696420636f6e74726163742061646472657373000000000000000081525060200191505060405180910390fd5b8181558173ffffffffffffffffffffffffffffffffffffffff167fab64f92ab780ecbf4f3866f57cee465ff36c89450dcce20237ca7a8d81fb7d1360405160405180910390a25050565b6107c5610871565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610865576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f73656e64657220776173206e6f74206f776e657200000000000000000000000081525060200191505060405180910390fd5b61086e816108bd565b50565b600080600160405180807f656970313936372e70726f78792e61646d696e000000000000000000000000008152506013019050604051809103902060001c0360001b9050805491505090565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610960576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260118152602001807f6f776e65722063616e6e6f74206265203000000000000000000000000000000081525060200191505060405180910390fd5b6000600160405180807f656970313936372e70726f78792e61646d696e000000000000000000000000008152506013019050604051809103902060001c0360001b90508181558173ffffffffffffffffffffffffffffffffffffffff167f50146d0e3c60aa1d17a70635b05494f864e86144a2201275021014fbf08bafe260405160405180910390a2505056fea265627a7a72315820b994a6301209f08d5fb7a18cf56d4ae6808e52f621cf1b8a1ae6421c5b58ed3464736f6c634300050d0032",
+  "sourceMap": "98:37:86:-;;;724:21:15;734:10;724:9;;;:21;;:::i;:::-;98:37:86;;5050:306:15;5129:1;5109:22;;:8;:22;;;;5101:52;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5159:16;400:1;364:32;;;;;;;;;;;;;;;;;;;356:41;;:45;348:54;;5159:33;;5308:8;5298;5291:26;5342:8;5333:18;;;;;;;;;;;;5050:306;;:::o;98:37:86:-;;;;;;;",
+  "deployedSourceMap": "98:37:86:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1041:30:15;586:1;541:41;;;;;;;;;;;;;;;;;;;533:50;;:54;520:71;;1041:56;;1104:29;1274:22;1268:29;1243:54;;1467:1;1434:35;;:21;:35;;;;1426:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1509:41;1528:21;1509:18;:41::i;:::-;1501:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1724:4;1718:11;1774:12;1753:19;1749:38;1743:4;1736:52;1832:12;1829:1;1808:19;1795:50;2151:1;2140;2118:12;2089:19;2058:21;2045:3;2023:137;2256:14;2309:4;2303:11;2358:14;2338:18;2334:39;2328:4;2321:53;2419:14;2416:1;2396:18;2381:53;2528:19;2561:1;2556:71;;;;2683:14;2663:18;2656:42;2556:71;2602:14;2582:18;2575:42;3358:356;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;3358:356:15;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;3358:356:15;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;3358:356:15;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;3358:356:15;;;;;;;;;;;;:::i;:::-;;3779:305;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3779:305:15;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;4333:419;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4333:419:15;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;4333:419:15;;;;;;;;;;;;;;;;;;;:::i;:::-;;2847:95;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2847:95:15;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;2847:95:15;;;;;;;;;;;;;;;;;;;:::i;:::-;;4816:230;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4816:230:15;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;686:610:144;746:4;1004:16;1030:19;1052:66;1030:88;;;;1219:7;1207:20;1195:32;;1258:11;1246:8;:23;;:42;;;;;1285:3;1273:15;;:8;:15;;1246:42;1238:51;;;;686:610;;;:::o;3358:356:15:-;882:11;:9;:11::i;:::-;868:25;;:10;:25;;;860:58;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3499:34;3518:14;3499:18;:34::i;:::-;3539:12;3557:24;3612:14;:27;;3640:12;;3612:41;;;;;30:3:-1;22:6;14;1:33;57:3;49:6;45:16;35:26;;3612:41:15;;;;;;;;;;;;;;;;;;;;14:1:-1;21;16:31;;;;75:4;69:11;64:16;;144:4;140:9;133:4;115:16;111:27;107:43;104:1;100:51;94:4;87:65;169:16;166:1;159:27;225:16;222:1;215:4;212:1;208:12;193:49;7:242;;16:31;36:4;31:9;;7:242;;3587:66:15;;;;;;;;3667:7;3659:50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;924:1;;3358:356;;;:::o;3779:305::-;3832:22;3862:30;586:1;541:41;;;;;;;;;;;;;;;;;;;533:50;;:54;520:71;;3862:56;;4051:22;4045:29;4027:47;;4019:61;;:::o;4333:419::-;882:11;:9;:11::i;:::-;868:25;;:10;:25;;;860:58;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4408:30;586:1;541:41;;;;;;;;;;;;;;;;;;;533:50;;:54;520:71;;4408:56;;4479:34;4498:14;4479:18;:34::i;:::-;4471:71;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4682:14;4658:22;4651:46;4732:14;4714:33;;;;;;;;;;;;924:1;4333:419;:::o;2847:95::-;882:11;:9;:11::i;:::-;868:25;;:10;:25;;;860:58;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2918:19;2928:8;2918:9;:19::i;:::-;2847:95;:::o;4816:230::-;4858:13;4879:16;400:1;364:32;;;;;;;;;;;;;;;;;;;356:41;;:45;348:54;;4879:33;;5027:8;5021:15;5012:24;;5004:38;;:::o;5050:306::-;5129:1;5109:22;;:8;:22;;;;5101:52;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5159:16;400:1;364:32;;;;;;;;;;;;;;;;;;;356:41;;:45;348:54;;5159:33;;5308:8;5298;5291:26;5342:8;5333:18;;;;;;;;;;;;5050:306;;:::o",
+  "source": "pragma solidity ^0.5.13;\n\nimport \"../../common/Proxy.sol\";\n\n/* solhint-disable no-empty-blocks */\ncontract ReleaseGoldProxy is Proxy {}\n",
+  "sourcePath": "/Users/alex/celo/celo-monorepo/packages/protocol/contracts/governance/proxies/ReleaseGoldProxy.sol",
+  "ast": {
+    "absolutePath": "/Users/alex/celo/celo-monorepo/packages/protocol/contracts/governance/proxies/ReleaseGoldProxy.sol",
+    "exportedSymbols": {
+      "ReleaseGoldProxy": [28572]
+    },
+    "id": 28573,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 28568,
+        "literals": ["solidity", "^", "0.5", ".13"],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:86"
+      },
+      {
+        "absolutePath": "/Users/alex/celo/celo-monorepo/packages/protocol/contracts/common/Proxy.sol",
+        "file": "../../common/Proxy.sol",
+        "id": 28569,
+        "nodeType": "ImportDirective",
+        "scope": 28573,
+        "sourceUnit": 5262,
+        "src": "26:32:86",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 28570,
+              "name": "Proxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5261,
+              "src": "127:5:86",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Proxy_$5261",
+                "typeString": "contract Proxy"
+              }
+            },
+            "id": 28571,
+            "nodeType": "InheritanceSpecifier",
+            "src": "127:5:86"
+          }
+        ],
+        "contractDependencies": [5261],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 28572,
+        "linearizedBaseContracts": [28572, 5261],
+        "name": "ReleaseGoldProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 28573,
+        "src": "98:37:86"
+      }
+    ],
+    "src": "0:136:86"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/alex/celo/celo-monorepo/packages/protocol/contracts/governance/proxies/ReleaseGoldProxy.sol",
+    "exportedSymbols": {
+      "ReleaseGoldProxy": [28572]
+    },
+    "id": 28573,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 28568,
+        "literals": ["solidity", "^", "0.5", ".13"],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:86"
+      },
+      {
+        "absolutePath": "/Users/alex/celo/celo-monorepo/packages/protocol/contracts/common/Proxy.sol",
+        "file": "../../common/Proxy.sol",
+        "id": 28569,
+        "nodeType": "ImportDirective",
+        "scope": 28573,
+        "sourceUnit": 5262,
+        "src": "26:32:86",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 28570,
+              "name": "Proxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5261,
+              "src": "127:5:86",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Proxy_$5261",
+                "typeString": "contract Proxy"
+              }
+            },
+            "id": 28571,
+            "nodeType": "InheritanceSpecifier",
+            "src": "127:5:86"
+          }
+        ],
+        "contractDependencies": [5261],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 28572,
+        "linearizedBaseContracts": [28572, 5261],
+        "name": "ReleaseGoldProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 28573,
+        "src": "98:37:86"
+      }
+    ],
+    "src": "0:136:86"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.13+commit.5b0b510c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2021-03-02T19:58:23.628Z",
+  "devdoc": {
+    "methods": {
+      "_setAndInitializeImplementation(address,bytes)": {
+        "details": "Throws if the initialization callback fails.If the target contract does not need initialization, use setImplementation instead.",
+        "params": {
+          "callbackData": "The abi-encoded function call to perform in the implementation contract.",
+          "implementation": "Address of the new target contract."
+        }
+      },
+      "_setImplementation(address)": {
+        "details": "If the target contract needs to be initialized, call setAndInitializeImplementation instead.",
+        "params": {
+          "implementation": "Address of the new target contract."
+        }
+      },
+      "_transferOwnership(address)": {
+        "params": {
+          "newOwner": "Address of the new owner account."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "_getImplementation()": {
+        "notice": "Returns the implementation address."
+      },
+      "_getOwner()": {
+        "notice": "Returns the Proxy owner's address."
+      },
+      "_setAndInitializeImplementation(address,bytes)": {
+        "notice": "Sets the address of the implementation contract and calls into it."
+      },
+      "_setImplementation(address)": {
+        "notice": "Sets the address of the implementation contract."
+      },
+      "_transferOwnership(address)": {
+        "notice": "Transfers ownership of Proxy to a new owner."
+      }
+    }
+  }
+}

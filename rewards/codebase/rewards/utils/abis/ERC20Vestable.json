@@ -1,0 +1,157 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "OneDeposited",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "beneficiary",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "vestingAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint32",
+				"name": "startDay",
+				"type": "uint32"
+			},
+			{
+				"internalType": "uint32",
+				"name": "duration",
+				"type": "uint32"
+			},
+			{
+				"internalType": "uint32",
+				"name": "cliffDuration",
+				"type": "uint32"
+			},
+			{
+				"internalType": "uint32",
+				"name": "interval",
+				"type": "uint32"
+			},
+			{
+				"internalType": "bool",
+				"name": "isRevocable",
+				"type": "bool"
+			}
+		],
+		"name": "CreateGrant",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "RegisterGrantor",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "deployedGrants",
+		"outputs": [
+			{
+				"internalType": "contract Grant",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			}
+		],
+		"name": "GetDeployedGrants",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "contract Grant",
+						"name": "grantAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "grantHolder",
+						"type": "address"
+					}
+				],
+				"internalType": "struct GrantFactory.grantPair[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			}
+		],
+		"name": "GetMyGrants",
+		"outputs": [
+			{
+				"internalType": "contract Grant[]",
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			}
+		],
+		"name": "IsGrantor",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

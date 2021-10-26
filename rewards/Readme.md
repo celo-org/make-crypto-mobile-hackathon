@@ -30,3 +30,8 @@ What do you need to do next to turn this prototype into a working solution?
 
 #### License
 This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
+
+// Workaround for  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+//
+export NODE_OPTIONS=--openssl-legacy-provider
+//
