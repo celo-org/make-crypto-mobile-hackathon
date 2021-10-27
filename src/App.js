@@ -17,6 +17,7 @@ class App extends React.Component {
 
     this.connect = this.connect.bind(this)
     this.sendcUSD = this.sendcUSD.bind(this)
+    this.disconnect = this.disconnect.bind(this)
   }
 
   connect = async() => {
@@ -52,6 +53,10 @@ class App extends React.Component {
     console.log(receipt)
   }
 
+  disconnect = async() => {
+    await this.state.provider.disconnect()
+  }
+
   render(){
 
     let button, account
@@ -79,6 +84,7 @@ class App extends React.Component {
           </p>
           {button}
           <p>{account}</p>
+          <button onClick={() => this.disconnect()}>Disconnect</button>
         </header>
       </div>
     )
