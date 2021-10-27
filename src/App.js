@@ -12,7 +12,7 @@ class App extends React.Component {
     this.state = {
       provider: null,
       kit: null,
-      someAddress: "0x9e643F570FAcB7Be198aC287d4926b18528b6E89"
+      someAddress: "0x5038ae19CDf0B623e6e8015249ecF58A1165D653"
     }
 
     this.connect = this.connect.bind(this)
@@ -54,7 +54,7 @@ class App extends React.Component {
 
   render(){
 
-    let button
+    let button, account
 
     if(this.state.provider !== null){
       button = (<div>
@@ -66,6 +66,10 @@ class App extends React.Component {
                 </div>)
     }
 
+    if(this.state.kit !== null){
+      account = this.state.kit.defaultAccount
+    }
+
     return(
       <div className="App">
         <header className="App-header">
@@ -74,6 +78,7 @@ class App extends React.Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
           {button}
+          <p>{account}</p>
         </header>
       </div>
     )
