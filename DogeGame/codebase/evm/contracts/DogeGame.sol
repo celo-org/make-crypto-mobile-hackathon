@@ -58,7 +58,7 @@ contract DogeGame is Ownable {
   mapping (address => Allowance) public addressToAllowance;
 
   // STATE VARIABLES
-  uint public price = 1 ether;  // 0.04 BNB
+  uint public price = 1 ether;
   uint public prizePool;
 
   string constant public defaultPunchline = 'Take Me Over!';
