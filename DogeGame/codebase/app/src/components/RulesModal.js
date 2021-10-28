@@ -13,9 +13,9 @@ class RulesModal extends React.Component {
     return (
       <dl id='rules'>
         <span className='general'>
-          <dd>Take Over an NFT to change the Punchline.</dd>
-          <dd>You score 1 point every second you hold the NFT.</dd>
-          <dd>The BNB you pay to Take Over goes into a Prize Pool</dd>
+          <dd>Take Over a dog & change it's bark.</dd>
+          <dd>You score 1 point every second you hold the dog.</dd>
+          <dd>The fee you pay to Take Over goes into a Prize Pool</dd>
           <dd>When the round ends we distribute the Prize Pool to the winners. We then reset the scores and start the next round.</dd>
         </span>
       </dl>
@@ -29,7 +29,7 @@ class RulesModal extends React.Component {
 
         <dt>When do the rounds end?</dt>
         <dd>
-          Rounds end on Tuesdays, Thursday and Sundays at 12PM UTC.
+          Rounds end everyday at 12PM UTC.
         </dd>
 
         <dt>How is the Prize Pool distributed?</dt>
@@ -39,7 +39,7 @@ class RulesModal extends React.Component {
           <Table striped bordered hover>
             <tbody>
               <tr>
-                <td>1st</td><td>42%</td>
+                <td>1st</td><td>32%</td>
               </tr>
               <tr>
                 <td>2nd</td><td>22%</td>
@@ -48,25 +48,22 @@ class RulesModal extends React.Component {
                 <td>3rd</td><td>11%</td>
               </tr>
               <tr>
-                <td>4th</td><td>7%</td>
+                <td>4th</td><td>8%</td>
               </tr>
               <tr>
-                <td>5th</td><td>5%</td>
+                <td>5th</td><td>6%</td>
               </tr>
               <tr>
-                <td>6th</td><td>4%</td>
+                <td>6th</td><td>5%</td>
               </tr>
               <tr>
-                <td>7th</td><td>3%</td>
+                <td>7th</td><td>4%</td>
               </tr>
               <tr>
-                <td>8th</td><td>2.5%</td>
+                <td>8th</td><td>2%</td>
               </tr>
               <tr>
-                <td>9th</td><td>2%</td>
-              </tr>
-              <tr>
-                <td>10th</td><td>1.5%</td>
+                <td>Dog Breeders<br/>(Dev Team)</td><td>10%</td>
               </tr>
             </tbody>
           </Table>

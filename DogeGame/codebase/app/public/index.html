@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Punchline</title>
+    <title>DogeGame</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -22,18 +22,4 @@
     crossorigin="anonymous"
   />
 
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js"></script>
-  <script>
-    let gaid
-    if(window.location.hostname === 'game.punchlinex.com') gaid = 'UA-180696829-1'
-
-    if(gaid) {
-      console.log({gaid})
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', gaid);
-    }
-  </script>
 </html>
