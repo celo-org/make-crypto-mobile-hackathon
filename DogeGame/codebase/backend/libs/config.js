@@ -5,6 +5,6 @@ module.exports = {
   region: 'eu-west-1',
   isDev,
   mnemonic: 'shibasun',
-  httpProvider: 'https://alfajores-blockscout.celo-testnet.org',
+  httpProvider: 'wss://alfajores-forno.celo-testnet.org/ws',
   layerPath: isDev ? '../layer' : '/opt'
 }
