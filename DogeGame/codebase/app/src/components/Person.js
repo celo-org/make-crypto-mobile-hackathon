@@ -31,13 +31,9 @@ const Person = ({ person }) => {
           </tbody>
         </table>
       </h4>
-      { person.addCircle !== false ?
-        <div className="rect">
-          <div className="circle"></div>
-          <img className='portrait' src={'/persons/' + person.image + '.png?2'} alt={'image of ' + person.name} />
-        </div>
-        : <img className='portrait' src={'/persons/' + person.image + '.png'} alt={'image of ' + person.name} />
-      }
+      <div className="circle">
+        <img className='portrait' src={'/persons/' + person.image + '.png?2'} alt={'image of ' + person.name} />
+      </div>
     </div>
   )
 }

@@ -61,34 +61,17 @@ header .endsin div:last-child {
 
 /* person */
 
-.rect{
-  width: 100%;
-  padding-bottom: 111.11%;
-  position: relative;
-}
-
-.portrait {
-  width: 100%;
-}
-
-.rect .portrait {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-bottom-left-radius: 48%;
-  border-bottom-right-radius: 48%;
-}
-
-.rect .circle {
-  position: absolute;
-  bottom: 0;
-  height: 90%;
-  width: 100%;
+.circle {
   background: rgba(255, 240, 240, 0.5);
   border-width: 10px;
   border-color: #020202;
   border-style: solid;
   border-radius: 50%;
+  overflow: hidden;
+}
+
+.portrait {
+  width: 100%;
 }
 
 
