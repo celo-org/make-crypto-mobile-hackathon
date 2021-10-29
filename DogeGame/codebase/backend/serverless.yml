@@ -1,4 +1,4 @@
-service: OxPunchline-step
+service: DogeGame-step
 
 plugins:
   - serverless-step-functions
@@ -17,7 +17,7 @@ provider:
       Resource: "arn:aws:secretsmanager:${opt:region, self:provider.region}:*:secret:*"
 
 layers:
-  punchline:
+  dogeGame:
     path: layer
 
 package:
@@ -36,29 +36,29 @@ functions:
   pause:
     handler: handler.pause
     layers:
-      - {Ref: PunchlineLambdaLayer}
+      - {Ref: DogeGameLambdaLayer}
   retake:
     handler: handler.retake
     layers:
-      - {Ref: PunchlineLambdaLayer}
+      - {Ref: DogeGameLambdaLayer}
   distribute:
     handler: handler.distribute
     layers:
-      - {Ref: PunchlineLambdaLayer}
+      - {Ref: DogeGameLambdaLayer}
   wipe:
     handler: handler.wipe
     layers:
-      - {Ref: PunchlineLambdaLayer}
+      - {Ref: DogeGameLambdaLayer}
   unpause:
     handler: handler.unpause
     layers:
-      - {Ref: PunchlineLambdaLayer}
+      - {Ref: DogeGameLambdaLayer}
 
 stepFunctions:
   stateMachines:
     round:
       events:
-        - schedule: cron(0 12 ? * TUE,THU,SUN *)
+        - schedule: cron(0 12 ? * * *)
       definition:
         StartAt: Pause
         States:
@@ -99,7 +99,7 @@ stepFunctions:
             Type: Task
             Resource:
               Fn::GetAtt: [wipe, Arn]
-            # Next: Unpause
+            Next: Unpause
             End: true
             Retry:
             - ErrorEquals:
@@ -107,14 +107,14 @@ stepFunctions:
               IntervalSeconds: 1
               MaxAttempts: 5
               BackoffRate: 1.5
-#          Unpause:
-#            Type: Task
-#            Resource:
-#              Fn::GetAtt: [unpause, Arn]
-#            End: true
-#            Retry:
-#            - ErrorEquals:
-#              - States.ALL
-#              IntervalSeconds: 1
-#              MaxAttempts: 5
-#              BackoffRate: 1.5
+          Unpause:
+            Type: Task
+            Resource:
+              Fn::GetAtt: [unpause, Arn]
+            End: true
+            Retry:
+            - ErrorEquals:
+              - States.ALL
+              IntervalSeconds: 1
+              MaxAttempts: 5
+              BackoffRate: 1.5
