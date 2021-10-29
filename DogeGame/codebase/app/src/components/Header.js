@@ -101,8 +101,8 @@ const Header = ({web3Store: { web3User, owner, score, prizePool, scoreNow, setBa
             { +score + scoreNow }
           </Button>
           <Button variant='outline-dark' className='endsin'>
-            <div>Ends on</div>
-            <div>{endsOn}</div>
+            <div>Round ends</div>
+            <div>12PM UTC</div>
           </Button>
         </ButtonGroup>
       </header>
