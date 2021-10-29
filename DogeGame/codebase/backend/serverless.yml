@@ -100,7 +100,6 @@ stepFunctions:
             Resource:
               Fn::GetAtt: [wipe, Arn]
             Next: Unpause
-            End: true
             Retry:
             - ErrorEquals:
               - States.ALL
