@@ -1,0 +1,120 @@
+service: OxPunchline-step
+
+plugins:
+  - serverless-step-functions
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: v1
+  region: eu-west-1
+  timeout: 120 # optional, in seconds, default is 6
+  environment:
+    NODE_PATH: "./:/opt/node_modules"
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - secretsmanager:GetSecretValue
+      Resource: "arn:aws:secretsmanager:${opt:region, self:provider.region}:*:secret:*"
+
+layers:
+  punchline:
+    path: layer
+
+package:
+  individually: true
+  exclude:
+    - .*
+    - .*/**
+    - libs/.*
+    - package.json
+    - package-lock.json
+    - layer/**
+    - dev_node_modules/**
+    - deploy.sh
+
+functions:
+  pause:
+    handler: handler.pause
+    layers:
+      - {Ref: PunchlineLambdaLayer}
+  retake:
+    handler: handler.retake
+    layers:
+      - {Ref: PunchlineLambdaLayer}
+  distribute:
+    handler: handler.distribute
+    layers:
+      - {Ref: PunchlineLambdaLayer}
+  wipe:
+    handler: handler.wipe
+    layers:
+      - {Ref: PunchlineLambdaLayer}
+  unpause:
+    handler: handler.unpause
+    layers:
+      - {Ref: PunchlineLambdaLayer}
+
+stepFunctions:
+  stateMachines:
+    round:
+      events:
+        - schedule: cron(0 12 ? * TUE,THU,SUN *)
+      definition:
+        StartAt: Pause
+        States:
+          Pause:
+            Type: Task
+            Resource:
+              Fn::GetAtt: [pause, Arn]
+            Next: Retake
+            Retry:
+            - ErrorEquals:
+              - States.ALL
+              IntervalSeconds: 1
+              MaxAttempts: 5
+              BackoffRate: 1.5
+          Retake:
+            Type: Task
+            Resource:
+              Fn::GetAtt: [retake, Arn]
+            Next: Distribute
+            Retry:
+            - ErrorEquals:
+              - States.ALL
+              IntervalSeconds: 1
+              MaxAttempts: 5
+              BackoffRate: 1.5
+          Distribute:
+            Type: Task
+            Resource:
+              Fn::GetAtt: [distribute, Arn]
+            Next: Wipe
+            Retry:
+            - ErrorEquals:
+              - States.ALL
+              IntervalSeconds: 1
+              MaxAttempts: 5
+              BackoffRate: 1.5
+          Wipe:
+            Type: Task
+            Resource:
+              Fn::GetAtt: [wipe, Arn]
+            # Next: Unpause
+            End: true
+            Retry:
+            - ErrorEquals:
+              - States.ALL
+              IntervalSeconds: 1
+              MaxAttempts: 5
+              BackoffRate: 1.5
+#          Unpause:
+#            Type: Task
+#            Resource:
+#              Fn::GetAtt: [unpause, Arn]
+#            End: true
+#            Retry:
+#            - ErrorEquals:
+#              - States.ALL
+#              IntervalSeconds: 1
+#              MaxAttempts: 5
+#              BackoffRate: 1.5

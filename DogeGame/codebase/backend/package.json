@@ -1,0 +1,16 @@
+{
+  "main": "handler.js",
+  "scripts": {
+    "pause": "serverless invoke local --function pause",
+    "retake": "serverless invoke local --function retake",
+    "distribute": "serverless invoke local --function distribute",
+    "wipe": "serverless invoke local --function wipe",
+    "unpause": "serverless invoke local --function unpause"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.5.0",
+    "async-lambda-responses": "^1.0.1",
+    "aws-sdk": "^2.984.0",
+    "web3": "^1.5.2"
+  }
+}
