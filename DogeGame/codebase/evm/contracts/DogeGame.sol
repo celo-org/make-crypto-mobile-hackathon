@@ -61,7 +61,7 @@ contract DogeGame is Ownable {
   uint public price = 1 ether;
   uint public prizePool;
 
-  string public defaultPunchline = 'Take Me Over!';
+  string public defaultPunchline = 'Adopt Me!';
 
   bool public paused = true;
   enum State { unpaused, paused, retaken, distributed, wiped }
