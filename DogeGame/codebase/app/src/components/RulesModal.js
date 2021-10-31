@@ -13,9 +13,9 @@ class RulesModal extends React.Component {
     return (
       <dl id='rules'>
         <span className='general'>
-          <dd>Take Over a dog & change it's bark.</dd>
+          <dd>Adopt a dog & change it's bark.</dd>
           <dd>You score 1 point every second you hold the dog.</dd>
-          <dd>The fee you pay to Take Over goes into a Prize Pool</dd>
+          <dd>The fee you pay to adopt goes into a Prize Pool</dd>
           <dd>When the round ends we distribute the Prize Pool to the winners. We then reset the scores and start the next round.</dd>
         </span>
       </dl>
