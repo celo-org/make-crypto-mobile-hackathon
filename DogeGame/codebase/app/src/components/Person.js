@@ -16,7 +16,7 @@ const Person = ({ person }) => {
         </table>
       </h4>
       <div className="circle">
-        <img className='portrait' src={'/persons/' + person.image + '.png'} alt={'image of ' + person.name} />
+        <img className='portrait' src={'/persons/' + person.image + '.png?3'} alt={'image of ' + person.name} />
       </div>
     </div>
   )
