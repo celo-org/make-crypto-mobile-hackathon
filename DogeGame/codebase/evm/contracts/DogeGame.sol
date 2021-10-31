@@ -61,7 +61,7 @@ contract DogeGame is Ownable {
   uint public price = 1 ether;
   uint public prizePool;
 
-  string constant public defaultPunchline = 'Take Me Over!';
+  string public defaultPunchline = 'Take Me Over!';
 
   bool public paused = true;
   enum State { unpaused, paused, retaken, distributed, wiped }
@@ -174,6 +174,10 @@ contract DogeGame is Ownable {
     price = _price;
   }
 
+  function setDefaultPunchline(string calldata _punchline) external onlyOwner {
+    defaultPunchline = _punchline;
+  }
+
   function getPerson(uint _personId) public view returns(Person memory person) {
     person = personIdToPerson[_personId];
   }
@@ -222,6 +226,7 @@ contract DogeGame is Ownable {
         // update timestamp
         person.timestamp = block.timestamp;
         person.owner = owner();
+        person.punchline = defaultPunchline;
       }
     }
     state = State.retaken;
