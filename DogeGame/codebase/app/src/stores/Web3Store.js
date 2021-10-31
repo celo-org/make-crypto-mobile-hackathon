@@ -382,7 +382,7 @@ console.log(toJS(this.lastWinners))
 
     } catch (err) {
       console.error(err)
-      alert('Take Over canceled')
+      alert('Adopt canceled')
     }
   }
 

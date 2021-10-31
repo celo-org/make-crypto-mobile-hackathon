@@ -22,7 +22,7 @@ class PersonModal extends React.Component {
       event.preventDefault()
 
       if(!this.punchInput.current.value) {
-        alert('Enter a punchline message ')
+        alert('Enter a bark')
         return
       }
 
@@ -61,10 +61,10 @@ class PersonModal extends React.Component {
   renderBuyForm() {
     return (
       <Form onSubmit={this.buy}>
-        <Form.Label>New stauts message:</Form.Label>
-        <Form.Control ref={this.punchInput} type="text" required placeholder="Enter punchline..." maxLength="75" minLength="4" pattern="(?!^ +$)^.+$" />
+        <Form.Label>New bark:</Form.Label>
+        <Form.Control ref={this.punchInput} type="text" required placeholder="Enter bark..." maxLength="75" minLength="4" pattern="(?!^ +$)^.+$" />
         <Button variant="primary" type="submit" disabled={this.state.submitting}>
-          Take Over
+          Adopt
         </Button>
       </Form>
     )

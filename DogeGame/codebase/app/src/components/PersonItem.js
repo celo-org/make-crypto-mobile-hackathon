@@ -23,7 +23,7 @@ const PersonItem = ({ person, web3Store: { price, web3User } }) => {
             <Score person={person} />
           </Col>
           <Col xs={{ span: 5, offset: 1 }} className='btn btn-primary'>
-            <div>Take Over</div>
+            <div>Adopt</div>
             <Currency amount={price} />
           </Col>
         </Row>
