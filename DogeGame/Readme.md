@@ -1,21 +1,28 @@
 ## Project Name
 
-Doge Game
-
+DogeGame
 
 ### Team name
 
+Fox & Dev2
+
 ##### Region location
 
+UK
+
 ##### Team Members
-- Teammate 1, role
-- Teammate 2, role
-- Teammate 3, role
+
+- Fox Crypto Boss, Co-founder
+- Laurence Kirk, Co-founder
 
 #### Project Description
-Provide a clear statement of the challenges/issues/problems/gaps your project engages as well as a brief, high-level description of how your project engages the areas you've identified. What is the value of your approach? Who are the intended users?
+
+Doge Game is Play-to-Earn NFT-based game. It is a social game where people adopt dogs. Players compete to own their pets for as long as possible and get rewarded for their skills.
 
 #### Summary
+
+
+
 Describe the basic functionality of your project. What are the features you were able to implement? What features would you like to implement?
 
 #### URLs
