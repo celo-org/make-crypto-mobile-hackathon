@@ -20,20 +20,13 @@ const ConnectModal = ({show, onHide, web3Store: { setWeb3Action } }) => {
          🔓 MetaMask
         </Button>
         <Button className='btn-block' size='lg' variant='outline-dark' onClick={() => {
-            setWeb3Action({})
-            onHide()
-          }
-        }>
-         🔓 Trust DApp Browser
-        </Button>
-        <Button className='btn-block' size='lg' variant='outline-dark' onClick={() => {
             setWeb3Action({
-              connector: 'walletconnect'
+              connector: 'celoextension'
             })
             onHide()
           }
         }>
-         🔓 Wallet Connect
+         🔓 Celo Extension Wallet
         </Button>
       </>
     )

@@ -324,16 +324,18 @@ console.log(toJS(this.lastWinners))
   setWeb3Action = async ({ connector }) => {
     try {
       let accounts
-      if(connector === 'walletconnect') {
-        await provider.enable();
-        this.web3Action = new Web3(provider);
-        accounts = await this.web3Action.eth.getAccounts();
-      } else if (window.ethereum) {
-        window.ethereum.autoRefreshOnNetworkChange = false
-        this.web3Action = new Web3(window.ethereum)
-        accounts = window.ethereum.request ?
-          await window.ethereum.request({method: 'eth_requestAccounts'}) :
-          await window.ethereum.enable()
+      let wallet = window.ethereum
+
+      if(connector === 'celoextension') {
+        wallet = window.celo
+      }
+
+      if (wallet) {
+        wallet.autoRefreshOnNetworkChange = false
+        this.web3Action = new Web3(wallet)
+        accounts = wallet.request ?
+          await wallet.request({method: 'eth_requestAccounts'}) :
+          await wallet.enable()
       }
 
       if(this.web3NetworkId !== await this.web3Action.eth.net.getId()) {
