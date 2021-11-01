@@ -17,7 +17,7 @@ const ConnectModal = ({show, onHide, web3Store: { setWeb3Action } }) => {
             onHide()
           }
         }>
-         🔓 MetaMask
+         MetaMask
         </Button>
         <Button className='btn-block' size='lg' variant='outline-dark' onClick={() => {
             setWeb3Action({
@@ -26,7 +26,7 @@ const ConnectModal = ({show, onHide, web3Store: { setWeb3Action } }) => {
             onHide()
           }
         }>
-         🔓 Celo Extension Wallet
+         Celo Extension Wallet
         </Button>
       </>
     )
@@ -43,10 +43,13 @@ const ConnectModal = ({show, onHide, web3Store: { setWeb3Action } }) => {
     >
       <Modal.Header closeButton>
         <Modal.Title className="w-100" id="contained-modal-title-vcenter">
-           🏆 Connect to a wallet
+          🔓 Connect to a wallet
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
+        <p>
+          ℹ️ Please use Celo Alfajores Testnetℹ️ 
+        </p>
         { connectors() }
       </Modal.Body>
     </Modal>
