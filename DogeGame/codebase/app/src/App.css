@@ -113,16 +113,10 @@ header .endsin div:last-child {
     line-height: 18px;
     font-weight: 500;
     vertical-align: middle;
-    background: no-repeat url('/bnb.svg');
+    background: no-repeat url('/celo.svg');
     background-size:contain;
     padding-left: 22px;
     font-family: Arial;
-}
-
-.currency.matic {
-  background: no-repeat url('/matic.png');
-  background-size:contain;
-  padding-left: 26px;
 }
 
 /* rules */
