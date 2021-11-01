@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(to bottom,#61854d,#86B86B);
+  min-height: 100vh;
 }
 
 /* PRE JS SPINNER */
