@@ -33,7 +33,7 @@ const AccountModal = ({show, onHide, web3Store: { paused, disconnectWallet, test
           </Col>
         </Row>
         <Row className='mt-4'>
-          <Col xs={12}>
+          <Col xs={12} className="text-truncate">
             Wallet:<br />
             {web3User}<br />
             <Button variant='outline-dark' onClick={() => {
