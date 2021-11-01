@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('/bkg.svg')
+  background: linear-gradient(to bottom,#61854d,#86B86B);
 }
 
 /* PRE JS SPINNER */

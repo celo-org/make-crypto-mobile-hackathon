@@ -43,7 +43,7 @@ const PersonList = ({ web3Store: { persons, paused, isBanned } }) => {
     return (
       <Row>
         {persons.map(person => (
-          <Col key={person.image} xl={3} lg={4} md={6} sm={6} xs={12} className='my-3 p-0' >
+          <Col key={person.image} xl={3} lg={4} md={6} sm={12} className='my-3 px-sm-2 px-1 p-0' >
             <PersonItem
               person={person}
             />
