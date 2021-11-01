@@ -34,13 +34,8 @@ const AccountModal = ({show, onHide, web3Store: { paused, disconnectWallet, test
         </Row>
         <Row className='mt-4'>
           <Col xs={12}>
-            <Button variant='outline-dark' onClick={testWalletConnection}>
-              Test Wallet Connection
-            </Button>
-          </Col>
-        </Row>
-        <Row className='mt-4'>
-          <Col xs={12}>
+            Wallet:<br />
+            {web3User}<br />
             <Button variant='outline-dark' onClick={() => {
               disconnectWallet()
               onHide()

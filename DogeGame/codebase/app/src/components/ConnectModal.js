@@ -48,7 +48,7 @@ const ConnectModal = ({show, onHide, web3Store: { setWeb3Action } }) => {
       </Modal.Header>
       <Modal.Body>
         <p>
-          ℹ️ Please use Celo Alfajores Testnetℹ️ 
+          ℹ️ Please use Celo Alfajores Testnet ℹ️ 
         </p>
         { connectors() }
       </Modal.Body>
