@@ -677,9 +677,15 @@ module.exports = {
 	getProposalScore: async (req, res) => {
 		const stamps = new StampsModule();
 		await stamps.init();
-		let total_proposal_votes = (await stamps.utils.get_votes_by_proposal(req.query.proposalId, "time")) + (await stamps.utils.get_votes_by_proposal(req.query.proposalId, "temperature")) + (await stamps.utils.get_votes_by_proposal(req.query.proposalId, "capital"));
-		let average_impact_rating = await stamps.utils.get_average_impact_by_proposal(req.query.proposalId);
-		return res.json({data: average_impact_rating + total_proposal_votes});
+		let resultData = [];
+		
+		for (let i = 0; i < req.query.proposals.length; i++) {
+			let total_proposal_votes = (await stamps.utils.get_votes_by_proposal(req.query.proposals[i], "time")) + (await stamps.utils.get_votes_by_proposal(req.query.proposals[i], "temperature")) + (await stamps.utils.get_votes_by_proposal(req.query.proposals[i], "capital"));
+		    let average_impact_rating = await stamps.utils.get_average_impact_by_proposal(req.query.proposals[i]);
+			resultData.push(average_impact_rating + total_proposal_votes);
+		}
+
+		return res.json({data: resultData});
 	},
 	
 	getUserScore: async (req, res) => {
