@@ -30,13 +30,13 @@ A social game as real conversations are taking place in the DogeGame.
 A battle won by the DogeGame creators in the fight for wider blockchain adoption. Maybe playing DogeGame will be someone's first ever crypto interaction?  
 
 Game Rules:  
-Everyday DogeGame distributes prizes to top scoring players.
-To score you have to Adopt a dog (an NFT)
-Each second you hold a dog you score 1 point.
+Everyday DogeGame distributes prizes to top scoring players.  
+To score you have to Adopt a dog (an NFT)  
+Each second you hold a dog you score 1 point.  
 
-What features would we like to implement?
+What features would we like to implement?  
 Make the dogs cmopliant with the NFT standard.  
-ValoraConnect is ready to be implemented as soon as Valora app readds this feature.  
+ValoraConnect is ready to be implemented as soon as Valora app reimplements this feature.  
 
 #### URLs  
 
@@ -44,10 +44,12 @@ https://dogegame.netlify.app/
 
 #### Presentation  
 
+in the works
+
 #### Next Steps  
 
-Deploy to Celo Mainnet if we are able to get marketing support.
+Deploy to Celo Mainnet if we are able to get marketing support.  
 
 #### License  
 
-The MIT License
+The MIT License  
