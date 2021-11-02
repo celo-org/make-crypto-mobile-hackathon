@@ -6,7 +6,7 @@ const isTestnet = window.location.href.includes('testnet')
 
 const wsProvider = (() => {
   if(isDev) return 'ws://localhost:8545'
-  if(isTestnet) return 'wss://speedy-nodes-nyc.moralis.io/92fd62a6c099c05d87a5e3c0/bsc/testnet/ws'
+  if(isTestnet) return 'wss://alfajores-forno.celo-testnet.org/ws'
   return 'wss://alfajores-forno.celo-testnet.org/ws'
 })()
 
