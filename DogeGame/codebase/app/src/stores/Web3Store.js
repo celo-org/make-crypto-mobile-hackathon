@@ -5,7 +5,6 @@ import { observable, decorate , when } from "mobx";
 import { toJS  } from "mobx";
 import PunchlineAbi from "../abis/DogeGame.json";
 import config from '../config'
-import personsOverride from '../personsOverride'
 import WalletConnectProvider from "@walletconnect/web3-provider";
 
 const provider = new WalletConnectProvider({
@@ -31,8 +30,6 @@ class Web3Store {
   prizePool = '0'
 
   // round data
-  endsOn
-
   score = '0'
   scoreNow = 0
   leaderboard = []
@@ -50,7 +47,6 @@ class Web3Store {
     this.PunchlineAddress = require( "../abis/DogeGame." + config.networkId + ".json")
     this.setWeb3WS()
     this.setPunchlineWSInstance()
-    this.setEndsOn()
     this.setPersons() // async
     this.setPrizePool() // async
     this.setOwner() // async
@@ -73,7 +69,7 @@ class Web3Store {
       console.log('test wallet connection')
 
       await this.web3Action.eth.sign(
-        "You're connected to 0xPunchline",
+        "You're connected to DogeGame",
         this.web3User
       )
 
@@ -233,10 +229,6 @@ class Web3Store {
       let persons = (await this.punchlineWSInstance.methods.getPersons().call())
         .filter(p => p.active)
         .map(personArr => this.convertArrayToObject(personArr))
-        .map(person => ({
-          ...person,
-          ...personsOverride[person.image]
-        }))
 
       persons.sort((a, b) => +a.timestamp - +b.timestamp)
 
@@ -428,38 +420,6 @@ console.log(toJS(this.lastWinners))
     }
   }
 
-  setEndsOn = () => {
-    try {
-      const day = new Date().getUTCDay()
-      const hours = new Date().getUTCHours()
-      const hour = ' 12PM UTC'
-      const tue = 'Tue' + hour
-      const thu = 'Thu' + hour
-      const sun = 'Sun' + hour
-
-      if (
-        (day === 0 && hours >= 12) || (day === 1) || (day === 2 && hours < 12)
-      ) {
-        return this.endsOn = tue
-      }
-
-      if (
-        (day === 2 && hours >= 12) || (day === 3) || (day === 4 && hours < 12)
-      ) {
-        return this.endsOn = thu
-      }
-
-      if (
-        (day === 4 && hours >= 12) || (day === 5) || (day === 6) || (day === 0 && hours < 12)
-      ) {
-        return this.endsOn = sun
-      }
-    } catch (err) {
-      console.error(err)
-      throw err
-    }
-  }
-
   withdraw = async() => {
     if(this.paused) return
 
@@ -493,5 +453,4 @@ export default decorate(Web3Store, {
   lastWinners: observable,
   paused: observable,
   isBanned: observable,
-  endsOn: observable
 })

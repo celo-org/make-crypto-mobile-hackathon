@@ -15,7 +15,7 @@ import config from '../config'
 import telegram from '../assets/telegram.svg'
 import token from '../assets/token.png'
 
-const Header = ({web3Store: { web3User, owner, score, prizePool, scoreNow, setBalance, setAllowance, setLeaderboard, setLastWinners, endsOn }}) => {
+const Header = ({web3Store: { web3User, owner, score, prizePool, scoreNow, setBalance, setAllowance, setLeaderboard, setLastWinners }}) => {
   const [rulesShow, setRulesShow] = React.useState(false);
   const [leaderboardShow, setLeaderboardShow] = React.useState(false);
   const [accountShow, setAccountShow] = React.useState(false);
