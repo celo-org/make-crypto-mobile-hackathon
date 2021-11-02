@@ -452,5 +452,4 @@ export default decorate(Web3Store, {
   leaderboardNow: observable,
   lastWinners: observable,
   paused: observable,
-  isBanned: observable,
 })

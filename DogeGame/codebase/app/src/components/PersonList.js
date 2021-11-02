@@ -5,16 +5,7 @@ import PersonItem from './PersonItem'
 import { inject, observer } from "mobx-react";
 import { Row, Col } from 'react-bootstrap';
 
-const PersonList = ({ web3Store: { persons, paused, isBanned } }) => {
-  if (isBanned) {
-    return (
-      <div id='paused' className='m-2 p-4'>
-        <h1>BANNED</h1>
-        <h3>You've been banned from the game for breaking the rules.</h3>
-      </div>
-    )
-  }
-
+const PersonList = ({ web3Store: { persons, paused } }) => {
   if (paused && (new Date() < new Date(Date.UTC(2021, 8, 6)))) {
 
     return (
