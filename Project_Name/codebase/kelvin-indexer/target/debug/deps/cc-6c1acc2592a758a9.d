@@ -1,0 +1,12 @@
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\cc-6c1acc2592a758a9.rmeta: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\registry.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\winapi.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\com.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\setup_config.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\windows_registry.rs
+
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\libcc-6c1acc2592a758a9.rlib: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\registry.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\winapi.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\com.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\setup_config.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\windows_registry.rs
+
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\cc-6c1acc2592a758a9.d: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\registry.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\winapi.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\com.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\setup_config.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\windows_registry.rs
+
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\lib.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\registry.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\winapi.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\com.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\setup_config.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cc-1.0.67\src\windows_registry.rs:

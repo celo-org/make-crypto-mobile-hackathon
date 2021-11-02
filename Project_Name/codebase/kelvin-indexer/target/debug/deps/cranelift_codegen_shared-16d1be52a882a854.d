@@ -1,0 +1,13 @@
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\cranelift_codegen_shared-16d1be52a882a854.rmeta: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\condcodes.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\constant_hash.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\constants.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\isa\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\isa\x86\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\isa\x86\encoding_bits.rs
+
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\cranelift_codegen_shared-16d1be52a882a854.d: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\condcodes.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\constant_hash.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\constants.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\isa\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\isa\x86\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\isa\x86\encoding_bits.rs
+
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\lib.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\condcodes.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\constant_hash.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\constants.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\isa\mod.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\isa\x86\mod.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\cranelift-codegen-shared-0.68.0\src\isa\x86\encoding_bits.rs:
+
+# env-dep:CARGO_PKG_VERSION=0.68.0

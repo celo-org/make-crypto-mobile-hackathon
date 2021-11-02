@@ -1,0 +1,12 @@
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\arrayvec-251db4f7de1506b2.rmeta: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\maybe_uninit.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array_string.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\char.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\errors.rs
+
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\libarrayvec-251db4f7de1506b2.rlib: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\maybe_uninit.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array_string.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\char.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\errors.rs
+
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\arrayvec-251db4f7de1506b2.d: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\maybe_uninit.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array_string.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\char.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\errors.rs
+
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\lib.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\maybe_uninit.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array_string.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\char.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\errors.rs:

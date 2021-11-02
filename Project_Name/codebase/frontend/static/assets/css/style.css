@@ -1,0 +1,256 @@
+body {
+    background-color: #FCFAFF;
+    font-family: 'Pontano Sans', sans-serif;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.h-100 {
+    min-height: 100vh;
+}
+
+.bg-white {
+    background: #ffffff !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-normal,
+p,
+a {
+    font-family: 'Pontano Sans', sans-serif;
+    margin: 0px;
+    font-size: 14px;
+}
+
+button {
+    text-transform: uppercase;
+    background: var(--primary-color) !important;
+}
+
+.text-heading,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Stint Ultra Expanded', cursive;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.bg-color {
+    background: var(--primary-color);
+}
+
+.bg-gradient {
+    background: transparent linear-gradient(180deg, #4B02B3 0%, #835AF0 100%) 0% 0% no-repeat padding-box !important;
+    color: var(--white);
+}
+
+.bg-none {
+    background: none !important;
+}
+
+.text-color {
+    color: var(--primary-color) !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--primary-shade3);
+}
+
+.form-control {
+    height: 100px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    /* height: 50px; */
+    box-shadow: 0px 0px 6px #4417AC3B;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+input,
+.form-select {
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    box-shadow: 0px 0px 6px #4417AC3B;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Pontano Sans', sans-serif;
+}
+
+:root {
+    /* Colors: */
+    --unnamed-color-ff6f36: #FF6F36;
+    --primary-light: #FCFAFF;
+    --black: #000000;
+    --white: #FFFFFF;
+    --unnamed-color-76bc03: #76BC03;
+    --primary-shade3: #E4E0FC;
+    --primary-color: #4B02B3;
+    --primary-shade1: #CDC5FA;
+    --primary-shade2: #8B53F9;
+    /* Font/text values */
+    --unnamed-font-family-stint-ultra-expanded: Stint Ultra Expanded;
+    --unnamed-font-family-pontano-sans: Pontano Sans;
+    --unnamed-font-style-normal: normal;
+    --unnamed-font-weight-normal: normal;
+    --unnamed-font-size-12: 12px;
+    --unnamed-font-size-14: 14px;
+    --unnamed-font-size-16: 16px;
+    --unnamed-font-size-18: 18px;
+    --unnamed-font-size-20: 20px;
+    --unnamed-font-size-22: 22px;
+    --unnamed-font-size-38: 38px;
+    --unnamed-character-spacing-0: 0px;
+    --unnamed-line-spacing-14: 14px;
+    --unnamed-line-spacing-16: 16px;
+    --unnamed-line-spacing-18: 18px;
+    --unnamed-line-spacing-20: 20px;
+    --unnamed-line-spacing-21: 21px;
+    --unnamed-line-spacing-23: 23px;
+    --unnamed-line-spacing-25: 25px;
+    --unnamed-line-spacing-43: 43px;
+    --unnamed-line-spacing-73: 73px;
+    --unnamed-text-transform-uppercase: uppercase;
+}
+
+.splash-logo {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 12rem 0px 12rem;
+    width: 100%;
+}
+
+.btn-icon {
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    padding: 0.5REM;
+    background: var(--primary-color);
+    font-family: 'Stint Ultra Expanded', cursive;
+    font-size: 14px;
+}
+
+.btn-icon>img {
+    /* margin-right: 2rem; */
+}
+
+.btn-icon>span {
+    display: block;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.btn-color {
+    border-radius: 100px;
+    text-align: center;
+    padding: 0.5REM;
+    background: var(--primary-color);
+    font-family: 'Stint Ultra Expanded', cursive;
+    font-size: 14px;
+    height: 64px;
+}
+
+.btn-color-mini {
+    border-radius: 100px;
+    text-align: center;
+    padding: 0.5REM 1rem;
+    background: var(--primary-color);
+    font-family: 'Stint Ultra Expanded', cursive;
+    font-size: 14px;
+    height: 38px;
+}
+
+.btn-white {
+    border-radius: 100px;
+    text-align: center;
+    padding: 0.5REM;
+    background: var(--white) !important;
+    border: none;
+    font-family: 'Stint Ultra Expanded', cursive;
+    font-size: 14px;
+    height: 64px;
+    color: var(--black);
+}
+
+.logo-header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.big-userpic {
+    height: 150px;
+    width: 150px;
+    border-radius: 200px;
+    border: 4px solid var(--primary-color);
+}
+
+.center-block {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color) !important;
+    border-radius: 50px;
+    color: #FFFFFF !important;
+}
+
+.nav-link {
+    color: var(--primary-color) !important;
+    font-family: 'Stint Ultra Expanded', cursive;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 1rem;
+    align-self: center;
+}
+
+.my-block {
+    background: var(--white) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 16px #4417AC3B;
+    border-radius: 20px;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+}
+
+.small-userpic {
+    border: 3px solid var(--primary-color);
+    border-radius: 100px;
+    height: 56px;
+    width: 56px;
+    margin-right: .5rem;
+}
+
+.compact-btn {
+    height: 31px;
+    font-size: 9px;
+    font-size: 9px;
+    padding: .25rem 1rem;
+}
+
+.btn-close>img {
+    width: 16px;
+    align-items: center;
+    align-self: center;
+    margin-top: -10px;
+}
