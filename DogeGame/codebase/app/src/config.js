@@ -1,5 +1,6 @@
 // is dev: localhost
-// default: 127.0.0.1 - thundercore prod
+// mainnet: 127.0.0.1
+// testnet: 127.0.0.1?testnet
 
 const isDev = window.location.hostname === 'localhost'
 const isTestnet = window.location.href.includes('testnet')
