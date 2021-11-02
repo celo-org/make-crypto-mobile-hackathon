@@ -1,38 +1,53 @@
-## Project Name
+## Project Name  
 
-DogeGame
+DogeGame  
 
-### Team name
+### Team name  
 
-Fox & Dev2
+Fox & Dev2  
 
-##### Region location
+##### Region location  
 
-UK
+UK  
 
-##### Team Members
+##### Team Members  
 
-- Fox Crypto Boss, Co-founder
-- Laurence Kirk, Co-founder
+- Fox Crypto Boss, Co-founder  
+- Laurence Kirk, Co-founder  
 
-#### Project Description
+#### Project Description  
 
-Doge Game is Play-to-Earn NFT-based game. It is a social game where people adopt dogs. Players compete to own their pets for as long as possible and get rewarded for their skills.
+Doge Game is Play-to-Earn NFT-based game. It is a social game where people adopt dogs. Players compete to own their pets for as long as possible and get rewarded for their skills.  
 
-#### Summary
+#### Summary  
 
+DogeGame is many things:  
 
+It is surely a game. Adopt a Dog, Hold, Score, Win! Grab the top prize every Sunday.  
+An NFT game. As every dog you adopt is an unique Non-Fundgible Token. (in the works)  
+A way to show your creativity. "What can the dog bark so that other players won't take over?".  
+A social game as real conversations are taking place in the DogeGame.  
+A battle won by the DogeGame creators in the fight for wider blockchain adoption. Maybe playing DogeGame will be someone's first ever crypto interaction?  
 
-Describe the basic functionality of your project. What are the features you were able to implement? What features would you like to implement?
+Game Rules:  
+Everyday DogeGame distributes prizes to top scoring players.
+To score you have to Adopt a dog (an NFT)
+Each second you hold a dog you score 1 point.
 
-#### URLs
-List any URLs relevant to demonstrating your prototype
+What features would we like to implement?
+Make the dogs cmopliant with the NFT standard.  
+ValoraConnect is ready to be implemented as soon as Valora app readds this feature.  
 
-#### Presentation
-List any links to your presentation or any related visuals you want to share.
+#### URLs  
 
-#### Next Steps
-What do you need to do next to turn this prototype into a working solution?
+https://dogegame.netlify.app/
 
-#### License
-This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
+#### Presentation  
+
+#### Next Steps  
+
+Deploy to Celo Mainnet if we are able to get marketing support.
+
+#### License  
+
+The MIT License
