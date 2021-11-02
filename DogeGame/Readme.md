@@ -35,8 +35,13 @@ To score you have to Adopt a dog (an NFT)
 Each second you hold a dog you score 1 point.  
 
 What features would we like to implement?  
-Make the dogs cmopliant with the NFT standard.  
+Make the dogs compliant with the NFT standard.  
 ValoraConnect is ready to be implemented as soon as Valora app reimplements this feature.  
+Distirbute 1 $DOGEG ERC-20 token on each adoption  
+Possiblitiy to mint a permanent NFT when user achieves 1 million of cumulative score  
+Add DogeDice with game realted rewards, so free adoptions, $DOGEG tokens etc.  
+Refferal system  
+DogeGame DAO  
 
 #### URLs  
 
