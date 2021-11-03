@@ -42,8 +42,13 @@ class Utilities {
     static latest_question_posted = null;
 
     static users = null;
+	static timeUsers = null;
+	static temperatureUsers = null;
+	static capitalUsers = null;
     static ids = null;
     static index = null;
+	static tempindex = null;
+	static capitalindex = null;
     static scores = null;
 	static temperaturescores = null;
 	static capitalscores = null;
@@ -85,28 +90,57 @@ class Utilities {
     }
 
     update_ids_list() {
-        this.ids = this.users.sort();;
+        this.ids = this.users.sort();
+		this.timeids = this.timeUsers.sort();
+		this.tempids = this.temperatureUsers.sort();
+		this.capitalids = this.capitalUsers.sort();
 		console.log(this.ids);
+		console.log(this.timeids);
+		console.log(this.tempids);
+		console.log(this.capitalids);
         this.index = {0: 0};
-        for(let i = 0; i < this.ids.length; i++) {
-            let userid = this.ids[i];
-            this.index[userid] = this.ids.indexOf(userid);
+		this.tempindex = {0: 0};
+		this.capitalindex = {0: 0};
+		for(let i = 0; i < this.timeids.length; i++) {
+            let userid = this.timeids[i];
+            this.index[userid] = this.timeids.indexOf(userid);
         }
+		for(let i = 0; i < this.tempids.length; i++) {
+            let userid = this.tempids[i];
+            this.tempindex[userid] = this.tempids.indexOf(userid);
+        }
+		for(let i = 0; i < this.capitalids.length; i++) {
+            let userid = this.capitalids[i];
+            this.capitalindex[userid] = this.capitalids.indexOf(userid);
+        }
+		
+		
     }
 
-    index_dammit(user) {
+    index_dammit(user, collection) {
+		
+		let targetIndex = null;
+		
+		if (collection == "temperature") {
+			targetIndex = this.tempindex;
+		} else if (collection == "capital") {
+			targetIndex = this.capitalindex;
+		} else {
+			targetIndex = this.index;
+		}
+		
 		console.log(user);
         //get an index into the scores array from whatever you get.
-        if (user in this.index) {
+        if (user in targetIndex) {
             //maybe we got a valid ID?
-            return this.index[user];
-        } else if (user.toString() in this.index) {
-            return this.index[user.toString()];
+            return targetIndex[user];
+        } else if (user.toString() in targetIndex) {
+            return targetIndex[user.toString()];
         }
         //Maybe we got a User or Member object that has an ID?
         let uid = user.id ? user.id : null;
         console.log(uid);
-        console.log(this.index);
+        console.log(targetIndex);
         if (uid) {
             return this.index_dammit(uid);
         }
@@ -118,9 +152,11 @@ class Utilities {
         let userIndex = this.index_dammit(user);
         if (userIndex) {
 			if (collection == "temperature") {
-				return this.regenscores[index];
-			}
-            return this.scores[index];
+				return this.temperaturescores[userIndex];
+			} else if (collection == "capital") {
+				return this.capitalscores[userIndex];
+			} 
+            return this.scores[userIndex];
         }
         return 0.0;
     }
@@ -411,25 +447,40 @@ class StampsModule {
 		let capitalUsers = await this.utils.get_users("capital");
 		let timeTempUsers = [...new Set([...timeUsers, ...temperatureUsers])];
 		this.utils.users = [...new Set([...timeTempUsers, ...capitalUsers])];
+		this.utils.timeUsers = timeUsers;
+		this.utils.temperatureUsers = temperatureUsers;
+		this.utils.capitalUsers = capitalUsers;
         this.utils.update_ids_list();
+		
+		let user_count = this.utils.users.length;
+		let targetIndex = null;
 
-        let user_count = this.utils.users.length;
 
+        if (collection == "temperature") {
+			user_count = temperatureUsers.length;
+			targetIndex = this.utils.tempindex;
+		} else if (collection == "capital") {
+			user_count = capitalUsers.length;
+			targetIndex = this.utils.capitalindex;
+		} else {
+			user_count = timeUsers.length;
+			targetIndex = this.utils.index;
+		}
         let users_matrix = Matrix.zeros(user_count, user_count);
 
         let votes = await this.utils.get_all_user_votes(collection);
+		
 
         for(let i = 0; i < votes.length; i++) {
             let from_id = votes[i]['user']; //This may change depending on the database implementation and what objects returned from the database look like
             let to_id = votes[i]['votedFor'];
             let votes_for_user = votes[i]['votecount'];
-            let from_id_index = this.utils.index[from_id];
-            let toi = this.utils.index[to_id];
+            let from_id_index = targetIndex[from_id];
+            let toi = targetIndex[to_id];
             let total_votes_by_user = await this.utils.get_votes_by_user(from_id, collection);
             if (total_votes_by_user != 0) {
                 let score = (this.user_karma * votes_for_user) / total_votes_by_user;
-				console.log(score);
-                users_matrix.set(toi, from_id_index, score); 
+                users_matrix.set(toi, from_id_index, users_matrix.get(toi, from_id_index) + score); 
             }
 
         }
@@ -454,7 +505,7 @@ class StampsModule {
 	        this.utils.scores = solve(users_matrix, user_count_matrix).to1DArray();
 		    console.log(this.utils.scores);		
 		}
-        this.print_all_scores(collection);
+        //this.print_all_scores(collection);
         //done
     }
 
@@ -488,8 +539,8 @@ class StampsModule {
 		if (!user) {
 			return 0;
 		}
-        let index = this.utils.index_dammit(user);
-        console.log("get_user_stamps for " + String(user)+ ", index=" + String(index));
+        let index = this.utils.index_dammit(user, collection);
+        console.log("get_user_stamps for " + String(user)+ ", index=" + String(index) + ", collection=" + collection);
         let stamps = 0.0; //Maybe readd nonzero predicate when seed users are figured out?
 		if (collection == "temperature") {
 	        stamps = this.utils.temperaturescores[index] * this.total_temperature_votes;
@@ -498,7 +549,6 @@ class StampsModule {
 		} else {
 			stamps = this.utils.scores[index] * this.total_votes;
 		}
-        console.log(stamps);
 		if (collection == "temperature") {
 			console.log(this.utils.temperaturescores[index]);
 		    console.log(this.utils.temperaturescores);
