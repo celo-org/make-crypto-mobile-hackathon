@@ -6,6 +6,7 @@ import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
+import { fornoURLs, ICeloNetwork } from "@ubeswap/hardhat-celo";
 
 dotenv.config();
 
@@ -25,14 +26,25 @@ task("accounts", "Prints the list of accounts", async (_taskArgs, hre) => {
 const config: HardhatUserConfig = {
   solidity: "0.8.4",
   networks: {
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
+    mainnet: {
+      url: fornoURLs[ICeloNetwork.MAINNET],
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      chainId: ICeloNetwork.MAINNET,
+      gasPrice: 0.5 * 10 ** 9,
+      gas: 8000000,
+    },
+    alfajores: {
+      url: fornoURLs[ICeloNetwork.ALFAJORES],
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      chainId: ICeloNetwork.ALFAJORES,
+      gasPrice: 0.5 * 10 ** 9,
+      gas: 8000000,
     },
   },
   gasReporter: {
-    enabled: process.env.REPORT_GAS !== undefined,
+    enabled: !!process.env.REPORT_GAS,
     currency: "USD",
   },
   etherscan: {
