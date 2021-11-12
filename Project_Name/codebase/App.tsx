@@ -15,9 +15,10 @@ import {
   Montserrat_700Bold,
 } from '@expo-google-fonts/montserrat';
 
-import { MontserratAlternates_600SemiBold } from '@expo-google-fonts/montserrat-alternates';
-
-import { Roboto_400Regular } from '@expo-google-fonts/roboto';
+import {
+  MontserratAlternates_400Regular,
+  MontserratAlternates_600SemiBold,
+} from '@expo-google-fonts/montserrat-alternates';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,39 +27,19 @@ export default function App() {
     Montserrat_600SemiBold,
     Montserrat_500Medium,
     Montserrat_700Bold,
+    MontserratAlternates_400Regular,
     MontserratAlternates_600SemiBold,
-    Roboto_400Regular,
   });
 
   if (!fontsLoaded) {
     <AppLoading />;
   }
   return (
-    <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.text}>Open up App.js to start working on your app!</Text>
+    <View>
+      <View>
+        <Text>Open up App.js to start working on your app!</Text>
       </View>
       <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  box: {
-    width: 300,
-    height: 500,
-    borderTopLeftRadius: border.radius.lg10,
-    borderTopRightRadius: border.radius.lg10,
-    backgroundColor: 'red',
-    borderWidth: 0.5,
-    borderColor: 'blue',
-  },
-  text: {
-    fontFamily: fontsFamily.montserrat.bold,
-  },
-});

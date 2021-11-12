@@ -7,11 +7,9 @@ const fontsFamily = {
     bold: 'Montserrat_700Bold',
   },
   montserratAlternates: {
-    semiBold: 'MontserratAlternates_600SemiBold'
+    regular: 'MontSerratAlternates_400Regular',
+    semiBold: 'MontserratAlternates_600SemiBold',
   },
-  roboto: {
-    regular: 'Roboto_400Regular'
-  }
 };
 
 export default fontsFamily;
