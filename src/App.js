@@ -47,7 +47,8 @@ class App extends React.Component {
     let amount = kit.web3.utils.toWei('0.001', 'ether')
 
     const stabletoken = await kit.contracts.getStableToken()
-    const tx = await stabletoken.transfer(this.state.someAddress, amount).send()
+
+    const tx = await stabletoken.transfer(this.state.someAddress, amount).send({feeCurrency: stabletoken.address})
     const receipt = await tx.waitReceipt()
 
     console.log(receipt)
@@ -55,6 +56,7 @@ class App extends React.Component {
 
   disconnect = async() => {
     await this.state.provider.disconnect()
+    this.setState({provider: null, kit: null})
   }
 
   render(){
