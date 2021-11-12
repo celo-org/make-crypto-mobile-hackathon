@@ -5,6 +5,8 @@ const fontSizes = {
   sm14: 14,
   md16: 16,
   lg18: 18,
+  xl20: 20,
+  xl24: 24,
 };
 
 export default fontSizes;
