@@ -6,8 +6,7 @@ const styles = StyleSheet.create({
     color: colors.light.neutralColor7,
     fontFamily: fontsFamily.montserrat.medium,
     fontSize: fontsSize.xs12,
-    lineHeight: dimensions.spacingInlineXs14,
-    textAlign: 'center',
+    textAlign: AlignTypes.CENTER,
   },
 });
 
