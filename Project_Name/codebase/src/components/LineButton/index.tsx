@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
+import { BorderlessButton, BorderlessButtonProps } from 'react-native-gesture-handler';
 import { Text } from '..';
 import { AlignTypes } from '../../utils/enum';
 
-interface ILineButtonProps extends TouchableOpacityProps {
+interface ILineButtonProps extends BorderlessButtonProps {
   label: string;
   textColor: string;
   textFontFamily: string;
@@ -21,7 +21,7 @@ const LineButton = ({
   ...rest
 }: ILineButtonProps): JSX.Element => {
   return (
-    <TouchableOpacity {...rest}>
+    <BorderlessButton {...rest}>
       <Text
         textDescription={label}
         color={textColor}
@@ -30,7 +30,7 @@ const LineButton = ({
         fontsSize={textFontSize}
         textDecoration
       />
-    </TouchableOpacity>
+    </BorderlessButton>
   );
 };
 
