@@ -1,12 +1,13 @@
 import React from 'react';
-import { Text, StyleSheet, TextStyle } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
+import { AlignTypes } from '../../utils/enum';
 
 interface IDescriptionProps {
   textDescription: string;
   color: string;
   fontFamily: string;
   fontsSize: number;
-  alignment: TextStyle['textAlign'];
+  textAlign: AlignTypes;
 }
 
 const TextComponent = ({
@@ -14,14 +15,14 @@ const TextComponent = ({
   color,
   fontFamily,
   fontsSize,
-  alignment,
+  textAlign,
 }: IDescriptionProps): JSX.Element => {
   const styleManager = StyleSheet.create({
     textProps: {
       color: color,
       fontFamily: fontFamily,
       fontSize: fontsSize,
-      textAlign: alignment,
+      textAlign: textAlign,
     },
   });
   return <Text style={styleManager.textProps}>{textDescription}</Text>;
