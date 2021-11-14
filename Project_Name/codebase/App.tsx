@@ -46,6 +46,7 @@ export default function App() {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <LargeButton
         label="Place a bid"
+        backgroundColor={colors.light.neutralColor4}
         iconChildren={EtherSvg}
         textAlign={AlignTypes.CENTER}
         textColor={colors.light.neutralColor11}

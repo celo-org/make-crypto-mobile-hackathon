@@ -4,13 +4,12 @@ import { AlignTypes } from '../../utils/enum';
 
 const styles = StyleSheet.create({
   container: {
-    height: dimensions.height50,
-    backgroundColor: colors.light.neutralColor4,
+    height: dimensions.height60,
     borderRadius: border.radius.md6,
     width: dimensions.widthFull,
     justifyContent: AlignTypes.CENTER,
     alignItems: AlignTypes.CENTER,
-    flexDirection: AlignTypes.ROW
+    flexDirection: 'row'
   },
   icon: {
     marginRight: dimensions.spacingInlineXxs12

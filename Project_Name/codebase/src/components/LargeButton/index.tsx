@@ -1,13 +1,14 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import { Text } from '..';
 import { SvgProps } from 'react-native-svg';
 import { AlignTypes } from '../../utils/enum';
 import styles from './styles';
-import { dimensions } from '../../styles';
 
 interface ILargeButtonProps extends RectButtonProps {
   label: string;
+  backgroundColor: string;
   iconChildren?: React.FC<SvgProps>;
   textColor: string;
   textFontFamily: string;
@@ -17,6 +18,7 @@ interface ILargeButtonProps extends RectButtonProps {
 
 const LargeButton = ({
   label,
+  backgroundColor,
   iconChildren: IconChildren,
   textColor,
   textAlign,
@@ -24,8 +26,13 @@ const LargeButton = ({
   textFontSize,
   ...rest
 }: ILargeButtonProps): JSX.Element => {
+  const colorManager = StyleSheet.create({
+    container: {
+      backgroundColor,
+    },
+  });
   return (
-    <RectButton style={styles.container} {...rest}>
+    <RectButton style={[styles.container, colorManager.container]} {...rest}>
       {IconChildren && <IconChildren style={styles.icon} />}
       <Text
         textDescription={label}
