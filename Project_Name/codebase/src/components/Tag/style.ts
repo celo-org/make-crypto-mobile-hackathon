@@ -6,11 +6,9 @@ const styles = StyleSheet.create({
   container: {
     borderRadius: border.radius.sm4,
     borderWidth: border.width.hairline,
-    height: dimensions.height15,
     justifyContent: AlignTypes.CENTER,
     margin: dimensions.spacingStackQuarck4,
-    paddingLeft: dimensions.spacingStackQuarck4,
-    paddingRight: dimensions.spacingStackQuarck4,
+    padding: dimensions.spacingStackXxxs6,
   },
 });
 

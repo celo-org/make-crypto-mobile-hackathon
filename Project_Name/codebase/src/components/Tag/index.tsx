@@ -6,6 +6,7 @@ import styles from './style';
 
 interface ITagProps {
   label: string;
+  backgroundColor?: string;
   borderColor: string;
   color: string;
   fontFamily: string;
@@ -13,10 +14,19 @@ interface ITagProps {
   textAlign: AlignTypes;
 }
 
-const Tag = ({ label, color, borderColor, fontFamily, fontSize, textAlign }: ITagProps) => {
+const Tag = ({
+  label,
+  color,
+  borderColor,
+  fontFamily,
+  fontSize,
+  textAlign,
+  backgroundColor,
+}: ITagProps) => {
   const styleManager = StyleSheet.create({
     container: {
       borderColor,
+      backgroundColor,
     },
   });
 
