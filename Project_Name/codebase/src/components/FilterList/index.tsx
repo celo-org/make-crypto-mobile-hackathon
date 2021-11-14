@@ -7,14 +7,14 @@ import FilterButton from '../FilterButton';
 import { styles } from './styles';
 
 interface IListProps {
-  key: string;
+  filterKey: string;
   title: string;
 }
 
 interface IFilterListProps {
-  tags: IListProps[];
+  categories: IListProps[];
   selectedCategory: string;
-  setCategory: (tagKey: string) => void;
+  setCategory: (categoryKey: string) => void;
   textColor: string;
   textFontFamily: string;
   textFontSize: number;
@@ -22,7 +22,7 @@ interface IFilterListProps {
 }
 
 const FilterList = ({
-  tags,
+  categories,
   selectedCategory,
   setCategory,
   textColor,
@@ -33,13 +33,13 @@ const FilterList = ({
   return (
     <View>
       <FlatList
-        data={tags}
-        keyExtractor={(item) => String(item.key)}
+        data={categories}
+        keyExtractor={(item) => item.filterKey}
         renderItem={({ item }) => (
           <FilterButton
             title={item.title}
-            active={item.key === selectedCategory}
-            onPress={() => setCategory(item.key)}
+            active={item.filterKey === selectedCategory}
+            onPress={() => setCategory(item.filterKey)}
             textColor={textColor}
             textFontFamily={textFontFamily}
             textFontSize={textFontSize}
@@ -48,7 +48,7 @@ const FilterList = ({
         )}
         horizontal
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.tagList}
+        contentContainerStyle={styles.categoryList}
         ListHeaderComponent={<View />}
         ListHeaderComponentStyle={{ marginRight: 32 }}
       />
