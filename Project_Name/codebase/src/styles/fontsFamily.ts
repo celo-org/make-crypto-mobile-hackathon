@@ -2,8 +2,8 @@ const fontsFamily = {
   montserrat: {
     light: 'Montserrat_300Light',
     regular: 'Montserrat_400Regular',
-    semiBold: 'Montserrat_600SemiBold',
     medium: 'Montserrat_500Medium',
+    semiBold: 'Montserrat_600SemiBold',
     bold: 'Montserrat_700Bold',
   },
   montserratAlternates: {
