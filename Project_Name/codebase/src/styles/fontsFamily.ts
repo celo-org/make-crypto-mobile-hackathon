@@ -1,14 +1,14 @@
 const fontsFamily = {
   montserrat: {
-    light: 'Montserrat_300Light',
-    regular: 'Montserrat_400Regular',
-    medium: 'Montserrat_500Medium',
-    semiBold: 'Montserrat_600SemiBold',
-    bold: 'Montserrat_700Bold',
+    light300: 'Montserrat_300Light',
+    regular400: 'Montserrat_400Regular',
+    medium500: 'Montserrat_500Medium',
+    semiBold600: 'Montserrat_600SemiBold',
+    bold700: 'Montserrat_700Bold',
   },
   montserratAlternates: {
-    regular: 'MontSerratAlternates_400Regular',
-    semiBold: 'MontserratAlternates_600SemiBold',
+    regular400: 'MontserratAlternates_400Regular',
+    semiBold600: 'MontserratAlternates_600SemiBold',
   },
 };
 
