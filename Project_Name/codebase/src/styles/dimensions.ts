@@ -27,6 +27,7 @@ const dimensions = {
   spacingStackXHuge40: 40,
   spacingStackXxHuge65: 65,
   widthFull: '100%',
+  height50: 50,
 };
 
 export default dimensions;

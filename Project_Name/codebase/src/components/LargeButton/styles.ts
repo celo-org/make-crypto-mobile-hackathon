@@ -4,17 +4,17 @@ import { AlignTypes } from '../../utils/enum';
 
 const styles = StyleSheet.create({
   container: {
-    height: 50,
+    height: dimensions.height50,
+    backgroundColor: colors.light.neutralColor4,
+    borderRadius: border.radius.md6,
     width: dimensions.widthFull,
     justifyContent: AlignTypes.CENTER,
     alignItems: AlignTypes.CENTER,
+    flexDirection: AlignTypes.ROW
   },
-  text: {
-    fontFamily: fontsFamily.montserratAlternates.semiBold,
-    fontSize: fontsSize.md16,
-    color: colors.light.neutralColor11,
-    textAlign: AlignTypes.CENTER,
-  },
+  icon: {
+    marginRight: dimensions.spacingInlineXxs12
+  }
 });
 
 export default styles;
