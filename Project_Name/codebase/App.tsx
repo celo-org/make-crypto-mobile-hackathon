@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View } from 'react-native';
 import AppLoading from 'expo-app-loading';
+import * as Font from 'expo-font';
 
 import EtherSvg from './assets/ether.svg';
 
@@ -37,6 +38,19 @@ export default function App() {
     MontserratAlternates_400Regular,
     MontserratAlternates_600SemiBold,
   });
+
+  useEffect(() => {
+    (async () =>
+      await Font.loadAsync({
+        Montserrat_300Light,
+        Montserrat_400Regular,
+        Montserrat_600SemiBold,
+        Montserrat_500Medium,
+        Montserrat_700Bold,
+        MontserratAlternates_400Regular,
+        MontserratAlternates_600SemiBold,
+      }))();
+  }, []);
 
   if (!montserratFontsLoaded && !montserratAlternatesFontsLoaded) {
     <AppLoading />;
