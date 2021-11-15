@@ -1,5 +1,6 @@
 const colors = {
   light: {
+    neutralColor0: '#000000',
     neutralColor1: '#292B3A',
     neutralColor2: '#3C3B3F',
     neutralColor3: '#222222',
