@@ -14,7 +14,7 @@ interface IPillButtonProps extends RectButtonProps {
   label: string;
   iconChildren?: React.FC<SvgProps>;
   backgroundColor: string;
-  textButtonDescription: string;
+  textButtonDescription?: string;
 }
 
 const PillButton = ({
@@ -45,7 +45,9 @@ const PillButton = ({
         />
       </View>
 
-      <Text style={styles.textButtonDescription}>{textButtonDescription}</Text>
+      {textButtonDescription && (
+        <Text style={styles.textButtonDescription}>{textButtonDescription}</Text>
+      )}
     </RectButton>
   );
 };
