@@ -21,6 +21,7 @@ interface INftProps {
   currency: string;
   isLiked: boolean;
   likes: number;
+  toggleLike: () => void;
   tagName: string;
 }
 
@@ -29,6 +30,7 @@ const Nft = ({
   author,
   currency,
   likes,
+  toggleLike,
   isLiked = false,
   tagName,
 }: INftProps): JSX.Element => {
@@ -60,7 +62,7 @@ const Nft = ({
               />
             </View>
             <Likes
-              likeFunction={() => {}}
+              likeFunction={toggleLike}
               numberOfLikes={likes}
               textFontSize={12}
               textAlign={AlignTypes.CENTER}
