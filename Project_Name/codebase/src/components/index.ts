@@ -1,4 +1,5 @@
 export { default as Author } from './Author';
+export { default as Nft } from './Nft';
 export { default as Tag } from './Tag';
 export { default as LargeButton } from './LargeButton';
 export { default as FilterList } from './FilterList';
@@ -7,3 +8,4 @@ export { default as Text } from './Text';
 export { default as LineButton } from './LineButton';
 export { default as Likes } from './Likes';
 export { default as BidCard } from './BidCard';
+export { default as PillButton } from './PillButton';
