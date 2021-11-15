@@ -1,8 +1,9 @@
 import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import { SvgProps } from 'react-native-svg';
 
-import Text from '../Text';
+import TextComponent from '../Text';
 
 import { styles } from './styles';
 
@@ -12,6 +13,8 @@ interface IPillButtonProps extends RectButtonProps {
   textColor: string;
   label: string;
   iconChildren?: React.FC<SvgProps>;
+  backgroundColor: string;
+  textButtonDescription: string;
 }
 
 const PillButton = ({
@@ -20,18 +23,29 @@ const PillButton = ({
   textColor,
   label,
   iconChildren: IconChildren,
+  backgroundColor,
+  textButtonDescription,
   ...rest
 }: IPillButtonProps): JSX.Element => {
+  const stylesManager = StyleSheet.create({
+    container: {
+      backgroundColor,
+    },
+  });
   return (
-    <RectButton style={styles.container} {...rest}>
-      {IconChildren && <IconChildren style={styles.icon} />}
+    <RectButton style={[styles.container, stylesManager.container]} {...rest}>
+      <View style={styles.containerTextIcon}>
+        {IconChildren && <IconChildren style={styles.icon} />}
 
-      <Text
-        fontFamily={textFontFamily}
-        fontsSize={textFontsSize}
-        color={textColor}
-        textDescription={label}
-      />
+        <TextComponent
+          fontFamily={textFontFamily}
+          fontsSize={textFontsSize}
+          color={textColor}
+          textDescription={label}
+        />
+      </View>
+
+      <Text style={styles.textButtonDescription}>{textButtonDescription}</Text>
     </RectButton>
   );
 };
