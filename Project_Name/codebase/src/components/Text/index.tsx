@@ -8,7 +8,7 @@ interface ITextProps extends TextProps {
   color: string;
   fontFamily: string;
   fontsSize: number;
-  textAlign: AlignTypes;
+  textAlign?: AlignTypes;
   textDecoration?: boolean;
 }
 
