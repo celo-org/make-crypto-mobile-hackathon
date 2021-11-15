@@ -1,5 +1,45 @@
 # CELO AI Discord BOT
+<p align="left">
+<a href="https://docs.celo.org/" target="_blank">
+<img src="https://i.imgur.com/ify2iDg.png " width="50" alt="Celo Logo">
+</a>
+</p>
 
+# About the project 
+
+## Inspiration
+
+## What it does
+
+## How we built it
+
+## Challenges we ran into
+
+## Accomplishments that we're proud of
+
+## What we learned
+
+## What's next for Celo AI DiscordBot
+
+
+# Build Status
+
+
+
+# Image 
+
+
+# Video 
+
+
+
+## Contact
+
+Discord @aleadorjan
+
+
+
+## References
 Make Crypto Mobile Hackathon is a 4-week hackathon, focused on growing Mobile DeFi (#MoFi), NFT's and developer tooling on the Celo platform.
 
 ## Hackathon Tracks: 
