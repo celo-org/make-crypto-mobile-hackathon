@@ -697,7 +697,7 @@ module.exports = {
 		const stamps = new StampsModule();
 		await stamps.init();
 		const successAdd = await stamps.utils.add_transaction(req.query.transactionId, req.query.amountSent, req.query.source, req.query.dest, req.query.description);
-		const successSource = await stamps.update_vote("zerostamp", "placeholder_user", "placeholder_name", req.query.source, req.query.transactionId, "uservotes". false);
+		const successSource = await stamps.update_vote("zerostamp", "placeholder_user", "placeholder_name", req.query.source, req.query.transactionId, "uservotes", false);
         const successDest = await stamps.update_vote("zerostamp", "placeholder_user", "placeholder_name", req.query.dest, req.query.transactionId, "uservotes", false);
         return res.json({data: successAdd && successSource && successDest});		
 	},
@@ -706,7 +706,7 @@ module.exports = {
 		const stamps = new StampsModule();
 		await stamps.init();
 		const successAdd = await stamps.utils.add_proposal(req.query.proposalId, req.query.proposer, req.query.description);
-		const successVote = await stamps.update_vote("zerostamp", "placeholder_user", "placeholder_name", req.query.proposer, null, req.query.proposalId, "uservotes". false);
+		const successVote = await stamps.update_vote("zerostamp", "placeholder_user", "placeholder_name", req.query.proposer, null, req.query.proposalId, "uservotes", false);
         return res.json({data: successAdd && successVote});		
 	},
 	
