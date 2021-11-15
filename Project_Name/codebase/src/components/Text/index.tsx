@@ -4,7 +4,7 @@ import { Text, StyleSheet } from 'react-native';
 import { AlignTypes } from '../../utils/enum';
 
 interface ITextProps extends TextProps {
-  textDescription: string;
+  textDescription: string | number;
   color: string;
   fontFamily: string;
   fontsSize: number;
