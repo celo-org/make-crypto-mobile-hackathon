@@ -8,7 +8,7 @@ import { styles } from './styles';
 
 interface FilterButtonProps extends RectButtonProps {
   title: string;
-  active?: boolean;
+  isActive?: boolean;
   textColor: string;
   textFontFamily: string;
   textFontSize: number;
@@ -17,7 +17,7 @@ interface FilterButtonProps extends RectButtonProps {
 
 const FilterButton = ({
   title,
-  active = false,
+  isActive = false,
   textColor,
   textFontFamily,
   textFontSize,
@@ -26,14 +26,14 @@ const FilterButton = ({
 }: FilterButtonProps): JSX.Element => {
   const colorManager = StyleSheet.create({
     button: {
-      backgroundColor: active ? colors.light.neutralColor1 : colors.light.neutralColor12,
+      backgroundColor: isActive ? colors.light.neutralColor1 : colors.light.neutralColor12,
     },
   });
   return (
     <RectButton style={[styles.container, colorManager.button]} {...rest}>
       <Text
         textDescription={title}
-        color={active ? colors.light.neutralColor11 : textColor}
+        color={isActive ? colors.light.neutralColor11 : textColor}
         fontsSize={textFontSize}
         fontFamily={textFontFamily}
         textAlign={textAlign}

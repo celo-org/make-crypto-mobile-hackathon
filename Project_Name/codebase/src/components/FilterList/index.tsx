@@ -38,7 +38,7 @@ const FilterList = ({
         renderItem={({ item }) => (
           <FilterButton
             title={item.title}
-            active={item.filterKey === selectedCategory}
+            isActive={item.filterKey === selectedCategory}
             onPress={() => setCategory(item.filterKey)}
             textColor={textColor}
             textFontFamily={textFontFamily}
