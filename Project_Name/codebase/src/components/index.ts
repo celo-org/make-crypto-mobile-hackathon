@@ -1,4 +1,5 @@
 export { default as Author } from './Author';
+export { default as Nft } from './Nft';
 export { default as Tag } from './Tag';
 export { default as LargeButton } from './LargeButton';
 export { default as FilterList } from './FilterList';
