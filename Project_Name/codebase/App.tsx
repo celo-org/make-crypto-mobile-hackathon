@@ -1,3 +1,5 @@
+import 'intl';
+import 'intl/locale-data/jsonp/en-US';
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import { View } from 'react-native';
