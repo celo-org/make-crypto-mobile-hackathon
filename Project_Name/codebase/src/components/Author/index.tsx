@@ -32,7 +32,7 @@ const Author = ({ authorName, authorImage }: IAuthorProps): JSX.Element => {
           textDescription={'Author'}
           color={colors.light.neutralColor5}
           fontsSize={fontSizes.xxs10}
-          fontFamily={fontsFamily.montserrat.light300}
+          fontFamily={fontsFamily.montserrat.medium500}
         />
         <Text
           textDescription={authorName}
