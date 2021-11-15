@@ -11,7 +11,7 @@ interface IPillButtonProps extends RectButtonProps {
   textFontsSize: number;
   textColor: string;
   label: string;
-  iconChildren: React.FC<SvgProps>;
+  iconChildren?: React.FC<SvgProps>;
 }
 
 const PillButton = ({
