@@ -3,6 +3,7 @@ import { border, colors, dimensions } from '../../styles';
 
 const style = StyleSheet.create({
   imageContainer: {
+    borderColor: colors.light.neutralColor5,
     backgroundColor: colors.light.neutralColor12,
     borderWidth: border.width.thick,
     borderRadius: border.radius.md6,
@@ -17,12 +18,10 @@ const style = StyleSheet.create({
     width: dimensions.spacingStackXHuge40,
   },
   textContainer: {
-    display: 'flex',
     justifyContent: 'space-around',
     marginLeft: dimensions.spacingStackXs8,
   },
   wrapper: {
-    display: 'flex',
     flexDirection: 'row',
   },
 });
