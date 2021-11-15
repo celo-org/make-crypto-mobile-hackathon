@@ -23,11 +23,11 @@ export const styles = StyleSheet.create({
     borderWidth: border.width.hairline,
     alignItems: AlignTypes.CENTER,
     height: dimensions.height40,
-    width: dimensions.width60,
+    width: dimensions.width20
   },
   inputView: {
     height: dimensions.height40,
-    width: dimensions.width240,
+    width: dimensions.width80,
     backgroundColor: colors.light.neutralColor12,
     borderTopRightRadius: border.radius.xl20,
     borderBottomRightRadius: border.radius.xl20,
@@ -44,8 +44,9 @@ export const styles = StyleSheet.create({
     color: colors.light.neutralColor3
   },
   currencyFormatted: {
-    width: '70%',
+    width: dimensions.widthFull,
     marginTop: dimensions.spacingInlineQuarck5,
     alignItems: 'flex-end',
+    paddingRight: dimensions.spacingInlineXs14,
   }
 }) 
