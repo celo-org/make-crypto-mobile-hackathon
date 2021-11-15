@@ -293,7 +293,7 @@ class Utilities {
 			return 0;
 		}
 		for (let i = 0; i < proposals_by_user.length; i++) {
-			total += get_average_impact_by_proposal(proposals_by_user[i].proposalId);
+			total += await get_average_impact_by_proposal(proposals_by_user[i].proposalId);
 		}
 		return total/proposals_by_user.length;
 	}
