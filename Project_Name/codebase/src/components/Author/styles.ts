@@ -5,21 +5,21 @@ const style = StyleSheet.create({
   imageContainer: {
     borderColor: colors.light.neutralColor5,
     backgroundColor: colors.light.neutralColor12,
-    borderWidth: border.width.thick,
+    borderWidth: border.width.hairline,
     borderRadius: border.radius.md6,
-    padding: dimensions.spacingStackThin3,
+    padding: dimensions.spacingInlineThin2,
   },
   imageBorder: {
     borderRadius: border.radius.md6,
     overflow: 'hidden',
   },
   image: {
-    height: dimensions.spacingStackXHuge40,
-    width: dimensions.spacingStackXHuge40,
+    height: dimensions.spacingStackXGiant30,
+    width: dimensions.spacingStackXGiant30,
   },
   textContainer: {
+    marginLeft: dimensions.spacingStackQuarck4,
     justifyContent: 'space-around',
-    marginLeft: dimensions.spacingStackXs8,
   },
   wrapper: {
     flexDirection: 'row',

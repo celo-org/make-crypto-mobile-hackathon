@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     borderWidth: border.width.hairline,
     justifyContent: AlignTypes.CENTER,
     margin: dimensions.spacingStackQuarck4,
-    padding: dimensions.spacingStackXxxs6,
+    padding: dimensions.spacingStackThin3,
   },
 });
 
