@@ -4,3 +4,4 @@ export { default as FilterList } from './FilterList';
 export { default as FilterButton } from './FilterButton';
 export { default as Text } from './Text';
 export { default as LineButton } from './LineButton';
+export { default as Likes } from './Likes';
