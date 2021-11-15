@@ -1,16 +1,17 @@
 import { StyleSheet } from 'react-native';
 import { border, colors, dimensions } from '../../styles';
+import { AlignTypes } from '../../utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER,
     flexDirection: 'row'
   },
   icon: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER,
     borderRadius: border.radius.sm4,
     borderColor: colors.light.neutralColor5,
     borderWidth: border.width.hairline,
