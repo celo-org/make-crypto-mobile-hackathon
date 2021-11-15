@@ -1,4 +1,4 @@
-# ⚡ Make Crypto Mobile 📱 Hackathon ⚡
+# CELO AI Discord BOT
 
 Make Crypto Mobile Hackathon is a 4-week hackathon, focused on growing Mobile DeFi (#MoFi), NFT's and developer tooling on the Celo platform.
 
