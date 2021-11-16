@@ -9,20 +9,20 @@ import EtherBlackSvg from '../../../assets/ether-black.svg';
 import styles from './styles';
 
 interface INftProps {
-  image: {
-    url: string;
-    value: number;
-    title: string;
-  };
   author: {
     name: string;
     image: string;
   };
   currency: string;
+  image: {
+    url: string;
+    title: string;
+  };
   isLiked: boolean;
   likes: number;
+  tags: string[];
   toggleLike: () => void;
-  tagName: string;
+  value: number;
 }
 
 const Nft = ({
@@ -32,7 +32,7 @@ const Nft = ({
   likes,
   toggleLike,
   isLiked = false,
-  tagName,
+  tags,
 }: INftProps): JSX.Element => {
   return (
     <View style={styles.card}>
@@ -52,14 +52,17 @@ const Nft = ({
           />
           <View style={styles.cardDetails}>
             <View style={styles.tagContainer}>
-              <Tag
-                label={tagName}
-                borderColor={colors.light.neutralColor5}
-                color={colors.light.neutralColor5}
-                fontFamily={fontsFamily.montserrat.regular400}
-                fontSize={fontsSize.xxs10}
-                textAlign={AlignTypes.LEFT}
-              />
+              {tags.map((tag, index) => {
+                <Tag
+                  key={`tag${index}`}
+                  label={tag}
+                  borderColor={colors.light.neutralColor5}
+                  color={colors.light.neutralColor5}
+                  fontFamily={fontsFamily.montserrat.regular400}
+                  fontSize={fontsSize.xxs10}
+                  textAlign={AlignTypes.LEFT}
+                />;
+              })}
             </View>
             <Likes
               likeFunction={toggleLike}
