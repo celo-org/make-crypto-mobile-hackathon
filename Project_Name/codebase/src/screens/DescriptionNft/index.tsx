@@ -40,7 +40,7 @@ const DescriptionNft = ({
       <View style={styles.head}>
         <SquareButton iconChildren={Back} onPress={() => {}} />
       </View>
-      <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
+      <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
         <View>
           <Image
             source={{

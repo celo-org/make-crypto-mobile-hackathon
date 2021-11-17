@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginHorizontal: dimensions.spacingInlineSm16,
   },
   image: {
-    height: 400,
+    height: dimensions.height400,
     borderRadius: border.radius.xl20,
     marginVertical: dimensions.spacingInlineSm16,
   },
@@ -35,12 +35,15 @@ const styles = StyleSheet.create({
     marginBottom: dimensions.spacingInlineXl30,
   },
   buttonContainer: {
-    width: '100%',
+    width: dimensions.widthFull,
     paddingHorizontal: dimensions.spacingInlineSm16,
     paddingBottom: paddingSmallDevice,
   },
   head: {
     paddingTop: dimensions.spacingInlineSm16,
+  },
+  scrollView: {
+    flex: 1,
   },
 });
 
