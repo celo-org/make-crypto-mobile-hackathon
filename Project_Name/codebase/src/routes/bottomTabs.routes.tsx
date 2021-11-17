@@ -21,6 +21,7 @@ import ProfileSvg from '../../assets/profile.svg';
 import ProfileFocusedSvg from '../../assets/profile-focused.svg';
 import WalletSvg from '../../assets/wallet.svg';
 import WalletFocusedSvg from '../../assets/wallet-focused.svg';
+import { AlignTypes } from '../utils/enum';
 
 const bottomTabsRoutes = (): JSX.Element => {
   return (
@@ -28,7 +29,7 @@ const bottomTabsRoutes = (): JSX.Element => {
       screenOptions={{
         tabBarStyle: {
           flex: 1,
-          alignItems: 'center',
+          alignItems: AlignTypes.CENTER,
           height: dimensions.height60,
           position: 'absolute',
           bottom: dimensions.spacingInlineXl30,
@@ -132,8 +133,8 @@ const styles = StyleSheet.create({
     elevation: dimensions.spacingInlineQuarck5,
   },
   menuContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: AlignTypes.CENTER,
+    justifyContent: AlignTypes.CENTER,
     top: dimensions.spacingInlineThin2,
   },
   menuLabel: {
