@@ -1,5 +1,6 @@
 import { Dimensions, StyleSheet } from 'react-native';
 import { border, dimensions } from '../../styles';
+import { AlignTypes } from '../../utils/enum';
 
 const deviceHeight = Dimensions.get('window').height;
 
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
   },
   detailsHeader: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: AlignTypes.SPACE_BETWEEN,
     paddingRight: dimensions.spacingStackXBig20,
     marginBottom: dimensions.spacingInlineSm16,
   },
@@ -29,7 +30,6 @@ const styles = StyleSheet.create({
   },
   detailsFooter: {
     marginBottom: dimensions.spacingStackXHuge40,
-    // alignItems: 'flex-start',
   },
   description: {
     marginBottom: dimensions.spacingInlineXl30,
