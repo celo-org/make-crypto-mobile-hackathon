@@ -33,6 +33,7 @@ const Nft = ({
   toggleLike,
   isLiked = false,
   tags,
+  value,
 }: INftProps): JSX.Element => {
   return (
     <View style={styles.card}>
@@ -46,7 +47,7 @@ const Nft = ({
         <View style={styles.cardHeader}>
           <Text
             textDescription={image.title}
-            fontFamily={fontsFamily.montserratAlternates.semiBold600}
+            fontFamily={fontsFamily.montserrat.semiBold600}
             fontsSize={fontsSize.md16}
             color={colors.light.neutralColor3}
           />
@@ -79,7 +80,7 @@ const Nft = ({
           <Author authorImage={{ uri: author.image }} authorName={author.name} />
           <View>
             <BidCard
-              value={image.value}
+              value={value}
               currency={currency}
               smallIconChildren={EtherBlackSmallSvg}
               largeIconChildren={EtherBlackSvg}
