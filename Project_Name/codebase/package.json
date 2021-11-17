@@ -11,6 +11,8 @@
   "dependencies": {
     "@expo-google-fonts/montserrat": "^0.2.0",
     "@expo-google-fonts/montserrat-alternates": "^0.2.0",
+    "@react-navigation/bottom-tabs": "^6.0.9",
+    "@react-navigation/native": "^6.0.6",
     "@types/react": "^17.0.34",
     "@types/react-native": "^0.66.4",
     "expo": "~43.0.2",
@@ -25,8 +27,8 @@
     "react-native": "0.64.3",
     "react-native-gesture-handler": "~1.10.2",
     "react-native-reanimated": "~2.2.0",
-    "react-native-safe-area-context": "3.3.2",
-    "react-native-screens": "~3.8.0",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.9.0",
     "react-native-svg": "12.1.1",
     "react-native-web": "0.17.1",
     "typescript": "^4.4.4"
