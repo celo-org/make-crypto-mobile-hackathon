@@ -4,10 +4,7 @@ import { AlignTypes } from '../../utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: AlignTypes.CENTER,
-    alignItems: AlignTypes.CENTER,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   icon: {
     justifyContent: AlignTypes.CENTER,
@@ -17,10 +14,10 @@ export const styles = StyleSheet.create({
     borderWidth: border.width.hairline,
     backgroundColor: colors.light.neutralColor12,
     width: 40,
-    height: 40
+    height: 40,
   },
   texts: {
     marginLeft: dimensions.spacingStackXxxs6,
-    alignItems: 'baseline'
-  }
-}) 
+    alignItems: 'baseline',
+  },
+});

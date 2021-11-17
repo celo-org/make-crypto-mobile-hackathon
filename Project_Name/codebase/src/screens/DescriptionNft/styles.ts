@@ -1,20 +1,22 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import { border, dimensions } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+
+const deviceHeight = Dimensions.get('window').height;
+
+const paddingSmallDevice = deviceHeight < 700 ? 20 : 0;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginHorizontal: dimensions.spacingInlineSm16,
-    height: '100%',
   },
   image: {
-    height: 333,
+    height: 400,
     borderRadius: border.radius.xl20,
-    marginVertical: dimensions.spacingStackGiant25,
+    marginVertical: dimensions.spacingInlineSm16,
   },
   detailsContainer: {
-    marginHorizontal: dimensions.spacingInlineXl30,
+    marginHorizontal: dimensions.spacingInlineSm16,
   },
   detailsHeader: {
     flexDirection: 'row',
@@ -27,17 +29,18 @@ const styles = StyleSheet.create({
   },
   detailsFooter: {
     marginBottom: dimensions.spacingStackXHuge40,
-    height: dimensions.spacingInlineXl30,
-    alignItems: 'flex-start',
+    // alignItems: 'flex-start',
   },
   description: {
     marginBottom: dimensions.spacingInlineXl30,
   },
-  head: {
-    marginVertical: dimensions.spacingInlineSm16,
-  },
   buttonContainer: {
     width: '100%',
+    paddingHorizontal: dimensions.spacingInlineSm16,
+    paddingBottom: paddingSmallDevice,
+  },
+  head: {
+    paddingTop: dimensions.spacingInlineSm16,
   },
 });
 
