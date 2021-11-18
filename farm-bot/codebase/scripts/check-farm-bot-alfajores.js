@@ -4,7 +4,7 @@ const FARM_BOT_ABI = require('../abis/farmBot.json')
 const {WrapperCache} = require("@celo/contractkit/lib/contract-cache");
 
 const FORNO_ALFAJORES_URL = 'https://alfajores-forno.celo-testnet.org'
-const FARM_BOT_ADDRESS_ALFAJORES = '0xdcC4aE4C2563A3918081791d3e8640D06b82aC63'
+const FARM_BOT_ADDRESS_ALFAJORES = '0xA0129bFC71c2291efF216eDE522aa1c64A0d57F2'
 const TOKEN_ADDRESS = '0xf3098223845F37Ffe4B3A066F2D38A0587317269' // mcUSD-Celo LP
 
 async function getKit(privateKey) {
