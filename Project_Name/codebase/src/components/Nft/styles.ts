@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
   },
   tagContainer: {
     marginRight: dimensions.spacingInlineQuarck5,
+    flexDirection: 'row',
   },
 });
 

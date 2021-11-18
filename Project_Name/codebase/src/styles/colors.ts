@@ -14,6 +14,7 @@ const colors = {
     neutralColor11: '#FDFDFD',
     neutralColor12: '#FFFFFF',
     neutralColor13: '#FF2222',
+    neutralColor14: '#F9F9F9',
   },
   dark: {},
 };
