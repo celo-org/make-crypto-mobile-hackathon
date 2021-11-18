@@ -60,4 +60,9 @@ contract FarmBot {
         IERC20(tokenAddress).approve(address(farm), tokenBalance);
         farm.stake(tokenBalance);
     }
+
+    function claimRewards() public {
+        // todo eventually make private
+        farm.getReward();
+    }
 }
