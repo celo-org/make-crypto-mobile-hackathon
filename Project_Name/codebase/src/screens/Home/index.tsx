@@ -66,7 +66,6 @@ const Home = (): JSX.Element => {
         setIsLoading(false);
       }
     }
-
     fetchNft();
   }, [category]);
 
