@@ -17,6 +17,9 @@
     "compile-contracts": "yarn hardhat compile",
     "test": "ts-mocha ./farm-bot/codebase/test/**/*.ts"
   },
+  "engines": {
+    "node": "^14.18"
+  },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-etherscan": "^2.1.3",
