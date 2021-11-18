@@ -17,7 +17,7 @@ interface ILikeProps extends BorderlessButtonProps {
   textColor: string;
   textFontFamily: string;
   textFontSize: number;
-  textAlign: AlignTypes;
+  textAlign?: AlignTypes;
 }
 
 const Likes = ({
