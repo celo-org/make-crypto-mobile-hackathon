@@ -6,10 +6,7 @@ const fontsFamily = {
     semiBold600: 'Montserrat_600SemiBold',
     bold700: 'Montserrat_700Bold',
   },
-  montserratAlternates: {
-    regular400: 'MontserratAlternates_400Regular',
-    semiBold600: 'MontserratAlternates_600SemiBold',
-  },
+  
 };
 
 export default fontsFamily;
