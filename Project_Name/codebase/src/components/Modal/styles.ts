@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     paddingTop: dimensions.spacingStackGiant25,
   },
   closeContainer: {
-    width: '100%',
+    width: dimensions.widthFull,
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
     paddingRight: dimensions.spacingInlineXl30,
