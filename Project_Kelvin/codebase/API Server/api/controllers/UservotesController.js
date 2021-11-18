@@ -652,7 +652,7 @@ module.exports = {
 		await stamps.init();
 		
 		let resultData = [];
-		for (let i = 0; i < req.query.transactions.length; i++) {
+		for (let i = 0; i < req.query.proposals.length; i++) {
 			resultData.push(await stamps.utils.get_votes_by_proposal(req.query.proposals[i], req.query.collection));
 		}
 		return res.json({data: resultData});
