@@ -1,18 +1,19 @@
 import { StyleSheet } from 'react-native';
 import { colors, dimensions } from '../../styles';
+import { AlignTypes } from '../../utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: dimensions.spacingStackXxl16,
-    paddingHorizontal: 16,
-    backgroundColor: colors.light.neutralColor14
+    paddingHorizontal: dimensions.spacingStackXxl16,
+    backgroundColor: colors.light.neutralColor14,
   },
   header: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: AlignTypes.SPACE_BETWEEN,
   },
-  logo:{
+  logo: {
     width: 80,
     height: dimensions.height40,
     borderRadius: 7,
@@ -25,12 +26,12 @@ export const styles = StyleSheet.create({
     },
     shadowOpacity: 0.32,
     shadowRadius: 5.46,
-    
+
     elevation: 9,
   },
   buttons: {
     width: dimensions.width90,
-    justifyContent: 'space-between',
+    justifyContent: AlignTypes.SPACE_BETWEEN,
     flexDirection: 'row',
   },
   title: {
@@ -41,6 +42,6 @@ export const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    marginBottom: 80,
-  }
-})
+    marginBottom: dimensions.height80,
+  },
+});
