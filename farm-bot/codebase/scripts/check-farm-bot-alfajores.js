@@ -98,6 +98,7 @@ async function main() {
 
   const kit2 = await getKit(process.env.ALFAJORES_WALLET_PRIVATE_KEY_2)
   try {
+    console.log(`attempting to withdraw before depositing`)
     await withdraw(kit2, amount) // should fail (none deposited!)
   } catch (error) {
     if (!error.message.includes('Transaction has been reverted by the EVM')) {
