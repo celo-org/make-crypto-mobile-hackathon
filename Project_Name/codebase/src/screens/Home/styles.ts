@@ -14,20 +14,20 @@ export const styles = StyleSheet.create({
     justifyContent: AlignTypes.SPACE_BETWEEN,
   },
   logo: {
-    width: 80,
+    width: dimensions.height80,
     height: dimensions.height40,
-    borderRadius: 7,
+    borderRadius: dimensions.spacingStackXxs7,
     backgroundColor: colors.light.neutralColor12,
 
     shadowColor: colors.light.neutralColor0,
     shadowOffset: {
-      width: 6,
-      height: 4,
+      width: dimensions.spacingStackXxxs6,
+      height: dimensions.spacingStackQuarck4,
     },
     shadowOpacity: 0.32,
     shadowRadius: 5.46,
 
-    elevation: 9,
+    elevation: dimensions.spacingInlineXxxs9,
   },
   buttons: {
     width: dimensions.width90,
