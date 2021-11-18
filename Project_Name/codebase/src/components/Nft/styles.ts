@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     alignItems: AlignTypes.CENTER,
     flexDirection: 'row',
     marginBottom: dimensions.spacingInlineQuarck5,
-    justifyContent: 'space-between',
+    justifyContent: AlignTypes.SPACE_BETWEEN,
   },
   cardContent: {
     paddingVertical: dimensions.spacingStackXs8,
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   cardFooter: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: AlignTypes.SPACE_BETWEEN,
   },
   cardDetails: {
     flexDirection: 'row',
@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
   },
   tagContainer: {
     marginRight: dimensions.spacingInlineQuarck5,
+    flexDirection: 'row',
   },
 });
 
