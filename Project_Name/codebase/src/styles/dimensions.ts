@@ -30,6 +30,7 @@ const dimensions = {
   width20: '20%',
   width80: '80%',
   width40: 40,
+  width44: 44,
   width60: 60,
   width240: 240,
   height40: 40,
