@@ -32,10 +32,13 @@ const dimensions = {
   width40: 40,
   width44: 44,
   width60: 60,
+  width90: 90,
   width240: 240,
   height40: 40,
   height50: 50,
   height60: 60,
+  height400: 400,
+  height80: 80,
 };
 
 export default dimensions;

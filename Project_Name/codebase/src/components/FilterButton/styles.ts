@@ -15,5 +15,6 @@ export const styles = StyleSheet.create({
     shadowRadius: 4.65,
     
     elevation: 7,
+    height: dimensions.height40,
   },
 }) 

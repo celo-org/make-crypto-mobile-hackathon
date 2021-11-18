@@ -7,6 +7,7 @@ import EtherBlackSmallSvg from '../../../assets/ether-black-small.svg';
 import EtherBlackSvg from '../../../assets/ether-black.svg';
 
 import styles from './styles';
+import { RectButton } from 'react-native-gesture-handler';
 
 interface INftProps {
   author: {
@@ -22,6 +23,7 @@ interface INftProps {
   likes: number;
   tags: string[];
   toggleLike: () => void;
+  pressImageFunction: () => void;
   value: number;
 }
 
@@ -31,18 +33,21 @@ const Nft = ({
   currency,
   likes,
   toggleLike,
+  pressImageFunction,
   isLiked = false,
   tags,
   value,
 }: INftProps): JSX.Element => {
   return (
     <View style={styles.card}>
-      <ImageBackground
-        source={{
-          uri: image.url,
-        }}
-        style={styles.NftImage}
-      />
+      <RectButton onPress={pressImageFunction}>
+        <ImageBackground
+          source={{
+            uri: image.url,
+          }}
+          style={styles.NftImage}
+        />
+      </RectButton>
       <View style={styles.cardContent}>
         <View style={styles.cardHeader}>
           <Text
@@ -54,15 +59,17 @@ const Nft = ({
           <View style={styles.cardDetails}>
             <View style={styles.tagContainer}>
               {tags.map((tag, index) => {
-                <Tag
-                  key={`tag${index}`}
-                  label={tag}
-                  borderColor={colors.light.neutralColor5}
-                  color={colors.light.neutralColor5}
-                  fontFamily={fontsFamily.montserrat.regular400}
-                  fontSize={fontsSize.xxs10}
-                  textAlign={AlignTypes.LEFT}
-                />;
+                return (
+                  <Tag
+                    key={`tag${index}`}
+                    label={tag}
+                    borderColor={colors.light.neutralColor5}
+                    color={colors.light.neutralColor5}
+                    fontFamily={fontsFamily.montserrat.regular400}
+                    fontSize={fontsSize.xxs10}
+                    textAlign={AlignTypes.LEFT}
+                  />
+                );
               })}
             </View>
             <Likes
