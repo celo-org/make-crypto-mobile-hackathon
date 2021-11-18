@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Text } from '..';
 import { AlignTypes } from '../../utils/enum';
-import styles from './style';
+import styles from './styles';
 
 interface ITagProps {
   label: string;

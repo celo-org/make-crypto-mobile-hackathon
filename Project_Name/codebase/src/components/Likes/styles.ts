@@ -6,10 +6,10 @@ export const styles = StyleSheet.create({
   container: {
     width: dimensions.spacingStackXBig20,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: AlignTypes.SPACE_BETWEEN,
     alignItems: AlignTypes.CENTER,
   },
   icon: {
-    marginRight: dimensions.spacingStackQuarck4
-  }
-}) 
+    marginRight: dimensions.spacingStackQuarck4,
+  },
+});
