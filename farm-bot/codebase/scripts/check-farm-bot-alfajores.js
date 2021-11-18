@@ -59,6 +59,15 @@ async function invest(kit) {
   })
 }
 
+async function claimRewards(kit) {
+  const farmBotContract = getFarmBotContract(kit)
+  return farmBotContract.methods.claimRewards().send({
+    from: kit.web3.eth.defaultAccount,
+    gas: 1076506,
+    gasPrice: 1000000000,
+  })
+}
+
 /**
  * Runs a test confirming that a user cannot withdraw without having deposited,
  *  even if another user has deposited (so the contract has funds).
@@ -95,6 +104,10 @@ async function main() {
       throw error
     }
   }
+
+  console.log(`claiming rewards`)
+  const claimResult = await claimRewards(kit1)
+  assert.equal(claimResult.status, true, 'Unexpected claim rewards result')
 
   console.log(`withdrawing LP for account ${kit1.web3.eth.defaultAccount}`)
   const user1withdrawResult = await withdraw(kit1, amount) // should pass
