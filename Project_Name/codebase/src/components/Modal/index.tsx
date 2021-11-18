@@ -1,5 +1,6 @@
 import React from 'react';
-import { Modal, ModalProps, View } from 'react-native';
+import { Button, Modal, ModalProps, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Close from '../../../assets/close.svg';
 import styles from './styles';
 
@@ -10,7 +11,8 @@ interface IModalProps extends ModalProps {
 }
 
 const ModalDefault = ({ modalVisible, setModalVisible, children }: IModalProps) => {
-  console.log(modalVisible);
+  const closeModal = () => setModalVisible(!modalVisible);
+
   return (
     <Modal
       visible={modalVisible}
@@ -19,7 +21,9 @@ const ModalDefault = ({ modalVisible, setModalVisible, children }: IModalProps) 
       <View style={styles.overlay}>
         <View style={styles.modalView}>
           <View style={styles.closeContainer}>
-            <Close />
+            <TouchableOpacity onPress={() => closeModal()}>
+              <Close />
+            </TouchableOpacity>
           </View>
           <View style={styles.content}>{children}</View>
         </View>
