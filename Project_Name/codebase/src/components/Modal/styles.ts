@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     width: dimensions.widthFull,
     paddingBottom: dimensions.width44,
     paddingTop: dimensions.spacingStackGiant25,
+    opacity: 1,
   },
   closeContainer: {
     width: dimensions.widthFull,

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, Modal, ModalProps, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Button, Modal, ModalProps, TouchableOpacity, View } from 'react-native';
 import Close from '../../../assets/close.svg';
+
 import styles from './styles';
 
 interface IModalProps extends ModalProps {
@@ -11,13 +11,10 @@ interface IModalProps extends ModalProps {
 }
 
 const ModalDefault = ({ modalVisible, setModalVisible, children }: IModalProps) => {
-  const closeModal = () => setModalVisible(!modalVisible);
+  const closeModal = () => setModalVisible(false);
 
   return (
-    <Modal
-      visible={modalVisible}
-      animationType="fade"
-      onRequestClose={() => setModalVisible(!modalVisible)}>
+    <Modal visible={modalVisible} animationType="fade" transparent={true}>
       <View style={styles.overlay}>
         <View style={styles.modalView}>
           <View style={styles.closeContainer}>
@@ -25,7 +22,7 @@ const ModalDefault = ({ modalVisible, setModalVisible, children }: IModalProps) 
               <Close />
             </TouchableOpacity>
           </View>
-          <View style={styles.content}>{children}</View>
+          {children}
         </View>
       </View>
     </Modal>

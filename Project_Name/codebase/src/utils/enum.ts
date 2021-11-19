@@ -3,4 +3,5 @@ export enum AlignTypes {
   RIGHT = 'right',
   LEFT = 'left',
   SPACE_BETWEEN = 'space-between',
+  FLEX_END = 'flex-end',
 }
