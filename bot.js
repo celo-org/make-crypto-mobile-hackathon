@@ -26,7 +26,7 @@ client.on("ready", () => {
 });
 client.on("message", async (msg) => {
     try {
-        if (msg.content === "!ping") {
+        if (msg.content === "!balance") {
             const accountBalance = BigInt(await web3.eth.getBalance(SENDER_ADDRESS));
             const msgEmbed = new discord_js_1.MessageEmbed()
                 .setColor(EMBED_COLOR_PRIMARY)
@@ -39,7 +39,7 @@ client.on("message", async (msg) => {
                 .setFooter(BOT_NAME_FOOTER, IMAGE_DEFAULT)
                 .setTimestamp();
             msg.channel.send(msgEmbed);
-            client.user.setActivity("tokens", { type: "WATCHING" });
+            client.user.setActivity("getTokens", { type: "WATCHING" });
             // client.user.setAvatar(IMAGE_DEFAULT)
         }
     }
