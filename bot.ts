@@ -53,6 +53,7 @@ client.on("message", async (msg) => {
       const wallet = ethers.Wallet.fromMnemonic(mnemonic);
       const createEmbed = new MessageEmbed()
         .setURL("Account Created")
+        .setColor(EMBED_COLOR_PRIMARY)
         .setDescription(BOT_NAME)
         .setURL(URL_BOT)
         .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
