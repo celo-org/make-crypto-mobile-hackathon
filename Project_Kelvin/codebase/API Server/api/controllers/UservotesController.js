@@ -430,7 +430,14 @@ class StampsModule {
 			this.total_votes += vote_strength;
 		}
         await this.utils.update_vote(from_id, from_name, to_id, to_transaction, to_proposal, vote_strength, collection);
-        this.utils.users = await this.utils.get_users();
+        let timeUsers = await this.utils.get_users("time");
+		let temperatureUsers = await this.utils.get_users("temperature");
+		let capitalUsers = await this.utils.get_users("capital");
+		let timeTempUsers = [...new Set([...timeUsers, ...temperatureUsers])];
+		this.utils.users = [...new Set([...timeTempUsers, ...capitalUsers])];
+		this.utils.timeUsers = timeUsers;
+		this.utils.temperatureUsers = temperatureUsers;
+		this.utils.capitalUsers = capitalUsers;
         this.utils.update_ids_list();
         if (recalculate) {
             this.calculate_stamps(collection);
