@@ -10,6 +10,7 @@ const QRContractKit = require("@celo/contractkit");
 const ethers = require("ethers");
 const bip39 = require("bip39");
 const Bot = require("intelligo");
+const QRCode = require("qrcode");
 const AUTHOR = "@aleadorjan";
 const BOT_NAME = "CeloAIDiscordBot";
 const BOT_NAME_FOOTER = "CeloAIDiscordBot";
@@ -21,6 +22,11 @@ const URL_BOT = "https://celo.org/";
 const MNEMONIC = process.env.MNEMONIC;
 const SENDER_ADDRESS = process.env.PUBLIC_KEY;
 const TOKEN_NAME = "CELO";
+const DELETE_FILE_TIMEOUT = 10000;
+const QR_FILE = "filename.png";
+const QR_COLOR = "#0x35d07f";
+const QR_BACKGROUND = "#1111";
+const QR_REQUEST_PAY_10 = "valora:" + SENDER_ADDRESS + "?amount=10";
 console.log(`Starting bot...`);
 console.log(`Connecting web3 to ..`);
 const client = new discord_js_1.Client();
@@ -77,6 +83,7 @@ client.on("message", async (msg) => {
                 .setColor(EMBED_COLOR_PRIMARY)
                 .setDescription(BOT_NAME)
                 .setURL(URL_BOT)
+                .setThumbnail(IMAGE_DEFAULT)
                 .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
                 .setThumbnail(LOGO)
                 .addField("Your public key", SENDER_ADDRESS, true)
@@ -97,13 +104,39 @@ client.on("message", async (msg) => {
             let convertAmount = amountOfcUsd / 10000000000000000;
             const createPriceEmbed = new discord_js_1.MessageEmbed()
                 .setColor(EMBED_COLOR_PRIMARY)
+                .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
                 .addField("1 ETH/CELO", `${convertAmount}`)
+                .setThumbnail(LOGO)
                 .setTitle(`ETH Price to CELO`)
                 .setURL(URL_BOT)
                 .setTimestamp()
                 .setImage(LOGO)
+                .setThumbnail(IMAGE_DEFAULT)
                 .setFooter("Convert ETH - CELO", IMAGE_DEFAULT);
             msg.channel.send(createPriceEmbed);
+        }
+        if (command === "!qr" || responseAI === "qr") {
+            QRCode.toFile(QR_FILE, QR_REQUEST_PAY_10, {
+                color: {
+                    dark: QR_COLOR,
+                    light: QR_BACKGROUND,
+                },
+                scale: 6,
+            }, function (err) {
+                if (err)
+                    throw err;
+                console.log("done");
+            });
+            const createQREmbed = new discord_js_1.MessageEmbed()
+                .setColor(EMBED_COLOR_PRIMARY)
+                .addField("send request to pay ", QR_REQUEST_PAY_10)
+                .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
+                .setTitle(`QR pay/receive with ` + BOT_NAME + URL_BOT)
+                .setURL(URL_BOT)
+                .setThumbnail(LOGO)
+                .setFooter(BOT_NAME_FOOTER);
+            msg.channel.send(createQREmbed);
+            msg.channel.send({ files: [QR_FILE] });
         }
     }
     catch (e) {
