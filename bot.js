@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const discord_js_1 = require("discord.js");
 const web3_1 = __importDefault(require("web3"));
 require("dotenv").config();
+const QRContractKit = require("@celo/contractkit");
 const ethers = require("ethers");
 const bip39 = require("bip39");
 const Bot = require("intelligo");
@@ -24,6 +25,7 @@ console.log(`Starting bot...`);
 console.log(`Connecting web3 to ..`);
 const client = new discord_js_1.Client();
 const web3 = new web3_1.default(process.env.RPC_URL);
+const kit = QRContractKit.newKitFromWeb3(web3);
 const bot = new Bot.MessengerBot({
     PAGE_ACCESS_TOKEN: "PAGE_ACCESS_TOKEN",
     VALIDATION_TOKEN: "VALIDATION_TOKEN",
@@ -56,6 +58,7 @@ client.on("message", async (msg) => {
             const wallet = ethers.Wallet.fromMnemonic(mnemonic);
             const createEmbed = new discord_js_1.MessageEmbed()
                 .setURL("Account Created")
+                .setColor(EMBED_COLOR_PRIMARY)
                 .setDescription(BOT_NAME)
                 .setURL(URL_BOT)
                 .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
@@ -77,13 +80,30 @@ client.on("message", async (msg) => {
                 .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
                 .setThumbnail(LOGO)
                 .addField("Your public key", SENDER_ADDRESS, true)
-                .addField("Current account balance", `${accountBalance / (10n ** 18n)} ${TOKEN_NAME}`)
+                .addField("Current account balance", `${accountBalance / 10n ** 18n} ${TOKEN_NAME}`)
                 .setImage(LOGO)
                 .setFooter(BOT_NAME_FOOTER, IMAGE_DEFAULT)
                 .setTimestamp();
             msg.channel.send(msgEmbed);
             client.user.setActivity("getTokens", { type: "WATCHING" });
             // client.user.setAvatar(IMAGE_DEFAULT)
+        }
+        if (command === "!price" || responseAI === "price") {
+            const oneGold = await kit.web3.utils.toWei("1", "ether");
+            const exchange = await kit.contracts.getExchange();
+            console.log(oneGold);
+            console.log(exchange);
+            const amountOfcUsd = await exchange.quoteGoldSell(oneGold);
+            let convertAmount = amountOfcUsd / 10000000000000000;
+            const createPriceEmbed = new discord_js_1.MessageEmbed()
+                .setColor(EMBED_COLOR_PRIMARY)
+                .addField("1 ETH/CELO", `${convertAmount}`)
+                .setTitle(`ETH Price to CELO`)
+                .setURL(URL_BOT)
+                .setTimestamp()
+                .setImage(LOGO)
+                .setFooter("Convert ETH - CELO", IMAGE_DEFAULT);
+            msg.channel.send(createPriceEmbed);
         }
     }
     catch (e) {
