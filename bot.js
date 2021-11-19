@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const discord_js_1 = require("discord.js");
 const web3_1 = __importDefault(require("web3"));
 require("dotenv").config();
+const ethers = require("ethers");
+const bip39 = require("bip39");
 const Bot = require("intelligo");
 const AUTHOR = "@aleadorjan";
 const BOT_NAME = "CeloAIDiscordBot";
@@ -17,7 +19,7 @@ const LOGO = "https://i.imgur.com/vQrAXOC.png";
 const URL_BOT = "https://celo.org/";
 const MNEMONIC = process.env.MNEMONIC;
 const SENDER_ADDRESS = process.env.PUBLIC_KEY;
-const TOKEN_NAME = 'CELO';
+const TOKEN_NAME = "CELO";
 console.log(`Starting bot...`);
 console.log(`Connecting web3 to ..`);
 const client = new discord_js_1.Client();
@@ -27,7 +29,7 @@ const bot = new Bot.MessengerBot({
     VALIDATION_TOKEN: "VALIDATION_TOKEN",
     APP_SECRET: "APP_SECRET",
 });
-//Training the AI Bot  
+//Training the AI Bot
 bot.learn([
     {
         input: "What is my balance",
@@ -35,6 +37,7 @@ bot.learn([
     },
     { input: "account balance", output: "balance" },
     { input: "my balance", output: "balance" },
+    { input: "create account", output: "create" },
 ]);
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -42,12 +45,29 @@ client.on("ready", () => {
 client.on("message", async (msg) => {
     try {
         const result = bot.answer(msg.content);
+        const responseAI = result[0];
         if (msg.author.bot)
             return;
         const command = msg.content;
-        const responseAI = result[0];
         console.log(`${msg.author.username} said: ${msg.content}`);
         console.log(`AI said: ${responseAI}`);
+        if (command === "!create" || responseAI === "create") {
+            let mnemonic = bip39.generateMnemonic();
+            const wallet = ethers.Wallet.fromMnemonic(mnemonic);
+            const createEmbed = new discord_js_1.MessageEmbed()
+                .setURL("Account Created")
+                .setDescription(BOT_NAME)
+                .setURL(URL_BOT)
+                .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
+                .setThumbnail(LOGO)
+                .setTitle("AI")
+                .addField(`Your public key`, " address" + `${wallet.address}`, false)
+                .addField(`Your mnemonic phrase`, " timestamp: " + `${mnemonic}`, false)
+                .setImage(LOGO)
+                .setFooter(BOT_NAME_FOOTER, IMAGE_DEFAULT)
+                .setTimestamp();
+            msg.author.send(createEmbed);
+        }
         if (command === "!balance" || responseAI === "balance") {
             const accountBalance = BigInt(await web3.eth.getBalance(SENDER_ADDRESS));
             const msgEmbed = new discord_js_1.MessageEmbed()

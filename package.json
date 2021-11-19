@@ -11,9 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bip39": "^3.0.4",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
-    "ethers": "^5.4.2",
+    "ethers": "^5.5.1",
     "intelligo": "^1.3.0",
     "typescript": "^4.1.3",
     "web3": "^1.3.0"
