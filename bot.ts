@@ -101,6 +101,7 @@ client.on("message", async (msg) => {
         let convertAmount = amountOfcUsd / 10000000000000000;
         const createPriceEmbed = new MessageEmbed()
           .setColor(EMBED_COLOR_PRIMARY)
+          .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
           .addField("1 ETH/CELO", `${convertAmount}`)
           .setTitle(`ETH Price to CELO`)
           .setURL(URL_BOT)
