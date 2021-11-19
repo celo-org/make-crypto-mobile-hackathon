@@ -22,7 +22,7 @@ const SENDER_ADDRESS = process.env.PUBLIC_KEY;
 const TOKEN_NAME = "CELO";
 const DELETE_FILE_TIMEOUT = 10000;
 const QR_FILE = "filename.png";
-const QR_COLOR = 0xfbcc5c;
+const QR_COLOR = 0x35d07f;
 const QR_BACKGROUND = "#1111";
 const QR_REQUEST_PAY_10 = "valora:" + SENDER_ADDRESS + "?amount=10";
 
@@ -47,6 +47,9 @@ bot.learn([
   { input: "account balance", output: "balance" },
   { input: "my balance", output: "balance" },
   { input: "create account", output: "create" },
+  { input: "send tokens", output: "qr" },
+  { input: "get tokens", output: "qr" },
+  { input: "get tokens", output: "qr" },
 ]);
 const deleteQRFile = () => {
   fs.unlinkSync(QR_FILE);
