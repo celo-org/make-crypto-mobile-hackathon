@@ -3,10 +3,12 @@ import Web3 from "web3";
 
 require("dotenv").config();
 const QRContractKit = require("@celo/contractkit");
-const ethers = require("ethers");
 const bip39 = require("bip39");
+const ethers = require("ethers");
+const fs = require("fs");
 const Bot = require("intelligo");
 const QRCode = require("qrcode");
+
 const AUTHOR = "@aleadorjan";
 const BOT_NAME = "CeloAIDiscordBot";
 const BOT_NAME_FOOTER = "CeloAIDiscordBot";
@@ -20,7 +22,7 @@ const SENDER_ADDRESS = process.env.PUBLIC_KEY;
 const TOKEN_NAME = "CELO";
 const DELETE_FILE_TIMEOUT = 10000;
 const QR_FILE = "filename.png";
-const QR_COLOR = "#0x35d07f";
+const QR_COLOR = 0xfbcc5c;
 const QR_BACKGROUND = "#1111";
 const QR_REQUEST_PAY_10 = "valora:" + SENDER_ADDRESS + "?amount=10";
 
@@ -30,6 +32,7 @@ console.log(`Connecting web3 to ..`);
 const client: Client = new Client();
 const web3 = new Web3(process.env.RPC_URL);
 const kit = QRContractKit.newKitFromWeb3(web3);
+
 const bot = new Bot.MessengerBot({
   PAGE_ACCESS_TOKEN: "PAGE_ACCESS_TOKEN",
   VALIDATION_TOKEN: "VALIDATION_TOKEN",
@@ -45,6 +48,9 @@ bot.learn([
   { input: "my balance", output: "balance" },
   { input: "create account", output: "create" },
 ]);
+const deleteQRFile = () => {
+  fs.unlinkSync(QR_FILE);
+};
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -97,29 +103,28 @@ client.on("message", async (msg) => {
 
       client.user.setActivity("getTokens", { type: "WATCHING" });
       // client.user.setAvatar(IMAGE_DEFAULT)
-    }  if (command === "!price" ||  responseAI === "price") {
-     
-        const oneGold = await kit.web3.utils.toWei("1", "ether");
-        const exchange = await kit.contracts.getExchange();
-        console.log(oneGold);
-        console.log(exchange);
-        const amountOfcUsd = await exchange.quoteGoldSell(oneGold);
-        let convertAmount = amountOfcUsd / 10000000000000000;
-        const createPriceEmbed = new MessageEmbed()
-          .setColor(EMBED_COLOR_PRIMARY)
-          .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
-          .addField("1 ETH/CELO", `${convertAmount}`)
-          .setThumbnail(LOGO)
-          .setTitle(`ETH Price to CELO`)
-          .setURL(URL_BOT)
-          .setTimestamp()
-          .setImage(LOGO)
-                 .setThumbnail(IMAGE_DEFAULT)
-          .setFooter("Convert ETH - CELO", IMAGE_DEFAULT);
-        msg.channel.send(createPriceEmbed);
-      
     }
-    if (command === "!qr" ||  responseAI === "qr"){
+    if (command === "!price" || responseAI === "price") {
+      const oneGold = await kit.web3.utils.toWei("1", "ether");
+      const exchange = await kit.contracts.getExchange();
+      console.log(oneGold);
+      console.log(exchange);
+      const amountOfcUsd = await exchange.quoteGoldSell(oneGold);
+      let convertAmount = amountOfcUsd / 10000000000000000;
+      const createPriceEmbed = new MessageEmbed()
+        .setColor(EMBED_COLOR_PRIMARY)
+        .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
+        .addField("1 ETH/CELO", `${convertAmount}`)
+        .setThumbnail(LOGO)
+        .setTitle(`ETH Price to CELO`)
+        .setURL(URL_BOT)
+        .setTimestamp()
+        .setImage(LOGO)
+        .setThumbnail(IMAGE_DEFAULT)
+        .setFooter("Convert ETH - CELO", IMAGE_DEFAULT);
+      msg.channel.send(createPriceEmbed);
+    }
+    if (command === "!qr" || responseAI === "qr") {
       QRCode.toFile(
         QR_FILE,
         QR_REQUEST_PAY_10,
@@ -145,8 +150,7 @@ client.on("message", async (msg) => {
         .setFooter(BOT_NAME_FOOTER);
       msg.channel.send(createQREmbed);
       msg.channel.send({ files: [QR_FILE] });
-  
-     
+      setTimeout(deleteQRFile, DELETE_FILE_TIMEOUT);
     }
   } catch (e) {
     msg.reply("ERROR");
