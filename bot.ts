@@ -16,15 +16,30 @@ const EMBED_COLOR_PRIMARY = 0x35d07f;
 const EMBED_COLOR_SECONDARY = 0xfbcc5c;
 const IMAGE_DEFAULT = "https://i.imgur.com/vQrAXOC.png";
 const LOGO = "https://i.imgur.com/vQrAXOC.png";
+const CELO_LOGO_COLOR = "https://i.imgur.com/QZwffyT.png";
 const URL_BOT = "https://celo.org/";
 const MNEMONIC = process.env.MNEMONIC;
 const SENDER_ADDRESS = process.env.PUBLIC_KEY;
 const TOKEN_NAME = "CELO";
 const DELETE_FILE_TIMEOUT = 10000;
 const QR_FILE = "filename.png";
-const QR_COLOR = 0x35d07f;
+const QR_COLOR = "#36cf80";
 const QR_BACKGROUND = "#1111";
 const QR_REQUEST_PAY_10 = "valora:" + SENDER_ADDRESS + "?amount=10";
+
+const URL_SOCIAL_MEDIUM = "https://medium.com/celoorg";
+const URL_SOCIAL_GITHUB = "https://github.com/celo-org";
+const URL_SOCIAL_TWITTER = "https://twitter.com/CeloOrg";
+const URL_SOCIAL_FORUM = "https://forum.celo.org/";
+const URL_SOCIAL_CHAT = "https://discord.gg/6yWMkgM";
+const URL_SOCIAL_YOUTUBE =
+  "https://youtube.com/channel/UCCZgos_YAJSXm5QX5D5Wkcw";
+const URL_SOCIAL_INSTAGRAM = "https://www.instagram.com/celoorg/";
+const URL_SOCIAL_DEFI = "https://defipulse.com/";
+const URL_SOCIAL_LINKEDIN = "https://www.linkedin.com/company/celoOrg/";
+const URL_SOCIAL_TWITCH = "https://www.twitch.tv/celoorg";
+const URL_SOCIAL_REDIT = "https://www.reddit.com/r/celo/";
+const URL_SOCIAL_TELEGRAM = "https://t.me/celoplatform";
 
 console.log(`Starting bot...`);
 console.log(`Connecting web3 to ..`);
@@ -50,6 +65,9 @@ bot.learn([
   { input: "send tokens", output: "qr" },
   { input: "get tokens", output: "qr" },
   { input: "get tokens", output: "qr" },
+  { input: "social", output: "social" },
+  { input: "social media", output: "social" },
+  { input: "celo", output: "social" },
 ]);
 const deleteQRFile = () => {
   fs.unlinkSync(QR_FILE);
@@ -85,6 +103,32 @@ client.on("message", async (msg) => {
         .setTimestamp();
       msg.author.send(createEmbed);
     }
+    if (command === "!celo" || responseAI === "celo") {
+      const socialEmbed = new MessageEmbed()
+        .setColor(EMBED_COLOR_PRIMARY)
+        .setURL(URL_BOT)
+        .setAuthor("author: " + msg.author.username, CELO_LOGO_COLOR, URL_BOT)
+        .setDescription(BOT_NAME)
+        .setThumbnail(LOGO)
+        .addFields(
+          { name: "blog", value: URL_SOCIAL_MEDIUM, inline: true },
+          { name: "github", value: URL_SOCIAL_GITHUB, inline: true },
+          { name: "twitter", value: URL_SOCIAL_TWITTER, inline: true },
+          { name: "forum", value: URL_SOCIAL_FORUM, inline: true },
+          { name: "chat", value: URL_SOCIAL_CHAT, inline: true },
+          { name: "youtube", value: URL_SOCIAL_YOUTUBE, inline: true },
+          { name: "defi", value: URL_SOCIAL_DEFI, inline: true },
+          { name: "linkedin", value: URL_SOCIAL_LINKEDIN, inline: true },
+          { name: "twitch", value: URL_SOCIAL_TWITCH, inline: true },
+          { name: "redit", value: URL_SOCIAL_REDIT, inline: true },
+          { name: "telegram", value: URL_SOCIAL_TELEGRAM, inline: true }
+        )
+        .setImage(LOGO)
+        .setFooter(BOT_NAME_FOOTER, IMAGE_DEFAULT)
+        .setTimestamp();
+      msg.channel.send(socialEmbed);
+    }
+
     if (command === "!balance" || responseAI === "balance") {
       const accountBalance = BigInt(await web3.eth.getBalance(SENDER_ADDRESS));
       const msgEmbed = new MessageEmbed()
@@ -156,7 +200,16 @@ client.on("message", async (msg) => {
       setTimeout(deleteQRFile, DELETE_FILE_TIMEOUT);
     }
   } catch (e) {
-    msg.reply("ERROR");
+    const errorEmbed = new MessageEmbed()
+      .setColor(EMBED_COLOR_PRIMARY)
+      .addField("Error please try again :) ", QR_REQUEST_PAY_10)
+      .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
+      .setTitle(`Error ` + BOT_NAME + URL_BOT)
+      .setURL(URL_BOT)
+      .setThumbnail(LOGO)
+      .setFooter(BOT_NAME_FOOTER);
+    msg.channel.send(errorEmbed);
+
     console.log(new Date().toISOString(), "ERROR", e.stack || e);
   }
 });
