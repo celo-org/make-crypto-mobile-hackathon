@@ -35,7 +35,6 @@ img.icon {
 /* header */
 
 header {
-  font-family: 'Special Elite', cursive;
   padding-bottom: 2px;
   border-bottom: 2px solid;
 }
@@ -46,6 +45,10 @@ header h1 {
   padding: 0 5px;
 }
 
+header h3 {
+  font-family: 'Permanent Marker', cursive;
+}
+
 header .currency {
   line-height: 22px;
 }
@@ -53,10 +56,6 @@ header .currency {
 header .col, header .col-1, header .col-10, header .col-11, header .col-12, header .col-2, header .col-3, header .col-4, header .col-5, header .col-6, header .col-7, header .col-8, header .col-9, header .col-auto, header .col-lg, header .col-lg-1, header .col-lg-10, header .col-lg-11, header .col-lg-12, header .col-lg-2, header .col-lg-3, header .col-lg-4, header .col-lg-5, header .col-lg-6, header .col-lg-7, header .col-lg-8, header .col-lg-9, header .col-lg-auto, header .col-md, header .col-md-1, header .col-md-10, header .col-md-11, header .col-md-12, header .col-md-2, header .col-md-3, header .col-md-4, header .col-md-5, header .col-md-6, header .col-md-7, header .col-md-8, header .col-md-9, header .col-md-auto, header .col-sm, header .col-sm-1, header .col-sm-10, header .col-sm-11, header .col-sm-12, header .col-sm-2, header .col-sm-3, header .col-sm-4, header .col-sm-5, header .col-sm-6, header .col-sm-7, header .col-sm-8, header .col-sm-9, header .col-sm-auto, header .col-xl, header .col-xl-1, header .col-xl-10, header .col-xl-11, header .col-xl-12, header .col-xl-2, header .col-xl-3, header .col-xl-4, header .col-xl-5, header .col-xl-6, header .col-xl-7, header .col-xl-8, header .col-xl-9, header .col-xl-auto {
   padding-left: 0;
   padding-right: 0;
-}
-
-header .endsin div:last-child {
-  font-size: 14px;
 }
 
 /* person */

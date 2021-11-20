@@ -71,17 +71,15 @@ const Header = ({web3Store: { web3User, owner, score, prizePool, scoreNow, setBa
           { connectButton() }
           { accountButton() }
         </ButtonGroup>
-        <h1 className="col-auto mt-2 mb-1" onClick={() => {
-            if(web3User === owner) {
-              setLeaderboard()
-              setLastWinners()
-              setLeaderboardShow(true)
-            }
-          }
-        }>
-          DogeGame
+
+        <h1 className="col-auto mt-3 mb-1">
+          CeloGame
         </h1>
-        <ButtonGroup className='mb-2'>
+
+        <h3>Battle! Win! Earn!</h3>
+        <h3>Play-to-Earn NFT game</h3>
+
+        <ButtonGroup className='mb-2 mt-2'>
           <Button variant='outline-dark'onClick={() => {
               setLeaderboard()
               setLastWinners()
