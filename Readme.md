@@ -4,17 +4,13 @@
 <img src="https://i.imgur.com/NLrP79B.png" width="50" alt="Celo Logo">
 </a>
 </p>
-)
-
 
 # Celo AI (Artificial Intelligence) Discord Bot
 ![](https://i.imgur.com/vQrAXOC.png)
 
+# Video 
 
-
-
-
-
+https://youtu.be/qTctsIPYzms
 # Use Cases 
 ##### UC1
 > As a **user** I want to **use Discord** in my **mobile phone** so that I can **create my first Web3 account** and get  Celo Tokens.
@@ -89,9 +85,6 @@
 
 
 
-# Video 
-
-https://youtu.be/qTctsIPYzms
 
 # AI Training 
 
@@ -118,15 +111,6 @@ https://youtu.be/qTctsIPYzms
   { input: "help", output: "help" },
 ```
 
-
-
-
-
-
-
-
-
-
 # Build & Run ![](https://i.imgur.com/rgIBNX3.png)
 
 ```
@@ -142,8 +126,6 @@ npm run start
 
 ![](https://i.imgur.com/vQrAXOC.png)
 
-
-
 # Repo
 
 >https://github.com/aadorian/make-crypto-mobile-hackathon.git
@@ -152,8 +134,6 @@ npm run start
 
 Discord @aleadorjan
 
-
->
 
 ## References
 
