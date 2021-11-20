@@ -1,0 +1,3 @@
+[submodule "Early_Access_Game_NFT/codebase/nft-marketplace"]
+	path = Early_Access_Game_NFT/codebase/nft-marketplace
+	url = https://github.com/nft-login/nft-marketplace
