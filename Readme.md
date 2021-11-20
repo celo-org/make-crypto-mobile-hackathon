@@ -4,9 +4,16 @@
 <img src="https://i.imgur.com/NLrP79B.png" width="50" alt="Celo Logo">
 </a>
 </p>
+)
+
 
 # Celo AI (Artificial Intelligence) Discord Bot
 ![](https://i.imgur.com/vQrAXOC.png)
+
+
+
+
+
 
 # Use Cases 
 ##### UC1
@@ -21,6 +28,7 @@
 ## Inspiration
 
 >Today one of the main communication channels in the crypto ecosystem is Discord. AI can easy onboard users to Celo Blockchain Ecosystem in this context.
+
 
 ## What it does
 
@@ -42,6 +50,8 @@
 >A movile first approach using Discord with Celo APIs. 
 
 # SnapShots
+
+
 
 | Command    | Bot Response 
 | -------- | -------- | 
@@ -78,8 +88,10 @@
 >Building, building, sharing and teaching.
 
 
+
 # Video 
 
+https://youtu.be/qTctsIPYzms
 
 # AI Training 
 
@@ -131,6 +143,7 @@ npm run start
 ![](https://i.imgur.com/vQrAXOC.png)
 
 
+
 # Repo
 
 >https://github.com/aadorian/make-crypto-mobile-hackathon.git
@@ -138,6 +151,7 @@ npm run start
 ## Contact
 
 Discord @aleadorjan
+
 
 >
 
