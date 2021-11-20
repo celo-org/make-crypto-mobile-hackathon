@@ -14,8 +14,11 @@ Please [__fork this repo__](https://help.github.com/articles/fork-a-repo/) and u
 - Christian, Developer
 
 #### Project Description
+This is a marketplace for NFT Tokens.
 New games often are available as early access. In this phase the game finished, but a fan community can be build and the game designer get already an income.
 NFTs are a good way to finance game development but also give the fans the ability to show up they founded the game.
+
+The marketplace itself is a building block for a login solution, where user get openidconnect login if they own an nft.
 
 #### Summary
 The marketplace allows game makers deploy contracts and mint NFT Tokens.
