@@ -67,14 +67,16 @@ bot.learn([
   { input: "please create my balance", output: "balance" },
   { input: "create account", output: "create" },
   { input: "create mnemonic", output: "create" },
+  { input: "price celo", output: "price" },
+  { input: "celo USD", output: "price" },
   { input: "send tokens", output: "qr" },
   { input: "send me some tokens", output: "qr" },
   { input: "get my tokens", output: "qr" },
   { input: "get tokens", output: "qr" },
-  { input: "social", output: "social" },
-  { input: "social media", output: "social" },
-  { input: "celo", output: "social" },
-  { input: "help", output: "social" },
+  { input: "social", output: "help" },
+  { input: "social media", output: "help" },
+  { input: "celo", output: "help" },
+  { input: "help", output: "help" },
 ]);
 const deleteQRFile = () => {
   fs.unlinkSync(QR_FILE);
@@ -107,7 +109,7 @@ client.on("message", async (msg) => {
         .setTimestamp();
       msg.author.send(createEmbed);
     }
-    if (command === "!celo" || responseAI === "celo") {
+    if (command === "!help" || responseAI === "help") {
       const socialEmbed = new MessageEmbed()
         .setColor(EMBED_COLOR_PRIMARY)
         .setURL(URL_BOT)
