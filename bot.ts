@@ -18,8 +18,8 @@ const BOT_NAME_FOOTER = "CeloAIDiscordBot";
 const EMBED_COLOR_PRIMARY = 0x35d07f;
 const EMBED_COLOR_SECONDARY = 0xfbcc5c;
 const IMAGE_DEFAULT = "https://i.imgur.com/vQrAXOC.png";
-const LOGO = "https://i.imgur.com/vQrAXOC.png";
-const CELO_LOGO_COLOR = "https://i.imgur.com/QZwffyT.png";
+const LOGO = "https://i.imgur.com/cvP6lNe.png";
+const CELO_LOGO_COLOR = "https://i.imgur.com/hAlsUmK.png";
 const URL_BOT = "https://celo.org/";
 const MNEMONIC = process.env.MNEMONIC;
 const SENDER_ADDRESS = process.env.PUBLIC_KEY;
@@ -85,9 +85,6 @@ client.on("message", async (msg) => {
     const responseAI = result[0];
     if (msg.author.bot) return;
     const command = msg.content;
-    console.log(`${msg.author.username} said: ${msg.content}`);
-    console.log(`AI said: ${responseAI}`);
-
     if (command === "!create" || responseAI === "create") {
       let mnemonic = bip39.generateMnemonic();
       const wallet = ethers.Wallet.fromMnemonic(mnemonic);
@@ -130,6 +127,8 @@ client.on("message", async (msg) => {
         .setFooter(BOT_NAME_FOOTER, IMAGE_DEFAULT)
         .setTimestamp();
       msg.channel.send(socialEmbed);
+      client.user.setActivity("CELO Social", { type: "WATCHING" });
+   
     }
 
     if (command === "!balance" || responseAI === "balance") {
@@ -150,15 +149,12 @@ client.on("message", async (msg) => {
         .setFooter(BOT_NAME_FOOTER, IMAGE_DEFAULT)
         .setTimestamp();
       msg.channel.send(msgEmbed);
-
       client.user.setActivity("getTokens", { type: "WATCHING" });
       // client.user.setAvatar(IMAGE_DEFAULT)
     }
     if (command === "!price" || responseAI === "price") {
       const oneGold = await kit.web3.utils.toWei("1", "ether");
       const exchange = await kit.contracts.getExchange();
-      console.log(oneGold);
-      console.log(exchange);
       const amountOfcUsd = await exchange.quoteGoldSell(oneGold);
       let convertAmount = amountOfcUsd / 10000000000000000;
       const createPriceEmbed = new MessageEmbed()
@@ -217,7 +213,6 @@ client.on("message", async (msg) => {
       .setFooter(BOT_NAME_FOOTER);
     msg.channel.send(errorEmbed);
     client.user.setActivity("error", { type: "WATCHING" });
-   
     console.log(new Date().toISOString(), "ERROR", e.stack || e);
   }
 });
