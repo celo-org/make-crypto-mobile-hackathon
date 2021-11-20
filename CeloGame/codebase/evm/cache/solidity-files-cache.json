@@ -1,8 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/user/code/fox/make-crypto-mobile-hackathon/DogeGame/codebase/evm/contracts/DogeGame.sol": {
-      "lastModificationDate": 1635684690698,
+    "/home/user/code/fox/make-crypto-mobile-hackathon/CeloGame/codebase/evm/contracts/DogeGame.sol": {
+      "lastModificationDate": 1635756746464,
       "contentHash": "d99dcb63953e2054e6a0170e0df5fe19",
       "sourceName": "contracts/DogeGame.sol",
       "solcConfig": {
@@ -37,7 +37,7 @@
         "DogeGame"
       ]
     },
-    "/home/user/code/fox/make-crypto-mobile-hackathon/DogeGame/codebase/evm/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+    "/home/user/code/fox/make-crypto-mobile-hackathon/CeloGame/codebase/evm/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
       "lastModificationDate": 1634931945409,
       "contentHash": "4fe56b59ced59d87df6b796758f62895",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
@@ -73,7 +73,7 @@
         "Ownable"
       ]
     },
-    "/home/user/code/fox/make-crypto-mobile-hackathon/DogeGame/codebase/evm/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+    "/home/user/code/fox/make-crypto-mobile-hackathon/CeloGame/codebase/evm/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1634931944693,
       "contentHash": "851485d5b925529b1a2f34a0be077891",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",

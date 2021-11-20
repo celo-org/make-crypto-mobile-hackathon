@@ -8,13 +8,13 @@ const isTestnet = window.location.href.includes('testnet')
 const wsProvider = (() => {
   if(isDev) return 'ws://localhost:8545'
   if(isTestnet) return 'wss://alfajores-forno.celo-testnet.org/ws'
-  return 'wss://alfajores-forno.celo-testnet.org/ws'
+  return 'wss://forno.celo.org/ws'
 })()
 
 const networkId = (() => {
     if(isDev) return 31337
     if(isTestnet) return 44787
-    return 44787
+    return 42220
 })()
 
 const telegramUrl = (() => {
@@ -51,6 +51,7 @@ module.exports = {
   leaderboardSize: 10,
   rpc: { // for wallet connect
     44787: 'http://localhost:8545',
+    42220: 'http://localhost:8545',
     31337: 'http://localhost:8545',
   }
 }

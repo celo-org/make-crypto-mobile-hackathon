@@ -41,6 +41,16 @@ const mnemonic = process.env.NOMIC
       gasPrice: 101 * 10 ** 6,
       gas: 8000000,
     },
+    mainnet: {
+      url: fornoURLs[ICeloNetwork.MAINNET],
+      accounts: {
+        mnemonic
+      },
+      chainId: ICeloNetwork.MAINNET,
+      live: true,
+      gasPrice: 101 * 10 ** 6,
+      gas: 8000000,
+    },
   },
   paths: {
     abis: __dirname + '/abis'
