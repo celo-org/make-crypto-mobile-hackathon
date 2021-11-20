@@ -154,7 +154,7 @@ client.on("message", async (msg) => {
         .setTimestamp();
       msg.channel.send(msgEmbed);
       client.user.setActivity("getTokens", { type: "WATCHING" });
-      // client.user.setAvatar(IMAGE_DEFAULT)
+     client.user.setAvatar(IMAGE_DEFAULT)
     }
     if (command === "!price" || responseAI === "price") {
       const oneGold = await kit.web3.utils.toWei("1", "ether");

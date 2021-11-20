@@ -60,13 +60,17 @@ bot.learn([
     },
     { input: "account balance", output: "balance" },
     { input: "my balance", output: "balance" },
+    { input: "please create my balance", output: "balance" },
     { input: "create account", output: "create" },
+    { input: "create mnemonic", output: "create" },
     { input: "send tokens", output: "qr" },
-    { input: "get tokens", output: "qr" },
+    { input: "send me some tokens", output: "qr" },
+    { input: "get my tokens", output: "qr" },
     { input: "get tokens", output: "qr" },
     { input: "social", output: "social" },
     { input: "social media", output: "social" },
     { input: "celo", output: "social" },
+    { input: "help", output: "social" },
 ]);
 const deleteQRFile = () => {
     fs.unlinkSync(QR_FILE);
