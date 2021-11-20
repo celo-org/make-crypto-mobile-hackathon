@@ -51,9 +51,11 @@ hash address of the data is stored in the contract.
 
 Redesign: https://market.nft-login.net/
 
-First version: https://nft-login.github.io/nft-login-marketplace/heco/
+First version: https://nft-login.github.io/nft-login-marketplace/celo/
 
 Demo Game Login if you own a Token: https://nft-login.github.io/nft-login-demo/celo/
+
+Deployed Contract: https://alfajores-blockscout.celo-testnet.org/address/0xBa4e569A5156C00348B89653968c2C294f80E151
 
 #### Presentation
 Here is a video. Enable the subtitles for explanations.
