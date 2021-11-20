@@ -18,7 +18,7 @@ const networkId = (() => {
 })()
 
 const telegramUrl = (() => {
-  return '//t.me/CeloDogeGame'
+  return '//t.me/CeloGame'
 })()
 
 console.log(`isDev: ${isDev}`)
