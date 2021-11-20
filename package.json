@@ -1,0 +1,27 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "Celo AI Faucet Discord Bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "start": "node bot.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@celo/contractkit": "^1.3.3",
+    "bip39": "^3.0.4",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "ethers": "^5.5.1",
+    "intelligo": "^1.3.0",
+    "qrcode": "^1.4.4",
+    "typescript": "^4.1.3",
+    "web3": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.22"
+  }
+}
