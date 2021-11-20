@@ -26,7 +26,7 @@ const SENDER_ADDRESS = process.env.PUBLIC_KEY;
 const TOKEN_NAME = "CELO";
 const DELETE_FILE_TIMEOUT = 10000;
 const QR_FILE = "filename.png";
-const QR_COLOR = 0x35d07f;
+const QR_COLOR = "#36cf80";
 const QR_BACKGROUND = "#1111";
 const QR_REQUEST_PAY_10 = "valora:" + SENDER_ADDRESS + "?amount=10";
 const URL_SOCIAL_MEDIUM = "https://medium.com/celoorg";
@@ -177,7 +177,15 @@ client.on("message", async (msg) => {
         }
     }
     catch (e) {
-        msg.reply("ERROR");
+        const errorEmbed = new discord_js_1.MessageEmbed()
+            .setColor(EMBED_COLOR_PRIMARY)
+            .addField("Error please try again :) ", QR_REQUEST_PAY_10)
+            .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
+            .setTitle(`Error ` + BOT_NAME + URL_BOT)
+            .setURL(URL_BOT)
+            .setThumbnail(LOGO)
+            .setFooter(BOT_NAME_FOOTER);
+        msg.channel.send(errorEmbed);
         console.log(new Date().toISOString(), "ERROR", e.stack || e);
     }
 });

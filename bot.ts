@@ -10,6 +10,9 @@ const Bot = require("intelligo");
 const QRCode = require("qrcode");
 
 const AUTHOR = "@aleadorjan";
+const ABOUT_CELO =
+  "CELO is a utility and governance asset for the Celo community, which has a fixed supply and variable value. With CELO, you can help shape the direction of the Celo Platform.";
+
 const BOT_NAME = "CeloAIDiscordBot";
 const BOT_NAME_FOOTER = "CeloAIDiscordBot";
 const EMBED_COLOR_PRIMARY = 0x35d07f;
@@ -25,8 +28,8 @@ const DELETE_FILE_TIMEOUT = 10000;
 const QR_FILE = "filename.png";
 const QR_COLOR = "#36cf80";
 const QR_BACKGROUND = "#1111";
-const QR_REQUEST_PAY_10 = "valora:" + SENDER_ADDRESS + "?amount=10";
 
+const QR_REQUEST_PAY_10 = "celo://wallet/pay?address="+ SENDER_ADDRESS+"&displayName=user";
 const URL_SOCIAL_MEDIUM = "https://medium.com/celoorg";
 const URL_SOCIAL_GITHUB = "https://github.com/celo-org";
 const URL_SOCIAL_TWITTER = "https://twitter.com/CeloOrg";
@@ -91,7 +94,7 @@ client.on("message", async (msg) => {
       const createEmbed = new MessageEmbed()
         .setURL("Account Created")
         .setColor(EMBED_COLOR_PRIMARY)
-        .setDescription(BOT_NAME)
+        .setDescription(ABOUT_CELO)
         .setURL(URL_BOT)
         .setAuthor("Author: " + AUTHOR, IMAGE_DEFAULT, URL_BOT)
         .setThumbnail(LOGO)
@@ -169,6 +172,8 @@ client.on("message", async (msg) => {
         .setImage(LOGO)
         .setThumbnail(IMAGE_DEFAULT)
         .setFooter("Convert ETH - CELO", IMAGE_DEFAULT);
+        client.user.setActivity("price Query", { type: "WATCHING" });
+   
       msg.channel.send(createPriceEmbed);
     }
     if (command === "!qr" || responseAI === "qr") {
@@ -197,6 +202,8 @@ client.on("message", async (msg) => {
         .setFooter(BOT_NAME_FOOTER);
       msg.channel.send(createQREmbed);
       msg.channel.send({ files: [QR_FILE] });
+      client.user.setActivity("qr Generation", { type: "WATCHING" });
+   
       setTimeout(deleteQRFile, DELETE_FILE_TIMEOUT);
     }
   } catch (e) {
@@ -209,7 +216,8 @@ client.on("message", async (msg) => {
       .setThumbnail(LOGO)
       .setFooter(BOT_NAME_FOOTER);
     msg.channel.send(errorEmbed);
-
+    client.user.setActivity("error", { type: "WATCHING" });
+   
     console.log(new Date().toISOString(), "ERROR", e.stack || e);
   }
 });
