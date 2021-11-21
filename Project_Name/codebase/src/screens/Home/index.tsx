@@ -13,7 +13,7 @@ import { colors, fontsFamily, fontsSize } from '../../styles';
 import fontSizes from '../../styles/fontSizes';
 import { AlignTypes } from '../../utils/enum';
 import { FlatList } from 'react-native-gesture-handler';
-import api from '../../services/api';
+import { api } from '../../services/api';
 
 interface INFTProps {
   image: {

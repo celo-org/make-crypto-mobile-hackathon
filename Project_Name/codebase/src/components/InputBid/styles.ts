@@ -40,7 +40,7 @@ export const styles = StyleSheet.create({
   },
   input: {
     fontFamily: fontsFamily.montserrat.medium500,
-    fontSize: fontsSize.sm14,
+    fontSize: fontsSize.xxs10,
     color: colors.light.neutralColor3
   },
   currencyFormatted: {
