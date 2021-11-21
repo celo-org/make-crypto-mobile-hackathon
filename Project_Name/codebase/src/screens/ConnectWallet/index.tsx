@@ -5,7 +5,6 @@ import { Modal, Text } from '../../components';
 import styles from './styles';
 import { colors, fontsFamily, fontsSize } from '../../styles';
 import PillButton from '../../components/PillButton';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import Metamask from '../../../assets/metamask.svg';
 import Trust from '../../../assets/trust-wallet.svg';
