@@ -27,7 +27,6 @@ const dimensions = {
   spacingStackXHuge40: 40,
   spacingStackXxHuge65: 65,
   widthFull: '100%',
-  width19: 19,
   width20: '20%',
   width80: '80%',
   width40: 40,
