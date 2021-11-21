@@ -11,6 +11,8 @@ import {
 } from 'react-native';
 import { LineButton, ProfileButton, SquareButton, Text } from '../../components';
 
+import * as ImagePicker from 'expo-image-picker';
+
 import * as Clipboard from 'expo-clipboard';
 
 import { styles } from './styles';
@@ -66,6 +68,7 @@ const Profile = (): JSX.Element => {
   const [creationsButtonSelected, setCreationsButtonSelected] = useState(true);
   const [creations, setCreations] = useState<CreationProps[]>([]);
   const [purchases, setPurchases] = useState<PurchaseProps[]>([]);
+  const [image, setImage] = useState('');
 
   const [name, setName] = useState('User0001');
   const [hash, setHash] = useState('bc1q3095ucnwf8q5v798vv8uujd5...');
@@ -140,6 +143,34 @@ const Profile = (): JSX.Element => {
     //todo setPurchases
   }, []);
 
+  useEffect(() => {
+    (async () => {
+      if (Platform.OS !== 'web') {
+        const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+        if (status !== 'granted') {
+          alert('Sorry, we need camera roll permissions to make this work!');
+        }
+      }
+    })();
+  }, []);
+
+  const pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    console.log(result);
+
+    if (!result.cancelled) {
+      setImage(result.uri);
+
+      //chamada da api
+    }
+  };
+
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
@@ -159,21 +190,25 @@ const Profile = (): JSX.Element => {
               <ScrollView
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
+                  justifyContent: AlignTypes.CENTER,
+                  alignItems: AlignTypes.CENTER,
                 }}>
                 <View
-                  style={{ paddingHorizontal: 16, justifyContent: 'center', alignItems: 'center' }}>
+                  style={{
+                    paddingHorizontal: 16,
+                    justifyContent: AlignTypes.CENTER,
+                    alignItems: AlignTypes.CENTER,
+                  }}>
                   <View style={styles.profileInfo}>
                     <View style={styles.avatar}>
                       <Image
                         source={{
-                          uri: 'https://avatars.githubusercontent.com/u/50152238?v=4',
+                          uri: image,
                         }}
                         style={styles.images}
                       />
                       <View style={styles.changePhoto}>
-                        <BorderlessButton style={styles.camera}>
+                        <BorderlessButton style={styles.camera} onPress={pickImage}>
                           <CamSvg />
                         </BorderlessButton>
                       </View>
