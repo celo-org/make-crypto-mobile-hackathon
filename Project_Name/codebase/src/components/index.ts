@@ -10,3 +10,5 @@ export { default as Likes } from './Likes';
 export { default as BidCard } from './BidCard';
 export { default as InputBid } from './InputBid';
 export { default as SquareButton } from './SquareButton';
+export { default as ProfileButton } from './ProfileButton';
+export { default as NftImage } from './NftImage';
