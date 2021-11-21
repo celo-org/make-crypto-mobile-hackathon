@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     alignItems: AlignTypes.CENTER,
   },
   description: {
-    marginHorizontal: 11,
+    marginHorizontal: dimensions.spacingInlineXxs12,
     marginTop: dimensions.spacingStackXxs7,
     marginBottom: dimensions.spacingInlineXxl32,
   },
