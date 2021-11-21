@@ -28,6 +28,7 @@ const dimensions = {
   spacingStackXxHuge65: 65,
   widthFull: '100%',
   width20: '20%',
+  width43: '43%',
   width80: '80%',
   width30: 30,
   width40: 40,
@@ -41,6 +42,7 @@ const dimensions = {
   height60: 60,
   height80: 80,
   height100: 100,
+  heigth160: 160,
   height400: 400,
 };
 

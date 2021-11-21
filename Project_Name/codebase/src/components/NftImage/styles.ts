@@ -5,8 +5,8 @@ export const styles = StyleSheet.create({
   container: {
     marginLeft: dimensions.spacingInlineSm16,
     backgroundColor: colors.light.neutralColor12,
-    width: '43%',
-    height: 160,
+    width: dimensions.width43,
+    height: dimensions.heigth160,
     borderRadius: dimensions.spacingStackXs8,
     marginTop: dimensions.spacingInlineSm16,
     padding: dimensions.spacingStackXs8,
