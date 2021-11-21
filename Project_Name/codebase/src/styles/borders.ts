@@ -6,6 +6,7 @@ const border = {
     xl20: 20,
     xxl26: 26,
     xxl30: 30,
+    xb50: 50,
   },
   width: {
     hairline: 0.5,

@@ -29,15 +29,19 @@ const dimensions = {
   widthFull: '100%',
   width20: '20%',
   width80: '80%',
+  width30: 30,
   width40: 40,
   width60: 60,
   width90: 90,
+  width100: 100,
   width240: 240,
+  height30: 30,
   height40: 40,
   height50: 50,
   height60: 60,
-  height400: 400,
   height80: 80,
+  height100: 100,
+  height400: 400,
 };
 
 export default dimensions;
