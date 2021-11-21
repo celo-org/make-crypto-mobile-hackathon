@@ -4,7 +4,7 @@ import { AlignTypes } from '../../utils/enum';
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: dimensions.width19,
+    paddingHorizontal: dimensions.spacingStackXxl16,
   },
   heading: {
     justifyContent: AlignTypes.CENTER,
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     marginBottom: dimensions.spacingInlineXxl32,
   },
   descriptionText: {
-    textAlign: 'center',
+    textAlign: AlignTypes.CENTER,
   },
   pillButton: {
     marginBottom: dimensions.spacingInlineXs14,
