@@ -23,5 +23,7 @@ Here's a demo on testnet going from CELO to Bitcoin on Lightning Network: https:
 #### Next Steps
 I would need funding/grant support to work on this more to completely implement all methods such as refunds and onchain swaps. 
 
+Submitted to Interoperability Track: Build or update cross-chain applications or cross-chain tooling.
+
 #### License
 MIT
