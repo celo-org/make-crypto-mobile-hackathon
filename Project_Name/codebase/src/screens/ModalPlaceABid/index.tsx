@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NativeSyntheticEvent, TextInputChangeEventData, TextInputProps, View } from 'react-native';
+import { View } from 'react-native';
 import { InputBid, LargeButton, Modal, Text } from '../../components';
 import { colors, fontsFamily, fontsSize } from '../../styles';
 import EtherBlack from '../../../assets/ether-black-small.svg';
@@ -7,24 +7,22 @@ import fontSizes from '../../styles/fontSizes';
 import styles from './styles';
 import { AlignTypes } from '../../utils/enum';
 
-interface IPlaceABidProps {
+interface IModalPlaceABidProps {
   isModalVisible: boolean;
   setIsModalVisible: (param: boolean) => void;
-  balance: string;
-  cryptoPrefix: string;
-  usdBalance: string;
-  minimumBid: number;
+  nftID: string;
 }
 
-const PlaceABid = ({
+const ModalPlaceABid = ({
   isModalVisible,
   setIsModalVisible,
-  balance,
-  cryptoPrefix,
-  usdBalance,
-  minimumBid,
-}: IPlaceABidProps): JSX.Element => {
+  nftID,
+}: IModalPlaceABidProps): JSX.Element => {
   const [value, setValue] = useState('');
+
+  const handleMakeABid = (valueBid: number) => {
+    setValue(String(valueBid));
+  };
 
   return (
     <Modal modalVisible={isModalVisible} setModalVisible={setIsModalVisible}>
@@ -43,7 +41,7 @@ const PlaceABid = ({
               <Text
                 color={colors.light.neutralColor7}
                 fontFamily={fontsFamily.montserrat.regular400}
-                fontsSize={fontSizes.md16}
+                fontsSize={fontSizes.sm14}
                 textDescription={'Current balance'}
               />
               <View style={styles.currentBid}>
@@ -52,15 +50,15 @@ const PlaceABid = ({
                   <Text
                     color={colors.light.neutralColor4}
                     fontFamily={fontsFamily.montserrat.regular400}
-                    fontsSize={fontsSize.md16}
-                    textDescription={balance}
+                    fontsSize={fontSizes.sm14}
+                    textDescription={'0.08976589 '}
                   />
                 </View>
                 <Text
                   color={colors.light.neutralColor6}
                   fontFamily={fontsFamily.montserrat.regular400}
-                  fontsSize={fontSizes.md16}
-                  textDescription={cryptoPrefix}
+                  fontsSize={fontSizes.sm14}
+                  textDescription={'ETH'}
                 />
               </View>
             </View>
@@ -68,8 +66,8 @@ const PlaceABid = ({
               <Text
                 color={colors.light.neutralColor6}
                 fontFamily={fontsFamily.montserrat.regular400}
-                fontsSize={fontsSize.sm14}
-                textDescription={`$ ${usdBalance} USD`}
+                fontsSize={fontsSize.xs12}
+                textDescription={`$ 12,908.98 USD`}
               />
             </View>
           </View>
@@ -84,10 +82,10 @@ const PlaceABid = ({
             </View>
             <InputBid
               currency={'ETH'}
-              minimumBid={minimumBid}
+              minimumBid={0.022}
               value={value}
-              onChangeText={() => {}}
-              valueFormatted={usdBalance}
+              onChangeText={(text) => handleMakeABid(text)}
+              valueFormatted={'1290898'}
             />
           </View>
           <View style={styles.submitButton}>
@@ -106,4 +104,4 @@ const PlaceABid = ({
   );
 };
 
-export default PlaceABid;
+export default ModalPlaceABid;

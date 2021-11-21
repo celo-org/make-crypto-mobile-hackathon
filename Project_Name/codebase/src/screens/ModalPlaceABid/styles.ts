@@ -4,7 +4,7 @@ import { AlignTypes } from '../../utils/enum';
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: dimensions.width19,
+    paddingHorizontal: dimensions.spacingStackXxl16,
     width: dimensions.widthFull,
   },
   heading: {
