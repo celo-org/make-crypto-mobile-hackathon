@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url(../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@tailwind utilities;
+
+@layer base {
+    html, body {
+        @apply bg-background font-sans
+    }
+}
+
+.text-2xs {
+    font-size: 9px;
+}
+
+@layer components {
+    .btn {
+        @apply p-2 font-semibold rounded-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-opacity-75
+    }
+
+    .btn-primary {
+        @apply bg-primary-light text-white hover:bg-primary-dark focus:ring-primary
+    }
+
+    .btn-secondary {
+        @apply bg-primary bg-opacity-30 text-primary hover:bg-primary-dark focus:ring-primary
+    }
+
+    .btn-tab {
+        @apply border-2 border-white box-border rounded-md text-white py-1 px-4 text-xs cursor-pointer font-semibold
+    }
+
+    .btn-tab-active {
+        @apply border-primary-light bg-primary-light cursor-pointer hover:bg-primary-dark hover:border-primary-dark
+    }
+
+    .btn-sm {
+        @apply text-xs font-semibold rounded
+    }
+
+    .btn-lg {
+        @apply text-lg font-semibold rounded-md
+    }
+
+    .tab-list {
+        @apply border-t border-white pl-0
+    }
+
+    .tab-list-item {
+        @apply list-none w-10 h-10 flex content-center justify-center
+    }
+
+    .tab-list-active {
+        @apply bg-primary-light rounded-xl drop-shadow-green
+    }
+
+    .tabs {
+        @apply fixed bottom-0 bg-background w-full pb-7 pt-5
+    }
+}
+
+.gradientBackground {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.78) 100%);
+}
+
+.btn-sm {
+    font-size: 9px;
+    padding: 2px 6px;
+}
+
+.btn-secondary {
+    text-shadow: 0 0 4px rgba(111, 195, 117, 0.5);
+}
+
+.tab-content {
+    padding-bottom: 88px;
+}
