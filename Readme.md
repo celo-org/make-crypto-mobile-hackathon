@@ -1,76 +1,135 @@
-# beNFT
+# ⚡ Make Crypto Mobile 📱 Hackathon ⚡
 
-This is the repository for beNFT, a solution developed by team 21 at the [Hackathon Defi para o Brasil](https://defiparaobrasil.com.br), which challenged us to think of solutions within the blockchain universe.
+Make Crypto Mobile Hackathon is a 4-week hackathon, focused on growing Mobile DeFi (#MoFi), NFT's and developer tooling on the Celo platform.
 
-beNFT offers a dApp that connects NGOs and philanthropic organizations with people around the world who want to contribute. In beNFT, organizations can sell collections of NFTs to interested contributors as a means of fundraising.
+## Hackathon Tracks: 
 
-For organizations, we offer an NFT production service, in the case of lack of time and resources to allocate towards this. They can also consult a dedicated dashboard to keep up with their campaigns and funds raised.
+ - __DeFi Track:__ 
+ 	- Build decentralized finance applications
+ 	- Tools
+ 	- Infrastructure
+ - __NFT, Gaming and Creator Track:__ 
+ 	- Build an application to mint, sell or manage non-fungible tokens
+ - __Infrastructure and Web3 Track:__ 
+ 	- Build or update existing decentralize web applications
+ - __Green Track:__ 
+ 	- Build or update an SDK to improve developer resources
+ - __Interoperability Track:__ 
+ 	- Build or update cross-chain applications
+ 	- Cross-chain tooling
 
-beNFT is built entirely on the Celo blockchain, allowing for fast transactions directly from your phone. Contributors that buy the NFTs will be helping a good cause AND getting an investment souvenir that can be used to spread awareness for the cause and influence more people to contribute. Furthermore, every time the NFT is resold, the organization gets a percentage over the resale price.
+## Timeline
 
-beNFT, marketing NFTs for good causes!
+ - Hackathon Oct 8th - Nov 5th, 2021
+ - Hackathon Kick off - Oct 8th, 2021
+ - Submissions Due - Nov 5th, 2021
+ - Evaluations - November 6th-14th, 2021
+ - Winners announced - November 15th, 2021
 
-[![thumb](https://user-images.githubusercontent.com/40076894/142791772-a02345f1-9967-434c-93d4-edc6f3204dd8.png)](https://www.youtube.com/watch?v=X1cENvRWW-0)
+## Process
+**Hackathon participats will need to:**
 
-# Technologies used in coding
+ 1. [Fork this repo](#hackathon-repo-process)
+    - Modify with your project details and merge
+    - When your project is ready for final submission, push your codebase & assets
+  2. Utilize [DevPost](https://mobiledefi.devpost.com/) to:
+	 - Manage and collaborate with your team
+	 - Submit your project for final evaluation
 
-- [Celo platform](https://celo.org)
-- Multiple blockchain related tools, such as [Hardhat](https://hardhat.org) and [](http://hardhat.org)[OpenZeppelin](https://openzeppelin.com)
-- [MetaMask](http://metamask.io) wallet
-- Front-end frameworks such as [React](https://reactjs.org), and [Next.js](https://nextjs.org)
-- [Node.js](http://nodejs.org) stack using [Yarn](https://yarnpkg.com) for dependencies management
+## Hackathon Repo Process
 
-# Celo integration
+ 1. Fork this repo
+    - Press the Fork button
+ 2. Create project branch
+ 3. Make your changes within new branch!
+	 - Copy **Project_Name** folder & rename with your project name
+	 - Modify project details within your project folder **Readme.md**
+		 - Name
+		 - Description
+		 - Team members & roles
+ 4. Add, commit, and push the changes
+	 - Add the files you've changed and commit them with a descriptive message.
+ 5. Submit your pull request
+    -  Submit to the maintainers for approval. Head over to the original repositories Pull Requests tab, you should see an automatic suggestion from GitHub to create a pull request from your new branch.
+    -  Utilize your project name as the title for your initial pull Requests
+    -  Provide a brief project description within the pull request comment
 
-We developed two smart-contracts using the [Solidity](https://docs.soliditylang.org/en/v0.8.10/) language which were deployed to the [Celo Alfajores testnet](https://alfajores-blockscout.celo-testnet.org/):
+***Congrats, your officially a Mobile DeFi Hackathon participant!***
 
-- NFT minter contract: [0x140D73fBFbCcA8dfb841c6fA844f72Abb6845D3b](https://alfajores-blockscout.celo-testnet.org/address/0x140D73fBFbCcA8dfb841c6fA844f72Abb6845D3b/transactions)
-- NFT marketplace contract: [0xFD96345185bd7cA6c66066050A5e444D56E844B9](https://alfajores-blockscout.celo-testnet.org/address/0xFD96345185bd7cA6c66066050A5e444D56E844B9/transactions)
 
-Our front-end is able to interact with our custom contracts using [ContractKit](https://docs.celo.org/developer-guide/contractkit) and [use-contractkit](https://github.com/celo-org/use-contractkit)
+## Developer tools and resources
 
-Integration tests were performed using accounts on MetaMask with test funds available from [Celo Faucet](https://celo.org/developers/faucet)
+This section contains information about some of the key tools and resources that will help developers start building applications on Celo.
 
-# Design tools
+For a comprehensive list of resources and information, review [Celo Docs.](https://docs.celo.org/)
 
-- [Figma](https://www.figma.com) - Prototyping
-- [VideoScribe](https://www.videoscribe.co/en) - Video editor
-- [Notion](https://www.notion.so) - Project documentation and management of activities
-- [Keynote](https://www.apple.com/keynote/) - Slide creation
+### QUICK START GUIDES
 
-# Links with prototypes
+View the [Developer Code Examples page](https://docs.celo.org/developer-guide/start) to get started using the Celo SDKs with guided coding exercises.
 
-- App prototype - [Figma](https://www.figma.com/proto/7D72t5LCZH8Ma0o6bVGkbx/beNFT?page-id=0%3A1&node-id=105%3A2907&viewport=241%2C48%2C0.08&scaling=scale-down&starting-point-node-id=105%3A2907&show-proto-sidebar=1)
-- Video demo - [Youtube](https://www.youtube.com/watch?v=X1cENvRWW-0)
+### TOOLS
 
-# App demo
+#### SDKs
 
-An early beta version of beNFT is available for tests on [https://tiny-snail-2.loca.lt](https://tiny-snail-2.loca.lt/). For best experience, you should:
+-   [ContractKit](https://docs.celo.org/developer-guide/contractkit)
+-   Javascript package of Celo blockchain utilities
+-   Manage connections to the Celo blockchain, accounts, send transactions, interact with smart contracts, etc.
+-   A set of wrappers around the core protocol smart contracts to easily connect with contracts related to governance, validators, on-chain exchange, etc.
+-   Includes [web3.js](https://web3js.readthedocs.io/en/v1.2.4/)
+-   [Celo Ethers.js Wrapper](https://github.com/celo-tools/celo-ethers-wrapper) (experimental)
+-   A minimal wrapper to make [ethers.js](https://docs.ethers.io/v5/) compatible with the Celo network
+-   [use-contractkit](https://github.com/celo-tools/use-contractkit)
+-   A [Web3Modal](https://web3modal.com/)-like experience that injects ContractKit into your web-based application. Supports a variety of different wallets, including but not limited to Valora, Ledger, Metamask (Celo compatible fork) and any WalletConnect compatible wallets
+-   [DappKit](https://docs.celo.org/developer-guide/dappkit)
+-   Easily connect to the [Valora](http://valoraapp.com/) wallet with your React Native mobile application
+-   Valora manages user account, private keys and transaction signing, so you can focus on building your dapp
+-   Learn more and see the code with the [Dappkit truffle box](https://github.com/critesjosh/celo-dappkit)
+-   [Python SDK](https://github.com/blaize-tech/celo-sdk-py)
+-   [Java SDK](https://github.com/blaize-tech/celo-sdk-java)
 
-- Use [Google Chrome](https://www.google.com/chrome/)
-- Have an account on [MetaMask](http://metamask.io)
-- Set up the Celo Alfajores Network on MetaMask (check needed info in this [tutorial](https://docs.celo.org/getting-started/wallets/using-metamask-with-celo/manual-setup))
-- Connect the dApp to your Wallet
-- Buy some NFTs!
 
-# About the team
+#### Infrastructure
 
-**Andressa Valengo | Technology [(LinkedIn)](https://www.linkedin.com/in/valengo/) [(GitHub)](https://github.com/valengo)**
+-   [Valora](https://valoraapp.com/) provides a clean, intuitive UI where users can send transactions and interact with smart contracts
+-   [Forno](https://stackedit.io/developer-guide/forno)
+-   Node access service so you can connect your dapp to the Celo blockchain without having to run node infrastructure
+-   [ODIS](https://stackedit.io/developer-resources/contractkit/odis.md)
+-   Oblivious decentralized identity service
+-   Lightweight identity layer that makes it easy to send cryptocurrency to a phone number
+-   Blockscout block explorers
+-   [Alfajores testnet](http://alfajores-blockscout.celo-testnet.org/) & [mainnet](http://explorer.celo.org/)
+-   [Stats.celo.org](http://stats.celo.org/) to check network activity and health
 
-Bioinformatician and app developer, @valengo loves to develop solutions for real problems and games. Besides her love for coding and genomics, she loves to draw and work as a designer too. As of this hackathon, she is also a decentralized developer!
 
-**Eduarda Linhares Mello | Business [(LinkedIn)](https://www.linkedin.com/in/dudamello/) [(GitHub)](https://github.com/dudamello)**
+#### Networks
 
-Involved in the technology world, she always seeks to contribute to projects that have a positive impact on society. With a range of knowledge in the areas of programming, design and business, she helps to align users needs with clever solutions.
+-   [Alfajores Testnet](https://docs.celo.org/getting-started/alfajores-testnet)
+-   [Faucet](https://celo.org/developers/faucet) for free testnet CELO and cUSD
+-   [Forno](https://docs.celo.org/developer-guide/forno) supports connections to alfajores
+-   Requires Alfajores Celo wallet for mobile device testing (please request, support@clabs.co)
+-   [Baklava testnet](https://docs.celo.org/getting-started/baklava-testnet) for validators and testing protocol changes
 
-**Isabela Castro | Design [(LinkedIn)](https://www.linkedin.com/in/isa-castro/) [(Website)](https://isacastro.me)**
 
-Isa is a designer and 2D artist who has been working with digital games for about 7 years. She likes to use creativity to make visual solutions and intuitive designs.
+#### Ethereum Tools
 
-**Kevin Katzer | Technology [(LinkedIn)](https://www.linkedin.com/in/kevin-katzer/) [(GitHub)](https://github.com/kkatzer)**
+-   Similarities between Celo and Ethereum means you can use many of the most popular Ethereum developer tools.
+-   Celo supports the EVM, so tools for writing smart contracts in Solidity (or any language that compiles to EVM bytecode) are compatible with Celo
+-   ERC20, NFT (ERC721) and other smart contract interface standards are supported, see [Celo for Ethereum Developers](https://docs.celo.org/developer-guide/celo-for-eth-devs)
+- [Truffle](https://www.trufflesuite.com/)
+- [OpenZeppelin](https://openzeppelin.com/)
+- [Remix](https://remix.ethereum.org/)
 
-iOS Developer by heart, loves to sing and aims to continuously grow as a programmer and as a person through code and music.
+#### Ongoing projects
 
-**Vinícius Binder | Business [(LinkedIn)](https://www.linkedin.com/in/viniciusbinder/) [(GitHub)](https://github.com/viniciusbinder)**
+-   [Community projects](https://docs.celo.org/developer-guide/celo-dapp-gallery)
+-   [Grant recipients](https://celo.org/experience/grants/directory)
 
-Soon to be grad Software Engineer who loves to design and code impactful and reliable experiences.
+#### Web wallets
+  -  [celowallet.app](https://celowallet.app/)
+  -  [Celo Terminal](https://github.com/zviadm/celoterminal/)
+
+
+#### Community
+
+-   Join our [Discord](https://chat.celo.org/)
+-   [Discourse Forum](https://forum.celo.org/)
