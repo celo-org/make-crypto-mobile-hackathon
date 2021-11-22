@@ -1,11 +1,10 @@
 import React from 'react';
 
 import { StyleSheet, View } from 'react-native';
-import { Text } from '..';
-import { colors, fontsFamily } from '../../styles';
+import { Text } from '@nft/components';
+import { colors, fontsFamily, fontsSize } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 import { SvgProps } from 'react-native-svg';
-import fontSizes from '../../styles/fontSizes';
-import { AlignTypes } from '../../utils/enum';
 
 import { styles } from './styles';
 
@@ -40,14 +39,14 @@ const BidCard = ({
           textDescription={'Current Bid'}
           color={colors.light.neutralColor5}
           fontFamily={fontsFamily.montserrat.medium500}
-          fontsSize={small ? fontSizes.xxs10 : fontSizes.sm14}
+          fontsSize={small ? fontsSize.xxs10 : fontsSize.sm14}
           textAlign={AlignTypes.CENTER}
         />
         <Text
           textDescription={`${value} ${currency}`}
           color={colors.light.neutralColor5}
           fontFamily={fontsFamily.montserrat.bold700}
-          fontsSize={small ? fontSizes.xs12 : fontSizes.md16}
+          fontsSize={small ? fontsSize.xs12 : fontsSize.md16}
           textAlign={AlignTypes.CENTER}
         />
       </View>

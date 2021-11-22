@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Keyboard, View } from 'react-native';
-import { InputBid, LargeButton, Modal, Text } from '../../components';
-import { colors, fontsFamily, fontsSize } from '../../styles';
-import EtherBlack from '../../../assets/ether-black-small.svg';
-import fontSizes from '../../styles/fontSizes';
-import styles from './styles';
-import { AlignTypes } from '../../utils/enum';
-import { apiCoingeckoEthereumValue } from '../../services/api';
+
+import { InputBid, LargeButton, Modal, Text } from '@nft/components';
+import { colors, fontsFamily, fontsSize } from '@nft/styles';
+import EtherBlack from '@nft/assets/ether-black-small.svg';
+import { AlignTypes } from '@nft/utils/enum';
+import { apiCoingeckoEthereumValue } from '@nft/services/api';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
+import styles from './styles';
 interface IModalPlaceABidProps {
   isModalVisible: boolean;
   setIsModalVisible: () => void;
@@ -74,7 +74,7 @@ const ModalPlaceABid = ({
                 <Text
                   color={colors.light.neutralColor7}
                   fontFamily={fontsFamily.montserrat.regular400}
-                  fontsSize={fontSizes.sm14}
+                  fontsSize={fontsSize.sm14}
                   textDescription={'Current balance'}
                 />
                 <View style={styles.currentBid}>
@@ -83,14 +83,14 @@ const ModalPlaceABid = ({
                     <Text
                       color={colors.light.neutralColor4}
                       fontFamily={fontsFamily.montserrat.regular400}
-                      fontsSize={fontSizes.sm14}
+                      fontsSize={fontsSize.sm14}
                       textDescription={'0.08976589 '}
                     />
                   </View>
                   <Text
                     color={colors.light.neutralColor6}
                     fontFamily={fontsFamily.montserrat.regular400}
-                    fontsSize={fontSizes.sm14}
+                    fontsSize={fontsSize.sm14}
                     textDescription={'ETH'}
                   />
                 </View>
@@ -128,7 +128,7 @@ const ModalPlaceABid = ({
                 textAlign={AlignTypes.CENTER}
                 textColor={colors.light.neutralColor14}
                 textFontFamily={fontsFamily.montserrat.semiBold600}
-                textFontSize={fontSizes.md16}
+                textFontSize={fontsSize.md16}
               />
             </View>
           </View>

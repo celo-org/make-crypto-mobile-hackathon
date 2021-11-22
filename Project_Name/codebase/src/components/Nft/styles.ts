@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { border, colors, dimensions } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { border, colors, dimensions } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 const styles = StyleSheet.create({
   card: {

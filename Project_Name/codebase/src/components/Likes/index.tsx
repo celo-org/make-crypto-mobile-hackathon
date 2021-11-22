@@ -2,12 +2,12 @@ import React from 'react';
 
 import { BorderlessButton, BorderlessButtonProps } from 'react-native-gesture-handler';
 
-import HeartSvg from '../../../assets/heart.svg';
-import HeartFilledSvg from '../../../assets/heart-filled.svg';
+import HeartSvg from '@nft/assets/heart.svg';
+import HeartFilledSvg from '@nft/assets/heart-filled.svg';
 
 import { styles } from './styles';
-import { Text } from '..';
-import { AlignTypes } from '../../utils/enum';
+import { Text } from '@nft/components';
+import { AlignTypes } from '@nft/utils/enum';
 import { View } from 'react-native';
 
 interface ILikeProps extends BorderlessButtonProps {

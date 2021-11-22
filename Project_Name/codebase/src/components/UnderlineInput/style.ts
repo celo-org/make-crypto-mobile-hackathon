@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { colors, fontsFamily, fontsSize, border, dimensions } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { colors, fontsFamily, fontsSize, border, dimensions } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 const styles = StyleSheet.create({
   labelContainer: {

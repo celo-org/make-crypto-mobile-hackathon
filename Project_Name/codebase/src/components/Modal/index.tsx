@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, Modal, ModalProps, TouchableOpacity, View } from 'react-native';
-import Close from '../../../assets/close.svg';
+import { Modal, ModalProps, TouchableOpacity, View } from 'react-native';
+import Close from '@nft/assets/close.svg';
 
 import styles from './styles';
 

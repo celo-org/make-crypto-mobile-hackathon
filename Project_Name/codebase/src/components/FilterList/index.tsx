@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { View, FlatList } from 'react-native';
-import { AlignTypes } from '../../utils/enum';
-import FilterButton from '../FilterButton';
+import { AlignTypes } from '@nft/utils/enum';
+import FilterButton from '@nft/components/FilterButton';
 
 interface IListProps {
   filterKey: string;
