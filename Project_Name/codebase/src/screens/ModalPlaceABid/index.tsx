@@ -10,16 +10,10 @@ import { apiCoingeckoEthereumValue } from '../../services/api';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 interface IModalPlaceABidProps {
-  isModalVisible: boolean;
-  setIsModalVisible: () => void;
-  nftID: string;
+  nftID?: string;
 }
 
-const ModalPlaceABid = ({
-  isModalVisible,
-  setIsModalVisible,
-  nftID,
-}: IModalPlaceABidProps): JSX.Element => {
+const ModalPlaceABid = ({ nftID }: IModalPlaceABidProps): JSX.Element => {
   const [value, setValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [ethereumCurrentValueUSD, setEthereumCurrentValueUSD] = useState(0);
@@ -56,9 +50,9 @@ const ModalPlaceABid = ({
   }, [value]);
 
   return (
-    <Modal modalVisible={isModalVisible} setModalVisible={setIsModalVisible}>
+    <Modal>
       <>
-        //TODO add the loading component
+        {/* TODO Adicionar loading */}
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.container}>
             <View style={styles.heading}>
