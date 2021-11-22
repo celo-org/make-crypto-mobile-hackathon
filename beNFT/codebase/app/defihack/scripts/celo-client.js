@@ -43,14 +43,20 @@ export const connectCeloWallet = async function () {
 }
 
 export const loadNFTs = async function () {
-    let _ = await connectCeloWallet()
+    // Get the ethereum provider injected by metamask
+    const web3 = new Web3(window.ethereum)
+    kit = ContractKit.newKitFromWeb3(web3)
+
+    // Init the contracts
+    marketContract = new kit.web3.eth.Contract(marketData.abi, nftmarketaddress)
+
+    nftContract = new kit.web3.eth.Contract(nftData.abi, nftaddress)
 
     let networkType = await kit.web3.currentProvider.connection.web3.eth.net.getNetworkType()
 
     // TODO this is a workaround
     if (networkType.toString() !== 'private')
-        return undefined
-
+        return []
 
     let data = await marketContract.methods.fetchMarketItems().call()
     return NFTMapper(data)

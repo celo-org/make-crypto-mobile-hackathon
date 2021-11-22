@@ -60,6 +60,10 @@ export default function Home() {
       let connector = await connect()
       setConnectButtonText(addressBeautify(connector.account))
       DataManager.getInstance().setUserWallet(connector.account)
+      loadNFTs().then(r => {
+          DataManager.getInstance().setNFTs(r)
+          setNFTs(r)
+      })
     } catch (error) {
       console.log(error)
     }
