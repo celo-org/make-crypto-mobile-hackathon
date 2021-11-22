@@ -1,0 +1,34 @@
+{
+  "name": "celo2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm ./src/index.js",
+    "start:dev": "nodemon -r dotenv/config -r esm ./src/index.js",
+    "test": "jest --verbose true --detectOpenHandles --maxConcurrency=1 --maxWorkers=1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "envalid": "^7.2.2",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "babel-jest": "^27.3.1",
+    "cpf": "^2.0.1",
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
+  }
+}
