@@ -6,8 +6,8 @@ import { FlatList } from 'react-native-gesture-handler';
 
 import { FilterList, Nft, SquareButton, Text } from '@nft/components';
 
-import MenuSvg from '@nft/assets/menu.svg';
-import Magnifier from '@nft/assets/magnifier.svg';
+import MenuSvg from '../../../assets/menu.svg';
+import Magnifier from '../../../assets/magnifier.svg';
 
 import { colors, fontsFamily, fontsSize } from '@nft/styles';
 import { AlignTypes } from '@nft/utils/enum';

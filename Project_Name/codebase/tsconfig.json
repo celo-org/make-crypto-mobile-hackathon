@@ -5,7 +5,6 @@
     "baseUrl": ".",
     "paths": {
       "@nft/*": ["./src/*"],
-      "@nft/assets/*": ["./src/assets/*"],
       "@nft/components/*": ["./src/components/*"],
       "@nft/services/*": ["./src/services/*"],
       "@nft/styles/*": ["./src/styles/*"],

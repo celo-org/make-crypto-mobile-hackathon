@@ -4,11 +4,11 @@ import { Platform, StyleSheet, View, Text } from 'react-native';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
-import Home from '../screens/Home';
-import Favorites from '../screens/Favorites';
+import Home from '@nft/screens/Home';
+import Favorites from '@nft/screens/Favorites';
 import Create from '@nft/screens/CreateNFT';
-import Wallet from '../screens/Wallet';
-import Profile from '../screens/Profile';
+import Wallet from '@nft/screens/Wallet';
+import Profile from '@nft/screens/Profile';
 import { colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
 
 import HomeSvg from '../../assets/home.svg';
