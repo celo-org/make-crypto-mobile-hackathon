@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>21. Clip</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="21.-Clip" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(5.000000, 2.000000)" id="Layer-1" stroke="#222F3E" stroke-width="4">
+            <path d="M55.5300284,6.40505139 L7.39427537,54.4781004 C-2.1082459,63.9682433 -2.10970072,79.3476279 7.38749082,88.8324479 C16.8867705,98.3193534 32.2857098,98.3142344 41.7866483,88.8256722 L89.9224013,40.7526232 M81.6673606,32.5083358 L44.5375312,69.5915383 C39.5955246,74.5271072 31.5868451,74.5309986 26.6472197,69.5978077 C21.7086801,64.6657013 21.7069916,56.6708631 26.6534973,51.730801 L53.3792291,25.0398834 M81.6673606,32.5083358 C89.2709984,24.9163431 89.5807294,12.9197875 82.3628638,5.71132424 C75.1434113,-1.49872393 63.1315286,-1.18654676 55.5300284,6.40505139 M81.6673606,32.5083358 L81.6673606,32.5083358"></path>
+        </g>
+    </g>
+</svg>
