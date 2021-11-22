@@ -12,16 +12,9 @@ import Celo from '@nft/assets/celo.svg';
 
 import { AlignTypes } from '@nft/utils/enum';
 
-interface IConnectWalletProps {
-  isModalVisible: boolean;
-  setIsModalVisible: (param: boolean) => void;
-}
-
-const ConnectWallet = ({ isModalVisible, setIsModalVisible }: IConnectWalletProps): JSX.Element => {
-  const closeModal = () => setIsModalVisible(false);
-
+const ConnectWallet = (): JSX.Element => {
   return (
-    <Modal modalVisible={isModalVisible} setModalVisible={setIsModalVisible}>
+    <Modal>
       <>
         <View style={styles.container}>
           <View style={styles.heading}>

@@ -16,6 +16,7 @@ import {
   Montserrat_600SemiBold,
   Montserrat_700Bold,
 } from '@expo-google-fonts/montserrat';
+import { ModalProvider } from './src/context/modal.context';
 
 export default function App() {
   const [montserratFontsLoaded] = useFonts({
@@ -42,8 +43,10 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <StatusBar style="auto" />
-      <BottomRoutes />
+      <ModalProvider>
+        <StatusBar style="auto" />
+        <BottomRoutes />
+      </ModalProvider>
     </NavigationContainer>
   );
 }
