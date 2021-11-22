@@ -4,7 +4,7 @@ import { AlignTypes } from '../../utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     alignItems: AlignTypes.CENTER,
     justifyContent: AlignTypes.CENTER,
     height: dimensions.height50,
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
   },
 
   containerTextIcon: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     alignItems: AlignTypes.CENTER,
     position: 'relative',
   },
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
   textButtonDescription: {
     color: colors.light.neutralColor11,
     position: 'absolute',
-    right: 20,
+    right: dimensions.spacingStackXBig20,
     fontFamily: fontsFamily.montserrat.medium500,
     fontSize: fontsSize.xs12,
   },

@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     alignItems: AlignTypes.CENTER,
   },
   content: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.CENTER,
     alignItems: AlignTypes.CENTER,
     width: dimensions.widthFull,
@@ -40,13 +40,13 @@ export const styles = StyleSheet.create({
   },
   input: {
     fontFamily: fontsFamily.montserrat.medium500,
-    fontSize: fontsSize.xxs10,
+    fontSize: fontsSize.xs12,
     color: colors.light.neutralColor3
   },
   currencyFormatted: {
     width: dimensions.widthFull,
     marginTop: dimensions.spacingInlineQuarck5,
-    alignItems: 'flex-end',
+    alignItems: AlignTypes.FLEX_END,
     paddingRight: dimensions.spacingInlineXs14,
   }
 }) 

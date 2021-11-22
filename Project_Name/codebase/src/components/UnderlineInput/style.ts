@@ -1,12 +1,13 @@
 import { StyleSheet } from 'react-native';
 import { colors, fontsFamily, fontsSize, border, dimensions } from '../../styles';
+import { AlignTypes } from '../../utils/enum';
 
 const styles = StyleSheet.create({
   labelContainer: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
   },
   input: {
-    borderBottomWidth: 1,
+    borderBottomWidth: border.width.nano,
     borderBottomColor: colors.light.neutralColor7,
     color: colors.light.neutralColor10,
     fontFamily: fontsFamily.montserrat.regular400,

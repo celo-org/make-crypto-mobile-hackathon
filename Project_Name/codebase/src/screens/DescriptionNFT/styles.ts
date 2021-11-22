@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     marginHorizontal: dimensions.spacingInlineSm16,
   },
   detailsHeader: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.SPACE_BETWEEN,
     paddingRight: dimensions.spacingStackXBig20,
     marginBottom: dimensions.spacingInlineSm16,
