@@ -39,6 +39,7 @@ const dimensions = {
   height60: 60,
   height400: 400,
   height80: 80,
+  height90: 90
 };
 
 export default dimensions;
