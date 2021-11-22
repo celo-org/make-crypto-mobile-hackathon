@@ -1,6 +1,6 @@
 import { Dimensions, StyleSheet } from 'react-native';
-import { border, dimensions } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { border, dimensions } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 const deviceHeight = Dimensions.get('window').height;
 

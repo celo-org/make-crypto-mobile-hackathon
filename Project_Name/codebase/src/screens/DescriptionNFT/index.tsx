@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { Image, SafeAreaView, View } from 'react-native';
-import { Author, BidCard, LargeButton, Likes, SquareButton, Text } from '../../components';
 import { ScrollView } from 'react-native-gesture-handler';
-import { colors, fontsFamily } from '../../styles';
-import fontSizes from '../../styles/fontSizes';
 
-import Ether from '../../../assets/ether.svg';
-import EtherBlack from '../../../assets/ether-black.svg';
-import EtherBlackSmall from '../../../assets/ether-black-small.svg';
-import Back from '../../../assets/left-arrow.svg';
-import { AlignTypes } from '../../utils/enum';
+import { Author, BidCard, LargeButton, Likes, SquareButton, Text } from '@nft/components';
+import { colors, fontsFamily, fontsSize } from '@nft/styles';
+import PlaceABid from '@nft/screens/ModalPlaceABid';
+import ConnectWallet from '@nft/screens/ConnectWallet';
+
+import Ether from '@nft/assets/ether.svg';
+import EtherBlack from '@nft/assets/ether-black.svg';
+import EtherBlackSmall from '@nft/assets/ether-black-small.svg';
+import Back from '@nft/assets/left-arrow.svg';
+
+import { AlignTypes } from '@nft/utils/enum';
 import styles from './styles';
-import ConnectWallet from '../ConnectWallet';
-import PlaceABid from '../PlaceABid';
 interface IDescriptionProps {
   image: {
     url: string;
@@ -55,9 +56,7 @@ const DescriptionNft = ({
       <PlaceABid
         isModalVisible={isPlaceABidModalVisible}
         setIsModalVisible={handlePlaceABidModal}
-        cryptoPrefix={'ETH'}
-        balance={'0.08976589'}
-        usdBalance={'259.89'}
+        nftID="123123"
       />
       <View style={styles.head}>
         <SquareButton iconChildren={Back} onPress={() => {}} />
@@ -77,7 +76,7 @@ const DescriptionNft = ({
               textDescription={image.title}
               color={colors.light.neutralColor3}
               fontFamily={fontsFamily.montserrat.semiBold600}
-              fontsSize={fontSizes.lg18}
+              fontsSize={fontsSize.lg18}
             />
             <Likes
               numberOfLikes={likes}
@@ -85,7 +84,7 @@ const DescriptionNft = ({
               textAlign={AlignTypes.CENTER}
               textColor={colors.light.neutralColor5}
               textFontFamily={fontsFamily.montserrat.regular400}
-              textFontSize={fontSizes.xs12}
+              textFontSize={fontsSize.xs12}
               isLiked={isLiked}
             />
           </View>
@@ -104,7 +103,7 @@ const DescriptionNft = ({
               }
               color={colors.light.neutralColor3}
               fontFamily={fontsFamily.montserrat.regular400}
-              fontsSize={fontSizes.sm14}
+              fontsSize={fontsSize.sm14}
             />
           </View>
           <View style={styles.detailsFooter}>
@@ -123,7 +122,7 @@ const DescriptionNft = ({
             textAlign={AlignTypes.CENTER}
             textColor={colors.light.neutralColor12}
             textFontFamily={fontsFamily.montserrat.semiBold600}
-            textFontSize={fontSizes.md16}
+            textFontSize={fontsSize.md16}
             iconChildren={Ether}
             onPress={renderModal}
           />
