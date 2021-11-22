@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { border, colors, dimensions, fontsFamily, fontsSize } from '../../styles';
+import { border, dimensions } from '../../styles';
 import { AlignTypes } from '../../utils/enum';
 
 const styles = StyleSheet.create({
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     width: dimensions.widthFull,
     justifyContent: AlignTypes.CENTER,
     alignItems: AlignTypes.CENTER,
-    flexDirection: 'row'
+    flexDirection: AlignTypes.ROW
   },
   icon: {
     marginRight: dimensions.spacingInlineXxs12

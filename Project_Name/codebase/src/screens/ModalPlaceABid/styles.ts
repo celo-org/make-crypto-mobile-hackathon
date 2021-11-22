@@ -19,16 +19,16 @@ const styles = StyleSheet.create({
     marginBottom: dimensions.spacingStackGiant25,
   },
   currentBalanceContainer: {
-    borderWidth: border.width.hairline,
+    borderWidth: border.width.nano,
     borderColor: colors.light.neutralColor10,
     borderRadius: border.radius.sm4,
     padding: dimensions.spacingStackXs8,
   },
   currentBid: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
   },
   currentBidBalance: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.SPACE_BETWEEN,
     width: dimensions.widthFull,
   },

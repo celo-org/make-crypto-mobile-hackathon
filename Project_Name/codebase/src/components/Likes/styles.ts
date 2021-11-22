@@ -5,7 +5,7 @@ import { AlignTypes } from '../../utils/enum';
 export const styles = StyleSheet.create({
   container: {
     width: dimensions.spacingStackXBig20,
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.SPACE_BETWEEN,
     alignItems: AlignTypes.CENTER,
   },
