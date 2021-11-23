@@ -1,18 +1,19 @@
 import { StyleSheet } from 'react-native';
-import { border, colors, dimensions, fontsFamily } from '../../styles';
-import fontSizes from '../../styles/fontSizes';
+import { border, colors, dimensions, fontsFamily } from '@nft/styles';
+import fontSizes from '@nft/styles/fontSizes';
 import { AlignTypes } from '../../utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
     paddingTop: dimensions.spacingStackXxl16,
-    backgroundColor: colors.light.neutralColor14,
   },
   content: {    
     paddingTop: dimensions.spacingStackXxl16,
+    marginBottom: dimensions.spacingStackXBig20,
+    backgroundColor: colors.light.neutralColor14,
   },
   header: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     paddingHorizontal: dimensions.spacingInlineSm16,
     justifyContent: AlignTypes.SPACE_BETWEEN,
   },
@@ -39,7 +40,7 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   buttons: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
   },
   profileInfo: {
     marginTop: dimensions.spacingStackXxl16,
@@ -75,7 +76,7 @@ export const styles = StyleSheet.create({
   },
   username: {
     marginTop: dimensions.spacingStackLg10,
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
   },
   userNameText: {
     color: colors.light.neutralColor4,
@@ -83,14 +84,14 @@ export const styles = StyleSheet.create({
     fontFamily: fontsFamily.montserrat.medium500,
   },
   hash: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: AlignTypes.ROW,
+    justifyContent: AlignTypes.SPACE_BETWEEN,
     width: 230,
   },
   userbio: {
     marginTop: dimensions.spacingStackXxl16,
     marginBottom: dimensions.spacingStackXHuge40,
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     paddingHorizontal: dimensions.spacingInlineSm16,
   },
   bioDescription: {
@@ -105,7 +106,7 @@ export const styles = StyleSheet.create({
     alignItems: AlignTypes.CENTER,
   },
   arts: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     width: dimensions.widthFull,
   },
   image: {
@@ -115,9 +116,7 @@ export const styles = StyleSheet.create({
   },
   body: {
     width: dimensions.widthFull,
-    marginTop: dimensions.spacingStackXGiant30,
-    paddingBottom: dimensions.spacingStackXxxHuge80,
-    marginBottom: dimensions.height80,
+    marginTop: dimensions.spacingStackXBig20,
   },
   description: {
     marginTop: dimensions.spacingStackXHuge40,
@@ -126,6 +125,6 @@ export const styles = StyleSheet.create({
   nftsImages: {
     width: dimensions.widthFull,
     flexWrap: 'wrap',
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
   }
 }) 
