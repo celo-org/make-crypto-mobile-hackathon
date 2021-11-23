@@ -68,7 +68,9 @@ const Profile = (): JSX.Element => {
   const [creationsButtonSelected, setCreationsButtonSelected] = useState(true);
   const [creations, setCreations] = useState<CreationProps[]>([]);
   const [purchases, setPurchases] = useState<PurchaseProps[]>([]);
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState(
+    'https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  );
 
   const [name, setName] = useState('User0001');
   const [hash, setHash] = useState('bc1q3095ucnwf8q5v798vv8uujd5...');
@@ -162,8 +164,6 @@ const Profile = (): JSX.Element => {
       quality: 1,
     });
 
-    console.log(result);
-
     if (!result.cancelled) {
       setImage(result.uri);
 
@@ -186,170 +186,182 @@ const Profile = (): JSX.Element => {
                   <SquareButton iconChildren={MenuSvg} />
                 </View>
               </View>
-
-              <ScrollView
-                showsVerticalScrollIndicator={false}
-                contentContainerStyle={{
-                  justifyContent: AlignTypes.CENTER,
-                  alignItems: AlignTypes.CENTER,
-                }}>
-                <View
-                  style={{
-                    paddingHorizontal: 16,
+              <View>
+                <ScrollView
+                  showsVerticalScrollIndicator={false}
+                  contentContainerStyle={{
                     justifyContent: AlignTypes.CENTER,
                     alignItems: AlignTypes.CENTER,
+                    flexGrow: 1,
                   }}>
-                  <View style={styles.profileInfo}>
-                    <View style={styles.avatar}>
-                      <Image
-                        source={{
-                          uri: image,
-                        }}
-                        style={styles.images}
-                      />
-                      <View style={styles.changePhoto}>
-                        <BorderlessButton style={styles.camera} onPress={pickImage}>
-                          <CamSvg />
-                        </BorderlessButton>
-                      </View>
-                    </View>
-
-                    <View style={styles.username}>
-                      <TextInput
-                        style={styles.userNameText}
-                        value={newNameValue}
-                        onChangeText={setNewNameValue}
-                        editable={isNameEditing}
-                        onSubmitEditing={handleSubmitEditingName}
-                        ref={nameTextInputRef}
-                      />
-                      <BorderlessButton
-                        onPress={!isNameEditing ? handleStartEditingName : handleSubmitEditingName}
-                        style={styles.editDescription}>
-                        <PencilSvg />
-                      </BorderlessButton>
-                    </View>
-
-                    <View style={styles.hash}>
-                      <Text
-                        color={colors.light.neutralColor7}
-                        fontsSize={fontSizes.xs12}
-                        fontFamily={fontsFamily.montserrat.regular400}
-                        textDescription={hash}
-                      />
-                      <BorderlessButton onPress={copyToClipboard}>
-                        <Copy />
-                      </BorderlessButton>
-                    </View>
-
-                    <View style={styles.userbio}>
-                      <TextInput
-                        style={styles.bioDescription}
-                        value={newDescriptionValue}
-                        multiline={true}
-                        returnKeyType="send"
-                        onChangeText={setNewDescriptionValue}
-                        editable={isDescriptionEditing}
-                        onSubmitEditing={handleSubmitEditingDescription}
-                        ref={descriptionTextInputRef}
-                      />
-                      <BorderlessButton
-                        style={styles.editDescription}
-                        onPress={
-                          !isDescriptionEditing
-                            ? handleStartEditingDescription
-                            : handleSubmitEditingDescription
-                        }>
-                        <PencilSvg />
-                      </BorderlessButton>
-                    </View>
-                  </View>
-
-                  <View style={styles.arts}>
-                    <ProfileButton
-                      label={'Creations'}
-                      isActive={creationsButtonSelected}
-                      onPress={handleSelect}
-                      disabled={creationsButtonSelected}
-                    />
-                    <ProfileButton
-                      label={'Purchases'}
-                      isActive={!creationsButtonSelected}
-                      onPress={handleSelect}
-                      disabled={!creationsButtonSelected}
-                    />
-                  </View>
-                </View>
-
-                <View style={styles.body}>
-                  {creations.length === 0 && creationsButtonSelected && (
-                    <>
-                      <View style={styles.image}>
-                        <EmptyCreationsSvg />
-                        <View style={styles.description}>
-                          <Text
-                            textDescription={
-                              'You have no creations yet. Click bellow to make your first one!'
-                            }
-                            fontsSize={fontSizes.md16}
-                            fontFamily={fontsFamily.montserrat.medium500}
-                            color={colors.light.neutralColor5}
-                            textAlign={AlignTypes.CENTER}
+                  <TouchableOpacity
+                    style={{ width: '100%' }}
+                    activeOpacity={1}
+                    onPress={handleDismissKeyboard}>
+                    <View
+                      style={{
+                        paddingHorizontal: 16,
+                        justifyContent: AlignTypes.CENTER,
+                        alignItems: AlignTypes.CENTER,
+                        flex: 1,
+                      }}>
+                      <View style={styles.profileInfo}>
+                        <View style={styles.avatar}>
+                          <Image
+                            source={{
+                              uri: image,
+                            }}
+                            style={styles.images}
                           />
+                          <View style={styles.changePhoto}>
+                            <BorderlessButton style={styles.camera} onPress={pickImage}>
+                              <CamSvg />
+                            </BorderlessButton>
+                          </View>
                         </View>
 
-                        <LineButton
-                          label={'Create a NFT'}
-                          textFontFamily={fontsFamily.montserrat.medium500}
-                          textColor={colors.light.neutralColor4}
-                          textFontSize={fontSizes.md16}
-                          textAlign={AlignTypes.CENTER}
-                        />
-                      </View>
-                    </>
-                  )}
-                  {purchases.length === 0 && !creationsButtonSelected && (
-                    <>
-                      <View style={styles.image}>
-                        <EmptyPurchasesSvg />
-                        <View style={styles.description}>
-                          <Text
-                            textDescription={
-                              'You have no purchases yet. Click bellow to buy your first one!'
-                            }
-                            fontsSize={fontSizes.md16}
-                            fontFamily={fontsFamily.montserrat.medium500}
-                            color={colors.light.neutralColor5}
-                            textAlign={AlignTypes.CENTER}
+                        <View style={styles.username}>
+                          <TextInput
+                            style={styles.userNameText}
+                            value={newNameValue}
+                            onChangeText={setNewNameValue}
+                            editable={isNameEditing}
+                            onSubmitEditing={handleSubmitEditingName}
+                            ref={nameTextInputRef}
+                            spellCheck={false}
                           />
+                          <BorderlessButton
+                            onPress={
+                              !isNameEditing ? handleStartEditingName : handleSubmitEditingName
+                            }
+                            style={styles.editDescription}>
+                            <PencilSvg />
+                          </BorderlessButton>
                         </View>
 
-                        <LineButton
-                          label={'Buy a NFT'}
-                          textFontFamily={fontsFamily.montserrat.medium500}
-                          textColor={colors.light.neutralColor4}
-                          textFontSize={fontSizes.md16}
-                          textAlign={AlignTypes.CENTER}
+                        <View style={styles.hash}>
+                          <Text
+                            color={colors.light.neutralColor7}
+                            fontsSize={fontSizes.xs12}
+                            fontFamily={fontsFamily.montserrat.regular400}
+                            textDescription={hash}
+                          />
+                          <BorderlessButton onPress={copyToClipboard}>
+                            <Copy />
+                          </BorderlessButton>
+                        </View>
+
+                        <View style={styles.userbio}>
+                          <TextInput
+                            style={styles.bioDescription}
+                            value={newDescriptionValue}
+                            multiline={true}
+                            returnKeyType="send"
+                            onChangeText={setNewDescriptionValue}
+                            editable={isDescriptionEditing}
+                            onSubmitEditing={handleSubmitEditingDescription}
+                            ref={descriptionTextInputRef}
+                            spellCheck={false}
+                          />
+                          <BorderlessButton
+                            style={styles.editDescription}
+                            onPress={
+                              !isDescriptionEditing
+                                ? handleStartEditingDescription
+                                : handleSubmitEditingDescription
+                            }>
+                            <PencilSvg />
+                          </BorderlessButton>
+                        </View>
+                      </View>
+
+                      <View style={styles.arts}>
+                        <ProfileButton
+                          label={'Creations'}
+                          isActive={creationsButtonSelected}
+                          onPress={handleSelect}
+                          disabled={creationsButtonSelected}
+                        />
+                        <ProfileButton
+                          label={'Purchases'}
+                          isActive={!creationsButtonSelected}
+                          onPress={handleSelect}
+                          disabled={!creationsButtonSelected}
                         />
                       </View>
-                    </>
-                  )}
-                  {creations.length > 0 && creationsButtonSelected && (
-                    <View style={styles.nftsImages}>
-                      {creations.map((data) => {
-                        return <NftImage key={data.id} uri={data.uri} />;
-                      })}
                     </View>
-                  )}
-                  {purchases.length > 0 && !creationsButtonSelected && (
-                    <View style={styles.nftsImages}>
-                      {purchases.map((data) => {
-                        return <NftImage key={data.id} uri={data.uri} />;
-                      })}
+
+                    <View style={styles.body}>
+                      {creations.length === 0 && creationsButtonSelected && (
+                        <>
+                          <View style={styles.image}>
+                            <EmptyCreationsSvg />
+                            <View style={styles.description}>
+                              <Text
+                                textDescription={
+                                  'You have no creations yet. Click bellow to make your first one!'
+                                }
+                                fontsSize={fontSizes.md16}
+                                fontFamily={fontsFamily.montserrat.medium500}
+                                color={colors.light.neutralColor5}
+                                textAlign={AlignTypes.CENTER}
+                              />
+                            </View>
+
+                            <LineButton
+                              label={'Create a NFT'}
+                              textFontFamily={fontsFamily.montserrat.medium500}
+                              textColor={colors.light.neutralColor4}
+                              textFontSize={fontSizes.md16}
+                              textAlign={AlignTypes.CENTER}
+                            />
+                          </View>
+                        </>
+                      )}
+                      {purchases.length === 0 && !creationsButtonSelected && (
+                        <>
+                          <View style={styles.image}>
+                            <EmptyPurchasesSvg />
+                            <View style={styles.description}>
+                              <Text
+                                textDescription={
+                                  'You have no purchases yet. Click bellow to buy your first one!'
+                                }
+                                fontsSize={fontSizes.md16}
+                                fontFamily={fontsFamily.montserrat.medium500}
+                                color={colors.light.neutralColor5}
+                                textAlign={AlignTypes.CENTER}
+                              />
+                            </View>
+
+                            <LineButton
+                              label={'Buy a NFT'}
+                              textFontFamily={fontsFamily.montserrat.medium500}
+                              textColor={colors.light.neutralColor4}
+                              textFontSize={fontSizes.md16}
+                              textAlign={AlignTypes.CENTER}
+                            />
+                          </View>
+                        </>
+                      )}
+                      {creations.length > 0 && creationsButtonSelected && (
+                        <View style={styles.nftsImages}>
+                          {creations.map((data) => {
+                            return <NftImage key={data.id} uri={data.uri} />;
+                          })}
+                        </View>
+                      )}
+                      {purchases.length > 0 && !creationsButtonSelected && (
+                        <View style={styles.nftsImages}>
+                          {purchases.map((data) => {
+                            return <NftImage key={data.id} uri={data.uri} />;
+                          })}
+                        </View>
+                      )}
                     </View>
-                  )}
-                </View>
-              </ScrollView>
+                  </TouchableOpacity>
+                </ScrollView>
+              </View>
             </View>
           </SafeAreaView>
         </View>
