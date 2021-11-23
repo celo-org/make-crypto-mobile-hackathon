@@ -1,0 +1,11 @@
+export { default as Logo } from './logo.jpg';
+export { default as SlidesImage } from './slides.png';
+export { default as TestImage1 } from './layout/testImage1.jpeg';
+export { default as TestImage2 } from './layout/testImage2.jpeg';
+export { default as TestImage3 } from './layout/testImage3.jpeg';
+export { default as WalletImage1 } from './layout/e-wallet_01.png';
+export { default as WalletImage2 } from './layout/e-wallet_02.png';
+export { default as WalletImage3 } from './layout/e-wallet_03.png';
+export { default as IntroImage1 } from './layout/intro_01.png';
+export { default as IntroImage2 } from './layout/intro_02.png';
+export { default as IntroImage3 } from './layout/intro_03.png';

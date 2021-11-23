@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "785054665440",
+    "project_id": "buildings-dev-75d67",
+    "storage_bucket": "buildings-dev-75d67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785054665440:android:3a5fd199665b0776a71e85",
+        "android_client_info": {
+          "package_name": "com.gsm.buildings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785054665440-g59jfqi3c3pa3rk7k0kg76tfhml1jlib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoN47dQlw44A_qRo_KcLrruHk2RPfCzYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785054665440-g59jfqi3c3pa3rk7k0kg76tfhml1jlib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
