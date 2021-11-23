@@ -26,20 +26,29 @@ const dimensions = {
   spacingStackHuge32: 32,
   spacingStackXHuge40: 40,
   spacingStackXxHuge65: 65,
+  spacingStackXxxHuge80: 80,
   widthFull: '100%',
   width20: '20%',
+  width26: 26,
+  width43: '43%',
   width80: '80%',
+  width30: 30,
   width40: 40,
   width44: 44,
   width60: 60,
   width90: 90,
+  width100: 100,
   width240: 240,
+  heigth26: 26,
+  height30: 30,
   height40: 40,
   height50: 50,
   height60: 60,
-  height400: 400,
   height80: 80,
-  height90: 90
+  height100: 100,
+  heigth160: 160,
+  height400: 400,
+  padding75: '75%'
 };
 
 export default dimensions;
