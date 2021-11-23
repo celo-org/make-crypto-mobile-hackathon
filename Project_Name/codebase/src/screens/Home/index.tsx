@@ -39,7 +39,7 @@ const Home = (): JSX.Element => {
 
   const categories = [
     { filterKey: 'trending', title: 'Trending' },
-    { filterKey: 'gamming', title: 'Gamming' },
+    { filterKey: 'gaming', title: 'Gaming' },
     { filterKey: 'sports', title: 'Sports' },
     { filterKey: 'most_recent', title: 'Most Recent' },
   ];

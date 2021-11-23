@@ -7,12 +7,19 @@ import styles from './style';
 
 interface IUnderlineInputProps {
   onChangeText: (param: number) => void;
+  text: string;
   label: string;
   placeholder: string;
-  isOptional: boolean;
+  isOptional?: boolean;
 }
 
-const UnderlineInput = ({ onChangeText, label, isOptional, placeholder }: IUnderlineInputProps) => {
+const UnderlineInput = ({
+  onChangeText,
+  text,
+  label,
+  isOptional,
+  placeholder,
+}: IUnderlineInputProps) => {
   const onChangeTextValue = useCallback(
     (value) => {
       onChangeText(value);
@@ -29,15 +36,22 @@ const UnderlineInput = ({ onChangeText, label, isOptional, placeholder }: IUnder
           fontsSize={fontSizes.xl20}
         />
         {isOptional && (
-          <Text
-            textDescription={'Optional'}
-            color={colors.light.neutralColor7}
-            fontFamily={fontsFamily.montserrat.regular400}
-            fontsSize={fontSizes.sm14}
-          />
+          <View style={styles.optionalText}>
+            <Text
+              textDescription={'(Optional)'}
+              color={colors.light.neutralColor7}
+              fontFamily={fontsFamily.montserrat.regular400}
+              fontsSize={fontSizes.sm14}
+            />
+          </View>
         )}
       </View>
-      <TextInput onChangeText={onChangeTextValue} placeholder={placeholder} style={styles.input} />
+      <TextInput
+        onChangeText={onChangeTextValue}
+        value={String(text)}
+        placeholder={placeholder}
+        style={styles.input}
+      />
     </View>
   );
 };
