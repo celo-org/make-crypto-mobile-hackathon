@@ -48,6 +48,7 @@ const dimensions = {
   height100: 100,
   heigth160: 160,
   height400: 400,
+  padding75: '75%'
 };
 
 export default dimensions;
