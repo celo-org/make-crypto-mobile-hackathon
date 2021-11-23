@@ -1,8 +1,8 @@
 import React from 'react';
 import { ImageBackground, View } from 'react-native';
-import { Author, BidCard, Likes, Tag, Text } from '..';
-import { colors, fontsFamily, fontsSize } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { Author, BidCard, Likes, Tag, Text } from '@nft/components';
+import { colors, fontsFamily, fontsSize } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 import EtherBlackSmallSvg from '../../../assets/ether-black-small.svg';
 import EtherBlackSvg from '../../../assets/ether-black.svg';
 

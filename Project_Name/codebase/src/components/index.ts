@@ -11,3 +11,4 @@ export { default as Nft } from './Nft';
 export { default as SquareButton } from './SquareButton';
 export { default as Tag } from './Tag';
 export { default as Text } from './Text';
+export { default as PillButton } from './PillButton';

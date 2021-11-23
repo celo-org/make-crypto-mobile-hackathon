@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { border, dimensions } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { border, dimensions } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,11 +9,11 @@ const styles = StyleSheet.create({
     width: dimensions.widthFull,
     justifyContent: AlignTypes.CENTER,
     alignItems: AlignTypes.CENTER,
-    flexDirection: AlignTypes.ROW
+    flexDirection: AlignTypes.ROW,
   },
   icon: {
-    marginRight: dimensions.spacingInlineXxs12
-  }
+    marginRight: dimensions.spacingInlineXxs12,
+  },
 });
 
 export default styles;

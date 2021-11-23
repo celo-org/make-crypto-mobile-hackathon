@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Modal, ModalProps, TouchableOpacity, View } from 'react-native';
+import { Modal, ModalProps, TouchableOpacity, View } from 'react-native';
 import Close from '../../../assets/close.svg';
 import { useModal } from '../../context/modal.context';
 

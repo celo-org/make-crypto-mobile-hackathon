@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
-import { TextInput, TextInputProps, View } from 'react-native';
-import { Text } from '..';
-import { colors, fontsFamily } from '../../styles';
+import { TextInput, View } from 'react-native';
+import { Text } from '@nft/components';
+import { colors, fontsFamily } from '@nft/styles';
 import fontSizes from '../../styles/fontSizes';
 import styles from './style';
 

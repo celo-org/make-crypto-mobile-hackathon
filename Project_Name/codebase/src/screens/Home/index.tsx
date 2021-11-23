@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react';
 
 import { View, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { FilterList, Nft, SquareButton, Text } from '../../components';
+import { FlatList } from 'react-native-gesture-handler';
 
-import { styles } from './styles';
+import { FilterList, Nft, SquareButton, Text } from '@nft/components';
 
 import MenuSvg from '../../../assets/menu.svg';
-
 import Magnifier from '../../../assets/magnifier.svg';
-import { colors, fontsFamily, fontsSize } from '../../styles';
-import fontSizes from '../../styles/fontSizes';
-import { AlignTypes } from '../../utils/enum';
-import { FlatList } from 'react-native-gesture-handler';
-import { api } from '../../services/api';
+
+import { colors, fontsFamily, fontsSize } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
+import { api } from '@nft/services/api';
+
+import { styles } from './styles';
 
 interface INFTProps {
   image: {
@@ -87,7 +87,7 @@ const Home = (): JSX.Element => {
         <Text
           textDescription={'Find the NFT Perfect to You'}
           fontFamily={fontsFamily.montserrat.regular400}
-          fontsSize={fontSizes.xl24}
+          fontsSize={fontsSize.xl24}
           color={colors.light.neutralColor5}
         />
       </View>

@@ -1,17 +1,16 @@
 import React from 'react';
-import { useState } from 'react';
 import { View } from 'react-native';
-import { Modal, Text } from '../../components';
 import styles from './styles';
-import { colors, fontsFamily, fontsSize } from '../../styles';
-import PillButton from '../../components/PillButton';
 
-import Metamask from '../../../assets/metamask.svg';
-import Trust from '../../../assets/trust-wallet.svg';
-import Coinbase from '../../../assets/coinbase.svg';
-import Celo from '../../../assets/celo.svg';
+import { Modal, Text, PillButton } from '@nft/components';
+import { colors, fontsFamily, fontsSize } from '@nft/styles';
 
-import { AlignTypes } from '../../utils/enum';
+import Metamask from '@nft/assets/metamask.svg';
+import Trust from '@nft/assets/trust-wallet.svg';
+import Coinbase from '@nft/assets/coinbase.svg';
+import Celo from '@nft/assets/celo.svg';
+
+import { AlignTypes } from '@nft/utils/enum';
 
 const ConnectWallet = (): JSX.Element => {
   return (

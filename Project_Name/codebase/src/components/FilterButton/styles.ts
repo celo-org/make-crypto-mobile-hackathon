@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors, dimensions } from '../../styles';
+import { colors, dimensions } from '@nft/styles';
 
 export const styles = StyleSheet.create({
   container: {
@@ -13,8 +13,8 @@ export const styles = StyleSheet.create({
     },
     shadowOpacity: 0.29,
     shadowRadius: 4.65,
-    
+
     elevation: 7,
     height: dimensions.height40,
   },
-}) 
+});
