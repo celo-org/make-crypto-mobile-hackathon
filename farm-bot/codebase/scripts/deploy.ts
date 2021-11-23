@@ -1,30 +1,28 @@
+import { DeployerFn } from '@ubeswap/hardhat-celo';
 // We require the Hardhat Runtime Environment explicitly here. This is optional
 // but useful for running the script in a standalone fashion through `node <script>`.
 //
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
-import { ethers } from "hardhat";
+// import { ethers } from "hardhat";
 
-async function main() {
-  // Hardhat always runs the compile task when running scripts with its command
-  // line interface.
-  //
-  // If this script is run directly using `node` you may want to call compile
-  // manually to make sure everything is compiled
-  // await hre.run('compile');
+import {
+  FarmBot__factory
+ } from '../../../typechain/factories/FarmBot__factory'
 
-  // We get the contract to deploy
-  const Greeter = await ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
+export const main: DeployerFn<{}> = async ({
+  deployCreate2,
+  deployer,
+  provider
+}) => {
 
-  await greeter.deployed();
+  const farmBot = await deployCreate2('FarmBot_1', {
+    factory: FarmBot__factory,
+    signer: deployer,
+    args: [],
+  })
 
-  console.log("Greeter deployed to:", greeter.address);
+  return {
+    FarmBot: farmBot.address
+  }
 }
-
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});

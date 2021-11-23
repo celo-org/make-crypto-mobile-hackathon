@@ -25,3 +25,8 @@ What do you need to do next to turn this prototype into a working solution?
 
 #### License
 This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
+
+
+```
+yarn hardhat deploy --network alfajores --step deploy-bot
+```
