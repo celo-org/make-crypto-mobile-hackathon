@@ -10,6 +10,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import { styles } from './styles';
+
 import { BorderlessButton, ScrollView } from 'react-native-gesture-handler';
 
 import { LineButton, ProfileButton, SquareButton, Text } from '@nft/components';
@@ -22,8 +24,6 @@ import NftImage from '@nft/components/NftImage';
 import * as ImagePicker from 'expo-image-picker';
 
 import * as Clipboard from 'expo-clipboard';
-
-import { styles } from './styles';
 
 import MenuSvg from '../../../assets/menu.svg';
 import CamSvg from '../../../assets/cam.svg';
