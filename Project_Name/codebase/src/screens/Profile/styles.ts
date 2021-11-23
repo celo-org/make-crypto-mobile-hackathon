@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { border, colors, dimensions, fontsFamily } from '@nft/styles';
 import fontSizes from '@nft/styles/fontSizes';
-import { AlignTypes } from '../../utils/enum';
+import { AlignTypes } from '@nft/utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
