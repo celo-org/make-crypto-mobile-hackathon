@@ -42,6 +42,14 @@ export const styles = StyleSheet.create({
   buttons: {
     flexDirection: AlignTypes.ROW,
   },
+  scrollview: {
+    justifyContent: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER,
+    flexGrow: 1,
+  },
+  touchableOpacityContainer: {
+    width: dimensions.widthFull,
+  },
   profileInfo: {
     marginTop: dimensions.spacingStackXxl16,
     justifyContent: AlignTypes.CENTER,

@@ -186,13 +186,9 @@ const Profile = (): JSX.Element => {
             <View>
               <ScrollView
                 showsVerticalScrollIndicator={false}
-                contentContainerStyle={{
-                  justifyContent: AlignTypes.CENTER,
-                  alignItems: AlignTypes.CENTER,
-                  flexGrow: 1,
-                }}>
+                contentContainerStyle={styles.scrollview}>
                 <TouchableOpacity
-                  style={{ width: '100%' }}
+                  style={styles.touchableOpacityContainer}
                   activeOpacity={1}
                   onPress={handleDismissKeyboard}>
                   <View style={styles.contentView}>
