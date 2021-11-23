@@ -70,7 +70,7 @@ export const styles = StyleSheet.create({
     alignItems: AlignTypes.CENTER,
     width: dimensions.width26,
     height: dimensions.heigth26,
-    borderRadius: border.radius.xxl26,
+    borderRadius: border.radius.lg12,
     backgroundColor: '#c6c6c6'
   },
   username: {
