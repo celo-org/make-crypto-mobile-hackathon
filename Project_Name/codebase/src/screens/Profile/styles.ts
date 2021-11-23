@@ -32,6 +32,12 @@ export const styles = StyleSheet.create({
 
     elevation: dimensions.spacingInlineXxxs9,
   },
+  contentView: {
+    paddingHorizontal: dimensions.spacingStackXxl16,
+    justifyContent: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER,
+    flex: 1,
+  },
   buttons: {
     flexDirection: 'row',
   },
@@ -62,9 +68,9 @@ export const styles = StyleSheet.create({
   camera: {
     justifyContent: AlignTypes.CENTER,
     alignItems: AlignTypes.CENTER,
-    width: 26,
-    height: 26,
-    borderRadius: 12,
+    width: dimensions.width26,
+    height: dimensions.heigth26,
+    borderRadius: border.radius.xxl26,
     backgroundColor: '#c6c6c6'
   },
   username: {
@@ -110,12 +116,12 @@ export const styles = StyleSheet.create({
   body: {
     width: dimensions.widthFull,
     marginTop: dimensions.spacingStackXGiant30,
-    paddingBottom: 80, // todo: create 80 stack
+    paddingBottom: dimensions.spacingStackXxxHuge80,
     marginBottom: dimensions.height80,
   },
   description: {
-    marginTop: 40,
-    marginBottom: 20,
+    marginTop: dimensions.spacingStackXHuge40,
+    marginBottom: dimensions.spacingStackXBig20,
   },
   nftsImages: {
     width: dimensions.widthFull,
