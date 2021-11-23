@@ -60,7 +60,8 @@ contract FarmBot is Owned, FarmbotERC20 {
     }
 
     function updateFee(uint256 _feeNumerator, uint256 _feeDenominator) external onlyOwner {
-
+	feeNumerator = _feeNumerator;
+	feeDenominator = _feeDenominator;
     }
 
     function updatePaths(address[] calldata _path0, address[] calldata _path1) external onlyOwner {
