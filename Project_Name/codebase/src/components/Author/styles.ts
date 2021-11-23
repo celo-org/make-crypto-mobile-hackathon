@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { border, colors, dimensions } from '../../styles';
+import { border, colors, dimensions } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 const style = StyleSheet.create({
   imageContainer: {
@@ -19,10 +20,10 @@ const style = StyleSheet.create({
   },
   textContainer: {
     marginLeft: dimensions.spacingStackQuarck4,
-    justifyContent: 'space-around',
+    justifyContent: AlignTypes.SPACE_AROUND,
   },
   wrapper: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
   },
 });
 

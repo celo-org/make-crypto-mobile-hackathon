@@ -2,9 +2,8 @@ import React, { useCallback } from 'react';
 
 import { StyleSheet, View } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
-import { Text } from '..';
-import { colors, fontsFamily } from '../../styles';
-import fontSizes from '../../styles/fontSizes';
+import { Text } from '@nft/components';
+import { colors, fontsFamily, fontsSize } from '@nft/styles';
 
 import { styles } from './styles';
 
@@ -52,7 +51,7 @@ const InputBid = ({
             textDescription={currency}
             color={colors.light.neutralColor6}
             fontFamily={fontsFamily.montserrat.semiBold600}
-            fontsSize={fontSizes.md16}
+            fontsSize={fontsSize.md16}
           />
         </View>
         <View style={[styles.inputView, error && styleManager.inputView]}>
@@ -80,7 +79,7 @@ const InputBid = ({
           }
           color={error ? colors.light.neutralColor13 : colors.light.neutralColor6}
           fontFamily={fontsFamily.montserrat.medium500}
-          fontsSize={fontSizes.xs12}
+          fontsSize={fontsSize.xs12}
         />
       </View>
     </View>

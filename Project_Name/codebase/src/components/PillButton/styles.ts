@@ -1,10 +1,10 @@
 import { StyleSheet } from 'react-native';
-import { colors, dimensions, border, fontsFamily, fontsSize } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { colors, dimensions, border, fontsFamily, fontsSize } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     alignItems: AlignTypes.CENTER,
     justifyContent: AlignTypes.CENTER,
     height: dimensions.height50,
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
   },
 
   containerTextIcon: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     alignItems: AlignTypes.CENTER,
     position: 'relative',
   },
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
   textButtonDescription: {
     color: colors.light.neutralColor11,
     position: 'absolute',
-    right: 20,
+    right: dimensions.spacingStackXBig20,
     fontFamily: fontsFamily.montserrat.medium500,
     fontSize: fontsSize.xs12,
   },

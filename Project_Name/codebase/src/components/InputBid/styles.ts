@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { border, colors, dimensions, fontsFamily, fontsSize } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { border, colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     alignItems: AlignTypes.CENTER,
   },
   content: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.CENTER,
     alignItems: AlignTypes.CENTER,
     width: dimensions.widthFull,
@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     borderWidth: border.width.hairline,
     alignItems: AlignTypes.CENTER,
     height: dimensions.height40,
-    width: dimensions.width20
+    width: dimensions.width20,
   },
   inputView: {
     height: dimensions.height40,
@@ -36,17 +36,17 @@ export const styles = StyleSheet.create({
     justifyContent: AlignTypes.CENTER,
     paddingVertical: dimensions.spacingStackXl13,
     paddingLeft: dimensions.spacingInlineXxs12,
-    paddingRight: dimensions.spacingStackSm17
+    paddingRight: dimensions.spacingStackSm17,
   },
   input: {
     fontFamily: fontsFamily.montserrat.medium500,
-    fontSize: fontsSize.sm14,
-    color: colors.light.neutralColor3
+    fontSize: fontsSize.xs12,
+    color: colors.light.neutralColor3,
   },
   currencyFormatted: {
     width: dimensions.widthFull,
     marginTop: dimensions.spacingInlineQuarck5,
-    alignItems: 'flex-end',
+    alignItems: AlignTypes.FLEX_END,
     paddingRight: dimensions.spacingInlineXs14,
-  }
-}) 
+  },
+});

@@ -11,6 +11,7 @@ const border = {
   },
   width: {
     hairline: 0.5,
+    nano: 1,
     thick: 2,
   }
 }

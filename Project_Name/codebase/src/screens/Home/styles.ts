@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { colors, dimensions } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { colors, dimensions } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.light.neutralColor14,
   },
   header: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.SPACE_BETWEEN,
   },
   logo: {
@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
   buttons: {
     width: dimensions.width90,
     justifyContent: AlignTypes.SPACE_BETWEEN,
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
   },
   title: {
     marginVertical: dimensions.spacingStackGiant25,

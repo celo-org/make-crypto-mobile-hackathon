@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { BorderlessButton, BorderlessButtonProps } from 'react-native-gesture-handler';
-import { Text } from '..';
-import { AlignTypes } from '../../utils/enum';
+import { Text } from '@nft/components';
+import { AlignTypes } from '@nft/utils/enum';
 
 interface ILineButtonProps extends BorderlessButtonProps {
   label: string;

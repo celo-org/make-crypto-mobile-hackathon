@@ -1,10 +1,10 @@
 import { StyleSheet } from 'react-native';
-import { border, colors, dimensions } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { border, colors, dimensions } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
   },
   icon: {
     justifyContent: AlignTypes.CENTER,
@@ -13,8 +13,8 @@ export const styles = StyleSheet.create({
     borderColor: colors.light.neutralColor5,
     borderWidth: border.width.hairline,
     backgroundColor: colors.light.neutralColor12,
-    width: 40,
-    height: 40,
+    width: dimensions.width40,
+    height: dimensions.height40,
   },
   texts: {
     marginLeft: dimensions.spacingStackXxxs6,

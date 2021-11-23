@@ -34,6 +34,7 @@ const dimensions = {
   width80: '80%',
   width30: 30,
   width40: 40,
+  width44: 44,
   width60: 60,
   width90: 90,
   width100: 100,

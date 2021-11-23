@@ -6,8 +6,8 @@ import HeartSvg from '../../../assets/heart.svg';
 import HeartFilledSvg from '../../../assets/heart-filled.svg';
 
 import { styles } from './styles';
-import { Text } from '..';
-import { AlignTypes } from '../../utils/enum';
+import { Text } from '@nft/components';
+import { AlignTypes } from '@nft/utils/enum';
 import { View } from 'react-native';
 
 interface ILikeProps extends BorderlessButtonProps {

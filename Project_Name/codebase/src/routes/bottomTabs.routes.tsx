@@ -4,12 +4,12 @@ import { Platform, StyleSheet, View, Text } from 'react-native';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
-import Home from '../screens/Home';
-import Favorites from '../screens/Favorites';
-import Create from '../screens/CreateNFT';
-import Wallet from '../screens/Wallet';
-import Profile from '../screens/Profile';
-import { colors, dimensions, fontsFamily, fontsSize } from '../styles';
+import Home from '@nft/screens/Home';
+import Favorites from '@nft/screens/Favorites';
+import Create from '@nft/screens/CreateNFT';
+import Wallet from '@nft/screens/Wallet';
+import Profile from '@nft/screens/Profile';
+import { colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
 
 import HomeSvg from '../../assets/home.svg';
 import HomeFocusedSvg from '../../assets/home-focused.svg';
@@ -21,7 +21,7 @@ import ProfileSvg from '../../assets/profile.svg';
 import ProfileFocusedSvg from '../../assets/profile-focused.svg';
 import WalletSvg from '../../assets/wallet.svg';
 import WalletFocusedSvg from '../../assets/wallet-focused.svg';
-import { AlignTypes } from '../utils/enum';
+import { AlignTypes } from '@nft/utils/enum';
 
 const bottomTabsRoutes = (): JSX.Element => {
   return (
