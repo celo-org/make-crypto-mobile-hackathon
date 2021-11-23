@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>639344923738-4elcf5tdkkn9t2q4sgaje4smr890vil6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.639344923738-4elcf5tdkkn9t2q4sgaje4smr890vil6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCxQ3pRoubiUv034TFXi5Kd9P4n8ox16wk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>639344923738</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.runeapp.exchangetool</string>
+	<key>PROJECT_ID</key>
+	<string>binance-tool-8a330</string>
+	<key>STORAGE_BUCKET</key>
+	<string>binance-tool-8a330.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:639344923738:ios:7014d9da15fab9f689f463</string>
+</dict>
+</plist>
