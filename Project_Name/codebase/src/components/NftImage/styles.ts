@@ -8,7 +8,6 @@ export const styles = StyleSheet.create({
     width: dimensions.width43,
     height: dimensions.heigth160,
     borderRadius: dimensions.spacingStackXs8,
-    marginTop: dimensions.spacingInlineSm16,
-    padding: dimensions.spacingStackXs8,
+    marginBottom: dimensions.spacingInlineSm16,
   },
 }) 
