@@ -4,6 +4,10 @@ import fontSizes from '@nft/styles/fontSizes';
 import { AlignTypes } from '@nft/utils/enum';
 
 export const styles = StyleSheet.create({
+  overlay: { 
+    paddingBottom: dimensions.padding75, 
+    backgroundColor: colors.light.neutralColor14 
+  },
   container: {
     paddingTop: dimensions.spacingStackXxl16,
   },

@@ -174,7 +174,7 @@ const Profile = (): JSX.Element => {
 
   return (
     <TouchableOpacity onPress={handleDismissKeyboard} activeOpacity={1.0}>
-      <View style={{ paddingBottom: '75%', backgroundColor: colors.light.neutralColor14 }}>
+      <View style={styles.overlay}>
         <SafeAreaView style={styles.container}>
           <View style={styles.content}>
             <View style={styles.header}>
