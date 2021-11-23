@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import { SvgProps } from 'react-native-svg';
 
-import TextComponent from '../Text';
+import TextComponent from '@nft/components/Text';
 
 import { styles } from './styles';
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
-import { Text } from '..';
-import { colors } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { Text } from '@nft/components';
+import { colors } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 import { styles } from './styles';
 
 interface FilterButtonProps extends RectButtonProps {

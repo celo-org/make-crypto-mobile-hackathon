@@ -7,9 +7,8 @@ import {
   ImageBackground,
   ImageBackgroundProps,
 } from 'react-native';
-import { Text } from '..';
-import { colors, fontsFamily } from '../../styles';
-import fontSizes from '../../styles/fontSizes';
+import { Text } from '@nft/components';
+import { colors, fontsFamily, fontsSize } from '@nft/styles';
 import style from './styles';
 
 interface IAuthorProps {
@@ -31,13 +30,13 @@ const Author = ({ authorName, authorImage }: IAuthorProps): JSX.Element => {
         <Text
           textDescription={'Author'}
           color={colors.light.neutralColor5}
-          fontsSize={fontSizes.xxs10}
+          fontsSize={fontsSize.xxs10}
           fontFamily={fontsFamily.montserrat.medium500}
         />
         <Text
           textDescription={authorName}
           color={colors.light.neutralColor5}
-          fontsSize={fontSizes.xs12}
+          fontsSize={fontsSize.xs12}
           fontFamily={fontsFamily.montserrat.medium500}
         />
       </View>

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { border, colors, dimensions } from '../../styles';
-import { AlignTypes } from '../../utils/enum';
+import { border, colors, dimensions } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 const styles = StyleSheet.create({
   card: {
@@ -14,37 +14,37 @@ const styles = StyleSheet.create({
     elevation: 24,
     backgroundColor: colors.light.neutralColor12,
     borderRadius: border.radius.lg10,
-    width: '100%',
+    width: dimensions.widthFull,
   },
   NftImage: {
     borderTopLeftRadius: border.radius.lg10,
     borderTopRightRadius: border.radius.lg10,
-    width: '100%',
+    width: dimensions.widthFull,
     height: 260,
     overflow: 'hidden',
   },
   cardHeader: {
     alignItems: AlignTypes.CENTER,
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     marginBottom: dimensions.spacingInlineQuarck5,
     justifyContent: AlignTypes.SPACE_BETWEEN,
   },
   cardContent: {
     paddingVertical: dimensions.spacingStackXs8,
     paddingHorizontal: dimensions.spacingStackLg10,
-    height: 90,
+    height: dimensions.height90,
   },
   cardFooter: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.SPACE_BETWEEN,
   },
   cardDetails: {
-    flexDirection: 'row',
-    marginRight: 20,
+    flexDirection: AlignTypes.ROW,
+    marginRight: dimensions.spacingStackXBig20,
   },
   tagContainer: {
     marginRight: dimensions.spacingInlineQuarck5,
-    flexDirection: 'row',
+    flexDirection: AlignTypes.ROW,
   },
 });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextProps } from 'react-native';
 import { Text, StyleSheet } from 'react-native';
-import { AlignTypes } from '../../utils/enum';
+import { AlignTypes } from '@nft/utils/enum';
 
 interface ITextProps extends TextProps {
   textDescription: string | number;

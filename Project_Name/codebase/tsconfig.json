@@ -1,6 +1,15 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@nft/*": ["./src/*"],
+      "@nft/components/*": ["./src/components/*"],
+      "@nft/services/*": ["./src/services/*"],
+      "@nft/styles/*": ["./src/styles/*"],
+      "@nft/screens/*": ["./src/screens/*"],
+      "@nft/utils/*": ["./src/utils/*"],
+    }
+  },
 }

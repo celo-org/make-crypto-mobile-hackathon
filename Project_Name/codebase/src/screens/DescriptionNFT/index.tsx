@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Image, SafeAreaView, View } from 'react-native';
-import { Author, BidCard, LargeButton, Likes, SquareButton, Text } from '../../components';
 import { ScrollView } from 'react-native-gesture-handler';
-import { colors, fontsFamily } from '../../styles';
-import fontSizes from '../../styles/fontSizes';
 
-import Ether from '../../../assets/ether.svg';
-import EtherBlack from '../../../assets/ether-black.svg';
-import EtherBlackSmall from '../../../assets/ether-black-small.svg';
-import Back from '../../../assets/left-arrow.svg';
-import { AlignTypes } from '../../utils/enum';
+import { Author, BidCard, LargeButton, Likes, SquareButton, Text } from '@nft/components';
+import { colors, fontsFamily, fontsSize } from '@nft/styles';
+import PlaceABid from '@nft/screens/ModalPlaceABid';
+import ConnectWallet from '@nft/screens/ConnectWallet';
+
+import Ether from '@nft/assets/ether.svg';
+import EtherBlack from '@nft/assets/ether-black.svg';
+import EtherBlackSmall from '@nft/assets/ether-black-small.svg';
+import Back from '@nft/assets/left-arrow.svg';
+
+import { AlignTypes } from '@nft/utils/enum';
 import styles from './styles';
 interface IDescriptionProps {
   image: {
@@ -35,8 +38,26 @@ const DescriptionNft = ({
   likes,
   isLiked,
 }: IDescriptionProps): JSX.Element => {
+  const [isWalletModalVisible, setIsWalletModalVisible] = useState(false);
+  const [isPlaceABidModalVisible, setIsPlaceABidModalVisible] = useState(false);
+  const [isWalletConnected, setIsWalletConnected] = useState(true);
+
+  const handleWalletModal = () => setIsWalletModalVisible((prevState) => !prevState);
+  const handlePlaceABidModal = () => setIsPlaceABidModalVisible((prevState) => !prevState);
+
+  const renderModal = isWalletConnected ? handlePlaceABidModal : handleWalletModal;
+
   return (
     <SafeAreaView style={styles.container}>
+      <ConnectWallet
+        isModalVisible={isWalletModalVisible}
+        setIsModalVisible={setIsWalletModalVisible}
+      />
+      <PlaceABid
+        isModalVisible={isPlaceABidModalVisible}
+        setIsModalVisible={handlePlaceABidModal}
+        nftID="123123"
+      />
       <View style={styles.head}>
         <SquareButton iconChildren={Back} onPress={() => {}} />
       </View>
@@ -44,7 +65,7 @@ const DescriptionNft = ({
         <View>
           <Image
             source={{
-              uri: 'https://scontent.fcgh17-1.fna.fbcdn.net/v/t39.30808-6/252966841_6520614171347362_6887396726976868076_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=tQxCJ0BDSsYAX-D1p6v&_nc_ht=scontent.fcgh17-1.fna&oh=c6cef59b6f15db0d804f30fe3052e48c&oe=619923A1',
+              uri: image.url,
             }}
             style={styles.image}
           />
@@ -52,26 +73,27 @@ const DescriptionNft = ({
         <View style={styles.detailsContainer}>
           <View style={styles.detailsHeader}>
             <Text
-              textDescription={'The State of Art'}
+              textDescription={image.title}
               color={colors.light.neutralColor3}
               fontFamily={fontsFamily.montserrat.semiBold600}
-              fontsSize={fontSizes.lg18}
+              fontsSize={fontsSize.lg18}
             />
             <Likes
-              numberOfLikes={50}
+              numberOfLikes={likes}
               likeFunction={() => {}}
               textAlign={AlignTypes.CENTER}
               textColor={colors.light.neutralColor5}
               textFontFamily={fontsFamily.montserrat.regular400}
-              textFontSize={fontSizes.xs12}
+              textFontSize={fontsSize.xs12}
+              isLiked={isLiked}
             />
           </View>
           <View style={styles.author}>
             <Author
               authorImage={{
-                uri: 'https://scontent.fcgh17-1.fna.fbcdn.net/v/t39.30808-6/241724541_6206440869431362_8806289142628707158_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=QCMR_2imDLIAX8EOUGt&_nc_ht=scontent.fcgh17-1.fna&oh=37fa9033ccc5cd28089a31e214c60d62&oe=619933C1',
+                uri: author.image,
               }}
-              authorName={'Marcelo Barros'}
+              authorName={author.name}
             />
           </View>
           <View style={styles.description}>
@@ -81,7 +103,7 @@ const DescriptionNft = ({
               }
               color={colors.light.neutralColor3}
               fontFamily={fontsFamily.montserrat.regular400}
-              fontsSize={fontSizes.sm14}
+              fontsSize={fontsSize.sm14}
             />
           </View>
           <View style={styles.detailsFooter}>
@@ -100,8 +122,9 @@ const DescriptionNft = ({
             textAlign={AlignTypes.CENTER}
             textColor={colors.light.neutralColor12}
             textFontFamily={fontsFamily.montserrat.semiBold600}
-            textFontSize={fontSizes.md16}
+            textFontSize={fontsSize.md16}
             iconChildren={Ether}
+            onPress={renderModal}
           />
         </View>
       </ScrollView>

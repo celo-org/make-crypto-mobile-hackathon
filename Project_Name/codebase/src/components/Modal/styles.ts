@@ -1,21 +1,29 @@
 import { StyleSheet } from 'react-native';
-import { AlignTypes } from '../../utils/enum';
+import { border, colors, dimensions } from '@nft/styles';
+import { AlignTypes } from '@nft/utils/enum';
 
 const styles = StyleSheet.create({
-  modalView: {
-    margin: 20,
-    backgroundColor: 'red',
-    borderRadius: 20,
-    padding: 35,
+  overlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    padding: dimensions.spacingInlineSm16,
     alignItems: AlignTypes.CENTER,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
+    justifyContent: AlignTypes.CENTER,
+  },
+  modalView: {
+    backgroundColor: colors.light.neutralColor12,
+    borderRadius: border.radius.sm4,
+    width: dimensions.widthFull,
+    paddingBottom: dimensions.width44,
+    paddingTop: dimensions.spacingStackGiant25,
+    opacity: 1,
+  },
+  closeContainer: {
+    width: dimensions.widthFull,
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    paddingRight: dimensions.spacingInlineXl30,
+    paddingBottom: dimensions.spacingStackXBig20,
   },
 });
 

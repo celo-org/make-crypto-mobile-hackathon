@@ -4,4 +4,8 @@ const api = axios.create({
   baseURL: 'https://best-nft-server.herokuapp.com'
 });
 
-export default api;
+const apiCoingeckoEthereumValue = axios.create({
+  baseURL: 'https://api.coingecko.com/api/v3/coins/ethereum'
+})
+
+export {api, apiCoingeckoEthereumValue};

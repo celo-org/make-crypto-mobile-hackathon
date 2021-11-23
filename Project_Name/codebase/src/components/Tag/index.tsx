@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Text } from '..';
-import { AlignTypes } from '../../utils/enum';
+import { Text } from '@nft/components';
+import { AlignTypes } from '@nft/utils/enum';
 import styles from './styles';
 
 interface ITagProps {

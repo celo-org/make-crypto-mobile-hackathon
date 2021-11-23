@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
-import { Text } from '..';
+import { Text } from '@nft/components';
 import { SvgProps } from 'react-native-svg';
-import { AlignTypes } from '../../utils/enum';
+import { AlignTypes } from '@nft/utils/enum';
 import styles from './styles';
 
 interface ILargeButtonProps extends RectButtonProps {
