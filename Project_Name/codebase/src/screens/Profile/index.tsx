@@ -198,13 +198,7 @@ const Profile = (): JSX.Element => {
                     style={{ width: '100%' }}
                     activeOpacity={1}
                     onPress={handleDismissKeyboard}>
-                    <View
-                      style={{
-                        paddingHorizontal: 16,
-                        justifyContent: AlignTypes.CENTER,
-                        alignItems: AlignTypes.CENTER,
-                        flex: 1,
-                      }}>
+                    <View style={styles.contentView}>
                       <View style={styles.profileInfo}>
                         <View style={styles.avatar}>
                           <Image
