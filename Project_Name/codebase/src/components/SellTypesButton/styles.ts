@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
     marginRight: dimensions.spacingStackXs8,
     paddingHorizontal: dimensions.spacingStackSm17,
     borderRadius: border.radius.lg10,
-    width: dimensions.height110,
   },
   text: {
     marginRight: dimensions.spacingStackSmall5,

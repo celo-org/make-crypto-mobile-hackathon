@@ -9,6 +9,8 @@ export { default as LargeButton } from './LargeButton';
 export { default as Modal } from './Modal';
 export { default as Nft } from './Nft';
 export { default as SquareButton } from './SquareButton';
+export { default as ProfileButton } from './ProfileButton';
+export { default as NftImage } from './NftImage';
 export { default as Tag } from './Tag';
 export { default as Text } from './Text';
 export { default as PillButton } from './PillButton';

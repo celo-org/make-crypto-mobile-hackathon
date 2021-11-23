@@ -7,7 +7,7 @@ import { AlignTypes } from '@nft/utils/enum';
 interface IListProps {
   filterKey: string;
   title: string;
-  icon: JSX.Element;
+  icon: typeof React.Component;
 }
 
 interface ISellTypesListProps {
