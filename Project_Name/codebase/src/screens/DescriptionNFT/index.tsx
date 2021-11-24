@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Image, SafeAreaView, View } from 'react-native';
+import { ActivityIndicator, Image, SafeAreaView, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { useRoute } from '@react-navigation/core';
@@ -49,11 +49,15 @@ const DescriptionNft = (): JSX.Element => {
   useEffect(() => {
     const fetchNftDescription = async () => {
       try {
+        console.log('entrou aqui de novo');
         setIsLoading(true);
         const response = await api.get(`/nft/details/${params}/${user_id}`);
         setNftDescriptionResponse(response.data);
+        setIsLoading(false);
       } catch (error) {
+        console.log('entrou no erro');
         console.log(error);
+      } finally {
       }
     };
     fetchNftDescription();
@@ -65,84 +69,91 @@ const DescriptionNft = (): JSX.Element => {
   console.log(nftDescriptionResponse);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ConnectWallet />
-      <PlaceABid />
-      <View style={styles.head}>
-        <SquareButton iconChildren={Back} onPress={() => navigation.goBack()} />
-      </View>
-      <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
-        <View>
-          <Image
-            source={{
-              uri: nftDescriptionResponse.nft.image,
-            }}
-            style={styles.image}
-          />
-        </View>
-        <View style={styles.detailsContainer}>
-          <View style={styles.detailsHeader}>
-            <Text
-              textDescription={nftDescriptionResponse.nft.name}
-              color={colors.light.neutralColor3}
-              fontFamily={fontsFamily.montserrat.semiBold600}
-              fontsSize={fontsSize.lg18}
-            />
+    <>
+      {isLoading ? (
+        <ActivityIndicator />
+      ) : (
+        <SafeAreaView style={styles.container}>
+          <ConnectWallet />
+          <PlaceABid />
 
-            {/* TODO inserir o componente de tag */}
-            {/* <Tag /> */}
+          <View style={styles.head}>
+            <SquareButton iconChildren={Back} onPress={() => navigation.goBack()} />
+          </View>
+          <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
+            <View>
+              <Image
+                source={{
+                  uri: nftDescriptionResponse.nft.image,
+                }}
+                style={styles.image}
+              />
+            </View>
+            <View style={styles.detailsContainer}>
+              <View style={styles.detailsHeader}>
+                <Text
+                  textDescription={nftDescriptionResponse.nft.name}
+                  color={colors.light.neutralColor3}
+                  fontFamily={fontsFamily.montserrat.semiBold600}
+                  fontsSize={fontsSize.lg18}
+                />
 
-            {/* TODO implementar a função de like e deslike */}
-            <Likes
-              numberOfLikes={nftDescriptionResponse.nft.favorite_count}
-              likeFunction={() => {}}
-              textAlign={AlignTypes.CENTER}
-              textColor={colors.light.neutralColor5}
-              textFontFamily={fontsFamily.montserrat.regular400}
-              textFontSize={fontsSize.xs12}
-              isLiked={nftDescriptionResponse.nft.favorite}
-            />
-          </View>
-          <View style={styles.author}>
-            <Author
-              authorImage={{
-                uri: 'Ilda',
-              }}
-              authorName={'Ilda'}
-            />
-          </View>
-          <View style={styles.description}>
-            <Text
-              textDescription={nftDescriptionResponse.nft.description}
-              color={colors.light.neutralColor3}
-              fontFamily={fontsFamily.montserrat.regular400}
-              fontsSize={fontsSize.sm14}
-            />
-          </View>
-          <View style={styles.detailsFooter}>
-            <BidCard
-              currency={'ETH'}
-              smallIconChildren={EtherBlackSmall}
-              largeIconChildren={EtherBlack}
-              value={nftDescriptionResponse.nft.last_bid}
-            />
-          </View>
-        </View>
-        <View style={styles.buttonContainer}>
-          <LargeButton
-            backgroundColor={colors.light.neutralColor5}
-            label={'Place a bid'}
-            textAlign={AlignTypes.CENTER}
-            textColor={colors.light.neutralColor12}
-            textFontFamily={fontsFamily.montserrat.semiBold600}
-            textFontSize={fontsSize.md16}
-            iconChildren={Ether}
-            // TODO implementar a chamada do modal de place a bid ou connect wallet
-            onPress={() => {}}
-          />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+                {/* TODO inserir o componente de tag */}
+                {/* <Tag /> */}
+
+                {/* TODO implementar a função de like e deslike */}
+                <Likes
+                  numberOfLikes={nftDescriptionResponse.nft.favorite_count}
+                  likeFunction={() => {}}
+                  textAlign={AlignTypes.CENTER}
+                  textColor={colors.light.neutralColor5}
+                  textFontFamily={fontsFamily.montserrat.regular400}
+                  textFontSize={fontsSize.xs12}
+                  isLiked={nftDescriptionResponse.nft.favorite}
+                />
+              </View>
+              <View style={styles.author}>
+                <Author
+                  authorImage={{
+                    uri: 'Ilda',
+                  }}
+                  authorName={'Ilda'}
+                />
+              </View>
+              <View style={styles.description}>
+                <Text
+                  textDescription={nftDescriptionResponse.nft.description}
+                  color={colors.light.neutralColor3}
+                  fontFamily={fontsFamily.montserrat.regular400}
+                  fontsSize={fontsSize.sm14}
+                />
+              </View>
+              <View style={styles.detailsFooter}>
+                <BidCard
+                  currency={'ETH'}
+                  smallIconChildren={EtherBlackSmall}
+                  largeIconChildren={EtherBlack}
+                  value={nftDescriptionResponse.nft.last_bid}
+                />
+              </View>
+            </View>
+            <View style={styles.buttonContainer}>
+              <LargeButton
+                backgroundColor={colors.light.neutralColor5}
+                label={'Place a bid'}
+                textAlign={AlignTypes.CENTER}
+                textColor={colors.light.neutralColor12}
+                textFontFamily={fontsFamily.montserrat.semiBold600}
+                textFontSize={fontsSize.md16}
+                iconChildren={Ether}
+                // TODO implementar a chamada do modal de place a bid ou connect wallet
+                onPress={() => {}}
+              />
+            </View>
+          </ScrollView>
+        </SafeAreaView>
+      )}
+    </>
   );
 };
 
