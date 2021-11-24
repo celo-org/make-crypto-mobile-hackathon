@@ -22,6 +22,7 @@ import ProfileFocusedSvg from '../../assets/profile-focused.svg';
 import WalletSvg from '../../assets/wallet.svg';
 import WalletFocusedSvg from '../../assets/wallet-focused.svg';
 import { AlignTypes } from '@nft/utils/enum';
+import StackTabs from './stackTabs.routes';
 
 const bottomTabsRoutes = (): JSX.Element => {
   return (
@@ -43,7 +44,7 @@ const bottomTabsRoutes = (): JSX.Element => {
         tabBarActiveTintColor: colors.light.neutralColor2,
       }}>
       <Screen
-        component={Home}
+        component={StackTabs}
         name={'Home'}
         options={{
           headerShown: false,
