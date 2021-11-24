@@ -7,3 +7,7 @@ export enum AlignTypes {
   FLEX_END = 'flex-end',
   ROW = 'row'
 }
+
+export enum RoutesNames {
+  DESCRIPTION_NFT = 'DESCRIPTION_NFT'
+}
