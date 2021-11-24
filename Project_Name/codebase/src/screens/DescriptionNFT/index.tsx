@@ -84,7 +84,7 @@ const DescriptionNft = (): JSX.Element => {
             <View>
               <Image
                 source={{
-                  uri: nftDescriptionResponse.nft.image,
+                  uri: nftDescriptionResponse.nft?.image,
                 }}
                 style={styles.image}
               />
@@ -92,7 +92,7 @@ const DescriptionNft = (): JSX.Element => {
             <View style={styles.detailsContainer}>
               <View style={styles.detailsHeader}>
                 <Text
-                  textDescription={nftDescriptionResponse.nft.name}
+                  textDescription={nftDescriptionResponse.nft?.name}
                   color={colors.light.neutralColor3}
                   fontFamily={fontsFamily.montserrat.semiBold600}
                   fontsSize={fontsSize.lg18}
@@ -103,13 +103,13 @@ const DescriptionNft = (): JSX.Element => {
 
                 {/* TODO implementar a função de like e deslike */}
                 <Likes
-                  numberOfLikes={nftDescriptionResponse.nft.favorite_count}
+                  numberOfLikes={nftDescriptionResponse.nft?.favorite_count}
                   likeFunction={() => {}}
                   textAlign={AlignTypes.CENTER}
                   textColor={colors.light.neutralColor5}
                   textFontFamily={fontsFamily.montserrat.regular400}
                   textFontSize={fontsSize.xs12}
-                  isLiked={nftDescriptionResponse.nft.favorite}
+                  isLiked={nftDescriptionResponse.nft?.favorite}
                 />
               </View>
               <View style={styles.author}>
@@ -122,7 +122,7 @@ const DescriptionNft = (): JSX.Element => {
               </View>
               <View style={styles.description}>
                 <Text
-                  textDescription={nftDescriptionResponse.nft.description}
+                  textDescription={nftDescriptionResponse.nft?.description}
                   color={colors.light.neutralColor3}
                   fontFamily={fontsFamily.montserrat.regular400}
                   fontsSize={fontsSize.sm14}
@@ -133,7 +133,7 @@ const DescriptionNft = (): JSX.Element => {
                   currency={'ETH'}
                   smallIconChildren={EtherBlackSmall}
                   largeIconChildren={EtherBlack}
-                  value={nftDescriptionResponse.nft.last_bid}
+                  value={nftDescriptionResponse.nft?.last_bid}
                 />
               </View>
             </View>
