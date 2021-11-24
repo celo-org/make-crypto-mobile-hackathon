@@ -3,7 +3,7 @@ import { Keyboard, View } from 'react-native';
 
 import { InputBid, LargeButton, Modal, Text } from '@nft/components';
 import { colors, fontsFamily, fontsSize } from '@nft/styles';
-import EtherBlack from '@nft/assets/ether-black-small.svg';
+import EtherBlack from '../../../assets/ether-black-small.svg';
 import { AlignTypes } from '@nft/utils/enum';
 import { apiCoingeckoEthereumValue } from '@nft/services/api';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
