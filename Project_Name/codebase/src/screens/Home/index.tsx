@@ -10,8 +10,10 @@ import MenuSvg from '../../../assets/menu.svg';
 import Magnifier from '../../../assets/magnifier.svg';
 
 import { colors, fontsFamily, fontsSize } from '@nft/styles';
-import { AlignTypes } from '@nft/utils/enum';
+import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 import { api } from '@nft/services/api';
+
+import { useNavigation } from '@react-navigation/native';
 
 import { styles } from './styles';
 
@@ -36,6 +38,8 @@ const Home = (): JSX.Element => {
   const [nfts, setNfts] = useState<INFTProps[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState('1');
+
+  const navigation = useNavigation();
 
   const categories = [
     { filterKey: 'trending', title: 'Trending' },
@@ -122,8 +126,8 @@ const Home = (): JSX.Element => {
                 toggleLike={() => {
                   handleLikeImage(item.id);
                 }}
-                pressImageFunction={() => {}}
-                value={item.value}
+                pressImageFunction={() => navigation.navigate(RoutesNames.DESCRIPTION_NFT, item.id)}
+                value={0.879}
               />
             )}
             showsVerticalScrollIndicator={false}
