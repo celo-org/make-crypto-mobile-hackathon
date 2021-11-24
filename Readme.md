@@ -43,10 +43,12 @@ Make Crypto Mobile Hackathon is a 4-week hackathon, focused on growing Mobile De
  2. Create project branch
  3. Make your changes within new branch!
 	 - Copy **Project_Name** folder & rename with your project name
+	 - Review [DevPost rules](https://github.com/celo-org/make-crypto-mobile-hackathon#hackathon-repo-process) to include requirements with your submission
 	 - Modify project details within your project folder **Readme.md**
 		 - Name
 		 - Description
 		 - Team members & roles
+		 - Hackathon track
  4. Add, commit, and push the changes
 	 - Add the files you've changed and commit them with a descriptive message.
  5. Submit your pull request
