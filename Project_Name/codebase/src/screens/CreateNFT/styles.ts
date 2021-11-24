@@ -106,6 +106,12 @@ const styles = StyleSheet.create({
   upArrowIcon: {
     marginRight: dimensions.spacingStackXs8,
   },
+  imageSelectedContainer: {
+    marginBottom: dimensions.spacingInlineXs14,
+  },
+  imageSelectedText: {
+    marginBottom: dimensions.spacingInlineXs14,
+  },
 });
 
 export default styles;

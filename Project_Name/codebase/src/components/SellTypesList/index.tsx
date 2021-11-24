@@ -1,8 +1,9 @@
 import React from 'react';
-import { FlatList, View } from 'react-native';
+import { FlatList, SafeAreaView } from 'react-native';
 import { SellTypesButton } from '@nft/components';
 import { fontsFamily, fontsSize } from '@nft/styles';
 import { AlignTypes } from '@nft/utils/enum';
+import styles from './styles';
 
 interface IListProps {
   filterKey: string;
@@ -18,23 +19,19 @@ interface ISellTypesListProps {
 
 const SellTypesList = ({ data, selectedSellType, setSellType }: ISellTypesListProps) => {
   return (
-    <FlatList
-      horizontal
-      scrollEnabled={data.length > 3 ? true : false}
-      data={data}
-      keyExtractor={(item) => item.filterKey}
-      renderItem={({ item }) => (
+    <SafeAreaView style={styles.list}>
+      {data.map((item) => (
         <SellTypesButton
           Icon={item.icon}
           fontFamily={fontsFamily.montserrat.medium500}
-          fontsSize={20}
+          fontsSize={fontsSize.xl20}
           isActive={item.filterKey === selectedSellType}
           textAlign={AlignTypes.CENTER}
           title={item.title}
           onPress={() => setSellType(item.filterKey)}
         />
-      )}
-    />
+      ))}
+    </SafeAreaView>
   );
 };
 
