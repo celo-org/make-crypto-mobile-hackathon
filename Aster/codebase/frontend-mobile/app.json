@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Celo DappKit Truffle Box",
+    "slug": "celo-dappkit",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/white-wallet-rings.png",
+    "scheme": "celodappkit",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "description": "Connect with other Celo devs on our discord: https://discord.gg/6yWMkgM",
+    "githubUrl": "https://github.com/critesjosh/celo-dappkit"
+  }
+}
