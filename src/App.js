@@ -126,25 +126,43 @@ class App extends React.Component {
 
   render() {
 
-    let button, account;
+    let conectionDependantContent, account;
     
     const amountStr = this.getAmountFromQueryParams();
     const amn = parseFloat(amountStr);
     const aproxPEN = amn * 4;
 
+    if(this.state.kit !== null){
+      account = this.state.kit.defaultAccount
+    }
+
+
     if(this.state.provider !== null){
-      button = (<div>
-                  <button onClick={() => this.sendcUSD(amountStr)}>Reintentar el envío de {amountStr} cUSD (aprox. {aproxPEN.toFixed(2)} soles)</button>
-                </div>)
+      conectionDependantContent = (
+        <>
+          <div>
+            <button onClick={() => this.sendcUSD(amountStr)}>Reintentar el envío de {amountStr} cUSD (aprox. {aproxPEN.toFixed(2)} soles)</button>
+          </div>
+          <p>
+          <span style={{
+            fontSize: '14px',
+          }}>🟢 Billetera conectada</span>
+          <br/>
+          <span style={{
+            fontSize: '12px',
+          }}>{account}</span>
+          </p>
+          
+
+          <button onClick={() => this.disconnect()}>Desconectar</button>
+        </>
+      )
     } else {
-      button = (<div>
+      conectionDependantContent = (<div>
                   <button onClick={() => this.connect()}>Conectar Billetera</button>
                 </div>)
     }
 
-    if(this.state.kit !== null){
-      account = this.state.kit.defaultAccount
-    }
 
     return(
       <div className="App">
@@ -162,19 +180,7 @@ class App extends React.Component {
                 this.state.trLoading ? 
                   "Cargando... ✌️" : 
                   <>
-                    {button}
-                    <p>
-                    <span style={{
-                      fontSize: '14px',
-                    }}>🟢 Billetera conectada</span>
-                    <br/>
-                    <span style={{
-                      fontSize: '12px',
-                    }}>{account}</span>
-                    </p>
-                    
-
-                    <button onClick={() => this.disconnect()}>Desconectar</button>
+                    {conectionDependantContent}
                     <br/>
                     {/* <button onClick={() => this.openTuBoleto(amountStr)}>Abrir TuBoleto</button>
                     <br/> */}
@@ -185,7 +191,7 @@ class App extends React.Component {
 
           <p style={{
             fontSize: '8px',
-          }}>TuBoleto - Celo v0.0.16</p>
+          }}>TuBoleto - Celo connector v0.0.17</p>
         </header>
       </div>
     )
