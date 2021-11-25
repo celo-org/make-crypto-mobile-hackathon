@@ -65,6 +65,11 @@ class App extends React.Component {
   }
 
   sendcUSD = async (amountStr) => {
+    if (this.state.trLoading) {
+      console.log("There is already a transaction in progress");
+      return;
+    }
+
     this.setState({
       trLoading: true,
     });
@@ -88,7 +93,13 @@ class App extends React.Component {
   
       this.openTuBoleto(amountStr);
     } catch (e) {
-      console.error(e);
+      if (e.message.indexOf("execution reverted: transfer value exceeded balance of sender") !== -1) {
+        // not enough balance
+        alert("Lo siento, no tienes suficientes Celo Dólares 😢");
+      } else {
+        console.log(e);
+        console.error(e);
+      }
     }
 
     this.setState({
@@ -152,11 +163,21 @@ class App extends React.Component {
                   "Cargando... ✌️" : 
                   <>
                     {button}
-                    <p>{account}</p>
+                    <p>
+                    <span style={{
+                      fontSize: '14px',
+                    }}>🟢 Billetera conectada</span>
+                    <br/>
+                    <span style={{
+                      fontSize: '12px',
+                    }}>{account}</span>
+                    </p>
+                    
+
                     <button onClick={() => this.disconnect()}>Desconectar</button>
                     <br/>
-                    <button onClick={() => this.openTuBoleto(amountStr)}>Abrir TuBoleto</button>
-                    <br/>
+                    {/* <button onClick={() => this.openTuBoleto(amountStr)}>Abrir TuBoleto</button>
+                    <br/> */}
                   </>
             )
           }
@@ -164,7 +185,7 @@ class App extends React.Component {
 
           <p style={{
             fontSize: '8px',
-          }}>TuBoleto - Celo v0.0.12</p>
+          }}>TuBoleto - Celo v0.0.15</p>
         </header>
       </div>
     )
