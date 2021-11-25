@@ -4,6 +4,11 @@ import Web3 from 'web3';
 import React from 'react';
 import { newKitFromWeb3 } from '@celo/contractkit';
 
+
+const sleep = function (ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 class App extends React.Component {
 
   componentDidMount() {
@@ -15,7 +20,8 @@ class App extends React.Component {
     this.state = {
       provider: null,
       kit: null,
-      someAddress: "0xc528f91cf9035878d92d7c043377eab2af9dc6a7",
+      someAddress: "0xca0bc7119a461d58fb4d498921248892677060fa", // J
+      // someAddress: "0xc528f91cf9035878d92d7c043377eab2af9dc6a7", // K
       trLoading: false,
     }
 
@@ -25,38 +31,48 @@ class App extends React.Component {
   }
 
   connect = async() => {
-    const provider = new WalletConnectProvider({
-      rpc: {
-        // 44787: "https://alfajores-forno.celo-testnet.org",
-        42220: "https://forno.celo.org", // from: https://docs.celo.org/getting-started/wallets/using-metamask-with-celo/manual-setup
-      },
-    });
+    try {
+      if (this.state.provider == null) {
+        const provider = new WalletConnectProvider({
+          rpc: {
+            // 44787: "https://alfajores-forno.celo-testnet.org",
+            42220: "https://forno.celo.org", // from: https://docs.celo.org/getting-started/wallets/using-metamask-with-celo/manual-setup
+          },
+        });
+    
+        await provider.enable()
+        const web3 = new Web3(provider);
+        let kit = newKitFromWeb3(web3)
+    
+        kit.defaultAccount = provider.accounts[0]
+    
+        provider.on("accountsChanged", (accounts) => {
+          console.log(accounts);
+        });
+    
+        this.setState({provider, kit});
+      }
 
-    await provider.enable()
-    const web3 = new Web3(provider);
-    let kit = newKitFromWeb3(web3)
+      const amountStr = this.getAmountFromQueryParams();
 
-    kit.defaultAccount = provider.accounts[0]
+      // TODO: maybe trigger sendcUSD automatically
+      this.sendcUSD(amountStr);
 
-    provider.on("accountsChanged", (accounts) => {
-      console.log(accounts);
-    });
-
-    this.setState({provider, kit});
-
-    // TODO: maybe trigger sendcUSD automatically
-    this.sendcUSD();
+    } catch (e) {
+      console.error(e);
+    }
+    
   }
 
-  sendcUSD = async () => {
+  sendcUSD = async (amountStr) => {
     this.setState({
       trLoading: true,
     });
 
+    await sleep(2); // millis
+
     try {
       let kit = this.state.kit;
-
-      const amountStr = this.getAmountFromQueryParams();
   
       let amount = kit.web3.utils.toWei(amountStr, 'ether');
   
@@ -93,6 +109,7 @@ class App extends React.Component {
   getAmountFromQueryParams = () => {
     let params = (new URL(document.location)).searchParams;
     let amount = params.get("amount") ?? "0.001";
+    // let ts = params.get("ts") ?? "0.001";
     return amount;
   }
 
@@ -106,7 +123,7 @@ class App extends React.Component {
 
     if(this.state.provider !== null){
       button = (<div>
-                  <button onClick={() => this.sendcUSD()}>Enviar {amountStr} cUSD (aprox. {aproxPEN.toFixed(2)} soles)</button>
+                  <button onClick={() => this.sendcUSD(amountStr)}>Enviar {amountStr} cUSD (aprox. {aproxPEN.toFixed(2)} soles)</button>
                 </div>)
     } else {
       button = (<div>
@@ -121,11 +138,18 @@ class App extends React.Component {
     return(
       <div className="App">
         <header className="App-header">
-          {/* <img src={} className="App-logo" alt="logo" /> */}
+          <img src={"https://static.wixstatic.com/media/b75418_3675dc741fce4c85a6264579958ee039~mv2.png/v1/fill/w_298,h_108,al_c,q_85,usm_0.66_1.00_0.01/logo-tu-boleto-pago-sin-contacto-peru_pn.webp"} 
+          style={{
+            width: 149,
+            height: 54,
+          }}
+          className="App-logo" alt="logo" />
+          <br/>
+          <br/>
           {
             (
                 this.state.trLoading ? 
-                  "Transfiriendo... ✌️" : 
+                  "Cargando... ✌️" : 
                   <>
                     {button}
                     <p>{account}</p>
@@ -140,7 +164,7 @@ class App extends React.Component {
 
           <p style={{
             fontSize: '8px',
-          }}>TuBoleto - Celo v0.0.6</p>
+          }}>TuBoleto - Celo v0.0.12</p>
         </header>
       </div>
     )
