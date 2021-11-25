@@ -112,6 +112,11 @@ const styles = StyleSheet.create({
   imageSelectedText: {
     marginBottom: dimensions.spacingInlineXs14,
   },
+  image: {
+    height: dimensions.height100,
+    width: dimensions.width100,
+    borderRadius: border.radius.md6,
+  },
 });
 
 export default styles;

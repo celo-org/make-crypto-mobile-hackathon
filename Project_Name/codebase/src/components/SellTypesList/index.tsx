@@ -22,6 +22,7 @@ const SellTypesList = ({ data, selectedSellType, setSellType }: ISellTypesListPr
     <SafeAreaView style={styles.list}>
       {data.map((item) => (
         <SellTypesButton
+          key={item.filterKey}
           Icon={item.icon}
           fontFamily={fontsFamily.montserrat.medium500}
           fontsSize={fontsSize.xl20}
