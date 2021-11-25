@@ -134,7 +134,7 @@ class App extends React.Component {
 
     if(this.state.provider !== null){
       button = (<div>
-                  <button onClick={() => this.sendcUSD(amountStr)}>Enviar {amountStr} cUSD (aprox. {aproxPEN.toFixed(2)} soles)</button>
+                  <button onClick={() => this.sendcUSD(amountStr)}>Reintentar el envío de {amountStr} cUSD (aprox. {aproxPEN.toFixed(2)} soles)</button>
                 </div>)
     } else {
       button = (<div>
@@ -185,12 +185,11 @@ class App extends React.Component {
 
           <p style={{
             fontSize: '8px',
-          }}>TuBoleto - Celo v0.0.15</p>
+          }}>TuBoleto - Celo v0.0.16</p>
         </header>
       </div>
     )
-  } 
-
+  }
 }
 
 export default App;
