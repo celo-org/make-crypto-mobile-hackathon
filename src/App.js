@@ -15,7 +15,8 @@ class App extends React.Component {
     this.state = {
       provider: null,
       kit: null,
-      someAddress: "0xc528f91cf9035878d92d7c043377eab2af9dc6a7"
+      someAddress: "0xc528f91cf9035878d92d7c043377eab2af9dc6a7",
+      trLoading: false,
     }
 
     this.connect = this.connect.bind(this)
@@ -43,27 +44,41 @@ class App extends React.Component {
 
     this.setState({provider, kit});
 
-    // TODO: maybe trigger automatically
+    // TODO: maybe trigger sendcUSD automatically
+    this.sendcUSD();
   }
 
   sendcUSD = async () => {
-    let kit = this.state.kit;
+    this.setState({
+      trLoading: true,
+    });
 
-    const amountStr = this.getAmountFromQueryParams();
+    try {
+      let kit = this.state.kit;
 
-    let amount = kit.web3.utils.toWei(amountStr, 'ether');
+      const amountStr = this.getAmountFromQueryParams();
+  
+      let amount = kit.web3.utils.toWei(amountStr, 'ether');
+  
+      const stabletoken = await kit.contracts.getStableToken();
+  
+      const tx = await stabletoken.transfer(this.state.someAddress, amount).send(
+        {feeCurrency: stabletoken.address}
+      );
+      const receipt = await tx.waitReceipt();
+  
+      console.log(receipt);
+      // alert(JSON.stringify(receipt));
+  
+      this.openTuBoleto(amountStr);
+    } catch (e) {
+      console.error(e);
+    }
 
-    const stabletoken = await kit.contracts.getStableToken();
+    this.setState({
+      trLoading: false,
+    });
 
-    const tx = await stabletoken.transfer(this.state.someAddress, amount).send(
-      {feeCurrency: stabletoken.address}
-    );
-    const receipt = await tx.waitReceipt();
-
-    console.log(receipt);
-    // alert(JSON.stringify(receipt));
-
-    this.openTuBoleto(amountStr);
   }
 
   openTuBoleto = (amountStr) => {
@@ -86,10 +101,12 @@ class App extends React.Component {
     let button, account;
     
     const amountStr = this.getAmountFromQueryParams();
+    const amn = parseFloat(amountStr);
+    const aproxPEN = amn * 4;
 
     if(this.state.provider !== null){
       button = (<div>
-                  <button onClick={() => this.sendcUSD()}>Enviar {amountStr} cUSD</button>
+                  <button onClick={() => this.sendcUSD()}>Enviar {amountStr} cUSD (aprox. {aproxPEN.toFixed(2)} soles)</button>
                 </div>)
     } else {
       button = (<div>
@@ -104,17 +121,26 @@ class App extends React.Component {
     return(
       <div className="App">
         <header className="App-header">
-          
           {/* <img src={} className="App-logo" alt="logo" /> */}
-          {button}
-          <p>{account}</p>
-          <button onClick={() => this.disconnect()}>Desconectar</button>
-          <br/>
-          <button onClick={() => this.openTuBoleto(amountStr)}>Abrir TuBoleto</button>
-          <br/>
+          {
+            (
+                this.state.trLoading ? 
+                  "Transfiriendo... ✌️" : 
+                  <>
+                    {button}
+                    <p>{account}</p>
+                    <button onClick={() => this.disconnect()}>Desconectar</button>
+                    <br/>
+                    <button onClick={() => this.openTuBoleto(amountStr)}>Abrir TuBoleto</button>
+                    <br/>
+                  </>
+            )
+          }
+          
+
           <p style={{
             fontSize: '8px',
-          }}>TuBoleto - Celo v0.0.2</p>
+          }}>TuBoleto - Celo v0.0.6</p>
         </header>
       </div>
     )
