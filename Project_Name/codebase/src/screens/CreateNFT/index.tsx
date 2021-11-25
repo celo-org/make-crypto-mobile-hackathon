@@ -62,10 +62,6 @@ const CreateNFT = (): JSX.Element => {
     })();
   }, []);
 
-  useEffect(() => {
-    console.log(imageSelected);
-  }, [imageSelected]);
-
   const handleSelectImage = async () => {
     try {
       setIsLoading(true);
