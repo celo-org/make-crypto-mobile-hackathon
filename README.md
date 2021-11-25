@@ -35,3 +35,13 @@ Once the app is connected, it should show a "Send cUSD" button. Click the button
 You can [read more about using Wallet Connect v1 here](https://docs.walletconnect.com/1.0/).
 
 This example was started with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html). Unnecessary files were deleted.
+
+
+Other commands:
+
+yarn add firebase
+firebase init hosting
+
+Deploy:
+
+yarn build && firebase deploy --only hosting && time /t

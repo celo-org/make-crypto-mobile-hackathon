@@ -1,4 +1,3 @@
-import logo from './celoLogo.svg';
 import './App.css';
 import WalletConnectProvider from '@walletconnect/web3-provider';
 import Web3 from 'web3';
@@ -7,12 +6,16 @@ import { newKitFromWeb3 } from '@celo/contractkit';
 
 class App extends React.Component {
 
+  componentDidMount() {
+    this.connect();
+  }
+
   constructor(props){
     super(props)
     this.state = {
       provider: null,
       kit: null,
-      someAddress: "0x5038ae19CDf0B623e6e8015249ecF58A1165D653"
+      someAddress: "0xc528f91cf9035878d92d7c043377eab2af9dc6a7"
     }
 
     this.connect = this.connect.bind(this)
@@ -23,8 +26,8 @@ class App extends React.Component {
   connect = async() => {
     const provider = new WalletConnectProvider({
       rpc: {
-        44787: "https://alfajores-forno.celo-testnet.org",
-        42220: "https://forno.celo.org",
+        // 44787: "https://alfajores-forno.celo-testnet.org",
+        42220: "https://forno.celo.org", // from: https://docs.celo.org/getting-started/wallets/using-metamask-with-celo/manual-setup
       },
     });
 
@@ -38,38 +41,59 @@ class App extends React.Component {
       console.log(accounts);
     });
 
-    this.setState({provider, kit})
+    this.setState({provider, kit});
+
+    // TODO: maybe trigger automatically
   }
 
   sendcUSD = async () => {
-    let kit = this.state.kit
+    let kit = this.state.kit;
 
-    let amount = kit.web3.utils.toWei('0.001', 'ether')
+    const amountStr = this.getAmountFromQueryParams();
 
-    const stabletoken = await kit.contracts.getStableToken()
+    let amount = kit.web3.utils.toWei(amountStr, 'ether');
 
-    const tx = await stabletoken.transfer(this.state.someAddress, amount).send({feeCurrency: stabletoken.address})
-    const receipt = await tx.waitReceipt()
+    const stabletoken = await kit.contracts.getStableToken();
 
-    console.log(receipt)
+    const tx = await stabletoken.transfer(this.state.someAddress, amount).send(
+      {feeCurrency: stabletoken.address}
+    );
+    const receipt = await tx.waitReceipt();
+
+    console.log(receipt);
+    // alert(JSON.stringify(receipt));
+
+    this.openTuBoleto(amountStr);
+  }
+
+  openTuBoleto = (amountStr) => {
+    document.location = "tuboleto://topup?amount=" + amountStr;
   }
 
   disconnect = async() => {
-    await this.state.provider.disconnect()
-    this.setState({provider: null, kit: null})
+    await this.state.provider.disconnect();
+    this.setState({provider: null, kit: null});
   }
 
-  render(){
+  getAmountFromQueryParams = () => {
+    let params = (new URL(document.location)).searchParams;
+    let amount = params.get("amount") ?? "0.001";
+    return amount;
+  }
 
-    let button, account
+  render() {
+
+    let button, account;
+    
+    const amountStr = this.getAmountFromQueryParams();
 
     if(this.state.provider !== null){
       button = (<div>
-                  <button onClick={() => this.sendcUSD()}>Send 0.001 cUSD</button>
+                  <button onClick={() => this.sendcUSD()}>Enviar {amountStr} cUSD</button>
                 </div>)
     } else {
       button = (<div>
-                  <button onClick={() => this.connect()}>Connect</button>
+                  <button onClick={() => this.connect()}>Conectar Billetera</button>
                 </div>)
     }
 
@@ -80,13 +104,17 @@ class App extends React.Component {
     return(
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+          
+          {/* <img src={} className="App-logo" alt="logo" /> */}
           {button}
           <p>{account}</p>
-          <button onClick={() => this.disconnect()}>Disconnect</button>
+          <button onClick={() => this.disconnect()}>Desconectar</button>
+          <br/>
+          <button onClick={() => this.openTuBoleto(amountStr)}>Abrir TuBoleto</button>
+          <br/>
+          <p style={{
+            fontSize: '8px',
+          }}>TuBoleto - Celo v0.0.2</p>
         </header>
       </div>
     )
