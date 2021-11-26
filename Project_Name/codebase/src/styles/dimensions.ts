@@ -49,7 +49,11 @@ const dimensions = {
   height100: 100,
   heigth160: 160,
   height400: 400,
-  padding75: '75%'
+  padding75: '75%',
+  padding25: '25%',
+  padding18: '18%',
+  padding72: '72%',
+  padding65: '65%',
 };
 
 export default dimensions;
