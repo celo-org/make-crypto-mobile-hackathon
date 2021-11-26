@@ -12,6 +12,8 @@
 - Francesco Dainese, RUST/SMART CONTRACT ENGINEER
 - Daniele Trebbi, UI/UX DESIGNER
 
+##### NFT, Gaming and Creator Track: Build an application to mint, sell or manage non-fungible tokens.
+
 #### Project Description
 Nowadays, people are used to see new NFT marketplaces being created. 
 Nevertheless, they lose focus of what the intrinsic value of an NFT really is: Art. 
