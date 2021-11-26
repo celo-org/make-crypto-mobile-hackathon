@@ -8,14 +8,14 @@ const windowHeight = Dimensions.get('window').height;
 const isUnder670 = windowHeight < 670 ? true : false
 
 export const styles = StyleSheet.create({
-  overlay: { 
-    paddingBottom: isUnder670 ? '72%' : '65%', 
-    backgroundColor: colors.light.neutralColor14 
+  overlay: {
+    paddingBottom: isUnder670 ? dimensions.padding72 : dimensions.padding65, 
+    backgroundColor: colors.light.neutralColor14
   },
   container: {
     paddingTop: dimensions.spacingStackXxl16,
   },
-  content: {    
+  content: {
     paddingTop: dimensions.spacingStackXxl16,
     marginBottom: dimensions.spacingStackXBig20,
     backgroundColor: colors.light.neutralColor14,

@@ -46,6 +46,6 @@ export const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    paddingBottom: isUnder670 ? '25%' : '18%',
+    paddingBottom: isUnder670 ? dimensions.padding25 : dimensions.padding18,
   },
 });
