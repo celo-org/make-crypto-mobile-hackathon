@@ -20,6 +20,7 @@ def model(request):
     param1 = request.POST.get("param1")
     operator = request.POST.get("operator")
     param2 = request.POST.get("param2")
+    collection = request.POST.get("collection")
 
     if isinstance(param1, str) and param1.__contains__(","):
         param1 = param1.split(",")
@@ -75,6 +76,6 @@ def model(request):
     simulation = Executor(exec_context=local_mode_ctx, configs=exp.configs)
     raw_system_events, tensor_field, sessions = simulation.execute()
     final_result = raw_system_events[len(raw_system_events) - 1]['average_result']
-    db.models.update_one({"user": user, "proposalId": proposal_id}, {"$set": {"user": user, "proposalId": proposal_id, "score": final_result}}, True)
+    db.models.update_one({"user": user, "proposalId": proposal_id}, {"$set": {"user": user, "proposalId": proposal_id, "score": final_result, "collection": collection}}, True)
 
     return HttpResponse(user + " gave " + proposal_id + " a score of " + str(final_result))
