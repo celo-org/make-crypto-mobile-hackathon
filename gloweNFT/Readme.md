@@ -36,7 +36,7 @@ As for the complete product development, we will proceed with the launch of the 
 We are looking for funds and support in order to make this vision come true! 
 
 #### URLs
-https://www.youtube.com/watch?v=GBQeDzYyBAU
+https://youtu.be/6uWtkSLb57I
 
 #### Presentation
 List any links to your presentation or any related visuals you want to share.
