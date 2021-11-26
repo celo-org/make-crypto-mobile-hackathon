@@ -50,7 +50,7 @@ const dimensions = {
   heigth160: 160,
   height400: 400,
   padding75: '75%',
-  padding25: '25%',
+  padding27: '27%',
   padding18: '18%',
   padding72: '72%',
   padding65: '65%',
