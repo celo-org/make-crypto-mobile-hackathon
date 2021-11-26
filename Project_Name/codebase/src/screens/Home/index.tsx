@@ -9,7 +9,7 @@ import { FilterList, Nft, SquareButton, Text } from '@nft/components';
 import MenuSvg from '../../../assets/menu.svg';
 import Magnifier from '../../../assets/magnifier.svg';
 
-import { colors, fontsFamily, fontsSize } from '@nft/styles';
+import { colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
 import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 import { api } from '@nft/services/api';
 
@@ -54,7 +54,7 @@ const Home = (): JSX.Element => {
 
   const handleLikeImage = (id: number) => {
     console.log(id);
-    //todo: patch to api
+    //TODO patch to api
   };
 
   useEffect(() => {
@@ -127,11 +127,14 @@ const Home = (): JSX.Element => {
                   handleLikeImage(item.id);
                 }}
                 pressImageFunction={() => navigation.navigate(RoutesNames.DESCRIPTION_NFT, item.id)}
+                //TODO colocar api
                 value={0.879}
               />
             )}
             showsVerticalScrollIndicator={false}
-            ItemSeparatorComponent={() => <View style={{ marginBottom: 25 }} />}
+            ItemSeparatorComponent={() => (
+              <View style={{ marginBottom: dimensions.spacingStackGiant25 }} />
+            )}
           />
         )}
       </View>
