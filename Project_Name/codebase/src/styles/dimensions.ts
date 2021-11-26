@@ -45,10 +45,15 @@ const dimensions = {
   height50: 50,
   height60: 60,
   height80: 80,
+  height90: 90,
   height100: 100,
   heigth160: 160,
   height400: 400,
-  padding75: '75%'
+  padding75: '75%',
+  padding27: '27%',
+  padding18: '18%',
+  padding72: '72%',
+  padding65: '65%',
 };
 
 export default dimensions;
