@@ -1,11 +1,12 @@
 ## Bloinx
 ### BX Smart Labs
-#### Hackathon Track: Infrastructure and Web3
+#### Hackathon Track: , DeFi, Cash in Cash Out, Infrastructure and Web3
 
 ##### Region location
 
 ##### Team Members
-- Arturo Castañon, lead developer
+- Arturo Castañon, Lead Developer
+- Domenica Ponce, Marketing
 - Gabriela Guerra, PM
 
 #### Project Description
