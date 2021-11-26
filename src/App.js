@@ -9,9 +9,12 @@ const sleep = function (ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+
+let lastTrLoadingStarted = 0;
 class App extends React.Component {
 
   componentDidMount() {
+
     this.connect();
   }
 
@@ -20,10 +23,14 @@ class App extends React.Component {
     this.state = {
       provider: null,
       kit: null,
-      someAddress: "0xca0bc7119a461d58fb4d498921248892677060fa", // J
+      someAddress: "0xDDc40255d888Df0d43C2ebc7a809F9221B493339", // J desktop
+      // someAddress: "0xca0bc7119a461d58fb4d498921248892677060fa", // J mobile
       // someAddress: "0xc528f91cf9035878d92d7c043377eab2af9dc6a7", // K
       trLoading: false,
+      showLoadingHelper: false,
     }
+
+    console.log("receiving: ", this.state.someAddress);
 
     this.connect = this.connect.bind(this)
     this.sendcUSD = this.sendcUSD.bind(this)
@@ -55,7 +62,7 @@ class App extends React.Component {
 
       const amountStr = this.getAmountFromQueryParams();
 
-      // TODO: maybe trigger sendcUSD automatically
+      // trigger sendcUSD automatically
       this.sendcUSD(amountStr);
 
     } catch (e) {
@@ -65,13 +72,28 @@ class App extends React.Component {
   }
 
   sendcUSD = async (amountStr) => {
-    if (this.state.trLoading) {
+    if (this.state.trLoading && !this.state.showLoadingHelper) {
       console.log("There is already a transaction in progress");
       return;
     }
 
     this.setState({
       trLoading: true,
+      showLoadingHelper: false,
+    });
+
+    lastTrLoadingStarted = Date.now();
+    const copylastTrLoadingStarted = lastTrLoadingStarted;
+
+    sleep(10 * 1000).then(() => {
+      // if the last call to set state
+      if (lastTrLoadingStarted === copylastTrLoadingStarted) {
+        if (this.state.trLoading) {
+          this.setState({
+            showLoadingHelper: true,
+          });
+        }
+      }
     });
 
     await sleep(2); // millis
@@ -82,16 +104,41 @@ class App extends React.Component {
       let amount = kit.web3.utils.toWei(amountStr, 'ether');
   
       const stabletoken = await kit.contracts.getStableToken();
-  
+
+      console.log("getStableToken");
+
       const tx = await stabletoken.transfer(this.state.someAddress, amount).send(
         {feeCurrency: stabletoken.address}
-      );
-      const receipt = await tx.waitReceipt();
+      ); // TransactionResult type in tx-result.d.ts
+      
+      console.log("transfer");
+
+      const txHash = await tx.getHash(); // in testing it never returns (although it may have been other problem)
+      console.log("getHash : ", txHash);
+
+      const receipt = await tx.waitReceipt(); // waiting for the user to complete signing and transaction to be finished
+      // I think ubeswap has a callback just when signing is finished so they can request focus at that moment
+      // is it getHash? Nop
+
+
+      console.log("waitReceipt");
   
       console.log(receipt);
       // alert(JSON.stringify(receipt));
+
+      const url = "https://www.google.com/";
+
+      // doesnt request focus to the chrome browser on android:
+      // const x = window.open(url, '_blank'); //?.focus();
+      // x?.focus();
+      // x?.close();
+      // window.focus();
+
+      // doesnt seem to work either:
+      // window.location.href = url;
   
-      this.openTuBoleto(amountStr);
+      this.openTuBoleto(amountStr); // tuboleto callback
+
     } catch (e) {
       if (e.message.indexOf("execution reverted: transfer value exceeded balance of sender") !== -1) {
         // not enough balance
@@ -136,13 +183,16 @@ class App extends React.Component {
       account = this.state.kit.defaultAccount
     }
 
+    const retryButton = (
+      <div>
+        <button onClick={() => this.sendcUSD(amountStr)}>Reintentar el envío de {amountStr} cUSD (aprox. {aproxPEN.toFixed(2)} soles)</button>
+      </div>
+    );
 
     if(this.state.provider !== null){
       conectionDependantContent = (
         <>
-          <div>
-            <button onClick={() => this.sendcUSD(amountStr)}>Reintentar el envío de {amountStr} cUSD (aprox. {aproxPEN.toFixed(2)} soles)</button>
-          </div>
+          {retryButton}
           <p>
           <span style={{
             fontSize: '14px',
@@ -177,21 +227,34 @@ class App extends React.Component {
           <br/>
           {
             (
-                this.state.trLoading ? 
-                  "Cargando... ✌️" : 
-                  <>
+                !this.state.trLoading ? 
+                (<>
                     {conectionDependantContent}
                     <br/>
                     {/* <button onClick={() => this.openTuBoleto(amountStr)}>Abrir TuBoleto</button>
                     <br/> */}
-                  </>
+                  </>) :  
+                
+                this.state.showLoadingHelper ? (
+                <>
+                  <p>
+                    Cargando... ✌️
+                    <br/>
+                    <br/>
+                    <span fontSize={9}>
+                    Aún no se abre la billetera? Ábrela manualmente o reintenta con el siguiente botón:
+                    </span>
+                    </p>
+                  {retryButton}
+                </>) : "Cargando... ✌️" 
+                  
             )
           }
           
 
           <p style={{
             fontSize: '8px',
-          }}>TuBoleto - Celo connector v0.0.17</p>
+          }}>TuBoleto - Celo connector v0.0.33</p>
         </header>
       </div>
     )
