@@ -417,7 +417,7 @@ class StampsModule {
 			vote_strength = this.half_gold_stamp_value;
 		}
 
-        if (negative) {
+        if (negative == "true") {
             vote_strength = -vote_strength;
         }
 		
