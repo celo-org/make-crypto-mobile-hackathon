@@ -1,11 +1,15 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions, Platform } from 'react-native';
 import { border, colors, dimensions, fontsFamily } from '@nft/styles';
 import fontSizes from '@nft/styles/fontSizes';
 import { AlignTypes } from '@nft/utils/enum';
 
+const windowHeight = Dimensions.get('window').height;
+
+const isUnder670 = windowHeight < 670 ? true : false
+
 export const styles = StyleSheet.create({
   overlay: { 
-    paddingBottom: dimensions.padding75, 
+    paddingBottom: isUnder670 ? '72%' : '65%', 
     backgroundColor: colors.light.neutralColor14 
   },
   container: {
