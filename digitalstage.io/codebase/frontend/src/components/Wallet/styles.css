@@ -1,0 +1,107 @@
+
+.wallet-wrap {
+    text-align: center;
+    background-image: url("../../assets/hero-bg.jpg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.connect-content-wrap {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.logo {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #fff;
+    height: 60px;
+    width: 100vw;
+    background-image: url("../../assets/logo-hero.svg");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.connect-btn {
+    padding: 16px 28px;
+    transition: 0.5s;
+    border: 2px solid #fff;
+    color: #fff;
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 0;
+    background: transparent;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.connect-btn:hover {
+    background: rgba(21, 21, 21, 0.6);
+    border-color: rgba(21, 21, 21, 0.6);
+}
+
+/*table styles*/
+
+.table-wrap {
+    margin-top: 10px;
+}
+
+.tokens-table {
+    background: rgba(21, 21, 21, 0.6);
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 1125px;
+}
+
+.tokens-table thead {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.tokens-table thead tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+.tokens-table thead th {
+    padding: 40px 0 9px;
+    border-bottom: unset;
+}
+
+.tokens-table tbody {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    border-top: none !important;
+}
+
+.tokens-table tbody tr {
+    background-color: unset;
+}
+
+.tokens-table tbody td {
+    padding: 31px 0;
+}
+
+.no-data {
+    height: 50px;
+}
