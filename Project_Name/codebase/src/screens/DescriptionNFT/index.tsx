@@ -20,6 +20,13 @@ import { api } from '@nft/services/api';
 
 interface INFTDescriptionResponse {
   nft: {
+    author: {
+      id: number;
+      address: string;
+      name: string;
+      description: string;
+      profilePicture: string;
+    };
     description: string;
     favorite: boolean;
     favorite_count: number;
@@ -63,10 +70,7 @@ const DescriptionNft = (): JSX.Element => {
     fetchNftDescription();
   }, [params]);
 
-  console.log('Params: ', params);
-  console.log(nftDescriptionResponse);
-
-  console.log(nftDescriptionResponse);
+  const tagsSplited = nftDescriptionResponse.nft?.tags.split('|');
 
   return (
     <>
@@ -98,26 +102,35 @@ const DescriptionNft = (): JSX.Element => {
                   fontsSize={fontsSize.lg18}
                 />
 
-                {/* TODO inserir o componente de tag */}
-                {/* <Tag /> */}
+                <View style={styles.containerTagsLike}>
+                  {tagsSplited ? (
+                    tagsSplited.map((item) => (
+                      <Tag label={item} key={item} borderColor={colors.light.neutralColor5} />
+                    ))
+                  ) : (
+                    <></>
+                  )}
 
-                {/* TODO implementar a função de like e deslike */}
-                <Likes
-                  numberOfLikes={nftDescriptionResponse.nft?.favorite_count}
-                  likeFunction={() => {}}
-                  textAlign={AlignTypes.CENTER}
-                  textColor={colors.light.neutralColor5}
-                  textFontFamily={fontsFamily.montserrat.regular400}
-                  textFontSize={fontsSize.xs12}
-                  isLiked={nftDescriptionResponse.nft?.favorite}
-                />
+                  {/* TODO implementar a função de like e deslike */}
+                  <View style={styles.likes}>
+                    <Likes
+                      numberOfLikes={nftDescriptionResponse.nft?.favorite_count}
+                      likeFunction={() => {}}
+                      textAlign={AlignTypes.CENTER}
+                      textColor={colors.light.neutralColor5}
+                      textFontFamily={fontsFamily.montserrat.regular400}
+                      textFontSize={fontsSize.xs12}
+                      isLiked={nftDescriptionResponse.nft?.favorite}
+                    />
+                  </View>
+                </View>
               </View>
               <View style={styles.author}>
                 <Author
                   authorImage={{
-                    uri: 'Ilda',
+                    uri: nftDescriptionResponse.nft?.author.profilePicture,
                   }}
-                  authorName={'Ilda'}
+                  authorName={nftDescriptionResponse.nft?.author.name}
                 />
               </View>
               <View style={styles.description}>
