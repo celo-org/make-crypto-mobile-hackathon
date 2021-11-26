@@ -24,5 +24,5 @@ https://docs.google.com/presentation/d/e/2PACX-1vQ_dQjATzxem3Wc3qXB3UAfr_O_oQAFr
 The team is actively working on development of our Android and iOS applications whilte conversations are ongoing with RCA Records and major tier one acts like Linkin Park, Robbie Williams and Coldplay for Q1 2022 events using Web3 as the medium to connect with fans.
 
 <!-- TODO: add -->
-#### License
+#### License: GNU GPLv3
 
