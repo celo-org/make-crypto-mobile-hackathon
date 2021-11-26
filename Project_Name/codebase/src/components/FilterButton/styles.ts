@@ -8,13 +8,13 @@ export const styles = StyleSheet.create({
     marginRight: dimensions.spacingStackLg10,
     shadowColor: colors.light.neutralColor0,
     shadowOffset: {
-      width: 0,
-      height: 3,
+      width: 2,
+      height: 2,
     },
     shadowOpacity: 0.29,
-    shadowRadius: 4.65,
+    shadowRadius: 2,
 
-    elevation: 7,
+    elevation: 4,
     height: dimensions.height40,
   },
 });
