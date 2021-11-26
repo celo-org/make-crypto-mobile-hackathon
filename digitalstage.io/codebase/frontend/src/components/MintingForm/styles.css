@@ -1,0 +1,21 @@
+.form-minting {
+    width: 50%;
+    text-align: left;
+    margin: 0 auto;
+    background: rgba(251,251,251, .5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.form-minting .form-label {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.eye-wrap, .eye-wrap:visited, .eye-wrap:hover {
+    margin-left: 10px;
+    color: #fff;
+    margin-bottom: 5px;
+}
