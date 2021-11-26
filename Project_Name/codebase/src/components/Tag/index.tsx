@@ -9,7 +9,7 @@ interface ITagProps {
   label: string;
   backgroundColor?: string;
   borderColor: string;
-  key: string;
+  key?: string;
 }
 
 const Tag = ({ key, label, borderColor, backgroundColor }: ITagProps) => {
