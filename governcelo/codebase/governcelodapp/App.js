@@ -6,20 +6,17 @@ import { Octokit } from "@octokit/core";
 export default class App extends React.Component{
 
   state = {
-    listofPRs: [],
     listofPRs_data: []
   };
 
   componentDidMount = async () => {
-    const octokit = new Octokit({ auth: `<your_client_id>` });
+    const octokit = new Octokit();
 
     try {
       const listofPRs_ = await octokit.request('GET /repos/{owner}/{repo}/pulls', {
         owner: 'celo-org',
         repo: 'celo-proposals'
       });
-    
-      this.setState({listofPRs: listofPRs_});
 
       this.setState({listofPRs_data: listofPRs_.data});
     } catch (error) {
