@@ -1,16 +1,18 @@
 import React, { useCallback } from 'react';
-import { TextInput, View } from 'react-native';
+import { StyleSheet, TextInput, TextInputProps, View } from 'react-native';
 import { Text } from '@nft/components';
-import { colors, fontsFamily } from '@nft/styles';
+import { colors, dimensions, fontsFamily } from '@nft/styles';
 import fontSizes from '../../styles/fontSizes';
 import styles from './style';
 
-interface IUnderlineInputProps {
-  onChangeText: (param: number) => void;
-  text: string;
+interface IUnderlineInputProps extends TextInputProps {
+  onChangeText: (param: string | number) => void;
+  text: string | number;
   label: string;
   placeholder: string;
   isOptional?: boolean;
+  optionalCurrency?: string;
+  hasError: boolean;
 }
 
 const UnderlineInput = ({
@@ -19,6 +21,9 @@ const UnderlineInput = ({
   label,
   isOptional,
   placeholder,
+  optionalCurrency,
+  hasError = false,
+  ...rest
 }: IUnderlineInputProps) => {
   const onChangeTextValue = useCallback(
     (value) => {
@@ -26,12 +31,21 @@ const UnderlineInput = ({
     },
     [onChangeText],
   );
+
+  const styleManager = StyleSheet.create({
+    input: {
+      paddingRight: optionalCurrency ? dimensions.spacingStackXxHuge65 : 0,
+    },
+    inputView: {
+      borderBottomColor: colors.light.neutralColor13,
+    },
+  });
   return (
     <View>
       <View style={styles.labelContainer}>
         <Text
           textDescription={label}
-          color={colors.light.neutralColor4}
+          color={hasError ? colors.light.neutralColor13 : colors.light.neutralColor4}
           fontFamily={fontsFamily.montserrat.regular400}
           fontsSize={fontSizes.xl20}
         />
@@ -39,19 +53,31 @@ const UnderlineInput = ({
           <View style={styles.optionalText}>
             <Text
               textDescription={'(Optional)'}
-              color={colors.light.neutralColor7}
+              color={hasError ? colors.light.neutralColor13 : colors.light.neutralColor4}
               fontFamily={fontsFamily.montserrat.regular400}
               fontsSize={fontSizes.sm14}
             />
           </View>
         )}
       </View>
-      <TextInput
-        onChangeText={onChangeTextValue}
-        value={String(text)}
-        placeholder={placeholder}
-        style={styles.input}
-      />
+      <View>
+        <TextInput
+          onChangeText={onChangeTextValue}
+          value={String(text)}
+          placeholder={placeholder}
+          style={[styles.input, styleManager.input, hasError && styleManager.inputView]}
+          {...rest}
+        />
+        {optionalCurrency && (
+          <Text
+            textDescription={optionalCurrency}
+            color={colors.light.neutralColor5}
+            fontFamily={fontsFamily.montserrat.semiBold600}
+            fontsSize={fontSizes.sm14}
+            style={styles.optionalCurrency}
+          />
+        )}
+      </View>
     </View>
   );
 };

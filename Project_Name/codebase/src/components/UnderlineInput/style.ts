@@ -15,9 +15,15 @@ const styles = StyleSheet.create({
     fontSize: fontsSize.sm14,
     paddingBottom: dimensions.spacingStackXxxs6,
     marginTop: dimensions.spacingStackXxs7,
+    position: 'relative',
   },
   optionalText: {
     marginLeft: dimensions.spacingStackXBig20,
+  },
+  optionalCurrency: {
+    position: 'absolute',
+    right: dimensions.spacingInlineXs14,
+    bottom: dimensions.spacingStackXxs7,
   },
 });
 
