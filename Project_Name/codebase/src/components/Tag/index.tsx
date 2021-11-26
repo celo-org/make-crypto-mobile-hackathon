@@ -3,26 +3,16 @@ import { StyleSheet, View } from 'react-native';
 import { Text } from '@nft/components';
 import { AlignTypes } from '@nft/utils/enum';
 import styles from './styles';
+import { colors, fontsFamily, fontsSize } from '@nft/styles';
 
 interface ITagProps {
   label: string;
   backgroundColor?: string;
   borderColor: string;
-  color: string;
-  fontFamily: string;
-  fontSize: number;
-  textAlign: AlignTypes;
+  key: string;
 }
 
-const Tag = ({
-  label,
-  color,
-  borderColor,
-  fontFamily,
-  fontSize,
-  textAlign,
-  backgroundColor,
-}: ITagProps) => {
+const Tag = ({ key, label, borderColor, backgroundColor }: ITagProps) => {
   const styleManager = StyleSheet.create({
     container: {
       borderColor,
@@ -31,13 +21,12 @@ const Tag = ({
   });
 
   return (
-    <View style={[styles.container, styleManager.container]}>
+    <View style={[styles.container, styleManager.container]} key={key}>
       <Text
         textDescription={label}
-        color={color}
-        fontFamily={fontFamily}
-        fontsSize={fontSize}
-        textAlign={textAlign}
+        color={colors.light.neutralColor5}
+        fontFamily={fontsFamily.montserrat.medium500}
+        fontsSize={fontsSize.xxs10}
       />
     </View>
   );
