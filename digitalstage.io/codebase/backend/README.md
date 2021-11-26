@@ -12,6 +12,8 @@ You can find environment variables example in `.env.example`
 $ nano .env
 ```
 
+Also you need to publish contract from `contract/contact.sol` and create `networks.js` file. You can find `networks.example.js` in that folder too.
+
 ## Running the app
 
 ```bash
