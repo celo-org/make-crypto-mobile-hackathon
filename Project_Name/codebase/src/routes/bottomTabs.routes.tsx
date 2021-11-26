@@ -33,7 +33,8 @@ const bottomTabsRoutes = (): JSX.Element => {
           alignItems: AlignTypes.CENTER,
           height: dimensions.height60,
           position: 'absolute',
-          bottom: dimensions.spacingInlineXl30,
+          bottom:
+            Platform.OS === 'ios' ? dimensions.spacingInlineXl30 : dimensions.spacingStackXxl16,
           left: dimensions.spacingStackXxl16,
           right: dimensions.spacingStackXxl16,
           borderRadius: dimensions.spacingInlineXl30,

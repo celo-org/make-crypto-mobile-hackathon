@@ -80,7 +80,7 @@ const Home = (): JSX.Element => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <View style={styles.logo}></View>
+        <View style={styles.logo} />
         <View style={styles.buttons}>
           <SquareButton iconChildren={Magnifier} />
           <SquareButton iconChildren={MenuSvg} />
