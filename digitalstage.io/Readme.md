@@ -1,12 +1,12 @@
-## Digitalstage.io
-<!-- TODO: add -->
-### Team name
-#### NFT, Gaming, Creator Track
+## Project name: Digitalstage.io
+### Team name: Digitalstage.io
+#### Track: NFT, Gaming, Creator Track
 
-##### Europe
+##### Region: Worldwide
 
-<!-- TODO: add -->
 ##### Team Members
+ - Richard Harless (CEO)
+ - Adam Shanti (COO)
 
 #### Project Description
 Digitalstage.io is Web3 for music and the creator economy. 
