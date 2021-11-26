@@ -1,0 +1,6 @@
+[submodule "OIDC_NFT_Login/codebase/nft-login"]
+	path = OIDC_NFT_Login/codebase/nft-login
+	url = https://github.com/nft-login/nft-login.git
+[submodule "OIDC_NFT_Login/codebase/nft-login-demo"]
+	path = OIDC_NFT_Login/codebase/nft-login-demo
+	url = https://github.com/nft-login/nft-login-demo.git
