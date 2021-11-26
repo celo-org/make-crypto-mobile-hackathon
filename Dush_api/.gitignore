@@ -4,7 +4,8 @@
 
 
 # macOS
-
+node_modules/
+package-lock.json
 # General
 .DS_Store
 .AppleDouble
