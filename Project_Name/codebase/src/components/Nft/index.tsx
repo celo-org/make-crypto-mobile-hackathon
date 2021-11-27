@@ -60,22 +60,14 @@ const Nft = ({
             <View style={styles.tagContainer}>
               {tags.map((tag, index) => {
                 return (
-                  <Tag
-                    key={`tag${index}`}
-                    label={tag}
-                    borderColor={colors.light.neutralColor5}
-                    color={colors.light.neutralColor5}
-                    fontFamily={fontsFamily.montserrat.regular400}
-                    fontSize={fontsSize.xxs10}
-                    textAlign={AlignTypes.LEFT}
-                  />
+                  <Tag key={`tag${index}`} label={tag} borderColor={colors.light.neutralColor5} />
                 );
               })}
             </View>
             <Likes
               likeFunction={toggleLike}
               numberOfLikes={likes}
-              textFontSize={12}
+              textFontSize={fontsSize.xs12}
               textAlign={AlignTypes.CENTER}
               textColor={colors.light.neutralColor6}
               textFontFamily={fontsFamily.montserrat.medium500}

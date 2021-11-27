@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
     borderRadius: border.radius.sm4,
     borderWidth: border.width.hairline,
     justifyContent: AlignTypes.CENTER,
-    margin: dimensions.spacingStackQuarck4,
-    padding: dimensions.spacingStackThin3,
+    marginLeft: dimensions.spacingInlineNano7,
+    paddingHorizontal: dimensions.spacingStackQuarck4,
   },
 });
 

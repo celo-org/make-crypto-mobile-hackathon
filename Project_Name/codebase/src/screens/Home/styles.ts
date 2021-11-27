@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, Platform } from 'react-native';
 import { colors, dimensions } from '@nft/styles';
 import { AlignTypes } from '@nft/utils/enum';
 
@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     paddingTop: dimensions.spacingStackXxl16,
     paddingHorizontal: dimensions.spacingStackXxl16,
     backgroundColor: colors.light.neutralColor14,
+    marginBottom: Platform.OS === 'android' ? dimensions.spacingStackXxl16 : 0
   },
   header: {
     flexDirection: AlignTypes.ROW,
