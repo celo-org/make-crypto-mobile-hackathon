@@ -1,7 +1,5 @@
 
-# ⚡ Hackathon Project Template ⚡
-_This is a sample submission repository.
-Please [__fork this repo__](https://help.github.com/articles/fork-a-repo/) and use this as a starting point for your hackathon project._
+# ⚡ Aster - Collective Data Labeling⚡
 
 ## Aster
 ### Team Aster
@@ -26,6 +24,7 @@ Please [__fork this repo__](https://help.github.com/articles/fork-a-repo/) and u
 - Jayee Li, Blockchain Developer
 - Samuel Tang, Frontend Developer
 
+![Our Team](./assets/team.png?raw=true "Our Team")
 
 
 #### Project Description
@@ -36,9 +35,10 @@ Traditional data labeling applications are opaque and exclusive. There is no tra
 Aster is a decentralized and collective microtask application for data. Aster enabled transparent data labeling and instant crypto rewards. Aster allows clients to upload data and task description onto our secured backend and create a smart contract on Celo Blockchain for each labeling task to incentivize users from all over the world to help classify data. The clients can view the real-time progress of their tasks on the Aster home dashboard website. The task information and the rewards per task will be displayed on the Aster web and mobile app. The labelers can log onto Aster’s mobile app to select any task they wish to work on. Once a task is completed, labelers receive instant crypto rewards as indicated on the task page. 
 Currently, we support only CELO as the crypto payments. We would like to implement the functionalities to support more cryptocurrencies as payments and support more data micro-tasks such as segmentation tasks and description tasks. Moreover, we would also like to provide data analytics to our clients to help them understand their data distribution and information. 
 
+![Aster Infrastructure](./assets/AsterInfra.png?raw=true "Aster Infrastructure")
 
 #### URLs
-1. Youtube
+1. Youtube()
 2. DevPost Homepage
 3. Demo Website
 
