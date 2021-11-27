@@ -5,19 +5,19 @@
 ### Team Aster
 
 #### Hackathon Track:
-#### 1. Grand Prize
-#### 2. Infrastructure and Web3 Track
-#### 3. Interoperability Track
-#### 4. DeFi Track
-#### 5. Cash In Cash Out Track
-#### 6. Best Students Prize
-#### 7. India Prizes
-#### 8. LATAM Prizes
-#### 9. Brazil Prizes
-#### 10. Africa Prizes
+1. Grand Prize
+2. Infrastructure and Web3 Track
+3. Interoperability Track
+4. DeFi Track
+5. Cash In Cash Out Track
+6. Best Students Prize
+7. India Prizes
+8. LATAM Prizes
+9. Brazil Prizes
+10. Africa Prizes
 
 ##### Region location
-##### USA, Portugal
+USA, Portugal
 
 ##### Team Members
 - Tiago Antunes, Backend Developer
@@ -39,11 +39,11 @@ Currently, we support only CELO as the crypto payments. We would like to impleme
 
 #### URLs
 1. Youtube()
-2. DevPost Homepage
-3. Demo Website
+2. DevPost Homepage (https://devpost.com/software/bottomless-data-5dugkp)
+3. [Aster Demo Website](https://aster-38850.web.app/)
 
 #### Presentation
-1. Aster Presentation Slides
+1. [Aster Presentation](https://docs.google.com/presentation/d/1oWlUDwM8wrVbfX-5lbL_ISHMqj9Rqnhlp8ONFSIhHfs/edit?usp=sharing)
 
 #### Next Steps
 To turn this project into a fully decentralized working solution, we would build a complete and healthy ecosystem for this project community. We need to include a reviewers community in the ecosystem to prevent frauds and ensure the quality of the micro-tasks. This can be done by implementing a decentralized reviewing mechanism on chain to incentivize users to fully support the mission of this project. 
