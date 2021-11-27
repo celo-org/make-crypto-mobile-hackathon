@@ -1,3 +1,11 @@
+# TuBoleto + Valora
+
+This website is the one running inside a TuBoleto Webview. It handles the WalletConnect connection and transaction and  triggers a callback to the TuBoleto app.
+
+
+
+The rest of the docs are from the example:
+
 # Valora + Wallet Connect v1
 
 This is an example repo to show how to connect a React app to Valora using Wallet Connect version 1.
