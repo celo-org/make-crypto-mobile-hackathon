@@ -24,6 +24,7 @@ const dimensions = {
   spacingStackGiant25: 25,
   spacingStackXGiant30: 30,
   spacingStackHuge32: 32,
+  spacingStackHuge34: 3,
   spacingStackXHuge40: 40,
   spacingStackXxHuge65: 65,
   spacingStackXxxHuge80: 80,
