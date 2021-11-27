@@ -12,7 +12,7 @@ const StackTabs = (): JSX.Element => {
   return (
     <Navigator>
       <Screen
-        name="HomeNFT"
+        name={RoutesNames.HOME_NFT}
         component={Home}
         options={{
           headerShown: false,

@@ -1,4 +1,5 @@
 import 'intl';
+import './global';
 import 'intl/locale-data/jsonp/en-US';
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
@@ -17,7 +18,8 @@ import {
   Montserrat_700Bold,
 } from '@expo-google-fonts/montserrat';
 import { ModalProvider } from './src/context/modal.context';
-import Walkthrough from '@nft/screens/Walkthrough';
+
+import { WalletProvider } from '@nft/context/wallet';
 
 export default function App() {
   const [montserratFontsLoaded] = useFonts({
@@ -35,10 +37,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <ModalProvider>
-        <StatusBar style="auto" />
-        {/* TODO adicionar lógica para mostrar apenas na ! vez de acesso  */}
-        {/* <Walkthrough /> */}
-        <BottomRoutes />
+        <WalletProvider>
+          <StatusBar style="auto" />
+          <BottomRoutes />
+        </WalletProvider>
       </ModalProvider>
     </NavigationContainer>
   );

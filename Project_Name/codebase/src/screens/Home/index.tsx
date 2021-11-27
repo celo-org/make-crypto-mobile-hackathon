@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
-import { View, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FlatList } from 'react-native-gesture-handler';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+
+import { styles } from './styles';
 
 import { FilterList, Nft, SquareButton, Text } from '@nft/components';
+import { colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
+import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 
 import MenuSvg from '../../../assets/menu.svg';
 import Magnifier from '../../../assets/magnifier.svg';
 
-import { colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
-import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 import { api } from '@nft/services/api';
 
-import { useNavigation } from '@react-navigation/native';
-
-import { styles } from './styles';
-
 interface INFTProps {
+  id: number;
   image: {
     url: string;
     title: string;
@@ -39,7 +39,7 @@ const Home = (): JSX.Element => {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState('1');
 
-  const navigation = useNavigation();
+  const navigate = useNavigation();
 
   const categories = [
     { filterKey: 'trending', title: 'Trending' },
@@ -52,31 +52,77 @@ const Home = (): JSX.Element => {
     setCategory(category);
   };
 
-  const handleLikeImage = (id: number) => {
-    console.log(id);
-    //TODO patch to api
+  const handleLikeImage = async (id: number) => {
+    const request = {
+      nft_id: id,
+      user_id: 1, // TODO remove mock
+    };
+    await api
+      .put('nft/favorite', request)
+      .then((response) => {
+        const isLike = response.data.message.includes('adicionar');
+
+        if (isLike) {
+          const nftLiked: INFTProps[] = nfts.map((nft) => {
+            if (nft.id === id) {
+              return {
+                ...nft,
+                likes: nft.likes + 1,
+                isLiked: true,
+              };
+            } else {
+              return nft;
+            }
+          });
+          setNfts(nftLiked);
+        } else if (!isLike) {
+          const nftLiked: INFTProps[] = nfts.map((nft) => {
+            if (nft.id === id) {
+              return {
+                ...nft,
+                likes: nft.likes - 1,
+                isLiked: false,
+              };
+            } else {
+              return nft;
+            }
+          });
+          setNfts(nftLiked);
+        } else {
+          Alert.alert('Ops! There was a problem', 'Please try again later.');
+        }
+      })
+      .catch((error) => {
+        Alert.alert('Ops! There was a problem', 'Please try again later.');
+      });
   };
 
-  useEffect(() => {
-    async function fetchNft() {
-      try {
-        setIsLoading(true);
-        const response = await api.get(`/nft/list/${category}/${page}`);
-        setPage((oldState) => oldState + 1);
-        setNfts(response.data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setIsLoading(false);
-      }
+  async function fetchNft() {
+    try {
+      setIsLoading(true);
+      const response = await api.get(`/nft/list/${category}/${page}`);
+      setPage((oldState) => oldState + 1);
+      setNfts(response.data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
     }
+  }
+
+  useEffect(() => {
     fetchNft();
   }, [category]);
+
+  useFocusEffect(
+    useCallback(() => {
+      fetchNft();
+    }, [category]),
+  );
 
   useEffect(() => {
     setCategory(categories[0].filterKey);
   }, []);
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -126,9 +172,8 @@ const Home = (): JSX.Element => {
                 toggleLike={() => {
                   handleLikeImage(item.id);
                 }}
-                pressImageFunction={() => navigation.navigate(RoutesNames.DESCRIPTION_NFT, item.id)}
-                //TODO colocar api
-                value={0.879}
+                pressImageFunction={() => navigate.navigate(RoutesNames.DESCRIPTION_NFT, item.id)}
+                value={item.value}
               />
             )}
             showsVerticalScrollIndicator={false}
