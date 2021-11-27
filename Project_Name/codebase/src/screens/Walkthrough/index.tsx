@@ -29,7 +29,7 @@ const Walkthrough = (): JSX.Element => {
 
   return (
     <View style={styles.container}>
-      <View style={{ flex: 4, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={styles.containerItems}>
         <FlatList
           bounces={false}
           pagingEnabled
