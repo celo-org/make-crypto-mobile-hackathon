@@ -89,11 +89,11 @@ const Home = (): JSX.Element => {
           });
           setNfts(nftLiked);
         } else {
-          Alert.alert('Ops! Erro ao curtir NFT', 'Tente novamente mais tarde.');
+          Alert.alert('Ops! There was a problem', 'Please try again later.');
         }
       })
       .catch((error) => {
-        Alert.alert('Ops! Erro ao curtir NFT', 'Tente novamente mais tarde.');
+        Alert.alert('Ops! There was a problem', 'Please try again later.');
       });
   };
 

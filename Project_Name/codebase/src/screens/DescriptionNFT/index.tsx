@@ -76,7 +76,7 @@ const DescriptionNft = (): JSX.Element => {
         setNftDescriptionResponse(nftLiked);
       })
       .catch((error) => {
-        Alert.alert('Ops! Erro ao curtir NFT', 'Tente novamente mais tarde.');
+        Alert.alert('Ops! There was a problem', 'Please try again later.');
       });
   };
 
