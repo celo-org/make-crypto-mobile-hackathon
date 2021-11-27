@@ -1,7 +1,5 @@
-
-
 const assert = require('assert')
-const {getKit, approve, deposit, withdraw, claimRewards} = require("../farm-bot-api");
+const {getKit, approve, deposit, withdraw, claimRewards} = require("../src/farm-bot-api.ts");
 
 
 /**
@@ -37,7 +35,7 @@ async function main() {
     console.log(`attempting to withdraw before depositing`)
     await withdraw(kit2, amount) // should fail (none deposited!)
   } catch (error) {
-    if (!error.message.includes('Transaction has been reverted by the EVM')) {
+    if (error instanceof Error && !error.message.includes('Transaction has been reverted by the EVM')) {
       throw error
     }
   }
