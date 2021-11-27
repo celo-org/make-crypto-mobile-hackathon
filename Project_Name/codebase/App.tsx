@@ -17,25 +17,16 @@ import {
   Montserrat_700Bold,
 } from '@expo-google-fonts/montserrat';
 import { ModalProvider } from './src/context/modal.context';
+import Walkthrough from '@nft/screens/Walkthrough';
 
 export default function App() {
   const [montserratFontsLoaded] = useFonts({
     Montserrat_300Light,
     Montserrat_400Regular,
-    Montserrat_600SemiBold,
     Montserrat_500Medium,
+    Montserrat_600SemiBold,
     Montserrat_700Bold,
   });
-  useEffect(() => {
-    (async () =>
-      await Font.loadAsync({
-        Montserrat_300Light,
-        Montserrat_400Regular,
-        Montserrat_500Medium,
-        Montserrat_600SemiBold,
-        Montserrat_700Bold,
-      }))();
-  }, []);
 
   if (!montserratFontsLoaded) {
     <AppLoading />;
@@ -45,6 +36,8 @@ export default function App() {
     <NavigationContainer>
       <ModalProvider>
         <StatusBar style="auto" />
+        {/* TODO adicionar lógica para mostrar apenas na ! vez de acesso  */}
+        {/* <Walkthrough /> */}
         <BottomRoutes />
       </ModalProvider>
     </NavigationContainer>
