@@ -1,80 +1,48 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
-import { Octokit } from "@octokit/core";
+import 'react-native-gesture-handler';
 
-export default class App extends React.Component{
+import * as React from 'react';
 
-  state = {
-    listofPRs_data: []
-  };
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-  componentDidMount = async () => {
-    const octokit = new Octokit();
+import CIP from './CIP';
+import CGP from './CGP';
 
-    try {
-      const listofPRs_ = await octokit.request('GET /repos/{owner}/{repo}/pulls', {
-        owner: 'celo-org',
-        repo: 'celo-proposals'
-      });
+const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 
-      this.setState({listofPRs_data: listofPRs_.data});
-    } catch (error) {
-      console.log("listofPRserror", error);
-    }
-    
-  };
-
-  render(){
-    return (
-      <View style={styles.container}>
-        <StatusBar style="auto" translucent/>
-        <FlatList
-          style={styles.flatliststyle}
-          data={this.state.listofPRs_data}
-          renderItem={({ item }) => {
-            return (
-              <View style={styles.aCIPstyle}>
-                <Text style={styles.username}>{item.user.login}</Text>
-                <Text style={styles.title}>{item.title}</Text>
-                <Text>{item.body}</Text>
-              </View>
-            );
-          }}/>        
-        
-      </View>
-    );
-  }
-  
+function firstScreenStack({ navigation }) {
+  return (
+    <CIP/>
+  );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#dddddd',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  flatliststyle: {
-    backgroundColor: '#dddddd',
-    marginTop: 20
-  },
-  aCIPstyle: {
-    backgroundColor: '#ffffff',
-    paddingHorizontal: 15,
-    paddingVertical: 5,
-    marginBottom: 2,
-    borderRadius: 2,
-    elevation: 10
-  },
-  username: {
-    fontWeight: 'bold',
-    fontSize: 15,
-    color: 'grey'
-  },
-  title: { 
-    fontWeight: 'bold',
-    fontSize: 17,
-    marginVertical: 9
-  }
-});
+function secondScreenStack({ navigation }) {
+  return (
+    <CGP/>
+  );
+}
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator
+        drawerContentOptions={{
+          activeTintColor: '#e91e63',
+          itemStyle: { marginVertical: 5 },
+        }}>
+        <Drawer.Screen
+          name="Improvement Proposals"
+          options={{ drawerLabel: 'Improvement Proposals' }}
+          component={firstScreenStack} />
+        <Drawer.Screen
+          name="Governance Proposals"
+          options={{ drawerLabel: 'Governance Proposals' }}
+          component={secondScreenStack} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;

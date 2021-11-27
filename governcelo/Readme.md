@@ -20,13 +20,15 @@ The project is for making celo improvement proposals and celo governance proposa
 The dapp will connect to Valora when the user needs to make transactions involved with a proposal. It will also use OAuth for Github to enable the user to publish a proposal.
 
 #### URLs
-List any URLs relevant to demonstrating your prototype
+[demo](https://www.youtube.com/watch?v=ZPEVmIvuJqg)
 
 #### Presentation
-List any links to your presentation or any related visuals you want to share.
+-[screenshot 1](https://github.com/ianmunge0/make-crypto-mobile-hackathon/blob/governcelo/governcelo/assets/img1.png)
+-[screenshot 2](https://github.com/ianmunge0/make-crypto-mobile-hackathon/blob/governcelo/governcelo/assets/img2.png)
+-[screenshot 3](https://github.com/ianmunge0/make-crypto-mobile-hackathon/blob/governcelo/governcelo/assets/img3.png)
 
 #### Next Steps
-What do you need to do next to turn this prototype into a working solution?
+Put the app in production mode
 
 #### License
 This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
