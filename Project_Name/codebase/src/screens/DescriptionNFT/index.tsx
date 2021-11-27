@@ -17,6 +17,7 @@ import Back from '../../../assets/left-arrow.svg';
 import { AlignTypes } from '@nft/utils/enum';
 import styles from './styles';
 import { api } from '@nft/services/api';
+import { Alert } from 'react-native';
 
 interface INFTDescriptionResponse {
   nft: {
@@ -74,7 +75,9 @@ const DescriptionNft = (): JSX.Element => {
         }
         setNftDescriptionResponse(nftLiked);
       })
-      .catch((error) => {});
+      .catch((error) => {
+        Alert.alert('Ops! Erro ao curtir NFT', 'Tente novamente mais tarde.');
+      });
   };
 
   useEffect(() => {
