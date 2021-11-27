@@ -304,6 +304,7 @@ const Profile = (): JSX.Element => {
                             textColor={colors.light.neutralColor4}
                             textFontSize={fontSizes.md16}
                             textAlign={AlignTypes.CENTER}
+                            onPress={() => navigate.navigate(RoutesNames.CREATE)}
                           />
                         </View>
                       </>
