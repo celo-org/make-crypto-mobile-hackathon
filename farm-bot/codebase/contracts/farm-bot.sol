@@ -42,21 +42,23 @@ contract FarmBot is Owned, FarmbotERC20 {
     constructor(
         address _owner,
         address _stakingRewards,
-	address _router,
-	address[] memory _path0,
-	address[] memory _path1
+		address _router,
+		address[] memory _path0,
+		address[] memory _path1,
+		string memory _symbol
     ) Owned(_owner) {
         stakingRewards = StakingRewards(_stakingRewards);
-	rewardsToken = stakingRewards.rewardsToken();
+		rewardsToken = stakingRewards.rewardsToken();
 
-	stakingToken = IUniswapV2Pair(address(stakingRewards.stakingToken()));
-	stakingToken0 = IERC20(stakingToken.token0());
-	stakingToken1 = IERC20(stakingToken.token1());
+		stakingToken = IUniswapV2Pair(address(stakingRewards.stakingToken()));
+		stakingToken0 = IERC20(stakingToken.token0());
+		stakingToken1 = IERC20(stakingToken.token1());
 
-	path0 = _path0;
-	path1 = _path1;
+		path0 = _path0;
+		path1 = _path1;
+		symbol = _symbol;
 
-	router = IUniswapV2Router02(_router);
+		router = IUniswapV2Router02(_router);
     }
 
     function updateFee(uint256 _feeNumerator, uint256 _feeDenominator) external onlyOwner {

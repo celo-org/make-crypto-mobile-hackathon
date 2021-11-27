@@ -8,7 +8,7 @@ contract FarmbotERC20 is IERC20 {
     using SafeMathUniswap for uint;
 
     string public constant name = 'Farmbot FP Token';
-    string public constant symbol = 'FP';
+    string public symbol;
     uint8 public constant decimals = 18;
     uint public override totalSupply; // total number of "Farm Points" issued by Farm Bot
     mapping(address => uint) public override balanceOf; // maps address to "Farm Point" balances.
