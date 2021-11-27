@@ -64,7 +64,7 @@ export async function withdraw(kit: ContractKit, amount: string) {
   })
 }
 
-export async function claimRewards(kit: ContractKit) {
+export async function claimRewards(kit: ContractKit): Promise<boolean> {
   const farmBotContract = getFarmBotContract(kit)
   const tenSecondsFromNowDeadline = new Date().getTime() + 10*1000;
   return farmBotContract.methods.claimRewards(tenSecondsFromNowDeadline).send({
