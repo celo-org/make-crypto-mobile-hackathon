@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>341269335857-sr3le8h7r1jneu3tht6ebd0vbcatr47j.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.341269335857-sr3le8h7r1jneu3tht6ebd0vbcatr47j</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>341269335857-7pl7dvoq1ddmosvda7fr47rijn43rn9q.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBD8n_fhlyy2UPjfzYAGMMdysL4CCxuFiI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>341269335857</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.dsalhuana.TuMicro</string>
+	<key>PROJECT_ID</key>
+	<string>tumicro-1203</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tumicro-1203.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:341269335857:ios:2d053766b4748aaed22a10</string>
+	<key>DATABASE_URL</key>
+	<string>https://tumicro-1203.firebaseio.com</string>
+</dict>
+</plist>
