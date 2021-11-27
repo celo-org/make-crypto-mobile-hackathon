@@ -57,7 +57,7 @@ const Walkthrough = (): JSX.Element => {
         />
       </View>
 
-      <Paginator data={slides} scrollX={scrollX} onPress={scrollTo} />
+      <Paginator data={slides} scrollX={scrollX} onPress={scrollTo} label={'Next'} />
     </View>
   );
 };
