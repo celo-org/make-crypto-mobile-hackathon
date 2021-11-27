@@ -1,8 +1,11 @@
-import {ContractKit} from "@celo/contractkit";
+import {ContractKit, newKit} from "@celo/contractkit";
+import {WrapperCache} from "@celo/contractkit/lib/contract-cache";
 
-const {newKit} = require('@celo/contractkit')
+import {CeloTransactionObject} from '@celo/connect'
+import * as assert from "assert";
+
 const FARM_BOT_ABI = require('../abis/farmBot.json')
-const {WrapperCache} = require("@celo/contractkit/lib/contract-cache");
+
 
 const FORNO_ALFAJORES_URL = 'https://alfajores-forno.celo-testnet.org'
 const FARM_BOT_ADDRESS_ALFAJORES = '0x3B1E4f872a174a33F89711033Ec133748e92aCa0'
@@ -10,7 +13,7 @@ const LP_TOKEN_ADDRESS = '0xe952fe9608a20f80f009a43AEB6F422750285638' // Celo-cU
 
 interface FarmBotContract {
   methods: {
-    deposit: (amount: string) => any
+    deposit: (amount: string) => CeloTransactionObject<boolean>
     withdraw: (amount: string) => any
     claimRewards: (deadline: number) => any
   }
@@ -27,6 +30,7 @@ export async function getKit(privateKey: string): Promise<ContractKit> {
 
 export async function approve(kit: ContractKit, amount: string) {
   const walletAddress = kit.web3.eth.defaultAccount
+  assert.ok(walletAddress)
   const tokenContract = await (new WrapperCache(kit)).getErc20(LP_TOKEN_ADDRESS)
   const approveTx = await tokenContract.approve(FARM_BOT_ADDRESS_ALFAJORES, amount).send({
     from: walletAddress,
@@ -43,6 +47,7 @@ export function getFarmBotContract(kit: ContractKit): FarmBotContract {
 export async function deposit(kit: ContractKit, amount: string) {
   // NOTE: this invests in a farm now!
   const farmBotContract = getFarmBotContract(kit)
+  assert.ok(kit.web3.eth.defaultAccount)
   return farmBotContract.methods.deposit(amount).send({
     from:kit.web3.eth.defaultAccount,
     gas: 1076506,
