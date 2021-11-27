@@ -12,7 +12,7 @@ interface IUnderlineInputProps extends TextInputProps {
   placeholder: string;
   isOptional?: boolean;
   optionalCurrency?: string;
-  hasError: boolean;
+  hasError?: boolean;
 }
 
 const UnderlineInput = ({

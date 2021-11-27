@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     marginTop: dimensions.spacingStackXs8,
   },
   highlight: {
-    marginTop: dimensions.spacingStackGiant25,
+    marginTop: dimensions.spacingInlineSm16,
   },
   switchContainer: {
     flexDirection: AlignTypes.ROW,
@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
   },
   highlightHeader: {
     flexDirection: AlignTypes.ROW,
+    alignItems: AlignTypes.CENTER,
     justifyContent: AlignTypes.SPACE_BETWEEN,
     marginBottom: dimensions.spacingStackXs8,
   },
@@ -116,6 +117,18 @@ const styles = StyleSheet.create({
     height: dimensions.height100,
     width: dimensions.width100,
     borderRadius: border.radius.md6,
+  },
+  inputError: {
+    borderBottomColor: 'red',
+  },
+  tagContent: {
+    flexDirection: AlignTypes.ROW,
+  },
+  tagTitle: {
+    marginBottom: dimensions.spacingStackLg10,
+  },
+  tagContainer: {
+    marginTop: dimensions.spacingInlineSm16,
   },
 });
 

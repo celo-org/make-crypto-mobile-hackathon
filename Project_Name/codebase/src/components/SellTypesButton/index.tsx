@@ -1,13 +1,12 @@
 import React from 'react';
-import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
 import { Text } from '@nft/components';
 import { colors, border } from '@nft/styles';
 import { AlignTypes } from '@nft/utils/enum';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, TouchableOpacityProps, View } from 'react-native';
 import styles from './styles';
 
-interface ISellTypesButton extends RectButtonProps {
+interface ISellTypesButton extends TouchableOpacityProps {
   title: string;
   Icon: typeof React.Component;
   isActive: boolean;
@@ -37,13 +36,13 @@ const SellTypesButton = ({
       : {
           button: {
             borderColor: colors.light.neutralColor9,
-            borderWidth: border.width.nano,
+            borderWidth: border.width.thick,
             flexDirection: AlignTypes.ROW,
           },
         },
   );
   return (
-    <RectButton style={[colorManager.button, styles.button]} {...rest}>
+    <TouchableOpacity style={[colorManager.button, styles.button]} {...rest}>
       <View style={styles.text}>
         <Text
           textDescription={title}
@@ -54,7 +53,7 @@ const SellTypesButton = ({
         />
       </View>
       <Icon key={title} />
-    </RectButton>
+    </TouchableOpacity>
   );
 };
 

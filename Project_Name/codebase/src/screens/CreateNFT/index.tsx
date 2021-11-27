@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   View,
   SafeAreaView,
@@ -7,9 +7,18 @@ import {
   Platform,
   Image,
   ActivityIndicator,
+  TextInput,
+  TextInputProps,
+  Alert,
 } from 'react-native';
-
-import { LargeButton, PillButton, SquareButton, Text, UnderlineInput } from '@nft/components';
+import {
+  FilterButton,
+  LargeButton,
+  PillButton,
+  SquareButton,
+  Text,
+  UnderlineInput,
+} from '@nft/components';
 
 import MenuSvg from '../../../assets/menu.svg';
 import Magnifier from '../../../assets/magnifier.svg';
@@ -24,6 +33,7 @@ import SellTypesList from '@nft/components/SellTypesList';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { AlignTypes } from '@nft/utils/enum';
 import * as ImagePicker from 'expo-image-picker';
+import { api } from '@nft/services/api';
 
 interface IPickImageProps {
   cancelled: boolean;
@@ -40,15 +50,30 @@ const CreateNFT = (): JSX.Element => {
     // { filterKey: 'auction', title: 'Timed auction', icon: TimeEnding },
   ];
 
+  const tags = ['Art', 'Gaming', 'Sports'];
+
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
+  const [value, setValue] = useState('');
+  const [tag, setTag] = useState('Art');
   const [isSwitchEnabled, setIsSwitchEnabled] = useState(false);
   const [selectedSellType, setSelectedSellType] = useState('fixed');
   const [imageSelected, setImageSelected] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [errorName, setErrorName] = useState(false);
+  const [errorImageSelected, setErrorImageSelected] = useState(false);
+  const [errorValue, setErrorValue] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
-  const handleChangeName = (text: string) => setName(text);
+  const handleChangeName = (text: string) => {
+    text !== '' && setErrorName(false);
+    setName(text);
+  };
   const handleChangeDescription = (text: string) => setDescription(text);
+  const handleChangeValue = (text: string) => {
+    text !== '' && setErrorValue(false);
+    setValue(text);
+  };
   const handleSwitch = () => setIsSwitchEnabled((oldValue) => !oldValue);
 
   useEffect(() => {
@@ -77,6 +102,46 @@ const CreateNFT = (): JSX.Element => {
       setIsLoading(false);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleSubmit = async () => {
+    if (!name) {
+      setErrorName(true);
+      setHasError(true);
+    }
+    if (!imageSelected) {
+      setErrorImageSelected(true);
+      setHasError(true);
+
+      Alert.alert("Ops, you didn't choose any image.", 'Please select one image to your NFT');
+    }
+    if (!value) {
+      setHasError(true);
+      setErrorValue(true);
+    }
+
+    if (hasError) return;
+
+    let requestData = {
+      name: name,
+      description: description,
+      image: imageSelected,
+      tags: ['Art'],
+      user_id: 1,
+      value: value,
+    };
+
+    try {
+      setIsLoading(true);
+      const request = await api.post('nft/create', requestData);
+      console.log('request', request);
+      return request;
+    } catch (err) {
+      console.log('err', err);
+    } finally {
+      setIsLoading(false);
+      return;
     }
   };
 
@@ -182,6 +247,7 @@ const CreateNFT = (): JSX.Element => {
                 onChangeText={(text) => handleChangeName(String(text))}
                 placeholder={'Insert the name of NFT'}
                 text={name}
+                hasError={errorName}
               />
             </View>
             <View style={styles.uploadFileInput}>
@@ -216,7 +282,29 @@ const CreateNFT = (): JSX.Element => {
                 />
               </SafeAreaView>
             </View>
-
+            <View style={styles.tagContainer}>
+              <View style={styles.tagTitle}>
+                <Text
+                  color={colors.light.neutralColor4}
+                  fontFamily={fontsFamily.montserrat.regular400}
+                  fontsSize={fontsSize.xl20}
+                  textDescription={'Select your NFT tag'}
+                />
+              </View>
+              <View style={styles.tagContent}>
+                {tags.map((item) => (
+                  <FilterButton
+                    title={item}
+                    isActive={item === tag}
+                    onPress={() => setTag(item)}
+                    textAlign={AlignTypes.CENTER}
+                    textColor={colors.light.neutralColor5}
+                    textFontFamily={fontsFamily.montserrat.semiBold600}
+                    textFontSize={fontsSize.sm14}
+                  />
+                ))}
+              </View>
+            </View>
             <View style={styles.highlight}>
               <View style={styles.highlightHeader}>
                 <Text
@@ -251,11 +339,13 @@ const CreateNFT = (): JSX.Element => {
             </View>
             <View style={styles.priceContainer}>
               <View style={styles.priceTitle}>
-                <Text
-                  color={colors.light.neutralColor4}
-                  fontFamily={fontsFamily.montserrat.semiBold600}
-                  fontsSize={fontsSize.xl20}
-                  textDescription={'Price'}
+                <UnderlineInput
+                  label={'Price'}
+                  onChangeText={(text) => handleChangeValue(String(text))}
+                  placeholder={'Insert the price of NFT'}
+                  text={value}
+                  keyboardType={'number-pad'}
+                  hasError={errorValue}
                 />
               </View>
               <View style={styles.priceContent}>
@@ -298,7 +388,7 @@ const CreateNFT = (): JSX.Element => {
                 textColor={colors.light.neutralColor11}
                 textFontsSize={fontsSize.sm14}
                 textFontFamily={fontsFamily.montserrat.semiBold600}
-                onPress={() => {}}
+                onPress={() => handleSubmit()}
               />
             </View>
           </View>
