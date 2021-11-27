@@ -13,10 +13,11 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.light.neutralColor14
   },
   container: {
-    paddingTop: dimensions.spacingStackXxl16,
+    paddingTop: Platform.OS === 'android' ? dimensions.height30 : 0,
+    marginBottom: Platform.OS === 'android' ? '15%' : '18%'
   },
+  divider: { paddingRight: dimensions.spacingStackXs8 },
   content: {
-    paddingTop: dimensions.spacingStackXxl16,
     marginBottom: dimensions.spacingStackXBig20,
     backgroundColor: colors.light.neutralColor14,
   },
@@ -24,22 +25,14 @@ export const styles = StyleSheet.create({
     flexDirection: AlignTypes.ROW,
     paddingHorizontal: dimensions.spacingInlineSm16,
     justifyContent: AlignTypes.SPACE_BETWEEN,
+    paddingTop: dimensions.spacingStackLg10
   },
   logo: {
-    width: dimensions.height80,
     height: dimensions.height40,
     borderRadius: dimensions.spacingStackXxs7,
-    backgroundColor: colors.light.neutralColor12,
-
-    shadowColor: colors.light.neutralColor0,
-    shadowOffset: {
-      width: dimensions.spacingStackXxxs6,
-      height: dimensions.spacingStackQuarck4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-
-    elevation: dimensions.spacingInlineXxxs9,
+    flexDirection:AlignTypes.ROW,
+    justifyContent: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER,
   },
   contentView: {
     paddingHorizontal: dimensions.spacingStackXxl16,
@@ -74,9 +67,9 @@ export const styles = StyleSheet.create({
   },
   changePhoto: {
     backgroundColor: colors.light.neutralColor14,
-    width: 34,
-    height: 34,
-    borderRadius: 15,
+    width: dimensions.spacingStackHuge34,
+    height: dimensions.spacingStackHuge34,
+    borderRadius: dimensions.spacingInlineXs14,
     position: 'absolute',
     right: -14,
     justifyContent: AlignTypes.CENTER,
