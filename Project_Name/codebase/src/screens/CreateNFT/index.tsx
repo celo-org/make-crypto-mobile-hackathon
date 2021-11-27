@@ -145,7 +145,6 @@ const CreateNFT = (): JSX.Element => {
       setIsLoading(true);
       const request = await api.post('nft/create', requestData);
       resetStates();
-      console.log(request);
       return navigation.navigate(RoutesNames.HOME_NFT);
     } catch (err) {
       console.log('err: ', err);
