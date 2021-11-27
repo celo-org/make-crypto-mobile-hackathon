@@ -1,0 +1,10 @@
+div.whiteButton {
+  background-color: red;
+  color: black;
+  font-size: 50px;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+}
