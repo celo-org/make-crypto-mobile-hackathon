@@ -1,45 +1,42 @@
 import { border, colors, dimensions } from '@nft/styles';
 import { AlignTypes } from '@nft/utils/enum';
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.light.neutralColor14,
-    paddingTop: dimensions.spacingStackXxl16,
+    paddingTop: dimensions.width40,
+    paddingBottom: dimensions.height80
+  },
+  divider: { 
+    paddingRight: dimensions.spacingStackXs8 
   },
   content: {
-    paddingTop: dimensions.spacingStackXxl16,
     paddingHorizontal: dimensions.spacingStackXxl16,
   },
   header: {
     flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.SPACE_BETWEEN,
+    alignItems: AlignTypes.CENTER,
+    marginHorizontal: dimensions.spacingStackXxl16,
+    paddingTop: Platform.OS === 'ios' ? dimensions.spacingStackXxl16 : 0,
   },
   logo: {
-    width: dimensions.height80,
     height: dimensions.height40,
     borderRadius: dimensions.spacingStackXxs7,
-    backgroundColor: colors.light.neutralColor12,
-
-    shadowColor: colors.light.neutralColor0,
-    shadowOffset: {
-      width: dimensions.spacingStackXxxs6,
-      height: dimensions.spacingStackQuarck4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-
-    elevation: dimensions.spacingInlineXxxs9,
+    flexDirection: AlignTypes.ROW,
+    justifyContent: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER, 
   },
   buttons: {
-    width: dimensions.width90,
+    width: '25%',
     justifyContent: AlignTypes.SPACE_BETWEEN,
     flexDirection: AlignTypes.ROW,
   },
   title: {
     marginTop: dimensions.spacingStackGiant25,
-    marginBottom: dimensions.spacingInlineXxl32,
+    marginBottom: dimensions.spacingStackGiant25,
   },
   uploadFile: {
     marginBottom: dimensions.spacingInlineXs14,
@@ -95,6 +92,7 @@ const styles = StyleSheet.create({
   },
   sellTypeList: {
     marginTop: dimensions.spacingStackXBig20,
+    marginRight: 5
   },
   chooseFile: {
     backgroundColor: colors.light.neutralColor15,
