@@ -15,6 +15,7 @@
   "license": "MIT",
   "scripts": {
     "compile-contracts": "yarn hardhat compile",
+    "deploy-contracts": "hardhat deploy --network alfajores --step deploy-bot",
     "test": "ts-mocha ./farm-bot/codebase/test/**/*.ts"
   },
   "engines": {
