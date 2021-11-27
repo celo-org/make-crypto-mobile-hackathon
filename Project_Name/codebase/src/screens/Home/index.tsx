@@ -43,7 +43,7 @@ const Home = (): JSX.Element => {
 
   const categories = [
     { filterKey: 'trending', title: 'Trending' },
-    { filterKey: 'gamming', title: 'Gamming' },
+    { filterKey: 'gaming', title: 'Gaming' },
     { filterKey: 'sports', title: 'Sports' },
     { filterKey: 'most_recent', title: 'Most Recent' },
   ];
@@ -91,7 +91,7 @@ const Home = (): JSX.Element => {
         <Text
           textDescription={'Find the NFT Perfect to You'}
           fontFamily={fontsFamily.montserrat.regular400}
-          fontsSize={fontsSize.xl24}
+          fontsSize={fontsSize.xl20}
           color={colors.light.neutralColor5}
         />
       </View>
