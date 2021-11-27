@@ -17,6 +17,7 @@ import Back from '../../../assets/left-arrow.svg';
 import { AlignTypes } from '@nft/utils/enum';
 import styles from './styles';
 import { api } from '@nft/services/api';
+import { Alert } from 'react-native';
 
 interface INFTDescriptionResponse {
   nft: {
@@ -49,20 +50,44 @@ const DescriptionNft = (): JSX.Element => {
 
   const navigation = useNavigation();
   const { params } = useRoute();
-  const user_id = 1;
+  const user_id = 1; // TODO remover mock
 
   // const renderModal = isWalletConnected ? handlePlaceABidModal : handleWalletModal;
+
+  const handleLikeImage = async (id: number) => {
+    const request = {
+      nft_id: id,
+      user_id,
+    };
+
+    await api
+      .put('nft/favorite', request)
+      .then((response) => {
+        const isLike = response.data.message.includes('adicionar');
+
+        let nftLiked = Object.assign({}, nftDescriptionResponse);
+        if (isLike) {
+          nftLiked.nft.favorite_count++;
+          nftLiked.nft.favorite = true;
+        } else {
+          nftLiked.nft.favorite_count--;
+          nftLiked.nft.favorite = false;
+        }
+        setNftDescriptionResponse(nftLiked);
+      })
+      .catch((error) => {
+        Alert.alert('Ops! There was a problem', 'Please try again later.');
+      });
+  };
 
   useEffect(() => {
     const fetchNftDescription = async () => {
       try {
-        console.log('entrou aqui de novo');
         setIsLoading(true);
         const response = await api.get(`/nft/details/${params}/${user_id}`);
         setNftDescriptionResponse(response.data);
         setIsLoading(false);
       } catch (error) {
-        console.log('entrou no erro');
         console.log(error);
       } finally {
       }
@@ -115,12 +140,14 @@ const DescriptionNft = (): JSX.Element => {
                   <View style={styles.likes}>
                     <Likes
                       numberOfLikes={nftDescriptionResponse.nft?.favorite_count}
-                      likeFunction={() => {}}
+                      likeFunction={() => {
+                        handleLikeImage(nftDescriptionResponse.nft.id);
+                      }}
+                      isLiked={nftDescriptionResponse.nft?.favorite}
                       textAlign={AlignTypes.CENTER}
                       textColor={colors.light.neutralColor5}
                       textFontFamily={fontsFamily.montserrat.regular400}
                       textFontSize={fontsSize.xs12}
-                      isLiked={nftDescriptionResponse.nft?.favorite}
                     />
                   </View>
                 </View>
