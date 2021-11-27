@@ -16,9 +16,9 @@ Africa
 
 #### Project Description
 
-The creator industry is big and is getting bigger by the day. Despite this, Most creators do not receive the value of what they are putting out. They are either cheated by big companies that offer to pay them or not getting paid at all.
+The creator industry is big and is getting bigger everyday. Despite this, Most creators do not receive the value of what they are putting out. They are either cheated by big companies that offer to pay them or not getting paid at all.
 
-So, I decided a decentralized and transparent platform where creators can be supported by their audiences and receive the value of the contents they are giving them directly.
+So, I decided to build a decentralized and transparent platform where creators can be supported by their audiences and receive the value of the contents they are giving them directly.
 
 Any CELO user who is a creator can only create a single creator account which is a smart contract instance deployed on the CELO blockchain. The creator accounts can there-after be supported by other CELO users who are his audience.
 
@@ -38,17 +38,20 @@ Current features include:
 - Creators can list their NFTs for sale
 - Buy NFTs from creators
 - Explore creators
-- Creator withdraw 
+- Creator withdraw their tokens to their wallet
 - Transfer NFT
 - Creator set up and update their profile
 
 Features I'd like to implement include:
-- Ability to withdraw to differnt account
-- Decentralized community system for creators (using DAOs)
+- Special creator tools for creator accounts 
+- on-chain community/governance system for creators and their supporters (i.e DAO)
 - Creators can Incentivize their supporters with NFTs and custom Tokens
 - Honour Badges for Supporters
 - Creators Identity verification
 - Ability to mint NFTs and create NFT collections
+- Linking of creator's social accounts
+- Recurring tokens (CELO, cUSD, cEUR etc) support
+- Integration of other country based tokens for local creators and supporters (e.g cBRL)
 
 #### URLs
 Live link:
