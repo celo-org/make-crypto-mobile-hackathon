@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "proj",
-    "slug": "proj",
+    "name": "hipa",
+    "slug": "hipa",
+    "scheme": "hipa",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
@@ -10,5 +11,5 @@
       "expo-image-picker"
     ]
   },
-  "name": "proj"
+  "name": "hipa"
 }
