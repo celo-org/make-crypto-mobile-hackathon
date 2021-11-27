@@ -3,12 +3,9 @@ import {
   View,
   SafeAreaView,
   Switch,
-  Button,
   Platform,
   Image,
   ActivityIndicator,
-  TextInput,
-  TextInputProps,
   Alert,
 } from 'react-native';
 import {
@@ -31,9 +28,10 @@ import { colors, fontsFamily, fontsSize } from '@nft/styles';
 import { useState } from 'react';
 import SellTypesList from '@nft/components/SellTypesList';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import { AlignTypes } from '@nft/utils/enum';
+import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 import * as ImagePicker from 'expo-image-picker';
 import { api } from '@nft/services/api';
+import { useNavigation } from '@react-navigation/native';
 
 interface IPickImageProps {
   cancelled: boolean;
@@ -64,6 +62,7 @@ const CreateNFT = (): JSX.Element => {
   const [errorImageSelected, setErrorImageSelected] = useState(false);
   const [errorValue, setErrorValue] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const navigation = useNavigation();
 
   const handleChangeName = (text: string) => {
     text !== '' && setErrorName(false);
@@ -86,6 +85,14 @@ const CreateNFT = (): JSX.Element => {
       }
     })();
   }, []);
+
+  const resetStates = () => {
+    setDescription('');
+    setImageSelected('');
+    setName('');
+    setValue('');
+    setTag('');
+  };
 
   const handleSelectImage = async () => {
     try {
@@ -127,18 +134,21 @@ const CreateNFT = (): JSX.Element => {
       name: name,
       description: description,
       image: imageSelected,
-      tags: ['Art'],
+      tags: isSwitchEnabled ? [tag, 'trending'] : [tag],
       user_id: 1,
       value: value,
     };
 
+    console.log(requestData);
+
     try {
       setIsLoading(true);
       const request = await api.post('nft/create', requestData);
-      console.log('request', request);
-      return request;
+      resetStates();
+      console.log(request);
+      return navigation.navigate(RoutesNames.HOME_NFT);
     } catch (err) {
-      console.log('err', err);
+      console.log('err: ', err);
     } finally {
       setIsLoading(false);
       return;
