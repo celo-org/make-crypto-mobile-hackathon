@@ -11,9 +11,9 @@ TuBoleto
 Lima, Peru, LatAm
 
 #### Team Members
-- Josue Julcarima, Full-Stack / Blockchain Developer
-- Kefrin Huaman, Full-Stack Developer
-- Isaac Malca, Product Manager / Designer
+- Josue Julcarima, Full-Stack / Blockchain Developer ([LinkedIn](https://www.linkedin.com/in/josu%C3%A9-andr%C3%A9s-julcarima-calle-128b0973/?locale=en_US)) ([GitHub](https://github.com/j05u3)) 
+- Kefrin Huaman, Full-Stack Developer ([LinkedIn](https://pe.linkedin.com/in/kefrin)) ([GitHub](https://github.com/kmediv))
+- Isaac Malca, Product Manager / Designer ([LinkedIn](https://pe.linkedin.com/in/isaac-malca-ruiz-8b5140a3))
 
 #### Project Description
 Provide a clear statement of the challenges/issues/problems/gaps your project engages as well as a brief, high-level description of how your project engages the areas you've identified. What is the value of your approach? Who are the intended users?
