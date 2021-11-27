@@ -63,4 +63,4 @@ This prototype was built during the hackathon period and it's still far from bei
 After the Hackathon, I plan to recruit more developers to work on this project and also build a suite of decentralized creator's tools and apps.
 
 #### License
-This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
+This repository includes an [MIT License](https://opensource.org/licenses/MIT) statement though you may want to [choose a different license](https://choosealicense.com/).
