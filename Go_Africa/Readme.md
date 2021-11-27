@@ -1,8 +1,6 @@
 
-# ⚡ Hackathon Project Template ⚡
-![How it work](http://learning.go-africa.io/wp-content/uploads/2021/11/How-it-works2.png)
-
 # Go Africa
+![How it work](http://learning.go-africa.io/wp-content/uploads/2021/11/How-it-works2.png)
 
 ## Project Description
 
