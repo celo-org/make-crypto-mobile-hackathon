@@ -17,14 +17,15 @@
       <div class="flex grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
         <Card
           v-for="item in items"
-          :key="item.id"
+          :key="item.index"
+          :index="item.index"
           :title="item.title"
           :excerpt="item.excerpt"
           :tags="item.tags"
           :fundraiser="item.fundraiser"
           :goal="item.goal"
           :raised="item.raised"
-          :end_date="item.end_date"
+          :end_time="item.end_time"
         />
       </div>
     </div>
@@ -38,7 +39,7 @@ export default {
   components: { Card },
   props: {
     items: {
-      type: Object,
+      type: Array,
       required: true,
     },
   },

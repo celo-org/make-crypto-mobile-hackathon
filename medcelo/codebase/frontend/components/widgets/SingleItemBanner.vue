@@ -31,8 +31,8 @@
             </p>
           </div>
           <div class="relative flex flex-col sm:flex-row sm:space-x-4">
-            <a
-              href="#_"
+            <button
+              @click="supportCampaign()"
               class="
                 flex
                 items-center
@@ -62,7 +62,7 @@
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
-            </a>
+            </button>
             <a
               href="#_"
               class="
@@ -79,6 +79,9 @@
               Learn More
             </a>
           </div>
+          <p class="mt-4 font-bold text-xl tracking-tight text-dark xl:mb-6">
+              raised ${{ raised }} of ${{  goal }}
+            </p>
         </div>
         <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
           <img
@@ -105,10 +108,23 @@ export default {
       required: true,
     },
     tags: {
-      type: String,
+      type: Array,
       required: true,
     },
+    raised: {
+      type: Number,
+      required: true,
+    },
+    goal: {
+      type: Number,
+      required: true,
+    }
   },
+  methods: {
+    supportCampaign: function() {
+      this.$emit('supportCampaign')
+    }
+  }
 }
 </script>
 

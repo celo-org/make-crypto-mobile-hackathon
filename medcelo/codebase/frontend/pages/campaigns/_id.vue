@@ -1,18 +1,22 @@
 <template>
   <main>
-    <Header />
+    <Header @connectToWallet="connectToWallet()" />
     <SingleItemBanner
-      title="lorem ipsum dolor dolor dolor lorem ipsum ipsum ipsum ipsum ipsum"
-      excerpt="lorem ipsum dolor dolor dolor lorem ipsum ipsum ipsum ipsum ipsum lorem ipsum dolor dolor dolor lorem ipsum ipsum ipsum ipsum ipsum"
+      :title="item.title"
+      :tags="item.tags"
+      :excerpt="item.excerpt"
+      :description="item.description"
+      :goal="item.goal"
+      :raised="item.raised"
+      :supporters="item.supporters"
+      :end_time="item.end_time"
+      @supportCampaign="supportCampaign($route.params.id, 10)"
     />
-    <!-- Section 1 -->
     <section class="w-full bg-white pt-7 pb-7 md:pt-20 md:pb-24">
       <div
         class="
           box-border
           flex flex-col
-          items-center
-          content-center
           px-8
           mx-auto
           leading-6
@@ -34,7 +38,6 @@
             mt-5
             mb-4
             -ml-5
-            text-center
             bg-no-repeat bg-contain
             border-solid
             md:ml-0 md:mt-0 md:max-w-none
@@ -43,10 +46,47 @@
             xl:pl-10
           "
         >
-          <img
-            src="https://cdn.devdojo.com/images/december2020/productivity.png"
-            class="p-2 pl-6 pr-5 xl:pl-16 xl:pr-20"
-          />
+          <div class="container mx-auto">
+            <div
+              class="
+                grid-cols-2
+                p-2
+                space-y-2
+                lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3
+              "
+            >
+              <div class="w-full col-span-2 row-span-2 rounded">
+                <img
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                  alt="image"
+                />
+              </div>
+              <div class="w-full rounded">
+                <img
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                  alt="image"
+                />
+              </div>
+              <div class="w-full rounded">
+                <img
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                  alt="image"
+                />
+              </div>
+              <div class="w-full rounded">
+                <img
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                  alt="image"
+                />
+              </div>
+              <div class="w-full rounded">
+                <img
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                  alt="image"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Content -->
@@ -60,19 +100,6 @@
             md:w-1/2 md:pl-10 md:order-none
           "
         >
-          <h2
-            class="
-              m-0
-              text-xl
-              font-semibold
-              leading-tight
-              border-0 border-gray-300
-              lg:text-3xl
-              md:text-2xl
-            "
-          >
-            Boost Productivity
-          </h2>
           <p
             class="
               pt-4
@@ -86,89 +113,8 @@
               lg:text-lg
             "
           >
-            Build an atmosphere that creates productivity in your organization
-            and your company culture.
+            {{ item.description }}
           </p>
-          <ul class="p-0 m-0 leading-6 border-0 border-gray-300">
-            <li
-              class="
-                box-border
-                relative
-                py-1
-                pl-0
-                text-left text-gray-500
-                border-solid
-              "
-            >
-              <span
-                class="
-                  inline-flex
-                  items-center
-                  justify-center
-                  w-6
-                  h-6
-                  mr-2
-                  text-white
-                  bg-yellow-300
-                  rounded-full
-                "
-                ><span class="text-sm font-bold">✓</span></span
-              >
-              Maximize productivity and growth
-            </li>
-            <li
-              class="
-                box-border
-                relative
-                py-1
-                pl-0
-                text-left text-gray-500
-                border-solid
-              "
-            >
-              <span
-                class="
-                  inline-flex
-                  items-center
-                  justify-center
-                  w-6
-                  h-6
-                  mr-2
-                  text-white
-                  bg-yellow-300
-                  rounded-full
-                "
-                ><span class="text-sm font-bold">✓</span></span
-              >
-              Speed past your competition
-            </li>
-            <li
-              class="
-                box-border
-                relative
-                py-1
-                pl-0
-                text-left text-gray-500
-                border-solid
-              "
-            >
-              <span
-                class="
-                  inline-flex
-                  items-center
-                  justify-center
-                  w-6
-                  h-6
-                  mr-2
-                  text-white
-                  bg-yellow-300
-                  rounded-full
-                "
-                ><span class="text-sm font-bold">✓</span></span
-              >
-              Learn the top techniques
-            </li>
-          </ul>
         </div>
         <!-- End  Content -->
       </div>
@@ -183,7 +129,26 @@ import Footer from '~/components/footers/Footer.vue'
 import SingleItemBanner from '~/components/widgets/SingleItemBanner.vue'
 import ItemHeader from '~/components/widgets/ItemHeader.vue'
 
+import CeloMixin from '~/mixins/celo.js'
+
 export default {
+  mixins: [CeloMixin],
   components: { Footer, Header, SingleItemBanner, ItemHeader },
+  data() {
+    return {
+      item: {},
+    }
+  },
+  async mounted() {
+    try {
+      await this.connectToWallet()
+
+      await this.getWalletBalance()
+
+      this.item = await this.fetchCampaignFull(this.$route.params.id)
+    } catch (error) {
+      console.log(error)
+    }
+  },
 }
 </script>

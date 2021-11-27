@@ -9,7 +9,7 @@
       xl:col-span-4
     "
   >
-    <a href="#_" class="block">
+    <nuxt-link :to="`/campaigns/${index}/`" class="block">
       <img
         class="
           object-cover
@@ -22,7 +22,7 @@
         "
         src="https://cdn.devdojo.com/images/may2021/fruit.jpg"
       />
-    </a>
+    </nuxt-link>
     <div class="flex"><Tag v-for="tag in tags" :key="tag" :value="tag" /></div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
       <a href="#_">{{ title }}</a>
@@ -32,7 +32,7 @@
     </p>
     <p class="pt-2 text-xs font-medium">
       <a href="#_" class="mr-1 underline">{{ fundraiser }}</a> ·
-      <span class="mx-1">{{ end_date }}</span> ·
+      <span class="mx-1">{{ end_time }}</span> ·
       <span class="mx-1 text-green-300">${{ raised }}</span> of
       <span class="mx-1 text-green-500">${{ goal }}</span> ·
     </p>
@@ -46,8 +46,12 @@ export default {
   name: 'Card',
   components: { Tag },
   props: {
+    index: {
+      type: Number,
+      required: true,
+    },
     tags: {
-      type: Object,
+      type: Array,
     },
     title: {
       type: String,
@@ -61,16 +65,16 @@ export default {
       type: String,
       required: true,
     },
-    end_date: {
+    end_time: {
       type: String,
       required: true,
     },
     raised: {
-      type: String,
+      type: Number,
       required: true,
     },
     goal: {
-      type: String,
+      type: Number,
       required: true,
     },
   },
