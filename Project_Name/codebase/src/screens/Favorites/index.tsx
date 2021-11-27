@@ -7,12 +7,13 @@ import { useFocusEffect, useNavigation } from '@react-navigation/native';
 
 import { styles } from './styles';
 
-import { FilterList, Nft, SquareButton, Text } from '@nft/components';
+import { FilterList, LineButton, Nft, SquareButton, Text } from '@nft/components';
 import { colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
 import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 
 import MenuSvg from '../../../assets/menu.svg';
 import Magnifier from '../../../assets/magnifier.svg';
+import EmptyFavorites from '../../../assets/empty-favorites.svg';
 
 import { api } from '@nft/services/api';
 
@@ -140,13 +141,36 @@ const Home = (): JSX.Element => {
             )}
           />
         ) : (
-          <View style={styles.title}>
-            <Text
-              textDescription={"Ops, I think you don't have any NFT liked"}
-              fontFamily={fontsFamily.montserrat.regular400}
-              fontsSize={fontsSize.xl24}
-              color={colors.light.neutralColor5}
-            />
+          <View style={styles.emptyFavorites}>
+            <View style={styles.emptyFavoritesImage}>
+              <EmptyFavorites />
+            </View>
+            <View style={styles.emptyFavoritesText}>
+              <Text
+                textDescription={"You don't have a favorite NFT yet."}
+                fontFamily={fontsFamily.montserrat.medium500}
+                fontsSize={fontsSize.md16}
+                color={colors.light.neutralColor5}
+                textAlign={AlignTypes.CENTER}
+              />
+              <Text
+                textDescription={'Look the home page to find the art perfect to you.'}
+                fontFamily={fontsFamily.montserrat.medium500}
+                fontsSize={fontsSize.md16}
+                color={colors.light.neutralColor5}
+                textAlign={AlignTypes.CENTER}
+              />
+            </View>
+            <View>
+              <LineButton
+                onPress={() => navigate.navigate(RoutesNames.HOME_NFT)}
+                label={'Find a NFT'}
+                textFontFamily={fontsFamily.montserrat.medium500}
+                textColor={colors.light.neutralColor4}
+                textFontSize={fontsSize.md16}
+                textAlign={AlignTypes.CENTER}
+              />
+            </View>
           </View>
         )}
       </View>

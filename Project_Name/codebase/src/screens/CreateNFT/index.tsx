@@ -139,8 +139,6 @@ const CreateNFT = (): JSX.Element => {
       value: value,
     };
 
-    console.log(requestData);
-
     try {
       setIsLoading(true);
       const request = await api.post('nft/create', requestData);
@@ -301,7 +299,7 @@ const CreateNFT = (): JSX.Element => {
                 />
               </View>
               <View style={styles.tagContent}>
-                {tags.map((item) => (
+                {tags.map((item, index) => (
                   <FilterButton
                     title={item}
                     isActive={item === tag}
@@ -310,6 +308,7 @@ const CreateNFT = (): JSX.Element => {
                     textColor={colors.light.neutralColor5}
                     textFontFamily={fontsFamily.montserrat.semiBold600}
                     textFontSize={fontsSize.sm14}
+                    key={index}
                   />
                 ))}
               </View>

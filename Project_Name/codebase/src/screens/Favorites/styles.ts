@@ -49,4 +49,14 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingBottom: isUnder670 ? dimensions.padding27 : dimensions.padding18,
   },
+  emptyFavorites: {
+    marginTop: dimensions.spacingInlineXxl32,
+  },
+  emptyFavoritesImage: {
+    marginBottom: dimensions.spacingStackXGiant30,
+  },
+  emptyFavoritesText: {
+    paddingHorizontal: dimensions.spacingStackGiant25,
+    marginBottom: dimensions.spacingStackXBig20,
+  },
 });
