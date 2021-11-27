@@ -42,38 +42,38 @@ contract FarmBot is Owned, FarmbotERC20 {
     constructor(
         address _owner,
         address _stakingRewards,
-		address _router,
-		address[] memory _path0,
-		address[] memory _path1,
-		string memory _symbol
+        address _router,
+        address[] memory _path0,
+        address[] memory _path1,
+        string memory _symbol
     ) Owned(_owner) {
         stakingRewards = StakingRewards(_stakingRewards);
-		rewardsToken = stakingRewards.rewardsToken();
+        rewardsToken = stakingRewards.rewardsToken();
 
-		stakingToken = IUniswapV2Pair(address(stakingRewards.stakingToken()));
-		stakingToken0 = IERC20(stakingToken.token0());
-		stakingToken1 = IERC20(stakingToken.token1());
+        stakingToken = IUniswapV2Pair(address(stakingRewards.stakingToken()));
+        stakingToken0 = IERC20(stakingToken.token0());
+        stakingToken1 = IERC20(stakingToken.token1());
 
-		path0 = _path0;
-		path1 = _path1;
-		symbol = _symbol;
+        path0 = _path0;
+        path1 = _path1;
+        symbol = _symbol;
 
-		router = IUniswapV2Router02(_router);
+        router = IUniswapV2Router02(_router);
     }
 
     function updateFee(uint256 _feeNumerator, uint256 _feeDenominator) external onlyOwner {
-	feeNumerator = _feeNumerator;
-	feeDenominator = _feeDenominator;
+        feeNumerator = _feeNumerator;
+        feeDenominator = _feeDenominator;
     }
 
     function updatePaths(address[] calldata _path0, address[] calldata _path1) external onlyOwner {
-	path0 = _path0;
-	path1 = _path1;
+        path0 = _path0;
+        path1 = _path1;
     }
 
     function updateSlippage(uint256 _slippageNumerator, uint256 _slippageDenominator) external onlyOwner {
-	slippageNumerator = _slippageNumerator;
-	slippageDenominator = _slippageDenominator;
+        slippageNumerator = _slippageNumerator;
+        slippageDenominator = _slippageDenominator;
     }
 
     function getFpAmount(uint256 _lpAmount) public view returns (uint256) {
@@ -85,11 +85,11 @@ contract FarmBot is Owned, FarmbotERC20 {
     }
 
     function getLpAmount(uint256 _fpAmount) public view returns (uint256) {
-	if (totalSupply == 0) {
-	    return 0;
-	} else {
-	    return _fpAmount * lpTotalBalance / totalSupply;
-	}
+        if (totalSupply == 0) {
+            return 0;
+        } else {
+            return _fpAmount * lpTotalBalance / totalSupply;
+        }
     }
 
     function deposit(uint256 _lpAmount) public {
@@ -97,15 +97,15 @@ contract FarmBot is Owned, FarmbotERC20 {
         require(transferSuccess, "Transfer failed, aborting deposit");
 
         uint256 _fpAmount = this.getFpAmount(_lpAmount);
-	_mint(msg.sender, _fpAmount);
+        _mint(msg.sender, _fpAmount);
         lpTotalBalance += _lpAmount;
         investInFarm();
     }
 
     function withdrawAll() public {
-	require(balanceOf[msg.sender] > 0, "Cannot withdraw zero balance");
-	uint256 _lpAmount = getLpAmount(balanceOf[msg.sender]);
-	withdraw(_lpAmount);
+        require(balanceOf[msg.sender] > 0, "Cannot withdraw zero balance");
+        uint256 _lpAmount = getLpAmount(balanceOf[msg.sender]);
+        withdraw(_lpAmount);
     }
 
     function withdraw(uint256 _lpAmount) public {
@@ -120,7 +120,7 @@ contract FarmBot is Owned, FarmbotERC20 {
 
         bool transferSuccess = stakingToken.transfer(msg.sender, _lpAmount);
         require(transferSuccess, "Transfer failed, aborting withdrawal");
-	_burn(msg.sender, _fpAmount);
+        _burn(msg.sender, _fpAmount);
         lpTotalBalance -= _lpAmount;
     }
 
@@ -134,75 +134,75 @@ contract FarmBot is Owned, FarmbotERC20 {
     function claimRewards(uint deadline) public ensure(deadline) {
         // todo eventually make private
         stakingRewards.getReward();
-	uint256 tokenBalance = rewardsToken.balanceOf(address(this));
+        uint256 tokenBalance = rewardsToken.balanceOf(address(this));
 
-	if (tokenBalance == 0) {
-	    return;
-	}
+        if (tokenBalance == 0) {
+            return;
+        }
 
-	uint256 feeAmount = tokenBalance * feeNumerator / feeDenominator;
-	uint256 halfTokens = (tokenBalance - feeAmount) / 2;
+        uint256 feeAmount = tokenBalance * feeNumerator / feeDenominator;
+        uint256 halfTokens = (tokenBalance - feeAmount) / 2;
 
-	uint256 amountToken0;
-	// Figure out best-case scenario amount of token0 we can get and swap
-	if (path0.length >= 2) {
-	    uint[] memory amountsOut = router.getAmountsOut(halfTokens, path0);
-	    uint amountOut = amountsOut[amountsOut.length-1];
-	    rewardsToken.approve(address(router), halfTokens);
-	    uint[] memory amountsSwapped = router.swapExactTokensForTokens(
+        uint256 amountToken0;
+        // Figure out best-case scenario amount of token0 we can get and swap
+        if (path0.length >= 2) {
+            uint[] memory amountsOut = router.getAmountsOut(halfTokens, path0);
+            uint amountOut = amountsOut[amountsOut.length - 1];
+            rewardsToken.approve(address(router), halfTokens);
+            uint[] memory amountsSwapped = router.swapExactTokensForTokens(
                 halfTokens,
-		amountOut * slippageNumerator / slippageDenominator,
-		path0,
-		address(this),
-		deadline
+                amountOut * slippageNumerator / slippageDenominator,
+                path0,
+                address(this),
+                deadline
             );
-	    amountToken0 = amountsSwapped[amountsSwapped.length-1];
-	} else {
-	    amountToken0 = halfTokens;
-	}
+            amountToken0 = amountsSwapped[amountsSwapped.length - 1];
+        } else {
+            amountToken0 = halfTokens;
+        }
 
-	uint256 amountToken1;
-	// Figure out best-case scenario amount of token1 we can get and swap
-	if (path1.length >= 2) {
-	    uint[] memory amountsOut = router.getAmountsOut(halfTokens, path1);
-	    uint amountOut = amountsOut[amountsOut.length-1];
-	    rewardsToken.approve(address(router), halfTokens);
-	    uint[] memory amountsSwapped = router.swapExactTokensForTokens(
+        uint256 amountToken1;
+        // Figure out best-case scenario amount of token1 we can get and swap
+        if (path1.length >= 2) {
+            uint[] memory amountsOut = router.getAmountsOut(halfTokens, path1);
+            uint amountOut = amountsOut[amountsOut.length - 1];
+            rewardsToken.approve(address(router), halfTokens);
+            uint[] memory amountsSwapped = router.swapExactTokensForTokens(
                 halfTokens,
-		amountOut * slippageNumerator / slippageDenominator,
-		path1,
-		address(this),
-		deadline
+                amountOut * slippageNumerator / slippageDenominator,
+                path1,
+                address(this),
+                deadline
             );
-	    amountToken1 = amountsSwapped[amountsSwapped.length-1];
-	} else {
-	    amountToken1 = halfTokens;
-	}
+            amountToken1 = amountsSwapped[amountsSwapped.length - 1];
+        } else {
+            amountToken1 = halfTokens;
+        }
 
-	// Approve the router to spend the bot's token0/token1
-	stakingToken0.approve(address(router), amountToken0);
-	stakingToken1.approve(address(router), amountToken1);
-	// Actually add liquidity
-	router.addLiquidity(
-	    address(stakingToken0),
-	    address(stakingToken1),
-	    amountToken0,
-	    amountToken1,
-	    amountToken0 * slippageNumerator / slippageDenominator,
-	    amountToken1 * slippageNumerator / slippageDenominator,
-	    address(this),
-	    deadline
+        // Approve the router to spend the bot's token0/token1
+        stakingToken0.approve(address(router), amountToken0);
+        stakingToken1.approve(address(router), amountToken1);
+        // Actually add liquidity
+        router.addLiquidity(
+            address(stakingToken0),
+            address(stakingToken1),
+            amountToken0,
+            amountToken1,
+            amountToken0 * slippageNumerator / slippageDenominator,
+            amountToken1 * slippageNumerator / slippageDenominator,
+            address(this),
+            deadline
         );
 
-	// How much LP we have to re-invest
-	uint256 lpBalance = stakingToken.balanceOf(address(this));
-	stakingToken.approve(address(stakingRewards), lpBalance);
+        // How much LP we have to re-invest
+        uint256 lpBalance = stakingToken.balanceOf(address(this));
+        stakingToken.approve(address(stakingRewards), lpBalance);
 
-	// Actually reinvest and adjust FP weight
-	stakingRewards.stake(lpBalance);
-	lpTotalBalance += lpBalance;
+        // Actually reinvest and adjust FP weight
+        stakingRewards.stake(lpBalance);
+        lpTotalBalance += lpBalance;
 
-	// Send incentive fee to sender
-	rewardsToken.transfer(msg.sender, feeAmount);
+        // Send incentive fee to sender
+        rewardsToken.transfer(msg.sender, feeAmount);
     }
 }
