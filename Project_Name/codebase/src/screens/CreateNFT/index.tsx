@@ -23,7 +23,7 @@ import {
 import MenuSvg from '../../../assets/menu.svg';
 import Magnifier from '../../../assets/magnifier.svg';
 import TagSvg from '../../../assets/tag.svg';
-import HandEther from '../../../assets/hand-ether.svg';
+import Bid from '../../../assets/bid.svg';
 import UpArrow from '../../../assets/up-arrow.svg';
 
 import styles from './styles';
@@ -46,7 +46,7 @@ interface IPickImageProps {
 const CreateNFT = (): JSX.Element => {
   const sellTypes = [
     { filterKey: 'fixed', title: 'Fixed price', icon: TagSvg },
-    { filterKey: 'openBids', title: 'Open for bids', icon: HandEther },
+    { filterKey: 'openBids', title: 'Open for bids', icon: Bid },
     // { filterKey: 'auction', title: 'Timed auction', icon: TimeEnding },
   ];
 
