@@ -1,0 +1,329 @@
+% \begin{abstract}
+% \end{abstract}
+
+\section{Present Value Model}
+
+Based off prior analysis by the cLabs Team~\cite{celo}, we model the marketcap of Celo at a certain time $m(t)$ as the sum of all discounted future demand for Celo. 
+In other words, we are calculating its present value:
+
+\begin{equation}
+    m(t) = \sum_{s\in S}{\int_{t}^{\infty} demand'_s(\tau) \cdot discount_t(\tau) \cdot dilution(\tau) \,d\tau}
+\end{equation}
+
+Where:
+
+\begin{enumerate}[label=(\roman*)]
+	\item $demand'_s(\tau)$ is the rate at which demand for Celo expands or contracts at a certain time $\tau$ for source $s$ . 
+    We will be detailing our analysis of the rates for the different sources of demand $S$ in this paper.
+
+	\item $discount_t(\tau)$ is the discount factor applied to a future value at time $\tau$. We use a exponential decay function with rate $r$:
+    
+    \begin{equation}
+        discount_t(\tau) = e^{-r(\tau-t)}  
+    \end{equation}
+
+    Note that this function is offset by $t$ so that $discount_t(t)=1$ (i.e. present value is relative to $t$).
+
+	\item $dilution(\tau)$ is another discount factor applied to a future value at time $\tau$. This discount factor comes from an increased supply of Celo.
+	We use a exponential decay function with rate $\omega$ with a lower bound $0 \leq \alpha \leq 1$ which represents how quickly the existing supply is diluted and 
+    the maximum dilution respectively:
+    
+    \begin{equation}
+        dilution(\tau) = (1-\alpha)e^{-\omega\tau} + \alpha
+    \end{equation}
+
+    For example, $\alpha=0.2$, $\omega=0.1$, and $\tau=5\textrm{ year}$, means that the initial supply of Celo will be 68.5\% of the supply in the 5th year. Ultimately, as 
+    $\tau \to \infty$, the initial supply will be 20\% of the total supply (i.e. the total supply is 5x that of the initial supply).
+\end{enumerate}
+
+Note that in this paper we consider $\tau$ and $t$ as units of years. 
+
+\section{Sources of Demand}
+
+We consider 4 sources of demand for Celo
+
+\begin{enumerate}[label=(\roman*)]
+	\item $demand_{cash}(\tau)$. The $cash$ demand is the demand that users have for CUSD to use as cash in their everyday transactions. Celo's stablecoin reserve mechanism
+	is such that every \$1 of demand for CUSD will create a \$1 of demand for Celo itself. 
+
+	\item $demand_{fees}(\tau)$. The $fees$ demand is the demand that users have for Celo in order to pay their transaction fees when transacting their CUSD cash. 
+
+	\item $demand_{interest\_fees}(\tau)$. Our proof-of-deposit scheme is such that block rewards comprising transaction fees and newly minted Celo are distributed pro-rata 
+    amongst users who deposit/lock their CUSD in our scheme. This is essentially paying interest on a deposit. Specifically, the $interest\_fees$ demand is the demand for CUSD that 
+    results from fees being paid as interest on deposits of CUSD.
+    
+	\item $demand_{interest\_mint}(\tau)$. Our proof-of-deposit scheme is such that block rewards comprising transaction fees and newly minted Celo are distributed pro-rata 
+    amongst users who deposit/lock their CUSD in our scheme. This is essentially paying interest on a deposit. Specifically, the $interest\_mint$ demand is the demand for CUSD that 
+    results from newly minted Celo being paid as interest on deposits of CUSD.
+
+\end{enumerate}
+
+\subsection{Demand from Cash}
+
+We model the demand for CUSD as cash as a simple exponential growth function with rate $g$ and initial demand $S_0$:
+
+\begin{equation}
+    demand_{cash}(\tau) = S_0e^{g\tau}
+\end{equation}
+
+With this model in hand, we can take its derivative to calculate the rate at which demand for CUSD as cash expands or contracts at a certain time $\tau$:
+
+\begin{equation}
+    demand'_{cash}(\tau) = gS_0e^{g\tau}
+\end{equation}
+
+For example, if $S_0=\$10MM$, $g=0.25$ and $\tau=5\textrm{ years}$, then the demand for CUSD (i.e. how much CUSD is used as cash) at that time is $\$34.9MM$ and the 
+instantaneous rate at which it expands is $\$8.7MM\textrm{ per year}$.
+
+\subsection{Demand from Fees}
+
+We model the rate at which demand, for Celo to pay fees, expands or contracts to be a function of how much cash there is at a certain time $demand_{cash}(\tau)$,
+how many times per year each \$1 of CUSD as cash is transacted $v$ (i.e. velocity of money), and what percentage of transacted value is charged as fees $f$:
+
+\begin{equation}
+    demand'_{fees}(\tau) = demand_{cash}(\tau)\cdot vf
+\end{equation}
+\begin{equation}
+    = S_0e^{g\tau}\cdot vf
+\end{equation}
+
+For example, if $S_0=\$10MM$, $g=0.25$, $\tau=5\textrm{ years}$, $v=10$, and $f=0.2\%$, then the instantaneous rate at which demand for Celo to pay fees expands is $\$0.7MM\textrm{ per year}$.
+
+\subsection{Demand from Interest (paid by X)}
+
+Like Celo's stablecoin mechanism, we assume the APY (interest rate) on deposits of CUSD are held at an equilibrium rate by market forces; for example, if the equilibrium rate is 5\% APY, 
+and the APY is currently at 6\%, we assume market forces will deposit more CUSD until the effective APY is lowered to 5\%. We model the compound interest rate over a period of time $\Delta\tau$
+with an equilbirum rate $i$ as follows:
+
+\begin{equation}
+    compound\_interest\_rate(\Delta\tau) = e^{i\Delta\tau} - 1
+\end{equation}
+
+For example:
+\begin{enumerate}
+    \item If $i=0.05$ and $\Delta\tau=1\textrm{ year}$, then the compounded interest rate is $5.1\%$.
+    \item If $i=0.05$ and $\Delta\tau=5\textrm{ year}$, then the compounded interest rate is $28.4\%$.
+\end{enumerate}
+
+Given this and the amount of interest paid over a period of time $\beta \cdot interest\_from\_X'(\tau)\cdot \Delta\tau$ where $0\leq \beta \leq 1$ is the portion of interest paid on deposited CUSD 
+(with $1-\beta$ being the portion paid on staked Celo), we can arrive at a general formula to calculate the demand for CUSD as deposits at a certain time $\tau$:
+
+\begin{equation}
+    demand_{interest\_X}(\tau) = \lim_{\Delta\tau\to0} \frac{\beta \cdot interest\_from\_X'(\tau)\cdot \Delta\tau}{compound\_interest\_rate(\Delta\tau)}
+\end{equation}
+\begin{equation}
+    = \lim_{\Delta\tau\to0} \frac{\beta \cdot interest\_from\_X'(\tau)\cdot \Delta\tau}{e^{i\Delta\tau} - 1}
+\end{equation}
+
+Applying L'Hospital's rule $\lim_{x\to c} \frac{f(x)}{g(x)} = \lim_{x\to c} \frac{f'(x)}{g'(x)}$:
+
+\begin{equation}
+    = \lim_{\Delta\tau\to0} \frac{\beta \cdot interest\_from\_X'(\tau)}{ie^{i\Delta\tau}}
+\end{equation}
+\begin{equation}
+    = \frac{\beta \cdot interest\_from\_X'(\tau)}{i}
+\end{equation}
+
+\subsection{Demand from Interest (paid by Fees)}
+
+As we already know the rate at which fees expands and contracts, we can use this directly as the rate of interest:
+
+\begin{equation}
+    interest\_from\_fees'(\tau) = demand'_{fees}(\tau)
+\end{equation}
+
+We then have a model for demand for CUSD as deposit as a result of fees being paid as interest at a certain time $\tau$:
+
+\begin{equation}
+    demand_{interest\_fees}(\tau) = \frac{\beta \cdot interest\_from\_fees'(\tau)}{i}
+\end{equation}
+\begin{equation}
+    = \frac{\beta \cdot S_0e^{g\tau}\cdot vf}{i}
+\end{equation}
+
+To calculate the rate at which this demand changes $demand'_{interest\_fees}(\tau)$, we take the derivative:
+
+\begin{equation}
+    demand'_{interest\_fees}(\tau) = \frac{\beta \cdot S_0\cdot vf}{i} \cdot ge^{g\tau}
+\end{equation}
+
+
+
+\subsection{Demand from Interest (paid by Minted Celo)}
+
+The rate of interest from minted Celo tokens can be determined from the rate at which the marketcap $m(t)$ is diluted $dilution(\tau)$:
+
+\begin{equation}
+    interest\_from\_mint'(\tau) = (1-dilution(\tau)) \cdot m(t)
+\end{equation}
+\begin{equation}
+    = (1 - (1-\alpha)e^{-\omega\tau} - \alpha) \cdot m(t)
+\end{equation}
+\begin{equation}
+    = (1 - \alpha)\cdot m(t) \cdot (1 - e^{-\omega\tau})
+\end{equation}
+
+We then have a model for demand for CUSD as deposit as a result of minted Celo being paid as interest at a certain time $\tau$:
+
+\begin{equation}
+    demand_{interest\_mint}(\tau) = \frac{\beta \cdot interest\_from\_mint'(\tau)}{i}
+\end{equation}
+\begin{equation}
+    = \frac{\beta \cdot (1 - \alpha)\cdot m(t) \cdot (1 - e^{-\omega\tau})}{i}
+\end{equation}
+
+To calculate the rate at which this demand changes $demand'_{interest\_mint}(\tau)$, we take the derivative:
+
+\begin{equation}
+    demand'_{interest\_mint}(\tau) = \frac{\beta \cdot (1 - \alpha)\cdot m(t)}{i} \cdot \omega e^{-\omega\tau}
+\end{equation}
+
+
+\section{Present Value of Demand}
+
+We now apply the present value formula on each source of demand:
+
+\begin{equation}
+    PV_s(t) = \int_{t}^{\infty} demand'_s(\tau) \cdot discount_t(\tau) \cdot dilution(\tau) \,d\tau
+\end{equation}
+
+\subsection{PV of Demand from Cash}
+
+Substituting into the formula for present value:
+
+\begin{equation}
+    PV_{cash}(t) = \int_{t}^{\infty} demand'_{cash}(\tau) \cdot discount_t(\tau) \cdot dilution(\tau) \,d\tau
+\end{equation}
+\begin{equation}
+    = \int_{t}^{\infty} gS_0e^{g\tau} \cdot e^{-r(\tau-t)} \cdot ((1-\alpha)e^{-\omega\tau} + \alpha) \,d\tau
+\end{equation}
+\begin{equation}
+    = gS_0 \cdot e^{rt} \cdot \int_{t}^{\infty}  (1-\alpha)e^{(g-r-\omega)\tau} + \alpha e^{(g-r)\tau} \,d\tau
+\end{equation}
+\begin{equation}
+    = gS_0 \cdot e^{rt} \cdot \left[ \frac{(1-\alpha)e^{(g-r-\omega)\tau}}{g-r-\omega} + \frac{\alpha e^{(g-r)\tau}}{g-r} \right]_{t}^{\infty}
+\end{equation}
+
+Under the assumption $g < r$ results in:
+
+\begin{equation}
+    = gS_0 \cdot e^{rt} \cdot \left( \frac{(1-\alpha)e^{(g-r-\omega)t}}{r+\omega-g} + \frac{\alpha e^{(g-r)t}}{r-g} \right)
+\end{equation}
+\begin{equation}
+    = gS_0 \cdot \left( \frac{(1-\alpha)e^{(g-\omega)t}}{r+\omega-g} + \frac{\alpha e^{gt}}{r-g} \right)
+\end{equation}
+
+
+\subsection{PV of Demand from Fees}
+
+Substituting into the formula for present value:
+
+\begin{equation}
+    PV_{fees}(t) = \int_{t}^{\infty} demand'_{fees}(\tau) \cdot discount_t(\tau) \cdot dilution(\tau) \,d\tau
+\end{equation}
+\begin{equation}
+    = \int_{t}^{\infty} S_0e^{g\tau}\cdot vf \cdot e^{-r(\tau-t)} \cdot ((1-\alpha)e^{-\omega\tau} + \alpha) \,d\tau
+\end{equation}
+\begin{equation}
+    = S_0\cdot vf \cdot e^{rt} \cdot \int_{t}^{\infty}  (1-\alpha)e^{(g-r-\omega)\tau} + \alpha e^{(g-r)\tau} \,d\tau
+\end{equation}
+\begin{equation}
+    = S_0\cdot vf \cdot e^{rt} \cdot \left[ \frac{(1-\alpha)e^{(g-r-\omega)\tau}}{g-r-\omega} + \frac{\alpha e^{(g-r)\tau}}{g-r} \right]_{t}^{\infty}
+\end{equation}
+
+Under the assumption $g < r$ results in:
+
+\begin{equation}
+    = S_0\cdot vf \cdot e^{rt} \cdot \left( \frac{(1-\alpha)e^{(g-r-\omega)t}}{r+\omega-g} + \frac{\alpha e^{(g-r)t}}{r-g} \right)
+\end{equation}
+\begin{equation}
+    = S_0\cdot vf \cdot \left( \frac{(1-\alpha)e^{(g-\omega)t}}{r+\omega-g} + \frac{\alpha e^{gt}}{r-g} \right)
+\end{equation}
+\begin{equation}
+    = PV_{cash}(t) \cdot \frac{vf}{g}
+\end{equation}
+
+\subsection{PV of Demand from Interest (paid by Fees)}
+
+Substituting into the formula for present value:
+
+\begin{equation}
+    PV_{interest\_fees}(t) = \int_{t}^{\infty} demand'_{interest\_fees}(\tau) \cdot discount_t(\tau) \cdot dilution(\tau) \,d\tau
+\end{equation}
+\begin{equation}
+    = \int_{t}^{\infty} \frac{\beta \cdot S_0\cdot vf}{i} \cdot ge^{g\tau} \cdot e^{-r(\tau-t)} \cdot ((1-\alpha)e^{-\omega\tau} + \alpha) \,d\tau
+\end{equation}
+\begin{equation}
+    = \frac{\beta \cdot S_0\cdot vf}{i} \cdot ge^{rt} \cdot \int_{t}^{\infty}  (1-\alpha)e^{(g-r-\omega)\tau} + \alpha e^{(g-r)\tau} \,d\tau
+\end{equation}
+\begin{equation}
+    = \frac{\beta \cdot S_0\cdot vf}{i} \cdot ge^{rt} \cdot \left[ \frac{(1-\alpha)e^{(g-r-\omega)\tau}}{g-r-\omega} + \frac{\alpha e^{(g-r)\tau}}{g-r} \right]_{t}^{\infty}
+\end{equation}
+
+Under the assumption $g < r$ results in:
+
+\begin{equation}
+    = \frac{\beta \cdot S_0\cdot vf}{i} \cdot ge^{rt} \cdot \left( \frac{(1-\alpha)e^{(g-r-\omega)t}}{r+\omega-g} + \frac{\alpha e^{(g-r)t}}{r-g} \right)
+\end{equation}
+\begin{equation}
+    = \frac{\beta \cdot S_0\cdot vf \cdot g}{i} \cdot \left( \frac{(1-\alpha)e^{(g-\omega)t}}{r+\omega-g} + \frac{\alpha e^{gt}}{r-g} \right)
+\end{equation}
+\begin{equation}
+    = PV_{fees}(t) \cdot \frac{\beta g}{i}
+\end{equation}
+
+
+\subsection{PV of Demand from Interest (paid by Minted Celo)}
+
+Substituting into the formula for present value:
+
+\begin{equation}
+    PV_{interest\_mint}(t) = \int_{t}^{\infty} demand'_{interest\_mint}(\tau) \cdot discount_t(\tau) \cdot dilution(\tau) \,d\tau
+\end{equation}
+\begin{equation}
+    = \int_{t}^{\infty} \frac{\beta \cdot (1 - \alpha)\cdot m(t)}{i} \cdot \omega e^{-\omega\tau} \cdot e^{-r(\tau-t)} \cdot ((1-\alpha)e^{-\omega\tau} + \alpha) \,d\tau
+\end{equation}
+\begin{equation}
+    = \frac{\beta \cdot (1 - \alpha)\cdot m(t)}{i} \cdot \omega e^{rt} \cdot \int_{t}^{\infty}  (1-\alpha)e^{(-r-2\omega)\tau} + \alpha e^{(-r-\omega)\tau} \,d\tau
+\end{equation}
+\begin{equation}
+    = \frac{\beta \cdot (1 - \alpha)\cdot m(t)}{i} \cdot \omega e^{rt} \cdot \left[ \frac{(1-\alpha)e^{(-r-2\omega)\tau}}{-r-2\omega} + \frac{\alpha e^{(-r-\omega)\tau}}{-r-\omega} \right]_{t}^{\infty}
+\end{equation}
+
+Under the assumption $g < r$ results in:
+
+\begin{equation}
+    = \frac{\beta \cdot (1 - \alpha)\cdot m(t)}{i} \cdot \omega e^{rt} \cdot \left( \frac{(1-\alpha)e^{(-r-2\omega)t}}{r+2\omega} + \frac{\alpha e^{(-r-\omega)t}}{r+\omega} \right)
+\end{equation}
+\begin{equation}
+    = \frac{\beta \cdot (1 - \alpha)\cdot m(t) \cdot \omega}{i} \cdot \left( \frac{(1-\alpha)e^{-2\omega t}}{r+2\omega} + \frac{\alpha e^{-\omega t}}{r+\omega} \right)
+\end{equation}
+
+
+\section{Amplified MarketCap from Paying Minted Celo as Interest on Deposited CUSD}
+
+The marketcap of Celo is calculated by:
+
+\begin{equation}
+    m(t) = PV_{cash}(t) + PV_{fees}(t) + PV_{interest\_fees}(t) + PV_{interest\_mint}(t)
+\end{equation}
+
+If we substitue in $PV_{interest\_mint}(t)$, an amplification effect emerges:
+
+\begin{equation}
+    m(t) = PV_{cash}(t) + PV_{fees}(t) + PV_{interest\_fees}(t) + \frac{\beta \cdot (1 - \alpha)\cdot m(t) \cdot \omega}{i} \cdot \left( \frac{(1-\alpha)e^{-2\omega t}}{r+2\omega} + \frac{\alpha e^{-\omega t}}{r+\omega} \right)
+\end{equation}
+\begin{equation}
+    m(t) - \frac{\beta \cdot (1 - \alpha)\cdot m(t) \cdot \omega}{i} \cdot \left( \frac{(1-\alpha)e^{-2\omega t}}{r+2\omega} + \frac{\alpha e^{-\omega t}}{r+\omega} \right) = PV_{cash}(t) + PV_{fees}(t) + PV_{interest\_fees}(t)
+\end{equation}
+\begin{equation}
+    m(t)\left(1 - \frac{\beta \cdot (1 - \alpha)\cdot \omega}{i} \cdot \left( \frac{(1-\alpha)e^{-2\omega t}}{r+2\omega} + \frac{\alpha e^{-\omega t}}{r+\omega} \right)\right) = PV_{cash}(t) + PV_{fees}(t) + PV_{interest\_fees}(t)
+\end{equation}
+\begin{equation}
+    m(t) = (PV_{cash}(t) + PV_{fees}(t) + PV_{interest\_fees}(t)) \cdot amplification(t)
+\end{equation}
+
+Where:
+\begin{equation}
+    amplification(t) = \left(1 - \frac{\beta \cdot (1 - \alpha)\cdot \omega}{i} \cdot \left( \frac{(1-\alpha)e^{-2\omega t}}{r+2\omega} + \frac{\alpha e^{-\omega t}}{r+\omega} \right)\right)^{-1}
+\end{equation}
