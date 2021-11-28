@@ -1,7 +1,11 @@
 Project Name : GETO studio
+
 Team name : GETO finance
+
 Hackathon Track : NFT, Gaming and Creator Track
+
 Region location : Africa
+
 Team Member: Mike Nsereko, software engineer and full stack blockchain developer
 
 
