@@ -31,8 +31,8 @@ def model(request):
         param2 = param2.split(",")
 
     def generate_mean_stddev(lower_bound, upper_bound):
-        lower_bound = int(lower_bound)
-        upper_bound = int(upper_bound)
+        lower_bound = float(lower_bound)
+        upper_bound = float(upper_bound)
         mean = lower_bound + ((upper_bound - lower_bound)/2.0)
         stddev = np.sqrt(TOTAL_RANDOM_SAMPLES) * (upper_bound - lower_bound)/3.29
         return mean, stddev
@@ -58,8 +58,8 @@ def model(request):
 
     def take_a_sample(_params, substep, sH, s, _input, **kwargs):
         current_avg = s["average_result"]
-        leftValue = int(param1) if loc1 == None else norm.rvs(loc=loc1, scale=scale1)
-        rightValue = int(param2) if loc2 == None else norm.rvs(loc=loc2, scale=scale2)
+        leftValue = float(param1) if loc1 == None else norm.rvs(loc=loc1, scale=scale1)
+        rightValue = float(param2) if loc2 == None else norm.rvs(loc=loc2, scale=scale2)
         if operator == "+":
             current_avg += (leftValue + rightValue)/TOTAL_RANDOM_SAMPLES
         elif operator == "-":
@@ -80,5 +80,5 @@ def model(request):
     raw_system_events, tensor_field, sessions = simulation.execute()
     final_result = raw_system_events[len(raw_system_events) - 1]['average_result']
     db.models.update_one({"user": user, "proposalId": proposal_id, "collection": collection}, {"$set": {"user": user, "proposalId": proposal_id, "score": final_result, "collection": collection}}, True)
-
+    print(final_result)
     return HttpResponse(final_result)
