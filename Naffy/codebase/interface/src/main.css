@@ -1,0 +1,53 @@
+body,
+.table {
+  font-family: "Titillium Web", sans-serif !important;
+  line-height: 1.5 !important;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 0 !important;
+  background-color: #242537 !important;
+  color: #fff !important;
+}
+.navbar,
+.navbar * {
+  background-color: #242537 !important;
+  color: #fff !important;
+}
+
+.color-link {
+  color: rgb(13, 202, 240) !important;
+}
+
+.bg-main,
+.card,
+.card *,
+.modal,
+.modal .modal-content {
+  background-color: #313246 !important;
+}
+
+.form-control,
+.form-select {
+  background-color: #313246 !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border: 1px solid rgb(13, 202, 240) !important;
+  box-shadow: none !important;
+}
+
+.btn {
+  border-radius: 0 !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.bg-success {
+  background-color: rgb(25, 135, 84) !important;
+}
+.bg-info {
+  background-color: rgb(13, 202, 240) !important;
+}
