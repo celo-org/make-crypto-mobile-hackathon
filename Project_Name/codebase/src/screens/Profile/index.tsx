@@ -195,113 +195,20 @@ const Profile = (): JSX.Element => {
   };
 
   return (
-    <TouchableOpacity onPress={handleDismissKeyboard} activeOpacity={1.0}>
-      <View style={styles.overlay}>
-        <SafeAreaView style={styles.container}>
-          <View style={styles.content}>
-            <View style={styles.header}>
-              <View style={styles.logo}>
-                <HipaLogoSVG />
-                <View style={styles.divider} />
-                <HIPASVG />
-              </View>
-              <View style={styles.buttons}>
-                <SquareButton iconChildren={MenuSvg} />
-              </View>
-            </View>
-            <View>
-              <ScrollView
-                showsVerticalScrollIndicator={false}
-                contentContainerStyle={styles.scrollview}>
-                <TouchableOpacity
-                  style={styles.touchableOpacityContainer}
-                  activeOpacity={1}
-                  onPress={handleDismissKeyboard}>
-                  <View style={styles.contentView}>
-                    <View style={styles.profileInfo}>
-                      <View style={styles.avatar}>
-                        <Image
-                          source={{
-                            uri: image,
-                          }}
-                          style={styles.images}
-                        />
-                        <View style={styles.changePhoto}>
-                          <BorderlessButton style={styles.camera} onPress={pickImage}>
-                            <CamSvg />
-                          </BorderlessButton>
-                        </View>
-                      </View>
-
-                      <View style={styles.username}>
-                        <TextInput
-                          style={styles.userNameText}
-                          value={newNameValue}
-                          onChangeText={setNewNameValue}
-                          editable={isNameEditing}
-                          onSubmitEditing={handleSubmitEditingName}
-                          ref={nameTextInputRef}
-                          spellCheck={false}
-                        />
-                        <BorderlessButton
-                          onPress={
-                            !isNameEditing ? handleStartEditingName : handleSubmitEditingName
-                          }
-                          style={styles.editDescription}>
-                          <PencilSvg />
-                        </BorderlessButton>
-                      </View>
-
-                      <View style={styles.hash}>
-                        <Text
-                          color={colors.light.neutralColor7}
-                          fontsSize={fontSizes.xs12}
-                          fontFamily={fontsFamily.montserrat.regular400}
-                          textDescription={hash}
-                        />
-                        <BorderlessButton onPress={copyToClipboard}>
-                          <Copy />
-                        </BorderlessButton>
-                      </View>
-
-                      <View style={styles.userbio}>
-                        <TextInput
-                          style={styles.bioDescription}
-                          value={newDescriptionValue}
-                          multiline={true}
-                          returnKeyType="send"
-                          onChangeText={setNewDescriptionValue}
-                          editable={isDescriptionEditing}
-                          onSubmitEditing={handleSubmitEditingDescription}
-                          ref={descriptionTextInputRef}
-                          spellCheck={false}
-                        />
-                        <BorderlessButton
-                          style={styles.editDescription}
-                          onPress={
-                            !isDescriptionEditing
-                              ? handleStartEditingDescription
-                              : handleSubmitEditingDescription
-                          }>
-                          <PencilSvg />
-                        </BorderlessButton>
-                      </View>
-                    </View>
-
-                    <View style={styles.arts}>
-                      <ProfileButton
-                        label={'Creations'}
-                        isActive={creationsButtonSelected}
-                        onPress={handleSelect}
-                        disabled={creationsButtonSelected}
-                      />
-                      <ProfileButton
-                        label={'Purchases'}
-                        isActive={!creationsButtonSelected}
-                        onPress={handleSelect}
-                        disabled={!creationsButtonSelected}
-                      />
-                    </View>
+    <>
+      {user.id ? (
+        <TouchableOpacity onPress={handleDismissKeyboard} activeOpacity={1.0}>
+          <View style={styles.overlay}>
+            <SafeAreaView style={styles.container}>
+              <View style={styles.content}>
+                <View style={styles.header}>
+                  <View style={styles.logo}>
+                    <HipaLogoSVG />
+                    <View style={styles.divider} />
+                    <HIPASVG />
+                  </View>
+                  <View style={styles.buttons}>
+                    <SquareButton iconChildren={MenuSvg} />
                   </View>
                 </View>
                 <View>
@@ -347,22 +254,7 @@ const Profile = (): JSX.Element => {
                             </BorderlessButton>
                           </View>
 
-                          <LineButton
-                            label={'Create a NFT'}
-                            textFontFamily={fontsFamily.montserrat.medium500}
-                            textColor={colors.light.neutralColor4}
-                            textFontSize={fontSizes.md16}
-                            textAlign={AlignTypes.CENTER}
-                            onPress={() => navigate.navigate(RoutesNames.CREATE)}
-                          />
-                        </View>
-                      </>
-                    )}
-                    {purchases.length === 0 && !creationsButtonSelected && (
-                      <>
-                        <View style={styles.image}>
-                          <EmptyPurchasesSvg />
-                          <View style={styles.description}>
+                          <View style={styles.hash}>
                             <Text
                               color={colors.light.neutralColor7}
                               fontsSize={fontSizes.xs12}
@@ -376,13 +268,42 @@ const Profile = (): JSX.Element => {
                             </BorderlessButton>
                           </View>
 
-                          <LineButton
-                            label={'Buy a NFT'}
-                            textFontFamily={fontsFamily.montserrat.medium500}
-                            textColor={colors.light.neutralColor4}
-                            textFontSize={fontSizes.md16}
-                            textAlign={AlignTypes.CENTER}
-                            onPress={() => navigate.navigate(RoutesNames.HOME_NFT)}
+                          <View style={styles.userbio}>
+                            <TextInput
+                              style={styles.bioDescription}
+                              value={newDescriptionValue}
+                              multiline={true}
+                              returnKeyType="send"
+                              onChangeText={setNewDescriptionValue}
+                              editable={isDescriptionEditing}
+                              onSubmitEditing={handleSubmitEditingDescription}
+                              ref={descriptionTextInputRef}
+                              spellCheck={false}
+                            />
+                            <BorderlessButton
+                              style={styles.editDescription}
+                              onPress={
+                                !isDescriptionEditing
+                                  ? handleStartEditingDescription
+                                  : handleSubmitEditingDescription
+                              }>
+                              <PencilSvg />
+                            </BorderlessButton>
+                          </View>
+                        </View>
+
+                        <View style={styles.arts}>
+                          <ProfileButton
+                            label={'Creations'}
+                            isActive={creationsButtonSelected}
+                            onPress={handleSelect}
+                            disabled={creationsButtonSelected}
+                          />
+                          <ProfileButton
+                            label={'Purchases'}
+                            isActive={!creationsButtonSelected}
+                            onPress={handleSelect}
+                            disabled={!creationsButtonSelected}
                           />
                         </View>
                       </View>
