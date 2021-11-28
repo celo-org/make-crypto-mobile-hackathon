@@ -28,7 +28,7 @@ https://celo.projectkelvin.io (Working App with Wallet Integration and Voting)
 #### Presentation
 Full presentation (8 minutes): https://share.descript.com/view/H2RQL7rx01s
 
-Demo Only (3 Minutes):  https://web.descript.com/4dcb296e-8ce2-4ea2-9fdd-8b88a6fb7ea1/37a16
+Demo Only (3 Minutes):  https://share.descript.com/view/ZNR1QIPjuxH
 
 #### Next Steps
 What do you need to do next to turn this prototype into a working solution?
