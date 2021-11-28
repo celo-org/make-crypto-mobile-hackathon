@@ -8,8 +8,8 @@
 ##### Region location : India
 
 ##### Team Members
-- Jayesh bhole, Frontend Developer
-- Harsh Prakash, Backend Solidity Developer
+- Jayesh bhole, Frontend Developer ([Devpost](https://devpost.com/jayeshbhole))
+- Harsh Prakash, Backend Solidity Developer ([Devpost](https://devpost.com/harsh132))
 
 ### Project Description
 Create Verify and Manage Digital certificates Celo blockchain.
@@ -48,6 +48,8 @@ Frontend : [Frontend Repo](https://github.com/jayeshbhole/certify-interface8)
 Backend : [Backend Repo](https://github.com/harsh132/certify-contract)
 
 Contract : [0x2D031B84bd6cF242619Bd52542dDbCcb8556b90e](https://alfajores-blockscout.celo-testnet.org/address/0x2D031B84bd6cF242619Bd52542dDbCcb8556b90e/transactions)
+
+Devpost : [Project](https://devpost.com/software/certify-d6htlu)
 
 
 
