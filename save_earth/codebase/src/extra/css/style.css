@@ -1,0 +1,383 @@
+/*
+|----------------------------------------------------------------------------
+	1. FONTS: Google Font
+|----------------------------------------------------------------------------
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Open+Sans:400,400i,600,600i,700,700i");
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Monoton&effect=neon'); */
+
+img,
+iframe,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+|----------------------------------------------------------------------------
+	9. SOCIAL / .social-icon
+|----------------------------------------------------------------------------
+*/
+.social-icon {
+  border: 1px solid #04b962;
+  border-radius: 8px 2px;
+  color: #04b962;
+  display: block;
+  height: 32px;
+  margin-right: 5px;
+  overflow: hidden;
+  text-align: center;
+  text-shadow: none;
+  width: 32px;
+}
+
+.social-icon.social-icon-small {
+  height: 28px;
+  width: 28px;
+}
+.social-icon.social-icon-large {
+  height: 44px;
+  margin: 0 10px 10px 0;
+  width: 64px;
+}
+.social-icon i {
+  display: block;
+  font-size: 18px;
+  line-height: 32px;
+  position: relative;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.social-icon:hover i:first-child {
+  margin-top: -32px;
+}
+.social-icon.social-icon-small i {
+  font-size: 16px;
+  line-height: 28px;
+}
+.social-icon.social-icon-small:hover i:first-child {
+  margin-top: -28px;
+}
+.social-icon.social-icon-large i {
+  font-size: 34px;
+  line-height: 44px;
+}
+.social-icon.social-icon-large:hover i:first-child {
+  margin-top: -44px;
+}
+
+.social-icon:hover {
+  text-decoration: none;
+}
+.social-icon-colored.social-icon,
+.social-icon:hover {
+  border-color: transparent;
+}
+.social-icon-colored.social-icon-facebook,
+.social-icon-facebook:hover {
+  background-color: #3b5998;
+}
+.social-icon-colored.social-icon-twitter,
+.social-icon-twitter:hover {
+  background-color: #00acee;
+}
+.social-icon-colored.social-icon-gplus,
+.social-icon-gplus:hover {
+  background-color: #dd4b39;
+}
+.social-icon-colored.social-icon-linkedin,
+.social-icon-linkedin:hover {
+  background-color: #0077b5;
+}
+.social-icon-colored.social-icon-vimeo,
+.social-icon-vimeo:hover {
+  background-color: #1ca7cc;
+}
+.social-icon-colored.social-icon-pinterest,
+.social-icon-pinterest:hover {
+  background-color: #cb2027;
+}
+.social-icon-colored.social-icon-dribbble,
+.social-icon-dribbble:hover {
+  background-color: #25d366;
+}
+.social-icon-colored.social-icon-rss,
+.social-icon-rss:hover {
+  background-color: #fb9f3c;
+}
+.social-icon-colored.social-icon-flickr,
+.social-icon-flickr:hover {
+  background-color: #ff0084;
+}
+.social-icon-colored.social-icon-instagram,
+.social-icon-instagram:hover {
+  background-color: #bc2a8d;
+}
+.social-icon-colored.social-icon-youtube,
+.social-icon-youtube:hover {
+  background-color: #bb0000;
+}
+.social-icon-colored.social-icon-skype,
+.social-icon-skype:hover {
+  background-color: #12a5f4;
+}
+.social-icon-colored.social-icon-yahoo,
+.footer .social-icon-yahoo:hover {
+  background-color: #7b0099;
+}
+.social-icon-colored.social-icon-tumblr,
+.social-icon-tumblr:hover {
+  background-color: #32506d;
+}
+.social-icon-colored.social-icon-gold,
+.social-icon-gold:hover {
+  background-color: #FFD700;
+}
+.social-icon-colored.social-icon-pink,
+.social-icon-pink:hover {
+  background-color: #f0f;
+}
+.social-icon i:last-child {
+  color: #fff;
+}
+.social-icon-colored i {
+  color: #fff;
+}
+
+/*
+|----------------------------------------------------------------------------
+	25. FOOTER / .footer
+|----------------------------------------------------------------------------
+*/
+.footer {
+  background-color: #800080;
+}
+.footer-top {
+  background: none;
+  padding: 90px 0 60px;
+}
+.footer-top .columnbottom-margin {
+  margin-bottom: 50px;
+}
+.footer a,
+.footer p,
+.footer li {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.footer .post-meta a {
+  font-size: 15px;
+}
+.footer p {
+  margin: 0 0 20px;
+}
+.footer h4.widget-title {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 30px 0;
+  padding-bottom: 5px;
+  position: relative;
+  text-transform: capitalize;
+}
+.footer h4.widget-title::before {
+  background-color: #04b962;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  margin: 0 0 -1px;
+  position: absolute;
+  width: 40px;
+}
+.footer h4.widget-title span {
+  color: #04b962;
+}
+.footer .recent-post li {
+  margin: 0 0 20px;
+  position: relative;
+  text-decoration: none;
+}
+.footer .recent-post li:last-child {
+  margin: 0;
+}
+.footer .post-thumbnail {
+  margin-top: 5px;
+}
+.footer .post-content h3,
+.footer h3 a {
+  line-height: 1.3;
+  margin: 0 0 10px;
+}
+.footer ul li a:hover,
+.footer ul.list-unstyled li a:hover {
+  color: #04b962;
+  text-decoration: none;
+}
+#footer .list-inline.list-social {
+  margin: 0 0 10px;
+}
+#footer .list-inline.list-social a.social-icon {
+  border: none;
+  color: #fff;
+}
+#footer .list-inline.list-social a.social-icon:hover {
+  border: none;
+}
+#footer .contact-info.list-unstyled > li {
+  line-height: 1.3;
+  padding: 0 0 10px;
+}
+#footer .contact-info.list-unstyled > li i {
+  margin: 0 15px 0 0;
+}
+/*Footer Copyright*/
+.footer hr {
+  border-color: #fff;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+.footer-logo {
+  float: left;
+  height: 16px;
+  margin: 5px 20px 0 0;
+  width: auto;
+}
+.footer .copyright {
+  font-size: 14px;
+  padding-left: 60px;
+}
+.footer .copyright a.footer-site-link {
+  font-size: 14px;
+}
+a.footer-site-link {
+  color: #fff;
+}
+
+.scrollup {
+  bottom: 40px;
+  color: #04b962;
+  font-size: 52px;
+  position: fixed;
+  left: 22px;
+  text-align: center;
+  width: 40px;
+	z-index: 999;
+}
+
+.scrollup:hover {
+  color: yellow;
+}
+
+/* footer ends here */
+
+.fixMargin {
+  margin-right: -1px;
+}
+
+.padder {
+  padding: 0 40px;
+  margin-right: -5px;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+/* **************************************** */
+/* ************floating action ************ */
+/* **************************************** */
+@-webkit-keyframes floater {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+@keyframes floater {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.totalVote {
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 5px white solid;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  -webkit-animation: floater 6s ease-in-out infinite;
+  animation: floater 6s ease-in-out infinite;
+  z-index: 99;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+}
+
+.totalVoteText{
+  text-align: center;
+  padding: 10px;
+  color: rgb(0, 255, 85);
+  font-family: 'Monoton', cursive;
+  letter-spacing: 2px;
+}
+/* **************************************** */
+/* ********* floating action ends********** */
+/* **************************************** */
+
+.tabs_{
+  background-color: rgb(0, 172, 57);
+  color: white;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+button#controlled-tab-example-tab-allPicks.nav-link {
+  color: yellow;
+}
+button#controlled-tab-example-tab-allPicks.nav-link.active {
+  color: #000;
+}
+button#controlled-tab-example-tab-prevWin.nav-link {
+  color: yellow;
+}
+button#controlled-tab-example-tab-prevWin.nav-link.active {
+  color: #000;
+}
+
+.toaster {
+  z-index: 100;
+  position: fixed;
+  top: 40px;
+  right: 30px;
+}
+
+/* glowing text starts here */
+.glower {
+  text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f,0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1.0em #f0f, 0 0 1.2em #f0f;
+  color: #fff;
+}
+
