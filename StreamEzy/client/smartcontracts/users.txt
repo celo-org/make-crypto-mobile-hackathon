@@ -1,0 +1,72 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.5.16;
+
+contract users {
+
+    struct user {
+        uint id;
+        string channelName;
+        string email;
+        string password;
+    }
+    
+    user [] public userArray;
+    
+    uint iteration = 3; // change to clean swipe contract
+    
+    function addUser(string memory _channelName, string memory _email, string memory _password) public returns(bool) {
+        bool exists = isExisting(_channelName, _email);
+        if (exists == false) {
+            uint _id = userArray.length;
+            userArray.push(user({
+                id: _id,
+                channelName: _channelName,
+                email: _email,
+                password: _password
+            }));
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    function deleteUser(uint _id) public returns(bool) {
+        if (_id >= userArray.length - 1) { // deletes last element
+            _id = userArray.length - 1;
+            userArray.pop;
+            return true;
+        } else {
+            for (uint i=_id; i<userArray.length; i++) {
+                userArray[i] = userArray[i+1]; 
+            }
+            userArray.pop;
+            return false;
+        }
+    }
+    
+    function isExisting(string memory _channelName, string memory _email) public view returns(bool) {
+        for (uint i=0; i<userArray.length; i++) {
+            if (keccak256(abi.encodePacked(_channelName)) == keccak256(abi.encodePacked(userArray[i].channelName)) || keccak256(abi.encodePacked(_email)) == keccak256(abi.encodePacked(userArray[i].email))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function verifyUser(string memory _email, string memory _password) public view returns(bool) {
+        for (uint i=0; i<userArray.length; i++) {
+            if (keccak256(abi.encodePacked(_email)) == keccak256(abi.encodePacked(userArray[i].email)) && keccak256(abi.encodePacked(_password)) == keccak256(abi.encodePacked(userArray[i].password))) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    function getUser(uint _id) public view returns(string memory) {
+        return string(abi.encodePacked(userArray[_id].channelName, "/", userArray[_id].email, "/", userArray[_id].password));
+    }
+    
+    function getArrayLength() public view returns(uint) {
+        return userArray.length;
+    }
+}

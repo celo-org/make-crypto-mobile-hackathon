@@ -1,0 +1,56 @@
+#sidebar {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  margin-top: 4.4rem;
+  height: 100%;
+  width: 68px;
+  background: rgb(19, 19, 19);
+  border-right: 1px solid #ddd;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+#sidebar:hover {
+  width: 160px;
+}
+#sidebar p {
+  text-decoration: none;
+  display: block;
+  padding: 20px 20px;
+  color: #000000;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial;
+  width: 30px;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+#sidebar p span {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+#sidebar:hover p span {
+  opacity: 1;
+  color: white !important;
+}
+#sidebar p:hover span {
+  opacity: 1;
+}
+#sidebar p:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: black !important;
+  width: 160px;
+}
+
+#sidebar p:hover,
+#sidebar p.active {
+  text-decoration: none;
+  background: blueviolet;
+  color: black;
+}
+
+#sidebar p.active {
+  background: #00ff00;
+}

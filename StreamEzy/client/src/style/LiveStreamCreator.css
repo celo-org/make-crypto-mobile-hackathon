@@ -1,0 +1,125 @@
+.liveStreamCreator {
+  margin-top: 4.4rem;
+  margin-left: 67px;
+  display: flex;
+  width: calc(100vw - 67px);
+}
+
+.liveStreamCreator_left {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.liveStreamCreator_video {
+  width: 100%;
+  padding: 2em;
+  padding-bottom: 1em;
+  padding-right: 0;
+}
+
+.liveStreamCreator_videoPlayer {
+  width: 90%;
+  height: 100%;
+}
+
+.liveStreamCreator_dashboard {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+}
+
+.liveStreamCreator_title {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+.liveStreamCreator_icons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 0.5em;
+  font-size: x-large;
+}
+
+.liveStreamCreator_icons > div {
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+.liveStreamCreator_items {
+  display: flex;
+  margin-bottom: 0.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.liveStreamCreator_items i {
+  font-size: 2.4em;
+}
+
+.liveStreamCreator_dp {
+  display: flex;
+  align-items: center;
+}
+
+.liveStreamCreator_items span {
+  margin-left: 0.6em;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.liveStreamCreator_items button {
+  padding: 0.5em 1em;
+  background-color: white;
+  border: rgba(0, 0, 0, 0.5) 1px solid;
+}
+
+.liveStreamCreator_items button:hover {
+  background-color: tomato;
+  color: white;
+}
+
+.liveStreamCreator_description {
+  margin-top: 2em;
+  padding-left: 5em;
+  font-size: 0.9em;
+  letter-spacing: 0.4px;
+}
+
+.liveStreamCreator_right {
+  width: 30%;
+}
+
+.liveStreamCreator_chats {
+  margin: 2em;
+  padding: 0.5em;
+  margin-left: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.068);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chat {
+  margin-bottom: 0.5em;
+}
+
+.chat i {
+  font-size: 1.2em;
+}
+
+.chat span:nth-last-child(2) {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.chat span:nth-last-child(1) {
+  font-size: 0.9em;
+}
+
+.chatsList{
+  flex: 1;
+}

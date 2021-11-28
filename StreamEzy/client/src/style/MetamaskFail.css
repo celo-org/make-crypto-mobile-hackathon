@@ -1,0 +1,30 @@
+.metamaskfail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.centerDivMetamask {
+  background-color: white;
+  box-shadow: 0 6px 16px 0 rgb(0 0 0 / 20%);
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.metamaskfail h1 {
+  text-align: center;
+  font-weight: bold;
+  color: darkred;
+}
+
+.metamaskfail p {
+  width: 60%;
+  margin-top: 2rem;
+  text-align: center;
+}

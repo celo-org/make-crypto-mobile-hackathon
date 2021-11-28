@@ -1,0 +1,54 @@
+//SPDX-License-Identifier: MIT
+pragma solidity >=0.5.16;
+//github se copy(jisse apan ne video liye hai)
+
+contract playlist {
+    uint id=0;
+
+    struct video {
+        uint id;
+        address creator;
+        string description;
+        string title;
+        string thumbnailHash;
+        string videoHash;
+        string categories;
+    }
+    
+    video [] videoArray;
+    
+    function addVideo(string memory _title, string memory _thumbnailHash, string memory _videoHash,string memory _description ,string memory _categories) public{
+        videoArray.push(video({
+                id: id,
+                title: _title,
+                thumbnailHash: _thumbnailHash,
+                videoHash: _videoHash,
+                description: _description,
+                categories: _categories,
+                creator: msg.sender
+                
+            }));
+        id=id+1;
+    }
+    
+    function getVideo(uint _id) public view returns(video memory) {
+        return videoArray[_id];
+    }
+
+    function getVideos() public view returns(video[] memory) {
+           return videoArray;
+    }
+
+    function isExisting(string memory _thumbnailHash, string memory _videoHash) public view returns(bool) {
+        for (uint i=0; i<videoArray.length; i++) {
+            if (keccak256(abi.encodePacked(videoArray[i].thumbnailHash)) == keccak256(abi.encodePacked(_thumbnailHash)) || keccak256(abi.encodePacked(videoArray[i].videoHash)) == keccak256(abi.encodePacked(_videoHash))) {
+                return true;
+            }
+        }
+        return false;
+    }  
+    
+    function getArrayLength() public view returns(uint) {
+        return videoArray.length;
+    }
+}

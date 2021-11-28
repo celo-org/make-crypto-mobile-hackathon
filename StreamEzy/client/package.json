@@ -1,0 +1,73 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ethereumjs/tx": "^3.4.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@truffle/hdwallet-provider": "^1.7.0",
+    "Buffer": "0.0.0",
+    "animate.css": "^4.1.1",
+    "axios": "^0.22.0",
+    "bootstrap": "^5.1.1",
+    "compressorjs": "^1.1.1",
+    "ethereumjs-tx": "^2.1.2",
+    "ethers": "^5.4.7",
+    "ffmpeg": "0.0.4",
+    "firebase": "^9.5.0",
+    "font-awesome": "^4.7.0",
+    "ipfs": "^0.60.0",
+    "ipfs-core": "^0.12.0",
+    "ipfs-http-client": "^53.0.1",
+    "mdbreact": "^5.1.0",
+    "orbit-db": "^0.28.0",
+    "radium": "^0.26.1",
+    "react": "^17.0.2",
+    "react-animations": "^1.0.0",
+    "react-bootstrap": "^2.0.0-rc.0",
+    "react-bootstrap-icons": "^1.5.0",
+    "react-dom": "^17.0.2",
+    "react-hover-video-player": "^9.3.1",
+    "react-particle-effect-button": "^1.0.1",
+    "react-player": "^2.9.0",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-spring": "^9.3.1",
+    "react-tagsinput": "^3.19.0",
+    "react-toastify": "^8.1.0",
+    "reactjs-popup": "^2.0.5",
+    "semantic-ui-react": "^2.0.4",
+    "styled-components": "^5.3.3",
+    "tachyons": "^4.12.0",
+    "uuid": "^8.3.2",
+    "video.js": "^7.15.4",
+    "web-vitals": "^1.1.2",
+    "web3": "^1.6.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
