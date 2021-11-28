@@ -66,6 +66,10 @@ const DescriptionNft = (): JSX.Element => {
   }, [wallet]);
 
   const handleLikeImage = async (id: number) => {
+    if (!user.id) {
+      openModal();
+      return;
+    }
     const request = {
       nft_id: id,
       user_id,
