@@ -8,7 +8,13 @@ const express = require("express");
 
 const fs = require("fs");
 
+const cors = require('cors');
+
 const app = express();
+
+app.use(cors({
+    origin: '*'
+}));
 
 const PORT = 8080;
 
@@ -19,12 +25,12 @@ const token =
 
 const client = new Web3Storage({ token });
 
-async function storeFiles(files) {
+async function storeFiles(files, filename) {
   const stream = await getFilesFromPath(files);
 
   const cid = await client.put(stream);
 
-  return cid;
+  return `${cid}.ipfs.dweb.link/${filename}`;
 }
 
 app.get("/", async (req, res) => {
@@ -77,7 +83,7 @@ app.post("/", (req, res) => {
 
       const syncStoreFiles = forceSync(storeFiles);
 
-      const cid = storeFiles(uploadPath);
+      const cid = storeFiles(uploadPath, thumbnail.md5);
 
       cids.push(cid);
     });
@@ -92,6 +98,8 @@ app.post("/", (req, res) => {
         }
       });
       res.setHeader("Content-Type", "application/json");
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
       return res.send(values);
     });
   } catch (error) {
