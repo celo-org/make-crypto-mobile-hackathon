@@ -1,7 +1,7 @@
 import 'intl';
 import './global';
 import 'intl/locale-data/jsonp/en-US';
-import { StatusBar } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import AppLoading from 'expo-app-loading';
@@ -39,7 +39,7 @@ export default function App() {
       <ModalProvider>
         <AuthProvider>
           <WalletProvider>
-            <StatusBar barStyle="dark-content" backgroundColor="#f9f9f9" />
+            <StatusBar style="auto" />
             <BottomRoutes />
           </WalletProvider>
         </AuthProvider>

@@ -39,11 +39,18 @@ interface INFTProps {
 const Home = (): JSX.Element => {
   const [nfts, setNfts] = useState<INFTProps[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [userId, setUserId] = useState('0');
+  const [page, setPage] = useState('1');
 
   const navigate = useNavigation();
 
   const { user } = useAuth();
+
+  const categories = [
+    { filterKey: 'trending', title: 'Trending' },
+    { filterKey: 'gaming', title: 'Gaming' },
+    { filterKey: 'sports', title: 'Sports' },
+    { filterKey: 'most_recent', title: 'Most Recent' },
+  ];
 
   const handleLikeImage = async (id: number) => {
     const request = {
@@ -64,8 +71,10 @@ const Home = (): JSX.Element => {
   async function fetchNft() {
     try {
       setIsLoading(true);
-      const response = await api.get(`user/getFavorites/${userId}`);
-      setNfts(response.data);
+      const response = await api.get(`/nft/list/${categories}/${page}`);
+      setPage((oldState) => oldState + 1);
+      const filteredData = response.data.filter((item: INFTProps) => item.isLiked === true);
+      setNfts(filteredData);
     } catch (error) {
       console.log(error);
     } finally {
@@ -75,17 +84,11 @@ const Home = (): JSX.Element => {
 
   useEffect(() => {
     fetchNft();
-    if (user.id) {
-      setUserId(user.id);
-    }
   }, []);
 
   useFocusEffect(
     useCallback(() => {
       fetchNft();
-      if (user.id) {
-        setUserId(user.id);
-      }
     }, []),
   );
 

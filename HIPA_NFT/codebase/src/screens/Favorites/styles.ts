@@ -45,17 +45,15 @@ export const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    paddingTop: dimensions.spacingStackXxl16,
     paddingBottom: isUnder670 ? dimensions.padding27 : dimensions.padding18,
-    paddingHorizontal: dimensions.spacingStackXxl16,
   },
   emptyFavorites: {
     marginTop: dimensions.spacingInlineXxl32,
   },
   emptyFavoritesImage: {
-    marginBottom: dimensions.spacingStackXxHuge65,
+    marginBottom: dimensions.spacingStackXGiant30,
     justifyContent: AlignTypes.CENTER,
-    alignItems: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER
   },
   emptyFavoritesText: {
     paddingHorizontal: dimensions.spacingStackGiant25,

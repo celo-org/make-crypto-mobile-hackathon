@@ -4,7 +4,6 @@ import { View, ActivityIndicator, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FlatList } from 'react-native-gesture-handler';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { styles } from './styles';
 
@@ -44,13 +43,11 @@ const Home = (): JSX.Element => {
   const [category, setCategory] = useState('');
   const [nfts, setNfts] = useState<INFTProps[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [userId, setUserId] = useState('0');
   const [page, setPage] = useState('1');
-  const [isFirstTime, setIsFirstTime] = useState('');
 
   const navigate = useNavigation();
 
-  const { user, signOut } = useAuth();
+  const { user } = useAuth();
   const { openModal } = useModal();
 
   const categories = [
@@ -66,6 +63,7 @@ const Home = (): JSX.Element => {
 
   const handleLikeImage = async (id: number) => {
     if (!user.id) {
+      console.log('a');
       openModal();
       return;
     }
@@ -109,6 +107,7 @@ const Home = (): JSX.Element => {
         }
       })
       .catch((error) => {
+        console.log(error.response.data);
         Alert.alert('Ops! There was a problem', 'Please try again later.');
       });
   };
@@ -116,7 +115,7 @@ const Home = (): JSX.Element => {
   async function fetchNft() {
     try {
       setIsLoading(true);
-      const response = await api.get(`/nft/list/${category}/${page}/${userId}`);
+      const response = await api.get(`/nft/list/${category}/${page}`);
       setPage((oldState) => oldState + 1);
       setNfts(response.data);
     } catch (error) {
@@ -128,42 +127,20 @@ const Home = (): JSX.Element => {
 
   useEffect(() => {
     fetchNft();
-    if (user.id) {
-      setUserId(user.id);
-    }
   }, [category]);
 
   useFocusEffect(
     useCallback(() => {
       fetchNft();
-      if (user.id) {
-        setUserId(user.id);
-      }
     }, [category]),
   );
 
   useEffect(() => {
-    async function loadFirstTime(): Promise<void> {
-      const storage = await AsyncStorage.getItem('@hipa:isFirstTime');
-
-      const firstTime = storage;
-      setIsFirstTime(firstTime);
-      if (firstTime !== 'no') return navigate.navigate('Walkthrough');
-    }
-
-    loadFirstTime();
-  }, []);
-
-  useEffect(() => {
     setCategory(categories[0].filterKey);
   }, []);
-
-  const handleSignOut = () => {
-    signOut();
-  };
   return (
     <SafeAreaView style={styles.container}>
-      {!user.id && <ConnectWallet />}
+      <ConnectWallet />
       <View style={styles.header}>
         <View style={styles.logo}>
           <HipaLogoSVG />
@@ -171,11 +148,8 @@ const Home = (): JSX.Element => {
           <HIPASVG />
         </View>
         <View style={styles.buttons}>
-          <SquareButton onPress={handleSignOut} iconChildren={Magnifier} />
-          <SquareButton
-            onPress={() => AsyncStorage.removeItem('@hipa:isFirstTime')}
-            iconChildren={MenuSvg}
-          />
+          <SquareButton iconChildren={Magnifier} />
+          <SquareButton iconChildren={MenuSvg} />
         </View>
       </View>
 

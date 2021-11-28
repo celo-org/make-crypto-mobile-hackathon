@@ -20,8 +20,9 @@ import HIPASVG from '../../../assets/HIPA.svg';
 
 import { LineButton, ProfileButton, SquareButton, Text } from '@nft/components';
 
-import { colors, fontsFamily, fontsSize } from '@nft/styles';
-import { AlignTypes } from '@nft/utils/enum';
+import { colors, fontsFamily } from '@nft/styles';
+import fontSizes from '@nft/styles/fontSizes';
+import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 import NftImage from '@nft/components/NftImage';
 
 import * as ImagePicker from 'expo-image-picker';
@@ -34,12 +35,11 @@ import PencilSvg from '../../../assets/pencil.svg';
 import Copy from '../../../assets/copy.svg';
 import EmptyCreationsSvg from '../../../assets/empty-creations.svg';
 import EmptyPurchasesSvg from '../../../assets/empty-purchases.svg';
-import EmptyProfileSvg from '../../../assets/empty-profile.svg';
-import Magnifier from '../../../assets/magnifier.svg';
 import { useAuth } from '@nft/context/auth';
 import ConnectWallet from '../ConnectWallet';
 import { useModal } from '@nft/context/modal.context';
 import { useFocusEffect } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 type PurchaseProps = {
   id: number;
@@ -90,6 +90,8 @@ const Profile = (): JSX.Element => {
   const [isDescriptionEditing, setIsDescriptionEditing] = useState(false);
   const [newDescriptionValue, setNewDescriptionValue] = useState(description);
   const descriptionTextInputRef = useRef<TextInput>(null);
+
+  const navigate = useNavigation();
 
   const handleStartEditingDescription = () => {
     setIsDescriptionEditing(true);
@@ -255,7 +257,7 @@ const Profile = (): JSX.Element => {
                           <View style={styles.hash}>
                             <Text
                               color={colors.light.neutralColor7}
-                              fontsSize={fontsSize.xs12}
+                              fontsSize={fontSizes.xs12}
                               fontFamily={fontsFamily.montserrat.regular400}
                               textDescription={hash}
                               numberOfLines={1}
@@ -316,7 +318,7 @@ const Profile = (): JSX.Element => {
                                   textDescription={
                                     'You have no creations yet. Click bellow to make your first one!'
                                   }
-                                  fontsSize={fontsSize.md16}
+                                  fontsSize={fontSizes.md16}
                                   fontFamily={fontsFamily.montserrat.medium500}
                                   color={colors.light.neutralColor5}
                                   textAlign={AlignTypes.CENTER}
@@ -327,7 +329,7 @@ const Profile = (): JSX.Element => {
                                 label={'Create a NFT'}
                                 textFontFamily={fontsFamily.montserrat.medium500}
                                 textColor={colors.light.neutralColor4}
-                                textFontSize={fontsSize.md16}
+                                textFontSize={fontSizes.md16}
                                 textAlign={AlignTypes.CENTER}
                               />
                             </View>
@@ -342,7 +344,7 @@ const Profile = (): JSX.Element => {
                                   textDescription={
                                     'You have no purchases yet. Click bellow to buy your first one!'
                                   }
-                                  fontsSize={fontsSize.md16}
+                                  fontsSize={fontSizes.md16}
                                   fontFamily={fontsFamily.montserrat.medium500}
                                   color={colors.light.neutralColor5}
                                   textAlign={AlignTypes.CENTER}
@@ -353,7 +355,7 @@ const Profile = (): JSX.Element => {
                                 label={'Buy a NFT'}
                                 textFontFamily={fontsFamily.montserrat.medium500}
                                 textColor={colors.light.neutralColor4}
-                                textFontSize={fontsSize.md16}
+                                textFontSize={fontSizes.md16}
                                 textAlign={AlignTypes.CENTER}
                               />
                             </View>
@@ -383,63 +385,6 @@ const Profile = (): JSX.Element => {
         </TouchableOpacity>
       ) : (
         <ConnectWallet />
-      )}
-      {!user.id && (
-        <SafeAreaView style={styles.container}>
-          <View style={styles.header}>
-            <View style={styles.logo}>
-              <HipaLogoSVG />
-              <View style={{ paddingRight: 8 }} />
-              <HIPASVG />
-            </View>
-            <View style={styles.buttons}>
-              <SquareButton iconChildren={Magnifier} />
-              <SquareButton iconChildren={MenuSvg} />
-            </View>
-          </View>
-
-          <View style={styles.title}>
-            <Text
-              color={colors.light.neutralColor5}
-              fontFamily={fontsFamily.montserrat.semiBold600}
-              fontsSize={fontsSize.xl20}
-              textDescription={'Profile'}
-            />
-          </View>
-          <View style={styles.emptyProfileContainer}>
-            <View style={styles.emptyImage}>
-              <Image source={require('../../../assets/empty-profile.png')} />
-            </View>
-            <View style={styles.emptyProfileText1}>
-              <Text
-                color={colors.light.neutralColor5}
-                fontFamily={fontsFamily.montserrat.medium500}
-                fontsSize={fontsSize.md16}
-                textAlign={AlignTypes.CENTER}
-                textDescription={"You're not connected with your wallet! Please connect it first."}
-              />
-            </View>
-            <View style={styles.emptyProfileText2}>
-              <Text
-                color={colors.light.neutralColor5}
-                fontFamily={fontsFamily.montserrat.medium500}
-                fontsSize={fontsSize.md16}
-                textAlign={AlignTypes.CENTER}
-                textDescription={'Make sure you have the Valora app already installed.'}
-              />
-            </View>
-            <View style={styles.emptyProfileLineButton}>
-              <LineButton
-                label={'Connect Wallet'}
-                textFontFamily={fontsFamily.montserrat.medium500}
-                textColor={colors.light.neutralColor4}
-                textFontSize={fontsSize.md16}
-                textAlign={AlignTypes.CENTER}
-                onPress={openModal}
-              />
-            </View>
-          </View>
-        </SafeAreaView>
       )}
     </>
   );
