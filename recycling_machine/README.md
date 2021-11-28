@@ -39,11 +39,6 @@ Used for user interaction with the machine and interaction between the recycling
 - Using Remix IDE, compile and deploy RecyclingMachineFactory and PackagePrices contracts
 - Usine Remix IDE, create a new RecyclingMachine contract from the RecyclingMachineFactory instance (call CreateRecyclingMachine() function)
 - Rename /make-crypto-mobile-hackathon/recycling_machine/server/.env.example to .env and provide your wallet PRIVATE_KEY, contracts' addresses and other required fields
-- run
-```bash
-docker-compose build
-
-```
 - Go back to root project folder and run
 ```bash
 docker-compose build
