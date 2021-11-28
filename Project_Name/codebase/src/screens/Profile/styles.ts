@@ -67,9 +67,9 @@ export const styles = StyleSheet.create({
   },
   changePhoto: {
     backgroundColor: colors.light.neutralColor14,
-    width: dimensions.spacingStackHuge34,
-    height: dimensions.spacingStackHuge34,
-    borderRadius: dimensions.spacingInlineXs14,
+    width: 34,
+    height: 34,
+    borderRadius: 15,
     position: 'absolute',
     right: -14,
     justifyContent: AlignTypes.CENTER,
