@@ -35,7 +35,7 @@ San Francisco, CA
 <figure>
 <img src="./images/img2.png" alt="drawing" width="400"/>
 
-<figcaption align = "center"><i>"Zapping In" CELO directly for an autocompounded stake in a cUSD/CELO yield farm</i></figcaption>
+<figcaption align = "center"><i>Swapping directly from stabecoin to a share in a autocompounding yield farm</i></figcaption>
 
 </figure>
 
