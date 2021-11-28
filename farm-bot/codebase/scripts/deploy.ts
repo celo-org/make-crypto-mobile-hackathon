@@ -33,7 +33,8 @@ export const main: DeployerFn<{}> = async ({
       STAKING_REWARDS_ADDRESS,
       ROUTER_ADDRESS,
       path0,
-      path1
+      path1,
+      'cUSD_CELO_FP'
     ],
   })
 

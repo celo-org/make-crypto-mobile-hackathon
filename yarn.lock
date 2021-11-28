@@ -40,7 +40,7 @@
   resolved "https://registry.yarnpkg.com/@celo/base/-/base-1.3.3.tgz#a74ef1b9a63afd831d5f3ec6399bb98cc2fc733a"
   integrity sha512-FA7C212AMCRVbWCBFNmmh0AKEStztwxkmMNYGLOSpBNu6QIMvTw/ZZKMqJeXJ0KcZvH0/xK9K3vjVEq2J9Z1HQ==
 
-"@celo/connect@1.3.3":
+"@celo/connect@1.3.3", "@celo/connect@^1.3.3":
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/@celo/connect/-/connect-1.3.3.tgz#b9f9b4a634f454c1e72bda751f1bb3108f727ece"
   integrity sha512-owgLDd3S4vYWR+yjYqx5OXGm9b0YIsOOpgCahyzlQLLEi/XgDhdk9EVdVIFeKv2bgmrZtPE80FqN+9iqNLi+hw==
