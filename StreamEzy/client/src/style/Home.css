@@ -1,0 +1,35 @@
+.home {
+  /* border: 10px black solid; */
+  position: absolute;
+  top: 4.4rem;
+  left: 68px;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.loaderHome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100vh - 4.4rem);
+  width: calc(100vw - 67px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  background-color: #00000047;
+}
+
+.loaderHome img {
+  width: 3rem;
+}
+
+@media screen and (max-width: 650px) {
+  .home {
+    left: 0;
+  }
+}

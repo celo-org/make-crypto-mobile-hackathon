@@ -1,0 +1,28 @@
+.videocard {
+  width: 24%;
+  height: 28vh;
+  margin: 0.5%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 6px 16px 0 rgb(0 0 0 / 20%);
+  overflow: hidden;
+}
+
+.videocard:hover {
+  transform: scale(1.03);
+}
+
+@media screen and (max-width: 800px) {
+  .videocard {
+    width: 32.33%;
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .videocard {
+    width: 100vw;
+    height: 70vw;
+  }
+}

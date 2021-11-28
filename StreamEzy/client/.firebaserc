@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "streamzy-ae511"
+  },
+  "targets": {
+    "streamzy-ae511": {
+      "hosting": {
+        "main": [
+          "streamzy-development"
+        ]
+      }
+    }
+  }
+}

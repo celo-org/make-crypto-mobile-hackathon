@@ -1,0 +1,70 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: rgb(19, 19, 19);
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5vh;
+  letter-spacing: 2px;
+  font-weight: 600;
+  box-shadow: 0 6px 16px 0 rgb(0 0 0 / 20%);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.4rem;
+  padding: 0 5vw;
+}
+
+.navbar_left {
+  flex: 0.7;
+  display: flex;
+}
+.navbar_left div {
+  cursor: pointer;
+}
+
+.navbar_icons {
+  display: flex;
+  cursor: pointer;
+  color: tan;
+}
+
+.navbar_icons > div {
+  font-size: 2vh;
+  color: tomato;
+  font-weight: 800;
+  align-self: flex-start;
+}
+
+.navbar_right {
+  flex: 0.3;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar_left {
+    flex: 0.6;
+  }
+  .navbar_right {
+    flex: 0.4;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .navbar {
+    font-size: 2.5vh;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .navbar_left {
+    justify-content: center;
+  }
+  .navbar_icons > div {
+    font-size: 1.5vh;
+  }
+}
