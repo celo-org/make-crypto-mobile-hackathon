@@ -65,7 +65,7 @@ San Francisco, CA
 ## Project Description
 ### Inspiration
 
-Yield farming on top of being a liquidity provider can offer excellent incentives, and can act as a great way to get into the defi ecosystem. Often, however, rewards from yield farming sit stagnant and unclaimed. In order to get the greatest return from a yield farm, you have to manually reinvest your rewards, often daily. This is an extremely involved process, and requires deep knowledge of defi concepts. "Autocompounders" for yield farming positions _do_ exist, but still require deep defi knowledge, charge extremely high fees, are poorly decentralized, and are not extensible. For the crypto newbie, entering the defi world with yield farming is still not an accessible option.
+Yield farming on top of being a liquidity provider can offer excellent incentives, and can act as a great way to get into the defi ecosystem. Often, however, rewards from yield farming sit stagnant and unclaimed. In order to get the greatest return from a yield farm, you have to manually reinvest your rewards-- this takes at least 180 seconds per yield farm even for experienced users. This is an extremely involved process, and requires deep knowledge of defi concepts. As a result, most users are likely to miss out on the benefits of compound interest, which can result in around 30% higher ROI (for an 80% APR farm-- the current rate of UBE-SBR-- and comparing daily reinvestment to bi-annual). "Autocompounders" for yield farming positions _do_ exist, but still require deep defi knowledge, charge extremely high fees (as high as 4%), are poorly decentralized, and are not extensible. For the crypto newbie, entering the defi world with yield farming is still not an accessible option.
 
 ### What it does
 
