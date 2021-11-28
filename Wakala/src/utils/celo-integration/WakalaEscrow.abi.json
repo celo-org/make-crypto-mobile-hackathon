@@ -1,0 +1,581 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum WakalaEscrow.TransactionType",
+						"name": "txType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "clientAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "agentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum WakalaEscrow.Status",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "agentFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "wakalaFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "grossAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "agentApproval",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "clientApproval",
+						"type": "bool"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct WakalaEscrow.WakalaTransaction",
+				"name": "wtx",
+				"type": "tuple"
+			}
+		],
+		"name": "AgentConfirmationEvent",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum WakalaEscrow.TransactionType",
+						"name": "txType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "clientAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "agentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum WakalaEscrow.Status",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "agentFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "wakalaFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "grossAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "agentApproval",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "clientApproval",
+						"type": "bool"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct WakalaEscrow.WakalaTransaction",
+				"name": "wtx",
+				"type": "tuple"
+			}
+		],
+		"name": "AgentPairingEvent",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum WakalaEscrow.TransactionType",
+						"name": "txType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "clientAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "agentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum WakalaEscrow.Status",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "agentFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "wakalaFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "grossAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "agentApproval",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "clientApproval",
+						"type": "bool"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct WakalaEscrow.WakalaTransaction",
+				"name": "wtx",
+				"type": "tuple"
+			}
+		],
+		"name": "ClientConfirmationEvent",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum WakalaEscrow.TransactionType",
+						"name": "txType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "clientAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "agentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum WakalaEscrow.Status",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "agentFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "wakalaFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "grossAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "agentApproval",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "clientApproval",
+						"type": "bool"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct WakalaEscrow.WakalaTransaction",
+				"name": "wtx",
+				"type": "tuple"
+			}
+		],
+		"name": "ConfirmationCompletedEvent",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum WakalaEscrow.TransactionType",
+						"name": "txType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "clientAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "agentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum WakalaEscrow.Status",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "agentFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "wakalaFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "grossAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "agentApproval",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "clientApproval",
+						"type": "bool"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct WakalaEscrow.WakalaTransaction",
+				"name": "wtx",
+				"type": "tuple"
+			}
+		],
+		"name": "TransactionCompletionEvent",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum WakalaEscrow.TransactionType",
+						"name": "txType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "clientAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "agentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum WakalaEscrow.Status",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "agentFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "wakalaFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "grossAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "agentApproval",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "clientApproval",
+						"type": "bool"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct WakalaEscrow.WakalaTransaction",
+				"name": "wtx",
+				"type": "tuple"
+			}
+		],
+		"name": "TransactionInitEvent",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_transactionid",
+				"type": "uint256"
+			}
+		],
+		"name": "agentAcceptDepositTransaction",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_transactionid",
+				"type": "uint256"
+			}
+		],
+		"name": "agentAcceptWithdrawalTransaction",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_transactionid",
+				"type": "uint256"
+			}
+		],
+		"name": "agentConfirmPayment",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_transactionid",
+				"type": "uint256"
+			}
+		],
+		"name": "clientConfirmPayment",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "escrowedPayments",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "enum WakalaEscrow.TransactionType",
+				"name": "txType",
+				"type": "uint8"
+			},
+			{
+				"internalType": "address",
+				"name": "clientAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "agentAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "enum WakalaEscrow.Status",
+				"name": "status",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "agentFee",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "wakalaFee",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "grossAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "agentApproval",
+				"type": "bool"
+			},
+			{
+				"internalType": "bool",
+				"name": "clientApproval",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "initializeDepositTransaction",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "initializeWithdrawalTransaction",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
