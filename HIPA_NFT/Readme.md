@@ -28,6 +28,19 @@ We have created the following functionalities:
 - Create NFT
   A screen to upload your NFT art and determine how the configurations your NFT will have 
 
+#### How to run the app
+
+- First clone the repository and install the Valora app
+
+```bash
+cd make-crypto-mobile-hackathon
+cd HIPA_NFT
+cd codebase
+
+yarn install
+
+expo start
+```
 
 #### URLs
 
@@ -38,6 +51,8 @@ We have created the following functionalities:
 #### Presentation
 
 App final images
+
+<img width="888" alt="HIPA-NFT- HOME" src="https://user-images.githubusercontent.com/21963291/143786070-389e6379-1af4-470d-8c6e-7143592c908f.png">
 
 ![HIPA-NFT- Splash](https://user-images.githubusercontent.com/21963291/143786064-7f44ea52-5de7-4418-bf22-7029bb6582c5.jpeg)
 
