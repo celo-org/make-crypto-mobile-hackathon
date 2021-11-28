@@ -32,6 +32,7 @@ import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 import * as ImagePicker from 'expo-image-picker';
 import { api } from '@nft/services/api';
 import { useNavigation } from '@react-navigation/native';
+import { useAuth } from '@nft/context/auth';
 
 interface IPickImageProps {
   cancelled: boolean;
@@ -64,6 +65,8 @@ const CreateNFT = (): JSX.Element => {
   const [hasError, setHasError] = useState(false);
   const navigation = useNavigation();
 
+  const { user } = useAuth();
+
   const handleChangeName = (text: string) => {
     text !== '' && setErrorName(false);
     setName(text);
@@ -80,7 +83,7 @@ const CreateNFT = (): JSX.Element => {
       if (Platform.OS !== 'web') {
         const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
         if (status !== 'granted') {
-          alert('Sorry, we need camera roll permissions to make this work!');
+          Alert.alert('Sorry, we need camera roll permissions to make this work!');
         }
       }
     })();
@@ -135,7 +138,7 @@ const CreateNFT = (): JSX.Element => {
       description: description,
       image: imageSelected,
       tags: isSwitchEnabled ? [tag, 'trending'] : [tag],
-      user_id: 1,
+      user_id: user.id,
       value: value,
     };
 

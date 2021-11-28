@@ -15,6 +15,9 @@ import MenuSvg from '../../../assets/menu.svg';
 import Magnifier from '../../../assets/magnifier.svg';
 
 import { api } from '@nft/services/api';
+import { useAuth } from '@nft/context/auth';
+import { useModal } from '@nft/context/modal.context';
+import ConnectWallet from '../ConnectWallet';
 
 interface INFTProps {
   id: number;
@@ -41,6 +44,9 @@ const Home = (): JSX.Element => {
 
   const navigate = useNavigation();
 
+  const { user } = useAuth();
+  const { openModal } = useModal();
+
   const categories = [
     { filterKey: 'trending', title: 'Trending' },
     { filterKey: 'gaming', title: 'Gaming' },
@@ -53,9 +59,14 @@ const Home = (): JSX.Element => {
   };
 
   const handleLikeImage = async (id: number) => {
+    if (!user.id) {
+      console.log('a');
+      openModal();
+      return;
+    }
     const request = {
       nft_id: id,
-      user_id: 1, // TODO remove mock
+      user_id: user.id,
     };
     await api
       .put('nft/favorite', request)
@@ -93,6 +104,7 @@ const Home = (): JSX.Element => {
         }
       })
       .catch((error) => {
+        console.log(error.response.data);
         Alert.alert('Ops! There was a problem', 'Please try again later.');
       });
   };
@@ -125,6 +137,7 @@ const Home = (): JSX.Element => {
   }, []);
   return (
     <SafeAreaView style={styles.container}>
+      <ConnectWallet />
       <View style={styles.header}>
         <View style={styles.logo} />
         <View style={styles.buttons}>

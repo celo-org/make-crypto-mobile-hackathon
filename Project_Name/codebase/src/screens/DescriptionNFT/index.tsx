@@ -18,6 +18,9 @@ import { AlignTypes } from '@nft/utils/enum';
 import styles from './styles';
 import { api } from '@nft/services/api';
 import { Alert } from 'react-native';
+import { useModal } from '@nft/context/modal.context';
+import { useWallet } from '@nft/context/wallet';
+import { useAuth } from '@nft/context/auth';
 
 interface INFTDescriptionResponse {
   nft: {
@@ -42,17 +45,25 @@ interface INFTDescriptionResponse {
 }
 
 const DescriptionNft = (): JSX.Element => {
-  const [isWalletConnected, setIsWalletConnected] = useState(true);
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [nftDescriptionResponse, setNftDescriptionResponse] = useState(
     {} as INFTDescriptionResponse,
   );
 
+  const { user } = useAuth();
+
   const navigation = useNavigation();
   const { params } = useRoute();
-  const user_id = 1; // TODO remover mock
+  const user_id = user.id;
 
-  // const renderModal = isWalletConnected ? handlePlaceABidModal : handleWalletModal;
+  const { openModal } = useModal();
+
+  const { wallet } = useWallet();
+
+  useEffect(() => {
+    user.id ? setIsWalletConnected(true) : setIsWalletConnected(false);
+  }, [wallet]);
 
   const handleLikeImage = async (id: number) => {
     const request = {
@@ -103,8 +114,7 @@ const DescriptionNft = (): JSX.Element => {
         <ActivityIndicator />
       ) : (
         <SafeAreaView style={styles.container}>
-          <ConnectWallet />
-          <PlaceABid />
+          {isWalletConnected ? <PlaceABid /> : <ConnectWallet />}
 
           <View style={styles.head}>
             <SquareButton iconChildren={Back} onPress={() => navigation.goBack()} />
@@ -186,8 +196,7 @@ const DescriptionNft = (): JSX.Element => {
                 textFontFamily={fontsFamily.montserrat.semiBold600}
                 textFontSize={fontsSize.md16}
                 iconChildren={Ether}
-                // TODO implementar a chamada do modal de place a bid ou connect wallet
-                onPress={() => {}}
+                onPress={openModal}
               />
             </View>
           </ScrollView>

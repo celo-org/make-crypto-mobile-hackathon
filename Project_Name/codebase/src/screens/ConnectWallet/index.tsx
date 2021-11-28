@@ -11,8 +11,14 @@ import Coinbase from '../../../assets/coinbase.svg';
 import Celo from '../../../assets/celo.svg';
 
 import { AlignTypes } from '@nft/utils/enum';
+import { useWallet } from '@nft/context/wallet';
 
 const ConnectWallet = (): JSX.Element => {
+  const { connect } = useWallet();
+
+  const handleConnect = () => {
+    connect();
+  };
   return (
     <Modal>
       <>
@@ -38,13 +44,12 @@ const ConnectWallet = (): JSX.Element => {
             <View style={styles.pillButton}>
               <PillButton
                 backgroundColor={colors.light.neutralColor4}
-                label={'Metamask'}
+                label={'Celo'}
                 textColor={colors.light.neutralColor12}
                 textFontsSize={fontsSize.lg18}
                 textFontFamily={fontsFamily.montserrat.regular400}
-                iconChildren={Metamask}
-                textButtonDescription={'popular'}
-                onPress={() => {}}
+                iconChildren={Celo}
+                onPress={() => handleConnect()}
               />
             </View>
             <View style={styles.pillButton}>
@@ -55,7 +60,7 @@ const ConnectWallet = (): JSX.Element => {
                 textFontsSize={fontsSize.lg18}
                 textFontFamily={fontsFamily.montserrat.regular400}
                 iconChildren={Trust}
-                textButtonDescription={'mobile only'}
+                textButtonDescription={'coming soon'}
                 onPress={() => {}}
               />
             </View>
@@ -65,6 +70,7 @@ const ConnectWallet = (): JSX.Element => {
                 label={'Coinbase'}
                 textColor={colors.light.neutralColor12}
                 textFontsSize={fontsSize.lg18}
+                textButtonDescription={'coming soon'}
                 textFontFamily={fontsFamily.montserrat.regular400}
                 iconChildren={Coinbase}
                 onPress={() => {}}
@@ -72,12 +78,13 @@ const ConnectWallet = (): JSX.Element => {
             </View>
             <View>
               <PillButton
+                label={'Metamask'}
                 backgroundColor={colors.light.neutralColor4}
-                label={'Celo'}
                 textColor={colors.light.neutralColor12}
                 textFontsSize={fontsSize.lg18}
+                iconChildren={Metamask}
+                textButtonDescription={'coming soon'}
                 textFontFamily={fontsFamily.montserrat.regular400}
-                iconChildren={Celo}
                 onPress={() => {}}
               />
             </View>
