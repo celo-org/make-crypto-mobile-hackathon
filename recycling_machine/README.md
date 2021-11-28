@@ -35,7 +35,7 @@ Used for user interaction with the machine and interaction between the recycling
 
 ## Initial Setup
 
-- Copy the source of \make-crypto-mobile-hackathon\recycling_machine\contracts\RecyclingMachine.sol into Remix IDE
+- Copy the source of /make-crypto-mobile-hackathon/recycling_machine/contracts/RecyclingMachine.sol into Remix IDE
 - Using Remix IDE, compile and deploy RecyclingMachineFactory and PackagePrices contracts
 - Usine Remix IDE, create a new RecyclingMachine contract from the RecyclingMachineFactory instance (call CreateRecyclingMachine() function)
 - Rename /make-crypto-mobile-hackathon/recycling_machine/server/.env.example to .env and provide your wallet PRIVATE_KEY, contracts' addresses and other required fields
