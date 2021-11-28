@@ -41,7 +41,8 @@ trulif.netlify.app
 
 #### Presentation
 
-List any links to your presentation or any related visuals you want to share.
+Trulif - Explainer + Demo Video
+https://youtu.be/RQpZ78q9Gmg
 
 #### Next Steps
 
