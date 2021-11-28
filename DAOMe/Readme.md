@@ -53,6 +53,10 @@ _Features to be Implemented_
 
 #### URLs
 
+[Website Link](https://daome.netlify.app)
+
+[Youtube Video](https://youtu.be/cisXzkz3ReE)
+
 #### Presentation
 
 [Presentation Link](https://www.canva.com/design/DAEw_h4rnLo/YZQYpvtmXikNyNVV3MQMGg/view?utm_content=DAEw_h4rnLo&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton#1)
