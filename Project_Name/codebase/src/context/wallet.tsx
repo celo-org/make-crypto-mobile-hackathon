@@ -2,6 +2,7 @@ import { requestAccountAddress, waitForAccountAuth } from '@celo/dappkit';
 import React, { createContext, useContext, useState } from 'react';
 import * as Linking from 'expo-linking';
 import { useAuth } from './auth';
+import { useModal } from './modal.context';
 
 interface IWalletProps {
   connect: () => Promise<void>;
@@ -20,6 +21,8 @@ const WalletProvider: React.FC = ({ children }) => {
 
   const { signIn } = useAuth();
 
+  const { closeModal } = useModal();
+
   const connect = async () => {
     const requestId = 'login';
     const dappName = 'HIPA';
@@ -35,6 +38,8 @@ const WalletProvider: React.FC = ({ children }) => {
 
     if (!dappkitResponse) {
       setFailed(true);
+      closeModal();
+      return;
     }
 
     await signIn(dappkitResponse.address, dappkitResponse.phoneNumber);
@@ -43,6 +48,7 @@ const WalletProvider: React.FC = ({ children }) => {
       address: dappkitResponse.address,
       phoneNumber: dappkitResponse.phoneNumber,
     });
+    closeModal();
   };
 
   return (
