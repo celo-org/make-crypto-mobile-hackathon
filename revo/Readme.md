@@ -19,7 +19,7 @@ San Francisco, CA
 * [Revo auto-compounding bot](./codebase/scripts/compound.ts)
 
 #### Presentation
-* [Demo video URL](https://youtu.be/8KxbrO4SSn4)
+* [Revo demo video](https://youtu.be/8KxbrO4SSn4)
 
 #### Project Photos
 <figure>
