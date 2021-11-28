@@ -1,0 +1,59 @@
+.create {
+	.txt {
+		width: 40%;
+		font-family: "Noto Sans Display", sans-serif;
+		font-size: 1.1rem;
+		.inner {
+			display: flex;
+			flex-direction: column;
+			span {
+				margin: 1rem 0;
+				max-width: 50ch;
+			}
+		}
+	}
+	.single {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		form {
+			display: flex;
+			flex-direction: column;
+			width: 40%;
+			.item {
+				margin: 0.75rem 0;
+				input,
+				textarea {
+					width: 90% !important;
+				}
+			}
+		}
+
+		.code {
+			pre {
+				margin-top: 1rem;
+				background: #4b3f3f15;
+				border-radius: 5px;
+				padding: 1rem;
+				font-size: 0.8rem;
+				overflow: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.create {
+		.txt {
+			width: 100%;
+		}
+		.single {
+			form {
+				width: 100%;
+				.item input {
+					width: 95% !important;
+				}
+			}
+		}
+	}
+}

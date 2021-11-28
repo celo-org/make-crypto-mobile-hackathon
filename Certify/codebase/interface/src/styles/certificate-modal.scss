@@ -1,0 +1,34 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #221c1c77;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+
+	h3 {
+		text-align: center;
+	}
+	.inner {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: #fdfaf7;
+		border: #4b3f3f 2px solid;
+		width: 85%;
+		height: 80vh;
+		overflow: auto;
+	}
+	.content {
+		padding: 2rem 2rem;
+		position: relative;
+	}
+	.loading {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
