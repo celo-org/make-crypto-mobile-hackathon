@@ -144,7 +144,7 @@ const Home = (): JSX.Element => {
         <Text
           textDescription={'Find the NFT Perfect to You'}
           fontFamily={fontsFamily.montserrat.regular400}
-          fontsSize={fontsSize.xl24}
+          fontsSize={fontsSize.xl20}
           color={colors.light.neutralColor5}
         />
       </View>
