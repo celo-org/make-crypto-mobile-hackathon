@@ -21,7 +21,6 @@ const Walkthrough = (): JSX.Element => {
   const scrollTo = () => {
     if (currentIndex < slides.length - 1) {
       slidesRef.current.scrollToIndex({ index: currentIndex + 1 });
-      console.log(currentIndex);
     }
   };
   const handleStart = async () => {
