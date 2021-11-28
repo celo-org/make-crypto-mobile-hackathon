@@ -11,7 +11,7 @@
   "dependencies": {
     "@celo/connect": "^1.1.0",
     "@celo/contractkit": "^1.1.0",
-    "@celo/dappkit": "^1.1.0",
+    "@celo/dappkit": "^1.3.3",
     "@expo-google-fonts/montserrat": "^0.2.0",
     "@expo-google-fonts/montserrat-alternates": "^0.2.0",
     "@react-navigation/bottom-tabs": "^6.0.9",
