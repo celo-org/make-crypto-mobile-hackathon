@@ -83,6 +83,13 @@ Futures
 
   _\* to deliver the product and complete purchase, we need to be able to redirect to http://chispend.com//process/celo/confirm?txid=CELO_TRANSACTION_ID from Valora_
 
+<img src="https://raw.githubusercontent.com/Chimoney/make-crypto-mobile-hackathon/master/Celo_DeFi_Spend/assets/Defi%20spend%20mobile/celo1.png" width="30%"></img>
+<img src="https://raw.githubusercontent.com/Chimoney/make-crypto-mobile-hackathon/master/Celo_DeFi_Spend/assets/Defi%20spend%20mobile/celo2.png" width="30%"></img>
+<img src="https://raw.githubusercontent.com/Chimoney/make-crypto-mobile-hackathon/master/Celo_DeFi_Spend/assets/Defi%20spend%20mobile/celo3.png" width="30%"></img>
+<img src="https://raw.githubusercontent.com/Chimoney/make-crypto-mobile-hackathon/master/Celo_DeFi_Spend/assets/Defi%20spend%20mobile/celo4.png" width="30%"></img>
+<img src="https://raw.githubusercontent.com/Chimoney/make-crypto-mobile-hackathon/master/Celo_DeFi_Spend/assets/Defi%20spend%20mobile/celo5.png" width="30%"></img>
+<img src="https://raw.githubusercontent.com/Chimoney/make-crypto-mobile-hackathon/master/Celo_DeFi_Spend/assets/Defi%20spend%20mobile/celo6.png" width="30%"></img>
+
 ### How we built it
 
 For the Hackathon, I [extended the Celo Web Wallet](https://github.com/Chimoney/celo-web-wallet) to include an additional feature in the same place as the other bottoms.
