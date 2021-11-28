@@ -23,13 +23,19 @@ By combining subjective value metrics (eigenkarma) with objective metrics (monte
 Allows users to create proposals, vote on proposals (using the Time/Temperature/Capital model from the 0 Degree Project) , fund proposals, and then get rewarded for creating, predicting, and enacting the highest impact proposals for regenerative projects.
 
 #### URLs
-List any URLs relevant to demonstrating your prototype
+https://celo.projectkelvin.io (Working App with Wallet Integration and Voting)
 
 #### Presentation
-List any links to your presentation or any related visuals you want to share.
+Full preentation (8 minutes): https://share.descript.com/view/H2RQL7rx01s
+Demo Only (3 Minutes):  https://web.descript.com/4dcb296e-8ce2-4ea2-9fdd-8b88a6fb7ea1/37a16
 
 #### Next Steps
 What do you need to do next to turn this prototype into a working solution?
+
+To finish we need to:
+1. Add authentication to our API
+2. PRovide ways to buy into our recursive bonding cuve from the UI
+3. Make our oracle solution more robust.
 
 #### License
 All rights reserved.
