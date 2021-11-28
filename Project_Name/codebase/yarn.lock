@@ -1062,11 +1062,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@expo-google-fonts/montserrat-alternates@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/montserrat-alternates/-/montserrat-alternates-0.2.0.tgz#7a2570bca5b45dacf36c856ad4b8e3c7baf9dceb"
-  integrity sha512-ZZpGWYBW8Gnr/V3dC4tw8QlQqa8JojH7FrR8VrFnfaMv+32zI4AkVZg62s/VBH60IHs4oGyS3w7GoA7CTWtGSQ==
-
 "@expo-google-fonts/montserrat@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/montserrat/-/montserrat-0.2.0.tgz#5408c3c287f25bda14a77a8dd98c510e27df773a"
@@ -5772,6 +5767,11 @@ react-native-screens@^3.9.0:
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
+
+react-native-status-bar-height@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-status-bar-height/-/react-native-status-bar-height-2.6.0.tgz#b6afd25b6e3d533c43d0fcdcfd5cafd775592cea"
+  integrity sha512-z3SGLF0mHT+OlJDq7B7h/jXPjWcdBT3V14Le5L2PjntjjWM3+EJzq2BcXDwV+v67KFNJic5pgA26cCmseYek6w==
 
 react-native-svg-transformer@^0.14.3:
   version "0.14.3"
