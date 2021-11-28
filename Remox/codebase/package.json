@@ -1,0 +1,77 @@
+{
+  "name": "remox-app-front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@celo/contractkit": "^1.3.3",
+    "@craco/craco": "^6.3.0",
+    "@reduxjs/toolkit": "^1.6.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/d3-fetch": "^3.0.1",
+    "@types/date-and-time": "^0.13.0",
+    "@types/dateformat": "^3.0.1",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.33",
+    "@types/react-csv": "^1.1.2",
+    "@types/react-dom": "^17.0.10",
+    "@types/react-redux": "^7.1.20",
+    "@types/react-router-dom": "^5.3.2",
+    "@types/shortid": "^0.0.29",
+    "axios": "^0.24.0",
+    "coingecko-api-v3": "^0.0.13",
+    "d3-fetch": "^3.0.1",
+    "date-and-time": "^2.0.1",
+    "dateformat": "^5.0.2",
+    "framer-motion": "^5.3.1",
+    "graphql": "^14.7.0",
+    "graphql-request": "^3.6.1",
+    "hamburger-react": "^2.4.1",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-csv": "^2.0.3",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-spinners": "^0.11.0",
+    "shortid": "^2.2.16",
+    "typescript": "^4.4.4",
+    "typescript-mix": "^3.1.3",
+    "web-vitals": "^1.0.1",
+    "web3": "^1.6.0"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "tailwind": "npx tailwindcss --postcss -i ./src/index.css -o ./src/dist/index.css --watch",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.17"
+  }
+}
