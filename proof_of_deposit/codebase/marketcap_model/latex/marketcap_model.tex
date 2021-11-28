@@ -1,0 +1,80 @@
+\documentclass[7pt]{article}
+\usepackage{amsmath,amsfonts,amssymb,tensor,slashed,cancel,upgreek}
+%\usepackage[utopia]{mathdesign}
+%\usepackage[OMLmathrm]{isomath}
+\usepackage{mathtools}
+\newcommand\hcancel[2][black]{\setbox0=\hbox{$#2$}%
+\rlap{\raisebox{.28\ht0}{\textcolor{#1}{\rule{\wd0}{0.7pt}}}}#2}
+%\usepackage{enumitem}
+\usepackage{enumerate}
+\usepackage[a4paper, total={6.5in, 9in}]{geometry}
+\usepackage[none]{hyphenat}
+\usepackage{xcolor}
+\usepackage{comment}
+\usepackage[none]{hyphenat}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{amsthm}
+\usepackage{xcolor}
+%\usepackage{lipsum} % for filler text
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\usepackage{tabularx}
+\usetikzlibrary{positioning}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\renewcommand{\headrulewidth}{0pt} % no line in header area
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}           % page number in "outer" position of footer line
+\fancyfoot[RE,LO]{Cambridge Cryptographic Ltd. Commercial in confidence} % other info in "inner" position of footer line
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+
+\newcommand{\afunc}[1]{\operatorname{\mathsf{#1}}}
+\newcommand{\bfunc}[1]{\operatorname{\mathtt{#1}}}
+\newcommand{\contract}[1][\mathcal{C}]{\mathcal{#1}}
+\newcommand{\Set}[1]{\mathbb{#1}}
+%% Title Information.
+
+\graphicspath{ {./img/} }
+\usepackage{authblk}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=\parindent,labelindent=\parindent}
+
+
+\title{MarketCap Model for Proof-of-Deposit\thanks{Cambridge Cryptographic's
+techniques are the object of the following
+patent applications: EP20275088.1, GB2016187.3, GB2016186.5}}
+\author[ ]{Ying Chan\thanks{{Special thanks to my wife Yuqing Zheng without whom this analysis would have been intractable.}}}
+\author[ ]{John Fletcher}
+\author[ ]{Marcin W\'{o}jcik\footnote{Signumx Ltd.}}
+\affil[ ]{Cambridge Cryptographic Ltd.}
+\affil[ ]{\sf {\{ying.chan, john.fletcher\}@cambridgecryptographic.com}}
+
+\date{November 17, 2021}           %% By default, LaTeX uses the current date
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\input{content}
+
+
+\bibliographystyle{unsrt}
+\bibliography{biblo.bib}
+\end{document}
