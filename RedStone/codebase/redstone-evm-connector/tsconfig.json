@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "outDir": "lib"
+  },
+  "include": ["./scripts", "./utils", "./contracts", "./hardhat.config.ts", "index.ts"],
+}

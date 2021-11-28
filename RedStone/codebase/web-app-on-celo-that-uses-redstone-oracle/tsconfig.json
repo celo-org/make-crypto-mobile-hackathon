@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es5",
+    "declaration": true,
+    "outDir": "./dist",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "ts-node": {
+    "files": true
+  },
+  "exclude": ["node_modules", "tools", "test"]
+}

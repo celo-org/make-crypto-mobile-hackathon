@@ -1,0 +1,39 @@
+{
+  "interval": 60000,
+  "priceAggregator": "median",
+  "defaultSource": [
+    "bequant"
+  ],
+  "sourceTimeout": 50000,
+  "maxPriceDeviationPercent": 25,
+  "evmChainId": 1,
+  "tokens": {
+    "YFI": {},
+    "XRP": {},
+    "TRX": {},
+    "OMG": {},
+    "UNI": {},
+    "LINK": {},
+    "EOS": {},
+    "ZEC": {},
+    "BAT": {},
+    "ZRX": {},
+    "XLM": {},
+    "ETH": {},
+    "BCH": {},
+    "NEO": {},
+    "ADA": {},
+    "BTC": {},
+    "BSV": {},
+    "LTC": {},
+    "MKR": {},
+    "XEM": {},
+    "ALGO": {},
+    "XTZ": {},
+    "HBAR": {},
+    "XYM": {},
+    "NEXO": {},
+    "BTG": {},
+    "MFT": {}
+  }
+}

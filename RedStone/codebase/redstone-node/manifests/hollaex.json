@@ -1,0 +1,26 @@
+{
+  "interval": 60000,
+  "priceAggregator": "median",
+  "defaultSource": [
+    "hollaex"
+  ],
+  "sourceTimeout": 50000,
+  "maxPriceDeviationPercent": 25,
+  "evmChainId": 1,
+  "tokens": {
+    "XRP": {},
+    "TRX": {},
+    "UNI": {},
+    "DOGE": {},
+    "XLM": {},
+    "ETH": {},
+    "DOT": {},
+    "BCH": {},
+    "ADA": {},
+    "BTC": {},
+    "LTC": {},
+    "XMR": {},
+    "XTZ": {},
+    "XHT": {}
+  }
+}

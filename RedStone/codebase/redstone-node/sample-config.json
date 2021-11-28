@@ -1,0 +1,9 @@
+{
+  "arweaveKeysFile": "./.secrets/arweave-keyfile-33F0QHcb22W7LwWR1iRC8Az1ntZG09XQ03YWuw2ABqA.json",
+  "manifestFile": "./manifests/rapid.json",
+  "minimumArBalance": 0.01,
+  "addEvmSignature": true,
+  "credentials": {
+    "ethereumPrivateKey": "0x1111111111111111111111111111111111111111111111111111111111111111"
+  }
+}

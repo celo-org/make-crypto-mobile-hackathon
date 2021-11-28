@@ -1,0 +1,452 @@
+{
+  "ZC=F": {
+    "CELO": {
+      "koToken": "0x5240B7E24F7FA71AeB8223d03D46E96D36C2467B",
+      "providerAuthTx": "0xf5495b11b29068f4af1eb4e25b122e06d88fd078c643103f9cbaf026898be521",
+      "initTx": "0xa94cabdb58fd0b3f0aa904274371591eb236dea774ca6a166160024b25a403b6",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x5240B7E24F7FA71AeB8223d03D46E96D36C2467B&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x5240B7E24F7FA71AeB8223d03D46E96D36C2467B/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x7c6ce82c06d289174cfa70755048194f5f38b2833c6eeaaa73b8b33b78229b63"
+    },
+    "cUSD": {
+      "koToken": "0x54E34D40027809D49dc4e7f6ff2490f43c7E202d",
+      "providerAuthTx": "0x36f59226e6d959948ac5f9ecc84f03b249fab0906129a63f7a5ec98083aa7805",
+      "initTx": "0x6b866c79e4e0231b083ee453304064dfe9dcae667ffeef331fa469f263c2532e",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x54E34D40027809D49dc4e7f6ff2490f43c7E202d&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x54E34D40027809D49dc4e7f6ff2490f43c7E202d/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xdb1a81603ad28e07c1e1bf4a70fbde5211d4717ef8ae0d4daa7d91060380ff28"
+    }
+  },
+  "ZS=F": {
+    "CELO": {
+      "koToken": "0x5e90844330fd71fd4622243D6A117001914f34B5",
+      "providerAuthTx": "0x71314ddcc1ba42c438e168cbdb86a0b4703c680f88234a1e68812e316ed8a082",
+      "initTx": "0x37cbed26b41719829a324ff8695fabff53ba12079cd44ab135484a0d718ad07b",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x5e90844330fd71fd4622243D6A117001914f34B5&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x5e90844330fd71fd4622243D6A117001914f34B5/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xc599668aba0ff2ea10b41df3adb83d944c1808173fd1c24ee18f116de299cdb8"
+    },
+    "cUSD": {
+      "koToken": "0x45C2d37d6321160BC1Be336B1DF919bfB4F7e40c",
+      "providerAuthTx": "0x8f5f194d1fc579ca2f828c05a9b5a04f48128018211de8bfd25fc79d3bf7767f",
+      "initTx": "0x5cdea28274084d34a8539faab2ece393dc355d9480fa1227b7be7625c882dfba",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x45C2d37d6321160BC1Be336B1DF919bfB4F7e40c&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x45C2d37d6321160BC1Be336B1DF919bfB4F7e40c/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x61b988bfbf482e8065d96861a12c98a50ccd08c9451e783c73a41b25ef397393"
+    }
+  },
+  "ZM=F": {
+    "CELO": {
+      "koToken": "0x1a31be9394A34578aE247AfF7AB476dFe3A61352",
+      "providerAuthTx": "0x0cba683c07627a38d162fc0e2c203102ebbb1f85497072daddcf72a0bcb535d6",
+      "initTx": "0xcccd90dc4504fe5988aa9fb3eaf7e9e97e9a4497554e0f10b242c411ce8d8985",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x1a31be9394A34578aE247AfF7AB476dFe3A61352&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x1a31be9394A34578aE247AfF7AB476dFe3A61352/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x7ec6483f7adb2f77b81bb3b7c41985983ec48303c8aade3f30feb920251aa593"
+    },
+    "cUSD": {
+      "koToken": "0x99E04C9693549535E7CccFAAfDCe137df4D9CAE1",
+      "providerAuthTx": "0xb7b73ee7642b9bc1cc1e3df1f562eb9ae1d7e25880548dead87cbabea35169f4",
+      "initTx": "0x91f864511b03f5022898049d3030e339ef1b4adc6a1a1f05ed3da300b1e55045",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x99E04C9693549535E7CccFAAfDCe137df4D9CAE1&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x99E04C9693549535E7CccFAAfDCe137df4D9CAE1/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x3aa011f63d9d63c820ad990c4549f23cd5d232355e8ed419f47327de41ec0302"
+    }
+  },
+  "ZW=F": {
+    "CELO": {
+      "koToken": "0x84687bF9f161efD3a4545c7096B7da98C30AD0b3",
+      "providerAuthTx": "0x76722669e57fcffb9c8351b9fb2251ffbb080bbe8216b946709bc899dcea6327",
+      "initTx": "0x7f4c40684e01bc6382192f942f7d05e8a58d07ae2ae0a0a870e5ad41c0d00288",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x84687bF9f161efD3a4545c7096B7da98C30AD0b3&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x84687bF9f161efD3a4545c7096B7da98C30AD0b3/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x45636c1661665ee3a6948b71e13067fe575057dbe91cc7638858cfd63b6ecdce"
+    },
+    "cUSD": {
+      "koToken": "0x1c0455526fCAE392482d07B0fF2d0DDc788D2a08",
+      "providerAuthTx": "0x109f079192d39b6bb70ae2bf4d08927f3e4a599a3234238360a2b25fea45c351",
+      "initTx": "0x23609feb4019a92420f48a02ca42cbd40220f7002586eee60fe8aa6ab9890902",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x1c0455526fCAE392482d07B0fF2d0DDc788D2a08&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x1c0455526fCAE392482d07B0fF2d0DDc788D2a08/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x3a9f594b9d60d50fff41b0b1b62218ed18a5057388f1b3b7566e04864ed17083"
+    }
+  },
+  "KE=F": {
+    "CELO": {
+      "koToken": "0x670546DeEE004dF4109d1D43Bfa401F8CD97364C",
+      "providerAuthTx": "0x2babb60869a2e44f498d869b1439231371fc03c86c6def3173ebe22914350215",
+      "initTx": "0xbc0da6ec797b3bd55d4a08a4daad3666c69b4f80f9840428649bf45efdf1c344",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x670546DeEE004dF4109d1D43Bfa401F8CD97364C&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x670546DeEE004dF4109d1D43Bfa401F8CD97364C/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x15e476d9ada08ec686050666aa4647d29394a3c3bfd16a6bd05c0628a0d3ad41"
+    },
+    "cUSD": {
+      "koToken": "0xCF7315fDb07AC4a95ce70B95463Ba6eA739Fb17F",
+      "providerAuthTx": "0xb699855a84e6902a21643af76a70a095bc2b6e348e8a871f0168eecabbf662d3",
+      "initTx": "0x525ef3fb6f4d68e48ce7f30c1648acfd980fadb41aa2372acb0de863ef90a47b",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xCF7315fDb07AC4a95ce70B95463Ba6eA739Fb17F&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xCF7315fDb07AC4a95ce70B95463Ba6eA739Fb17F/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xd6d837c2c41fb06875edb2e2a9a8f953661cddcdaebe3f9132aa3a23b13aa92f"
+    }
+  },
+  "ZO=F": {
+    "CELO": {
+      "koToken": "0x491f8AFF33fda120193C0bF8fbA97F2599068670",
+      "providerAuthTx": "0xc622a883cd45eac2b6f0f284b01092002507f706c19e5d227c1e54bc18f9a5c2",
+      "initTx": "0x0e1e2f4b14785312c29a6672eafc5d7edbef87a01157f91924f2ec9a6da8c75c",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x491f8AFF33fda120193C0bF8fbA97F2599068670&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x491f8AFF33fda120193C0bF8fbA97F2599068670/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x7045ed25590f452521efe1cb7a6ba72a525a111a1324c07ee0ecbb564b26f4e8"
+    },
+    "cUSD": {
+      "koToken": "0xe2188110DD164FceabD9Add5B35115653Ed9F1dE",
+      "providerAuthTx": "0x03c2e1e6164f2d76efb1af1365bc713e8885494e912f2dc7c16f4de19d0c686d",
+      "initTx": "0xfc642c7a59a3488e3b68584da5a30a0a72f77361856d9ff045ab2e2e2da7165c",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xe2188110DD164FceabD9Add5B35115653Ed9F1dE&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xe2188110DD164FceabD9Add5B35115653Ed9F1dE/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xed3ff55172346d085484f5b383ce09b5986042ec2e8993a1f60fd85fe2052b6b"
+    }
+  },
+  "ZR=F": {
+    "CELO": {
+      "koToken": "0x133b9C38CF49F208560577aff77B4a651e7F5359",
+      "providerAuthTx": "0x2f0d1467f1f3b550fe6f35f0777e0cf2339141293dfa2e22eae2349e5f6085bc",
+      "initTx": "0xc048994da27f6e4060df3316a7407a2745dd2b28faf49125266eb30cd1c3ce81",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x133b9C38CF49F208560577aff77B4a651e7F5359&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x133b9C38CF49F208560577aff77B4a651e7F5359/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x050cccc1cb209ac98f045451c5adfdca3ef10b862914c872bd3c657eb19c483b"
+    },
+    "cUSD": {
+      "koToken": "0x095077a3035608b4aBEED06F1b88126242AACAFc",
+      "providerAuthTx": "0xc83784ba46c0cfa67e49095ddc186178ecfdd86015916175e04e5d7706e765df",
+      "initTx": "0x52f0c3d7a0c254ce6f4f80ccb46f3eba184269d2e23df1749add9ce95f9f0922",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x095077a3035608b4aBEED06F1b88126242AACAFc&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x095077a3035608b4aBEED06F1b88126242AACAFc/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x8aa71a1bb91dc588cfc076d9a2971c1899e139f6a8bfa11bfdf9f64c6f7eccd8"
+    }
+  },
+  "CL=F": {
+    "CELO": {
+      "koToken": "0x32797b9BD3D70182EE2BC82d4630ad1313b1ADC0",
+      "providerAuthTx": "0xf150e6177b26d571ec589b7a9bd5899e38951bbccdfb8a3472bb6acee0f6297d",
+      "initTx": "0x19c8b6c558d4c6c712261f3cafb92ea0afcd057d8e69d6fd34ed5771d685280d",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x32797b9BD3D70182EE2BC82d4630ad1313b1ADC0&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x32797b9BD3D70182EE2BC82d4630ad1313b1ADC0/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xcc2d5d0b14af55bb5959f5d574fb1f3762c33248513f73fc4a2fd8e00afc786b"
+    },
+    "cUSD": {
+      "koToken": "0x651B2Ecde1FDD040798da81cEaEfaD17b8C3CF5b",
+      "providerAuthTx": "0x3c7aed73f0e93ca0f17b2f0470657b489c93bffc48c8b2c1d332df09a363d119",
+      "initTx": "0x881ceb7b07836179ef87a593ae4aa2354a9aa3d617d7225d934548282f1cfd63",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x651B2Ecde1FDD040798da81cEaEfaD17b8C3CF5b&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x651B2Ecde1FDD040798da81cEaEfaD17b8C3CF5b/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xf0dbf6e9f8f9297636de90806eaa647b71c4139ed409de24c97a5482375cc40b"
+    }
+  },
+  "RB=F": {
+    "CELO": {
+      "koToken": "0xDdA781A2Ab630a91395809Ffff293CAc9309E55b",
+      "providerAuthTx": "0x6d13c5459871d67ff78836dc073092a3f80118fc916cd943d6c14260e5e815b9",
+      "initTx": "0x76f3def2976f4cda73788b0e5bd7470fc85a277e27dfb1feb2b3ea58a72a4a61",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xDdA781A2Ab630a91395809Ffff293CAc9309E55b&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xDdA781A2Ab630a91395809Ffff293CAc9309E55b/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x1224bc3e3144ceeefa77f857fda925f0329ee812a70266e654d6ba580a1bcc47"
+    },
+    "cUSD": {
+      "koToken": "0x0211b5a12C9BAE1ED68BCD219Cd8C4BEb4F2BFBB",
+      "providerAuthTx": "0x0b011b57ea6f7927613f3bcc24800d1711ddffa92ec73bcc5034f2f4f075d464",
+      "initTx": "0x5c9bb8e90980f26adeb271b3dcacf89fee3475fb8ec222d8f924d1dda34fec46",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x0211b5a12C9BAE1ED68BCD219Cd8C4BEb4F2BFBB&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x0211b5a12C9BAE1ED68BCD219Cd8C4BEb4F2BFBB/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x82d6cf513e27ad2066f32c76e5754cd2ab1eaf765eac5a8e61b7836f387fa5c3"
+    }
+  },
+  "NG=F": {
+    "CELO": {
+      "koToken": "0x695c220C7Bc4d240a29468aEc71080578D775635",
+      "providerAuthTx": "0x65a3ded30e8284af63d4d42dac187f7826f98c21d97e172707431eeab6431ae9",
+      "initTx": "0x07f914a74c59c5a6d574851533c50d8a65bd781a510a71b823e8e0df2812b1e3",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x695c220C7Bc4d240a29468aEc71080578D775635&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x695c220C7Bc4d240a29468aEc71080578D775635/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x8a3bf850f734a0c768226214e475b20768f0bac8dd688a0138af20b012195b2a"
+    },
+    "cUSD": {
+      "koToken": "0x3f5eA5B31c8A03c752fFb9d6b6866b0851274bE5",
+      "providerAuthTx": "0x5604a0a61e3b77a67b5d55758553a661d788a132ad6a6486527ffc6cb441ab29",
+      "initTx": "0xe7004ed4c09b3e604a327dc5e1700b3f1aa110afd5a18f6c45dcd216854a6836",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x3f5eA5B31c8A03c752fFb9d6b6866b0851274bE5&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x3f5eA5B31c8A03c752fFb9d6b6866b0851274bE5/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x114b14ae0bc739789ce3f2b4e1ff49e6957f5cdef054c5ffebd321b2b3b62466"
+    }
+  },
+  "QA=F": {
+    "CELO": {
+      "koToken": "0x28c7c9D3e6637c2286D8ce56D36Ee12bcbB16344",
+      "providerAuthTx": "0x2000580533f519b56f55cfbec3708120acd5a6f720f9e9486f9eea091845ce53",
+      "initTx": "0x5f5cbfa8b9b34d5890ce04c62ce2df2de0f60ba181cb4fcbad597c68386a55b0",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x28c7c9D3e6637c2286D8ce56D36Ee12bcbB16344&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x28c7c9D3e6637c2286D8ce56D36Ee12bcbB16344/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x200a789716fc641234daa6494ef8ab0c000d7730b4dbfd6a2e97ad07f576876a"
+    },
+    "cUSD": {
+      "koToken": "0xE2BF7785B01EC2bC3176934025a938aC5e76c3ea",
+      "providerAuthTx": "0x551ae8ce17addc0c5d5cd2365e992ba5797054ffc78ac2c0868bd71db05f6c51",
+      "initTx": "0xabeabcc4cff63f823cdced7392266b942932e1190b1f242e293251a5ab967053",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xE2BF7785B01EC2bC3176934025a938aC5e76c3ea&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xE2BF7785B01EC2bC3176934025a938aC5e76c3ea/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xb3e68a145c87aea8556bb7fbacdd003eacbe3da1c81892d5b9c6640acc3142f2"
+    }
+  },
+  "EH=F": {
+    "CELO": {
+      "koToken": "0x0982E246c45C0042eD82132b501a11abF4007312",
+      "providerAuthTx": "0x9e49dc548dd07c3a39c17b0dc3ba4a8fdcc45b16f710ddc4cd4fa64f18e0e92a",
+      "initTx": "0x7ecccae30a49c768d2fc1dfd705e4fd498410d11fc364c2bc160b7a253befeb6",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x0982E246c45C0042eD82132b501a11abF4007312&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x0982E246c45C0042eD82132b501a11abF4007312/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x9b65b9549eb1066494b24e2989f7244b40e0d4a915b31fc955c6156be9185100"
+    },
+    "cUSD": {
+      "koToken": "0xA8bAD78efd94a57F21439268898Cd411f18340BD",
+      "providerAuthTx": "0x2da9efa21903c5e28e2048a52acbb27049c8abb8dc38135ba911d409af373eea",
+      "initTx": "0x628da0fb45bc2003171a377fa000f1e625c490ff2632ffc7d2be1d80f8ae7ddd",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xA8bAD78efd94a57F21439268898Cd411f18340BD&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xA8bAD78efd94a57F21439268898Cd411f18340BD/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x9957041cfb31a1f5cbfcefa061d7704cd625fa9b7d0d7cf9c18cb818dbe2db91"
+    }
+  },
+  "GC=F": {
+    "CELO": {
+      "koToken": "0xf8C72364fc733416c81EEB6aA00CeFc47e5f6c7f",
+      "providerAuthTx": "0xa325a05c774bafe81ff5df1411a412b6f1a323ca93dfee0f8c878c83cdca8421",
+      "initTx": "0x01193646706a910fa194381c66a0bc939e4d4e108d60fca2d964fc7b15390eb3",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xf8C72364fc733416c81EEB6aA00CeFc47e5f6c7f&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xf8C72364fc733416c81EEB6aA00CeFc47e5f6c7f/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x7bc3f3e67ab248c69bdcede6dc518562a4eb53bacf6e04c27c8746c820676330"
+    },
+    "cUSD": {
+      "koToken": "0x247A0412Cdfa7363e44b77C49B9816609c99Cb85",
+      "providerAuthTx": "0x6d66b64239d7e6e3a8636a6f50e0910ba05bf0e908f729d03a071d4174769e34",
+      "initTx": "0xa5d40e6177eee23900d58eb6815c02c89e0ac9dd134fed617ad507d521e498cf",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x247A0412Cdfa7363e44b77C49B9816609c99Cb85&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x247A0412Cdfa7363e44b77C49B9816609c99Cb85/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xa8e4152c3942f732fea0423fc1cb919e31d1216de98c5efde04c7c7112a04add"
+    }
+  },
+  "SI=F": {
+    "CELO": {
+      "koToken": "0x0AaaCc2ae2ce35dF81321f7206F8Bc03e3C55BdF",
+      "providerAuthTx": "0x317a046c88bec18f02cd1b485c82e407fef6dea8a73fe109da7b7ab567c5d3e8",
+      "initTx": "0x554df70247f9ca7495f908e6119c70c01c7463cf78a3cea177c3129002eb3d87",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x0AaaCc2ae2ce35dF81321f7206F8Bc03e3C55BdF&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x0AaaCc2ae2ce35dF81321f7206F8Bc03e3C55BdF/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xb6aa24212ba327bedccad97da213a7a78a074ab0f583af354cbb15a44c0513ac"
+    },
+    "cUSD": {
+      "koToken": "0x5bd0819d1942d5656eF07Daf2314BEa4574cE6CC",
+      "providerAuthTx": "0x8dd1a32593dbc3fa83285f155d9d63e1d8e394b4a2259f9eb56464dd64d979ac",
+      "initTx": "0xcb461240cc0f8e5bdfe7a283c6019f28b39dca153f7a87b92b344ac83b24266b",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x5bd0819d1942d5656eF07Daf2314BEa4574cE6CC&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x5bd0819d1942d5656eF07Daf2314BEa4574cE6CC/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x74be693e4edf69081ee537af41655a29b6d2329886080c10fe0a9ff7c819b9b3"
+    }
+  },
+  "HG=F": {
+    "CELO": {
+      "koToken": "0x529d76A4Fefa51EB1AC1A7205886b4b191E4e8D0",
+      "providerAuthTx": "0xb5af42688fcb066007c930c02873acf1df729069327bbe8dedb8a64b08203661",
+      "initTx": "0x18aefa4a5d2fe3ca2ecfbd47eb155867ee80f93ea7336d3534981506d2f22b07",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x529d76A4Fefa51EB1AC1A7205886b4b191E4e8D0&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x529d76A4Fefa51EB1AC1A7205886b4b191E4e8D0/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xb58abb6549097beaa81def0e6fc718c7e163ff3b893b062aa3511580ebdeeb11"
+    },
+    "cUSD": {
+      "koToken": "0x381992310C7e883bCfbC8eee795D876cae06543e",
+      "providerAuthTx": "0x0301fa9a2c055edfa4a23aee6b170cdbca802de809ddc8d16f23a66c5fc9b147",
+      "initTx": "0xdc361d0a9a5fdc5c205aa858e0ac31f02d77f35574de5c34fff1900e68010d9f",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x381992310C7e883bCfbC8eee795D876cae06543e&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x381992310C7e883bCfbC8eee795D876cae06543e/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x329176019e397a4cfb64a27a610d4a95638b12ef5fb00dba53f875d406e3ee93"
+    }
+  },
+  "PL=F": {
+    "CELO": {
+      "koToken": "0x63623AFe1F9C18B0Be7e49deA54ee46229735bAa",
+      "providerAuthTx": "0x03df02190c9c4728ddb1c377e2bd302964243e8d572982894b3b1376ef8210c1",
+      "initTx": "0x01256963dc0f123a0b0cc505ae61d35a8f28aedeacd82762fbf71bd3aa3f3689",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x63623AFe1F9C18B0Be7e49deA54ee46229735bAa&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x63623AFe1F9C18B0Be7e49deA54ee46229735bAa/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xdfcc1c838013131aac63c7ba91859d15e1df56cf777253a451f9d48b4ff45389"
+    },
+    "cUSD": {
+      "koToken": "0xEea418C8Aa0A6128048bd67b68DE7254DBf52102",
+      "providerAuthTx": "0x105fe71845008509e217b348037be99b29eca452ee34864f9fae3e97e25bff20",
+      "initTx": "0x3bc3dbfe1a2fbbfa2bf04b843dc4c23270da3e892c47c4cc93b674fdbc2de184",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xEea418C8Aa0A6128048bd67b68DE7254DBf52102&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xEea418C8Aa0A6128048bd67b68DE7254DBf52102/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x265f9513bf92dedc4f95c6e3c890dea4c44ebdbad4b8682a4d6376a68858adb5"
+    }
+  },
+  "PA=F": {
+    "CELO": {
+      "koToken": "0x0EbEA11479ea50Df01D3C5DaD0FC7b49Ee9C962A",
+      "providerAuthTx": "0x1c306f24381cd5a2980d7a6bdfd3d77a6d28bdc4958bab03ce7e0c6361301c4a",
+      "initTx": "0x142be8b339d7a473ea14bf696e0c04e09af91731e4882dfa028288e071b69fdd",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x0EbEA11479ea50Df01D3C5DaD0FC7b49Ee9C962A&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x0EbEA11479ea50Df01D3C5DaD0FC7b49Ee9C962A/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x424e29bf4b143bbdbdf640a698cf52caf9af7a895d2629ae75a16f96430d2cb9"
+    },
+    "cUSD": {
+      "koToken": "0x386ad6C474023F50b921cA179b03fB3cfd5134a8",
+      "providerAuthTx": "0xd2360574c3ad2963d90b56e375d8a67393544685e0037b5a13ea1fee29a376b1",
+      "initTx": "0xdf9b0e361b4762ffe0903eb6217aeb6c6dce0c560c7358b8691d63c435da673a",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x386ad6C474023F50b921cA179b03fB3cfd5134a8&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x386ad6C474023F50b921cA179b03fB3cfd5134a8/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x7adca34397f601b8edc0f44a2f92a731e94bf5932612ee0e5df53fd5f8a3ef1b"
+    }
+  },
+  "LE=F": {
+    "CELO": {
+      "koToken": "0xB20b2c4b1633eBfd69e40C033C36b8e352617B38",
+      "providerAuthTx": "0x9df34c9a5e2c66b7f684761ae7801e945d553e242472d0ef99e818055e8117da",
+      "initTx": "0x2d489dd3f4ff85f6a5b941307d06e04eb3281a08671d994208b8e28b8f468e06",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xB20b2c4b1633eBfd69e40C033C36b8e352617B38&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xB20b2c4b1633eBfd69e40C033C36b8e352617B38/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x3c93a6a146f1db51221065df1b2d021ced7727fe2d5bed008c3d12468b6b22dd"
+    },
+    "cUSD": {
+      "koToken": "0xeCc9C24f5C541f90153d8c20cFd89E438A755103",
+      "providerAuthTx": "0xc3259085a4ce0c647ef7ea735cff227aef80d790e01a8c60d961270435076267",
+      "initTx": "0xc092c2b0594a777028b4dbdc3c5c916284640e684096500fff1b65f7c4d281b6",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xeCc9C24f5C541f90153d8c20cFd89E438A755103&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xeCc9C24f5C541f90153d8c20cFd89E438A755103/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x90f80ba5e0f65f7782fd7531df5329b284be9bdd4503989fd61b89f6eb854f0f"
+    }
+  },
+  "GF=F": {
+    "CELO": {
+      "koToken": "0xb757f87a73e834377D7eB48D47164a45c8035F25",
+      "providerAuthTx": "0x238c653ecfee2ad39eb3de257e33e52f82380e09c5b7a274bf3dff812db2075a",
+      "initTx": "0x7e67f675682e9d8d4f9b8a36b54a2d593b9260d8bdbe75f241d0c4a09f6e55f6",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xb757f87a73e834377D7eB48D47164a45c8035F25&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xb757f87a73e834377D7eB48D47164a45c8035F25/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x052a131925cc8a30644b2ec866c9c4540bd7d5683ebf679493941b97fe3d74df"
+    },
+    "cUSD": {
+      "koToken": "0x5e0D1f20B982d355Ce01E29B4761503216790d49",
+      "providerAuthTx": "0x9a8401d01d199a7617dcc7a6a0fd16a68bfae2b49d470c0fdd05143e744a0386",
+      "initTx": "0xb784159117e809d43a9a438fb3a3c918a16c21a203b50dd9e7cd6b2728d13381",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x5e0D1f20B982d355Ce01E29B4761503216790d49&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x5e0D1f20B982d355Ce01E29B4761503216790d49/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xa55b2b171793ba3d581fecc4ec7b04abe7026034e781750d0b323f7df1751323"
+    }
+  },
+  "HE=F": {
+    "CELO": {
+      "koToken": "0xd65A80c7c34eD9bA210d6bDe313Bc1F57E5658C2",
+      "providerAuthTx": "0x21ea12418abd0b2e108147b797afba3a0bac267f69aba3ccf375f821549b19bd",
+      "initTx": "0x5c12d4448091aff6acdecc96a4ecba13bd6fcc3033d501b6996bc81da78a964b",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xd65A80c7c34eD9bA210d6bDe313Bc1F57E5658C2&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xd65A80c7c34eD9bA210d6bDe313Bc1F57E5658C2/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xf7a41d9e4d1d04bc6746130df4edd5a8a00bb2598106f655977837e291867f66"
+    },
+    "cUSD": {
+      "koToken": "0x2e0c95BeA2d9a19f50FB3a820bfC69F59a74c17E",
+      "providerAuthTx": "0xb09916bcfe9e8f484e89e45a455f2bb0022a264a3af28ee9f2951efdf04857fc",
+      "initTx": "0x57f5785b92d2a5f8060e3665911e7b152cffde2a0ab5ba97346993553da0ed0f",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x2e0c95BeA2d9a19f50FB3a820bfC69F59a74c17E&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x2e0c95BeA2d9a19f50FB3a820bfC69F59a74c17E/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xedbfe201a47ac66d796205adde35f117965f1544e4f426672e583936da44dcc6"
+    }
+  },
+  "PRK=F": {
+    "CELO": {
+      "koToken": "0xA54BAe3aA9C4D29b206aEFE16354Be2CDf55C205",
+      "providerAuthTx": "0xf95cf188c0f85ee9e8851fb686c234abb3fbb85c433643b44c0c2242de969ee9",
+      "initTx": "0xa08d5821e3d16ed71b0254ac9d4feda08dda84d707804537b31a9d3ce0a0ec14",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xA54BAe3aA9C4D29b206aEFE16354Be2CDf55C205&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xA54BAe3aA9C4D29b206aEFE16354Be2CDf55C205/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x9ad4ada740ffc3c1a6558208b254268fb14a6debba3025f61b7b44a9d76313ad"
+    },
+    "cUSD": {
+      "koToken": "0xd5dA338b9D51A5ef7813287A422A772bf9BBEEc7",
+      "providerAuthTx": "0x817484510b1739dc68da7c4d0d9eb6e8803bb992896a457ed79de34d9a13279a",
+      "initTx": "0xf68f89f24fa6eb89686f42d14f17595577b0c69770b123fa3477f400e94cbddd",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xd5dA338b9D51A5ef7813287A422A772bf9BBEEc7&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xd5dA338b9D51A5ef7813287A422A772bf9BBEEc7/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x9928c76b2bdc21071685c92c1d080239ea50c4824d733bb791570d2a24f79aa4"
+    }
+  },
+  "DC=F": {
+    "CELO": {
+      "koToken": "0xb1b6D05bAb29F3a0A256cEd1688CaD36B5Ec2392",
+      "providerAuthTx": "0x00737851672d3cf586729adcd9445747f84e5aa664dbb2546b849e63ddee1969",
+      "initTx": "0x67eba9ac707bb902f915d192a3fef3cade3ebfadaed688dd7f41a46b1097a01c",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xb1b6D05bAb29F3a0A256cEd1688CaD36B5Ec2392&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xb1b6D05bAb29F3a0A256cEd1688CaD36B5Ec2392/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x21e4979b6da6d87c18ef196f087b42b72b5689875c96e2ba87b449df6bcd4c72"
+    },
+    "cUSD": {
+      "koToken": "0x60Fa222f805A115D642b9803a7699E7e0C96BB3B",
+      "providerAuthTx": "0xef4ad45f5b89bd94232762ab9ca3ca0ef85c316d0176ecb9d5deeb2ff11599cb",
+      "initTx": "0x269a8caeac597d476b4a4403ea5b1de82444d4a5f3bbd74afa7fe8712395bbed",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x60Fa222f805A115D642b9803a7699E7e0C96BB3B&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x60Fa222f805A115D642b9803a7699E7e0C96BB3B/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x3ff7c05f4fded3244431c6ccb5f6c16924795fb138cf52e13367ba499d35c201"
+    }
+  },
+  "GNF=F": {
+    "CELO": {
+      "koToken": "0x6dCFC08b7cDb90c62618aaD772F32340F90e863e",
+      "providerAuthTx": "0x0f27222b5c6d237717d78a9cce5c7dabc1e3083fe1b031d9870a6964400821c9",
+      "initTx": "0xe94729c2382c2cb73ca10d500d924f25a89640057dcd804bbd24c71f5371d179",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x6dCFC08b7cDb90c62618aaD772F32340F90e863e&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x6dCFC08b7cDb90c62618aaD772F32340F90e863e/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x5624061cb9c374d693efee326f000be74c03deba002d485e0a1d243125eeb890"
+    },
+    "cUSD": {
+      "koToken": "0xdD48F064eE0F49489307b9de4b29d71C80ae449d",
+      "providerAuthTx": "0x2a891217d0923a200ec3358ba2aeb4c549faf54127776d9bdf23e2ebb495fdf2",
+      "initTx": "0x0d3c2182c1c7a111e677bf6c4f0d8709bf51ee16b8a0f42ec568e88e21276532",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xdD48F064eE0F49489307b9de4b29d71C80ae449d&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xdD48F064eE0F49489307b9de4b29d71C80ae449d/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x75d92cfb532f92630c68b91dc7b53a0ac282e91e201c5ec92c192bacb8326fe7"
+    }
+  },
+  "CB=F": {
+    "CELO": {
+      "koToken": "0x481519f503e5Bd49F62Bcd4aAad05af9e277E349",
+      "providerAuthTx": "0x362be03cb3da6a5ff532812aa2123d101601740b619782b78579d33cd083975c",
+      "initTx": "0xc944e177025caec10b79793e9f2ad151eda44add45544676f784feccb5efcd6f",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x481519f503e5Bd49F62Bcd4aAad05af9e277E349&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x481519f503e5Bd49F62Bcd4aAad05af9e277E349/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x32427e5efa74201a207f0648f9f76adff5ec4453fb95f8174575c07d9eaeb3dd"
+    },
+    "cUSD": {
+      "koToken": "0x56e27D87E966A9e4F60989178D7D0d192888218D",
+      "providerAuthTx": "0xc951a8f681a86b913eaa172c01bd72d0f7021a6e7d028ff4dd10354029f0a00b",
+      "initTx": "0xc07bc843bb06aa901f5176c39ff4219e0e52c433ddca7410c96fedbde0fc8951",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x56e27D87E966A9e4F60989178D7D0d192888218D&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x56e27D87E966A9e4F60989178D7D0d192888218D/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0xe02af30ef6b764e705d437160e1a1429b1432517d561b4bbafc26d25eef5304f"
+    }
+  },
+  "CSC=F": {
+    "CELO": {
+      "koToken": "0x7875891B96E1b1657198b5701EDDe2797cAF50A3",
+      "providerAuthTx": "0x08092ea76415af0acb3b31059645fc63b767348fcaf2fe529dd91ec7649cf620",
+      "initTx": "0xf68f0a14b963d42660510e3d350ea7c9ad303361241011d86fb2db5cd2a50833",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0x7875891B96E1b1657198b5701EDDe2797cAF50A3&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0x7875891B96E1b1657198b5701EDDe2797cAF50A3/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x62a91475c3f8da863ded152c934f59f8e51c80a16410cbe66a7a1ca8cc81b623"
+    },
+    "cUSD": {
+      "koToken": "0xBA6cbf13385A20CB0210Bf34E01c86D1766F0182",
+      "providerAuthTx": "0x229616f0afba2eb8f688772d492bcebcd45de118c76407a20971034325eea17c",
+      "initTx": "0x0f88f20f8ee9c0c9b320046ac44d1d6912246e214204c322d9c4becd6a9baf79",
+      "ubeswapTradeUrl": "https://app.ubeswap.org/#/swap?inputCurrency=0xBA6cbf13385A20CB0210Bf34E01c86D1766F0182&outputCurrency=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolUrl": "https://app.ubeswap.org/#/add/0xBA6cbf13385A20CB0210Bf34E01c86D1766F0182/0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+      "ubeswapPoolTx": "0x44358a62361152e4bb08b38d03fcaaf5926c60ccc911fe66e2e3a2399774defb"
+    }
+  }
+}

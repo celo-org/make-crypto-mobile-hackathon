@@ -1,0 +1,277 @@
+{
+  "ZC=F": {
+    "name": "Corn",
+    "logoURI": "https://cdn.redstone.finance/symbols/zc=f.png",
+    "url": "https://www.google.com/search?q=ZC=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "grains"
+    ]
+  },
+  "ZS=F": {
+    "name": "Soybean",
+    "logoURI": "https://cdn.redstone.finance/symbols/zs=f.png",
+    "url": "https://www.google.com/search?q=ZS=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "grains"
+    ]
+  },
+  "ZM=F": {
+    "name": "Soybean Meal",
+    "logoURI": "https://cdn.redstone.finance/symbols/zm=f.png",
+    "url": "https://www.google.com/search?q=ZM=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "grains"
+    ]
+  },
+  "ZW=F": {
+    "name": "Wheat",
+    "logoURI": "https://cdn.redstone.finance/symbols/zw=f.png",
+    "url": "https://www.google.com/search?q=ZW=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "grains"
+    ]
+  },
+  "KE=F": {
+    "name": "Hard Red Wheat",
+    "logoURI": "https://cdn.redstone.finance/symbols/ke=f.png",
+    "url": "https://www.google.com/search?q=KE=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "grains"
+    ]
+  },
+  "ZO=F": {
+    "name": "Oats",
+    "logoURI": "https://cdn.redstone.finance/symbols/zo=f.png",
+    "url": "https://www.google.com/search?q=ZO=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "grains"
+    ]
+  },
+  "ZR=F": {
+    "name": "Rough Rice",
+    "logoURI": "https://cdn.redstone.finance/symbols/zr=f.png",
+    "url": "https://www.google.com/search?q=ZR=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "grains"
+    ]
+  },
+  "CL=F": {
+    "name": "Crude Oil WTI",
+    "logoURI": "https://cdn.redstone.finance/symbols/cl=f.png",
+    "url": "https://www.google.com/search?q=CL=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "energies"
+    ]
+  },
+  "RB=F": {
+    "name": "Gasoline RBOB",
+    "logoURI": "https://cdn.redstone.finance/symbols/rb=f.png",
+    "url": "https://www.google.com/search?q=RB=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "energies"
+    ]
+  },
+  "NG=F": {
+    "name": "Natural Gas",
+    "logoURI": "https://cdn.redstone.finance/symbols/ng=f.png",
+    "url": "https://www.google.com/search?q=NG=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "energies"
+    ]
+  },
+  "QA=F": {
+    "name": "Crude Oil Brent (F)",
+    "logoURI": "https://cdn.redstone.finance/symbols/qa=f.png",
+    "url": "https://www.google.com/search?q=QA=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "energies"
+    ]
+  },
+  "EH=F": {
+    "name": "Ethanol Futures",
+    "logoURI": "https://cdn.redstone.finance/symbols/eh=f.png",
+    "url": "https://www.google.com/search?q=EH=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "energies"
+    ]
+  },
+  "GC=F": {
+    "name": "Gold",
+    "logoURI": "https://cdn.redstone.finance/symbols/gc=f.png",
+    "url": "https://www.google.com/search?q=GC=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "metals"
+    ]
+  },
+  "SI=F": {
+    "name": "Silver",
+    "logoURI": "https://cdn.redstone.finance/symbols/si=f.png",
+    "url": "https://www.google.com/search?q=SI=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "metals"
+    ]
+  },
+  "HG=F": {
+    "name": "High Grade Copper",
+    "logoURI": "https://cdn.redstone.finance/symbols/hg=f.png",
+    "url": "https://www.google.com/search?q=HG=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "metals"
+    ]
+  },
+  "PL=F": {
+    "name": "Platinum",
+    "logoURI": "https://cdn.redstone.finance/symbols/pl=f.png",
+    "url": "https://www.google.com/search?q=PL=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "metals"
+    ]
+  },
+  "PA=F": {
+    "name": "Palladium (Sep '21)",
+    "logoURI": "https://cdn.redstone.finance/symbols/pa=f.jpg",
+    "url": "https://www.google.com/search?q=PA=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "metals"
+    ]
+  },
+  "LE=F": {
+    "name": "Live Cattle",
+    "logoURI": "https://cdn.redstone.finance/symbols/le=f.png",
+    "url": "https://www.google.com/search?q=LE=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "livestocks"
+    ]
+  },
+  "GF=F": {
+    "name": "Feeder Cattle",
+    "logoURI": "https://cdn.redstone.finance/symbols/gf=f.png",
+    "url": "https://www.google.com/search?q=GF=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "livestocks"
+    ]
+  },
+  "HE=F": {
+    "name": "Lean Hogs",
+    "logoURI": "https://cdn.redstone.finance/symbols/he=f.png",
+    "url": "https://www.google.com/search?q=HE=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "livestocks"
+    ]
+  },
+  "PRK=F": {
+    "name": "Pork Cutout",
+    "logoURI": "https://cdn.redstone.finance/symbols/prk=f.png",
+    "url": "https://www.google.com/search?q=PRK=F",
+    "providers": [
+      "redstone-stocks"
+    ],
+    "tags": [
+      "livestocks"
+    ]
+  },
+  "DC=F": {
+    "name": "Milk",
+    "logoURI": "https://cdn.redstone.finance/symbols/dc=f.png",
+    "tags": [
+      "livestocks"
+    ],
+    "url": "https://www.google.com/search?q=DC=F",
+    "providers": [
+      "redstone-stocks"
+    ]
+  },
+  "GNF=F": {
+    "name": "Milk",
+    "logoURI": "https://cdn.redstone.finance/symbols/gnf=f.png",
+    "tags": [
+      "livestocks"
+    ],
+    "url": "https://www.google.com/search?q=GNF=F",
+    "providers": [
+      "redstone-stocks"
+    ]
+  },
+  "CB=F": {
+    "name": "Butter Cash-Settled",
+    "logoURI": "https://cdn.redstone.finance/symbols/cb=f.png",
+    "tags": [
+      "livestocks"
+    ],
+    "url": "https://www.google.com/search?q=CB=F",
+    "providers": [
+      "redstone-stocks"
+    ]
+  },
+  "CSC=F": {
+    "name": "Cheese Cash-Settled",
+    "logoURI": "https://cdn.redstone.finance/symbols/csc=f.png",
+    "tags": [
+      "livestocks"
+    ],
+    "url": "https://www.google.com/search?q=CSC=F",
+    "providers": [
+      "redstone-stocks"
+    ]
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "api-dojo-rapid": {
+    "logoURI": "https://rapidapi.com/cdn/images?url=https://rapidapi-prod-apis.s3.amazonaws.com/f1/efaf50769f4fe1914234b035c3ff12/04b2a24093095ca016e1d83107aff2b9.png",
+    "url": "https://rapidapi.com/apidojo/api/yahoo-finance1",
+    "color": "#4d9fd1"
+  },
+  "yf-unofficial": {
+    "logoURI": "https://play-lh.googleusercontent.com/K4eJEI8ogLQO2MkjUKgxC8FNWL4I5etsbFw2OXwQJ9Uch4DGkW1gEdoQk_k-cmtD4F4",
+    "url": "https://www.npmjs.com/package/yahoo-finance",
+    "color": "#531cc4"
+  },
+  "coingecko": {
+    "logoURI": "https://static.coingecko.com/s/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png",
+    "url": "https://www.coingecko.com/",
+    "color": "#98c355"
+  },
+  "sushiswap": {
+    "logoURI": "https://sushi.com/static/media/logo.dec926df.png",
+    "url": "https://sushi.com/",
+    "color": "#e45d9d"
+  },
+  "coinbase": {
+    "logoURI": "https://images.ctfassets.net/q5ulk4bp65r7/1rFQCqoq8hipvVJSKdU3fQ/21ab733af7a8ab404e29b873ffb28348/coinbase-icon2.svg",
+    "url": "https://www.coinbase.com/",
+    "color": "#2a67d0"
+  },
+  "uniswap": {
+    "logoURI": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Uniswap_Logo.svg/1026px-Uniswap_Logo.svg.png",
+    "url": "https://uniswap.org/",
+    "color": "#e23275"
+  },
+  "kyber": {
+    "logoURI": "https://cdn-images-1.medium.com/max/1200/1*GyIk0KJkOtyH96AM6njwXg.png",
+    "url": "https://kyber.network/",
+    "color": "#62c19c"
+  },
+  "verto": {
+    "logoURI": "https://avatars.githubusercontent.com/u/69314266?s=200&v=4",
+    "url": "https://verto.exchange/",
+    "color": "#a176c2"
+  },
+  "ecb": {
+    "logoURI": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Logo_European_Central_Bank.svg",
+    "url": "https://www.ecb.europa.eu/home/html/index.en.html",
+    "color": "#10338e"
+  },
+  "aax": {
+    "logoURI": "https://cdn-images-1.medium.com/max/1200/1*S4dDf81_14Y5FwPHTxuyMw.jpeg",
+    "url": "https://www.aaxpro.com",
+    "color": "#327aee"
+  },
+  "aofex": {
+    "logoURI": "https://pbs.twimg.com/profile_images/1159350138898272257/wHHcxAWV_400x400.jpg",
+    "url": "https://aofex.com",
+    "color": "#e4653d"
+  },
+  "ascendex": {
+    "logoURI": "https://static1.asdxstatic.com/web/m/static/ssr/img/download_icon.9366d91.png",
+    "url": "https://ascendex.com",
+    "color": "#69cbe5"
+  },
+  "bequant": {
+    "logoURI": "https://miro.medium.com/max/3150/2*WEtmQ7u7RgcMvAVpQSsR6A.png",
+    "url": "https://bequant.io",
+    "color": "#e6e37f"
+  },
+  "bibox": {
+    "logoURI": "https://lh3.googleusercontent.com/UtdZWaSCc84WNnAcu2Nk6poDo245rPdAek9rDN03onN68EKmNsXW1Vm0CpVmg8HC7A",
+    "url": "https://www.bibox365.com",
+    "color": "#7196db"
+  },
+  "binance": {
+    "logoURI": "https://cryptologos.cc/logos/binance-coin-bnb-logo.svg",
+    "url": "https://www.binance.com/",
+    "color": "#d6ab3c"
+  },
+  "binancecoinm": {
+    "logoURI": "https://cryptologos.cc/logos/binance-coin-bnb-logo.svg",
+    "url": "https://www.binance.com",
+    "color": "#d6ab3c"
+  },
+  "binanceus": {
+    "logoURI": "https://media-exp1.licdn.com/dms/image/C4E0BAQFhxBv4O_xKlw/company-logo_200_200/0/1564039670779?e=2159024400&v=beta&t=Ozq8Pk6XMF3CgvhTnBCAjcEnUv2T_BVCaJjHaLrcS0M",
+    "url": "https://www.binance.us",
+    "color": "#d6ab3c"
+  },
+  "binanceusdm": {
+    "logoURI": "https://cryptologos.cc/logos/binance-coin-bnb-logo.svg",
+    "url": "https://www.binance.com",
+    "color": "#d6ab3c"
+  },
+  "bitcoincom": {
+    "logoURI": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Bitcoin.com_logo.png",
+    "url": "https://exchange.bitcoin.com",
+    "color": "#56bb8a"
+  },
+  "bitfinex": {
+    "logoURI": "https://buyshares.co.uk/wp-content/uploads/2021/04/bfx-stacked.png",
+    "url": "https://www.bitfinex.com/",
+    "color": "#769340"
+  },
+  "bitfinex2": {
+    "logoURI": "https://buyshares.co.uk/wp-content/uploads/2021/04/bfx-stacked.png",
+    "url": "https://www.bitfinex.com",
+    "color": "#769340"
+  },
+  "bitmex": {
+    "logoURI": "https://assets.coingecko.com/markets/images/378/large/BitMEX.png?1591671734",
+    "url": "https://www.bitmex.com",
+    "color": "#5759aa"
+  },
+  "bittrex": {
+    "logoURI": "https://bittrex.com/wp-content/uploads/2020/06/Symbol-Color-BUS.png",
+    "url": "https://bittrex.com",
+    "color": "#55b4f1"
+  },
+  "bitz": {
+    "logoURI": "https://imgm2.bitzapp.top/links/newLogo@2x_106ac8cd.png",
+    "url": "https://www.bitz.com",
+    "color": "#153086"
+  },
+  "btcturk": {
+    "logoURI": "https://pbs.twimg.com/profile_images/1408723273068822532/vogPgnCt.jpg",
+    "url": "https://www.btcturk.com",
+    "color": "#1d54ed"
+  },
+  "bw": {
+    "logoURI": "https://www.cryptunit.com/exchangeicons/129.png",
+    "url": "https://www.bw.com",
+    "color": "#cc2c25"
+  },
+  "bybit": {
+    "logoURI": "https://btctools.io/static/media/bybit-cta-logo.7f806195.png",
+    "url": "https://www.bybit.com",
+    "color": "#ecad42"
+  },
+  "cdax": {
+    "logoURI": "https://pbs.twimg.com/profile_images/970086514238656513/BxDPvR98_400x400.jpg",
+    "url": "https://cdax.io",
+    "color": "#5e94e2"
+  },
+  "cex": {
+    "logoURI": "https://assets.website-files.com/5e79fd92bfa86470e7b73551/5e7cc4141c24eb0d8cdb2132_CEX-IO-LOGO.png",
+    "url": "https://cex.io",
+    "color": "#53b1b0"
+  },
+  "coinex": {
+    "logoURI": "https://cdn.worldvectorlogo.com/logos/coinex-logo.svg",
+    "url": "https://www.coinex.com",
+    "color": "#68d9b6"
+  },
+  "crex24": {
+    "logoURI": "https://crex24.com/assets/gfx/crex24_logo.svg",
+    "url": "https://crex24.com",
+    "color": "#4a9b9a"
+  },
+  "currencycom": {
+    "logoURI": "https://tokenhell.com/wp-content/uploads/Currency.com-Logotype.png",
+    "url": "https://www.currency.com",
+    "color": "#55ba70"
+  },
+  "delta": {
+    "logoURI": "https://pbs.twimg.com/profile_images/1362278028286578688/ptvnT_Hs_400x400.jpg",
+    "url": "https://www.delta.exchange",
+    "color": "#4eafe3"
+  },
+  "exx": {
+    "logoURI": "https://coollogo.net/wp-content/uploads/2021/02/Exx-logo.svg",
+    "url": "https://www.exx.com/",
+    "color": "#e5a740"
+  },
+  "ftx": {
+    "logoURI": "https://s2.coinmarketcap.com/static/img/coins/200x200/4195.png",
+    "url": "https://ftx.com/",
+    "color": "#479eb9"
+  },
+  "hitbtc": {
+    "logoURI": "https://cdn.worldvectorlogo.com/logos/hitbtc-logo.svg",
+    "url": "https://hitbtc.com",
+    "color": "#5fabd6"
+  },
+  "hollaex": {
+    "logoURI": "https://cdn.coinranking.com/ZReusAD8r/HollaEx.svg",
+    "url": "https://hollaex.com",
+    "color": "#000"
+  },
+  "huobipro": {
+    "logoURI": "https://pbs.twimg.com/profile_images/1014184619946606592/cEJaKYw-.jpg",
+    "url": "https://www.huobi.com",
+    "color": "#51a1d0"
+  },
+  "kraken": {
+    "logoURI": "https://cdn.worldvectorlogo.com/logos/kraken-2.svg",
+    "url": "https://www.kraken.com/",
+    "color": "#5044ca"
+  },
+  "kucoin": {
+    "logoURI": "https://seeklogo.com/images/K/kucoin-token-kcs-logo-09DCE7B7A2-seeklogo.com.png",
+    "url": "https://www.kucoin.com",
+    "color": "#3f91db"
+  },
+  "lbank": {
+    "logoURI": "https://www.bestcoinlist.com/img/exchange-logo/Lbank.png",
+    "url": "https://www.lbank.info",
+    "color": "#357cc0"
+  },
+  "liquid": {
+    "logoURI": "https://seeklogo.com/images/T/team-liquid-logo-AC6053E709-seeklogo.com.png",
+    "url": "https://www.liquid.com",
+    "color": "#2057ed"
+  },
+  "oceanex": {
+    "logoURI": "http://blocksider.com/public/images/coins_icons/oce_.png",
+    "url": "https://www.oceanex.pro.com",
+    "color": "#6bc2e4"
+  },
+  "okcoin": {
+    "logoURI": "https://pbs.twimg.com/profile_images/1410623088027267074/uHn6VlAi_400x400.jpg",
+    "url": "https://www.okcoin.com",
+    "color": "#305ddc"
+  },
+  "okex": {
+    "logoURI": "https://cryptologos.cc/logos/okb-okb-logo.svg",
+    "url": "https://www.okex.com",
+    "color": "#4071df"
+  },
+  "okex3": {
+    "logoURI": "https://cryptologos.cc/logos/okb-okb-logo.svg",
+    "url": "https://www.okex.com",
+    "color": "#4071df"
+  },
+  "okex5": {
+    "logoURI": "https://cryptologos.cc/logos/okb-okb-logo.svg",
+    "url": "https://www.okex.com",
+    "color": "#4071df"
+  },
+  "poloniex": {
+    "logoURI": "https://play-lh.googleusercontent.com/U5ldYwa07WMNBWoVaI3Z4jFKjDFNSU1ijbRlij1WTtQKotcFlS-_yUcHeVyi1Gr4-A",
+    "url": "https://www.poloniex.com",
+    "color": "#295c61"
+  },
+  "probit": {
+    "logoURI": "https://assets.coingecko.com/markets/images/370/large/probit.png?1594886584",
+    "url": "https://www.probit.com",
+    "color": "#3c35ba"
+  },
+  "qtrade": {
+    "logoURI": "https://static.coinpaprika.com/exchanges/qtrade/logo.png?rev=10557103",
+    "url": "https://qtrade.io",
+    "color": "#e37b40"
+  },
+  "stex": {
+    "logoURI": "https://www.stex.com/images/1050_1050.png",
+    "url": "https://www.stex.com",
+    "color": "#000"
+  },
+  "tidebit": {
+    "logoURI": "https://cdn.coinranking.com/d2MixXNbw/tidebit.svg",
+    "url": "https://www.tidebit.com",
+    "color": "#5892d5"
+  },
+  "timex": {
+    "logoURI": "https://neironix.io/assets/thumbnails/a6/a639b7e77c9b5fa83704e4b65cbef5f4.png",
+    "url": "https://timex.io",
+    "color": "#6a5bcb"
+  },
+  "vcc": {
+    "logoURI": "https://play-lh.googleusercontent.com/a-8r_reU9BcRojYNn9t0MDOZ1VK6cYfZItW2Gu7fpeEQJ83f6aGOiaktWf46g4Mg0pRB",
+    "url": "https://vcc.exchange",
+    "color": "#3b89e0"
+  },
+  "pangolin": {
+    "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x60781C2586D68229fde47564546784ab3fACA982/logo.png",
+    "url": "https://pangolin.exchange/",
+    "color": "#e87a35"
+  },
+  "pangolin-png": {
+    "logoURI": "https://cdn.redstone.finance/sources/pangolin-png.png",
+    "url": "https://pangolin.exchange/",
+    "color": "#e87a35"
+  },
+  "pangolin-qi": {
+    "logoURI": "https://cdn.redstone.finance/sources/pangolin-png.png",
+    "url": "https://pangolin.exchange/",
+    "color": "#4fb1e8"
+  },
+  "pangolin-ave": {
+    "logoURI": "https://cdn.redstone.finance/sources/pangolin-png.png",
+    "url": "https://pangolin.exchange/",
+    "color": "#000000"
+  },
+  "pangolin-wavax": {
+    "logoURI": "https://cdn.redstone.finance/sources/pangolin-png.png",
+    "url": "https://pangolin.exchange/",
+    "color": "#000000"
+  },
+  "pangolin-aablock": {
+    "logoURI": "https://cdn.redstone.finance/sources/pangolin-aablock.png",
+    "url": "https://pangolin.exchange/",
+    "color": "#265fb0"
+  },
+  "pangolin-spore": {
+    "logoURI": "https://cdn.redstone.finance/sources/pangolin-spore.png",
+    "url": "https://pangolin.exchange/",
+    "color": "#424a88"
+  },
+  "pangolin-usdt": {
+    "logoURI": "https://cdn.redstone.finance/sources/pangolin-usdt.png",
+    "url": "https://pangolin.exchange/",
+    "color": "#48a07c"
+  },
+  "pangolin-pefi": {
+    "logoURI": "https://cdn.redstone.finance/sources/pangolin-pefi.png",
+    "url": "https://pangolin.exchange/",
+    "color": "#e74342"
+  },
+  "pangolin-snob": {
+    "logoURI": "https://cdn.redstone.finance/sources/pangolin-snob.png",
+    "url": "https://pangolin.exchange/",
+    "color": "#4aa8f8"
+  },
+  "trader-joe": {
+    "logoURI": "https://avatars.githubusercontent.com/u/82165905?s=200&v=4",
+    "url": "https://www.traderjoexyz.com/",
+    "color": "#e2786f"
+  }
+}

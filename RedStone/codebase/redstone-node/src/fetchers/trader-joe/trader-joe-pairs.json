@@ -1,0 +1,3722 @@
+[
+  {
+    "id": "0x00243a74c116deeafb341c47ef2ff21b0a1aab04",
+    "liquidityProviderCount": "0",
+    "reserve0": "482754137193945.129533035",
+    "reserve1": "7.679263282467522406",
+    "reserveUSD": "729.4080850591805241077880109776741",
+    "token0": {
+      "name": "MiniSafeMOONAvax",
+      "symbol": "MINISAFEMOON"
+    },
+    "token0Price": "62864642015350.36012139291966823855",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000001590719310476338761813586197672727",
+    "totalSupply": "1913.483082068961425321",
+    "txCount": "290",
+    "volumeUSD": "3469.101325812722182957832318619452"
+  },
+  {
+    "id": "0x00979bd14bd5eb5c456c5478d3bf4b6e9212ba7d",
+    "liquidityProviderCount": "0",
+    "reserve0": "6698369.14594166786988929",
+    "reserve1": "15920.071811886078692535",
+    "reserveUSD": "1375943.871101071624230976710698346",
+    "token0": {
+      "name": "VersoToken",
+      "symbol": "VSO"
+    },
+    "token0Price": "420.7499328577526301145968815359887",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.002376708638330503436554158420634779",
+    "totalSupply": "321732.804420003532405186",
+    "txCount": "5718",
+    "volumeUSD": "4308616.934105647662347375230210298"
+  },
+  {
+    "id": "0x03b26bd7056dce11c0f163b632cc498befcfeff4",
+    "liquidityProviderCount": "0",
+    "reserve0": "18995173.37985217611104056",
+    "reserve1": "0.026780802119351172",
+    "reserveUSD": "2.666698451777827314995210102638242",
+    "token0": {
+      "name": "Ragehoge (https://t.me/Ragehogeavax)",
+      "symbol": "Ragehoge"
+    },
+    "token0Price": "709283213.221112397349971081245112",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000001409874055045850024547651332481111",
+    "totalSupply": "711.272983773917344402",
+    "txCount": "78",
+    "volumeUSD": "8176.042789371181755211925401928734"
+  },
+  {
+    "id": "0x04463ae5b2ee32287d75f0474a986368179306a8",
+    "liquidityProviderCount": "0",
+    "reserve0": "1185608041680.892247069465850727",
+    "reserve1": "115.681072573572863507",
+    "reserveUSD": "9947.647450321205902532260969196461",
+    "token0": {
+      "name": "Chihuahuax",
+      "symbol": "CHIHUA"
+    },
+    "token0Price": "10248937145.07054378669741737415206",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000009757109306509626034231884147460108",
+    "totalSupply": "10902947.621686547341262051",
+    "txCount": "151",
+    "volumeUSD": "32004.61458594719186328394273169746"
+  },
+  {
+    "id": "0x061f9edb3858d2faa5f629f6ae34140c92229ea8",
+    "liquidityProviderCount": "0",
+    "reserve0": "675.680870491202569051",
+    "reserve1": "834.795339915360762724",
+    "reserveUSD": "1604.621882779685547261171453843718",
+    "token0": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token0Price": "0.8093970320434578809419520798098346",
+    "token1": {
+      "name": "Dai Stablecoin",
+      "symbol": "DAI"
+    },
+    "token1Price": "1.235487604242053023477841527786812",
+    "totalSupply": "737.420249388392467514",
+    "txCount": "3258",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x0a6f6f504245bdc36b47d72d8718c09d6c0461de",
+    "liquidityProviderCount": "0",
+    "reserve0": "136006.821611156593130393",
+    "reserve1": "8437.090539217676929448",
+    "reserveUSD": "729196.0724138808056397805292749626",
+    "token0": {
+      "name": "Eleven.finance",
+      "symbol": "ELE"
+    },
+    "token0Price": "16.12010929347781143172376016082755",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.06203431886188262540637822974617706",
+    "totalSupply": "33637.522804431216744732",
+    "txCount": "1108",
+    "volumeUSD": "1007118.391897371507310476689805165"
+  },
+  {
+    "id": "0x0af035ed563b3cd3392194fdbd12777815ce1f13",
+    "liquidityProviderCount": "0",
+    "reserve0": "641529473639860.685940826",
+    "reserve1": "33.626328838504649629",
+    "reserveUSD": "3199.240460123880670962272544287007",
+    "token0": {
+      "name": "BabyAvax",
+      "symbol": "BabyAvax"
+    },
+    "token0Price": "19078189496120.72085124646699272863",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000005241587521726502463947133305048856",
+    "totalSupply": "4620.566516946068716624",
+    "txCount": "784",
+    "volumeUSD": "11512.79572688395244307931126543015"
+  },
+  {
+    "id": "0x0b665a0a4130106221aa5f0b70e8debfb9607faf",
+    "liquidityProviderCount": "0",
+    "reserve0": "70.431586612009730782",
+    "reserve1": "83518984.930847547",
+    "reserveUSD": "6155.820228882156829878152920423217",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000008433003187278439319839943852030573",
+    "token1": {
+      "name": "xBonfire",
+      "symbol": "XBONFIRE"
+    },
+    "token1Price": "1185817.173066582628919480301270385",
+    "totalSupply": "2.388082732523639951",
+    "txCount": "1388",
+    "volumeUSD": "164827.9903257099804831632423848131"
+  },
+  {
+    "id": "0x0c8273b792d3de860a4ae227a2d43b11e75e548a",
+    "liquidityProviderCount": "0",
+    "reserve0": "80.492472130137553038",
+    "reserve1": "638199092672.885679928",
+    "reserveUSD": "7834.3532782746037353276619269319",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000001261243913604161884359766280256627",
+    "token1": {
+      "name": "AvaxKishu",
+      "symbol": "AXKISHU"
+    },
+    "token1Price": "7928680481.338262331743104082876523",
+    "totalSupply": "223.60679774997896864",
+    "txCount": "255",
+    "volumeUSD": "16611.9399370121115082871068060935"
+  },
+  {
+    "id": "0x0d70252e321849d70fd1145f979229652a085847",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.016449531287892144",
+    "reserve1": "7.647147353818059142",
+    "reserveUSD": "1.743905878829329558127827875523171",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.002151067650040670459122480683171101",
+    "token1": {
+      "name": "xYFI Finance",
+      "symbol": "xYFI"
+    },
+    "token1Price": "464.8854256076478563104173517038279",
+    "totalSupply": "0.354471880592060067",
+    "txCount": "10",
+    "volumeUSD": "2979.681712697287430673675706352574"
+  },
+  {
+    "id": "0x0de50fd80a6447c4778554f0d5cd084671156055",
+    "liquidityProviderCount": "0",
+    "reserve0": "641567325931417.654713856",
+    "reserve1": "41.497395339375996252",
+    "reserveUSD": "3964.212189812797662615462838609585",
+    "token0": {
+      "name": "AVAXyz",
+      "symbol": "AVAXyz"
+    },
+    "token0Price": "15460423978047.79949887396707656712",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000006468127920811851019389455382696898",
+    "totalSupply": "5092.704956353432732533",
+    "txCount": "989",
+    "volumeUSD": "52372.53760652755156466627475043482"
+  },
+  {
+    "id": "0x0df0ed54ae3460d68044ed1fe4b2533ab91fbc1b",
+    "liquidityProviderCount": "0",
+    "reserve0": "15404122667.944595067",
+    "reserve1": "33.832492532676228245",
+    "reserveUSD": "2958.949696311400904335139176554003",
+    "token0": {
+      "name": "AVALANCHODL",
+      "symbol": "$AHOL"
+    },
+    "token0Price": "455305580.9608744015032336633696901",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000002196327130209134452635048268906465",
+    "totalSupply": "22.624468853701981114",
+    "txCount": "841",
+    "volumeUSD": "33644.54320484041999719717211252827"
+  },
+  {
+    "id": "0x0e533b1a134bd093beaf4d5a5fadd61f4f5c97f6",
+    "liquidityProviderCount": "0",
+    "reserve0": "99011841.96560293870114954",
+    "reserve1": "1.010010231494508546",
+    "reserveUSD": "107.7927214043478117492084719304625",
+    "token0": {
+      "name": "RRTest",
+      "symbol": "RRTEST"
+    },
+    "token0Price": "98030533.63043210802085474806531161",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000001020090336108876395022546799894329",
+    "totalSupply": "9999.999999999999999",
+    "txCount": "3",
+    "volumeUSD": "0.5317037237863361868305990670597263"
+  },
+  {
+    "id": "0x0fe00eb60a6b4e0bc055253e2b104a57f08ba51f",
+    "liquidityProviderCount": "0",
+    "reserve0": "46901.401906883818161671",
+    "reserve1": "19.268372877395480014",
+    "reserveUSD": "1840.106220641300047205297419422597",
+    "token0": {
+      "name": "CORGI",
+      "symbol": "CORGI"
+    },
+    "token0Price": "2434.113259345618123299691078204724",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0004108272267777867869872380240127432",
+    "totalSupply": "948.683298050513798599",
+    "txCount": "19",
+    "volumeUSD": "1796.169964766319456220514574591811"
+  },
+  {
+    "id": "0x13cf951f09ecf3911df2d0d0f4f27bb2f2d32d2e",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.024690980561624694",
+    "reserve1": "0.025000116460713376",
+    "reserveUSD": "1.181296922452749897332038122301889",
+    "token0": {
+      "name": "JoeBar",
+      "symbol": "xJOE"
+    },
+    "token0Price": "0.98763462163968412026162092130607",
+    "token1": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token1Price": "1.012520195312499995496207750945525",
+    "totalSupply": "0.024844874813426192",
+    "txCount": "6",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x145b50175fef74e366f5ca91a3b8a496fe29dbd8",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.206049810740017446",
+    "reserve1": "97205310932.457897850372624163",
+    "reserveUSD": "17.55460372386988100016478008233847",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000000002119738199111250412797293029834157",
+    "token1": {
+      "name": "BabyAvax",
+      "symbol": "BABYAVAX"
+    },
+    "token1Price": "471756370866.5878078094394160961361",
+    "totalSupply": "141517.587188254058328889",
+    "txCount": "22",
+    "volumeUSD": "0.3295073563680251241484368242030462"
+  },
+  {
+    "id": "0x1643de2efb8e35374d796297a9f95f64c082a8ce",
+    "liquidityProviderCount": "0",
+    "reserve0": "2644756.874586458266864462",
+    "reserve1": "3117263.798907",
+    "reserveUSD": "6246907.884459530459955562228446925",
+    "token0": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token0Price": "0.8484225414332223357711894684684402",
+    "token1": {
+      "name": "Tether USD",
+      "symbol": "USDT.e"
+    },
+    "token1Price": "1.178657981329351592808686676324391",
+    "totalSupply": "2.769584942411442944",
+    "txCount": "22236",
+    "volumeUSD": "61998878.032047"
+  },
+  {
+    "id": "0x185c2eaa011f8d72f1980d44eb3380a581d2c0eb",
+    "liquidityProviderCount": "0",
+    "reserve0": "8.01",
+    "reserve1": "998755301205872.18179344",
+    "reserveUSD": "692.2659254345697833011333749592324",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000000000008019982462499999999999999401709308",
+    "token1": {
+      "name": "MiniBoxer",
+      "symbol": "MiniBoxer"
+    },
+    "token1Price": "124688551960783.0439192808988764045",
+    "totalSupply": "2828.427124746190096603",
+    "txCount": "2",
+    "volumeUSD": "0.432126045839306980837161906965813"
+  },
+  {
+    "id": "0x1928c177c9ea737e7d8acc2782573d2ad44cbbc4",
+    "liquidityProviderCount": "0",
+    "reserve0": "78020549.743184970657790303",
+    "reserve1": "0.031843986573276583",
+    "reserveUSD": "2.981867274075753183803865158603729",
+    "token0": {
+      "name": "AVAXpredator (https://t.me/AVAXpredator)",
+      "symbol": "AVAXpredator"
+    },
+    "token0Price": "2450087383.489216689131867540323304",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000004081487079762358175493761384951898",
+    "totalSupply": "1574.292128200123632011",
+    "txCount": "41",
+    "volumeUSD": "1058.762142380788122531484349288228"
+  },
+  {
+    "id": "0x1d0767676fd4f6b3a01407c6d4e5c8f700ff3fd4",
+    "liquidityProviderCount": "0",
+    "reserve0": "315.294965701022921878",
+    "reserve1": "67388726342.131301600012703742",
+    "reserveUSD": "27777.64784169107070218962189697161",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000004678749440971421329112466299525668",
+    "token1": {
+      "name": "BabyJoe",
+      "symbol": "BabyJoe"
+    },
+    "token1Price": "213732325.8311468502076504899142188",
+    "totalSupply": "4581154.192214248491557922",
+    "txCount": "1481",
+    "volumeUSD": "96836.13406939531968626603641062174"
+  },
+  {
+    "id": "0x1e527a7a304a86f6d548d9050b3824be619dcc90",
+    "liquidityProviderCount": "0",
+    "reserve0": "4775.550123376508237036",
+    "reserve1": "0.021005716137671359",
+    "reserveUSD": "2.161320256116367873431638075877499",
+    "token0": {
+      "name": "TZAP",
+      "symbol": "TZAP"
+    },
+    "token0Price": "227345.2660255702067513062104922631",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000004398596097829136184269701350280615",
+    "totalSupply": "9.999999999999999",
+    "txCount": "4",
+    "volumeUSD": "1.128363379651796222655927691718582"
+  },
+  {
+    "id": "0x1f8d6665ed4d812f70dfabbfba9b6228fe422ff0",
+    "liquidityProviderCount": "0",
+    "reserve0": "873071672339716.80069587",
+    "reserve1": "0.099872427844443234",
+    "reserveUSD": "10.23987158053479191041578015732045",
+    "token0": {
+      "name": "AvaMoon",
+      "symbol": "AVAMOON"
+    },
+    "token0Price": "8741868914006713.221738099839357262",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000000001143920150069676577900456700525865",
+    "totalSupply": "294.897998395107142119",
+    "txCount": "13",
+    "volumeUSD": "0.310227878617250417875130484166998"
+  },
+  {
+    "id": "0x2540d48fd6c3c901cecd4ac6410fc222d0fe5161",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.011357029499809726",
+    "reserve1": "1.857342169207664022",
+    "reserveUSD": "1.085869191718873640406710302899256",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.006114667339219782495093709157638603",
+    "token1": {
+      "name": "PhoenixRiseAvax",
+      "symbol": "PhoenixRiseAvax"
+    },
+    "token1Price": "163.5411943976003284329594287742453",
+    "totalSupply": "0.144815452359148819",
+    "txCount": "64",
+    "volumeUSD": "1585.632323172896139384328237665758"
+  },
+  {
+    "id": "0x2774516897ac629ad3ed9dcac7e375dda78412b9",
+    "liquidityProviderCount": "0",
+    "reserve0": "5825453.742200774006222261",
+    "reserve1": "22653.207196521931294427",
+    "reserveUSD": "1947455.943066338913752570531333007",
+    "token0": {
+      "name": "BENQI",
+      "symbol": "QI"
+    },
+    "token0Price": "257.1580126232716064290714857483476",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.003888659699143687665693744627172512",
+    "totalSupply": "335179.208981411132296784",
+    "txCount": "4143",
+    "volumeUSD": "3723660.936853761407130629632204047"
+  },
+  {
+    "id": "0x29e0120de4406e9b2e28b15937b67eae5e50c510",
+    "liquidityProviderCount": "0",
+    "reserve0": "2171.817644920250110687",
+    "reserve1": "2480.932343",
+    "reserveUSD": "4988.635830698407662582243787792935",
+    "token0": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token0Price": "0.8754038178622955340652753947349382",
+    "token1": {
+      "name": "Tether USD",
+      "symbol": "USDT"
+    },
+    "token1Price": "1.142329950584364410170370367987108",
+    "totalSupply": "0.002224864429973656",
+    "txCount": "9732",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x2a72a805087285ca76d8e013fcde6b29a2f06416",
+    "liquidityProviderCount": "0",
+    "reserve0": "420000.14156012924188821",
+    "reserve1": "3.21251837802855133",
+    "reserveUSD": "282.0368552784802723482542953774663",
+    "token0": {
+      "name": "Sledoge.finance",
+      "symbol": "SLED"
+    },
+    "token0Price": "130738.5957486330934531557034721805",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000007648850702991088720652356548217491",
+    "totalSupply": "1158.125557252058278126",
+    "txCount": "51",
+    "volumeUSD": "823.2896872097002620606218537898199"
+  },
+  {
+    "id": "0x2b2e1c83f13e270bfbdb9b56df534ea2c2f4dcf8",
+    "liquidityProviderCount": "0",
+    "reserve0": "98547626345841464.219384931",
+    "reserve1": "0.706980690854616746",
+    "reserveUSD": "69.63565664134050528508823399996182",
+    "token0": {
+      "name": "XSafeMoon",
+      "symbol": "XSafeMoon"
+    },
+    "token0Price": "139392245956130027.487349658950191",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000000000717400019736193354301799646923727",
+    "totalSupply": "8341.105233190394571111",
+    "txCount": "30",
+    "volumeUSD": "18.22772466591670390641618425663352"
+  },
+  {
+    "id": "0x2bbd8e0b59c229b75283525424c8c187579cbfcd",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.932374728950650908",
+    "reserve1": "29.251454686844640751",
+    "reserveUSD": "6.189041821420268851960474598369481",
+    "token0": {
+      "name": "Pangolin",
+      "symbol": "PNG"
+    },
+    "token0Price": "0.03187447389992440488870386402538234",
+    "token1": {
+      "name": "VersoToken",
+      "symbol": "VSO"
+    },
+    "token1Price": "31.37306683522615413204074981001363",
+    "totalSupply": "5.219355375864513238",
+    "txCount": "11",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x2e02539203256c83c7a9f6fa6f8608a32a2b1ca2",
+    "liquidityProviderCount": "0",
+    "reserve0": "991.10477",
+    "reserve1": "997.124315",
+    "reserveUSD": "1988.599798894318361023596373524779",
+    "token0": {
+      "name": "USD Coin",
+      "symbol": "USDC.e"
+    },
+    "token0Price": "0.9939630947621611253156533445882322",
+    "token1": {
+      "name": "Tether USD",
+      "symbol": "USDT.e"
+    },
+    "token1Price": "1.00607357080926974047355255892876",
+    "totalSupply": "0.000000000993998641",
+    "txCount": "22",
+    "volumeUSD": "833.77443"
+  },
+  {
+    "id": "0x2ed5cc0a196d00ec48909f056d473cb9ca2570b4",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.013014528234132876",
+    "reserve1": "41936363308.416129633",
+    "reserveUSD": "1.233065523860431069024643330781154",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000000003103399343052003482283531744220996",
+    "token1": {
+      "name": "AvaxFloki",
+      "symbol": "AvaxFloki"
+    },
+    "token1Price": "3222273028570.538877518229146446592",
+    "totalSupply": "0.731175679769865174",
+    "txCount": "14",
+    "volumeUSD": "369.9594337722452603057370204369795"
+  },
+  {
+    "id": "0x2f3caf3f9ec846a327cf5fd5afc4bb7737577dc8",
+    "liquidityProviderCount": "0",
+    "reserve0": "998331764725770.096436098",
+    "reserve1": "0.100190940883134785",
+    "reserveUSD": "10.52648069301855161027450520434686",
+    "token0": {
+      "name": "Template",
+      "symbol": "TMP"
+    },
+    "token0Price": "9964291740610053.687640444013472668",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000000001003583622430926546745253991763069",
+    "totalSupply": "316.257542926390666666",
+    "txCount": "5",
+    "volumeUSD": "0.09691316132134739620030376325371499"
+  },
+  {
+    "id": "0x2fee6ff293004f07050349b8b2f5fe69203eb457",
+    "liquidityProviderCount": "0",
+    "reserve0": "19.445040727827256957",
+    "reserve1": "4285178.444578922",
+    "reserveUSD": "1675.528031935620989628461949666569",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000004537743522075893603489987947694523",
+    "token1": {
+      "name": "AvaxDoge",
+      "symbol": "DOGEX"
+    },
+    "token1Price": "220373.8477362262508630922721464907",
+    "totalSupply": "0.271344478637314405",
+    "txCount": "470",
+    "volumeUSD": "33592.19192253319388074371329274919"
+  },
+  {
+    "id": "0x3165b1e5b21f4c1e34f767fdfafcb131b96f83c3",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.018424930085326982",
+    "reserve1": "12040810.557658739998560401",
+    "reserveUSD": "1.576991033568392416992531002128275",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000001530206791070849133421248711044636",
+    "token1": {
+      "name": "Moonrat (https://t.me/Moonratavax)",
+      "symbol": "Moonrat"
+    },
+    "token1Price": "653506444.9035631254713086267923898",
+    "totalSupply": "470.434744715347731107",
+    "txCount": "34",
+    "volumeUSD": "2628.263259791366776910914845407283"
+  },
+  {
+    "id": "0x32521b13ab1ce7de78c45aa1479624845baafc11",
+    "liquidityProviderCount": "0",
+    "reserve0": "7743614662.994054138",
+    "reserve1": "0.273764225058102984",
+    "reserveUSD": "27.31277236849167743607410196183618",
+    "token0": {
+      "name": "FegAvax",
+      "symbol": "FegAvax"
+    },
+    "token0Price": "28285707021.61895023169731721005874",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000003535354443273040629299814156816885",
+    "totalSupply": "1.449122678254567189",
+    "txCount": "65",
+    "volumeUSD": "2918.358455816605272862897397977849"
+  },
+  {
+    "id": "0x33a5ad1ecc6e277db749ebbdf3d67ff69b039676",
+    "liquidityProviderCount": "0",
+    "reserve0": "98.88862494959164937",
+    "reserve1": "396503679617892.661903624",
+    "reserveUSD": "8609.257182625053848664474371843715",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000000002494015315189251325381290307749719",
+    "token1": {
+      "name": "AvaxDoge",
+      "symbol": "AvaxDoge"
+    },
+    "token1Price": "4009598473231.981005174400673872562",
+    "totalSupply": "6187.665487008087852432",
+    "txCount": "1164",
+    "volumeUSD": "130641.9446930109631759494702465054"
+  },
+  {
+    "id": "0x38247c7c334c1d5b896f6710ed38ba2feffa236e",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.286776870264309944",
+    "reserve1": "146593000.072402623",
+    "reserveUSD": "27.19321415831079543997841760895246",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000001956279427548861010583888740739979",
+    "token1": {
+      "name": "AvaxHODL",
+      "symbol": "AvaxHODL"
+    },
+    "token1Price": "511174419.112999388374699124049471",
+    "totalSupply": "0.192661206025498468",
+    "txCount": "140",
+    "volumeUSD": "3678.404013423692709125693993884191"
+  },
+  {
+    "id": "0x3ce6d3b2c85c182a3e4db6833b2c509b3990660e",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.271855026255618198",
+    "reserve1": "7.473329",
+    "reserveUSD": "14.96587874271043240651328415724643",
+    "token0": {
+      "name": "ChainLink Token",
+      "symbol": "LINK"
+    },
+    "token0Price": "0.03637669721962169710446308465745319",
+    "token1": {
+      "name": "Tether USD",
+      "symbol": "USDT"
+    },
+    "token1Price": "27.4901262740421928378726405845978",
+    "totalSupply": "0.000001417151748411",
+    "txCount": "667",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x3d7e987517462d84aa8a6028c58cd23de237de60",
+    "liquidityProviderCount": "0",
+    "reserve0": "98059573.74387234",
+    "reserve1": "0.010199080285363581",
+    "reserveUSD": "1.005196944830606045299605811526188",
+    "token0": {
+      "name": "DontBuyYouJeet",
+      "symbol": "TEST"
+    },
+    "token0Price": "9614550626.157432201132148911491795",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000001040090212099347710952829723008022",
+    "totalSupply": "0.031622776601682793",
+    "txCount": "5",
+    "volumeUSD": "0.009916827746145754450370747252509744"
+  },
+  {
+    "id": "0x3daf1c6268362214ebb064647555438c6f365f96",
+    "liquidityProviderCount": "0",
+    "reserve0": "1257285.210359848582904652",
+    "reserve1": "55904.531519088660572146",
+    "reserveUSD": "4813429.305688489815584171722642237",
+    "token0": {
+      "name": "Pangolin",
+      "symbol": "PNG"
+    },
+    "token0Price": "22.48986220250405348637464701162723",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.04446447875028147424422752874182427",
+    "totalSupply": "260076.412246790511158667",
+    "txCount": "13178",
+    "volumeUSD": "11854389.98849486977033476298823433"
+  },
+  {
+    "id": "0x3dc04132d38775a86154456769b78692416d4a92",
+    "liquidityProviderCount": "0",
+    "reserve0": "95181067.713317239022142356",
+    "reserve1": "0.033088788428087878",
+    "reserveUSD": "3.30973670884084576609764280126473",
+    "token0": {
+      "name": "Apemoon (https://t.me/Apemoonavax)",
+      "symbol": "Apemoon"
+    },
+    "token0Price": "2876535292.918778091371440274932706",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000003476404417709454539263710918889964",
+    "totalSupply": "1774.44483582611603576",
+    "txCount": "10",
+    "volumeUSD": "156.2217446245469378991760993564566"
+  },
+  {
+    "id": "0x3e257ec3c7e6e775b78a3c5009c58d31e7203f37",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.02467058329354769",
+    "reserve1": "0.025000124173419951",
+    "reserveUSD": "1.177851257203933954449039771701706",
+    "token0": {
+      "name": "Joe Hat Token",
+      "symbol": "HAT"
+    },
+    "token0Price": "0.9868184302771332724366739730395877",
+    "token1": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token1Price": "1.013357644444444435281160671795263",
+    "totalSupply": "0.024834601554265352",
+    "txCount": "5",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x41f3092d6dd8db25ec0f7395f56cac107ecb7a12",
+    "liquidityProviderCount": "0",
+    "reserve0": "39063.456353303768342888",
+    "reserve1": "2812.076017772023699959",
+    "reserveUSD": "244560.409038813705731727441417449",
+    "token0": {
+      "name": "Relay Token",
+      "symbol": "RELAY"
+    },
+    "token0Price": "13.89132303196174150167976142294309",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.07198738361343680897529163744982331",
+    "totalSupply": "10367.840608489040727062",
+    "txCount": "1298",
+    "volumeUSD": "970983.2954725787241721100039725895"
+  },
+  {
+    "id": "0x4244d8d689f94455c64f90aa95a2ca4c49b38f95",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.034127698733744326",
+    "reserve1": "76114121.483230828",
+    "reserveUSD": "3.274905598118435201503782798044253",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000004483753877559134673563250276916695",
+    "token1": {
+      "name": "AvaxHODL",
+      "symbol": "AvaxHODL"
+    },
+    "token1Price": "2230274067.907536138180391363349086",
+    "totalSupply": "0.048650574732684314",
+    "txCount": "13",
+    "volumeUSD": "211.1367352396007289448243541971966"
+  },
+  {
+    "id": "0x42a39da76de293f680d2d6c9652b4bc37ff79de4",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.011993611785366505",
+    "reserve1": "123573521.990516027",
+    "reserveUSD": "1.150692478060485363146982517059984",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.00000000009705648582458454239926286584541925",
+    "token1": {
+      "name": "SHIBAVAX",
+      "symbol": "Shibavax"
+    },
+    "token1Price": "10303278462.06336283605676729879005",
+    "totalSupply": "0.03838335060588885",
+    "txCount": "27",
+    "volumeUSD": "4095.264520938527688945476486009147"
+  },
+  {
+    "id": "0x43b9c8dec26c2d21146466caacabf94fdbeac473",
+    "liquidityProviderCount": "0",
+    "reserve0": "2.063418983405311552",
+    "reserve1": "94.558463484439730535",
+    "reserveUSD": "180.3324405718722721000990665668041",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.02182162132684042460153583019942908",
+    "token1": {
+      "name": "Dai Stablecoin",
+      "symbol": "DAI"
+    },
+    "token1Price": "45.82610911545824386132066130622278",
+    "totalSupply": "13.763825469564685986",
+    "txCount": "5569",
+    "volumeUSD": "107496.7480791540469949340338263806"
+  },
+  {
+    "id": "0x454e67025631c065d3cfad6d71e6892f74487a15",
+    "liquidityProviderCount": "0",
+    "reserve0": "10971864.43268776593975473",
+    "reserve1": "301585.013275659118448031",
+    "reserveUSD": "25966697.9912300080231864032450645",
+    "token0": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token0Price": "36.38066863308987736670867475106607",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.02748712537653731828686166950850097",
+    "totalSupply": "1657947.840024826972535379",
+    "txCount": "99318",
+    "volumeUSD": "240475655.5720482037542884748208627"
+  },
+  {
+    "id": "0x467576d2ea2c55bee31a2e03c012efacf7f1c63d",
+    "liquidityProviderCount": "0",
+    "reserve0": "31356.751372086951233674",
+    "reserve1": "0.025314097599463926",
+    "reserveUSD": "2.286354773754940898107894614164594",
+    "token0": {
+      "name": "DaddyDoge",
+      "symbol": "DaddyDoge"
+    },
+    "token0Price": "1238707.058344872221764253963823307",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000008072933735730655218728050768656369",
+    "totalSupply": "28.064238814671691861",
+    "txCount": "87",
+    "volumeUSD": "5314.795687383339135423819180611583"
+  },
+  {
+    "id": "0x47653e8064989817fbf10ab5122f7b059e09924b",
+    "liquidityProviderCount": "0",
+    "reserve0": "222.327354908381269104",
+    "reserve1": "1468.904286536213845999",
+    "reserveUSD": "515.9893303480497128718811261202855",
+    "token0": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token0Price": "0.1513559167511491152856244466631974",
+    "token1": {
+      "name": "BENQI",
+      "symbol": "QI"
+    },
+    "token1Price": "6.606943563654295398793828750927131",
+    "totalSupply": "570.226028071600891531",
+    "txCount": "32",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x4a85ca23380437f64028b8fce60eccb5737b0062",
+    "liquidityProviderCount": "0",
+    "reserve0": "199308548692.58208824046054372",
+    "reserve1": "0.09269158726191758",
+    "reserveUSD": "8.757351970101499605631276151151902",
+    "token0": {
+      "name": "Nakamoto",
+      "symbol": "NAKAMOTO"
+    },
+    "token0Price": "2150233420098.828973691559495003825",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000004650657880454848597174200708417913",
+    "totalSupply": "135651.653680709386343233",
+    "txCount": "12",
+    "volumeUSD": "11.5198015578868628261500806201181"
+  },
+  {
+    "id": "0x4b5cdfd53bddea760dbe7033efaab7a62bf789fd",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.693696787460861779",
+    "reserve1": "61.685216918680569685",
+    "reserveUSD": "5317.621392317755042547698172054093",
+    "token0": {
+      "name": "Joe Hat Token",
+      "symbol": "HAT"
+    },
+    "token0Price": "0.01124575420356161030115443532757475",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "88.92244858804515673167947213845806",
+    "totalSupply": "6.041205853359359882",
+    "txCount": "1127",
+    "volumeUSD": "136182.5796696258764473921805268312"
+  },
+  {
+    "id": "0x4bef4eaeb127d0b98e30422a7aecd5cc1eccfe48",
+    "liquidityProviderCount": "0",
+    "reserve0": "30276.981947432698138075",
+    "reserve1": "0.021079861965430057",
+    "reserveUSD": "2.16511516174241072026461973024342",
+    "token0": {
+      "name": "BonfireAVA",
+      "symbol": "BonfireAVA"
+    },
+    "token0Price": "1436298.871268012487405018562876726",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000006962339245711212524234698233663185",
+    "totalSupply": "25.158061939144677492",
+    "txCount": "83",
+    "volumeUSD": "5430.587949923285464966983188381328"
+  },
+  {
+    "id": "0x4fcfc1c23350f10b501cde9321611990efa36036",
+    "liquidityProviderCount": "0",
+    "reserve0": "77.215148101061623503",
+    "reserve1": "151902961248162.3551175",
+    "reserveUSD": "6751.503822153191229957473718264179",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000000000508318912722945571619942893443846",
+    "token1": {
+      "name": "Lucky Cat",
+      "symbol": "NEKO"
+    },
+    "token1Price": "1967268923053.116001108405742160818",
+    "totalSupply": "1053.438860623093667809",
+    "txCount": "810",
+    "volumeUSD": "225761.5535119016413493872955448039"
+  },
+  {
+    "id": "0x5148abf2ff58ac0588884156dd90401878a63810",
+    "liquidityProviderCount": "0",
+    "reserve0": "738051083782755.262003557",
+    "reserve1": "0.136341084166447989",
+    "reserveUSD": "14.50602350101439409137883811953509",
+    "token0": {
+      "name": "Template",
+      "symbol": "TMP"
+    },
+    "token0Price": "5413269876024510.537300685583202429",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000000018473122953448555135511471802875",
+    "totalSupply": "316.227766016837932199",
+    "txCount": "3",
+    "volumeUSD": "1.930879275526911211609226819586523"
+  },
+  {
+    "id": "0x51d02bf581563c068d12602a8540e38b9d2c624c",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.027152555763448802",
+    "reserve1": "87131758.798181333916763548",
+    "reserveUSD": "2.370230566244574803033484450654373",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000003116263936131580343206103515904291",
+    "token1": {
+      "name": "shibainu (https://t.me/shibainu_avax)",
+      "symbol": "shibainu"
+    },
+    "token1Price": "3208970807.656826960048016778901276",
+    "totalSupply": "1529.365215582296416117",
+    "txCount": "166",
+    "volumeUSD": "9881.469342821671916797258844097477"
+  },
+  {
+    "id": "0x53b72776f8402c1f3dafa228895fd49ef18768ef",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.002382199074146832",
+    "reserve1": "15.302268061104503758",
+    "reserveUSD": "63.67841991491424641491566340070717",
+    "token0": {
+      "name": "Yak Token",
+      "symbol": "YAK"
+    },
+    "token0Price": "0.0001556762085616533790228519933649536",
+    "token1": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token1Price": "6423.589122829671337499929570609937",
+    "totalSupply": "0.177887867440444375",
+    "txCount": "10",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x55fce0bd58e71a9dd8c4e14d13a215f64f09cb72",
+    "liquidityProviderCount": "0",
+    "reserve0": "173.108023967115226188",
+    "reserve1": "2173004055085.402803027",
+    "reserveUSD": "14959.81705964702040457375054351009",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.00000000007966300088672028852460273060055967",
+    "token1": {
+      "name": "FegAVAX",
+      "symbol": "FegAVAX"
+    },
+    "token1Price": "12552878863.07454693797811587838232",
+    "totalSupply": "573.940155059055164913",
+    "txCount": "10004",
+    "volumeUSD": "704859.3432063868511879035323974074"
+  },
+  {
+    "id": "0x56157d8f55ceb91171bbd4c765bf5365da0215a6",
+    "liquidityProviderCount": "0",
+    "reserve0": "58.453715891016654696",
+    "reserve1": "34740735908.954560036556724529",
+    "reserveUSD": "5575.227378351992158615085264188525",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000001682569881196730253463679895561543",
+    "token1": {
+      "name": "AntiVax (https://t.me/antivaxavax)",
+      "symbol": "AntiVax"
+    },
+    "token1Price": "594328955.4718218053905746657378923",
+    "totalSupply": "1414213.562373095048800688",
+    "txCount": "236",
+    "volumeUSD": "39074.80184325366320104046014724732"
+  },
+  {
+    "id": "0x5972c7666d74afa96872d43ab708e81dfde14b09",
+    "liquidityProviderCount": "0",
+    "reserve0": "7010185979214.444642116",
+    "reserve1": "5.816609630862108118",
+    "reserveUSD": "578.1283270539360334898926695752032",
+    "token0": {
+      "name": "BullAVAX",
+      "symbol": "BullAVAX"
+    },
+    "token0Price": "1205201384328.662734215743110948384",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000008297368497938070889795875115128138",
+    "totalSupply": "198.29909726109510806",
+    "txCount": "274",
+    "volumeUSD": "1197.965198557577187703183398141349"
+  },
+  {
+    "id": "0x59aca469884fc6edea6b5607f5337fe16075073f",
+    "liquidityProviderCount": "0",
+    "reserve0": "73086.783327",
+    "reserve1": "7507380.675165306307002786",
+    "reserveUSD": "145746.2694583328022564613294205739",
+    "token0": {
+      "name": "Tether USD",
+      "symbol": "USDT.e"
+    },
+    "token0Price": "0.009735324008382016613364129051008164",
+    "token1": {
+      "name": "ZABU Token",
+      "symbol": "ZABU"
+    },
+    "token1Price": "102.7187178504803744049824106989461",
+    "totalSupply": "0.725842847691791628",
+    "txCount": "1991",
+    "volumeUSD": "632623.712345"
+  },
+  {
+    "id": "0x59e4e5501764a293b829902d9cf01967fa80eff2",
+    "liquidityProviderCount": "0",
+    "reserve0": "183969.81145050404544999",
+    "reserve1": "4624771.683424",
+    "reserveUSD": "9237241.171886793040673557375866577",
+    "token0": {
+      "name": "Chainlink Token",
+      "symbol": "LINK.e"
+    },
+    "token0Price": "0.03977922026072863239753603634565515",
+    "token1": {
+      "name": "Tether USD",
+      "symbol": "USDT.e"
+    },
+    "token1Price": "25.13875318434115254315009637057881",
+    "totalSupply": "0.910478951859564101",
+    "txCount": "3785",
+    "volumeUSD": "5650429.696057"
+  },
+  {
+    "id": "0x5aea5195f96866014cb3c771622b8f6f6a7a6f60",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.908866259179884736",
+    "reserve1": "76.502974381698728779",
+    "reserveUSD": "6894.187591061870413961828301783868",
+    "token0": {
+      "name": "1token.org",
+      "symbol": "1EN"
+    },
+    "token0Price": "0.01188014278562882192021019683381718",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "84.17407248755297667127025507223103",
+    "totalSupply": "8.337265738837882533",
+    "txCount": "6",
+    "volumeUSD": "337.9521134924945967384861477715541"
+  },
+  {
+    "id": "0x5ca45bdd971187e2019773cc34c62111e87007c6",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.868842306",
+    "reserve1": "0.11",
+    "reserveUSD": "10.16898227362406573281857478811638",
+    "token0": {
+      "name": "SL3",
+      "symbol": "SL3"
+    },
+    "token0Price": "7.898566418181818181818181818181818",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.126605253036561965020151769635398",
+    "totalSupply": "0.00000974682054726",
+    "txCount": "2",
+    "volumeUSD": "0.4622264669829120787644806721871082"
+  },
+  {
+    "id": "0x61268404ce4c36999a08274401bbea3d1d7f0092",
+    "liquidityProviderCount": "0",
+    "reserve0": "11278.866859866251786674",
+    "reserve1": "8.54977821293557396",
+    "reserveUSD": "751.9157197670715230724790711380481",
+    "token0": {
+      "name": "LydiaFinance Token",
+      "symbol": "LYD"
+    },
+    "token0Price": "1319.199934660485515734913698895988",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0007580352103772381807356624955436122",
+    "totalSupply": "303.571136254982875505",
+    "txCount": "1338",
+    "volumeUSD": "49452.7255367926042083961745602458"
+  },
+  {
+    "id": "0x619c9f1183ac1f85c7bb78a5451f385bfacb1f8b",
+    "liquidityProviderCount": "0",
+    "reserve0": "66101260063.149904817",
+    "reserve1": "67.027822851161355098",
+    "reserveUSD": "6518.232619779393544945620014658114",
+    "token0": {
+      "name": "EverAVAX",
+      "symbol": "E-AVAX"
+    },
+    "token0Price": "986176445.1149050528192456100507583",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000001014017324134611921105743223153973",
+    "totalSupply": "66.099652902692242393",
+    "txCount": "76",
+    "volumeUSD": "4058.368960243963484423549919697732"
+  },
+  {
+    "id": "0x62b48d18be4079e5d2ab4444835d530a892b58e6",
+    "liquidityProviderCount": "0",
+    "reserve0": "193928.780731890327138445",
+    "reserve1": "0.035029437571776321",
+    "reserveUSD": "3.164584046055577725799072274322211",
+    "token0": {
+      "name": "BabyApex",
+      "symbol": "BabyApex"
+    },
+    "token0Price": "5536165.984238961882971381746597606",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000001806304223621406894129760398719827",
+    "totalSupply": "82.124139547871861632",
+    "txCount": "120",
+    "volumeUSD": "4447.497321061405402901429045992837"
+  },
+  {
+    "id": "0x634999f08da25e13ecd6cde63778a1a7a62cea18",
+    "liquidityProviderCount": "0",
+    "reserve0": "335279498.164396832",
+    "reserve1": "0.019423644004235487",
+    "reserveUSD": "1.999328307761735943774181274367513",
+    "token0": {
+      "name": "@AvaxFeg ",
+      "symbol": "AvaxFeg"
+    },
+    "token0Price": "17261410788.38174500130610754653725",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000005793269230769230009818440086385835",
+    "totalSupply": "0.08059603321259438",
+    "txCount": "4",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x63abe32d0ee76c05a11838722a63e012008416e6",
+    "liquidityProviderCount": "0",
+    "reserve0": "16592864.554088",
+    "reserve1": "16808835.525604580926226154",
+    "reserveUSD": "33609201.84764363217577859367032226",
+    "token0": {
+      "name": "USD Coin",
+      "symbol": "USDC.e"
+    },
+    "token0Price": "0.9871513424479883550444464158542612",
+    "token1": {
+      "name": "Dai Stablecoin",
+      "symbol": "DAI.e"
+    },
+    "token1Price": "1.013015894320873724618117383098938",
+    "totalSupply": "16.674833250590164291",
+    "txCount": "2315",
+    "volumeUSD": "7068377.974915872845534265792377263"
+  },
+  {
+    "id": "0x67926d973cd8ee876ad210faaf7dffa99e414acf",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.504229375462233231",
+    "reserve1": "0.905881",
+    "reserveUSD": "1.995820129594923433102736975723106",
+    "token0": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token0Price": "0.5566176743548360446901966152287111",
+    "token1": {
+      "name": "USD Coin",
+      "symbol": "USDC.e"
+    },
+    "token1Price": "1.796565301594275057738531772288766",
+    "totalSupply": "0.000000675228281549",
+    "txCount": "35",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x67e06d64aee9c9522c0780e8796bf024bbe305d6",
+    "liquidityProviderCount": "0",
+    "reserve0": "2736446.142620746367431245",
+    "reserve1": "0.18770855287851832",
+    "reserveUSD": "18.1592609754656438411066067380706",
+    "token0": {
+      "name": "tikiAVAX (https://t.me/tikiAVAX)",
+      "symbol": "tikiAVAX"
+    },
+    "token0Price": "14578164.39718506737259582548343509",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000006859574173776585970718147802831216",
+    "totalSupply": "710.32278727311918797",
+    "txCount": "113",
+    "volumeUSD": "3716.984923748619122966101780459009"
+  },
+  {
+    "id": "0x69c53ae17d091deb05e2b47c04d07945495bb33c",
+    "liquidityProviderCount": "0",
+    "reserve0": "912344.693784568",
+    "reserve1": "0.548206052234774098",
+    "reserveUSD": "56.29522764156777410604109254064696",
+    "token0": {
+      "name": "AVALANCHEGOUP",
+      "symbol": "$AGU"
+    },
+    "token0Price": "1664236.813996078071636606075253501",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000006008760241271508086720569594432678",
+    "totalSupply": "0.022360679774996896",
+    "txCount": "13",
+    "volumeUSD": "2.750768452281497472420541025868952"
+  },
+  {
+    "id": "0x6a9135c5db745b4588e0330f421267f08511c036",
+    "liquidityProviderCount": "0",
+    "reserve0": "769530976686509.606908451",
+    "reserve1": "143.960290325547598493",
+    "reserveUSD": "13943.59302916435580420677464387423",
+    "token0": {
+      "name": "xSafeMars",
+      "symbol": "xSafeMars"
+    },
+    "token0Price": "5345439182890.745205000522608817507",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000001870753675770402794486496387103822",
+    "totalSupply": "10451.684107465990349207",
+    "txCount": "1056",
+    "volumeUSD": "73548.25521218359559382224181812461"
+  },
+  {
+    "id": "0x6a9e3553e7711f8a0f4fffed02244ddefdc03061",
+    "liquidityProviderCount": "0",
+    "reserve0": "1953.950090686785960508",
+    "reserve1": "27.595630652261984844",
+    "reserveUSD": "2375.460380975080196670804387777",
+    "token0": {
+      "name": "Avaware",
+      "symbol": "AVE"
+    },
+    "token0Price": "70.80650249704015099227482317371873",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.01412299668440482479306814487783731",
+    "totalSupply": "224.788661035659893362",
+    "txCount": "1714",
+    "volumeUSD": "297659.3705292888369251663431428561"
+  },
+  {
+    "id": "0x6d156429cac69fb5688c76fe8a15ab5a746ca628",
+    "liquidityProviderCount": "0",
+    "reserve0": "99943186838.083587650171350216",
+    "reserve1": "200.114033014279420572",
+    "reserveUSD": "17496.13625163803293041615948244031",
+    "token0": {
+      "name": "MaxiAvax",
+      "symbol": "MAXAVAX"
+    },
+    "token0Price": "499431175.9783083270407555179555815",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000002002277887521048059502063368841587",
+    "totalSupply": "4472135.954999579392817347",
+    "txCount": "2",
+    "volumeUSD": "4.985000614313144872409648856002174"
+  },
+  {
+    "id": "0x6f0077cee0a1e329e2774f9db96334dbbf6c829c",
+    "liquidityProviderCount": "0",
+    "reserve0": "288.694512599652753279",
+    "reserve1": "135895.781670272",
+    "reserveUSD": "24948.62454231852327190586207348677",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.002124381706711992611144707196927731",
+    "token1": {
+      "name": "Supplement Finance",
+      "symbol": "SuFi"
+    },
+    "token1Price": "470.7251982261454933576596981671808",
+    "totalSupply": "0.186872852218166579",
+    "txCount": "1496",
+    "volumeUSD": "299113.3543001167211689145123821724"
+  },
+  {
+    "id": "0x6f3a0c89f611ef5dc9d96650324ac633d02265d3",
+    "liquidityProviderCount": "0",
+    "reserve0": "492645.493012440316964731",
+    "reserve1": "286741.85338008008927349",
+    "reserveUSD": "24782362.15547582438154481899347129",
+    "token0": {
+      "name": "Chainlink Token",
+      "symbol": "LINK.e"
+    },
+    "token0Price": "1.718080172828597335935555233876368",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.5820450150202414716882360279918378",
+    "totalSupply": "372803.422859298438815818",
+    "txCount": "7257",
+    "volumeUSD": "20916416.95477487767409536065934962"
+  },
+  {
+    "id": "0x6f498b7f8dede207a488eca9185fd109f10feeec",
+    "liquidityProviderCount": "0",
+    "reserve0": "26.813131058365418491",
+    "reserve1": "9.181350547274815723",
+    "reserveUSD": "65.71434488050831482241985967215639",
+    "token0": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token0Price": "2.920390733400765468034576328561202",
+    "token1": {
+      "name": "Weble Ecosystem Token",
+      "symbol": "WET"
+    },
+    "token1Price": "0.3424199332517091353152196166989771",
+    "totalSupply": "15.669321571824204769",
+    "txCount": "5",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x7012ae2b092f12be1820acd5f1aed5d73e3116e6",
+    "liquidityProviderCount": "0",
+    "reserve0": "236192165861877.271768556",
+    "reserve1": "876.6987547878778421",
+    "reserveUSD": "77335.41475217045791524310529750265",
+    "token0": {
+      "name": "Spore.Finance",
+      "symbol": "SPORE"
+    },
+    "token0Price": "269410860426.0824858178706211748674",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000000003711802851668510371464684833808427",
+    "totalSupply": "6828.368288772824642171",
+    "txCount": "810",
+    "volumeUSD": "95065.11206089189110192234800849149"
+  },
+  {
+    "id": "0x72160f6220fd42c64da6461457d2f844f5c36d80",
+    "liquidityProviderCount": "0",
+    "reserve0": "20.5",
+    "reserve1": "97568.114740103",
+    "reserveUSD": "1774.596383392933850389040313469862",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0002101096249999998586487497812500951",
+    "token1": {
+      "name": "ShibaInuAvax",
+      "symbol": "ShibaInuAvax"
+    },
+    "token1Price": "4759.420231224536585365853658536585",
+    "totalSupply": "0.044721359549994793",
+    "txCount": "2",
+    "volumeUSD": "21.64141930966992500474439406670564"
+  },
+  {
+    "id": "0x72c3438cf1c915ecf5d9f17a6ed346b273d5bf71",
+    "liquidityProviderCount": "0",
+    "reserve0": "55024.401431706219308723",
+    "reserve1": "715321.46777586172683766",
+    "reserveUSD": "4730349.952314775392124320858193411",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.07692261998342194661901312022917297",
+    "token1": {
+      "name": "Avalaunch",
+      "symbol": "XAVA"
+    },
+    "token1Price": "13.0000772232604138309922729018058",
+    "totalSupply": "196305.787879923558497334",
+    "txCount": "12756",
+    "volumeUSD": "10123804.3204069552639573327254147"
+  },
+  {
+    "id": "0x72c3642fd9407f48c37bc47375e0d7cc23f7acf6",
+    "liquidityProviderCount": "0",
+    "reserve0": "88082159.49933117830766972",
+    "reserve1": "0.019752637606029314",
+    "reserveUSD": "1.683488894020874607916913329974478",
+    "token0": {
+      "name": "EverAvax (https://t.me/EverAvax)",
+      "symbol": "EverAvax"
+    },
+    "token0Price": "4459260644.383254197649064553310882",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000002242524220376238491793149980663025",
+    "totalSupply": "1312.583284988246917556",
+    "txCount": "104",
+    "volumeUSD": "5901.046027555141269517840795856175"
+  },
+  {
+    "id": "0x72dfc7de84ebdeb27731f1ca7efbe3906b6bdf2a",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.050881849957735772",
+    "reserve1": "57814812066",
+    "reserveUSD": "4.993714692522419473404587059153483",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000000008800832890306773794226865765489765",
+    "token1": {
+      "name": "xSafeMoon ",
+      "symbol": "Moon"
+    },
+    "token1Price": "1136256093558.370747222050938971817",
+    "totalSupply": "0.000054090979227876",
+    "txCount": "76",
+    "volumeUSD": "4531.927577210037074216379840583193"
+  },
+  {
+    "id": "0x73fb7889e1042afe043fa6f880687d01c1fcd909",
+    "liquidityProviderCount": "0",
+    "reserve0": "19.204145170006172996",
+    "reserve1": "339664957912774.516411229",
+    "reserveUSD": "1973.072076051213428975949586330147",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.00000000000005653849395596990158958428977699935",
+    "token1": {
+      "name": "AvaxGate",
+      "symbol": "AvaxGate"
+    },
+    "token1Price": "17687064688683.84076226257840799846",
+    "totalSupply": "2532.303746388052258933",
+    "txCount": "564",
+    "volumeUSD": "13795.32371449268663256064730184424"
+  },
+  {
+    "id": "0x7493ab2e567422c18e4b2a32204b6bde49ee0468",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.203691614949911276",
+    "reserve1": "15165853303.153369111",
+    "reserveUSD": "19.63004931834031764052844749193321",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.00000000001343093664947679371511143684789887",
+    "token1": {
+      "name": "Akita Inu Avax",
+      "symbol": "AKITA"
+    },
+    "token1Price": "74454971093.84067482869809668634817",
+    "totalSupply": "1.713515556497117067",
+    "txCount": "111",
+    "volumeUSD": "7147.777168081510735603554033924499"
+  },
+  {
+    "id": "0x781655d802670bba3c89aebaaea59d3182fd755d",
+    "liquidityProviderCount": "0",
+    "reserve0": "4636.090701824963186617",
+    "reserve1": "100.778504255665241697",
+    "reserveUSD": "8709.996436566396859263177704535563",
+    "token0": {
+      "name": "Magic Internet Money",
+      "symbol": "MIM"
+    },
+    "token0Price": "46.00277346906888981915392523431931",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.02173781980063386611558939087563698",
+    "totalSupply": "674.536878161602072277",
+    "txCount": "330",
+    "volumeUSD": "74848.27475888626628841106704597855"
+  },
+  {
+    "id": "0x79a810dd089265c97be0f1e6a7a82899febb6bed",
+    "liquidityProviderCount": "0",
+    "reserve0": "5.857832608720876772",
+    "reserve1": "328702872848412.80531514",
+    "reserveUSD": "561.8153393484707179325268946985489",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.00000000000001782105692584658606774112102976253",
+    "token1": {
+      "name": "ShibAvaxInu",
+      "symbol": "ShibAvaxInu"
+    },
+    "token1Price": "56113394629791.02637554475333888381",
+    "totalSupply": "1377.059745840897488713",
+    "txCount": "267",
+    "volumeUSD": "4146.263220752508923312306694780976"
+  },
+  {
+    "id": "0x7a831edbb1263cd385ff877c66c13058d6873d8d",
+    "liquidityProviderCount": "0",
+    "reserve0": "1.787006325181332583",
+    "reserve1": "0.023391608770045016",
+    "reserveUSD": "2.280854664842229509684093531362937",
+    "token0": {
+      "name": "AvaxFox",
+      "symbol": "AvaxFox"
+    },
+    "token0Price": "76.39518695566374151802316763062999",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.01308982986821347895283263771663859",
+    "totalSupply": "0.203986530200627689",
+    "txCount": "60",
+    "volumeUSD": "3653.639175348747820575796775791071"
+  },
+  {
+    "id": "0x7aabd04c913299004e552ff323c1102d8aa656b9",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.046861701469664547",
+    "reserve1": "223.570118620683469513",
+    "reserveUSD": "4.005091656045789265859736014737063",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0002096062826229996992256098577229942",
+    "token1": {
+      "name": "xShibaInu",
+      "symbol": "xShibaInu"
+    },
+    "token1Price": "4770.849363320906009870368624575873",
+    "totalSupply": "3.222075858370269402",
+    "txCount": "116",
+    "volumeUSD": "5825.950233827693189541383038209251"
+  },
+  {
+    "id": "0x7b980a4fdbfb4025677d72c1bffb7748020645f1",
+    "liquidityProviderCount": "0",
+    "reserve0": "300.000598901562152372",
+    "reserve1": "100000000000",
+    "reserveUSD": "831.3931104548109817570630612921606",
+    "token0": {
+      "name": "Pangolin",
+      "symbol": "PNG"
+    },
+    "token0Price": "0.00000000300000598901562152372",
+    "token1": {
+      "name": "YAY",
+      "symbol": "YAY"
+    },
+    "token1Price": "333332667.8884816172351745268804451",
+    "totalSupply": "173.205080756887728352",
+    "txCount": "3",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x7c0be407e2debbc64216d532f84a5d3e3e2d1b3d",
+    "liquidityProviderCount": "0",
+    "reserve0": "450699013513521.241298466",
+    "reserve1": "26.4715753545135309",
+    "reserveUSD": "2535.069083154054867339966845874104",
+    "token0": {
+      "name": "AvaMoon",
+      "symbol": "AvaMoon"
+    },
+    "token0Price": "17025772266200.80591760496176461924",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000005873448700974218513260548587179393",
+    "totalSupply": "3451.822772372117478696",
+    "txCount": "23",
+    "volumeUSD": "716.6287173652545908742576075420616"
+  },
+  {
+    "id": "0x7c1dfbd56545531fc3d28d4d652236a23e08f0b3",
+    "liquidityProviderCount": "0",
+    "reserve0": "23518.205440193956697703",
+    "reserve1": "0.036575230047457578",
+    "reserveUSD": "3.370059618753180669057280110396769",
+    "token0": {
+      "name": "AVAlonMars",
+      "symbol": "AVAlonMars"
+    },
+    "token0Price": "643009.0913899462173814217702203437",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000001555187964509758907782388892973708",
+    "totalSupply": "29.199135478722065562",
+    "txCount": "91",
+    "volumeUSD": "5242.471187550996969905833899715492"
+  },
+  {
+    "id": "0x7fc2c728d622d9d878b919bf157f61f5fd51845f",
+    "liquidityProviderCount": "0",
+    "reserve0": "48.409823",
+    "reserve1": "0.012125133219513727",
+    "reserveUSD": "106.8133036643120937822946200441174",
+    "token0": {
+      "name": "Tether USD",
+      "symbol": "USDT"
+    },
+    "token0Price": "3992.51885514058328187554353767566",
+    "token1": {
+      "name": "Ether",
+      "symbol": "ETH"
+    },
+    "token1Price": "0.0002504684476849611079966146540135047",
+    "totalSupply": "0.000000204970282562",
+    "txCount": "798",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x7ff6a435d129fe0ee0104b7936d5476803692853",
+    "liquidityProviderCount": "0",
+    "reserve0": "347.56378",
+    "reserve1": "36.231170563531519734",
+    "reserveUSD": "3171.571856178821845529183177554059",
+    "token0": {
+      "name": "Avaxtars Token",
+      "symbol": "AVXT"
+    },
+    "token0Price": "9.592949236639908066595625024456062",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.1042432285767277583814976347650495",
+    "totalSupply": "0.000106528924641135",
+    "txCount": "771",
+    "volumeUSD": "43438.01545613486519907400751830159"
+  },
+  {
+    "id": "0x812f535b501b6fea3a629138a8d15a3966cbaee2",
+    "liquidityProviderCount": "0",
+    "reserve0": "305217464794622.863265658",
+    "reserve1": "402.609816327797066812",
+    "reserveUSD": "35101.44883386508237860496413273898",
+    "token0": {
+      "name": "Avax Floki (https://t.me/avaxfloki)",
+      "symbol": "Avax Floki"
+    },
+    "token0Price": "758097424395.9336331505117205414679",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000131909167320653927109076601974263",
+    "totalSupply": "10882.258461314573229282",
+    "txCount": "3453",
+    "volumeUSD": "1093043.724449578100785868489641313"
+  },
+  {
+    "id": "0x824ca83923990b91836ea927c14c1fb1b1790b08",
+    "liquidityProviderCount": "0",
+    "reserve0": "12949.961237190958334879",
+    "reserve1": "1462696065786.625067763",
+    "reserveUSD": "1114984.66679013607221684328716116",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000008853487433308014801225443861254271",
+    "token1": {
+      "name": "Ape-X",
+      "symbol": "APE-X"
+    },
+    "token1Price": "112949841.238590910089164406110655",
+    "totalSupply": "4235.009826118861317179",
+    "txCount": "8574",
+    "volumeUSD": "15987506.27648808166296502819259643"
+  },
+  {
+    "id": "0x82d93811a1105450ed6c2dee736d8ba8b1fd3ace",
+    "liquidityProviderCount": "0",
+    "reserve0": "540567564587349.094021709",
+    "reserve1": "9.155963847658997058",
+    "reserveUSD": "836.2774545497165025205439288801551",
+    "token0": {
+      "name": "BabyShibaAvax",
+      "symbol": "BabyShiba"
+    },
+    "token0Price": "59039940915184.12552487974385410453",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000001693768632723709323201901461942343",
+    "totalSupply": "2205.781913970585178435",
+    "txCount": "281",
+    "volumeUSD": "7413.812761700024684071059089412988"
+  },
+  {
+    "id": "0x840e9613e9658cc0bada9bf5beccb92e4c17bba2",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.046181760088204856",
+    "reserve1": "183949.777233483",
+    "reserveUSD": "4.221841277051954372335831369559915",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000002510563523520197889872590800036022",
+    "token1": {
+      "name": "AVAXTacocat https://t.me/AVAXTacocat",
+      "symbol": "ATACOCAT"
+    },
+    "token1Price": "3983169.478212785951653771484143439",
+    "totalSupply": "0.002895696411903099",
+    "txCount": "23",
+    "volumeUSD": "159.5075317679054724625434736675763"
+  },
+  {
+    "id": "0x85c9122ffeb29847e44b6ab80958df631d571b84",
+    "liquidityProviderCount": "0",
+    "reserve0": "726335838525523.082675481",
+    "reserve1": "28.75925508001377747",
+    "reserveUSD": "2627.365154458293666772719054122348",
+    "token0": {
+      "name": "HogeAvx",
+      "symbol": "HogeAvx"
+    },
+    "token0Price": "25255725035461.35391353386480900106",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000003959498286411925610748288960899397",
+    "totalSupply": "4540.470909214241217297",
+    "txCount": "390",
+    "volumeUSD": "17120.61781075913563771092371472121"
+  },
+  {
+    "id": "0x87dee1cc9ffd464b79e058ba20387c1984aed86a",
+    "liquidityProviderCount": "0",
+    "reserve0": "258009.756061642053329656",
+    "reserve1": "11126169.342073290257452858",
+    "reserveUSD": "22214500.61679070425495062331000006",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.02318945075606440401359421150097412",
+    "token1": {
+      "name": "Dai Stablecoin",
+      "symbol": "DAI.e"
+    },
+    "token1Price": "43.12305670881335392631589205396443",
+    "totalSupply": "1640535.402620699997738172",
+    "txCount": "14084",
+    "volumeUSD": "51688039.41070261435195230422804958"
+  },
+  {
+    "id": "0x88d000e853d03e7d59ce602dff736dc39ad118fb",
+    "liquidityProviderCount": "0",
+    "reserve0": "8354.124747116620645173",
+    "reserve1": "110739.679396865871003194",
+    "reserveUSD": "721542.5951757259722233416207779294",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.07543930768642858439494457832095449",
+    "token1": {
+      "name": "Elk",
+      "symbol": "ELK"
+    },
+    "token1Price": "13.25568898586139151908575329847091",
+    "totalSupply": "29392.616598011270857069",
+    "txCount": "11019",
+    "volumeUSD": "8476544.101494814846778430610382057"
+  },
+  {
+    "id": "0x8dc585619069d7fc0b1a3056df3c61bbbe05aa38",
+    "liquidityProviderCount": "0",
+    "reserve0": "695.645377449485634299",
+    "reserve1": "15.30012511641697632",
+    "reserveUSD": "1344.76457941059643846632223992268",
+    "token0": {
+      "name": "PolyGaj Token",
+      "symbol": "GAJ"
+    },
+    "token0Price": "45.46664632847092068382355601295511",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.02199414473580397878869701281495698",
+    "totalSupply": "102.83615242326729629",
+    "txCount": "53",
+    "volumeUSD": "1863.782134245566610975762667311868"
+  },
+  {
+    "id": "0x8e8258861af2f377458c6dc62b6b78068a50fa99",
+    "liquidityProviderCount": "0",
+    "reserve0": "58313157036512.714645332",
+    "reserve1": "2783.648362690500778388",
+    "reserveUSD": "241078.4182769150737075236536877859",
+    "token0": {
+      "name": "SafeMoonAvax",
+      "symbol": "SafeMoonA"
+    },
+    "token0Price": "20948463828.29433830114706744870261",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000004773619718355366409627940326303082",
+    "totalSupply": "12152.455326750982415468",
+    "txCount": "5154",
+    "volumeUSD": "2889441.112274783314740281434829505"
+  },
+  {
+    "id": "0x8fb5bd3ac8efd05dacae82f512dd03e14aadab73",
+    "liquidityProviderCount": "0",
+    "reserve0": "39526.446740164157323767",
+    "reserve1": "1577679.33402576667903085",
+    "reserveUSD": "3398018.344362574310514794980315637",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.02505353647455371364510722632816627",
+    "token1": {
+      "name": "Snowball",
+      "symbol": "SNOB"
+    },
+    "token1Price": "39.91452468260025584782737991412357",
+    "totalSupply": "244345.103606303098893647",
+    "txCount": "15058",
+    "volumeUSD": "29717971.29181778802404994172080908"
+  },
+  {
+    "id": "0x915aa395fb20843a8b8cfbb4c926abd2191f922c",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.617620784916487843",
+    "reserve1": "0.000062955591654196",
+    "reserveUSD": "1.385200108934067647547362226221116",
+    "token0": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token0Price": "9810.419832267962195917249085624807",
+    "token1": {
+      "name": "Joe Hat Token",
+      "symbol": "HAT"
+    },
+    "token1Price": "0.0001019324368474882166884976531476994",
+    "totalSupply": "0.006235597961088732",
+    "txCount": "1",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x91b62fb52c9fdf27ad18bbe1c4a8ff52df6104cc",
+    "liquidityProviderCount": "0",
+    "reserve0": "7946407870791.230099917613924355",
+    "reserve1": "9064.761498850963639761",
+    "reserveUSD": "780471.0681528473727543348513530806",
+    "token0": {
+      "name": "Husky",
+      "symbol": "HUSKY"
+    },
+    "token0Price": "876626248.9971198397613916073829989",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000001140737002963375222133742446783164",
+    "totalSupply": "255230614.726677023756045965",
+    "txCount": "9099",
+    "volumeUSD": "16976217.94642917460949078871080223"
+  },
+  {
+    "id": "0x94099de980b91ebf087791f5d2fc22a2dafce87b",
+    "liquidityProviderCount": "0",
+    "reserve0": "494606.43051421850827337",
+    "reserve1": "0.049797056718046083",
+    "reserveUSD": "4.363921711557454479793631102124304",
+    "token0": {
+      "name": "DaVinciInu | t.me/DaVinciInu",
+      "symbol": "DaVinciInu"
+    },
+    "token0Price": "9932443.06214139793489425601193955",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000001006801643607311758355165428024904",
+    "totalSupply": "153.42358022420341681",
+    "txCount": "14",
+    "volumeUSD": "550.5576737772460681390130768463258"
+  },
+  {
+    "id": "0x943edd46fb9573a0b0517c0ce010791bd5ca0a15",
+    "liquidityProviderCount": "0",
+    "reserve0": "696.659593404373778621",
+    "reserve1": "666.30708",
+    "reserveUSD": "1310.570718131894294100684208957358",
+    "token0": {
+      "name": "Dai Stablecoin",
+      "symbol": "DAI"
+    },
+    "token0Price": "1.045553340667449877046181169199043",
+    "token1": {
+      "name": "Tether USD",
+      "symbol": "USDT"
+    },
+    "token1Price": "0.9564313565883018542526253796237111",
+    "totalSupply": "0.000675451263090499",
+    "txCount": "2981",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x97b0cffa0c659c6ea15caba60e7bce0fcc2094cf",
+    "liquidityProviderCount": "0",
+    "reserve0": "170",
+    "reserve1": "49500000",
+    "reserveUSD": "14769.51769507110001866721020860522",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000003434343434343434343434343434343434",
+    "token1": {
+      "name": "interAVA Token",
+      "symbol": "iAVA"
+    },
+    "token1Price": "291176.4705882352941176470588235294",
+    "totalSupply": "91733.30910852393315518",
+    "txCount": "1",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0x9a053bc937fd1660fcfda4e6604021e6c2be36a5",
+    "liquidityProviderCount": "0",
+    "reserve0": "145133207.75562424846600042",
+    "reserve1": "2409.698541972838395388",
+    "reserveUSD": "208266.0165862599389800942537772184",
+    "token0": {
+      "name": "SHIBAVAX",
+      "symbol": "SHIBX"
+    },
+    "token0Price": "60228.78182795537369100244675691708",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00001660335755845964885392934368736995",
+    "totalSupply": "333932.999877033163087599",
+    "txCount": "3119",
+    "volumeUSD": "5870403.226189262033511682562861475"
+  },
+  {
+    "id": "0x9a92607bf9768d3a6ea5aa103837014507d2892e",
+    "liquidityProviderCount": "0",
+    "reserve0": "1.001278763795556957",
+    "reserve1": "10084",
+    "reserveUSD": "94.61347605559919637100622975668293",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000992938083890873618603728679095597",
+    "token1": {
+      "name": "FEGAVAX",
+      "symbol": "FEGAVAX"
+    },
+    "token1Price": "10071.12141455440945356349129337421",
+    "totalSupply": "0.000000100260615521",
+    "txCount": "15",
+    "volumeUSD": "235.948486679976135824277364235802"
+  },
+  {
+    "id": "0x9beb4ba7a0abe0b5fa166a8f6675fb0d73a311c4",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.050411541592277927",
+    "reserve1": "0.000125761349094951",
+    "reserveUSD": "4.904125207094667917096076297843024",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "400.8508333845618936490770597262477",
+    "token1": {
+      "name": "BERG Token",
+      "symbol": "BERG"
+    },
+    "token1Price": "0.002494693578547798386038195132804055",
+    "totalSupply": "0.002512356416617544",
+    "txCount": "64",
+    "volumeUSD": "9374.986494488442625465371928603293"
+  },
+  {
+    "id": "0x9de943ac28ca2f513df2729a45101edd70b8fa9c",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.036285731972880722",
+    "reserve1": "316887883785.399994950417040852",
+    "reserveUSD": "3.517045384526756053959354016053891",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000000001145065300049585484223635609736567",
+    "token1": {
+      "name": "FegAVAX",
+      "symbol": "FEGAVAX"
+    },
+    "token1Price": "8733126398614.091003140611562789173",
+    "totalSupply": "104375.127710640211315855",
+    "txCount": "14",
+    "volumeUSD": "449.3157946151459522762689596698056"
+  },
+  {
+    "id": "0x9eedd412a866fe835de1a3e0b02a41b1029b3b81",
+    "liquidityProviderCount": "0",
+    "reserve0": "3.309044052990964355",
+    "reserve1": "0.012089165892679617",
+    "reserveUSD": "1.164948453309383298387495241265993",
+    "token0": {
+      "name": "Million V2",
+      "symbol": "MM"
+    },
+    "token0Price": "273.7197985673021589682629039257844",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.003653371094214510163929988594712179",
+    "totalSupply": "0.199796203623264799",
+    "txCount": "30",
+    "volumeUSD": "2157.811041967908693591366102934952"
+  },
+  {
+    "id": "0xa17c42e25486a5c3953614eac0136078f1b7e821",
+    "liquidityProviderCount": "0",
+    "reserve0": "2262439924229.72089713",
+    "reserve1": "0.023588513077215732",
+    "reserveUSD": "2.040982003414543785385607329342112",
+    "token0": {
+      "name": "MiniBoxer",
+      "symbol": "MiniBoxer"
+    },
+    "token0Price": "95912782498148.36519702133562673804",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000001042613897703682407285570881082878",
+    "totalSupply": "6.036666477880441532",
+    "txCount": "69",
+    "volumeUSD": "573.3603240468985378854423585924589"
+  },
+  {
+    "id": "0xa1dc4a02f7707d25aa2febe815bbfc5be3d4e2b0",
+    "liquidityProviderCount": "0",
+    "reserve0": "585223649398.269773805554628013",
+    "reserve1": "0.141909438700014683",
+    "reserveUSD": "13.80121127165049261833975297178855",
+    "token0": {
+      "name": "FegAVAX",
+      "symbol": "FEGAVAX"
+    },
+    "token0Price": "4123923360978.026490064930315660859",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000002424875324945031882721252391197962",
+    "totalSupply": "284977.270489750611042541",
+    "txCount": "85",
+    "volumeUSD": "4265.882976932942732444748208831973"
+  },
+  {
+    "id": "0xa2938a5d8e21644a9c0ffcfc0db147b06e39870c",
+    "liquidityProviderCount": "0",
+    "reserve0": "89570025.611189823986633147",
+    "reserve1": "0.028835514608048716",
+    "reserveUSD": "2.326428743711327804330896640105717",
+    "token0": {
+      "name": "MoonBear (https://t.me/MoonBearAVAX)",
+      "symbol": "MoonBear"
+    },
+    "token0Price": "3106239886.080915695386809692929463",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000003219326377466877317500960270287055",
+    "totalSupply": "1599.427815337189156166",
+    "txCount": "100",
+    "volumeUSD": "9629.741443815143884123628980056295"
+  },
+  {
+    "id": "0xa293af805b952aa122303b7824e7741b3e21881f",
+    "liquidityProviderCount": "0",
+    "reserve0": "53.461015144551020863",
+    "reserve1": "427884.779223991",
+    "reserveUSD": "4706.304596344190070859701037208312",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000124942549350569477236339346916463",
+    "token1": {
+      "name": "AvaxShiba",
+      "symbol": "ASHIB"
+    },
+    "token1Price": "8003.678532236080768500131746304936",
+    "totalSupply": "0.147722580826791665",
+    "txCount": "877",
+    "volumeUSD": "110085.8350829393058812746894389649"
+  },
+  {
+    "id": "0xa389f9430876455c36478deea9769b7ca4e3ddb1",
+    "liquidityProviderCount": "0",
+    "reserve0": "18227686.936741",
+    "reserve1": "429618.567235122522935372",
+    "reserveUSD": "37122103.05965260160569236851507711",
+    "token0": {
+      "name": "USD Coin",
+      "symbol": "USDC.e"
+    },
+    "token0Price": "42.42760515228224397128909667246915",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0235695603466369233190847051653882",
+    "totalSupply": "2.786583585015407567",
+    "txCount": "5284",
+    "volumeUSD": "29372037.37441201685567556743818345"
+  },
+  {
+    "id": "0xa3b75914021238824d51dd9c887410abea42c2fc",
+    "liquidityProviderCount": "0",
+    "reserve0": "2631014.931791509512280315",
+    "reserve1": "0.026485176159898279",
+    "reserveUSD": "2.563950718418388790169007816903618",
+    "token0": {
+      "name": "BabyApex",
+      "symbol": "BabyApex"
+    },
+    "token0Price": "99339151.67893730898742295478874057",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000001006652445786919372522332983723665",
+    "totalSupply": "261.754147292465273855",
+    "txCount": "154",
+    "volumeUSD": "10287.62122105566772262611335388879"
+  },
+  {
+    "id": "0xa6908c7e3be8f4cd2eb704b5cb73583ebf56ee62",
+    "liquidityProviderCount": "0",
+    "reserve0": "16284284.320834",
+    "reserve1": "16288907.387693539457710025",
+    "reserveUSD": "32541988.18309103148033539826139137",
+    "token0": {
+      "name": "Tether USD",
+      "symbol": "USDT.e"
+    },
+    "token0Price": "0.9997161831208499448566746081497161",
+    "token1": {
+      "name": "Dai Stablecoin",
+      "symbol": "DAI.e"
+    },
+    "token1Price": "1.000283897454039459268871086068691",
+    "totalSupply": "16.114933194693893155",
+    "txCount": "12698",
+    "volumeUSD": "36265773.30537317048908716287264125"
+  },
+  {
+    "id": "0xa78f782fd56021025bf74da0851939ffe0d55a51",
+    "liquidityProviderCount": "0",
+    "reserve0": "2333.653812311542117475",
+    "reserve1": "10357055.066916079728328858",
+    "reserveUSD": "201644.3048160186662539637699912797",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0002253202090009174468578072191009071",
+    "token1": {
+      "name": "ZABU Token",
+      "symbol": "ZABU"
+    },
+    "token1Price": "4438.128317180498679196846965622926",
+    "totalSupply": "143731.282270741392894004",
+    "txCount": "4508",
+    "volumeUSD": "2461619.046948273958142049093319588"
+  },
+  {
+    "id": "0xa7cfdf570d6ba2f182be98c307d99a8b1f631d84",
+    "liquidityProviderCount": "0",
+    "reserve0": "2.162655553252480683",
+    "reserve1": "1130180639.611919425",
+    "reserveUSD": "197.1888305784181717737018024164792",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000001913548575734841568832402193304586",
+    "token1": {
+      "name": "snowleopard",
+      "symbol": "🐆"
+    },
+    "token1Price": "522589294.403451275359210447712052",
+    "totalSupply": "1.44328953971514947",
+    "txCount": "17",
+    "volumeUSD": "107.0837127386578932633654783872992"
+  },
+  {
+    "id": "0xa863318d8d166922a56be0cc70e0213ed293f22b",
+    "liquidityProviderCount": "0",
+    "reserve0": "246364828406338.994857755",
+    "reserve1": "17.830594077128131376",
+    "reserveUSD": "1572.654939278934309959048494665634",
+    "token0": {
+      "name": "BabyDogeAvax",
+      "symbol": "BabyDogeA"
+    },
+    "token0Price": "13816972521535.83458846952381781099",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000007237475492126435437536191297390403",
+    "totalSupply": "2056.378232927121422968",
+    "txCount": "675",
+    "volumeUSD": "34140.96030791875958458092636902693"
+  },
+  {
+    "id": "0xa94ec0b8dc2ad497c58a4419d4d3d47bd3d9b787",
+    "liquidityProviderCount": "0",
+    "reserve0": "80706.1",
+    "reserve1": "0.026384272157877445",
+    "reserveUSD": "2.458042461949533479181704633188726",
+    "token0": {
+      "name": "AvaxRise",
+      "symbol": "AxR"
+    },
+    "token0Price": "3058871.57004268194091248127752384",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000003269179424836219938765471259297624",
+    "totalSupply": "0.0000001456822678",
+    "txCount": "31",
+    "volumeUSD": "2760.620560824556629045219224755584"
+  },
+  {
+    "id": "0xa964239892fb28b5565c70a51fd4106f29f47a52",
+    "liquidityProviderCount": "0",
+    "reserve0": "127.138771573041784029",
+    "reserve1": "222.914576258235484295",
+    "reserveUSD": "10995.60955033621639980524617230267",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.5703475013036286187647698721704844",
+    "token1": {
+      "name": "ChainLink Token",
+      "symbol": "LINK"
+    },
+    "token1Price": "1.753317052699145191892830468169579",
+    "totalSupply": "167.097099752376062791",
+    "txCount": "3716",
+    "volumeUSD": "839675.768347391509327037336104901"
+  },
+  {
+    "id": "0xab360951f7e73689fa70b11dc8ef392a6b40e6fa",
+    "liquidityProviderCount": "0",
+    "reserve0": "86426016218.85537969711199216",
+    "reserve1": "107.129721457605493683",
+    "reserveUSD": "10391.79617098088060039570176876325",
+    "token0": {
+      "name": "xDoge",
+      "symbol": "xDoge"
+    },
+    "token0Price": "806741724.3594420884091986793381092",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000001239554085037570327747102204400432",
+    "totalSupply": "2999999.999999999999999",
+    "txCount": "632",
+    "volumeUSD": "168354.1266762483289330746551200614"
+  },
+  {
+    "id": "0xab51ae110fbe2e6a6b547575f5981e445f8d65ef",
+    "liquidityProviderCount": "0",
+    "reserve0": "225954454181867.493612244",
+    "reserve1": "147.036506709569670489",
+    "reserveUSD": "12871.01838459214695521285791910651",
+    "token0": {
+      "name": "Ufo X (https://t.me/ufoxavax)",
+      "symbol": "Ufo X"
+    },
+    "token0Price": "1536723492949.806023594882111938325",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000006507351547547812396226197519377759",
+    "totalSupply": "5752.923395012643085573",
+    "txCount": "199",
+    "volumeUSD": "15033.24770073451756527195248749135"
+  },
+  {
+    "id": "0xac35c44953e8abc451b2c63fcd4cf5b4e0bf4161",
+    "liquidityProviderCount": "0",
+    "reserve0": "84402.8",
+    "reserve1": "0.0121896722765664",
+    "reserveUSD": "1.088165953037291053871262736544747",
+    "token0": {
+      "name": "XshibaInu",
+      "symbol": "Xshib"
+    },
+    "token0Price": "6924123.806204137877034256725282923",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000144422605370513774424545157269664",
+    "totalSupply": "0.000000101296470779",
+    "txCount": "27",
+    "volumeUSD": "1425.638627633210540469994176570215"
+  },
+  {
+    "id": "0xaddf1bd5986be07e7bcc0d1e335c236ed04d43e4",
+    "liquidityProviderCount": "0",
+    "reserve0": "835.470398743555018893",
+    "reserve1": "11.937426871736155019",
+    "reserveUSD": "1093.789401371160668471068217610011",
+    "token0": {
+      "name": "UnsafeMoon",
+      "symbol": "noMoon"
+    },
+    "token0Price": "69.98747784764824347448791405624199",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.01428827028424774894040934596502749",
+    "totalSupply": "98.994949366116652416",
+    "txCount": "175",
+    "volumeUSD": "8645.377475801885513307341909668815"
+  },
+  {
+    "id": "0xb5c9e891af3063004a441ba4fab4ca3d6deb5626",
+    "liquidityProviderCount": "0",
+    "reserve0": "702.94057186544422286",
+    "reserve1": "128754.835365411148266761",
+    "reserveUSD": "11083901.06489005791482013043612244",
+    "token0": {
+      "name": "Yak Token",
+      "symbol": "YAK"
+    },
+    "token0Price": "0.005459527557706644484491706745402105",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "183.1660321209304106925883826643038",
+    "totalSupply": "9149.089338638732197456",
+    "txCount": "16459",
+    "volumeUSD": "83741635.96493833676123264358822669"
+  },
+  {
+    "id": "0xb5dc0bdab254e841917dd6f53c15fd745a79c3ea",
+    "liquidityProviderCount": "0",
+    "reserve0": "801536349988387.641860835",
+    "reserve1": "242.481566130959889317",
+    "reserveUSD": "22203.77527744524662557535184717495",
+    "token0": {
+      "name": "AvaxMoon",
+      "symbol": "AvaxMoon"
+    },
+    "token0Price": "3305555811015.72240225077490985208",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000003025209850239142258984394948941225",
+    "totalSupply": "13851.690569283764795883",
+    "txCount": "1140",
+    "volumeUSD": "113665.8979349702212370320865291451"
+  },
+  {
+    "id": "0xb78c8238bd907c42be45aebdb4a8c8a5d7b49755",
+    "liquidityProviderCount": "0",
+    "reserve0": "14295.619097280868375799",
+    "reserve1": "410816.011875067619819632",
+    "reserveUSD": "1230865.370588360883458923338133845",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.03479810592589141480417560463221203",
+    "token1": {
+      "name": "PenguinToken",
+      "symbol": "PEFI"
+    },
+    "token1Price": "28.73719627527064140947848748058811",
+    "totalSupply": "74242.60579716338538643",
+    "txCount": "10059",
+    "volumeUSD": "13877680.44430401556598319431777423"
+  },
+  {
+    "id": "0xb872cf43d80565962a2bbe9f494d725e86506011",
+    "liquidityProviderCount": "0",
+    "reserve0": "1.508425047465115671",
+    "reserve1": "755077679.139248490233669574",
+    "reserveUSD": "127.4783171257997663469237411433913",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000001997708433368929963729343946125851",
+    "token1": {
+      "name": "BabyJoe",
+      "symbol": "BabyJoe"
+    },
+    "token1Price": "500573548.820436610125581494383973",
+    "totalSupply": "33393.34521450091366845",
+    "txCount": "158",
+    "volumeUSD": "1022.51949283238179114565597158187"
+  },
+  {
+    "id": "0xb8d5e8a9247db183847c7d79af9c67f6aef759f7",
+    "liquidityProviderCount": "0",
+    "reserve0": "162.0370294",
+    "reserve1": "7769549.272323",
+    "reserveUSD": "15549596.92589126075470353362291291",
+    "token0": {
+      "name": "Wrapped BTC",
+      "symbol": "WBTC.e"
+    },
+    "token0Price": "0.00002085539633260513634909458116623196",
+    "token1": {
+      "name": "Tether USD",
+      "symbol": "USDT.e"
+    },
+    "token1Price": "47949.22062625149557327048850477137",
+    "totalSupply": "0.000000351354349337",
+    "txCount": "3562",
+    "volumeUSD": "6240533.063618181156450211117932341"
+  },
+  {
+    "id": "0xbd9034c5ec265e1cd039fc58ea95265819e31b8a",
+    "liquidityProviderCount": "0",
+    "reserve0": "21.598787744806723542",
+    "reserve1": "205961429293525.644132599",
+    "reserveUSD": "2102.331660070130785243053274589288",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000000001048681193313396619825077470142518",
+    "token1": {
+      "name": "LittleAvax",
+      "symbol": "LittleAvax"
+    },
+    "token1Price": "9535786532419.978979604034981251783",
+    "totalSupply": "2083.758716337613101732",
+    "txCount": "258",
+    "volumeUSD": "6562.173283736065907882691249600381"
+  },
+  {
+    "id": "0xbd9263006bb17e860f27c0126b841fde193c00c6",
+    "liquidityProviderCount": "0",
+    "reserve0": "857393797622161.964593668712799224",
+    "reserve1": "21.825729971439916589",
+    "reserveUSD": "2092.328293480603586413144377767869",
+    "token0": {
+      "name": "BRIDGE",
+      "symbol": "BRIDGE"
+    },
+    "token0Price": "39283625278242.95357941088570921568",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000000254558990652485726066744719960013",
+    "totalSupply": "136747943.311773431585720649",
+    "txCount": "7",
+    "volumeUSD": "247.1760235969971171597363426404182"
+  },
+  {
+    "id": "0xbe1b87f47fde3f338aa3aa98b85435e1709dfd06",
+    "liquidityProviderCount": "0",
+    "reserve0": "2479.820289717992936864",
+    "reserve1": "8199800.891026",
+    "reserveUSD": "16416478.21707478736575716754891185",
+    "token0": {
+      "name": "Wrapped Ether",
+      "symbol": "WETH.e"
+    },
+    "token0Price": "0.0003024244518463795831595631034497337",
+    "token1": {
+      "name": "Tether USD",
+      "symbol": "USDT.e"
+    },
+    "token1Price": "3306.61093669754901440517441860346",
+    "totalSupply": "0.140162117641889072",
+    "txCount": "6916",
+    "volumeUSD": "16151603.9151414682596780755902062"
+  },
+  {
+    "id": "0xbe67a9673935ad4ecdfdff397f944198eb868996",
+    "liquidityProviderCount": "0",
+    "reserve0": "623.233767004081047167",
+    "reserve1": "48520.063965275137583392",
+    "reserveUSD": "57300.62811066223386522115338279897",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.01284486696988110496836430110690275",
+    "token1": {
+      "name": "OpenMoon",
+      "symbol": "OPMN"
+    },
+    "token1Price": "77.85211029003410761799734890932538",
+    "totalSupply": "5471.842687767586739646",
+    "txCount": "137",
+    "volumeUSD": "18777.8801854544738260718023260366"
+  },
+  {
+    "id": "0xbeb0b5fbd99b8e7498a4063cb419646922f6eef8",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.00215453",
+    "reserve1": "2.159284807886396244",
+    "reserveUSD": "193.390835950777697559365391222612",
+    "token0": {
+      "name": "Wrapped BTC",
+      "symbol": "WBTC"
+    },
+    "token0Price": "0.0009977979709443468641439432897327983",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "1002.206888688668175425730901867229",
+    "totalSupply": "0.00000067843342808",
+    "txCount": "3076",
+    "volumeUSD": "448735.0757366927118286855573112238"
+  },
+  {
+    "id": "0xbef4a01b96c8f72cbbb051f3266b023c5618f5d2",
+    "liquidityProviderCount": "0",
+    "reserve0": "245221673.943336419944354177",
+    "reserve1": "0.041557124443734138",
+    "reserveUSD": "3.963789220798427375638893509895563",
+    "token0": {
+      "name": "AvaxKishu",
+      "symbol": "AXKishu"
+    },
+    "token0Price": "5900833544.807747847459410573894453",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000001694675832501525863098538517780083",
+    "totalSupply": "3133.179988885991604343",
+    "txCount": "29",
+    "volumeUSD": "731.1631182669139396273181353810688"
+  },
+  {
+    "id": "0xc2cb0ab680846bfbee7bb49d202d1d874dda8ef1",
+    "liquidityProviderCount": "0",
+    "reserve0": "88.787464276415695762",
+    "reserve1": "25195621392.589776869447697986",
+    "reserveUSD": "8124.086158842186199419461619052353",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000003523924371340520367115236286972802",
+    "token1": {
+      "name": "xAkita (https://t.me/xakitaavax)",
+      "symbol": "xAkita"
+    },
+    "token1Price": "283774535.0419068318732582701829636",
+    "totalSupply": "1427167.043617118526373367",
+    "txCount": "1868",
+    "volumeUSD": "1780043.029391935185033851117497859"
+  },
+  {
+    "id": "0xc39327eb65b1e6e58a26f7e395934583cc5ad364",
+    "liquidityProviderCount": "0",
+    "reserve0": "111.333140555065392021",
+    "reserve1": "592626439827839.61355049",
+    "reserveUSD": "9771.895340186569972971995664450647",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000000001878639444224056579262488301643823",
+    "token1": {
+      "name": "Akita Inu Avax",
+      "symbol": "AKITA"
+    },
+    "token1Price": "5323001191498.109821238685801852338",
+    "totalSupply": "7990.668822169773849426",
+    "txCount": "2235",
+    "volumeUSD": "188794.3289391058571196307599230125"
+  },
+  {
+    "id": "0xc3e6d9f7a3a5e3e223356383c7c055ee3f26a34f",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.00168661632204599",
+    "reserve1": "0.015228989715280182",
+    "reserveUSD": "1.332263032653066967434882181889319",
+    "token0": {
+      "name": "Aave Token",
+      "symbol": "AAVE.e"
+    },
+    "token0Price": "0.1107503750136297034348565913672767",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "9.02931479804861263072594900757335",
+    "totalSupply": "0.005066912444838278",
+    "txCount": "5",
+    "volumeUSD": "2861.004856369670789275796977895042"
+  },
+  {
+    "id": "0xc45aeb49c5bcc4e2f25f35b8c3b1fd11681edbe0",
+    "liquidityProviderCount": "0",
+    "reserve0": "44136619.373882116",
+    "reserve1": "52.545365462561560347",
+    "reserveUSD": "4918.568332014280772048025302567603",
+    "token0": {
+      "name": "AVAX Tacocat",
+      "symbol": "TACO"
+    },
+    "token0Price": "839971.6889461801419354491388725289",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000001190516315204134718292652628777006",
+    "totalSupply": "1.51657508881030911",
+    "txCount": "132",
+    "volumeUSD": "7015.738605994711574524056511933537"
+  },
+  {
+    "id": "0xc5ab15dd95cad42947fddb5ddc24f8d449c0a006",
+    "liquidityProviderCount": "0",
+    "reserve0": "1810178302.67571440666496117",
+    "reserve1": "2.024018273497056835",
+    "reserveUSD": "193.4393680690981525563666944653728",
+    "token0": {
+      "name": "xTiki",
+      "symbol": "xTiki"
+    },
+    "token0Price": "894348794.36544109972647919053201",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000001118131993133082499343188305236417",
+    "totalSupply": "60225.784766617000366739",
+    "txCount": "292",
+    "volumeUSD": "7617.61846666013103217313773932297"
+  },
+  {
+    "id": "0xc60a21574f96d7064b4e36b52b4fd7c0bb54702e",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.111099119152112181",
+    "reserve1": "900413227604542.644799407",
+    "reserveUSD": "11.03914342517259730354640179613789",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.00000000000000012338681368295758090050043626993",
+    "token1": {
+      "name": "AkitaSafemoonTest",
+      "symbol": "AkitaTest1"
+    },
+    "token1Price": "8104593758045328.983609183358516946",
+    "totalSupply": "316.227766016837932199",
+    "txCount": "10",
+    "volumeUSD": "0.5568615470774065049584184998284315"
+  },
+  {
+    "id": "0xc61f262c5dd5afb7200740dc45ec249e184dc15d",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.016628836431063609",
+    "reserve1": "199033.836254072033220911",
+    "reserveUSD": "1.636291671996605635270365128772307",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.00000008354778636651736464925805379014529",
+    "token1": {
+      "name": "AvaxRocket | t.me/AvaxRocket",
+      "symbol": "AvaxRocket"
+    },
+    "token1Price": "11969198.03013189459061149991276776",
+    "totalSupply": "56.376171436986334367",
+    "txCount": "17",
+    "volumeUSD": "229.6738542598926865705755516652982"
+  },
+  {
+    "id": "0xc62b87543a32fb7522ff9ef231f2cb2d35ae59bc",
+    "liquidityProviderCount": "0",
+    "reserve0": "55.339915052373751432",
+    "reserve1": "33.109535512860784908",
+    "reserveUSD": "109.4048049202597903883337921744732",
+    "token0": {
+      "name": "Dai Stablecoin",
+      "symbol": "DAI.e"
+    },
+    "token0Price": "1.671419251136216874804742584331823",
+    "token1": {
+      "name": "PenguinToken",
+      "symbol": "PEFI"
+    },
+    "token1Price": "0.5982939345231355541115669410717239",
+    "totalSupply": "42.685288896831178238",
+    "txCount": "23",
+    "volumeUSD": "142.6036132616285708695567398051295"
+  },
+  {
+    "id": "0xc6694c70ce377de86c283b9814812151d6d12814",
+    "liquidityProviderCount": "0",
+    "reserve0": "1123.565787671",
+    "reserve1": "20.385405689862399677",
+    "reserveUSD": "78.86523217654164944152332809864",
+    "token0": {
+      "name": "sled.finance",
+      "symbol": "SFI"
+    },
+    "token0Price": "55.11618482185742582756592072776265",
+    "token1": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token1Price": "0.01814349094067610413613131326564315",
+    "totalSupply": "0.004726208985145698",
+    "txCount": "4",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0xc69c39dbd3ee368b24df5e41b55e14b72cc653d7",
+    "liquidityProviderCount": "0",
+    "reserve0": "7235709333128.043201213",
+    "reserve1": "0.298409399698952682",
+    "reserveUSD": "29.14075787291088458870143713720879",
+    "token0": {
+      "name": "Avaxxxed",
+      "symbol": "XXX"
+    },
+    "token0Price": "24247591866837.02222745965336441518",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000004124120883804883288261330153695544",
+    "totalSupply": "46.416042646700451567",
+    "txCount": "206",
+    "volumeUSD": "1473.712809182597718484730158444931"
+  },
+  {
+    "id": "0xc6d387540ab8bd99b7ac33b806376457d753643e",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.087886933366361554",
+    "reserve1": "476230729391.671675972682448732",
+    "reserveUSD": "8.558000095659293923092122753739511",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000000001845469599969466415560351735728641",
+    "token1": {
+      "name": "FegAVAX",
+      "symbol": "FEGAVAX"
+    },
+    "token1Price": "5418675008336.876191793170568383038",
+    "totalSupply": "202416.706466348838145793",
+    "txCount": "39",
+    "volumeUSD": "2565.565161990450046868654353347695"
+  },
+  {
+    "id": "0xc992ab46428a5a2edeb8f44d946ce5642f97ef71",
+    "liquidityProviderCount": "0",
+    "reserve0": "27.327002524643501973",
+    "reserve1": "0.258064265852227655",
+    "reserveUSD": "2474.523109794491058850578557545815",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "105.892237479680531293198423527734",
+    "token1": {
+      "name": "Ether",
+      "symbol": "ETH"
+    },
+    "token1Price": "0.00944356285031646611318151940248198",
+    "totalSupply": "2.633623895066010787",
+    "txCount": "6754",
+    "volumeUSD": "1804089.372259579010058259817878107"
+  },
+  {
+    "id": "0xcadd143bfa4cb7c8c7c87a9e7b64920a3812e01c",
+    "liquidityProviderCount": "0",
+    "reserve0": "38265880.465864628",
+    "reserve1": "179.743725756442100042",
+    "reserveUSD": "15476.17039683547574963728372979574",
+    "token0": {
+      "name": "HAKU",
+      "symbol": "HAKU"
+    },
+    "token0Price": "212891.3279438526424742893765140204",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000004697232196624454216966283814980105",
+    "totalSupply": "2.57875939164552435",
+    "txCount": "990",
+    "volumeUSD": "26025.85743676114365132506853107478"
+  },
+  {
+    "id": "0xcb38e0cc5d278024ea4956f3ad6c84f7f4dc7f39",
+    "liquidityProviderCount": "0",
+    "reserve0": "20.886209837767902403",
+    "reserve1": "57517.129490906",
+    "reserveUSD": "1798.321026687142889235254160296543",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0003631302539371372650351809766207115",
+    "token1": {
+      "name": "AvaxMars",
+      "symbol": "XMARS"
+    },
+    "token1Price": "2753.832789082656441943092403520434",
+    "totalSupply": "0.034224585611427007",
+    "txCount": "51",
+    "volumeUSD": "1754.786463699500480703487125388327"
+  },
+  {
+    "id": "0xcc2811a0c9d94d57deec9798f3514d414cc2b38e",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.191689135425601656",
+    "reserve1": "0.09742459633346041",
+    "reserveUSD": "10.03649601919780974689225512766756",
+    "token0": {
+      "name": "SushiToken",
+      "symbol": "SUSHI"
+    },
+    "token0Price": "1.967564071494809524466198485437871",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.5082426613128151039724747974239779",
+    "totalSupply": "0.136632025935868277",
+    "txCount": "3",
+    "volumeUSD": "0.7057649245016373480404649687138516"
+  },
+  {
+    "id": "0xcc65a5f50d977cf0b6efbaadc26c62803519e867",
+    "liquidityProviderCount": "0",
+    "reserve0": "30.710092268509610674",
+    "reserve1": "4675684831.081847501",
+    "reserveUSD": "2981.468534358739361226310756578175",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000006568041554974523663795931569591487",
+    "token1": {
+      "name": "@AVAXFox",
+      "symbol": "XFox"
+    },
+    "token1Price": "152252386.2904942952939353520532413",
+    "totalSupply": "11.931545878518618996",
+    "txCount": "340",
+    "volumeUSD": "7010.905862567077830882361913136258"
+  },
+  {
+    "id": "0xcddd68dcc9f7bb2742de7dd7718b482c65e3516f",
+    "liquidityProviderCount": "0",
+    "reserve0": "105.269520790453565223",
+    "reserve1": "954569.780964461694327234",
+    "reserveUSD": "10135.01835332480795127348005824956",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0001102795446594728451712445265992433",
+    "token1": {
+      "name": "MoonAvax",
+      "symbol": "MOONX"
+    },
+    "token1Price": "9067.864789321122036542441804582717",
+    "totalSupply": "9999.999999999999999",
+    "txCount": "136",
+    "volumeUSD": "12146.18350070081283598925548284336"
+  },
+  {
+    "id": "0xcf08acabe561d9868ba6ea4e3752e4136d1bde40",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.080970180930956034",
+    "reserve1": "65564405.609540964736407908",
+    "reserveUSD": "7.851215755875999841620135503961012",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000001234971630996883669119919140683491",
+    "token1": {
+      "name": "ShibaButter (https://t.me/ShibaButter)",
+      "symbol": "ShibaButter"
+    },
+    "token1Price": "809735199.4982979514343880349817365",
+    "totalSupply": "2295.882426414226569719",
+    "txCount": "110",
+    "volumeUSD": "7014.685041187291770155588913368906"
+  },
+  {
+    "id": "0xd1a3f2ae385dc33515ea3a1c69435c0931b81a54",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.950005108",
+    "reserve1": "15.254905075708813881",
+    "reserveUSD": "7.407945646191030960500886033991481",
+    "token0": {
+      "name": "SL3",
+      "symbol": "SL3"
+    },
+    "token0Price": "0.06227538639442227677572060862173181",
+    "token1": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token1Price": "16.05770847677254160721838981943663",
+    "totalSupply": "0.000120383710458424",
+    "txCount": "1",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0xd480f6f2f3a4b7ae4d76b82795876cf1b8876bff",
+    "liquidityProviderCount": "0",
+    "reserve0": "34755443243.978920185",
+    "reserve1": "0.010598360830818862",
+    "reserveUSD": "1.03313484884974079716385159798586",
+    "token0": {
+      "name": "AvaxFloki",
+      "symbol": "AvaxFloki"
+    },
+    "token0Price": "3279322510223.838792968618612158738",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000003049410348882526857122119720502008",
+    "totalSupply": "0.60082381949052118",
+    "txCount": "6",
+    "volumeUSD": "270.005157038997701871298237981255"
+  },
+  {
+    "id": "0xd5a37dc5c9a396a03dd1136fc76a1a02b1c88ffa",
+    "liquidityProviderCount": "0",
+    "reserve0": "288.56939387",
+    "reserve1": "320314.795427917876930435",
+    "reserveUSD": "27663813.35123772587582105058699145",
+    "token0": {
+      "name": "Wrapped BTC",
+      "symbol": "WBTC.e"
+    },
+    "token0Price": "0.0009008931151134986781968209153017136",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "1110.009592951562714977798903188998",
+    "totalSupply": "0.095429895286789652",
+    "txCount": "5862",
+    "volumeUSD": "18187055.94501055603559730081164835"
+  },
+  {
+    "id": "0xd6e08b8e7e3c243836e953f510e402475855c1a3",
+    "liquidityProviderCount": "0",
+    "reserve0": "27178406270.706218754",
+    "reserve1": "0.331344763866469092",
+    "reserveUSD": "33.03346645705738378491308964255139",
+    "token0": {
+      "name": "AvaxMega",
+      "symbol": "AvaxMega"
+    },
+    "token0Price": "82024553379.26822300722444551349896",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000001219147144119349593596952824663164",
+    "totalSupply": "2.999999999999999",
+    "txCount": "23",
+    "volumeUSD": "3.293356378905322122679494302475289"
+  },
+  {
+    "id": "0xd8d2de455606985c92a272708b2682b0f78f775c",
+    "liquidityProviderCount": "0",
+    "reserve0": "474.156301464",
+    "reserve1": "0.321687734844843959",
+    "reserveUSD": "31.05277745893511722660554080388055",
+    "token0": {
+      "name": "sled.finance",
+      "symbol": "SFI"
+    },
+    "token0Price": "1473.964500675459375220961105388795",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0006784423909407178575140498114217423",
+    "totalSupply": "0.000383406616533065",
+    "txCount": "6",
+    "volumeUSD": "30.82689423431762405606324718190107"
+  },
+  {
+    "id": "0xda5187f777a846de7fdf5baab1853e072b89cf2e",
+    "liquidityProviderCount": "0",
+    "reserve0": "7772136349.349898009",
+    "reserve1": "2.707946187984619592",
+    "reserveUSD": "277.7288908295217465866450170048897",
+    "token0": {
+      "name": "MiniAvaxToken",
+      "symbol": "MiniAVAX"
+    },
+    "token0Price": "2870122155.24647702443839336633025",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000003484172261351444669919043112340754",
+    "totalSupply": "4.531680779207111785",
+    "txCount": "455",
+    "volumeUSD": "27544.50397261507410615822099778457"
+  },
+  {
+    "id": "0xe1e4f7cd8b96f1cb586bb1d9486ddaadd4e5327e",
+    "liquidityProviderCount": "0",
+    "reserve0": "29168129173.496812975",
+    "reserve1": "0.215402645750524947",
+    "reserveUSD": "20.46168388622993876791825305189243",
+    "token0": {
+      "name": "AVAX HOLD",
+      "symbol": "HOLD"
+    },
+    "token0Price": "135412121201.51374133347491144281",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000000007384863268716162960661779384424725",
+    "totalSupply": "2.502294669618265017",
+    "txCount": "24",
+    "volumeUSD": "194.6892352074434314664142505302622"
+  },
+  {
+    "id": "0xe2d0766170e4a725f2b8a134dc375021ebcbdd79",
+    "liquidityProviderCount": "0",
+    "reserve0": "18935571011.224465518082374662",
+    "reserve1": "0.21185248445132013",
+    "reserveUSD": "20.69567678516688007079309072433422",
+    "token0": {
+      "name": "BabyAVA",
+      "symbol": "BabyAVA"
+    },
+    "token0Price": "89380924940.60657251659873893644896",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000001118806949765285819528158394640523",
+    "totalSupply": "63324.754038928101949997",
+    "txCount": "8",
+    "volumeUSD": "1.376310173934921056593390949232123"
+  },
+  {
+    "id": "0xe2e25c998d6049f8a022910c2817cfbde0799494",
+    "liquidityProviderCount": "0",
+    "reserve0": "198015122781.75479372",
+    "reserve1": "0.020819722098316398",
+    "reserveUSD": "2.080366453381669968684051747393175",
+    "token0": {
+      "name": "Testing",
+      "symbol": "Testing"
+    },
+    "token0Price": "9510939764069.542067935047469469325",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000000001051420810988418959198648612517196",
+    "totalSupply": "2.029817424230120805",
+    "txCount": "6",
+    "volumeUSD": "1367.36210336286433160202132015678"
+  },
+  {
+    "id": "0xe362a5cfd7a7854b3e611cb2528554df57037b90",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.209782517033853486",
+    "reserve1": "352409.415657331",
+    "reserveUSD": "20.17303947811867635555186597768173",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000005952806812569324815249312081708584",
+    "token1": {
+      "name": "AvaxHODL",
+      "symbol": "AvaxHODL"
+    },
+    "token1Price": "1679879.813819095383631004140814953",
+    "totalSupply": "0.008105924637512398",
+    "txCount": "24",
+    "volumeUSD": "70.39693525976145582373802237825301"
+  },
+  {
+    "id": "0xe44d902d1da706ce1e6d0184fc730052e4279b19",
+    "liquidityProviderCount": "0",
+    "reserve0": "4994124248656.39828946",
+    "reserve1": "0.100147608933928385",
+    "reserveUSD": "8.694807454134895085315217142273179",
+    "token0": {
+      "name": "Test",
+      "symbol": "Test"
+    },
+    "token0Price": "49867633404520.25534353597568924288",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00000000000002005308717757107209204741615815757",
+    "totalSupply": "22.36304998001964504",
+    "txCount": "10",
+    "volumeUSD": "0.02877712895628000300330150926465969"
+  },
+  {
+    "id": "0xe4656e96b783a65a34cb50f5f8d1d59191c9db91",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.048985845937679239",
+    "reserve1": "14933557.728007586525567579",
+    "reserveUSD": "4.27826527654155703341628338324787",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.00000000328025289283927782848828920675984",
+    "token1": {
+      "name": "StealthMoon",
+      "symbol": "StealthMoon"
+    },
+    "token1Price": "304854544.0453626891486696036392131",
+    "totalSupply": "849.27801010187336547",
+    "txCount": "77",
+    "volumeUSD": "1574.129182545608414052836125215867"
+  },
+  {
+    "id": "0xe4b66ca7a32ddc21df3c1233866957573e7ec744",
+    "liquidityProviderCount": "0",
+    "reserve0": "2343.641172537715818578",
+    "reserve1": "3850.938266759893910159",
+    "reserveUSD": "8940.183444399005181636836744703526",
+    "token0": {
+      "name": "Pangolin",
+      "symbol": "PNG"
+    },
+    "token0Price": "0.6085896501554699941375435292144009",
+    "token1": {
+      "name": "JoeToken",
+      "symbol": "JOE"
+    },
+    "token1Price": "1.643143289973039341600284504167605",
+    "totalSupply": "2926.210291010138035189",
+    "txCount": "2624",
+    "volumeUSD": "0"
+  },
+  {
+    "id": "0xe4b9865c0866346ba3613ec122040a365637fb46",
+    "liquidityProviderCount": "0",
+    "reserve0": "45.783185873626666518",
+    "reserve1": "1952.970798",
+    "reserveUSD": "3985.620346647252654226057761050679",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.02344284201305639108588453149006071",
+    "token1": {
+      "name": "Tether USD",
+      "symbol": "USDT"
+    },
+    "token1Price": "42.65694404471327563541700005209637",
+    "totalSupply": "0.000016444968842181",
+    "txCount": "15800",
+    "volumeUSD": "2808345.356748918591371602559392886"
+  },
+  {
+    "id": "0xe506fe7bf010c6e24b83f553b3eb71e02c972b23",
+    "liquidityProviderCount": "0",
+    "reserve0": "36.047771402859131952",
+    "reserve1": "927.312953471763199722",
+    "reserveUSD": "3464.394291936177691706401755843886",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.03887336121845384238866887765899254",
+    "token1": {
+      "name": "1INCH Token",
+      "symbol": "1INCH.e"
+    },
+    "token1Price": "25.72455709143265640523998403450652",
+    "totalSupply": "182.7946909540706612",
+    "txCount": "11",
+    "volumeUSD": "261.971437267150566660148189704772"
+  },
+  {
+    "id": "0xe70258c692f29ae0685281df391c89d89b9da0ac",
+    "liquidityProviderCount": "0",
+    "reserve0": "83010717690.42033948126705922",
+    "reserve1": "68.402331928311771693",
+    "reserveUSD": "6006.760971135235767713559945145668",
+    "token0": {
+      "name": "AvaxRise",
+      "symbol": "AvaxRise"
+    },
+    "token0Price": "1213565610.269233335725624710124704",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000008240180765983858627463934484652349",
+    "totalSupply": "2366431.913239846417025931",
+    "txCount": "224",
+    "volumeUSD": "39776.11661692575979903516612967277"
+  },
+  {
+    "id": "0xe9b2b3e2af1e02e5929f6cc52c32d6800914590f",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.229302452357919672",
+    "reserve1": "11696765774284.570619014",
+    "reserveUSD": "22.2912074781885967023815956277216",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.00000000000001960391930409027035959645845103122",
+    "token1": {
+      "name": "BabyAvax",
+      "symbol": "BabyA"
+    },
+    "token1Price": "51010207932826.70054938997907671794",
+    "totalSupply": "51.503319282989658056",
+    "txCount": "162",
+    "volumeUSD": "1487.644646463736863800002776196193"
+  },
+  {
+    "id": "0xeb96a33db4506e3135d13cd401438882a27a3432",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.06104163066026604",
+    "reserve1": "235650953080.180376922191612999",
+    "reserveUSD": "5.894147572267494706444078196692333",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.0000000000002590340920008780480835650965964588",
+    "token1": {
+      "name": "FegAVAX",
+      "symbol": "FEGAVAX"
+    },
+    "token1Price": "3860495706474.846172539012654929257",
+    "totalSupply": "116136.245066082480894292",
+    "txCount": "13",
+    "volumeUSD": "416.6078280255424741260898000267157"
+  },
+  {
+    "id": "0xed6267d234787e234870f58a557d825aeb9efa8e",
+    "liquidityProviderCount": "0",
+    "reserve0": "86745756127.554371791",
+    "reserve1": "51.768527553657413888",
+    "reserveUSD": "4462.406876899217752283155540333481",
+    "token0": {
+      "name": "AvaxHODL",
+      "symbol": "AvaxHODL"
+    },
+    "token0Price": "1675646579.625883887425664175102735",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000005967845559791413283147795145989968",
+    "totalSupply": "66.218135624864440969",
+    "txCount": "1602",
+    "volumeUSD": "84516.00213906364978018513066136933"
+  },
+  {
+    "id": "0xed8cbd9f0ce3c6986b22002f03c6475ceb7a6256",
+    "liquidityProviderCount": "0",
+    "reserve0": "931682.203271011885292352",
+    "reserve1": "40110829.215019",
+    "reserveUSD": "80221658.430038",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.02322769739505048921093081522585502",
+    "token1": {
+      "name": "Tether USD",
+      "symbol": "USDT.e"
+    },
+    "token1Price": "43.05205044616633365366861884871993",
+    "totalSupply": "5.862879136786562323",
+    "txCount": "63316",
+    "volumeUSD": "388654809.6034008436879859046818383"
+  },
+  {
+    "id": "0xee25009c093a06896acf29cf93386ecc00b1714b",
+    "liquidityProviderCount": "0",
+    "reserve0": "282696.243820083936190638",
+    "reserve1": "23135.522778794987348231",
+    "reserveUSD": "1994253.104262987069342541230101402",
+    "token0": {
+      "name": "Weble Ecosystem Token",
+      "symbol": "WET"
+    },
+    "token0Price": "12.21914224817910759107812677444884",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.08183880502324290879108640210155138",
+    "totalSupply": "80514.210332604845351859",
+    "txCount": "2103",
+    "volumeUSD": "1148251.27164189538774896740057831"
+  },
+  {
+    "id": "0xefb2adfae4f1f689a1ec06db43eb83e68aa3cc18",
+    "liquidityProviderCount": "0",
+    "reserve0": "97020100.508535794240867984",
+    "reserve1": "0.10313046816428727",
+    "reserveUSD": "10.37778062797331867445310442966966",
+    "token0": {
+      "name": "RRTest",
+      "symbol": "RRTEST"
+    },
+    "token0Price": "940751091.6558854910190340380097313",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000001062980430072981503114683659809966",
+    "totalSupply": "3162.277660168379330998",
+    "txCount": "5",
+    "volumeUSD": "1.064753104906263777588107786673393"
+  },
+  {
+    "id": "0xf0d7ec33147ec3befd24b880472307bf3a01bb8a",
+    "liquidityProviderCount": "0",
+    "reserve0": "212329.813611224659485194",
+    "reserve1": "12390.044562467089290522",
+    "reserveUSD": "1071038.054500708678274097447679824",
+    "token0": {
+      "name": "Sherpa",
+      "symbol": "SHERPA"
+    },
+    "token0Price": "17.13713074563355950935870958810036",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0583528255017132398324034705911775",
+    "totalSupply": "49526.129495797565367144",
+    "txCount": "6048",
+    "volumeUSD": "6586698.648689770814219176446271262"
+  },
+  {
+    "id": "0xf198e17f5c6500013c3a0ea09e4e1080e198e618",
+    "liquidityProviderCount": "0",
+    "reserve0": "44741949.058942771",
+    "reserve1": "0.022956737598981306",
+    "reserveUSD": "2.207558477326915142643835398085072",
+    "token0": {
+      "name": "AVAXHODL",
+      "symbol": "AVAXHODL"
+    },
+    "token0Price": "1948968091.220774031093950177869839",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.0000000005130920329093897944029522182587465",
+    "totalSupply": "0.031967865478557771",
+    "txCount": "15",
+    "volumeUSD": "361.3114863023957113202372435399107"
+  },
+  {
+    "id": "0xf87f765f45899f62d9f4446fb10e60161b75f90a",
+    "liquidityProviderCount": "0",
+    "reserve0": "0.072760416721759615",
+    "reserve1": "63065991.748364396",
+    "reserveUSD": "6.363539805836212327975466472425566",
+    "token0": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token0Price": "0.000000001153718742933217124755935383544005",
+    "token1": {
+      "name": "DogeVax Coin",
+      "symbol": "DOGEVAX"
+    },
+    "token1Price": "866762376.9876510393908155507925509",
+    "totalSupply": "0.067686158016285809",
+    "txCount": "57",
+    "volumeUSD": "8876.718608211332787617280038151991"
+  },
+  {
+    "id": "0xfa139611314657bf49664908b184be521fe828e6",
+    "liquidityProviderCount": "0",
+    "reserve0": "8795689.124006564595845122",
+    "reserve1": "0.012931235548305631",
+    "reserveUSD": "1.210324012210172669140763734551569",
+    "token0": {
+      "name": "safemoonAVAX (https://t.me/safemoonAVALANCHE)",
+      "symbol": "safemoonAVAX"
+    },
+    "token0Price": "680189382.6115522580416745395922986",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000001470178784856287045651313074685044",
+    "totalSupply": "336.828972170468222318",
+    "txCount": "21",
+    "volumeUSD": "1569.671220667466701887844055251188"
+  },
+  {
+    "id": "0xfd3046730df552ca42bfffa2e5a8374886e175d2",
+    "liquidityProviderCount": "0",
+    "reserve0": "57791945.240149403",
+    "reserve1": "0.025647751606847281",
+    "reserveUSD": "2.455852325613899997551983188224743",
+    "token0": {
+      "name": "AVAXHODL",
+      "symbol": "AVAXHODL"
+    },
+    "token0Price": "2253294796.598094795641072914539924",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.000000000443794572068309510315927174252532",
+    "totalSupply": "0.038383132242117133",
+    "txCount": "15",
+    "volumeUSD": "580.4008431230271095356974193065861"
+  },
+  {
+    "id": "0xfe15c2695f1f920da45c30aae47d11de51007af9",
+    "liquidityProviderCount": "0",
+    "reserve0": "11704.923020070200315499",
+    "reserve1": "901551.15976381310552383",
+    "reserveUSD": "77624347.3483511592209641868416264",
+    "token0": {
+      "name": "Wrapped Ether",
+      "symbol": "WETH.e"
+    },
+    "token0Price": "0.01298309351976945695974373243188681",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "77.02324553676612299380949491811861",
+    "totalSupply": "101126.805378962093470743",
+    "txCount": "20203",
+    "volumeUSD": "152914055.760105348855168136703125"
+  },
+  {
+    "id": "0xff6db09c720c31bfc76eae72cbec203c2ab9070e",
+    "liquidityProviderCount": "0",
+    "reserve0": "775217.418377931257536018",
+    "reserve1": "55.377275206043575946",
+    "reserveUSD": "5391.541196901808459029589645054759",
+    "token0": {
+      "name": "AlgorToken",
+      "symbol": "ALGOR"
+    },
+    "token0Price": "13998.8364449778530512668072696477",
+    "token1": {
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX"
+    },
+    "token1Price": "0.00007143450842721679190215857931970499",
+    "totalSupply": "6502.553779247516131887",
+    "txCount": "292",
+    "volumeUSD": "2723.034924195162646918875699921714"
+  }
+]

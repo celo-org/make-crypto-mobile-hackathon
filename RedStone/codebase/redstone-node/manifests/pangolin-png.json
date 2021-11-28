@@ -1,0 +1,20 @@
+{
+  "interval": 60000,
+  "priceAggregator": "median",
+  "defaultSource": [
+    "pangolin-png"
+  ],
+  "sourceTimeout": 50000,
+  "maxPriceDeviationPercent": 25,
+  "evmChainId": 1,
+  "tokens": {
+    "WAVAX": {},
+    "SNOB": {},
+    "DYP": {},
+    "SPORE": {},
+    "XAVA": {},
+    "SHERPA": {},
+    "AVME": {},
+    "QI": {}
+  }
+}

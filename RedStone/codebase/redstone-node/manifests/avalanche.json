@@ -1,0 +1,231 @@
+{
+  "interval": 10000,
+  "priceAggregator": "median",
+  "defaultSource": [
+    "coingecko"
+  ],
+  "sourceTimeout": 7000,
+  "maxPriceDeviationPercent": 25,
+  "evmChainId": 1,
+  "tokens": {
+    "ETH": {
+      "source": [
+        "aofex",
+        "ascendex",
+        "bequant",
+        "bibox",
+        "binance",
+        "binancecoinm",
+        "binanceus",
+        "binanceusdm",
+        "bitcoincom",
+        "bitfinex",
+        "bitfinex2",
+        "bitmex",
+        "bittrex",
+        "btcturk",
+        "bw",
+        "bybit",
+        "cdax",
+        "cex",
+        "coinbase",
+        "coinex",
+        "coingecko",
+        "crex24",
+        "currencycom",
+        "delta",
+        "ftx",
+        "hitbtc",
+        "hollaex",
+        "huobipro",
+        "kraken",
+        "kucoin",
+        "lbank",
+        "liquid",
+        "oceanex",
+        "okcoin",
+        "okex5",
+        "poloniex",
+        "probit",
+        "qtrade",
+        "stex",
+        "tidebit",
+        "timex"
+      ],
+      "maxPriceDeviationPercent": 25
+    },
+    "USDT": {
+      "source": [
+        "binanceus",
+        "bitfinex",
+        "bitfinex2",
+        "bittrex",
+        "cex",
+        "coingecko",
+        "currencycom",
+        "ftx",
+        "kraken",
+        "kyber",
+        "okcoin",
+        "sushiswap",
+        "uniswap"
+      ],
+      "maxPriceDeviationPercent": 25
+    },
+    "PNG": {
+      "source": [
+        "coingecko",
+        "pangolin-pefi",
+        "pangolin-snob",
+        "pangolin-spore",
+        "pangolin-usdt",
+        "pangolin-wavax",
+        "trader-joe"
+      ],
+      "maxPriceDeviationPercent": 80
+    },
+    "AVAX": {
+      "source": [
+        "aofex",
+        "binance",
+        "binanceusdm",
+        "bitfinex",
+        "bitfinex2",
+        "bittrex",
+        "btcturk",
+        "coinex",
+        "coingecko",
+        "delta",
+        "huobipro",
+        "kucoin",
+        "lbank",
+        "okcoin",
+        "okex5"
+      ],
+      "maxPriceDeviationPercent": 25
+    },
+    "XAVA": {
+      "source": [
+        "kucoin",
+        "pangolin-png",
+        "pangolin-wavax",
+        "trader-joe"
+      ],
+      "maxPriceDeviationPercent": 80
+    },
+    "LINK": {
+      "source": [
+        "aofex",
+        "ascendex",
+        "bequant",
+        "bibox",
+        "binance",
+        "binancecoinm",
+        "binanceus",
+        "binanceusdm",
+        "bitcoincom",
+        "bitfinex",
+        "bitfinex2",
+        "bitmex",
+        "bittrex",
+        "btcturk",
+        "bybit",
+        "cdax",
+        "cex",
+        "coinbase",
+        "coinex",
+        "coingecko",
+        "crex24",
+        "currencycom",
+        "delta",
+        "ftx",
+        "hitbtc",
+        "huobipro",
+        "kraken",
+        "kucoin",
+        "kyber",
+        "lbank",
+        "liquid",
+        "oceanex",
+        "okcoin",
+        "okex5",
+        "poloniex",
+        "probit",
+        "sushiswap",
+        "timex",
+        "uniswap"
+      ],
+      "maxPriceDeviationPercent": 25
+    },
+    "BTC": {
+      "source": [
+        "ascendex",
+        "bequant",
+        "bibox",
+        "binance",
+        "binancecoinm",
+        "binanceus",
+        "binanceusdm",
+        "bitcoincom",
+        "bitfinex",
+        "bitfinex2",
+        "bitmex",
+        "bittrex",
+        "btcturk",
+        "bw",
+        "bybit",
+        "cdax",
+        "cex",
+        "coinbase",
+        "coinex",
+        "coingecko",
+        "crex24",
+        "currencycom",
+        "delta",
+        "ftx",
+        "hitbtc",
+        "hollaex",
+        "huobipro",
+        "kraken",
+        "kucoin",
+        "lbank",
+        "liquid",
+        "oceanex",
+        "okcoin",
+        "okex5",
+        "poloniex",
+        "probit",
+        "qtrade",
+        "stex",
+        "timex"
+      ],
+      "maxPriceDeviationPercent": 25
+    },
+    "FRAX": {
+      "source": [
+        "coingecko",
+        "pangolin-wavax",
+        "sushiswap",
+        "uniswap"
+      ],
+      "maxPriceDeviationPercent": 25
+    },
+    "YAK": {
+      "source": [
+        "coingecko",
+        "pangolin-wavax",
+        "trader-joe"
+      ],
+      "maxPriceDeviationPercent": 80
+    },
+    "QI": {
+      "source": [
+        "coingecko",
+        "pangolin-png",
+        "pangolin-wavax",
+        "trader-joe"
+      ],
+      "maxPriceDeviationPercent": 80
+    }
+  }
+}

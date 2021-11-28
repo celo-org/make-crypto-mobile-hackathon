@@ -1,0 +1,363 @@
+{
+  "name": "KomodoUSDC",
+  "logoURI": "https://komodo.redstone.finance/komodo-icon.png",
+  "keywords": [
+    "commodities",
+    "synthetic tokens"
+  ],
+  "tags": {
+    "commodity": {
+      "name": "Commodities",
+      "description": "Tokens that are fixed to an external commodity"
+    }
+  },
+  "timestamp": "2021-07-04T00:00:00+00:00",
+  "tokens": [
+    {
+      "chainId": 42,
+      "address": "0xf38799B941E083f2769d0FD718B5Dbb6087b31dA",
+      "symbol": "ZCZ21",
+      "name": "Corn",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/1147/1147593.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x132A04D4F01AdE8c4e28E629F144CEF3A3946f80",
+      "symbol": "ZSX21",
+      "name": "Soybean",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/2656/2656722.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x7c8a3F39a18D805BA6CE0c0bBb649Ac76Fdac1f7",
+      "symbol": "ZMZ21",
+      "name": "Soybean Meal",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/2329/2329834.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0xa059e24aaEb6C42a311FcF59CB32AC76102e1637",
+      "symbol": "ZWU21",
+      "name": "Wheat",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/575/575435.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x4bcCe748f829FA3734b46C19eD7eb4ba7f823af7",
+      "symbol": "KEU21",
+      "name": "Hard Red Wheat",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/2595/2595224.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x0a95F80fF80cfEA675526d0e04477257AF74ea22",
+      "symbol": "MWU21",
+      "name": "Spring Wheat",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/2613/2613953.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x8924eE1E8Fdec7e77948A2AcBB386d3A807038d7",
+      "symbol": "ZOZ21",
+      "name": "Oats",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/4391/4391646.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x63A234722e923F17028CeEc578EA2edf15989811",
+      "symbol": "ZRU21",
+      "name": "Rough Rice",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/2714/2714041.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x8950aB1fAF3615A2a5F253FCEDfc31616A2f73F5",
+      "symbol": "CLQ21",
+      "name": "Crude Oil WTI",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/3129/3129632.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x7811668B669631195408bC54A3b7996e81451921",
+      "symbol": "RBQ21",
+      "name": "Gasoline RBOB",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/2933/2933939.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x330D2E9f5Cd1D9fA095EC56670907Ff36FA2c589",
+      "symbol": "NGQ21",
+      "name": "Natural Gas",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/869/869785.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x1a49772987180D44B01741dB26D6114F7b5584d6",
+      "symbol": "QAU21",
+      "name": "Crude Oil Brent F",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/3129/3129663.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x33eA95A4DdC6012E7Bf006177bfC52DF04A5Ca95",
+      "symbol": "GCQ21",
+      "name": "Gold",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/1473/1473504.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x4bBb5A4112943142c39c3Db80562a565587f1380",
+      "symbol": "SIU21",
+      "name": "Silver",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/3521/3521355.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x5FaabC6573DDAa9fB57caf4ab59A5d1091D15d39",
+      "symbol": "HGU21",
+      "name": "High Grade Copper",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/651/651881.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x90dCb5D441d3b660B7de14F2aa0B7899075644Be",
+      "symbol": "PLV21",
+      "name": "Platinum",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/4027/4027270.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x711ee4D99D7DBE9c24534c5d8f6e5d713F6198C9",
+      "symbol": "PAU21",
+      "name": "Palladium",
+      "decimals": 18,
+      "logoURI": "https://cdn4.vectorstock.com/i/1000x1000/33/23/periodic-table-element-palladium-icon-vector-20543323.jpg",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0xDae612F201B6BfDe745D27C2d8134775D8aAeCEE",
+      "symbol": "LEQ21",
+      "name": "Live Cattle",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/676/676157.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0xf46280BdD37641C8De1935B51160d0C8aD206132",
+      "symbol": "GFQ21",
+      "name": "Feeder Cattle",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/2194/2194839.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x85dD1a53a934D589c4A60F215aa5B2Ea15c838f3",
+      "symbol": "HEQ21",
+      "name": "Lean Hogs",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/4406/4406697.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x1f893CD47f979834bdEF92d0ef6f93680F4eeEb2",
+      "symbol": "KMN21",
+      "name": "Pork Cutout",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/1391/1391338.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x2619a3886f49dD3072d987E3daAc9C2e639e664F",
+      "symbol": "DLN21",
+      "name": "Class III Milk",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/684/684631.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0xAc69ffEd4b8D25C89A4eCD60673918b98DCB63fc",
+      "symbol": "DFQ21",
+      "name": "Nonfat Dry Milk",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/4329/4329615.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x1FF7c7f6D655D1787de2658E9d2AF43c4a3983b9",
+      "symbol": "BDU21",
+      "name": "Butter Cash-Settled",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/2915/2915843.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0xe732eFe7fC87324e57dAa9A3582088Bb79f39484",
+      "symbol": "BJQ21",
+      "name": "Cheese Cash-Settled",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/1071/1071146.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0xE5C2Bf99b3D0d7B9F3a11C7CD8bf1b814eE2C31c",
+      "symbol": "CTZ21",
+      "name": "Cotton ",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/3174/3174960.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0xA9F97286429D0954E93C0Be94B76F5064231600e",
+      "symbol": "KCU21",
+      "name": "Coffee",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/2302/2302566.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0xe19281670d9F1652Fca4249B0DBCC3BA14E9454E",
+      "symbol": "SBV21",
+      "name": "Sugar 1",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/3093/3093536.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x2b143A313f98Ef7Dc08E9F8D7FA59617363B7357",
+      "symbol": "CCU21",
+      "name": "Cocoa",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/3185/3185082.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0x715252Cf59e0Ef436daB38DB87576Bb4E0D2B76d",
+      "symbol": "LSU21",
+      "name": "Lumber",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/3275/3275760.png",
+      "tags": [
+        "commodity"
+      ]
+    },
+    {
+      "chainId": 42,
+      "address": "0xB2D2E4c3d8eAe4c77d39C70571f8a6F11600e13e",
+      "symbol": "OJU21",
+      "name": "Orange Juice",
+      "decimals": 18,
+      "logoURI": "https://image.flaticon.com/icons/png/512/2442/2442019.png",
+      "tags": [
+        "commodity"
+      ]
+    }
+  ],
+  "version": {
+    "major": 0,
+    "minor": 5,
+    "patch": 0
+  }
+}
