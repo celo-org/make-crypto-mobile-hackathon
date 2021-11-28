@@ -1,0 +1,35 @@
+{
+  "interval": 15000,
+  "priceAggregator": "median",
+  "defaultSource": [
+    "kyber"
+  ],
+  "sourceTimeout": 50000,
+  "maxPriceDeviationPercent": 25,
+  "evmChainId": 1,
+  "tokens": {
+    "YFV": {},
+    "SUSHI": {},
+    "CREAM": {},
+    "1INCH": {},
+    "BZRX": {},
+    "USDT": {},
+    "UBT": {},
+    "QNT": {},
+    "SWRV": {},
+    "USDC": {},
+    "SNX": {},
+    "MKR": {},
+    "BAT": {},
+    "DAI": {},
+    "WBTC": {},
+    "UNI": {},
+    "YFI": {},
+    "LINK": {},
+    "AAVE": {},
+    "COMP": {},
+    "REN": {},
+    "LRC": {},
+    "BAND": {}
+  }
+}

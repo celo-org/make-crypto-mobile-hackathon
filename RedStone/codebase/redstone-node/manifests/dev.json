@@ -1,0 +1,13 @@
+{
+  "interval": 10000,
+  "priceAggregator": "median",
+  "defaultSource": [
+    "kraken"
+  ],
+  "sourceTimeout": 50000,
+  "maxPriceDeviationPercent": 25,
+  "tokens": {
+    "COMP": {},
+    "AAVE": {}
+  }
+}

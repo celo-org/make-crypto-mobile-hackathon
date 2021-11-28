@@ -1,0 +1,32 @@
+{
+  "name": "USDCForAaveOnKovan",
+  "logoURI": "https://cryptologos.cc/logos/usd-coin-usdc-logo.svg?v=010",
+  "keywords": [
+    "usdc"
+  ],
+  "tags": {
+    "commodity": {
+      "name": "USDC aave Kovan",
+      "description": "USDC token for Aave on kovan"
+    }
+  },
+  "timestamp": "2021-07-04T00:00:00+00:00",
+  "tokens": [
+    {
+      "chainId": 42,
+      "address": "0xe22da380ee6B445bb8273C81944ADEB6E8450422",
+      "symbol": "USDC",
+      "name": "USDC",
+      "decimals": 6,
+      "logoURI": "https://cryptologos.cc/logos/usd-coin-usdc-logo.svg?v=010",
+      "tags": [
+        "usdc"
+      ]
+    }
+  ],
+  "version": {
+    "major": 0,
+    "minor": 5,
+    "patch": 0
+  }
+}

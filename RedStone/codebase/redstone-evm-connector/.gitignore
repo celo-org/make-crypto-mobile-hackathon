@@ -1,0 +1,13 @@
+node_modules
+
+#IDE
+.idea
+
+#Hardhat files
+cache
+artifacts
+
+lib
+typechain
+
+.secret.*json

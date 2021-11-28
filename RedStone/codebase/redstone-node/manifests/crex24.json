@@ -1,0 +1,43 @@
+{
+  "interval": 60000,
+  "priceAggregator": "median",
+  "defaultSource": [
+    "crex24"
+  ],
+  "sourceTimeout": 50000,
+  "maxPriceDeviationPercent": 25,
+  "evmChainId": 1,
+  "tokens": {
+    "YFI": {},
+    "XRP": {},
+    "USDC": {},
+    "DOGE": {},
+    "LINK": {},
+    "BTT": {},
+    "PAX": {},
+    "EOS": {},
+    "ZEC": {},
+    "XLM": {},
+    "ETH": {},
+    "DOT": {},
+    "BCH": {},
+    "BNB": {},
+    "ADA": {},
+    "BTC": {},
+    "LTC": {},
+    "XMR": {},
+    "XEM": {},
+    "1INCH": {},
+    "NFT": {},
+    "HMR": {},
+    "GMT": {},
+    "TUSD": {},
+    "BUSD": {},
+    "REV": {},
+    "XEP": {},
+    "PLF": {},
+    "CHESS": {},
+    "DRS": {},
+    "INNBC": {}
+  }
+}

@@ -1,0 +1,4 @@
+Gas cost benchmarks for getting price data:
+1. Chainlink            46663 (0x60e09e2c0bf7b7ab5e597876b1dc590c24a2314e651ef4670a14e8c8389f36b4)
+2. PriceAware           33488 (0x3e0fa64f09bfbcbf2d69bcdfc8014e42835af35ba9d7bd908ab072f3d1d3c34f)
+3. InlinedPriceAware    29141 (0x176b4fb6ccb5102e00cf3cbf3624130fcfce23ebdd2e8a353ec496a211cb7158)
