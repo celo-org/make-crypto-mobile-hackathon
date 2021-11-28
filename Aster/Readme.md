@@ -42,7 +42,7 @@ Currently, we support only CELO as the crypto payments. We would like to impleme
 2. [Aster Demo Website](https://aster-38850.web.app/)
 
 #### Presentation
-1. [Youtube Demo]()
+1. [Youtube Demo](https://youtu.be/Jbdv4Z_da8U)
 2. [Aster Presentation Slides](https://docs.google.com/presentation/d/1oWlUDwM8wrVbfX-5lbL_ISHMqj9Rqnhlp8ONFSIhHfs/edit?usp=sharing)
 
 #### Next Steps
