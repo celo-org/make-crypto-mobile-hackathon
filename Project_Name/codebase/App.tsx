@@ -2,10 +2,9 @@ import 'intl';
 import './global';
 import 'intl/locale-data/jsonp/en-US';
 import { StatusBar } from 'expo-status-bar';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import AppLoading from 'expo-app-loading';
-import * as Font from 'expo-font';
 
 import BottomRoutes from './src/routes/bottomTabs.routes';
 
