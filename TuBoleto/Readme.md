@@ -14,7 +14,7 @@ TuBoleto
 Region Latam:
 1. Region Latam - Cripto en la vida real
 2. Region Latam - Movilidad y migración
-3. Region Latam - Movilidad y migración
+3. Region Latam - DeFi en Latam
 
 
 #### Region location
@@ -29,7 +29,8 @@ Lima, Peru, LatAm
 80% of Latin American commuters use public transit on a daily basis, making it an important place to widen crypto use. The minimal fees are key for micropayments. We have spoken with hundreds of our public transit users and we know how taxing can be spending 4 hours a day on public transit. We believe Web3 offers the opportunity to change this citizens lives. For us making crypto an accepted form of payment is just the first step, we aim to empower the blue collar worker. The value of our approach is connecting the web3 new economy to the traditional IRL economy to really displace fiat. 
 
 #### Summary
-Describe the basic functionality of your project. What are the features you were able to implement? What features would you like to implement?
+This is our first step, allowing the use of crypto as a means of payment for public transit. To do so people can connect their Valora wallets to send cUDS into TuBoleto. All of this inside TuBoleto. This ways users use their crypto to pay public transit by scanning a QR. Fares charged are defined by the distance traveled.
+The next features can be seen in next steps, generally speaking its about rewarding users and define our tokenomics.
 
 #### URLs
 - [How to use TuBoleto?](https://docs.google.com/document/d/1axPAF13k2WvW_edsg5a6OS5uzDWePHvRtXrNC7ULqLg/edit)
