@@ -165,7 +165,7 @@
             </div>
 
             <div class="d-grid">
-              <button type="submit" :disabled="input.withdraw.loading" class="btn btn-info" @click="withdrawToken">Support</button>
+              <button type="submit" :disabled="input.withdraw.loading" class="btn btn-info" @click="withdrawToken">Withdraw</button>
             </div>
           </div>
         </div>
