@@ -21,7 +21,7 @@ import HIPASVG from '../../../assets/HIPA.svg';
 import { LineButton, ProfileButton, SquareButton, Text } from '@nft/components';
 
 import { colors, fontsFamily, fontsSize } from '@nft/styles';
-import { AlignTypes, RoutesNames } from '@nft/utils/enum';
+import { AlignTypes } from '@nft/utils/enum';
 import NftImage from '@nft/components/NftImage';
 
 import * as ImagePicker from 'expo-image-picker';
@@ -40,7 +40,6 @@ import { useAuth } from '@nft/context/auth';
 import ConnectWallet from '../ConnectWallet';
 import { useModal } from '@nft/context/modal.context';
 import { useFocusEffect } from '@react-navigation/native';
-import { useNavigation } from '@react-navigation/native';
 
 type PurchaseProps = {
   id: number;
@@ -91,8 +90,6 @@ const Profile = (): JSX.Element => {
   const [isDescriptionEditing, setIsDescriptionEditing] = useState(false);
   const [newDescriptionValue, setNewDescriptionValue] = useState(description);
   const descriptionTextInputRef = useRef<TextInput>(null);
-
-  const navigate = useNavigation();
 
   const handleStartEditingDescription = () => {
     setIsDescriptionEditing(true);
