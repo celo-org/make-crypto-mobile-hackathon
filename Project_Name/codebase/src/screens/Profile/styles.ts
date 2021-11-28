@@ -13,7 +13,6 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.light.neutralColor14,
   },
   container: {
-    flex: 1,
     paddingTop: dimensions.spacingStackXxl16,
     paddingHorizontal: dimensions.spacingStackXxl16,
     backgroundColor: colors.light.neutralColor14,
@@ -26,6 +25,7 @@ export const styles = StyleSheet.create({
     flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.SPACE_BETWEEN,
     alignItems: AlignTypes.CENTER,
+    paddingHorizontal: dimensions.spacingInlineSm16,
     paddingTop: Platform.OS === 'ios' ? dimensions.spacingStackXxl16 : 0,
   },
   content: {
@@ -46,7 +46,6 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   buttons: {
-    width: dimensions.width90,
     justifyContent: AlignTypes.SPACE_BETWEEN,
     flexDirection: AlignTypes.ROW,
   },
