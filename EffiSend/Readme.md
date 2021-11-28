@@ -118,7 +118,7 @@ Login:
 
 Github: https://github.com/EddOliver/EffiSend
 
-Devpost(with main video and more documentation): https://devpost.com/software/effisend
+Devpost(MAIN VIDEO!): https://devpost.com/software/effisend
 
 ## Presentation
 
