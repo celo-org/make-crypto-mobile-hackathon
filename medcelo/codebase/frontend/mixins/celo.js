@@ -6,6 +6,9 @@ import BigNumber from "bignumber.js"
 import erc20Abi from '../contracts/erc20.abi.json'
 import contractAbi from '../contracts/medcelo.abi.json'
 
+
+import Swal from 'sweetalert2'
+
 const cUSDContractAddress = '0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1'
 const contractAddress = '0x6CBD7Fa1507124BF0E8b1812b5Fbc68554649db0'
 
@@ -19,6 +22,7 @@ export default {
         cUSDBalance: 0,
         defaultAccount: null,
         contract: null,
+        walletConnected: false
       }
     },
     methods: {
@@ -77,7 +81,27 @@ export default {
         return result;
       },
 
-      supportCampaign: async function (index, amount) {
+      supportCampaign: async function(index) {
+        
+        Swal.fire({
+          title: 'How much do you want to donate?',
+          input: 'number',
+          showCancelButton: true,
+          confirmButtonText: 'Proceed',
+          showLoaderOnConfirm: true,
+          preConfirm: async (amount) => {
+            console.log(amount)
+            await this.supportCampaignHelper(index, parseInt(amount))
+            Swal.fire(
+              'Thank you!',
+              'You just saved a live!',
+              'success'
+            )
+          },
+        })
+      },
+
+      supportCampaignHelper: async function (index, amount) {
 
         const _amount = BigNumber(amount).shiftedBy(18).toString()
 
@@ -120,6 +144,8 @@ export default {
 
         const [supporters, goal, raised, end_time, active] = campaignMeta
 
+        let _end_time = new Date(end_time * 1000);
+
         const item = {
             index: index,
             fundraiser: `${fundraiser.substring(0,16)}...`,
@@ -131,7 +157,7 @@ export default {
             supporters: supporters,
             goal: parseFloat(goal),
             raised: parseFloat(raised),
-            end_time: end_time,
+            end_time:  `${_end_time.getUTCDay()}/${_end_time.getUTCMonth()}/${_end_time.getUTCFullYear()}`,
             active: active,
         }
         return item
@@ -141,7 +167,7 @@ export default {
         const result = this.contract.methods
           .startCampaign(
             title,images, tags, description, goal
-            .toString(), 100001991
+            .toString(), end_time
           )
           .send({ from: this.kit.defaultAccount })
       },

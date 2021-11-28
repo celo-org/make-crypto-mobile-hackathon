@@ -48,22 +48,22 @@
           "
         >
           <a
-            href="#about"
+            href="/#about"
             class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
             >About</a
           >
           <a
-            href="#campaigns"
+            href="/#campaigns"
             class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
             >Campaigns</a
           >
           <a
-            href="#team"
+            href="/#team"
             class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
             >Team</a
           >
           <a
-            href="#vision"
+            href="/#mission"
             class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
             >Mission &amp; Vision</a
           >
@@ -89,6 +89,7 @@
         </a>
         <a
           @click="connectToWallet()"
+          v-if="!connected"
           class="
             inline-flex
             items-center
@@ -121,6 +122,12 @@
 <script>
 export default {
   name: 'Header',
+  props: {
+    connected: {
+      type: Boolean,
+      default: false,
+    }
+  },
   methods: {
     connectToWallet() {
       this.$emit('connectToWallet')

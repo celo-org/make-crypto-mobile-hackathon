@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Header @connectToWallet="connectToWallet()" />
+    <Header :connected="walletConnected" @connectToWallet="connectToWallet()" />
 
     <!-- Section 1 -->
     <section class="w-full px-8 py-16 bg-gray-100 xl:px-8">
@@ -236,7 +236,12 @@
 
               <div class="my-3">
                 <div
-                  v-for="tag in ['general','treatment', 'infrastructure', 'outreach']"
+                  v-for="tag in [
+                    'general',
+                    'treatment',
+                    'infrastructure',
+                    'outreach',
+                  ]"
                   :key="tag"
                   @click="selectTagHandler(tag)"
                   :class="{
@@ -305,22 +310,22 @@ import Footer from '~/components/footers/Footer.vue'
 
 import CeloMixin from '~/mixins/celo.js'
 
+import Swal from 'sweetalert2'
+
 export default {
   components: { Header, Footer },
-  mixins: [ CeloMixin ],
+  mixins: [CeloMixin],
   async mounted() {
-      try {
-  
-        await this.connectToWallet()
-  
-        await this.getWalletBalance()
-  
-      } catch (error) {
-  
-        console.log(error)
-  
-      }
-    },
+    try {
+      await this.connectToWallet()
+
+      await this.getWalletBalance()
+            this.walletConnected = true
+
+    } catch (error) {
+      console.log(error)
+    }
+  },
   data() {
     return {
       tags: [],
@@ -364,15 +369,13 @@ export default {
       }
     },
     async submit() {
-
       this.images = [
-          this.image1,
-          this.image2,
-          this.image3,
-          this.image4,
-          this.image5
+        this.image1,
+        this.image2,
+        this.image3,
+        this.image4,
+        this.image5,
       ]
-
 
       const email = this.email
 
@@ -432,10 +435,37 @@ export default {
         return false
       }
 
-      console.log(tags)
+      const timeConverter = (date) => Date.parse(date)
 
-      console.log('hello is here');
-      await this.startCampaign(title, images, tags, description, goal, end_time)
+      console.log(timeConverter(end_time))
+
+      try {
+        await this.startCampaign(
+          title,
+          images,
+          tags,
+          description,
+          goal,
+          timeConverter(end_time)
+        )
+
+        await Swal.fire(
+          'Congratulations!',
+          'You just made an attempt to save a live. We will send you a message once you have been approved!',
+          'success'
+        )
+      } catch (error) {
+        await this.startCampaign(
+          title,
+          images,
+          tags,
+          description,
+          goal,
+          timeConverter(end_time)
+        )
+
+        await Swal.fire('Oops! An error occurred', error, 'error')
+      }
     },
   },
 }

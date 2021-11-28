@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Header @connectToWallet="connectToWallet()" />
+    <Header :connected="walletConnected" @connectToWallet="connectToWallet()" />
     <Banner />
     <Hero id="about" />
     <ItemHeader
@@ -8,6 +8,7 @@
       title="Campaigns"
       tagline="We are fully decentralized and the funds donated goes directly to the fundraisers."
     />
+    <Hero id="mission" />
     <ListItem :items="items" />
     <Footer />
   </main>
@@ -31,11 +32,14 @@ export default {
     }
   },
   async mounted() {
+
       try {
   
         await this.connectToWallet()
   
         await this.getWalletBalance()
+
+        this.walletConnected = true
 
         await this.getAllCampaign()
   

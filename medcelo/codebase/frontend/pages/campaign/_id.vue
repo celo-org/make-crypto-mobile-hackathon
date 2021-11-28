@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Header @connectToWallet="connectToWallet()" />
+    <Header :connected="walletConnected" @connectToWallet="connectToWallet()" />
     <SingleItemBanner
       :title="item.title"
       :tags="item.tags"
@@ -11,7 +11,7 @@
       :raised="item.raised"
       :supporters="item.supporters"
       :end_time="item.end_time"
-      @supportCampaign="supportCampaign($route.params.id, 10)"
+      @supportCampaign="supportCampaign($route.params.id)"
     />
     <section id="about" class="w-full bg-white pt-7 pb-7 md:pt-20 md:pb-24">
       <div
@@ -123,6 +123,8 @@ export default {
       await this.connectToWallet()
 
       await this.getWalletBalance()
+
+      this.walletConnected = true
 
       this.item = await this.fetchCampaignFull(this.$route.params.id)
 
