@@ -56,7 +56,7 @@ Live : https://streamzy-development.web.app/
 ![Functional decomposition tree drawio (1)](https://user-images.githubusercontent.com/55028717/143780963-625063cd-0ad1-4245-b5c5-5a0e625be711.png)
 
 #### Next Steps
-We started with a idea of making a fully decentralise platform using IPFS for databse also using Orbit Db but we ran out of time so we are using IPFS only for storing videos and photos. In future updates we plan to use OrbitDb for decentralise database on IPFS.
+We started with a idea of making a fully decentralise platform using IPFS for databse also using Orbit Db but we ran out of time so we are using IPFS only for storing videos and photos. In future updates we plan to use OrbitDb for decentralise database on IPFS. Also for live chat feature during live streaming we are planning to use Matrix protocol
 
 #### License
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
