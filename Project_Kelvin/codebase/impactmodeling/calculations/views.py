@@ -81,4 +81,4 @@ def model(request):
     final_result = raw_system_events[len(raw_system_events) - 1]['average_result']
     db.models.update_one({"user": user, "proposalId": proposal_id, "collection": collection}, {"$set": {"user": user, "proposalId": proposal_id, "score": final_result, "collection": collection}}, True)
 
-    return HttpResponse(user + " gave " + proposal_id + " a score of " + str(final_result))
+    return HttpResponse(final_result)
