@@ -25,11 +25,13 @@ To ensure transparency and prevent scams, we've mandated that fundraisers provid
 
 #### Summary
 
+MedCelo is a fully decentralized medical fundraising platform built using Celo Blockchain technology. MedCelo is focused on raising funds for medical infrastructures, patient's treatment, and medical outreach. Our mission is to reduce the number of death due to financial limitation and provide worldclass healthcare to everyone everywhere.
 
-We are able to produce a minimal viable product. The current version of the software can do the following:
+
+During the hackathon, we are able to produce a minimal viable product. The current version of the software can do the following:
 
 1. Connect to Celo Blockchain network
-2. Query the Celo Blockchain network and retrieve medicalcampaigns
+2. Query the Celo Blockchain network and retrieve medical campaigns
 3. Allow user to start their own medical campaigns
 4. Allow users to view individual medical campaign
 5. Allow users to donate to a medical campaign
