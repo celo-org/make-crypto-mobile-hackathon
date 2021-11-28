@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.light.neutralColor14,
     paddingTop: dimensions.width40,
-    paddingBottom: dimensions.height80
+    marginBottom: Platform.OS === 'ios' ? 90 : dimensions.height80
   },
   divider: { 
     paddingRight: dimensions.spacingStackXs8 
