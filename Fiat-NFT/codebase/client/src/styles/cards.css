@@ -1,0 +1,150 @@
+.card {
+	border: 1px solid #e2e2e2;
+	border-radius: 6px;
+}
+
+a.card {
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+}
+
+.card .logo {
+	width: 100px;
+	height: 34px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+	margin: 40px auto;
+}
+
+.card > .content {
+	padding: 10px;
+	margin: 0;
+}
+
+.card > .content.large {
+	padding: 30px;
+}
+
+.card.shadow {
+	border: none;
+}
+
+.card.link {
+	cursor: pointer;
+}
+
+.card.link:hover {
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card .image {
+	border-radius: 6px 6px 0 0;
+	height: 160px;
+	background-size: 150px;
+	position: relative;
+}
+
+.card .image > .icon {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	font-size: 20px;
+	padding: 0;
+	background: transparent;
+	border: none;
+	color: white;
+	height: 24px;
+}
+
+.card .image > .icon i.far {
+	color: white;
+}
+
+.card p.footer {
+	margin-bottom: 0;
+	font-size: 15px;
+}
+
+.card .content small.meta {
+	color: #8a8a8a;
+	text-transform: uppercase;
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.card .content small.location {
+	margin-bottom: 10px;
+}
+
+.card .content small.location i + span {
+	margin-left: 0;
+}
+
+.card .content h2 {
+	font-size: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.card .content .price,
+.card .content .rating {
+	font-size: 13px;
+	color: #5e5e5e;
+	display: block;
+}
+
+.card .content .rating {
+	color: #8a8a8a;
+	margin-top: 8px;
+	font-size: 10px;
+	vertical-align: baseline;
+}
+
+.card .content .rating span {
+	margin-left: 5px;
+}
+
+.card .content .likes i:last-child {
+	margin-right: 5px;
+}
+
+.card .location {
+	display: block;
+	font-size: 11px;
+	margin-top: 10px;
+}
+
+.card .location i {
+	margin-right: 5px;
+}
+
+.card.specs ul > li {
+	line-height: 30px;
+}
+
+.card.specs ul > li > i {
+	margin-right: 8px;
+}
+
+.card + p {
+	margin-top: 40px;
+}
+
+.card h3 {
+	margin-top: 0;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.card small + form {
+	margin-top: 40px;
+}
+
+.sidebar {
+	margin-top: 50px;
+}

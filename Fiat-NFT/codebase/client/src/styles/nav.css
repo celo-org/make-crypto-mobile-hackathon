@@ -1,0 +1,47 @@
+nav {
+	padding: 10px 50px;
+	display: grid;
+	grid-template-columns: 60px auto;
+	grid-column-gap: 10px;
+	border-bottom: 1px solid #e2e2e2;
+	object-fit: contain;
+}
+
+nav .logo {
+	width: 100%;
+	height: 50px;
+	background-image: url('https://pbs.twimg.com/media/FAcigVrVQAUEUqT?format=jpg&name=360x360');
+	background-size: 90% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+nav .profile {
+	text-align: right;
+}
+
+nav .profile a {
+	border-radius: 3px;
+	font-size: 13px;
+	height: 32px;
+	padding: 5px 10px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+nav .profile .avatar {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+nav .profile a span {
+	vertical-align: middle;
+}
