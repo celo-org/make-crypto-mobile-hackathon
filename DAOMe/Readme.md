@@ -55,7 +55,7 @@ _Features to be Implemented_
 
 #### Presentation
 
-[Presentation Link](https://www.canva.com/design/DAEw_h4rnLo/YZQYpvtmXikNyNVV3MQMGg/view?utm_content=DAEw_h4rnLo&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton#5)
+[Presentation Link](https://www.canva.com/design/DAEw_h4rnLo/YZQYpvtmXikNyNVV3MQMGg/view?utm_content=DAEw_h4rnLo&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton#1)
 
 #### Next Steps
 
