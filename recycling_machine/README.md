@@ -4,6 +4,15 @@
     <img src = "IMG_20211127_182429.jpg" width = "800px"/>
 </div>
 
+### Team: Golubovic Team
+#### Tracks: Green Track/DeFi Track
+
+##### Region: Europe
+
+##### Team Members
+- github@dzoni-hash, software developer
+- github@aleksandargolubovic, software developer
+
 ## Crypto Recycling Machine Overview
 Crypto Recycling Machine is a project developed for Celo Make Crypto Mobile Hackathon. It gives an opportunity to recycle different kinds of bottles and get paid in crypto currency.
 
@@ -15,7 +24,6 @@ A service running on Raspberry Pi which uses a breadboard, some LEDs and buttons
 * ### Recycling Machine server and client
 
 Used for user interaction with the machine and interaction between the recycling machine and smart contracts on Celo network. The Recycling Machine supports payments on Celo Alfajores network in CELO tokens or in cUSD tokens. There is also an option to donate the money.
-
 
 ## Technologies
 * React
