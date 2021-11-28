@@ -1,0 +1,61 @@
+.actions {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h2 {
+		text-align: center;
+	}
+	.txt {
+		padding: 1rem;
+		max-width: 60ch;
+	}
+	.action {
+		width: 100%;
+		margin: auto;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		.txt {
+			max-width: 50ch;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: 1rem;
+		}
+		.inner {
+			max-width: 100ch;
+			margin: auto;
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+		.item {
+			margin: 1rem 0;
+			min-width: 40ch;
+		}
+		input:not([type="submit"]) {
+			width: 90%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.actions {
+		.action {
+			.inner {
+				.txt {
+					width: 100%;
+					max-width: 100%;
+				}
+				flex-direction: column;
+				img {
+					max-height: 30vh;
+				}
+			}
+		}
+	}
+}

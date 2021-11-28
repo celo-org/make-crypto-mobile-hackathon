@@ -1,0 +1,19 @@
+.verify {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	form {
+		text-align: center;
+	}
+	.item {
+		margin: 1rem 0;
+		text-align: left;
+		input {
+			min-width: 40ch;
+			display: block;
+		}
+	}
+}

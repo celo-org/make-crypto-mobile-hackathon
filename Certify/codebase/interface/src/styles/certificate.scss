@@ -1,0 +1,133 @@
+.certificate {
+	font-size: 1.2rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	margin: auto;
+	font-weight: 300;
+	font-family: "noto-serif", serif;
+	text-align: center;
+
+	h1 {
+		font-weight: 500;
+	}
+
+	.fields {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		span {
+			margin: 0.5rem 0;
+		}
+
+		.field {
+			min-width: 70%;
+			font-weight: 500;
+			text-align: center;
+			display: block;
+			margin: auto;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+			&#name {
+				display: inline-block;
+				min-width: 30ch;
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				border: 1px solid #4b3f3f;
+			}
+		}
+	}
+
+	.info {
+		padding-top: 2rem;
+		display: flex;
+		justify-content: space-evenly;
+		font-size: 0.9rem;
+		text-align: left;
+
+		h4 {
+			color: #ff6363;
+			font-size: 1.2rem;
+			font-weight: 500;
+			margin-bottom: 1rem;
+		}
+
+		.label {
+			font-weight: 500;
+		}
+
+		.tx-info {
+			width: 60%;
+			span:not(.label) {
+				display: inline-block;
+				max-width: 100%;
+				word-wrap: break-word;
+				margin-bottom: 0.25rem;
+			}
+
+			.cols {
+				display: flex;
+				height: 100%;
+
+				.col {
+					width: 50%;
+					display: flex;
+					flex-direction: column;
+					// justify-content: space-between;
+				}
+			}
+		}
+
+		.share,
+		.status {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 100%;
+			div {
+				margin-top: 1rem;
+			}
+		}
+	}
+	.foot-link {
+		width: 100%;
+		word-wrap: break-word;
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.certificate {
+		.fields {
+			flex-direction: column;
+			align-items: center;
+			.field {
+				margin: 0.5rem 0;
+			}
+		}
+		.info {
+			padding-top: 1rem;
+			flex-wrap: wrap;
+			width: 100%;
+			h4 {
+				font-size: 1rem;
+			}
+			.tx-info {
+				width: 100%;
+				.cols {
+					height: auto;
+					flex-wrap: wrap;
+					.col {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
