@@ -23,7 +23,7 @@ const web3 = new Web3(
   )
 );
 
-const contractAddress = "0x3724d73e217F298B07978BE858627ff691B3E7be";
+const contractAddress = "0x44D2968bd661D37F35744aca7b1eA4e3eD12D8c9";
 
 const contract = new web3.eth.Contract(playlist, contractAddress);
 // console.log(contract)
