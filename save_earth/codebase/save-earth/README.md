@@ -4,9 +4,8 @@
 Create entries of newly discovered, rare, or near-extinct life discoveries on earth with the help of `AI` 🤖 for the world to see and get rewards for prioritized discoveries.
 
 <!---Add Image here --->
-<!-- ![image](https://raw.githubusercontent.com/Bayurzx/Save_Earth_AI/master/screenshots/Home.jpg)
-![image](https://raw.githubusercontent.com/Bayurzx/Save_Earth_AI/master/screenshots/AI_test.gif)
-![image](https://raw.githubusercontent.com/Bayurzx/Save_Earth_AI/master/screenshots/upload.jpg) -->
+![image](https://raw.githubusercontent.com/Bayurzx/make-crypto-mobile-hackathon/save-earth/save_earth/codebase/save-earth/screenshots/details11.jpg)
+![image](https://raw.githubusercontent.com/Bayurzx/make-crypto-mobile-hackathon/save-earth/save_earth/codebase/save-earth/screenshots/image%20dataset2.jpg)
 
 
 # Why I Did It (Inspiration) ???
@@ -20,15 +19,13 @@ I wanted to create a project that could create awareness on rare, unique, endang
 - The app, with the help of the Custom Vision Prediction API was able to detect and then classify images returning a probability percent and give responses based on the probability.
 - Reward users with CELO tokens when a prioritized discovery is found
 
-![image](https://raw.githubusercontent.com/Bayurzx/Save_Earth_AI/master/screenshots/AI_test.gif)
 
 - The app was able to automatically store high priority images that were detected by the Custom Vision AI by creating and saving it into Blob Containers.
 
 ![image](https://raw.githubusercontent.com/Bayurzx/Save_Earth_AI/master/screenshots/auto_containers.jpg)
 
 - It also allowed people, given admin access, to tag and send image datasets for training.
-![image](https://raw.githubusercontent.com/Bayurzx/Save_Earth_AI/master/screenshots/image_dataset1.jpg)
-![image](https://raw.githubusercontent.com/Bayurzx/Save_Earth_AI/master/screenshots/image%20dataset2.jpg)
+![image](https://raw.githubusercontent.com/Bayurzx/make-crypto-mobile-hackathon/save-earth/save_earth/codebase/save-earth/screenshots/image_dataset1.jpg)
 
 ---
 
@@ -44,7 +41,7 @@ I wanted to create a project that could create awareness on rare, unique, endang
 # How we built it???
 Save_Earth_AI Architecture 👇
 
-![image](https://raw.githubusercontent.com/Bayurzx/Save_Earth_AI/master/screenshots/saveearth%20architecture1.png)
+![image](https://raw.githubusercontent.com/Bayurzx/make-crypto-mobile-hackathon/save-earth/save_earth/codebase/save-earth/screenshots/architecture.png)
 - A user fills the form at the upload page, includes an image but first, sends the image data to Custom Vision AI
 - If the image is detected by AI, If it is prioritized, it is sent to a blob container.
   - Prioritized images have at least +99.5% accuracy allowance.
