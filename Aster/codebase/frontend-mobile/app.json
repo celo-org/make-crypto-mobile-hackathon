@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Aster",
+    "slug": "aster-data-labeling",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/aster-logo-img.png",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.aster.aster",
+      "buildNumber": "0.0.1"
+    },
+    "android": {
+      "package": "com.aster.aster",
+      "versionCode": 1
+    },
+    "description": "Aster allows decentralized and unbiased data labeling by allowing people from all over the world to label data from their phone and earn crypto as reward.",
+    "githubUrl": "https://github.com/BottomlessData/Aster"
+  }
+}
