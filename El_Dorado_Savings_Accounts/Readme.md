@@ -32,6 +32,7 @@ Describe the basic functionality of your project. What are the features you were
 https://api.codemagic.io/artifacts/11defcac-0a88-4a04-ac9e-cbe006a78780/0889f69e-7268-4561-8f9d-a8d77ead6ecc/app-release-universal.apk
 
 #### Presentation
+https://www.youtube.com/watch?v=QrpvhwABAC8
 https://www.figma.com/file/ekDbB9fVJCc8nXiOOfkj4n/Savings-Accounts?node-id=0%3A1
 
 #### Next Steps
