@@ -1,0 +1,21 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate:alfajores": "truffle migrate --network alfajores",
+    "console:alfajores": "truffle console --network alfajores",
+    "migrate:mainnet": "truffle migrate --network mainnet",
+    "console:mainnet": "truffle console --network mainnet"
+  },
+  "keywords": [],
+  "author": "Alex Bakoushin <alex@bakoush.in>",
+  "license": "MIT",
+  "dependencies": {
+    "@celo/contractkit": "1.3.3",
+    "@openzeppelin/contracts": "4.4.0",
+    "dotenv": "10.0.0",
+    "truffle": "5.4.22"
+  }
+}

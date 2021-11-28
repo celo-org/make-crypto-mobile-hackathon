@@ -1,0 +1,6 @@
+.buttons {
+  display: grid;
+  grid-gap: 16px;
+  justify-items: center;
+  margin-top: 40px;
+}

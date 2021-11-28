@@ -1,0 +1,52 @@
+.app-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  background: url('./background.png') center / cover no-repeat;
+  padding: 18px 12px 16px;
+  margin: 0 -16px 16px;
+}
+
+@media (hover: hover) {
+  .app-header {
+    margin: 16px 0 16px;
+    border-radius: 8px;
+  }
+}
+
+.main-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sub-header {
+  text-transform: uppercase;
+  opacity: 0.66;
+}
+
+.app-header__text {
+  color: #000;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.app-header__profile {
+  display: flex;
+  align-items: center;
+  color: var(--app-background);
+}
+
+.app-header__address {
+  color: var(--app-background);
+}
+
+.app-header__icon {
+  padding: 4px;
+}
+
+.app-header__icon-svg {
+  fill: var(--app-background);
+}

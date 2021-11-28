@@ -1,0 +1,33 @@
+.deal {
+  list-style-type: none;
+  margin: 0;
+  padding: 24px 8px;
+  border-bottom: 1px solid #000;
+  /* background-color: #f6f6e4; */
+  background-color: var(--highlight-background);
+  background: -webkit-linear-gradient(to left, #f37335, #fdc830);
+  background: linear-gradient(to left, #f37335, #fdc830);
+}
+
+.deal * {
+  color: #000;
+}
+
+.deal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.deal-amount {
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.deal-status {
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--app-background);
+}
