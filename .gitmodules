@@ -1,0 +1,6 @@
+[submodule "robot_contract"]
+	path = robot_contract
+	url = https://github.com/seandevs/robot_contract
+[submodule "BoxingRobotServer"]
+	path = BoxingRobotServer
+	url = https://github.com/Mikewa33/BoxingRobotServer
