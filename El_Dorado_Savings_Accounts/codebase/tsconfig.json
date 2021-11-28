@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "strict": false,
+        "target": "ES2020",
+        "module": "commonjs",
+        "noEmit": true,
+        "noImplicitAny": true,
+        "moduleResolution": "Node",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "pretty": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": false,
+        "skipLibCheck": true,
+        "types": [
+            "@types/jest",
+            "node"
+        ],
+        "lib": [
+            "DOM"
+        ]
+    },
+    // "files": [
+    //     "src/**"
+    // ],"
+    "exclude": [
+        "node_modules"
+    ]
+}
