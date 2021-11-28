@@ -33,7 +33,7 @@ I wanted to create a project that could create awareness on rare, unique, endang
 ---
 
 # What Do You Do???
-## Checkout the site here 👉 [SaveearthAI](https://saveearth.xyz/) 👈
+## Checkout the site here 👉 [Saveearth With Celo](https://save-earth-celo.netlify.app/) 👈
 ---
 - First, signin with google.
 - Upload link shows only show after signin
