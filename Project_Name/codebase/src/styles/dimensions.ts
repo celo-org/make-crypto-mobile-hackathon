@@ -32,6 +32,7 @@ const dimensions = {
   width20: '20%',
   width38: '38%',
   width43: '43%',
+  width50: '50%',
   width45: '45%',
   width65: '65%',
   width80: '80%',
