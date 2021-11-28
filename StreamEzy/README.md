@@ -41,6 +41,12 @@ Accomplishments that we're proud of : Succesfully deployed three smart contracts
 Github Repo : https://github.com/tiwariadarsh/StreamEzy <br/>
 Live : https://streamzy-development.web.app/
 
+#### Live Video
+
+
+https://user-images.githubusercontent.com/55028717/143781051-23cb8595-30b4-4361-a63e-469056456918.mp4
+
+
 #### Presentation
 ![Home](https://user-images.githubusercontent.com/55028717/143762923-f2b324cd-ce20-449c-9f55-445fe3b4fb78.JPG)
 ![Register](https://user-images.githubusercontent.com/55028717/143762925-256ccc91-84c9-4776-9eca-6cac8515d9a9.JPG)
