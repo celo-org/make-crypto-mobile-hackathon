@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Wakala",
+    "slug": "wakala-dev",
+    "owner": "wakala",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wakala.wakaladev"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.wakala.wakaladev"
+    },
+    "web": {
+      "favicon": "./src/assets/favicon.png"
+    },
+    "description": ""
+  }
+}
