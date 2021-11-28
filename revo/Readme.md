@@ -15,6 +15,11 @@ San Francisco, CA
 - Joseph Bergeron, developer
 
 #### URLs
+
+Note that **not all** the Revo code is present in this repository! The entire project is
+spread out within the `revo-market` GitHub organization; please see the links below for
+all the code relevant to this submission.
+
 * [Revo GitHub organization](https://github.com/revo-market)
 * [Prototype frontend (Alfajores only)](https://disco-circuit-333421.ue.r.appspot.com/)
 * [Revo contracts](./codebase/contracts/)
