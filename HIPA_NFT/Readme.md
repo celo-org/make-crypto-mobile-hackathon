@@ -57,7 +57,9 @@ App final images
 <img width="600" alt="HIPA-create-nft" src="https://user-images.githubusercontent.com/21963291/143787190-1b931b2e-1955-4cc2-879c-606dea074788.png">
 
 
-<img width="600" alt="HIPA-create-nft" src="https://user-images.githubusercontent.com/21963291/143787209-3010dab6-32cd-452b-ad67-d547369a782d.png">
+<img width="600" alt="HIPA-Profile" src="https://user-images.githubusercontent.com/21963291/143787209-3010dab6-32cd-452b-ad67-d547369a782d.png">
+
+<img width="600" alt="HIPA-Favorites" src="https://user-images.githubusercontent.com/21963291/143787319-44ae2636-41f3-47dc-9b79-8564716c2182.png">
 
 ## Next Steps
 
