@@ -5,32 +5,37 @@ import { AlignTypes } from '@nft/utils/enum';
 
 const windowHeight = Dimensions.get('window').height;
 
-const isUnder670 = windowHeight < 670 ? true : false
+const isUnder670 = windowHeight < 670 ? true : false;
 
 export const styles = StyleSheet.create({
   overlay: {
-    paddingBottom: isUnder670 ? dimensions.padding72 : dimensions.padding65, 
-    backgroundColor: colors.light.neutralColor14
+    paddingBottom: isUnder670 ? dimensions.padding72 : dimensions.padding65,
+    backgroundColor: colors.light.neutralColor14,
   },
   container: {
-    paddingTop: Platform.OS === 'android' ? dimensions.height30 : 0,
-    marginBottom: Platform.OS === 'android' ? '15%' : '18%'
+    flex: 1,
+    paddingTop: dimensions.spacingStackXxl16,
+    paddingHorizontal: dimensions.spacingStackXxl16,
+    backgroundColor: colors.light.neutralColor14,
+    marginBottom: Platform.OS === 'android' ? dimensions.spacingStackXxl16 : 0,
   },
-  divider: { paddingRight: dimensions.spacingStackXs8 },
+  divider: {
+    paddingRight: dimensions.spacingStackXs8,
+  },
+  header: {
+    flexDirection: AlignTypes.ROW,
+    justifyContent: AlignTypes.SPACE_BETWEEN,
+    alignItems: AlignTypes.CENTER,
+    paddingTop: Platform.OS === 'ios' ? dimensions.spacingStackXxl16 : 0,
+  },
   content: {
     marginBottom: dimensions.spacingStackXBig20,
     backgroundColor: colors.light.neutralColor14,
   },
-  header: {
-    flexDirection: AlignTypes.ROW,
-    paddingHorizontal: dimensions.spacingInlineSm16,
-    justifyContent: AlignTypes.SPACE_BETWEEN,
-    paddingTop: dimensions.spacingStackLg10
-  },
   logo: {
     height: dimensions.height40,
     borderRadius: dimensions.spacingStackXxs7,
-    flexDirection:AlignTypes.ROW,
+    flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.CENTER,
     alignItems: AlignTypes.CENTER,
   },
@@ -41,6 +46,8 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   buttons: {
+    width: dimensions.width90,
+    justifyContent: AlignTypes.SPACE_BETWEEN,
     flexDirection: AlignTypes.ROW,
   },
   scrollview: {
@@ -73,7 +80,7 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     right: -14,
     justifyContent: AlignTypes.CENTER,
-    alignItems: AlignTypes.CENTER
+    alignItems: AlignTypes.CENTER,
   },
   camera: {
     justifyContent: AlignTypes.CENTER,
@@ -81,7 +88,7 @@ export const styles = StyleSheet.create({
     width: dimensions.width26,
     height: dimensions.heigth26,
     borderRadius: border.radius.lg12,
-    backgroundColor: '#c6c6c6'
+    backgroundColor: '#c6c6c6',
   },
   username: {
     marginTop: dimensions.spacingStackLg10,
@@ -98,8 +105,8 @@ export const styles = StyleSheet.create({
     justifyContent: AlignTypes.CENTER,
     width: 230,
   },
-  hashImage:{
-    marginLeft: dimensions.spacingStackSmall5
+  hashImage: {
+    marginLeft: dimensions.spacingStackSmall5,
   },
   userbio: {
     marginTop: dimensions.spacingStackXxl16,
@@ -111,7 +118,7 @@ export const styles = StyleSheet.create({
     color: colors.light.neutralColor7,
     fontSize: fontSizes.xs12,
     fontFamily: fontsFamily.montserrat.medium500,
-    textAlign: AlignTypes.CENTER
+    textAlign: AlignTypes.CENTER,
   },
   editDescription: {
     marginLeft: dimensions.spacingStackLg10,
@@ -139,5 +146,25 @@ export const styles = StyleSheet.create({
     width: dimensions.widthFull,
     flexWrap: 'wrap',
     flexDirection: AlignTypes.ROW,
-  }
-}) 
+  },
+  title: {
+    marginTop: dimensions.spacingStackGiant25,
+  },
+  emptyProfileContainer: {
+    marginTop: dimensions.spacingStackXHuge40,
+  },
+  emptyImage: {
+    justifyContent: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER,
+    marginBottom: dimensions.spacingStackXHuge40,
+  },
+  emptyProfileText1: {
+    marginTop: dimensions.spacingStackXBig20,
+  },
+  emptyProfileText2: {
+    marginVertical: dimensions.spacingInlineXs14,
+  },
+  emptyProfileLineButton: {
+    marginTop: dimensions.spacingInlineLg27,
+  },
+});
