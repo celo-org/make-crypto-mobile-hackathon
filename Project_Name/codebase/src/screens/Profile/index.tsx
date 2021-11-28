@@ -14,6 +14,9 @@ import { styles } from './styles';
 
 import { BorderlessButton, ScrollView } from 'react-native-gesture-handler';
 
+import HipaLogoSVG from '../../../assets/hipa-logo.svg';
+import HIPASVG from '../../../assets/HIPA.svg';
+
 import { LineButton, ProfileButton, SquareButton, Text } from '@nft/components';
 
 import { colors, fontsFamily } from '@nft/styles';
@@ -181,7 +184,11 @@ const Profile = (): JSX.Element => {
         <SafeAreaView style={styles.container}>
           <View style={styles.content}>
             <View style={styles.header}>
-              <View style={styles.logo}></View>
+              <View style={styles.logo}>
+                <HipaLogoSVG />
+                <View style={styles.divider} />
+                <HIPASVG />
+              </View>
               <View style={styles.buttons}>
                 <SquareButton iconChildren={MenuSvg} />
               </View>

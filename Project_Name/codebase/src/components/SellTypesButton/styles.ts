@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     marginRight: dimensions.spacingStackXs8,
     paddingHorizontal: dimensions.spacingStackSm17,
     borderRadius: border.radius.lg10,
+    width: dimensions.width50
   },
   buttonContainer: {
     borderWidth: border.width.nano,

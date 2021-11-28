@@ -1,14 +1,13 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { ActivityIndicator, Alert, SafeAreaView, View } from 'react-native';
 
-import { View, ActivityIndicator, Alert } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { FlatList } from 'react-native-gesture-handler';
-import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import HipaLogoSVG from '../../../assets/hipa-logo.svg';
+import HIPASVG from '../../../assets/HIPA.svg';
+
+import { LineButton, Nft, SquareButton, Text } from '@nft/components';
+import { colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
 
 import { styles } from './styles';
-
-import { FilterList, LineButton, Nft, SquareButton, Text } from '@nft/components';
-import { colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
 import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 
 import MenuSvg from '../../../assets/menu.svg';
@@ -16,6 +15,8 @@ import Magnifier from '../../../assets/magnifier.svg';
 import EmptyFavorites from '../../../assets/empty-favorites.svg';
 
 import { api } from '@nft/services/api';
+import { useFocusEffect, useNavigation } from '@react-navigation/core';
+import { FlatList } from 'react-native-gesture-handler';
 
 interface INFTProps {
   id: number;
@@ -97,7 +98,11 @@ const Home = (): JSX.Element => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <View style={styles.logo} />
+        <View style={styles.logo}>
+          <HipaLogoSVG />
+          <View style={styles.divider} />
+          <HIPASVG />
+        </View>
         <View style={styles.buttons}>
           <SquareButton iconChildren={Magnifier} />
           <SquareButton iconChildren={MenuSvg} />
@@ -106,10 +111,10 @@ const Home = (): JSX.Element => {
 
       <View style={styles.title}>
         <Text
-          textDescription={'Favorites'}
-          fontFamily={fontsFamily.montserrat.regular400}
-          fontsSize={fontsSize.xl24}
           color={colors.light.neutralColor5}
+          fontFamily={fontsFamily.montserrat.semiBold600}
+          fontsSize={fontsSize.xl20}
+          textDescription={'Favorites'}
         />
       </View>
       <View style={styles.content}>

@@ -11,6 +11,9 @@ import { FilterList, Nft, SquareButton, Text } from '@nft/components';
 import { colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
 import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 
+import HipaLogoSVG from '../../../assets/hipa-logo.svg';
+import HIPASVG from '../../../assets/HIPA.svg';
+
 import MenuSvg from '../../../assets/menu.svg';
 import Magnifier from '../../../assets/magnifier.svg';
 
@@ -126,7 +129,11 @@ const Home = (): JSX.Element => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <View style={styles.logo} />
+        <View style={styles.logo}>
+          <HipaLogoSVG />
+          <View style={styles.divider} />
+          <HIPASVG />
+        </View>
         <View style={styles.buttons}>
           <SquareButton iconChildren={Magnifier} />
           <SquareButton iconChildren={MenuSvg} />

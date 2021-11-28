@@ -14,25 +14,19 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.light.neutralColor14,
     marginBottom: Platform.OS === 'android' ? dimensions.spacingStackXxl16 : 0
   },
+  divider: { 
+    paddingRight: dimensions.spacingStackXs8 
+  },
   header: {
     flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.SPACE_BETWEEN,
   },
   logo: {
-    width: dimensions.height80,
     height: dimensions.height40,
     borderRadius: dimensions.spacingStackXxs7,
-    backgroundColor: colors.light.neutralColor12,
-
-    shadowColor: colors.light.neutralColor0,
-    shadowOffset: {
-      width: dimensions.spacingStackXxxs6,
-      height: dimensions.spacingStackQuarck4,
-    },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-
-    elevation: dimensions.spacingInlineXxxs9,
+    flexDirection: AlignTypes.ROW,
+    justifyContent: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER,
   },
   buttons: {
     width: dimensions.width90,
