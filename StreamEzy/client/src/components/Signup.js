@@ -65,7 +65,7 @@ const abi = [
 		}
 	]
 
-const contractAddress = "0xb9f535A23eB17EbA5Fa05d138f25BC286cD758F4";
+const contractAddress = "0xfA5e1C827743fBf14997273caAB9eF73eB7566bF";
 var contract;
 
 class SignUp extends Component {
