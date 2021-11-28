@@ -1,6 +1,11 @@
 {
   "expo": {
     "name": "hipa",
+    "icon": "./assets/adaptative-hipa-icon.png",
+    "splash": {
+      "image": "./assets/hipa-splash-screen.png",
+      "backgroundColor": "#FFFFFF"
+    },
     "slug": "hipa",
     "scheme": "hipa",
     "version": "1.0.0",
@@ -11,5 +16,6 @@
       "expo-image-picker"
     ]
   },
-  "name": "hipa"
+  "name": "hipa",
+  "displayName": "HIPA"
 }
