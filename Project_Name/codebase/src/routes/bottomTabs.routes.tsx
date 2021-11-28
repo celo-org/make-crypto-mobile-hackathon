@@ -23,6 +23,7 @@ import WalletSvg from '../../assets/wallet.svg';
 import WalletFocusedSvg from '../../assets/wallet-focused.svg';
 import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 import StackTabs from './stackTabs.routes';
+import Walkthrough from '@nft/screens/Walkthrough';
 
 const bottomTabsRoutes = (): JSX.Element => {
   return (
@@ -57,6 +58,20 @@ const bottomTabsRoutes = (): JSX.Element => {
               <Text style={focused ? styles.menuLabelFocused : styles.menuLabel}>Home</Text>
             </View>
           ),
+        }}
+      />
+      <Screen
+        component={Walkthrough}
+        name={'Walkthrough'}
+        options={{
+          headerShown: false,
+          tabBarShowLabel: false,
+          tabBarStyle: {
+            display: 'none',
+          },
+          tabBarItemStyle: {
+            display: 'none',
+          },
         }}
       />
       <Screen

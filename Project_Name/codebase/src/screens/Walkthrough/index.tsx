@@ -1,17 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { View, FlatList, Animated } from 'react-native';
 import OnboardingItem from '@nft/components/OnboardingItem';
 import { slides } from '@nft/utils/slides';
 
 import Paginator from '@nft/components/Paginator';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { styles } from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 const Walkthrough = (): JSX.Element => {
   const scrollX = useRef(new Animated.Value(0)).current;
   const [currentIndex, setCurrentIndex] = useState(0);
   const slidesRef = useRef(null);
-
+  const navigate = useNavigation();
   const viewableItemsChanged = useRef(({ viewableItems }: any) => {
     setCurrentIndex(viewableItems[0].index);
   }).current;
@@ -22,10 +24,11 @@ const Walkthrough = (): JSX.Element => {
       console.log(currentIndex);
     }
   };
+  const handleStart = async () => {
+    await AsyncStorage.setItem('@hipa:isFirstTime', 'no');
 
-  useEffect(() => {
-    console.log(currentIndex);
-  }, [currentIndex]);
+    navigate.navigate('Home');
+  };
 
   return (
     <View style={styles.container}>
@@ -57,7 +60,12 @@ const Walkthrough = (): JSX.Element => {
         />
       </View>
 
-      <Paginator data={slides} scrollX={scrollX} onPress={scrollTo} label={'Next'} />
+      <Paginator
+        data={slides}
+        scrollX={scrollX}
+        onPress={currentIndex !== 2 ? scrollTo : handleStart}
+        label={currentIndex !== 2 ? 'Next' : 'Start'}
+      />
     </View>
   );
 };
