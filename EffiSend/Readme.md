@@ -10,7 +10,7 @@ Effisend is a CELO based mobile DApp that improves Cash out processes and integr
 
 DeFi Track: Build decentralized finance applications, tools, and infrastructure.
 
-And/Or
+And/Or;
 
 Cash In Cash Out Track
 
@@ -36,6 +36,48 @@ Provide a clear statement of the challenges/issues/problems/gaps your project en
 
 CELO based mobile DApp that improves Cash out processes and integrates it with Rapyd (biggest payment processor in the world) to improve financial inclusion in Mexico.
 
+Effisend is a CELO based mobile DApp that improves Cash out processes and integrates it with Rapyd (biggest payment processor in the world) to improve financial inclusion in Mexico.
+
+System's Architecture:
+
+<img src="https://i.ibb.co/xCr1qDm/Untitled-Diagram-drawio.png">
+
+App Screens:
+
+Thanks to the Rapyd APIs we can manage users, such as registration, login and KYC of our app. (Rapyd is the world's largest payment processor system: https://www.rapyd.net/)
+
+<img src="https://i.ibb.co/BBWQ33m/Screenshot-1638060296.png">
+
+- In turn, through Rapyd and CELO we can have total control of the movements and transactions of our account in both Crypto and Fiat.
+
+- All CELO transactions are controlled through an express server on AWS with the Celo CLI interface.
+
+- We carry out Celo and Fiat transfers by coordinating the services of Celo and Rapyd. Transferring the equivalent of CELO or US Dollar from EffiSend Master accounts.
+
+<img src="https://i.ibb.co/kBZwZ0d/Screenshot-1638060296-1.png">
+
+- At the same time, we can obtain a virtual card from the Rapyd API to be able to spend the money from our Fiat account directly.
+
+- Above all, we can make a SPEI transfer from our Fiat account to a bank account or Saldazo® or SPIN debit cards.
+
+- All transfers made in the demos and during development can be consulted in the explorer.
+
+https://alfajores-blockscout.celo-testnet.org/address/0xE7c1fc2B18A0Ee4F087694bca90436Eba6f16Fca/token-transfers
+
+<img src="https://i.ibb.co/KqGVq5v/Screenshot-1638060296-2.png">
+
+- And in turn we show a screenshot of our backend in Rapyd.
+
+<img src="https://i.ibb.co/cFX3NYb/Screenshot-from-2021-11-27-19-12-24.png">
+
+Uncut, unedited demo:
+
+Video: Click on the image
+[![Demo](https://i.ibb.co/g4W3ypx/image.png)](https://youtu.be/Kue85N-CO2Q)
+
+Sorry github does not allow embed videos.
+
+
 ## URLs
 
 Because of the size it is in an AWS bucket.
@@ -43,7 +85,7 @@ Because of the size it is in an AWS bucket.
 
 Github: https://github.com/EddOliver/EffiSend
 
-Devpost(with video and more documentation): https://devpost.com/software/effisend
+Devpost(with main video and more documentation): https://devpost.com/software/effisend
 
 ## Presentation
 
