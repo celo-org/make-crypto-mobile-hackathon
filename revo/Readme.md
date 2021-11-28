@@ -50,6 +50,8 @@ San Francisco, CA
 </figure>
 
 <br/>
+
+
 ## Project Description
 ### Inspiration
 
