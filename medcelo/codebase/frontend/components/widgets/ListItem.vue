@@ -25,6 +25,7 @@
           :fundraiser="item.fundraiser"
           :goal="item.goal"
           :raised="item.raised"
+          :images="item.images"
           :end_time="item.end_time"
         />
       </div>

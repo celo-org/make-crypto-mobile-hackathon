@@ -31,7 +31,7 @@
       </div>
       <div class="w-full md:w-1/2">
         <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-            <img src="https://cdn.devdojo.com/images/november2020/hero-image.jpeg">
+            <img src="https://images.pexels.com/photos/3993239/pexels-photo-3993239.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1000">
           </div>
       </div>
     </div>

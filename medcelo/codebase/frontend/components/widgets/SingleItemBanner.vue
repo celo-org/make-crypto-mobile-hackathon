@@ -12,7 +12,7 @@
         max-w-7xl">
       <div class="flex flex-wrap items-center -mx-3">
         <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
-          <div class="w-full lg:max-w-md">
+          <div class="max-w-96">
             <h2
               class="
                 mb-4
@@ -21,6 +21,7 @@
                 leading-tight
                 tracking-tight
                 sm:text-4xl
+                title
                 font-heading
               "
             >
@@ -64,7 +65,7 @@
               </svg>
             </button>
             <a
-              href="#_"
+              href="#about"
               class="
                 flex
                 items-center
@@ -86,7 +87,7 @@
         <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
           <img
             class="mx-auto sm:max-w-sm lg:max-w-full"
-            src="https://cdn.devdojo.com/images/november2020/feature-graphic.png"
+            :src="image"
             alt="feature image"
           />
         </div>
@@ -118,6 +119,10 @@ export default {
     goal: {
       type: Number,
       required: true,
+    },
+     image: {
+      type: String,
+      required: true,
     }
   },
   methods: {
@@ -128,5 +133,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.title {
+  word-break: break-all;
+  word-wrap: break-word;
+}
 </style>

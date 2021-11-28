@@ -7,7 +7,7 @@ import erc20Abi from '../contracts/erc20.abi.json'
 import contractAbi from '../contracts/medcelo.abi.json'
 
 const cUSDContractAddress = '0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1'
-const contractAddress = '0x3D7135d3C55E76743341fc2C70F1ad794e2b1122'
+const contractAddress = '0x6CBD7Fa1507124BF0E8b1812b5Fbc68554649db0'
 
 const ERC20_DECIMALS = 18
 
@@ -67,11 +67,28 @@ export default {
         }
       },
 
+
+      approve:  async function (_price) {
+        const cUSDContract = new this.kit.web3.eth.Contract(erc20Abi, cUSDContractAddress);
+      
+        const result = await cUSDContract.methods
+          .approve(contractAddress, _price)
+          .send({ from: this.defaultAccount });
+        return result;
+      },
+
       supportCampaign: async function (index, amount) {
-        const totalCampaign = await this.contract.methods
-          .supportCampaign(index, amount)
-          .call()
-        return totalCampaign
+
+        const _amount = BigNumber(amount).shiftedBy(18).toString()
+
+        const params = [index, amount]
+
+        await this.approve(_amount)
+
+        const supportCampaign = await this.contract.methods
+          .supportCampaign(...params)
+          .send({ from: this.defaultAccount });
+        return supportCampaign
       },
   
       getTotalCampaign: async function () {
@@ -107,8 +124,8 @@ export default {
             index: index,
             fundraiser: `${fundraiser.substring(0,16)}...`,
             title: title,
-            images: images,
-            tags: tags,
+            images: Object.values(images),
+            tags: Object.values(tags),
             excerpt: `${description.substring(0,50)}`,
             description: description,
             supporters: supporters,
@@ -120,15 +137,11 @@ export default {
         return item
       },
   
-      startCampaign: async function () {
+      startCampaign: async function (title,images, tags, description, goal, end_time) {
         const result = this.contract.methods
           .startCampaign(
-            'kshgsyugshvshgshgs',
-            ['yhejhee', 'yugwywtg', 'kjhsjghsg', 'helloj', 'jahjhagh'],
-            ['yhejhee', 'yugwywhsg'],
-            'lkjshsjhjsj',
-            1,
-            100
+            title,images, tags, description, goal
+            .toString(), 100001991
           )
           .send({ from: this.kit.defaultAccount })
       },

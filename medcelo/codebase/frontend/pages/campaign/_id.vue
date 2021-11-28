@@ -7,12 +7,13 @@
       :excerpt="item.excerpt"
       :description="item.description"
       :goal="item.goal"
+      :image="thumbnail"
       :raised="item.raised"
       :supporters="item.supporters"
       :end_time="item.end_time"
       @supportCampaign="supportCampaign($route.params.id, 10)"
     />
-    <section class="w-full bg-white pt-7 pb-7 md:pt-20 md:pb-24">
+    <section id="about" class="w-full bg-white pt-7 pb-7 md:pt-20 md:pb-24">
       <div
         class="
           box-border
@@ -55,33 +56,9 @@
                 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3
               "
             >
-              <div class="w-full col-span-2 row-span-2 rounded">
+              <div v-for="(image, index) in item.images" :key="index" :class="{ 'col-span-2 row-span-2' : index==0 }" class="w-full rounded">
                 <img
-                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                  alt="image"
-                />
-              </div>
-              <div class="w-full rounded">
-                <img
-                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                  alt="image"
-                />
-              </div>
-              <div class="w-full rounded">
-                <img
-                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                  alt="image"
-                />
-              </div>
-              <div class="w-full rounded">
-                <img
-                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                  alt="image"
-                />
-              </div>
-              <div class="w-full rounded">
-                <img
-                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                  :src="image"
                   alt="image"
                 />
               </div>
@@ -97,6 +74,7 @@
             w-full
             text-black
             border-solid
+            content
             md:w-1/2 md:pl-10 md:order-none
           "
         >
@@ -137,6 +115,7 @@ export default {
   data() {
     return {
       item: {},
+      thumbnail: null,
     }
   },
   async mounted() {
@@ -146,9 +125,21 @@ export default {
       await this.getWalletBalance()
 
       this.item = await this.fetchCampaignFull(this.$route.params.id)
+
+      this.thumbnail = this.item.images[0]
+
+      console.log(this.item)
+
     } catch (error) {
       console.log(error)
     }
   },
 }
 </script>
+
+<style scoped>
+.content {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+</style>

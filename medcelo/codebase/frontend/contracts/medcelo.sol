@@ -72,6 +72,9 @@ contract FundRaising {
         string[2] memory,
         string memory
     ) {
+
+        require(campaigns[_index].active || msg.sender == owner, "campaign is inactive");
+
         return (
             campaigns[_index].fundraiser,
             campaigns[_index].title, 
@@ -88,6 +91,9 @@ contract FundRaising {
         uint256,
         bool
     ) {
+
+        require(campaigns[_index].active || msg.sender == owner, "campaign is inactive");
+
         return (
             campaigns[_index].supporters,
             campaigns[_index].goal,
@@ -127,7 +133,7 @@ contract FundRaising {
 
     function activateCampaign(uint _index) public {
 
-        require(msg.sender == payable(msg.sender), 'only fundraiser or owner can modify campaign');
+        require(msg.sender == owner, 'only owner can modify campaign');
 
         campaigns[_index].active = true; 
 

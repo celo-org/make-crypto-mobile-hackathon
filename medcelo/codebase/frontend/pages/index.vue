@@ -2,8 +2,9 @@
   <main>
     <Header @connectToWallet="connectToWallet()" />
     <Banner />
-    <Hero />
+    <Hero id="about" />
     <ItemHeader
+      id="campaigns"
       title="Campaigns"
       tagline="We are fully decentralized and the funds donated goes directly to the fundraisers."
     />

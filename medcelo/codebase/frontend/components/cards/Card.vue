@@ -4,12 +4,13 @@
       flex flex-col
       items-start
       col-span-12
+      max-width-56
       space-y-3
       sm:col-span-6
       xl:col-span-4
     "
   >
-    <nuxt-link :to="`/campaigns/${index}/`" class="block">
+    <nuxt-link :to="`/campaign/${index}/`" class="block">
       <img
         class="
           object-cover
@@ -20,12 +21,12 @@
           shadow-sm
           max-h-56
         "
-        src="https://cdn.devdojo.com/images/may2021/fruit.jpg"
+        :src="images[0]"
       />
     </nuxt-link>
     <div class="flex"><Tag v-for="tag in tags" :key="tag" :value="tag" /></div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
-      <a href="#_">{{ title }}</a>
+      <a class="title" :href="`/campaign/${index}`">{{ title }}</a>
     </h2>
     <p class="text-sm text-gray-500">
       {{ excerpt }}
@@ -52,6 +53,10 @@ export default {
     },
     tags: {
       type: Array,
+    },
+    images: {
+      type: Array,
+      required: true,
     },
     title: {
       type: String,
@@ -80,3 +85,9 @@ export default {
   },
 }
 </script>
+<style scoped>
+.title {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+</style>
