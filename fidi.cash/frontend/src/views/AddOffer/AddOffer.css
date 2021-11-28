@@ -1,0 +1,36 @@
+.offer-input {
+  padding: 16px;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.offer-summary {
+  margin: 42px 0 0;
+  padding: 16px;
+  background-color: var(--highlight-background);
+  background: -webkit-linear-gradient(to left, #f37335, #fdc830);
+  background: linear-gradient(to left, #f37335, #fdc830);
+  border-radius: 8px;
+}
+
+.offer-summary__header {
+  margin: 8px 0 20px;
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.offer-summary__item {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.offer-summary__info {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 8px;
+  opacity: 0.5;
+}

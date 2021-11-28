@@ -1,0 +1,19 @@
+.deal-details {
+  margin: 16px 0 24px;
+}
+
+.strong {
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.deal-current-status {
+  margin: 28px 0 0;
+  padding: 16px;
+  background-color: var(--highlight-background);
+  background: -webkit-linear-gradient(to left, #f37335, #fdc830);
+  background: linear-gradient(to left, #f37335, #fdc830);
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1.2;
+}

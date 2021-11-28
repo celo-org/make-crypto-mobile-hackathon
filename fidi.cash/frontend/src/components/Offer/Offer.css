@@ -1,0 +1,30 @@
+.offer {
+  list-style-type: none;
+  margin: 0;
+  padding: 24px 0px;
+  border-bottom: 1px solid #000;
+}
+
+.offer * {
+  color: #000;
+}
+
+.offer-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.offer-price {
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.offer-comment {
+  margin: 8px 0 0;
+}
+
+.offer-user {
+  opacity: 0.5;
+}

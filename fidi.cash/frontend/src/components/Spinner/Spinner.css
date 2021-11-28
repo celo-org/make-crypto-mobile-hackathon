@@ -1,0 +1,36 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+}
+
+.spinner {
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.path {
+  stroke: var(--complimentary-color);
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

@@ -1,0 +1,130 @@
+@import-normalize; /* bring in normalize.css styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@700&display=swap');
+
+:root {
+  /* --accent-color: #fefa3b; */
+  --accent-color: rgb(254, 250, 59);
+  --complimentary-color: #861277;
+  --error-color: #ff5151;
+  /* --highlight-background: beige; */
+  --highlight-background: #fdc830;
+  --app-background: rgb(246, 246, 228);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  margin-top: 0;
+  padding: 0;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  background-color: var(--app-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1 {
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  margin: 24px 0 8px;
+}
+
+h3 {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1;
+  margin: 0;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.33);
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  color: var(--complimentary-color);
+}
+
+label,
+.label {
+  display: block;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1;
+  margin: 0;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 4px 10px;
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 1;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #646464;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0 0 0 2px var(--complimentary-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+button {
+  cursor: pointer;
+}

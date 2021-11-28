@@ -1,0 +1,17 @@
+.offer-details {
+  margin: 16px 0 36px;
+}
+
+.user {
+  margin: 8px 0;
+}
+.avalable-amount {
+  padding: 24px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.strong {
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}

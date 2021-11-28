@@ -1,0 +1,43 @@
+.inline-error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin: 0;
+  border-radius: 8px;
+  background-color: var(--error-color);
+  color: #fff;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.2;
+  word-break: break-word;
+  width: 100%;
+}
+
+.inline-error__close-button {
+  position: relative;
+  width: 16px;
+  margin: 0;
+  padding: 0;
+  margin-left: 16px;
+  flex-shrink: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.inline-error__close-button::before {
+  position: absolute;
+  content: '';
+  left: -8px;
+  right: -8px;
+  top: -8px;
+  bottom: -8px;
+}
+
+.inline-error__close-icon {
+  fill: rgba(255, 255, 255, 0.75);
+}
