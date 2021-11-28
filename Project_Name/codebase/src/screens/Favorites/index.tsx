@@ -73,7 +73,6 @@ const Home = (): JSX.Element => {
       setIsLoading(true);
       const response = await api.get(`/nft/list/${categories}/${page}`);
       setPage((oldState) => oldState + 1);
-      console.log(response.data);
       const filteredData = response.data.filter((item: INFTProps) => item.isLiked === true);
       setNfts(filteredData);
     } catch (error) {
