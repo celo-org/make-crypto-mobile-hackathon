@@ -1,0 +1,27 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "jsx": "react-native",
+    "target": "esnext",
+    "lib": [
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "paths": {
+      "@nft/*": ["./src/*"],
+      "@nft/components/*": ["./src/components/*"],
+      "@nft/services/*": ["./src/services/*"],
+      "@nft/styles/*": ["./src/styles/*"],
+      "@nft/screens/*": ["./src/screens/*"],
+      "@nft/utils/*": ["./src/utils/*"],
+    }
+  },
+}
