@@ -2,13 +2,25 @@
   <main>
     <Header :connected="walletConnected" @connectToWallet="connectToWallet()" />
     <Banner />
-    <Hero id="about" />
+    <Hero
+      tag="Decentralized"
+      excerpt="We are building a fully decentralized medical fundraising platform built using Celo Blockchain technology"
+      title="Blockchain Technology that saves Lives."
+      image="https://images.pexels.com/photos/5858855/pexels-photo-5858855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      id="about"
+    />
     <ItemHeader
       id="campaigns"
       title="Campaigns"
       tagline="We are fully decentralized and the funds donated goes directly to the fundraisers."
     />
-    <Hero id="mission" />
+    <Hero
+      tag="Mission & Vision"
+      excerpt="Our mission is to reduce the number of death due to financial limitation and provide worldclass healthcare to everyone everywhere. Our vision is to be world's leading charity platform and reduce death due to inability to pay for treatment by 50% in the next 5 years."
+      title="World's Leading Charity Organization."
+      image="https://images.pexels.com/photos/4167542/pexels-photo-4167542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      id="mission"
+    />
     <ListItem :items="items" />
     <Footer />
   </main>
@@ -24,30 +36,25 @@ import ItemHeader from '~/components/widgets/ItemHeader.vue'
 import CeloMixin from '~/mixins/celo.js'
 
 export default {
-  mixins: [CeloMixin,],
+  mixins: [CeloMixin],
   components: { ListItem, Hero, Footer, Header, Banner, ItemHeader },
   data() {
     return {
-      items: []
+      items: [],
     }
   },
   async mounted() {
+    try {
+      await this.connectToWallet()
 
-      try {
-  
-        await this.connectToWallet()
-  
-        await this.getWalletBalance()
+      await this.getWalletBalance()
 
-        this.walletConnected = true
+      this.walletConnected = true
 
-        await this.getAllCampaign()
-  
-      } catch (error) {
-  
-        console.log(error)
-  
-      }
-    },
+      await this.getAllCampaign()
+    } catch (error) {
+      console.log(error)
+    }
+  },
 }
 </script>
