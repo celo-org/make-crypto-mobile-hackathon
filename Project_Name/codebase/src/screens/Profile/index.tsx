@@ -18,7 +18,7 @@ import { LineButton, ProfileButton, SquareButton, Text } from '@nft/components';
 
 import { colors, fontsFamily } from '@nft/styles';
 import fontSizes from '@nft/styles/fontSizes';
-import { AlignTypes } from '@nft/utils/enum';
+import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 import NftImage from '@nft/components/NftImage';
 
 import * as ImagePicker from 'expo-image-picker';
@@ -31,6 +31,7 @@ import PencilSvg from '../../../assets/pencil.svg';
 import Copy from '../../../assets/copy.svg';
 import EmptyCreationsSvg from '../../../assets/empty-creations.svg';
 import EmptyPurchasesSvg from '../../../assets/empty-purchases.svg';
+import { useNavigation } from '@react-navigation/native';
 
 type PurchaseProps = {
   id: number;
@@ -85,6 +86,8 @@ const Profile = (): JSX.Element => {
   const [isDescriptionEditing, setIsDescriptionEditing] = useState(false);
   const [newDescriptionValue, setNewDescriptionValue] = useState(description);
   const descriptionTextInputRef = useRef<TextInput>(null);
+
+  const navigate = useNavigation();
 
   const handleStartEditingDescription = () => {
     setIsDescriptionEditing(true);
@@ -301,6 +304,7 @@ const Profile = (): JSX.Element => {
                             textColor={colors.light.neutralColor4}
                             textFontSize={fontSizes.md16}
                             textAlign={AlignTypes.CENTER}
+                            onPress={() => navigate.navigate(RoutesNames.CREATE)}
                           />
                         </View>
                       </>
@@ -327,6 +331,7 @@ const Profile = (): JSX.Element => {
                             textColor={colors.light.neutralColor4}
                             textFontSize={fontSizes.md16}
                             textAlign={AlignTypes.CENTER}
+                            onPress={() => navigate.navigate(RoutesNames.HOME_NFT)}
                           />
                         </View>
                       </>

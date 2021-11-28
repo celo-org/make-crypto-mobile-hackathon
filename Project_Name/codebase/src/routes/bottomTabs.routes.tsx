@@ -21,7 +21,7 @@ import ProfileSvg from '../../assets/profile.svg';
 import ProfileFocusedSvg from '../../assets/profile-focused.svg';
 import WalletSvg from '../../assets/wallet.svg';
 import WalletFocusedSvg from '../../assets/wallet-focused.svg';
-import { AlignTypes } from '@nft/utils/enum';
+import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 import StackTabs from './stackTabs.routes';
 
 const bottomTabsRoutes = (): JSX.Element => {
@@ -76,7 +76,7 @@ const bottomTabsRoutes = (): JSX.Element => {
       />
       <Screen
         component={Create}
-        name={'Create'}
+        name={RoutesNames.CREATE}
         options={{
           headerShown: false,
           tabBarShowLabel: false,
