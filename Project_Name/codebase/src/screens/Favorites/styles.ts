@@ -14,46 +14,44 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.light.neutralColor14,
     marginBottom: Platform.OS === 'android' ? dimensions.spacingStackXxl16 : 0,
   },
-  divider: { 
-    paddingRight: 8 
+  divider: {
+    paddingRight: dimensions.spacingStackXs8,
   },
   header: {
     flexDirection: AlignTypes.ROW,
-    paddingTop: Platform.OS === 'android' ? dimensions.width40 : dimensions.spacingStackXxl16,
-    paddingHorizontal: dimensions.spacingStackXxl16,
     justifyContent: AlignTypes.SPACE_BETWEEN,
   },
   logo: {
     height: dimensions.height40,
-  borderRadius: dimensions.spacingStackXxs7,
-  flexDirection: AlignTypes.ROW,
-  justifyContent: AlignTypes.CENTER,
-  alignItems: AlignTypes.CENTER,
+    borderRadius: dimensions.spacingStackXxs7,
+    flexDirection: AlignTypes.ROW,
+    justifyContent: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER,
   },
   buttons: {
     width: dimensions.width90,
     justifyContent: AlignTypes.SPACE_BETWEEN,
     flexDirection: AlignTypes.ROW,
   },
-
   title: {
     marginTop: dimensions.spacingStackGiant25,
-    paddingHorizontal: dimensions.spacingStackXxl16
   },
   filter: {
     height: dimensions.height60,
   },
   content: {
     flex: 1,
+    paddingTop: dimensions.spacingStackXxl16,
     paddingBottom: isUnder670 ? dimensions.padding27 : dimensions.padding18,
+    paddingHorizontal: dimensions.spacingStackXxl16,
   },
   emptyFavorites: {
     marginTop: dimensions.spacingInlineXxl32,
   },
   emptyFavoritesImage: {
-    marginBottom: dimensions.spacingStackXGiant30,
+    marginBottom: dimensions.spacingStackXxHuge65,
     justifyContent: AlignTypes.CENTER,
-    alignItems: AlignTypes.CENTER
+    alignItems: AlignTypes.CENTER,
   },
   emptyFavoritesText: {
     paddingHorizontal: dimensions.spacingStackGiant25,

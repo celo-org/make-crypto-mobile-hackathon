@@ -8,7 +8,7 @@ import { colors, fontsFamily, fontsSize } from '@nft/styles';
 import Metamask from '../../../assets/metamask.svg';
 import Trust from '../../../assets/trust-wallet.svg';
 import Coinbase from '../../../assets/coinbase.svg';
-import Celo from '../../../assets/celo.svg';
+import Celo from '../../../assets/celo2.svg';
 
 import { AlignTypes } from '@nft/utils/enum';
 import { useWallet } from '@nft/context/wallet';
