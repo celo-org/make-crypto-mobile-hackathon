@@ -5,18 +5,21 @@ import { Platform, StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: dimensions.spacingStackXxl16,
-    paddingHorizontal: dimensions.spacingStackXxl16,
     backgroundColor: colors.light.neutralColor14,
-    marginBottom: Platform.OS === 'android' ? dimensions.spacingStackXxl16 : 0,
+    paddingTop: dimensions.width40,
+    marginBottom: Platform.OS === 'ios' ? 90 : dimensions.height80
   },
-  divider: {
-    paddingRight: dimensions.spacingStackXs8,
+  divider: { 
+    paddingRight: dimensions.spacingStackXs8 
+  },
+  content: {
+    paddingHorizontal: dimensions.spacingStackXxl16,
   },
   header: {
     flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.SPACE_BETWEEN,
     alignItems: AlignTypes.CENTER,
+    marginHorizontal: dimensions.spacingStackXxl16,
     paddingTop: Platform.OS === 'ios' ? dimensions.spacingStackXxl16 : 0,
   },
   logo: {
@@ -24,10 +27,10 @@ const styles = StyleSheet.create({
     borderRadius: dimensions.spacingStackXxs7,
     flexDirection: AlignTypes.ROW,
     justifyContent: AlignTypes.CENTER,
-    alignItems: AlignTypes.CENTER,
+    alignItems: AlignTypes.CENTER, 
   },
   buttons: {
-    width: dimensions.width90,
+    width: '25%',
     justifyContent: AlignTypes.SPACE_BETWEEN,
     flexDirection: AlignTypes.ROW,
   },
@@ -89,7 +92,7 @@ const styles = StyleSheet.create({
   },
   sellTypeList: {
     marginTop: dimensions.spacingStackXBig20,
-    marginRight: 5,
+    marginRight: 5
   },
   chooseFile: {
     backgroundColor: colors.light.neutralColor15,
