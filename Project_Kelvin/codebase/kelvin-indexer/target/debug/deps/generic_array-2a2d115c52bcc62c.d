@@ -1,0 +1,11 @@
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\generic_array-2a2d115c52bcc62c.rmeta: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\hex.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\impls.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\arr.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\functional.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\iter.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\sequence.rs
+
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\generic_array-2a2d115c52bcc62c.d: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\hex.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\impls.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\arr.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\functional.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\iter.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\sequence.rs
+
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\lib.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\hex.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\impls.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\arr.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\functional.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\iter.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.4\src\sequence.rs:

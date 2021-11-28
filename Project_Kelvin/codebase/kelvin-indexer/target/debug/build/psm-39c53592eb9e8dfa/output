@@ -1,0 +1,27 @@
+OPT_LEVEL = Some("0")
+TARGET = Some("x86_64-pc-windows-gnu")
+HOST = Some("x86_64-pc-windows-gnu")
+CC_x86_64-pc-windows-gnu = None
+CC_x86_64_pc_windows_gnu = None
+HOST_CC = None
+CC = None
+CFLAGS_x86_64-pc-windows-gnu = None
+CFLAGS_x86_64_pc_windows_gnu = None
+HOST_CFLAGS = None
+CFLAGS = None
+CRATE_CC_NO_DEFAULTS = None
+DEBUG = Some("true")
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+cargo:rustc-cfg=asm
+running: "gcc.exe" "-O0" "-ffunction-sections" "-fdata-sections" "-g" "-fno-omit-frame-pointer" "-m64" "-Wall" "-Wextra" "-xassembler-with-cpp" "-DCFG_TARGET_OS_windows" "-DCFG_TARGET_ARCH_x86_64" "-DCFG_TARGET_ENV_gnu" "-o" "C:\\Users\\dania\\Documents\\GitHub\\fayyr-indexer\\target\\debug\\build\\psm-39c53592eb9e8dfa\\out\\src/arch/x86_64_windows_gnu.o" "-c" "src/arch/x86_64_windows_gnu.s"
+exit code: 0
+AR_x86_64-pc-windows-gnu = None
+AR_x86_64_pc_windows_gnu = None
+HOST_AR = None
+AR = None
+running: "ar" "cq" "C:\\Users\\dania\\Documents\\GitHub\\fayyr-indexer\\target\\debug\\build\\psm-39c53592eb9e8dfa\\out\\libpsm_s.a" "C:\\Users\\dania\\Documents\\GitHub\\fayyr-indexer\\target\\debug\\build\\psm-39c53592eb9e8dfa\\out\\src/arch/x86_64_windows_gnu.o"
+exit code: 0
+running: "ar" "s" "C:\\Users\\dania\\Documents\\GitHub\\fayyr-indexer\\target\\debug\\build\\psm-39c53592eb9e8dfa\\out\\libpsm_s.a"
+exit code: 0
+cargo:rustc-link-lib=static=psm_s
+cargo:rustc-link-search=native=C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\build\psm-39c53592eb9e8dfa\out

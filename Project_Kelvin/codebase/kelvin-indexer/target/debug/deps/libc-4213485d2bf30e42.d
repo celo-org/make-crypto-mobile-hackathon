@@ -1,0 +1,12 @@
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\libc-4213485d2bf30e42.rmeta: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\macros.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\fixed_width_ints.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\gnu\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\gnu\align.rs
+
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\liblibc-4213485d2bf30e42.rlib: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\macros.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\fixed_width_ints.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\gnu\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\gnu\align.rs
+
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\libc-4213485d2bf30e42.d: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\macros.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\fixed_width_ints.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\gnu\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\gnu\align.rs
+
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\lib.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\macros.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\fixed_width_ints.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\mod.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\gnu\mod.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.86\src\windows\gnu\align.rs:

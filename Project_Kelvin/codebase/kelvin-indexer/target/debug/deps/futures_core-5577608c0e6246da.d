@@ -1,0 +1,11 @@
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\futures_core-5577608c0e6246da.rmeta: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\future.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\stream.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\poll.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\__internal\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\__internal\atomic_waker.rs
+
+C:\Users\dania\Documents\GitHub\fayyr-indexer\target\debug\deps\futures_core-5577608c0e6246da.d: C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\lib.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\future.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\stream.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\poll.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\__internal\mod.rs C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\__internal\atomic_waker.rs
+
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\lib.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\future.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\stream.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\mod.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\poll.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\__internal\mod.rs:
+C:\Users\dania\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-core-0.3.13\src\task\__internal\atomic_waker.rs:
