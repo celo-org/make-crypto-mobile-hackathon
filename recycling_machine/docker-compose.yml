@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  nginx:
+    depends_on:
+      - api
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "3050:80"
+
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: "./server"
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+
+  client:
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    build:
+      dockerfile: Dockerfile
+      context: ./client
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+
+  # adminer:
+  #     image: adminer:latest
+  #     restart: unless-stopped
+  #     ports:
+  #       - 8000:8080
+  #     depends_on:
+  #       - mysql_db
+  #     environment:
+  #       ADMINER_DEFAULT_SERVER: mysql_db

@@ -1,0 +1,18 @@
+body {
+    background-color: #212529;
+    color: white;
+  }
+
+  .addressReaderCard {
+    width: 18vw;
+    height: 18vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+    border-radius: 0px;
+  }
+
+
+
+  

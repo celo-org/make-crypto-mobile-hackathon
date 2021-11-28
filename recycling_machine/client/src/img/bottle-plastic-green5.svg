@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="27.309" height="87.299" viewBox="0 0 27.309 87.299" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>.a{fill:#62bc9b;}</style>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="49.265" y1="43.87" x2="49.265" y2="57.95" id="gradient-0">
+      <stop offset="0" style="stop-color: rgba(94, 184, 151, 1)"/>
+      <stop offset="1" style="stop-color: rgba(54, 122, 97, 1)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="49.264" y1="15.46" x2="49.264" y2="40.521" id="gradient-1">
+      <stop offset="0" style="stop-color: rgba(94, 184, 151, 1)"/>
+      <stop offset="1" style="stop-color: rgba(54, 122, 97, 1)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="49.663" y1="6" x2="49.663" y2="13.079" id="gradient-2">
+      <stop offset="0" style="stop-color: rgba(94, 184, 151, 1)"/>
+      <stop offset="1" style="stop-color: rgba(54, 122, 97, 1)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="49.265" y1="60.69" x2="49.265" y2="74.962" id="gradient-3">
+      <stop offset="0" style="stop-color: rgba(94, 184, 151, 1)"/>
+      <stop offset="1" style="stop-color: rgba(54, 122, 97, 1)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="49.264" y1="77.74" x2="49.264" y2="96.963" id="gradient-4">
+      <stop offset="0" style="stop-color: rgba(94, 184, 151, 1)"/>
+      <stop offset="1" style="stop-color: rgba(54, 122, 97, 1)"/>
+    </linearGradient>
+  </defs>
+  <path class="a" d="M59.446,77.74H39.083a3.473,3.473,0,0,0-3.473,3.473v12.25a3.5,3.5,0,0,0,3.5,3.5H59.418a3.5,3.5,0,0,0,3.5-3.5V81.213A3.473,3.473,0,0,0,59.446,77.74Z" transform="translate(-35.61 -9.666)" style="paint-order: fill; fill: url(#gradient-4); stroke: rgb(94, 184, 151);"/>
+  <path class="a" d="M38.751,60.7a3.141,3.141,0,0,0-3.141,3.131v7.781a3.35,3.35,0,0,0,3.35,3.35H59.57a3.35,3.35,0,0,0,3.35-3.35V63.831a3.141,3.141,0,0,0-3.141-3.141H38.751Z" transform="translate(-35.61 -8.795)" style="paint-order: fill; fill: url(#gradient-3); stroke: rgb(94, 184, 151);"/>
+  <path class="a" d="M43.713,13.079h11.9a.313.313,0,0,0,.313-.313V6.854A.854.854,0,0,0,55.071,6H44.254a.854.854,0,0,0-.854.854v5.912a.313.313,0,0,0,.313.313Z" transform="translate(-36.008 -6)" style="paint-order: fill; fill: url(#gradient-2); stroke: rgb(94, 184, 151);"/>
+  <path class="a" d="M38.827,40.521H59.788a3.359,3.359,0,0,0,3.131-3.35V29.447L54.55,15.46H43.979L35.61,29.447v7.724a3.35,3.35,0,0,0,3.217,3.35Z" transform="translate(-35.61 -6.483)" style="paint-order: fill; fill: url(#gradient-1); stroke: rgb(94, 184, 151);"/>
+  <path class="a" d="M59.779,43.87H38.751a3.15,3.15,0,0,0-3.141,3.141V54.6a3.359,3.359,0,0,0,3.35,3.35H59.57a3.359,3.359,0,0,0,3.35-3.35V47.011A3.15,3.15,0,0,0,59.779,43.87Z" transform="translate(-35.61 -7.935)" style="paint-order: fill; fill: url(#gradient-0); stroke: rgb(94, 184, 151);"/>
+</svg>
