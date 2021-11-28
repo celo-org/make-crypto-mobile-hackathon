@@ -6,7 +6,7 @@ Welcome, this is our project for Celo’s Mobile online Hackathon.
 
 Effisend is a CELO based mobile DApp that improves Cash out processes and integrates it with Rapyd (biggest payment processor in the world) to improve financial inclusion in Mexico.
 
-### Hackathon Track
+## Hackathon Track
 
 DeFi Track: Build decentralized finance applications, tools, and infrastructure.
 
@@ -14,11 +14,11 @@ And/Or
 
 Cash In Cash Out Track
 
-### Region location: 
+## Region location: 
 
 LATAM, Mexico to be precise. 
 
-### Team Members
+## Team Members
 
 #### 3 Engineers with experience developing IoT and hardware solutions. We have been working together now for 5 years since University.
 
@@ -29,14 +29,14 @@ LATAM, Mexico to be precise.
 [<img src="https://img.shields.io/badge/Alejandro-Sanchez%20Gutierrez-red">](https://www.linkedin.com/in/victor-alonso-altamirano-izquierdo-311437137/) Main Developer Backend and Frontend
 
 
-#### Project Description
+## Project Description
 Provide a clear statement of the challenges/issues/problems/gaps your project engages as well as a brief, high-level description of how your project engages the areas you've identified. What is the value of your approach? Who are the intended users?
 
-#### Summary
+## Summary
 
 CELO based mobile DApp that improves Cash out processes and integrates it with Rapyd (biggest payment processor in the world) to improve financial inclusion in Mexico.
 
-#### URLs
+## URLs
 
 Because of the size it is in an AWS bucket.
 ### APK: https://general-bucket-android.s3.amazonaws.com/app-debug.apk
@@ -45,7 +45,7 @@ Github: https://github.com/EddOliver/EffiSend
 
 Devpost(with video and more documentation): https://devpost.com/software/effisend
 
-#### Presentation
+## Presentation
 
 Full readme and Github (The full enchilada): https://github.com/EddOliver/EffiSend
 
