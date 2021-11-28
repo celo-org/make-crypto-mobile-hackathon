@@ -24,7 +24,23 @@ Therefore, as individuals, we must come together to build a fully transparent sy
 To ensure transparency and prevent scams, we've mandated that fundraisers provide medical reports or substantial evidence before being listed on our platform. The choice of technologies used in this project ensure that we can rapidly prototype and deploy our concept and improve usablity. Over the years, mobile technology has become a dominating force and more users access the internet through their mobile device. Therefore, with Celo - a mobile-first blockchain technology - we can do more.
 
 #### Summary
-Describe the basic functionality of your project. What are the features you were able to implement? What features would you like to implement?
+
+
+We are able to produce a minimal viable product. The current version of the software can do the following:
+
+1. Connect to Celo Blockchain network
+2. Query the Celo Blockchain network and retrieve medicalcampaigns
+3. Allow user to start their own medical campaigns
+4. Allow users to view individual medical campaign
+5. Allow users to donate to a medical campaign
+6. Allow contract owner (admin) to screen and approve medical campaigns before going live
+
+We are currently implementing a way to allow user upload files to IPFS directly from our website.
+
+We would have love to do the following:
+
+1. Implement a mailing system that informs campaign owners of their approval status
+2. Implement WalletConnect instead of CeloWalletExtension
 
 #### URLs
 List any URLs relevant to demonstrating your prototype
@@ -34,6 +50,10 @@ List any links to your presentation or any related visuals you want to share.
 
 #### Next Steps
 What do you need to do next to turn this prototype into a working solution?
+
+1. Refactor the codes
+2. Setup a nodejs proxy server to upload images to IPFS directly
+3. Implement WalletConnect for mobile phone
 
 #### License
 This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).

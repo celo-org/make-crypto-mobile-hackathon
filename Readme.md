@@ -1,135 +1,59 @@
-# ⚡ Make Crypto Mobile 📱 Hackathon ⚡
 
-Make Crypto Mobile Hackathon is a 4-week hackathon, focused on growing Mobile DeFi (#MoFi), NFT's and developer tooling on the Celo platform.
+# ⚡Celo Hackathon Project ⚡
 
-## Hackathon Tracks: 
+## MedCelo
+### Team Dragon
 
- - __DeFi Track:__ 
- 	- Build decentralized finance applications
- 	- Tools
- 	- Infrastructure
- - __NFT, Gaming and Creator Track:__ 
- 	- Build an application to mint, sell or manage non-fungible tokens
- - __Infrastructure and Web3 Track:__ 
- 	- Build or update existing decentralize web applications
- - __Green Track:__ 
- 	- Build or update an SDK to improve developer resources
- - __Interoperability Track:__ 
- 	- Build or update cross-chain applications
- 	- Cross-chain tooling
+##### Africa and Worldwide
 
-## Timeline
+##### Team Members
+- Oyeniyi Abiola Peace, Team Lead & Developer
+- Ojo Ayobami Peace, Product Designer
+- Boyejo Oluwafemi, Business Manager
 
- - Hackathon Oct 8th - Nov 5th, 2021
- - Hackathon Kick off - Oct 8th, 2021
- - Submissions Due - Nov 5th, 2021
- - Evaluations - November 6th-14th, 2021
- - Winners announced - November 15th, 2021
+#### Project Description
 
-## Process
-**Hackathon participats will need to:**
+MedCelo is a fully decentralized medical fundraising platform built using Celo Blockchain technology. MedCelo is focused on raising funds for medical infrastructures, patient's treatment, and medical outreach. Our mission is to reduce the number of death due to financial limitation and provide worldclass healthcare to everyone everywhere.
 
- 1. [Fork this repo](#hackathon-repo-process)
-    - Modify with your project details and merge
-    - When your project is ready for final submission, push your codebase & assets
-  2. Utilize [DevPost](https://mobiledefi.devpost.com/) to:
-	 - Manage and collaborate with your team
-	 - Submit your project for final evaluation
+We believe everyone deserves to live irrespective of their financial capability. We are particularly motivated by the amount of death due to inability to pay treatment fees. Despite being a highly developed country, in the USA, 16.9 percent of adults between 18 and 44 stated that in the past five years they lost a friend or family member due to inability to pay for treatment. JH Tanne (2008) in a publication on the National Institute of Health website claimed that about 26,000 Americans die due to lack of health insurance.
 
-## Hackathon Repo Process
+According to World Bank and World Health Organization (WHO), about 7.2 billion people do not have access to essential health servive. Country leaders are also failing to invest in core health priorities and systems and the WHO has made a call that countries should realize that health is an investment in the future. However, a lot of countries worldwide couldn't meet up to health demand of its citizen due to political issues and terrorism.
 
- 1. Fork this repo
-    - Press the Fork button
- 2. Create project branch
- 3. Make your changes within new branch!
-	 - Copy **Project_Name** folder & rename with your project name
-	 - Modify project details within your project folder **Readme.md**
-		 - Name
-		 - Description
-		 - Team members & roles
- 4. Add, commit, and push the changes
-	 - Add the files you've changed and commit them with a descriptive message.
- 5. Submit your pull request
-    -  Submit to the maintainers for approval. Head over to the original repositories Pull Requests tab, you should see an automatic suggestion from GitHub to create a pull request from your new branch.
-    -  Utilize your project name as the title for your initial pull Requests
-    -  Provide a brief project description within the pull request comment
+Therefore, as individuals, we must come together to build a fully transparent system that could address these issues. At Medcelo, we provide a robust, trustworthy and reliable platform to raise funds for medical problems. Also, unlike other platform, we are fully decentralized and the funds donated goes to the defined cause directly without a middleman (not even us) - this ensures that the fundraisers receive their money as soon as the Celo blockchain network confirms the transaction, usually within minutes.
 
-***Congrats, your officially a Mobile DeFi Hackathon participant!***
+To ensure transparency and prevent scams, we've mandated that fundraisers provide medical reports or substantial evidence before being listed on our platform. The choice of technologies used in this project ensure that we can rapidly prototype and deploy our concept and improve usablity. Over the years, mobile technology has become a dominating force and more users access the internet through their mobile device. Therefore, with Celo - a mobile-first blockchain technology - we can do more.
+
+#### Summary
 
 
-## Developer tools and resources
+We are able to produce a minimal viable product. The current version of the software can do the following:
 
-This section contains information about some of the key tools and resources that will help developers start building applications on Celo.
+1. Connect to Celo Blockchain network
+2. Query the Celo Blockchain network and retrieve medicalcampaigns
+3. Allow user to start their own medical campaigns
+4. Allow users to view individual medical campaign
+5. Allow users to donate to a medical campaign
+6. Allow contract owner (admin) to screen and approve medical campaigns before going live
 
-For a comprehensive list of resources and information, review [Celo Docs.](https://docs.celo.org/)
+We are currently implementing a way to allow user upload files to IPFS directly from our website.
 
-### QUICK START GUIDES
+We would have love to do the following:
 
-View the [Developer Code Examples page](https://docs.celo.org/developer-guide/start) to get started using the Celo SDKs with guided coding exercises.
+1. Implement a mailing system that informs campaign owners of their approval status
+2. Implement WalletConnect instead of CeloWalletExtension
 
-### TOOLS
+#### URLs
+List any URLs relevant to demonstrating your prototype
 
-#### SDKs
+#### Presentation
+List any links to your presentation or any related visuals you want to share.
 
--   [ContractKit](https://docs.celo.org/developer-guide/contractkit)
--   Javascript package of Celo blockchain utilities
--   Manage connections to the Celo blockchain, accounts, send transactions, interact with smart contracts, etc.
--   A set of wrappers around the core protocol smart contracts to easily connect with contracts related to governance, validators, on-chain exchange, etc.
--   Includes [web3.js](https://web3js.readthedocs.io/en/v1.2.4/)
--   [Celo Ethers.js Wrapper](https://github.com/celo-tools/celo-ethers-wrapper) (experimental)
--   A minimal wrapper to make [ethers.js](https://docs.ethers.io/v5/) compatible with the Celo network
--   [use-contractkit](https://github.com/celo-tools/use-contractkit)
--   A [Web3Modal](https://web3modal.com/)-like experience that injects ContractKit into your web-based application. Supports a variety of different wallets, including but not limited to Valora, Ledger, Metamask (Celo compatible fork) and any WalletConnect compatible wallets
--   [DappKit](https://docs.celo.org/developer-guide/dappkit)
--   Easily connect to the [Valora](http://valoraapp.com/) wallet with your React Native mobile application
--   Valora manages user account, private keys and transaction signing, so you can focus on building your dapp
--   Learn more and see the code with the [Dappkit truffle box](https://github.com/critesjosh/celo-dappkit)
--   [Python SDK](https://github.com/blaize-tech/celo-sdk-py)
--   [Java SDK](https://github.com/blaize-tech/celo-sdk-java)
+#### Next Steps
+What do you need to do next to turn this prototype into a working solution?
 
+1. Refactor the codes
+2. Setup a nodejs proxy server to upload images to IPFS directly
+3. Implement WalletConnect for mobile phone
 
-#### Infrastructure
-
--   [Valora](https://valoraapp.com/) provides a clean, intuitive UI where users can send transactions and interact with smart contracts
--   [Forno](https://stackedit.io/developer-guide/forno)
--   Node access service so you can connect your dapp to the Celo blockchain without having to run node infrastructure
--   [ODIS](https://stackedit.io/developer-resources/contractkit/odis.md)
--   Oblivious decentralized identity service
--   Lightweight identity layer that makes it easy to send cryptocurrency to a phone number
--   Blockscout block explorers
--   [Alfajores testnet](http://alfajores-blockscout.celo-testnet.org/) & [mainnet](http://explorer.celo.org/)
--   [Stats.celo.org](http://stats.celo.org/) to check network activity and health
-
-
-#### Networks
-
--   [Alfajores Testnet](https://docs.celo.org/getting-started/alfajores-testnet)
--   [Faucet](https://celo.org/developers/faucet) for free testnet CELO and cUSD
--   [Forno](https://docs.celo.org/developer-guide/forno) supports connections to alfajores
--   Requires Alfajores Celo wallet for mobile device testing (please request, support@clabs.co)
--   [Baklava testnet](https://docs.celo.org/getting-started/baklava-testnet) for validators and testing protocol changes
-
-
-#### Ethereum Tools
-
--   Similarities between Celo and Ethereum means you can use many of the most popular Ethereum developer tools.
--   Celo supports the EVM, so tools for writing smart contracts in Solidity (or any language that compiles to EVM bytecode) are compatible with Celo
--   ERC20, NFT (ERC721) and other smart contract interface standards are supported, see [Celo for Ethereum Developers](https://docs.celo.org/developer-guide/celo-for-eth-devs)
-- [Truffle](https://www.trufflesuite.com/)
-- [OpenZeppelin](https://openzeppelin.com/)
-- [Remix](https://remix.ethereum.org/)
-
-#### Ongoing projects
-
--   [Community projects](https://docs.celo.org/developer-guide/celo-dapp-gallery)
--   [Grant recipients](https://celo.org/experience/grants/directory)
-
-#### Web wallets
-  -  [celowallet.app](https://celowallet.app/)
-  -  [Celo Terminal](https://github.com/zviadm/celoterminal/)
-
-
-#### Community
-
--   Join our [Discord](https://chat.celo.org/)
--   [Discourse Forum](https://forum.celo.org/)
+#### License
+This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
