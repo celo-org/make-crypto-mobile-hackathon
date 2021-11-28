@@ -2,13 +2,16 @@
 
 ## Project Name : Nftzi
 ### Team name : Birden
-#### Hackathon Track : Celo's Make Crypto Mobile Hackathon
+#### Hackathon Track
+
+- NFT Track
+- DeFi Track
 
 ##### Portugal, Lisbon
 
 
 ##### Team Members
-- Vadim Filimonov, Backend Developer,
+- Vadim Filimonov, Smart contract and app development
 
 
 - Vladislava Bazhanova, Product Designer,
