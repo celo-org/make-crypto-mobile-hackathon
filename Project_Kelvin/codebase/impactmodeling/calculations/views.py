@@ -5,6 +5,7 @@ from scipy.stats import norm
 import numpy as np
 from impactmodeling.utils import db
 from django.views.decorators.csrf import csrf_exempt
+import json
 
 
 TOTAL_RANDOM_SAMPLES = 100000
@@ -15,12 +16,14 @@ def index(request):
 @csrf_exempt
 def model(request):
 
-    user = request.POST.get("user")
-    proposal_id = request.POST.get("proposal_id")
-    param1 = request.POST.get("param1")
-    operator = request.POST.get("operator")
-    param2 = request.POST.get("param2")
-    collection = request.POST.get("collection")
+    body_unicode = request.body.decode('utf-8')
+    body = json.loads(body_unicode)
+    user = body["user"]
+    proposal_id = body["proposal_id"]
+    param1 = body["param1"]
+    operator = body["operator"]
+    param2 = body["param2"]
+    collection = body["collection"]
 
     if isinstance(param1, str) and param1.__contains__(","):
         param1 = param1.split(",")
