@@ -10,7 +10,7 @@ San Francisco, CA
 #### URLs
 * [Prototype frontend (Alfajores only)](https://disco-circuit-333421.ue.r.appspot.com/)
 * [Revo contracts](./codebase/contracts/)
-* [Revo interface](https://github.com/revo-market/revo-market-interface)
+* [Revo interface](https://github.com/revo-market/revo-interface)
 * [Revo arbitrage bot](https://github.com/revo-market/revo-arbitrage-bot)
 * [Revo auto-compounding bot](./codebase/scripts/compound.ts)
 
