@@ -1,0 +1,13 @@
+{
+  "name": "recycling_machine_emulator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node emulator.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "rpio": "^2.4.2"
+  }
+}
