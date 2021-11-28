@@ -1,0 +1,232 @@
+name: turuta
+description: TuBoleto by TuRuta
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# Flutter version name
+# A.B.C represents the versionName such as 1.0.0.
+# X (the number after the +) represents the versionCode such as 1, 2, 3, etc.
+version: 3.2.0+320
+
+environment:
+  sdk: ">=2.12.0 <3.0.0" # dart versions constraints
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  wallet_connect: ^1.0.2
+  flutter_easyloading: ^3.0.3
+  in_app_review: ^2.0.3
+  android_play_install_referrer: ^0.1.1
+  android_device_info: ^1.0.0
+
+  #control system volume (not yet for IOS)
+  volume: ^1.0.1
+  #system_shortcuts: 0.2.3
+
+  package_info: ^2.0.2
+  loading: ^1.0.2
+
+  cupertino_icons: ^1.0.3
+  audioplayers: ^0.20.1
+  font_awesome_flutter: ^9.1.0
+  intl: ^0.17.0
+  scoped_model: ^1.1.0
+  shared_preferences: ^2.0.7
+  # qrscan: ^0.2.17
+
+  firebase_core: ^1.6.0
+  firebase_analytics: ^8.3.2
+  cloud_firestore: ^2.5.2
+  firebase_remote_config: ^0.11.0
+  firebase_crashlytics: ^2.2.1
+
+  #flutter_firebase_ui:
+  #  path: ./flutter_firebase_ui
+
+  #flutter_firebase_ui: ^0.0.13
+
+  firebase_storage: ^10.0.3
+
+  # remember to also change it in the flutter_firebase_ui/pubspec.yaml
+  firebase_auth: ^3.1.1
+
+  # REST client
+  retrofit: ^2.0.1
+  dio: ^4.0.0  #latest version
+  logger: ^1.1.0  #for logging purpose
+
+  # json serialization
+  json_annotation: ^4.1.0
+
+  # webview official
+  webview_flutter: ^2.0.13
+
+  # webview unofficial
+  flutter_webview_plugin: ^0.4.0
+
+  # location
+  geolocator: ^7.7.0 # couldn't get the 'disabled' state correctly (tested in android)
+  access_settings_menu: ^0.0.1
+  location: ^4.3.0
+
+  # shared preference with stream (on change listener)
+  streaming_shared_preferences: ^2.0.0
+
+  # image caching
+  cached_network_image: ^3.1.0
+
+  # URI launcher
+  url_launcher: ^6.0.10
+
+  # toast (like in android)
+  fluttertoast: ^8.0.8
+
+  # share (official library)
+  share: ^2.0.4
+
+  # open OS settings
+  # app_settings: ^1.0.6+2
+
+  flutter_spinkit: ^5.1.0
+
+  # csv parsing (for servers list)
+  csv: ^5.0.0
+
+  # json and utf8 conversion
+  convert: ^3.0.1
+
+  # push notifications
+  onesignal_flutter: ^3.2.3
+  #firebase_messaging: ^6.0.1
+
+  # caching requests (used in places autocomplete requests)
+  dio_http_cache: ^0.3.0 #latest version
+
+  # google maps duh!
+  google_maps_flutter: ^2.0.8
+
+  # to decode polyline string
+  flutter_polyline_points: ^1.0.0
+
+  # for distance calculation
+  #latlong: ^0.6.1
+
+  # phone verification (this has to be replaced on feb 10th 2020)
+  #flutter_account_kit: ^0.7.0
+
+  # for pagination and swipe views
+  flutter_swiper: ^1.1.6
+
+  grouped_buttons: ^1.0.4
+
+  # native reverse and forward geocoding:
+  geocoder: ^0.2.1
+
+  # to be able to round and print numbers in a familiar way
+  sprintf: ^6.0.0
+
+  # for fast definition of sets of values:
+  tuple: ^2.0.0
+
+  # for itinerary details sliding up view
+  sliding_up_panel: ^2.0.0+1
+
+  # transform helper
+  matrix4_transform: ^2.0.0
+
+  # helper to open appstore/playstore
+  launch_review: ^3.0.1
+
+  # for sticky headers in itinerary list view
+  sticky_headers: ^0.2.0
+
+  # to zoom bus image view
+  photo_view: ^0.12.0
+
+  # local db for recently searched places storage:
+#  moor: ^3.4.0 # commented to try to fix compilation issues relating to bintray no longer being available
+#  moor_ffi: ^0.8.0 # commented to try to fix compilation issues relating to bintray no longer being available
+  path_provider: ^2.0.3
+  path: ^1.8.0
+
+  # device info
+  device_info: ^2.0.2
+
+  # QR reader
+  #  barcode_scan: ^3.0.1
+  # barcode_scan:
+  #  path: ./flutter_barcode_reader # forked from 3.0.1
+
+  qr_code_scanner: ^0.5.2
+
+  # oktoast
+  oktoast: ^3.1.1
+
+  # for location permissions
+  #location_permissions: ^4.0.0
+  permission_handler: ^8.2.5
+
+  image_picker: ^0.8.4
+
+  # for SVGs, (i.e.: ticket background)
+  flutter_svg: ^0.22.0
+
+# this is for admob/auth compatibility
+#dependency_overrides:
+#  intl: ^0.17.0-nullsafety.2
+
+dev_dependencies:
+  flutter_driver:
+    sdk: flutter
+  test: any
+  flutter_test:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  pedantic: ^1.11.1
+
+  # REST client and parsing
+  retrofit_generator: any
+  build_runner: any
+
+  # json serialization
+  json_serializable: ^4.1.4
+
+  # local db
+#  moor_generator: ^3.4.0 # commented to try to fix compilation issues relating to bintray no longer being available
+
+
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icon/
+    - assets/csv/
+    - assets/sounds/
+    - assets/svg/
+    - assets/images/gold_ticket_big.png
+  fonts:
+    - family: NotoSans
+      fonts:
+        - asset: assets/fonts/NotoSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/NotoSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSans-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/NotoSans-Italic.ttf
+          style: italic
+          weight: 400
+
+flutter_icons:
+  ios: true
+  image_path: "assets/icon/launcher_icon.png"
