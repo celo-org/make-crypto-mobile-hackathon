@@ -64,7 +64,7 @@ const Home = (): JSX.Element => {
   async function fetchNft() {
     try {
       setIsLoading(true);
-      const response = await api.get(`user/getFavorites/${userId}`);
+      const response = await api.get(`user/getFavorites/${user.id}`);
       setNfts(response.data);
     } catch (error) {
       console.log(error);

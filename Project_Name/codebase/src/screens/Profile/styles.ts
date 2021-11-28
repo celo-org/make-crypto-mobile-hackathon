@@ -148,6 +148,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     marginTop: dimensions.spacingStackGiant25,
+    marginLeft: dimensions.spacingInlineSm16,
   },
   emptyProfileContainer: {
     marginTop: dimensions.spacingStackXHuge40,

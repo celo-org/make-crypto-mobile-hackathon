@@ -385,7 +385,7 @@ const Profile = (): JSX.Element => {
         <ConnectWallet />
       )}
       {!user.id && (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, { flex: 1 }]}>
           <View style={styles.header}>
             <View style={styles.logo}>
               <HipaLogoSVG />
@@ -393,7 +393,6 @@ const Profile = (): JSX.Element => {
               <HIPASVG />
             </View>
             <View style={styles.buttons}>
-              <SquareButton iconChildren={Magnifier} />
               <SquareButton iconChildren={MenuSvg} />
             </View>
           </View>
