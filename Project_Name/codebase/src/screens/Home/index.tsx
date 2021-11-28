@@ -4,6 +4,7 @@ import { View, ActivityIndicator, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FlatList } from 'react-native-gesture-handler';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { styles } from './styles';
 
@@ -44,6 +45,7 @@ const Home = (): JSX.Element => {
   const [nfts, setNfts] = useState<INFTProps[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState('1');
+  const [isFirstTime, setIsFirstTime] = useState('');
 
   const navigate = useNavigation();
 
@@ -136,6 +138,19 @@ const Home = (): JSX.Element => {
   );
 
   useEffect(() => {
+    async function loadFirstTime(): Promise<void> {
+      const storage = await AsyncStorage.getItem('@hipa:isFirstTime');
+      console.log(storage);
+
+      const firstTime = storage;
+      setIsFirstTime(firstTime);
+      if (firstTime !== 'no') return navigate.navigate('Walkthrough');
+    }
+
+    loadFirstTime();
+  }, []);
+
+  useEffect(() => {
     setCategory(categories[0].filterKey);
   }, []);
   return (
@@ -149,7 +164,10 @@ const Home = (): JSX.Element => {
         </View>
         <View style={styles.buttons}>
           <SquareButton iconChildren={Magnifier} />
-          <SquareButton iconChildren={MenuSvg} />
+          <SquareButton
+            onPress={() => AsyncStorage.removeItem('@hipa:isFirstTime')}
+            iconChildren={MenuSvg}
+          />
         </View>
       </View>
 
