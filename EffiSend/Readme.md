@@ -49,7 +49,7 @@ Devpost(with video and more documentation): https://devpost.com/software/effisen
 
 Full readme and Github (The full enchilada): https://github.com/EddOliver/EffiSend
 
-#### Next Steps
+## Next Steps
 
 This application is directed at those who cannot benefit directly from cryptocurrency. It has the usual, both crypto and fiat wallets, transfers between crypto and fiat, transfers between crypto accounts and it gives a spin on the cash in - cash out portion of the equation as no other project provides it. It is very important if this application is going to benefit and bank people to be very agile and compatible with FIAT at least until crypto reaches mass market. Most of the developed world has not even incorporated to legacy electronic systems. 
 
@@ -59,5 +59,5 @@ Regarding the application we would like to test it with real Capital perhaps in 
 
 Hopefully you liked the Mobile DApp, to see it in action in the future support it!
 
-#### License
+## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
