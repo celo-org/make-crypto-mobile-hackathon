@@ -1,5 +1,5 @@
 
-# TuBoleto 📲🚍 
+# TuBoleto - Using Crypto to pay public transit IRL 📲🚍 
 
 #### Team name
 TuBoleto
