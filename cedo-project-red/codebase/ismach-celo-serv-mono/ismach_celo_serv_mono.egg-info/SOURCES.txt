@@ -1,0 +1,8 @@
+setup.py
+cli/__init__.py
+ismach_celo_serv_mono.egg-info/PKG-INFO
+ismach_celo_serv_mono.egg-info/SOURCES.txt
+ismach_celo_serv_mono.egg-info/dependency_links.txt
+ismach_celo_serv_mono.egg-info/entry_points.txt
+ismach_celo_serv_mono.egg-info/requires.txt
+ismach_celo_serv_mono.egg-info/top_level.txt
