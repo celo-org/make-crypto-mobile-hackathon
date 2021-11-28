@@ -1,6 +1,6 @@
 
 ## El Dorado - Savings Accounts
-### TEAM NAME
+### El Dorado
 #### Cash In Cash Out Track, Infrastructure and Web3 Track
 
 ##### REGION: LATAM
