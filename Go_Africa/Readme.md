@@ -34,7 +34,7 @@ We have encountered difficulties in quickly getting to grips with programming la
 It was a real challenge for us to implement our solution with these technologies in the time allotted.
 
 # Links
-- Video demo - [Youtube](https://www.youtube.com/watch?v=BbSe8EsIBss&t=97s)
+- Video demo - [Youtube](https://youtu.be/wsZ3WBWEU3U)
 
 # App demo
 
@@ -52,5 +52,3 @@ It was a real challenge for us to implement our solution with these technologies
 
 **Efuetlancha njikeng jane kelly | Backend Developer [(LinkedIn)](https://www.linkedin.com/in/jane-kelly-efuet-b7423a167/) [(GitHub)](https://github.com/Rakeally)**
 
-#### License
-This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
