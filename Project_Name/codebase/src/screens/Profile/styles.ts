@@ -101,8 +101,12 @@ export const styles = StyleSheet.create({
   },
   hash: {
     flexDirection: AlignTypes.ROW,
-    justifyContent: AlignTypes.SPACE_BETWEEN,
+    alignItems: AlignTypes.CENTER,
+    justifyContent: AlignTypes.CENTER,
     width: 230,
+  },
+  hashImage:{
+    marginLeft: dimensions.spacingStackSmall5
   },
   userbio: {
     marginTop: dimensions.spacingStackXxl16,
