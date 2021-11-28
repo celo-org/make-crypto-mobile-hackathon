@@ -30,7 +30,7 @@ Bot Boxer allows the users to mint NFT robots and respective accessories (shield
 vimeo <https://vimeo.com/650888963>
 
 #### Next Steps
-The application has a few bugs and some shortcuts were taken in order to get the prototype live. There are a number of features in the smart contract e.g. ante'ing, which will be implemented in the front end so that the user can have skin in the game (with their robot).
+We have a number of features built into the smart contracts that will be baked into the front end as well. For example, there is a contract that allows for the user to bet on their robot by anty'ing a preset amount.
 
 #### License
 This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
