@@ -33,53 +33,7 @@ The Earn program on Valora app helps increase adoption and also engagement for C
 
 However, more than just enabling utility for Celo, the Defi Spend unleashes utility. Read on to see how!
 
-### How we built it
-
-For the Hackathon, I [extended the Celo Web Wallet](https://github.com/Chimoney/celo-web-wallet) to include an additional feature in the same place as the other bottoms.
-
-Then, I was able to generate a request to buy a product or service using the [Chimoney](https://chimoney.io/)'s API and have the user pay for the transaction.
-
-The product service is then delivered to the user.
-
-Next, I started working on enabling Valora users to directly spend on products and services as I noticed an opportunity to provide a better exchange rate when buying for African and Asian Airtime and to also support Mobile Money which is huge in Africa and requires to internet to work.
-
-So Imagine:
-
-- CELO to Mobile Money to anyone even without Internet connection in the remotest part of the world
-- CELO to Airtime to support virtual events
-
-#### SDKs used
-
-- @celo/contractkit
-- web3
-- crypto
-- forno.celo.org/ws
-- valoraapp deeplinks
-
-### How it works
-
-#### Supported products and services
-
-- **Gift Cards:** Global
-- **Airtime:** Cameroon, Côte d’Ivoire, Ethiopia, Ghana, Kenya, Malawi, Nigeria, Rwanda, Senegal, South Africa, Tanzania, Uganda, and Zambia
-- **Mobile Money:** Kenya, Ghana and Uganda
-
-### How to Use the Celo Defi Spend Infrastructure for your Web3 Celo project
-
-**Embed**
-
-- Deposit Celo to get access to a cloud of Gift Cards, Mobile Money, Airtime, and more without dealing with all the partners individually
-- Use the ChiSpend embed as done in this Hackathon project, https://celo-defi.chimoney.io
-- Enable users to pay in your wallet
-- Convert payment to user balance you maintain on Chimoney
-- Deliver the product/service the user paid for
-
-**API Integration**
-
-- Deposit Celo to get access to a cloud of Gift Cards, Mobile Money, Airtime, and more without dealing with all the partners individually
-- Do a full API integration to enable users spend their CELO on your wallet or DApp without leaving the App
-
-#### Summary
+### Summary
 
 This project will unleash a new utility for Celo, cUSD, and cEUR on the Celo Wallet app and provides an easy way and for wallets like Valora to offer CELO to 300+ Gift Cards, Mobile Money in 13 countries, Airtime in 15 countries, and many upcoming products and services that is sure to delight users, keep them engaged in the app and unlock utility even in mobile offline contexts.
 
@@ -90,13 +44,21 @@ For individuals looking to access Gift cards and other local assets like mobile 
 
 Futures
 
-- As a wallet user, I can buy Gift card
-- As a Wallet developer, I can
-- As a DeFi platform on Celo, I can
+- As a wallet user, I can buy and send Mobile money, Airtime, 300+ Gift cards and more from my Celo app or wallet
+- As a Wallet developer, I can enable users of my app to Spend their wallet balance on supported products and services like Mobile money, Airtime, 300+ Gift cards with a simple embed or API integration
+- As a DeFi platform on Celo, I can close the loop for my users and community be enabling folks to spend their earnings right inside my DeFi platform thus dirving my engagement and utility
 
-#### URLs
+### How it works
 
-**Celo Web Wallet** https://celo-defi.chimoney.io
+#### Supported products and services
+
+- **Gift Cards:** Global
+- **Airtime:** Cameroon, Côte d’Ivoire, Ethiopia, Ghana, Kenya, Malawi, Nigeria, Rwanda, Senegal, South Africa, Tanzania, Uganda, and Zambia
+- **Mobile Money:** Kenya, Ghana and Uganda
+
+#### Public example integrations and URLs
+
+**Celo Web Wallet**
 
 - Open Celo Web Wallet at https://celo-defi.chimoney.io
 - Click on _More_ and select the _Spend_ option
@@ -108,7 +70,7 @@ Futures
 - Confirm the transaction and sign with Celo Web Wallet
 - After payment is confirmed, receive the product instantly to the spending method specified
 
-**Pay with Valora (WIP)** http://chispend.com/?cSContext=valora&xAppStyle=light
+**Pay with Valora (WIP)**
 
 - On mobile go to http://chispend.com/?cSContext=valora&xAppStyle=light _(will not work on Desktop)_
 - Browse offered products and services
@@ -121,11 +83,47 @@ Futures
 
   _\* to deliver the product and complete purchase, we need to be able to redirect to http://chispend.com//process/celo/confirm?txid=CELO_TRANSACTION_ID from Valora_
 
+### How we built it
+
+For the Hackathon, I [extended the Celo Web Wallet](https://github.com/Chimoney/celo-web-wallet) to include an additional feature in the same place as the other bottoms.
+
+Then, I was able to generate a request to buy a product or service using the [Chimoney](https://chimoney.io/)'s API and have the user pay for the transaction.
+
+The product service is then delivered to the user.
+
+Next, I started working on enabling Valora users to directly spend on products and services as I noticed an opportunity to provide a better exchange rate when paying for African and Asian Airtime and to also support Mobile Money which is huge in Africa and requires to internet to work.
+
+So Imagine:
+
+- Celo to Mobile Money to anyone even without Internet connection in the remotest part of the world
+- Celo to Airtime to support community events without having to Cash out to banks
+
+#### SDKs used
+
+- @celo/contractkit
+- web3
+- crypto
+- forno.celo.org/ws
+- valoraapp deeplinks
+
+### Integration for your Web3 Celo project
+
+**In-platform Embed**
+
+- Deposit Celo to get access to a cloud of Gift Cards, Mobile Money, Airtime, and more without dealing with all the partners individually
+- Use the ChiSpend embed as done in this Hackathon project, https://celo-defi.chimoney.io
+- Enable users to pay in your wallet
+- Convert payment to user balance you maintain on Chimoney
+- Deliver the product/service the user paid for
+
+**API Integration**
+
+- Deposit Celo to get access to a cloud of Gift Cards, Mobile Money, Airtime, and more without dealing with all the partners individually
+- Do a full API integration to enable users spend their CELO on your wallet or DApp without leaving the App
+
 #### Presentation
 
-List any links to your presentation or any related visuals you want to share.
-
-TODO: Add Video
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/R2gOzIvll3o/0.jpg)](https://youtu.be/R2gOzIvll3o)
 
 #### Next Steps
 
