@@ -17,6 +17,7 @@ import EmptyFavorites from '../../../assets/empty-favorites.svg';
 import { api } from '@nft/services/api';
 import { useFocusEffect, useNavigation } from '@react-navigation/core';
 import { FlatList } from 'react-native-gesture-handler';
+import { useAuth } from '@nft/context/auth';
 
 interface INFTProps {
   id: number;
@@ -42,6 +43,8 @@ const Home = (): JSX.Element => {
 
   const navigate = useNavigation();
 
+  const { user } = useAuth();
+
   const categories = [
     { filterKey: 'trending', title: 'Trending' },
     { filterKey: 'gaming', title: 'Gaming' },
@@ -49,16 +52,10 @@ const Home = (): JSX.Element => {
     { filterKey: 'most_recent', title: 'Most Recent' },
   ];
 
-  const removeItem = (index: number) => {
-    const newNftArray = nfts.filter((item, i) => index !== i);
-
-    setNfts(newNftArray);
-  };
-
   const handleLikeImage = async (id: number) => {
     const request = {
       nft_id: id,
-      user_id: 1, // TODO remove mock
+      user_id: user.id,
     };
     await api
       .put('nft/favorite', request)

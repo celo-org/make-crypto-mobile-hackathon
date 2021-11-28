@@ -1,6 +1,7 @@
 import { requestAccountAddress, waitForAccountAuth } from '@celo/dappkit';
 import React, { createContext, useContext, useState } from 'react';
 import * as Linking from 'expo-linking';
+import { useAuth } from './auth';
 
 interface IWalletProps {
   connect: () => Promise<void>;
@@ -16,6 +17,8 @@ const WalletContext = createContext({} as IWalletProps);
 const WalletProvider: React.FC = ({ children }) => {
   const [wallet, setWallet] = useState({ address: '', phoneNumber: '' });
   const [failed, setFailed] = useState(false);
+
+  const { signIn } = useAuth();
 
   const connect = async () => {
     const requestId = 'login';
@@ -33,6 +36,8 @@ const WalletProvider: React.FC = ({ children }) => {
     if (!dappkitResponse) {
       setFailed(true);
     }
+
+    await signIn(dappkitResponse.address, dappkitResponse.phoneNumber);
 
     setWallet({
       address: dappkitResponse.address,

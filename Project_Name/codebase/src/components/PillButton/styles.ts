@@ -27,6 +27,6 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     right: dimensions.spacingStackXBig20,
     fontFamily: fontsFamily.montserrat.medium500,
-    fontSize: fontsSize.xs12,
+    fontSize: fontsSize.xxs10,
   },
 });
