@@ -4,7 +4,7 @@
 
 Welcome, this is our project for Celo’s Mobile online Hackathon.
 
-### Check main video on Devpost!: https://devpost.com/software/effisend
+### Check our main video on Devpost!: https://devpost.com/software/effisend
 
 Effisend is a CELO based mobile DApp that improves Cash out processes and integrates it with Rapyd (biggest payment processor in the world) to improve financial inclusion in Mexico.
 
