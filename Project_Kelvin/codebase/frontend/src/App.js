@@ -1,146 +1,119 @@
-import 'regenerator-runtime/runtime';
+import logo from './logo.svg';
+import './App.css';
+import './components/assets/style.css';
+import { useContractKit } from '@celo-tools/use-contractkit';
+import { ContractKitProvider } from '@celo-tools/use-contractkit';
+import '@celo-tools/use-contractkit/lib/styles.css';
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Big from 'big.js';
 import SignIn from './components/SignIn';
+import Inputs from './components/Inputs';
 import Convo from './components/Convo';
-import Flow from './components/Flow';
-import Airline from './components/Airline';
-import Impact from './components/Impact';
-import AddImpact from './components/AddImpact';
-import AddImpactType from './components/AddImpactType';
 import Transactions from './components/Transactions';
+import CreateProposal from './components/CreateProposal'
 import Header from './components/Header';
+import Output from './components/Output';
+import Calculate from './components/Calculate';
 import {
   BrowserRouter as Router,
   Switch,
   Route,Redirect,
   Link
 } from "react-router-dom";
+import ProjectKelvin from './abis/ProjectKelvin.json'
+const Web3 = require('web3')
+const ContractKit = require('@celo/contractkit')
+const web3 = new Web3('https://alfajores-forno.celo-testnet.org')
+const kit = ContractKit.newKitFromWeb3(web3)
+function App() {
 
 
-const SUGGESTED_DONATION = '0';
-const BOATLOAD_OF_GAS = Big(3).times(10 ** 13).toFixed();
-
-const App = ({ contract, currentUser, nearConfig, wallet }) => {
-  const [messages, setMessages,data] = useState([]);
-
-  useEffect(() => {
-    // TODO: don't just fetch once; subscribe!
-    // 
-    // 
-    // 
-    
-
-    contract.getMessages().then(setMessages);
-  }, []);
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-
-    const { fieldset, message, donation } = e.target.elements;
-
-    fieldset.disabled = true;
-
-    // TODO: optimistically update page with new message,
-    // update blockchain data in background
-    // add uuid to each message, so we know which one is already known
-    contract.addMessage(
-      { text: message.value },
-      BOATLOAD_OF_GAS,
-      Big(donation.value || '0').times(10 ** 24).toFixed()
-    ).then(() => {
-      contract.getMessages().then(messages => {
-        setMessages(messages);
-        message.value = '';
-        donation.value = SUGGESTED_DONATION;
-        fieldset.disabled = false;
-        message.focus();
-      });
-    });
-  };
-
-  const signIn = () => {
-    wallet.requestSignIn(
-      nearConfig.contractName,
-      'NEAR Guest Book'
-    );
-  };
+  const [title, setTitle] = useState("Project Kelvin : A Currency That Measures Impact");
 
 
+   useEffect(() => {
+    // This will run when the page first loads and whenever the title changes
+    document.title = title;
+  }, [title]);
 
-  const signOut = () => {
-    wallet.signOut();
-    window.location.replace(window.location.origin + window.location.pathname);
-  };
-
+   
+  const { address, connect, kit, getConnectedKit} = useContractKit()
+  async function initContract(){
+    // Create a new contract instance with the HelloWorld contract info
+    let instance = new kit.web3.eth.Contract( ProjectKelvin.abi, '0x4F9f9c56C4Ba59545c5e8Ced29AA6e8E588A0dB8')
+   // let name = await instance.methods.name().call()
+    //console.log(`Current Contract Name: "${name}"`);
+   //let address = await instance.methods.createProposal(50,"Kelvin","K").call();
+    //console.log(`Address of minted token: ${address}`);
+  }
+  initContract();
   return (
-   <Router>
+    <div className="App">
+  <Router>
     <main>
-
     <Switch>
-     <Route path="/convo">
-            <Convo contract={contract} currentUser={currentUser} nearConfig={nearConfig} wallet={wallet}/>
-        </Route>
+ 
        <Route path="/signin">
-            <SignIn wallet={wallet}/>
+            <SignIn  address={address} connect={connect}/>
         </Route>
         <Route path="/transactions">
             <Transactions />
-        </Route>
-         <Route path="/flow">
-            <Flow />
-        </Route>
-         <Route path="/add-impact">
-            <AddImpact />
-        </Route>
-        <Route path="/add-impact-type">
-            <AddImpactType />
-        </Route>
-         <Route path="/airline">
-            <Airline />
-        </Route>
-         <Route path="/impact">
-            <Impact />
-        </Route>        
+        </Route>   
+        <Route path="/create" >
+            <CreateProposal address={address}   />
+        </Route>    
+        <Route path="/inputs" >
+            <Inputs address={address}   />
+        </Route>  
+
+         <Route path="/convo" >
+            <Convo address={address}  kit={kit}  />
+        </Route> 
+
+        <Route path="/calculate" >
+            <Calculate address={address}  kit={kit}  />
+        </Route> 
+         <Route path="/output" >
+            <Output address={address}  kit={kit}  />
+        </Route> 
+
+        
     </Switch>
-
-
       
 <Route exact path="/">
-  {currentUser ? <Redirect to="/transactions" /> : <Redirect to="/signin" />}
+  {address ? <Redirect to="/transactions" /> : <Redirect to="/signin" />}
 </Route>
-
 <Route exact path="/signin">
-  {currentUser ? <Redirect to="/transactions" /> : <Redirect to="/signin" />}
+  {address ? <Redirect to="/transactions" /> : <Redirect to="/signin" />}
 </Route>
   
-
-
    
-
-
     </main>
     </Router>
+      {
+                    address ? (
+                        <label>Welcome {address}</label>
+                    ) : (
+                        <>
+                            
+                        </>
+                    )
+                }
+    </div>
   );
-};
-
-App.propTypes = {
-  contract: PropTypes.shape({
-    addMessage: PropTypes.func.isRequired,
-    getMessages: PropTypes.func.isRequired
-  }).isRequired,
-  currentUser: PropTypes.shape({
-    accountId: PropTypes.string.isRequired,
-    balance: PropTypes.string.isRequired
-  }),
-  nearConfig: PropTypes.shape({
-    contractName: PropTypes.string.isRequired
-  }).isRequired,
-  wallet: PropTypes.shape({
-    requestSignIn: PropTypes.func.isRequired,
-    signOut: PropTypes.func.isRequired
-  }).isRequired
-};
-
-export default App;
+}
+function WrappedApp() {
+  return (
+    <ContractKitProvider
+      dapp={{
+          name: "Project Kelvin",
+          description: "A Currency That Measures Impact",
+          url: "https://projectkelvin.io/",
+        }}
+    >
+      <App />
+    </ContractKitProvider>
+  );
+}
+export default WrappedApp;

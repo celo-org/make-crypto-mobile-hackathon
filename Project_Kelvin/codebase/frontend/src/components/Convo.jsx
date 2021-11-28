@@ -3,6 +3,8 @@ import axios from "axios";
 import { Avatar, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@material-ui/core';
 import ReactDOM from "react-dom";
 import Header from './Header';
+import {ethers} from 'ethers';
+
 
 import { Link, useLocation, BrowserRouter as Router } from "react-router-dom";
 
@@ -15,8 +17,9 @@ export class convoConnector extends React.Component {
     console.log(props);
     this.contract = props.contract;
     this.currentUser = props.currentUser;
-    this.nearConfig = props.nearConfig;
-    this.wallet = props.wallet;
+
+    this.address = props.address;
+    this.kit = props.kit;
 
     this.state = {message:''};
 
@@ -25,7 +28,7 @@ export class convoConnector extends React.Component {
 
     console.log(`constructor before trigger`);
 
-    console.log(this.contract, this.currentUser, this.nearConfig, this.wallet);
+    console.log(this.address,this.contract, this.currentUser, this.nearConfig, this.wallet);
   }
 
   async componentDidMount() {
@@ -39,7 +42,8 @@ export class convoConnector extends React.Component {
     console.log('thread_id ',thread_id);
     this.setState({thread_id:thread_id})
 
-    console.log(this.contract, this.currentUser, this.nearConfig, this.wallet);
+    console.log(this.address,this.contract, this.currentUser, this.nearConfig, this.wallet);
+   // await this.triggerOAuth();
     if (this.wallet && this.contract)
       await this.triggerOAuth();
     // this.forceUpdate()
@@ -83,11 +87,21 @@ export class convoConnector extends React.Component {
 
    }
 
+
+
   async shouldComponentUpdate() {
     console.log(`shouldComponentUpdate`);
   }
 
   triggerOAuth = async () => {
+
+    let provider;
+    provider = this.kit.web3.getDefaultPro;
+
+
+    console.log('kit is ',this.kit.web3);
+
+
 
 
     // Sample signature generation code using near-api-js.js
@@ -98,28 +112,37 @@ export class convoConnector extends React.Component {
       "Content-Type": "application/json"
     }
 
-    let accountId = this.wallet.getAccountId()
-    const timestamp = Date.now()
-    const tokenMessage = new TextEncoder().encode(`I allow this site to access my data on The Convo Space using the account ${accountId}. Timestamp:${timestamp}`);
-    const signatureData = await this.wallet.account().connection.signer.signMessage(tokenMessage, accountId, 'testnet');
-    const authTokenRequestPath = '/auth';
-    const authTokenRequestBody = {
-      "signature": Buffer.from(signatureData.signature).toString('hex'),
-      "signerAddress": Buffer.from(signatureData.publicKey.data).toString('hex'),
-      "accountId": accountId,
-      "timestamp": timestamp,
-      "chain": "near"
-    };
+
+console.log('before signature ',this.kit.web3.currentProvider);
+
+    // Sample signature generation code using ethers.js
+let timestamp = Date.now();
+let signerAddress = this.address;
+let data = `I allow this site to access my data on The Convo Space using the account ${signerAddress}. Timestamp:${timestamp}`;
+//let signature = await provider.send('personal_sign',[ ethers.utils.hexlify(ethers.utils.toUtf8Bytes(data)), signerAddress.toLowerCase() ]);
+let signature = await provider.send('personal_sign',[ ethers.utils.hexlify(ethers.utils.toUtf8Bytes(data)), signerAddress.toLowerCase() ]);
+ console.log('signature ',signature);
+
+const authTokenRequestPath = '/auth';
+
+let authBody = {
+  "signature": signature,
+  "signerAddress": signerAddress,
+  "timestamp": timestamp,
+  "chain": "celo"
+};
+
+
     // console.log(`send request to convo URL: ${convoApiRoot}${authTokenRequestPath}?apikey=${convoApiToken} with Data: ${JSON.stringify(authTokenRequestBody)}`);
-    const authResponse = await axios.post(`${convoApiRoot}${authTokenRequestPath}?apikey=${convoApiToken}`, authTokenRequestBody);
+    //const authResponse = await axios.post(`${convoApiRoot}${authTokenRequestPath}?apikey=${convoApiToken}`, authBody);
     // console.log(`auth Response from convo: ${JSON.stringify(authResponse)}`);
-    this.authToken = authResponse.data.message;
-    this.setState({token: authResponse.data.message})
+   // this.authToken = authResponse.data.message;
+    //this.setState({token: authResponse.data.message})
 
     // Validate Token
     const validateTokenRequestPath = '/validateAuth';
     const validateTokenRequestBody = {
-      "signerAddress": accountId,
+      "signerAddress": this.address,
       "token": this.authToken
     };
     // console.log(`send request to convo URL: ${convoApiRoot}${validateTokenRequestPath}?apikey=${convoApiToken} with data: ${JSON.stringify(validateTokenRequestBody)}`);
@@ -182,39 +205,35 @@ export class convoConnector extends React.Component {
             <Header />
       <ul class="nav nav-pills nav-fill mt-2 mx-2 ">
         <li class="nav-item">
-            <a class="nav-link active color-bg" aria-current="page" href={`/flow?id=${this.state.thread_id}`}>Impact Flow</a>
+            <a class="nav-link  text-white" aria-current="page" href={`/inputs`}>Impact Flow</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href={`/convo?id=${this.state.thread_id}`}>Impact Discussion</a>
+            <a class="nav-link active  color-bg " href={`/convo?id=${this.state.thread_id}`}>Impact Discussion</a>
         </li>
     </ul>
 
 <div className="base-container" ref={this.props.containerRef}>
 
-      <div class="container ">
+        <div class="container ">
         <div class="discussions">
-            <div className="content">
-              <List id="threads-list">
+        <div className="content">
+          <List id="threads-list">
 
-              
-              
+           
+           
 
-              no threads yet...
+ no threads yet...
 
 
 
-              </List>
-            </div>
-            
+          </List>
         </div>
-        <div className="row">
-              <div class="send">
-                        <input type="text" name="message" onChange={e => this.setState({ message: e.target.value })}   placeholder="Message"/>
-                        <a href="# " onClick={this.submitMessage.bind(this)} class="send-btn "><img src="https://cdn.kulfyapp.com/kelvin/send-btn.svg " alt=" " width="46 " height="47"/></a>
-                </div>
-            </div>
+   <div class="send">
+            <input type="text" name="message" onChange={e => this.setState({ message: e.target.value })}   placeholder="Message"/>
+            <a href="# " onClick={this.submitMessage.bind(this)} class="send-btn "><img src="https://cdn.kulfyapp.com/kelvin/send-btn.svg " alt=" " width="46 " height="47"/></a>
+        </div>
+        </div></div>
       </div>
-    </div>
 
     <div class="container ">
     </div>
@@ -224,5 +243,4 @@ export class convoConnector extends React.Component {
 }
 
 export default convoConnector;
-
 

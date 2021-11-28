@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="timeDown" transform="translate(-93 -633)">
+    <circle id="Ellipse_16" data-name="Ellipse 16" cx="16" cy="16" r="16" transform="translate(93 633)" fill="#fff"/>
+    <g id="Layer_2" data-name="Layer 2" transform="translate(96.9 636.9)">
+      <g id="Layer_1" data-name="Layer 1">
+        <path id="Path_7" data-name="Path 7" d="M12.1,0A12.1,12.1,0,1,0,24.2,12.1,12.1,12.1,0,0,0,12.1,0Zm0,22.185A10.085,10.085,0,1,1,22.185,12.1,10.085,10.085,0,0,1,12.1,22.185Z" fill="#ff6f36"/>
+        <path id="Path_8" data-name="Path 8" d="M34.707,19.739,32.022,17.72l-.673-.5V11.67a1.01,1.01,0,1,0-2.019,0v6.05a1,1,0,0,0,.03.234.851.851,0,0,0,.083.212.628.628,0,0,0,.11.182.04.04,0,0,0,.03.038.922.922,0,0,0,.14.132h0l.042.03,1.573,1.18,2.42,1.815a.979.979,0,0,0,.605.2,1.01,1.01,0,0,0,.605-1.815Z" transform="translate(-18.239 -6.629)" fill="#ff6f36"/>
+      </g>
+    </g>
+  </g>
+</svg>

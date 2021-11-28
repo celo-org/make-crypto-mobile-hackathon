@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="46" height="47" viewBox="0 0 46 47">
-  <g id="send-btn" transform="translate(-339 -399)">
-    <rect id="Rectangle_17" data-name="Rectangle 17" width="46" height="47" rx="23" transform="translate(339 399)" fill="#535164"/>
-    <path id="icons8-sent" d="M3,3A1,1,0,0,0,2,4V9.6a1,1,0,0,0,.9.994L17,12,2.9,13.41A1,1,0,0,0,2,14.4V20a1,1,0,0,0,1.539.844l0,0,17.8-7.9,0,0a1,1,0,0,0,0-1.879l0,0L3.527,3.152A1,1,0,0,0,3,3Z" transform="translate(352 410)" fill="#fff"/>
-  </g>
-</svg>

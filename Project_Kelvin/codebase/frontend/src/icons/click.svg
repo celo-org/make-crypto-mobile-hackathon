@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="click" transform="translate(-169 -252)">
+    <rect id="Rectangle_20" data-name="Rectangle 20" width="31" height="31" rx="15.5" transform="translate(169 252)" fill="#4b02b3"/>
+    <path id="icons8-natural_user_interface_2" d="M7.853,0A3.557,3.557,0,0,0,5.588,6.3V3.559a2.265,2.265,0,1,1,4.529,0V6.3A3.557,3.557,0,0,0,7.853,0Zm0,2.588a.971.971,0,0,0-.971.971V9.807l-1.84-.933a1.049,1.049,0,0,0-1.122.11L3,9.706l3.961,3.961a1.94,1.94,0,0,0,1.372.569h3.726A1.941,1.941,0,0,0,14,12.294V9.162A1.3,1.3,0,0,0,12.945,7.89L8.824,7.118V3.559A.971.971,0,0,0,7.853,2.588Z" transform="translate(176 259.882)" fill="#fff"/>
+  </g>
+</svg>

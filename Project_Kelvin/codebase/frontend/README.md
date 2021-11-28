@@ -1,117 +1,70 @@
-Guest Book
-==========
+# Getting Started with Create React App
 
-[![Build Status](https://travis-ci.com/near-examples/guest-book.svg?branch=master)](https://travis-ci.com/near-examples/guest-book)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/near-examples/guest-book)
+## Available Scripts
 
-<!-- MAGIC COMMENT: DO NOT DELETE! Everything above this line is hidden on NEAR Examples page -->
+In the project directory, you can run:
 
-Sign in with [NEAR] and add a message to the guest book! A starter app built with an [AssemblyScript] backend and a [React] frontend.
+### `yarn start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Quick Start
-===========
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-To run this project locally:
+### `yarn test`
 
-1. Prerequisites: Make sure you have Node.js ≥ 12 installed (https://nodejs.org), then use it to install [yarn]: `npm install --global yarn` (or just `npm i -g yarn`)
-2. Run the local development server: `yarn && yarn dev` (see `package.json` for a
-   full list of `scripts` you can run with `yarn`)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Now you'll have a local development environment backed by the NEAR TestNet! Running `yarn dev` will tell you the URL you can visit in your browser to see the app.
+### `yarn build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Exploring The Code
-==================
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-1. The backend code lives in the `/assembly` folder. This code gets deployed to
-   the NEAR blockchain when you run `yarn deploy:contract`. This sort of
-   code-that-runs-on-a-blockchain is called a "smart contract" – [learn more
-   about NEAR smart contracts][smart contract docs].
-2. The frontend code lives in the `/src` folder.
-   [/src/index.html](/src/index.html) is a great place to start exploring. Note
-   that it loads in `/src/index.js`, where you can learn how the frontend
-   connects to the NEAR blockchain.
-3. Tests: there are different kinds of tests for the frontend and backend. The
-   backend code gets tested with the [asp] command for running the backend
-   AssemblyScript tests, and [jest] for running frontend tests. You can run
-   both of these at once with `yarn test`.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Both contract and client-side code will auto-reload as you change source files.
+### `yarn eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Deploy
-======
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Every smart contract in NEAR has its [own associated account][NEAR accounts]. When you run `yarn dev`, your smart contracts get deployed to the live NEAR TestNet with a throwaway account. When you're ready to make it permanent, here's how.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Step 0: Install near-cli
---------------------------
+## Learn More
 
-You need near-cli installed globally. Here's how:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-    npm install --global near-cli
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-This will give you the `near` [CLI] tool. Ensure that it's installed with:
+### Code Splitting
 
-    near --version
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
 
-Step 1: Create an account for the contract
-------------------------------------------
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Visit [NEAR Wallet] and make a new account. You'll be deploying these smart contracts to this new account.
+### Making a Progressive Web App
 
-Now authorize NEAR CLI for this new account, and follow the instructions it gives you:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-    near login
+### Advanced Configuration
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-Step 2: set contract name in code
----------------------------------
+### Deployment
 
-Modify the line in `src/config.js` that sets the account name of the contract. Set it to the account id you used above.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-    const CONTRACT_NAME = process.env.CONTRACT_NAME || 'your-account-here!'
+### `yarn build` fails to minify
 
-
-Step 3: change remote URL if you cloned this repo 
--------------------------
-
-Unless you forked this repository you will need to change the remote URL to a repo that you have commit access to. This will allow auto deployment to Github Pages from the command line.
-
-1) go to GitHub and create a new repository for this project
-2) open your terminal and in the root of this project enter the following:
-
-    $ `git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git`
-
-
-Step 4: deploy!
----------------
-
-One command:
-
-    yarn deploy
-
-As you can see in `package.json`, this does two things:
-
-1. builds & deploys smart contracts to NEAR TestNet
-2. builds & deploys frontend code to GitHub using [gh-pages]. This will only work if the project already has a repository set up on GitHub. Feel free to modify the `deploy` script in `package.json` to deploy elsewhere.
-
-
-
-  [NEAR]: https://nearprotocol.com/
-  [yarn]: https://yarnpkg.com/
-  [AssemblyScript]: https://docs.assemblyscript.org/
-  [React]: https://reactjs.org
-  [smart contract docs]: https://docs.nearprotocol.com/docs/roles/developer/contracts/assemblyscript
-  [asp]: https://www.npmjs.com/package/@as-pect/cli
-  [jest]: https://jestjs.io/
-  [NEAR accounts]: https://docs.nearprotocol.com/docs/concepts/account
-  [NEAR Wallet]: https://wallet.nearprotocol.com
-  [near-cli]: https://github.com/nearprotocol/near-cli
-  [CLI]: https://www.w3schools.com/whatis/whatis_cli.asp
-  [create-near-app]: https://github.com/nearprotocol/create-near-app
-  [gh-pages]: https://github.com/tschaub/gh-pages
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

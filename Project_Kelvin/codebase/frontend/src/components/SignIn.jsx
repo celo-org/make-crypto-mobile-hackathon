@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Avatar, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@material-ui/core';
 import ReactDOM from "react-dom";
-import Header from './Header';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,6 +18,8 @@ export class signIn extends React.Component {
     this.currentUser = props.currentUser;
     this.nearConfig = props.nearConfig;
     this.wallet = props.wallet;
+    this.address = props.address;
+    this.connect = props.connect;
 
     this.state = {};
 
@@ -38,7 +40,7 @@ export class signIn extends React.Component {
 
 
   handleClick = async () => {
-		console.log("test 123");
+
 		  this.wallet.requestSignIn(
       'gkolluri.testnet',
       'NEAR Guest Book'
@@ -63,29 +65,26 @@ export class signIn extends React.Component {
 
 
 
+<div class="bg-white">
       <div className="base-container flow-container" ref={this.props.containerRef}>
        
-         <Header />
-   <div className="container page-wrapper d-flex flex-column justify-content-center">
-                <div>
-                    <a onClick={this.handleClick}>
-                        <div className="login-button">
-                      
-                            <img src="https://cdn.kulfyapp.com/kelvin/Mask Group 1.png" alt="" />
-
-                            <span>Connect with Near Wallet</span>
-                        </div>
-                    </a>
-                </div>
-                <a href="#">
-                    <div className="login-button">
-                        <img src="https://cdn.kulfyapp.com/kelvin/icons8-facebook.png" alt="" />
-                        <span>Connect with Facebook</span>
-                    </div>
-                </a>
-
+            <section class="container-fluid">
+        <div class="row">
+            <div class="col splash-logo bg-color">
+                <img src="https://cdn.kulfyapp.com/celo/full-logo.svg" alt=""/>
             </div>
-      </div>
+        </div>
+            <div class="d-grid gap-2 mt-4">
+            <button  onClick={this.connect}  variant={"contained"} class="btn btn-primary btn-icon" type="button"> <img src="https://cdn.kulfyapp.com/celo/celo-circle.svg" alt="" /><span> Connect with Celo</span></button>
+        </div>
+
+    </section>
+   
+    </div>
+
+
+
+ </div>
     )
   }
 }
