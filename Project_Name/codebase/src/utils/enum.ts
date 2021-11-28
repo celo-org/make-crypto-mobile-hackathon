@@ -11,4 +11,5 @@ export enum AlignTypes {
 export enum RoutesNames {
   DESCRIPTION_NFT = 'DESCRIPTION_NFT',
   HOME_NFT = 'HOME_NFT',
+  CREATE = 'CREATE',
 }

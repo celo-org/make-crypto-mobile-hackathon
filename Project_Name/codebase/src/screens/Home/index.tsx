@@ -11,6 +11,9 @@ import { FilterList, Nft, SquareButton, Text } from '@nft/components';
 import { colors, dimensions, fontsFamily, fontsSize } from '@nft/styles';
 import { AlignTypes, RoutesNames } from '@nft/utils/enum';
 
+import HipaLogoSVG from '../../../assets/hipa-logo.svg';
+import HIPASVG from '../../../assets/HIPA.svg';
+
 import MenuSvg from '../../../assets/menu.svg';
 import Magnifier from '../../../assets/magnifier.svg';
 
@@ -139,7 +142,11 @@ const Home = (): JSX.Element => {
     <SafeAreaView style={styles.container}>
       <ConnectWallet />
       <View style={styles.header}>
-        <View style={styles.logo} />
+        <View style={styles.logo}>
+          <HipaLogoSVG />
+          <View style={styles.divider} />
+          <HIPASVG />
+        </View>
         <View style={styles.buttons}>
           <SquareButton iconChildren={Magnifier} />
           <SquareButton iconChildren={MenuSvg} />
@@ -150,7 +157,7 @@ const Home = (): JSX.Element => {
         <Text
           textDescription={'Find the NFT Perfect to You'}
           fontFamily={fontsFamily.montserrat.regular400}
-          fontsSize={fontsSize.xl24}
+          fontsSize={fontsSize.xl20}
           color={colors.light.neutralColor5}
         />
       </View>

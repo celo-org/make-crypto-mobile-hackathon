@@ -8,20 +8,16 @@ import {
   ActivityIndicator,
   Alert,
 } from 'react-native';
-import {
-  FilterButton,
-  LargeButton,
-  PillButton,
-  SquareButton,
-  Text,
-  UnderlineInput,
-} from '@nft/components';
+import { FilterButton, PillButton, SquareButton, Text, UnderlineInput } from '@nft/components';
 
 import MenuSvg from '../../../assets/menu.svg';
 import Magnifier from '../../../assets/magnifier.svg';
 import TagSvg from '../../../assets/tag.svg';
 import Bid from '../../../assets/bid.svg';
 import UpArrow from '../../../assets/up-arrow.svg';
+
+import HipaLogoSVG from '../../../assets/hipa-logo.svg';
+import HIPASVG from '../../../assets/HIPA.svg';
 
 import styles from './styles';
 import { colors, fontsFamily, fontsSize } from '@nft/styles';
@@ -142,13 +138,10 @@ const CreateNFT = (): JSX.Element => {
       value: value,
     };
 
-    console.log(requestData);
-
     try {
       setIsLoading(true);
       const request = await api.post('nft/create', requestData);
       resetStates();
-      console.log(request);
       return navigation.navigate(RoutesNames.HOME_NFT);
     } catch (err) {
       console.log('err: ', err);
@@ -160,19 +153,22 @@ const CreateNFT = (): JSX.Element => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.header}>
+        <View style={styles.logo}>
+          <HipaLogoSVG />
+          <View style={styles.divider} />
+          <HIPASVG />
+        </View>
+        <View style={styles.buttons}>
+          <SquareButton iconChildren={Magnifier} />
+          <SquareButton iconChildren={MenuSvg} />
+        </View>
+      </View>
       {isLoading ? (
         <ActivityIndicator color={colors.light.neutralColor6} size="large" />
       ) : (
         <ScrollView>
           <View style={styles.content}>
-            <View style={styles.header}>
-              <View style={styles.logo}></View>
-              <View style={styles.buttons}>
-                <SquareButton iconChildren={Magnifier} />
-                <SquareButton iconChildren={MenuSvg} />
-              </View>
-            </View>
-
             <View style={styles.title}>
               <Text
                 color={colors.light.neutralColor5}
@@ -287,13 +283,13 @@ const CreateNFT = (): JSX.Element => {
                   textDescription={'Enter price to allow users instantly purchase your NFT art'}
                 />
               </View>
-              <SafeAreaView style={styles.sellTypeList}>
+              <View style={styles.sellTypeList}>
                 <SellTypesList
                   data={sellTypes}
                   selectedSellType={selectedSellType}
                   setSellType={setSelectedSellType}
                 />
-              </SafeAreaView>
+              </View>
             </View>
             <View style={styles.tagContainer}>
               <View style={styles.tagTitle}>
@@ -305,7 +301,7 @@ const CreateNFT = (): JSX.Element => {
                 />
               </View>
               <View style={styles.tagContent}>
-                {tags.map((item) => (
+                {tags.map((item, index) => (
                   <FilterButton
                     title={item}
                     isActive={item === tag}
@@ -314,6 +310,7 @@ const CreateNFT = (): JSX.Element => {
                     textColor={colors.light.neutralColor5}
                     textFontFamily={fontsFamily.montserrat.semiBold600}
                     textFontSize={fontsSize.sm14}
+                    key={index}
                   />
                 ))}
               </View>
