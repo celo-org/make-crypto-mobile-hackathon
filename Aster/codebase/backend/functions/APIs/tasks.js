@@ -108,7 +108,7 @@ exports.createTask = async (req, res) => {
     // Validate data
     try {
         // alphanumeric name and description
-        name = data.name.match("^[0-9a-zA-Z\\s]+")[0]
+        name = data.name //data.name.match("^[0-9a-zA-Z\\s]+")[0]
         description = data.description
         contract_address = data.contract_id.match("^[0-9a-zA-Z\\s]+")[0]
         total_price = Number(data.total_price)

@@ -7,11 +7,10 @@ import Constants from 'expo-constants';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      paddingTop: Constants.statusBarHeight,
-      alignItems: 'center',
+      paddingTop: Constants.statusBarHeight + 50,
+      alignItems: 'flex-start',
       justifyContent: 'center',
       flexDirection:'row',
-      paddingTop: 100,
       backgroundColor: "#E8DED8"
     },
     textTag: {
@@ -70,10 +69,11 @@ const TaskList = ({ route, navigation }) => {
                             <View style={{
                                 backgroundColor:'floralwhite',
                                 borderRadius: 15,
-                                height: 250,
+                                height: 300,
                                 padding: 30,
                                 marginLeft: 25,
                                 marginRight: 25, 
+                                justifyContent: 'center'
                                 }}>
                                 
                                 <Text style={{fontSize: 30}}>{item.name}</Text>

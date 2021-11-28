@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './global'
 import { web3, kit } from './root'
-import { Image, StyleSheet, Text, TextInput, Button, View, YellowBox, Pressable } from 'react-native'
+import { Image, StyleSheet, Text, TextInput, Button, View, YellowBox, Pressable, LogBox } from 'react-native'
 import {   
   requestTxSig,
   waitForSignedTxs,
@@ -14,6 +14,7 @@ import CeloDAppKit from './celo-dappkit'
 import Constants from 'expo-constants';
 
 YellowBox.ignoreWarnings(['Warning: The provided value \'moz', 'Warning: The provided value \'ms-stream'])
+LogBox.ignoreAllLogs();
 
 const styles = StyleSheet.create({
   container: {

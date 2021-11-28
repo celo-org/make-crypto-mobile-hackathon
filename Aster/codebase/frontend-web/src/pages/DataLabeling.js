@@ -167,11 +167,11 @@ export default function DataLabeling() {
   const isUserNotFound = filteredTasks.length === 0;
 
   return (
-    <Page title="Task">
+    <Page title="My Tasks">
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            Task
+            My Tasks
           </Typography>
           <CreateNewTask />
         </Stack>

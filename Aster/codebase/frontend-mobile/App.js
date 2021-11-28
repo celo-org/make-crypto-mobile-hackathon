@@ -4,14 +4,14 @@ import SignIn from './SignIn';
 import TaskList from './TaskList';
 import Task from './Task';
 
-import { Image, Text, View } from 'react-native';
+import { Image, Text, View, LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { enableScreens } from 'react-native-screens'; 
 enableScreens();
 
 const Stack = createNativeStackNavigator();
-
+LogBox.ignoreAllLogs();
 
  
 const App = () => {

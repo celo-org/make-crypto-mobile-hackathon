@@ -83,7 +83,7 @@ function TaskDetails({ task_id}) {
                 <Box sx={{ height: 3 }} />
                 <Typography variant="string">Number of Labelers: {task.number_of_labelers}</Typography>
                 <Box sx={{ height: 3 }} />
-                <Typography variant="string">Price per Labeler: {task.number_of_labelers/task.total_price + " CELO"}</Typography>
+                <Typography variant="string">Price per Labeler: { (task.total_price / task.number_of_labelers) + " CELO"}</Typography>
                 <Box sx={{ height: 30 }} />
                 <Typography variant="h4">Dataset</Typography>
                 <Typography variant="string">Labels: {task.labels.toString()}</Typography>

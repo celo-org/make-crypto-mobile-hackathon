@@ -207,7 +207,7 @@ export default function NotificationsPopover() {
         </Badge>
       </IconButton>
 
-      <MenuPopover
+      {/* <MenuPopover
         open={open}
         onClose={handleClose}
         anchorEl={anchorRef.current}
@@ -267,7 +267,7 @@ export default function NotificationsPopover() {
             View All
           </Button>
         </Box>
-      </MenuPopover>
+      </MenuPopover> */}
     </>
   );
 }

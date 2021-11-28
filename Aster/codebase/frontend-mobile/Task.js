@@ -35,9 +35,10 @@ const styles = StyleSheet.create({
       backgroundColor: "#E8DED8",
     },
     buttonContainer: {
-      padding: 10,
+      //paddingTop: 180,
+      margin: 30,
       flexDirection: 'row',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       justifyContent: 'center',
     },
     button: {

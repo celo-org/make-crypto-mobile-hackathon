@@ -31,7 +31,7 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const CHART_DATA = [4344, 5435, 1443, 4443];
+const CHART_DATA = [4344, 5435, 1443, 4443, 3000, 800, 1000];
 
 export default function AppCurrentVisits() {
   const theme = useTheme();
@@ -41,9 +41,12 @@ export default function AppCurrentVisits() {
       theme.palette.primary.main,
       theme.palette.info.main,
       theme.palette.warning.main,
-      theme.palette.error.main
+      theme.palette.error.main,
+      "#E8DED8",
+      "#C1E4EE",
+      "#47CD85"
     ],
-    labels: ['America', 'Asia', 'Europe', 'Africa'],
+    labels: ['North America', 'South America', 'Asia', 'Europe', 'Africa', 'Antarctica', 'Australia'],
     stroke: { colors: [theme.palette.background.paper] },
     legend: { floating: true, horizontalAlign: 'center' },
     dataLabels: { enabled: true, dropShadow: { enabled: false } },
@@ -63,7 +66,7 @@ export default function AppCurrentVisits() {
 
   return (
     <Card>
-      <CardHeader title="Labler's Geography" />
+      <CardHeader title="Labeler's Geography" />
       <ChartWrapperStyle dir="ltr">
         <ReactApexChart type="pie" series={CHART_DATA} options={chartOptions} height={280} />
       </ChartWrapperStyle>
