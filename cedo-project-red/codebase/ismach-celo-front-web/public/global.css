@@ -1,0 +1,88 @@
+html, body {
+	background-color: #fff;
+	color: #3c3c3c;
+}
+
+
+.field {
+	margin-bottom: 2rem !important;
+}
+
+
+.hero-title {
+	font-size: 2.5rem;
+	color: #fff;
+	margin-bottom: 1.5rem;
+}
+
+
+.input {
+	background-color: #fff;
+	border-color: #bbb !important;
+	color: #4f4f4f !important;
+}
+
+
+a {
+	color: #cfcfcf;
+}
+
+a:hover {
+	color: #cfcfcf;
+	text-decoration: underline;
+}
+
+.input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #6f6f6f;
+	opacity: 1; /* Firefox */
+}
+
+.input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #6f6f6f;
+}
+
+.input::-ms-input-placeholder { /* Microsoft Edge */
+	color: #6f6f6f;
+}
+
+
+.field label {
+	color: #7a7a7a;
+	margin-bottom: 1rem;
+	display: block;
+}
+
+
+
+.button {
+
+}
+
+.button.is-blue {
+	color: #fff !important;
+	background-color: #243de2;
+	border-color: #243de2;
+}
+
+.button.is-white {
+	color: #3c3c3c !important;
+	background-color: #fff !important;
+	border: 1px solid #bbb !important;
+	width: 100%;
+	display: block;
+}
+
+
+.text {
+
+}
+
+.text a {
+	color: #294ef6 !important;
+}
+
+
+.form-card-link {
+	color: #7f7f7f !important;
+}
+
