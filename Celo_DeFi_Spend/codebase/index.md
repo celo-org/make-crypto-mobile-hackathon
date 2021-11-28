@@ -2,7 +2,7 @@
 
 ### Celo Web Wallet clone
 
-https://github.com/Chimoney/celo-web-wallet
+https://github.com/Chimoney/celo-web-wallet-with-spend-feature
 
 #### SDKs used
 
