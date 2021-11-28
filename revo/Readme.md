@@ -1,4 +1,7 @@
 # Revo
+
+![Revo image](https://raw.githubusercontent.com/revo-market/revo-interface/main/public/images/app-icon.png)
+
 ### Region
 San Francisco, CA
 
