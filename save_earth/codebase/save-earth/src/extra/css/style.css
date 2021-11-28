@@ -1,0 +1,570 @@
+
+/*
+|----------------------------------------------------------------------------
+	1. FONTS: Google Font
+|----------------------------------------------------------------------------
+*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Open+Sans:400,400i,600,600i,700,700i');
+
+/*
+|----------------------------------------------------------------------------
+	2. BODY
+|----------------------------------------------------------------------------
+*/
+body {
+    color: #222;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 1.48;
+    height: 100%;
+}
+
+/*
+|----------------------------------------------------------------------------
+	3. COMMON CSS
+|----------------------------------------------------------------------------
+*/
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+	font-family: 'Roboto', sans-serif;
+}
+img, iframe, object, embed {
+    max-width: 100%;
+}
+a {
+	color: #000;
+}
+a:hover {
+    color: #04b962;
+    text-decoration: none;
+}
+a:focus {
+    outline: medium none;
+    text-decoration: none;
+}
+.intro-text {
+    margin: 0 auto 60px;
+	max-width: 660px;
+}
+.SecTopMargin {
+    margin-top: 60px;
+}
+.SectionMargin {
+    margin: 60px 0;
+}
+.color-border {
+    border-color: #04b962;
+}
+
+
+/*
+|----------------------------------------------------------------------------
+	4.1. HOME TOP BANNER / .home-top-banner
+|----------------------------------------------------------------------------
+*/
+.home-top-banner {
+	background-attachment: fixed;
+    background-color: #555;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+.home-top-banner::after {
+    background-color: rgba(0, 0, 0, 0.7);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.background-transparent {
+	background-color: transparent;
+}
+#particles-js {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.home-top-banner.banner-1 {
+	background-image: url("../images/profile/banner-image-1.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.display-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.display-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.banner-content {
+    margin-top: 80px;
+	max-width: 50%;
+}
+.banner-content h1 {
+    color: #fff;
+    font-size: 60px;
+	line-height: 1;
+	margin: 0 0 25px;
+    text-transform: capitalize;
+}
+.banner-content h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+}
+.banner-content li a {
+    color: #fff;
+    border: none;
+}
+
+.banner-content.banner-content-fullwidth {
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Type */
+.banner-content h1.type-animate a.typewrite{
+	color: #fff;
+	font-size: 48px;
+}
+
+
+/*
+|----------------------------------------------------------------------------
+	5. TITLE / .title-wrap
+|----------------------------------------------------------------------------
+*/
+.title-wrap {
+    margin: 0 auto 60px;
+    max-width: 401px;
+}
+.section-title-box::before {
+    background-color: #04b962;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 35%;
+    margin: 0 0 -2px;
+    position: absolute;
+    width: 30%;
+}
+.section-title-box {
+    border-bottom: 1px solid #04b962;
+    margin: 0 0 60px;
+    position: relative;
+}
+.title-wrap .section-title {
+	font-size: 38px;
+	font-weight: 400;
+    line-height: 1;
+    margin: 50px 0 20px;
+    position: relative;
+    text-align: center;
+	text-transform: uppercase;
+    width: 100%;
+}
+.title-wrap .section-title strong {
+    color: #04b962;
+	font-weight: bold;
+}
+.sub-title {
+    font-size: 28px;
+    margin-top: 0;
+}
+/*title-box*/
+.title-box::before {
+    background-color: #04b962;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0;
+    margin: 0 0 -2px;
+    position: absolute;
+    width: 60px;
+}
+.title-box {
+    border-bottom: 1px dotted #04b962;
+    margin: 0 0 40px;
+    position: relative;
+}
+.title-box > h3 {
+	color: #000;
+	font-weight: 400;
+	margin: 0 0 5px;
+}
+
+
+/*
+|----------------------------------------------------------------------------
+	9. SOCIAL / .social-icon
+|----------------------------------------------------------------------------
+*/
+.list-inline.list-social {
+    margin: 0 0 30px;
+    padding: 0;
+}
+.list-social.list-inline > li {
+    padding: 0;
+    display: inline;
+    float: left;
+}
+.social-icon {
+    border: 1px solid #04b962;
+    border-radius: 8px 2px;
+    color: #04b962;
+    display: block;
+    height: 32px;
+    margin-right: 5px;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: none;
+    width: 32px;
+}
+.social-icon-rounded {
+    border-radius: 50%;
+}
+.social-icon-dark, .social-icon-light {
+    border-color: transparent;
+}
+.social-icon-dark {
+    background-color: #444;
+    color: #fff;
+}
+.social-icon-light, .footer .social-icon-light {
+    background-color: #f0f0f0;
+    color: #666;
+}
+.social-icon-colored, .share-icon .social-icon-colored {
+    border-color: transparent;
+}
+.social-icon.social-icon-small {
+    height: 28px;
+    width: 28px;
+}
+.social-icon.social-icon-large {
+    height: 44px;
+    margin: 0 10px 10px 0;
+    width: 44px;
+}
+.social-icon i {
+    display: block;
+	font-size: 18px;
+    line-height: 32px;
+    position: relative;
+    -webkit-transition:all 0.3s ease 0s;
+    -moz-transition:all 0.3s ease 0s;
+    -ms-transition:all 0.3s ease 0s;
+    -o-transition:all 0.3s ease 0s;
+    transition:all 0.3s ease 0s;
+}
+.social-icon:hover i:first-child {
+    margin-top: -32px;
+}
+.social-icon.social-icon-small i {
+    font-size: 16px;
+    line-height: 28px;
+}
+.social-icon.social-icon-small:hover i:first-child {
+    margin-top: -28px;
+}
+.social-icon.social-icon-large i {
+    font-size: 34px;
+    line-height: 44px;
+}
+.social-icon.social-icon-large:hover i:first-child {
+    margin-top: -44px;
+}
+
+.social-icon:hover {
+	text-decoration: none;
+}
+.social-icon-colored.social-icon, .social-icon:hover {
+    border-color: transparent;
+}
+.social-icon-colored.social-icon-facebook, .social-icon-facebook:hover {
+    background-color: #3b5998;
+}
+.social-icon-colored.social-icon-twitter, .social-icon-twitter:hover {
+    background-color: #00acee;
+}
+.social-icon-colored.social-icon-gplus, .social-icon-gplus:hover {
+    background-color: #dd4b39;
+}
+.social-icon-colored.social-icon-linkedin, .social-icon-linkedin:hover {
+    background-color: #0077b5;
+}
+.social-icon-colored.social-icon-vimeo, .social-icon-vimeo:hover {
+    background-color: #1ca7cc;
+}
+.social-icon-colored.social-icon-pinterest, .social-icon-pinterest:hover {
+    background-color: #cb2027;
+}
+.social-icon-colored.social-icon-dribbble, .social-icon-dribbble:hover {
+    background-color: #25d366;
+}
+.social-icon-colored.social-icon-rss, .social-icon-rss:hover {
+    background-color: #fb9f3c;
+}
+.social-icon-colored.social-icon-flickr, .social-icon-flickr:hover {
+    background-color: #ff0084;
+}
+.social-icon-colored.social-icon-instagram, .social-icon-instagram:hover {
+    background-color: #bc2a8d;
+}
+.social-icon-colored.social-icon-youtube, .social-icon-youtube:hover {
+    background-color: #bb0000;
+}
+.social-icon-colored.social-icon-skype, .social-icon-skype:hover {
+    background-color: #12a5f4;
+}
+.social-icon-colored.social-icon-yahoo, .footer .social-icon-yahoo:hover {
+    background-color: #7B0099;
+}
+.social-icon-colored.social-icon-tumblr, .social-icon-tumblr:hover {
+    background-color: #32506d;
+}
+.social-icon i:last-child {
+    color: #fff;
+}
+.social-icon-colored i {
+    color: #fff;
+}
+
+
+
+/*
+|----------------------------------------------------------------------------
+	18. SUCCESS STORY
+|----------------------------------------------------------------------------
+*/
+#success-story {
+	background-color: #f7f7f7;
+	padding: 70px 0;
+}
+#success-story .counter-wrap {
+	margin: 0 0 50px;
+	-webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+#success-story .counter-wrap:hover {
+	border-left-color: #04b962;
+    border-right-color: #04b962;
+}
+#success-story .counter-icon {
+    margin: 0 0 15px;
+}
+#success-story .counter-wrap i {
+    border: 2px solid #fff;
+	color: #fff;
+    border-radius: 50%;
+    font-size: 32px;
+    height: 64px;
+    line-height: 64px;
+    width: 64px;
+}
+#success-story .counter-wrap:hover i {
+    background-color: #04b962;
+    border: 1px solid #04b962;
+    color: #fff;
+}
+#success-story .counter {
+	color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+	line-height: 1;
+    text-align: center;
+	margin: 30px 0 20px;
+}
+#success-story .counter-wrap p {
+	color: #fff;
+	margin: 10px 0 0;
+	font-size: 20px;
+    font-weight: 500;
+}
+
+#success-story.light-bg {
+	color: #000;
+}
+#success-story.light-bg .counter-wrap i {
+    border: 2px solid #000;
+	color: #000;
+}
+#success-story.light-bg .counter-wrap:hover i {
+    background-color: #04b962;
+    border: 1px solid #04b962;
+    color: #fff;
+}
+#success-story.light-bg .counter {
+	color: #000;
+}
+#success-story.light-bg .counter-wrap p {
+	color: #000;
+}
+
+
+/*
+|----------------------------------------------------------------------------
+	25. FOOTER / .footer
+|----------------------------------------------------------------------------
+*/
+.footer {
+    background-color: #286cc0;
+}
+.footer-top {
+    background: none;
+	padding: 90px 0 60px;
+}
+.footer-top .columnbottom-margin {
+    margin-bottom: 50px;
+}
+.footer a, .footer p, .footer li  {
+    color: #fff;
+	font-size: 16px;
+	line-height: 1.5;
+}
+.footer .post-meta a  {
+	font-size: 15px;
+}
+.footer p {
+    margin: 0 0 20px;
+}
+.footer h4.widget-title {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 30px 0;
+	padding-bottom: 5px;
+    position: relative;
+	text-transform: capitalize;
+}
+.footer h4.widget-title::before {
+    background-color: #04b962;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    margin: 0 0 -1px;
+    position: absolute;
+    width: 40px;
+}
+.footer h4.widget-title span {
+	color: #04b962;
+}
+.footer .recent-post li {
+    margin: 0 0 20px;
+    position: relative;
+	text-decoration: none;
+}
+.footer .recent-post li:last-child {
+    margin: 0;
+}
+.footer .post-thumbnail {
+	margin-top: 5px;
+}
+.footer .post-content h3, .footer h3 a {
+    line-height: 1.3;
+    margin: 0 0 10px;
+}
+.footer ul li a:hover, .footer ul.list-unstyled li a:hover  {
+	color: #04b962;
+	text-decoration: none;
+}
+#footer .list-inline.list-social {
+    margin: 0 0 10px;
+}
+#footer .list-inline.list-social a.social-icon {
+    border: none;
+    color: #fff;
+}
+#footer .list-inline.list-social a.social-icon:hover {
+    border: none;
+}
+#footer .contact-info.list-unstyled > li {
+    line-height: 1.3;
+    padding: 0 0 10px;
+}
+#footer .contact-info.list-unstyled > li i {
+    margin: 0 15px 0 0;
+}
+/*Footer Copyright*/
+.footer hr {
+    border-color: #fff;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+.footer-logo {
+    float: left;
+    height: 16px;
+    margin: 5px 20px 0 0;
+    width: auto;
+}
+.footer .copyright {
+    font-size: 14px;
+	padding-left: 60px;
+}
+.footer .copyright a.footer-site-link {
+    font-size: 14px;
+}
+a.footer-site-link {
+    color: #fff;
+}
+
+.scrollup {
+    bottom: 40px;
+	color: #04b962;
+    display: none;
+    font-size: 42px;
+    height: 40px;
+    position: fixed;
+    right: 22px;
+    text-align: center;
+    width: 40px;
+	z-index: 999;
+}
+
+/*
+|----------------------------------------------------------------------------
+	26. OTHER
+|----------------------------------------------------------------------------
+*/
+blockquote {
+	color: #222;
+    border-color: #04b962;
+	margin: 0 0 30px;
+}
+.SecTopMargin30 {
+    margin-top: 30px;
+}
+.SecTopMargin10 {
+    margin-top: 10px;
+}
+.TopMargin0 {
+    margin-top: 0;
+}
+.TopMargin30 {
+    margin-top: 30px;
+}
+.bottomMargin0 {
+    margin-bottom: 0;
+}

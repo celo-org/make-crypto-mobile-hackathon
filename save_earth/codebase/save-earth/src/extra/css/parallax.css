@@ -1,0 +1,41 @@
+/*
+|----------------------------------------------------------------------------
+	AboutMe - Personal Portfolio Resume Template Main CSS
+	Author: MGScoder
+	Author URL: https://themeforest.net/user/mgscoder
+|----------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------------
+	parallax
+|----------------------------------------------------------------------------
+*/
+.parallax::before {
+    background-color: rgba(0, 0, 0, 0.8);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.parallax {
+	background-attachment: fixed;
+	background-color: rgba(0, 0, 0, 0.8);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+	position: relative;
+	color: #fff;
+}
+
+
+/*
+|----------------------------------------------------------------------------
+	SUCCESS STORY
+|----------------------------------------------------------------------------
+*/
+#success-story.parallax {
+    background-image: url("../images/background/bg-5.jpg");
+}

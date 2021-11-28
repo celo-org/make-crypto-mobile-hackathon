@@ -1,0 +1,5 @@
+- In signin page, made some adjustment
+- deleted signup in src\auth
+- *You should remove Oauth.js*
+- You should delete profile in `src\auth\Profile.js`
+- 
