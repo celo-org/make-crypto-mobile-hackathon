@@ -4,26 +4,32 @@ _This is a sample submission repository.
 Please [__fork this repo__](https://help.github.com/articles/fork-a-repo/) and use this as a starting point for your hackathon project._
 
 ## Project Name
-### Team name
+### Team name : Bayurzx
+#### Hackathon Infrastructure and Web3 Track
 
 ##### Region location
 
 ##### Team Members
-- Teammate 1, role
-- Teammate 2, role
-- Teammate 3, role
+- Adebayo Omolumo 1
 
 #### Project Description
-Provide a clear statement of the challenges/issues/problems/gaps your project engages as well as a brief, high-level description of how your project engages the areas you've identified. What is the value of your approach? Who are the intended users?
+`Your Recommendation` gives you a chance to seek out recommendations on your picks from the celo community. Your picks are displayed for voting and best option wins the vote.
+
 
 #### Summary
-Describe the basic functionality of your project. What are the features you were able to implement? What features would you like to implement?
+Help end all disagreements with a simple click of a button!
 
 #### URLs
-List any URLs relevant to demonstrating your prototype
+https://yourrecommendation.azurewebsites.net/
+
+or 
+
+https://your-recommendation.netlify.app/
+
+
 
 #### Presentation
-List any links to your presentation or any related visuals you want to share.
+https://youtu.be/B9Cf504ehgE
 
 #### Next Steps
 What do you need to do next to turn this prototype into a working solution?
