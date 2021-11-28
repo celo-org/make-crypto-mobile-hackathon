@@ -1,8 +1,8 @@
 
-# ⚡ StreaEmzy ⚡
+# ⚡ StreamEzy ⚡
 
-## Project Name : StreaEmzy
-### Team name : StreaEmzy
+## Project Name : StreamEzy
+### Team name : StreamEzy
 #### Hackathon Track : Infrastructure and Web3 Track
 
 ##### Region location : India
