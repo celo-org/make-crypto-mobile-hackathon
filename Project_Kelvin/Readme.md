@@ -26,7 +26,8 @@ Allows users to create proposals, vote on proposals (using the Time/Temperature/
 https://celo.projectkelvin.io (Working App with Wallet Integration and Voting)
 
 #### Presentation
-Full preentation (8 minutes): https://share.descript.com/view/H2RQL7rx01s
+Full presentation (8 minutes): https://share.descript.com/view/H2RQL7rx01s
+
 Demo Only (3 Minutes):  https://web.descript.com/4dcb296e-8ce2-4ea2-9fdd-8b88a6fb7ea1/37a16
 
 #### Next Steps
