@@ -1,0 +1,415 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "animes_",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "image",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "link",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "voteCount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "group",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string[][]",
+                "name": "animeNames",
+                "type": "string[][]"
+            }
+        ],
+        "name": "createAnimeList",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getAnimeGroup",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "link",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "voteCount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "group",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct AnimeRecomendation.Anime[]",
+                "name": "animeData",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getCurrentGroup",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "link",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "voteCount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "group",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct AnimeRecomendation.Anime[]",
+                "name": "animeData",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "isThereWinner",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "payWinner",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "previousAnimesGrp_",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "image",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "link",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "voteCount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "group",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "previousWinner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "readAllAnime",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "link",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "voteCount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "group",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct AnimeRecomendation.Anime[]",
+                "name": "animeData",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "anime",
+                "type": "string"
+            }
+        ],
+        "name": "readAnimeByName",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "theAnimeName",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "theAnimeImg",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "theAnimeLink",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "theAnimeDesc",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "theAnimeVote",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "theAnimeGrp",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "num",
+                "type": "uint256"
+            }
+        ],
+        "name": "readAnimeGroup",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "totalVoteCount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "voters",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "address_",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "animeName",
+                "type": "string"
+            },
+            {
+                "internalType": "bool",
+                "name": "hasVoted",
+                "type": "bool"
+            },
+            {
+                "internalType": "uint256",
+                "name": "voteWeight",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "animeName",
+                "type": "string"
+            }
+        ],
+        "name": "voting",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "winningAnime",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "winner",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "winningAnimeName",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "winnerName",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "winningVoter",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
