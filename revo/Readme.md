@@ -5,6 +5,10 @@
 ### Region
 San Francisco, CA
 
+### Hackathon Track
+
+**DeFi Track**
+
 ### Team Members
 - Charlie Andrews-Jubelt, developer
 - Lisa Li, developer
