@@ -25,25 +25,31 @@ San Francisco, CA
 <figure>
 <img src="./images/img1.png" alt="drawing" width="400"/>
 
-<figcaption align = "center"><b>Fig.1 - Swapping CELO directly for an autocompounded stake in a cUSD/CELO yield farm</b></figcaption>
+<figcaption align = "center"><i>Swapping CELO directly for an autocompounded stake in a cUSD/CELO yield farm</i></figcaption>
 
 </figure>
+
+<br/>
+<br/>
 
 <figure>
 <img src="./images/img2.png" alt="drawing" width="400"/>
 
-<figcaption align = "center"><b>Fig.2 - Adding liquidity to a cUSD/FP liquidity pool, allowing users to "zap-in" for FP tokens</b></figcaption>
+<figcaption align = "center"><i>Adding liquidity to a cUSD/FP liquidity pool, allowing users to "zap-in" for FP tokens</i></figcaption>
 
 </figure>
+
+<br/>
+<br/>
 
 <figure>
 <img src="./images/img3.png" alt="drawing" width="400"/>
 
-<figcaption align = "center"><b>Fig.3 - Viewing current autocompounded positions and FP balances</b></figcaption>
+<figcaption align = "center"><i>Viewing current autocompounded positions and FP balances</i></figcaption>
 
 </figure>
 
-
+<br/>
 ## Project Description
 ### Inspiration
 
