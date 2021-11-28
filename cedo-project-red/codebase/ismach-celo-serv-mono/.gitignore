@@ -1,0 +1,13 @@
+.env
+
+.pytest_cache
+
+__pycache__
+
+*.pyc
+~TODO.md
+.vercel
+
+.DS_Store
+
+# .python-version
