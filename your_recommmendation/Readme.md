@@ -7,7 +7,7 @@ Please [__fork this repo__](https://help.github.com/articles/fork-a-repo/) and u
 ### Team name : Bayurzx
 #### Hackathon Infrastructure and Web3 Track
 
-##### Region location
+##### Lagos, Nigeria
 
 ##### Team Members
 - Adebayo Omolumo 1
