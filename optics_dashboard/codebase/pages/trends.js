@@ -106,7 +106,7 @@ export default function Trends(props) {
               {props.topOutflows &&
                 props.topOutflows[chain][timeframe].map((entry) => (
                   <Box
-                    key={entry.SYMBOL}
+                    key={entry.SYMBOL && entry.SYMBOL}
                     p={6}
                     borderWidth={1}
                     borderRadius="md"
@@ -117,16 +117,19 @@ export default function Trends(props) {
                       width="2em"
                       height="2em"
                       src={
-                        entry.SYMBOL == "WETH"
+                        entry.SYMBOL &&
+                        (entry.SYMBOL == "WETH"
                           ? "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/eth.svg"
                           : "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/" +
                             entry.SYMBOL.toLowerCase() +
-                            ".svg"
+                            ".svg")
                       }
                     />
-                    <Text pl={2}>{entry.SYMBOL}</Text>
+                    <Text pl={2}>{entry.SYMBOL && entry.SYMBOL}</Text>
                     <Spacer />
-                    <Text>{formatter.format(entry.VOLUME)}</Text>
+                    <Text>
+                      {entry.VOLUME && formatter.format(entry.VOLUME)}
+                    </Text>
                   </Box>
                 ))}
             </Stack>
@@ -138,6 +141,16 @@ export default function Trends(props) {
 }
 
 export async function getStaticProps() {
+  const polygonFlows = await fetch(
+    "https://api.flipsidecrypto.com/api/v2/queries/83ac3619-6d9a-4fd8-bb07-34881c815d51/data/latest"
+  ).then((r) => r.json());
+
+  const topInflowsRes = {
+    poly: polygonFlows.filter((entry) => entry.DIRECTION == "inflow"),
+  };
+  const topOutflowsRes = {
+    poly: polygonFlows.filter((entry) => entry.DIRECTION == "outflow"),
+  };
   const topInflows = {
     eth: {
       "24hours": await fetch(
@@ -149,6 +162,23 @@ export async function getStaticProps() {
       "1month": await fetch(
         `https://api.flipsidecrypto.com/api/v2/queries/6d14b23a-64b2-479f-a0db-1d64cc7de8fb/data/latest`
       ).then((r) => r.json()),
+    },
+    poly: {
+      "24hours": topInflowsRes.poly
+        .filter((entry) => entry.LABEL == "24hours")
+        .sort(function (a, b) {
+          return b.VOLUME - a.VOLUME;
+        }),
+      "7days": topInflowsRes.poly
+        .filter((entry) => entry.LABEL == "7days")
+        .sort(function (a, b) {
+          return b.VOLUME - a.VOLUME;
+        }),
+      "1month": topInflowsRes.poly
+        .filter((entry) => entry.LABEL == "1month")
+        .sort(function (a, b) {
+          return b.VOLUME - a.VOLUME;
+        }),
     },
   };
 
@@ -163,6 +193,23 @@ export async function getStaticProps() {
       "1month": await fetch(
         `https://api.flipsidecrypto.com/api/v2/queries/31878739-c254-4f31-8a4c-ff9301d908bd/data/latest`
       ).then((r) => r.json()),
+    },
+    poly: {
+      "24hours": topOutflowsRes.poly
+        .filter((entry) => entry.LABEL == "24hours")
+        .sort(function (a, b) {
+          return b.VOLUME - a.VOLUME;
+        }),
+      "7days": topOutflowsRes.poly
+        .filter((entry) => entry.LABEL == "7days")
+        .sort(function (a, b) {
+          return b.VOLUME - a.VOLUME;
+        }),
+      "1month": topOutflowsRes.poly
+        .filter((entry) => entry.LABEL == "1month")
+        .sort(function (a, b) {
+          return b.VOLUME - a.VOLUME;
+        }),
     },
   };
 

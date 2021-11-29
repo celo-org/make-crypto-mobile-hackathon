@@ -66,7 +66,8 @@ const ActivityBar = (props) => {
             <Box
               w="100%"
               h="40px"
-              bg={intervalStats() != 0 ? "lightgreen" : "lightgray"}
+              bg={intervalStats() != 0 ? "lightgreen" : ""}
+              borderWidth={1}
             ></Box>
           </Tooltip>
         );

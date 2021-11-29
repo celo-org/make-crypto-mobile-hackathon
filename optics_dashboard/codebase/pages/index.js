@@ -44,7 +44,7 @@ export default function Home(props) {
         <Box borderWidth={1} borderRadius="md" p={4}>
           <BarChart
             currency
-            title={"Volume"}
+            title={"Bridge volume"}
             key={chain}
             data={props.volume[chain]}
           />
