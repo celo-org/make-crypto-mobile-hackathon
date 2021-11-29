@@ -39,7 +39,7 @@ const Nav = (props) => {
                 width="20px"
                 height="20px"
               />
-              <Text pl={1}>Optics</Text>
+              <Text pl={2}>Optics</Text>
               <Spacer />
             </Box>
             {Object.entries(pages).map((entry) => (

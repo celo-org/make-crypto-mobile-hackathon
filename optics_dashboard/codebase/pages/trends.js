@@ -51,7 +51,9 @@ export default function Trends(props) {
             <option value="eth">Ethereum</option>
             <option value="poly">Polygon</option>
           </Select>
+          <Spacer p={1} />
           <Select
+            maxW={"20%"}
             onChange={(e) => {
               setTimeframe(e.target.value);
             }}
@@ -84,9 +86,11 @@ export default function Trends(props) {
                       width="2em"
                       height="2em"
                       src={
-                        "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/" +
-                        entry.SYMBOL.toLowerCase() +
-                        ".svg"
+                        entry.SYMBOL == "WETH"
+                          ? "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/eth.svg"
+                          : "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/" +
+                            entry.SYMBOL.toLowerCase() +
+                            ".svg"
                       }
                     />
                     <Text pl={2}>{entry.SYMBOL}</Text>
@@ -113,9 +117,11 @@ export default function Trends(props) {
                       width="2em"
                       height="2em"
                       src={
-                        "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/" +
-                        entry.SYMBOL.toLowerCase() +
-                        ".svg"
+                        entry.SYMBOL == "WETH"
+                          ? "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/eth.svg"
+                          : "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/" +
+                            entry.SYMBOL.toLowerCase() +
+                            ".svg"
                       }
                     />
                     <Text pl={2}>{entry.SYMBOL}</Text>

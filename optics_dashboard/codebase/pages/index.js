@@ -33,7 +33,6 @@ export default function Home(props) {
         >
           <option value="eth">Ethereum</option>
           <option value="poly">Polygon</option>
-          <option value="option3">Option 3</option>
         </Select>
         {/* <Box borderWidth={1} borderRadius="md" p={4}>
           <BarChart
@@ -64,7 +63,7 @@ export default function Home(props) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const totalBalRes = {
     eth: await fetch(
       "https://api.flipsidecrypto.com/api/v2/queries/9430ef32-ea4b-4681-9a11-bde367275ac9/data/latest"

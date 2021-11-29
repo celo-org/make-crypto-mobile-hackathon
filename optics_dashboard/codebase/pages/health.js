@@ -40,11 +40,13 @@ const ActivityBar = (props) => {
             interval
         );
         function intervalStats() {
-          let check = props.data.filter(
-            (e) =>
-              new Date(e.DATE).getTime() < endDateTime.getTime() &&
-              new Date(e.DATE).getTime() >= startDateTime.getTime()
-          );
+          let check = props.data
+            ? props.data.filter(
+                (e) =>
+                  new Date(e.DATE).getTime() < endDateTime.getTime() &&
+                  new Date(e.DATE).getTime() >= startDateTime.getTime()
+              )
+            : [];
           if (check.length) {
             return check[0].NUMBER_OF_TX;
           } else {
@@ -95,16 +97,26 @@ export default function Health(props) {
       <Nav />
       <Page>
         <Heading>Health</Heading>
-        <Text>Ethereum updater status</Text>
+        <Text>Ethereum updater activity</Text>
         <ActivityBar data={props.updaterStatus.eth} dateTime={dateTime} />
-        <Text>Ethereum updater status</Text>
+        <Text>Ethereum replica 1667591279 activity</Text>
         <ActivityBar
           data={props.replicaStatus.eth["1667591279"]}
           dateTime={dateTime}
         />
-        <Text>Ethereum updater status</Text>
+        <Text>Ethereum replica 1886350457 activity</Text>
         <ActivityBar
           data={props.replicaStatus.eth["1886350457"]}
+          dateTime={dateTime}
+        />
+        <Text>Polygon replica 6648936 activity</Text>
+        <ActivityBar
+          data={props.replicaStatus.poly["6648936"]}
+          dateTime={dateTime}
+        />
+        <Text>Polygon replica 1667591279 activity</Text>
+        <ActivityBar
+          data={props.replicaStatus.poly["1886350457"]}
           dateTime={dateTime}
         />
       </Page>
@@ -123,6 +135,14 @@ export async function getStaticProps() {
     eth: {
       1667591279: await fetch(
         `https://api.flipsidecrypto.com/api/v2/queries/06e072ba-e1a8-49b8-8d5a-f24d79b238a1/data/latest`
+      ).then((r) => r.json()),
+      1886350457: await fetch(
+        `https://api.flipsidecrypto.com/api/v2/queries/63a9b7b8-60c8-4647-a4e9-a5df4593a10f/data/latest`
+      ).then((r) => r.json()),
+    },
+    poly: {
+      6648936: await fetch(
+        `https://api.flipsidecrypto.com/api/v2/queries/bd9fff41-30cd-41ec-a302-4cb907dbefed/data/latest`
       ).then((r) => r.json()),
       1886350457: await fetch(
         `https://api.flipsidecrypto.com/api/v2/queries/63a9b7b8-60c8-4647-a4e9-a5df4593a10f/data/latest`
