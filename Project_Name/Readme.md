@@ -1,92 +1,33 @@
-# ⚡ Nftzi ⚡
 
-## Project Name : Nftzi
-### Team name : Birden
+# ⚡ Hackathon Project Template ⚡
+_This is a sample submission repository.
+Please [__fork this repo__](https://help.github.com/articles/fork-a-repo/) and use this as a starting point for your hackathon project._
+
+## Project Name
+### Team name
 #### Hackathon Track
 
-- NFT Track
-- DeFi Track
-
-##### Portugal, Lisbon
-
+##### Region location
 
 ##### Team Members
-- Vadim Filimonov, Smart contract and app development
-
-
-- Vladislava Bazhanova, Product Designer,
-Worked on product concept, developed UX/UI, engaged in Product Strategy.
-
+- Teammate 1, role
+- Teammate 2, role
+- Teammate 3, role
 
 #### Project Description
-Providing real-time finance for the CELO ecosystem using the Nftzi app as an example. Nftzi is an app that enables to turn your NFT into income streams. You can mint, rent and lend NFTs.  
+Provide a clear statement of the challenges/issues/problems/gaps your project engages as well as a brief, high-level description of how your project engages the areas you've identified. What is the value of your approach? Who are the intended users?
 
 #### Summary
-Flow dApp
-
-As an NFT “Lender”
-Create and lend as many NFTs as you like
-Your NFTs are protected and will always be returned to you
-Get richer. Withdraw money at least every second
-
-As an NFT “Renterr”
-Choose any NFT and rent several at once
-Use them for your needs: hype, work, happiness of being an owner
-Pay only for the time you rent
+Describe the basic functionality of your project. What are the features you were able to implement? What features would you like to implement?
 
 #### URLs
-Github Repo : https://github.com/fffilimonov/nftzi
-Live: loom : https://youtu.be/V7RP7Z6wPjk
+List any URLs relevant to demonstrating your prototype
 
 #### Presentation
-https://app.pitch.com/app/presentation/c8f5f4e1-fe52-4974-b103-a92d2064c761/1f81099c-e56c-4534-9f5b-a76c87306130
+List any links to your presentation or any related visuals you want to share.
 
 #### Next Steps
-Nftzi
-Flexible settings for rentals NFT
-Dynamic Fee Structures
-ERC-1155 token standard implementation
-UI/UX 
-Implement into platform marketplaces
-And a lot more!
-
-Provide an opportunity to get money in real time for renting or selling any goods or services. NFTzi is one of Birden's products, and in the future we will create different products based on this technology. 
+What do you need to do next to turn this prototype into a working solution?
 
 #### License
-https://github.com/fffilimonov/Nftzi/blob/master/LICENSE
-
-## What is Nftizi?
-Nftzi is an app that enables to turn your NFT into income streams.
-You can mint, rent and lend NFTs.
-
-## How it Works?
-###Flow dApp
-
-**As an NFT “Lender”**
-- Create and lend as many NFTs as you like
-- Your NFTs are protected and will always be returned to you
-- Get richer. Withdraw money at least every second
-
-**As an NFT “Renterr”**
-- Choose any NFT and rent several at once
-- Use them for your needs: hype, work, happiness of being an owner
-- Pay only for the time you rent
-
-## Our Goal
-Provide an opportunity to get money in real time for renting or selling any goods or services. NFTzi is one of Birden's products, and in the future we will create different products based on this technology. 
-
-## Future Implementations
-- Flexible settings for rentals NFT
-- Dynamic Fee Structures
-- ERC-1155 token standard implementation
-- UI/UX 
-- Implement into platform marketplaces
-- And a lot more!
-
-## GitHub Repos
-Front: link Contracts: link
-
-## Stay up to date with our future products!
-Twitter [@Nftzi_](https://twitter.com/Nftzi_)
-
-
+This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
