@@ -4,30 +4,35 @@ _This is a sample submission repository.
 Please [__fork this repo__](https://help.github.com/articles/fork-a-repo/) and use this as a starting point for your hackathon project._
 
 ## Remox
-### Team name
-#### Hackathon Track
+### Remox
+#### Infrastructure and Web3 Track
 
-##### Region location
+##### Baku, Azerbaijan
 
 ##### Team Members
-- Teammate 1, role
-- Teammate 2, role
-- Teammate 3, role
+- Orkhan, Team lead
+- Masud, Financials
+- Parviz, Frontend
+- Tuncay, Backend
+- Parviz, Designer
 
 #### Project Description
-Provide a clear statement of the challenges/issues/problems/gaps your project engages as well as a brief, high-level description of how your project engages the areas you've identified. What is the value of your approach? Who are the intended users?
+Basically, we can buy and store crypto as a person, but crypto wallets are not designed for business. You can't run a payroll, can't pay your suppliers, and can't earn interest while spending. We come with a new kind of money market account, you can pay your employees, contractors and suppliers fee-free on blockchain payment rails with fiat or crypto and earn interest up to 5% on your treasury while spending.
 
 #### Summary
-Describe the basic functionality of your project. What are the features you were able to implement? What features would you like to implement?
+We're planing to build Celo-backed AP/AR and Mass Payouts, which is helping international businesses who are willing to run their business on Celo blockchain (cUSD/cEUR). And our long-term vision, to simplify business operations/treasury management for Defi companies by building our payment stack on top of the Celo blockchain.
+1. Fiat on/off ramp through [Ramp](https://ramp.network/)
+2. Borderless payment rails through cUSD/cEUR
+3. Savings account up to 5% APY on cUSD/cEUR
 
 #### URLs
-List any URLs relevant to demonstrating your prototype
+https://youtu.be/bAhlDEXBrWE
 
 #### Presentation
-List any links to your presentation or any related visuals you want to share.
+https://drive.google.com/file/d/1pJxUgoECWuQTXuyALWWKdMdah-UIqAUl/view
 
 #### Next Steps
-What do you need to do next to turn this prototype into a working solution?
+Ubeswap, Moola and Mobius in the pipeline to use our platform
 
 #### License
 This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
