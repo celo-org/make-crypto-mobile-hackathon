@@ -34,13 +34,17 @@ export default function Home(props) {
           <option value="eth">Ethereum</option>
           <option value="poly">Polygon</option>
         </Select>
-        {/* <Box borderWidth={1} borderRadius="md" p={4}>
-          <BarChart
-            title={"Bridge balance"}
-            data={props.totalBal["eth"]}
-            color="#ffffff"
-          />
-        </Box> */}
+        {chain == "eth" && (
+          <Box borderWidth={1} borderRadius="md" p={4}>
+            <BarChart
+              currency
+              key={chain}
+              title={"Bridge balance"}
+              data={props.totalBal["eth"]}
+              color="#ffffff"
+            />
+          </Box>
+        )}
         <Box borderWidth={1} borderRadius="md" p={4}>
           <BarChart
             currency

@@ -11,6 +11,7 @@ import {
   Container,
   Text,
   Spacer,
+  Input,
 } from "@chakra-ui/react";
 const Nav = (props) => {
   const router = useRouter();
@@ -24,7 +25,7 @@ const Nav = (props) => {
 
   return (
     <Box borderBottomWidth="2px">
-      <Container maxW="container.lg">
+      <Container display="flex" alignItems="center" maxW="container.lg">
         <Tabs colorScheme="white" index={index}>
           <TabList borderWidth={0}>
             <Box
@@ -51,6 +52,8 @@ const Nav = (props) => {
             ))}
           </TabList>
         </Tabs>
+        <Spacer />
+        <Input placeholder="Search by address" size="md" maxW="sm" />
       </Container>
     </Box>
   );
