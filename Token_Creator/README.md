@@ -1,5 +1,11 @@
 # Token Creator
 
+Demo: https://opencurrency.technology
+
+Slides: https://docs.google.com/presentation/d/1FpLr_8vX_74b75cVOrYYXd6qb3pGNBmdAwYj2vtZwWo/edit?usp=sharing
+
+Medium: https://valentinseehausen.medium.com/learnings-from-my-first-blockchain-app-dapp-the-tokencreator-f92dfe6516e6
+
 ## Description
 
 The TokenCreater provides a frontend to seamlessly issue and manage tokens. 
