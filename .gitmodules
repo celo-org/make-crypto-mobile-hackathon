@@ -1,0 +1,6 @@
+[submodule "AlloyX/smart_contracts"]
+	path = AlloyX/smart_contracts
+	url = https://github.com/AlloyXChange/alloyx-smart-contracts
+[submodule "AlloyX/frontend"]
+	path = AlloyX/frontend
+	url = https://github.com/AlloyXChange/alloyx-mobile
