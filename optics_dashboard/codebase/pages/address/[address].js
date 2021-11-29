@@ -20,7 +20,6 @@ const BarChart = dynamic(() => import("@/components/BarChart"), {
 });
 
 export default function Address(props) {
-  console.log(props.volume && props.volume.eth);
   return (
     <div>
       <Head>

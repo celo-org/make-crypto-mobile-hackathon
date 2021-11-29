@@ -27,6 +27,9 @@ class ApexChart extends React.Component {
 
       options: {
         chart: {
+          animations: {
+            enabled: false,
+          },
           toolbar: {
             show: false,
             tools: {
