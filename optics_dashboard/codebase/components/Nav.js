@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import ChakraNextImage from "@/components/ChakraNextImage";
+import { SearchIcon } from "@chakra-ui/icons";
+
 import {
   Box,
   Tabs,
@@ -12,6 +14,8 @@ import {
   Text,
   Spacer,
   Input,
+  Button,
+  Flex,
 } from "@chakra-ui/react";
 const Nav = (props) => {
   const router = useRouter();
@@ -23,9 +27,19 @@ const Nav = (props) => {
   };
   const index = Object.entries(pages).findIndex((e) => e[0] == router.asPath);
 
+  const searchUser = (event) => {
+    event.preventDefault();
+    router.push("/address/" + event.target.address.value);
+  };
+
   return (
     <Box borderBottomWidth="2px">
-      <Container display="flex" alignItems="center" maxW="container.lg">
+      <Container
+        display="flex"
+        flexWrap="wrap"
+        alignItems="center"
+        maxW="container.lg"
+      >
         <Tabs colorScheme="white" index={index}>
           <TabList borderWidth={0}>
             <Box
@@ -53,7 +67,31 @@ const Nav = (props) => {
           </TabList>
         </Tabs>
         <Spacer />
-        <Input placeholder="Search by address" size="md" maxW="sm" />
+        <form
+          onSubmit={(e) => {
+            searchUser(e);
+          }}
+        >
+          <Flex>
+            <Input
+              required
+              placeholder="Search by address"
+              name="address"
+              size="md"
+              maxW="sm"
+            />{" "}
+            <Button
+              fontSize="sm"
+              type="submit"
+              fontWeight="regular"
+              leftIcon={<SearchIcon />}
+              size="md"
+              variant="outline"
+            >
+              Search
+            </Button>
+          </Flex>
+        </form>
       </Container>
     </Box>
   );

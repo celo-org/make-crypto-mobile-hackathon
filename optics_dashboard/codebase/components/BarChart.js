@@ -75,7 +75,11 @@ class ApexChart extends React.Component {
               let number = props.currency
                 ? formatter.format(Math.abs(value))
                 : Math.abs(value);
-              let direction = value > 0 ? "Inflows: " : "Outflows: ";
+              let direction = props.noflow
+                ? ""
+                : value > 0
+                ? "Inflows: "
+                : "Outflows: ";
               return direction + number;
             },
           },

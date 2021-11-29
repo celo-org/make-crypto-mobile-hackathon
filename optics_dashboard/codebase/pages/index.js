@@ -38,6 +38,7 @@ export default function Home(props) {
           <Box borderWidth={1} borderRadius="md" p={4}>
             <BarChart
               currency
+              noflow
               key={chain}
               title={"Bridge balance"}
               data={props.totalBal["eth"]}
