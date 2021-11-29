@@ -1,0 +1,183 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "CreatorCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "addressToId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "creators",
+				"outputs": [
+					{
+						"internalType": "contract Creator",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_creator",
+						"type": "address"
+					}
+				],
+				"name": "getCreatorByAddress",
+				"outputs": [
+					{
+						"internalType": "contract Creator",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastCreatorId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_cusd",
+						"type": "address"
+					}
+				],
+				"name": "newCreator",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "ownerToCreator",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"smart-contract/contracts/Fundsail.sol": "Fundsail"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"smart-contract/contracts/Fundsail.sol": {
+			"keccak256": "0xbea3e9ad2fe80f51e68aaada487b6f7f5ef1a2571d7be3ae05db07ee38084718",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2dd74bbb4ac2df85d70351057f65a97051186ee59533458ab50c9cfb92d74548",
+				"dweb:/ipfs/QmS8fcWHCzovUCugSD9CGZBTRppCgLbbWjQJQAHD3CChC3"
+			]
+		},
+		"smart-contract/contracts/interfaces/IERC20.sol": {
+			"keccak256": "0xb55c91551ef864f86edd296378fc3430f19798c0d1de468ff772a83a842df24c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f118e5d475795b9e612bb6c139db18493e65f47f181ddcef446f4fa43e7f80f5",
+				"dweb:/ipfs/QmSRWmUWxpjp8jMtDHqWysWbZqFNVKAyLHcmBtjJRvmoLF"
+			]
+		},
+		"smart-contract/contracts/libraries/SafeMath.sol": {
+			"keccak256": "0x6a4ec07e4ac4646536ac537963987080aeb77e3d0456b7b37b752b2ce353456e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b67ae2994952abc14d02fc7fa9865bdb691d757845b6dd1d002405195cd6c7b1",
+				"dweb:/ipfs/QmXGKMk4P25dmyhGTajzUZKeAYFsicN8BshSTbigETZppf"
+			]
+		}
+	},
+	"version": 1
+}

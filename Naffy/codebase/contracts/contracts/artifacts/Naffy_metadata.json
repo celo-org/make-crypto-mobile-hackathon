@@ -1,0 +1,209 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "CreatorCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "addressToId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "creators",
+				"outputs": [
+					{
+						"internalType": "contract Creator",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCreatorsLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_cusd",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_ceur",
+						"type": "address"
+					}
+				],
+				"name": "newCreator",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "ownerToCreator",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Naffy.sol": "Naffy"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x027b891937d20ccf213fdb9c31531574256de774bda99d3a70ecef6e1913ed2a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://087318b21c528119f649899f5b5580566dd8d7b0303d4904bd0e8580c3545f14",
+				"dweb:/ipfs/Qmbn5Mj7aUn8hJuQ8VrQjjEXRsXyJKykgnjR9p4C3nfLtL"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0xf101e8720213560fab41104d53b3cc7ba0456ef3a98455aa7f022391783144a0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3e7820bcf567e6892d937c3cb10db263a4042e446799bca602535868d822384e",
+				"dweb:/ipfs/QmPG2oeDjKncqsEeyYGjAN7CwAJmMgHterXGGnpzhha4z7"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0xa28007762d9da9db878dd421960c8cb9a10471f47ab5c1b3309bfe48e9e79ff4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://796ab6e88af7bf0e78def0f059310c903af6a312b565344e0ff524a0f26e81c6",
+				"dweb:/ipfs/QmcsVgLgzWdor3UnAztUkXKNGcysm1MPneWksF72AvnwBx"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SafeMath.sol": {
+			"keccak256": "0x8666f020bd8fc9dc14f07e2ebc52b5f236ab4cdde7c77679b08cb2f94730043b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://163776cbf565c722232393aa2d62cbe8a2ffb5805986abf4906c00e1e07450a6",
+				"dweb:/ipfs/QmPZoN9T3cb6o8bGhjBPZcz7im8T8DWhpr3tjLwhJJHx9N"
+			]
+		},
+		"contracts/Creator.sol": {
+			"keccak256": "0x5c04bbd810d6212cf16411d8b3f50e8c2d0dd814f3fae733c23805b8fd17e0f9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://74ed7f3c1963153a1fa898cd670f98fcc8067452ae874191ff5115840ca75fdc",
+				"dweb:/ipfs/QmUgnwftEVLfd4tub3PU6uzq5RDDt8a2SbXCcVHEwgBWvr"
+			]
+		},
+		"contracts/CreatorFactory.sol": {
+			"keccak256": "0xed640b64ec1f4d529c136b232b3181378637dac3e5011182e6165dc5027b6010",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://29227e6fce80f7b70c916361f374fcde21f48f8d52c52c31422302c34fb30665",
+				"dweb:/ipfs/QmaWFycoJakWj6mEgSKCAvgzhanEgp4j5nZtUHufpnayPd"
+			]
+		},
+		"contracts/Naffy.sol": {
+			"keccak256": "0x9ef63884bc8c62358f2a8b616c40cfed1195b2d6046b7262502c5293033fe1f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1c6d5b7ec6d6591be950217825cfa348fef18fdacb9216d5c5204058c50afcd9",
+				"dweb:/ipfs/QmUSKDVyg7fiYmvj723EDx62qWtQKsoRTV22FaKK4fauUE"
+			]
+		},
+		"contracts/interface/INaffyNFT.sol": {
+			"keccak256": "0x2eef490a87a6efa6aee87f2f9341baa4e3fb2a612a9cbee4229e70f973a10a69",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fbe9f601af46c31ee7ca72dbfe35870c2d66258141f2061e43c40a69024afdb2",
+				"dweb:/ipfs/QmR2hGtjDhMm1m5Nm7S6zLqootDbspdKFruRKQPJjBBNEt"
+			]
+		}
+	},
+	"version": 1
+}
