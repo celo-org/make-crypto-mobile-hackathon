@@ -2,6 +2,15 @@ import React, { useEffect } from "react";
 import Chart from "react-apexcharts";
 import { Box } from "@chakra-ui/react";
 
+var formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+
+  // These options are needed to round to whole numbers if that's what you want.
+  minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+  maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+});
+
 class ApexChart extends React.Component {
   constructor(props) {
     super(props);
@@ -53,22 +62,23 @@ class ApexChart extends React.Component {
         },
         tooltip: {
           theme: "dark",
+          y: {
+            formatter: function (
+              value,
+              { series, seriesIndex, dataPointIndex, w }
+            ) {
+              return props.currency
+                ? formatter.format(Math.abs(value))
+                : Math.abs(value);
+            },
+          },
           // followCursor: true,
-          fixed: {
-            enabled: true,
-            position: "topLeft",
-            offsetX: 0,
-            offsetY: "5em",
-          },
-          custom: function ({ series, seriesIndex, dataPointIndex, w }) {
-            return (
-              '<Box><div class="arrow_box">' +
-              "<span>" +
-              series[seriesIndex][dataPointIndex] +
-              "</span>" +
-              "</div></Box>"
-            );
-          },
+          // fixed: {
+          //   enabled: true,
+          //   position: "topLeft",
+          //   offsetX: 0,
+          //   offsetY: "5em",
+          // },
         },
         dataLabels: {
           enabled: false,

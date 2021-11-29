@@ -42,7 +42,12 @@ export default function Home(props) {
           />
         </Box> */}
         <Box borderWidth={1} borderRadius="md" p={4}>
-          <BarChart title={"Volume"} key={chain} data={props.volume[chain]} />
+          <BarChart
+            currency
+            title={"Volume"}
+            key={chain}
+            data={props.volume[chain]}
+          />
         </Box>
         <Box borderWidth={1} borderRadius="md" p={4}>
           <BarChart
