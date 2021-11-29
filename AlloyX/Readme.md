@@ -27,6 +27,8 @@ We are inspired by our experience issuing pools on Centrifuge and Goldfinch. Bei
 
 ## What it does
 
+We store the tokens we receive from the lending protocols in a vault and deploy an ERC20 token representing that vault. These vaults can contain any number of tokens that store an underlying asset value. We then create corresponding ERC20s on Celo and provide a mobile-first investment experience for Celo investors.
+
 ## How we built it
 
 We built our vault creation tool using React/ContractKit along with Truffle for contract deployment. Same goes for our investment portal.
@@ -43,10 +45,6 @@ We're proud that we have a workaround for Optics until the deployment is more st
 
 We learned that we still have a long way to go in terms of building ETF like composability. Also, there is a long way to go in terms of defining our legal construct so there's as little friction as possible.
 
-#### Summary
-
-We store the tokens we receive from the lending protocols in a vault and deploy an ERC20 token representing that vault. These vaults can contain any number of tokens that store an underlying asset value. We then create corresponding ERC20s on Celo and provide a mobile-first investment experience for Celo investors.
-
 #### URLs
 
 Deployed on testnets with a frontend on GCP. Still in private beta.
@@ -58,6 +56,10 @@ https://docs.google.com/presentation/d/1oLipyP8hWip7D5KCM6uhs-py0B2Dl_-zy0Dq6sor
 #### Next Steps
 
 Next up is to deploy the tokens over Optics bridge and implement our v2 model which allows for Liquidity Providers to assemble their token composition with an array of available assets.
+
+#### Video
+
+https://www.youtube.com/watch?v=cvoBspJJwms
 
 #### License
 
