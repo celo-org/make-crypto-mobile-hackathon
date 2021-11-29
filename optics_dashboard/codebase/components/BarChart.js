@@ -63,13 +63,20 @@ class ApexChart extends React.Component {
         tooltip: {
           theme: "dark",
           y: {
+            title: {
+              formatter: (value) => {
+                return;
+              },
+            },
             formatter: function (
               value,
               { series, seriesIndex, dataPointIndex, w }
             ) {
-              return props.currency
+              let number = props.currency
                 ? formatter.format(Math.abs(value))
                 : Math.abs(value);
+              let direction = value > 0 ? "Inflows: " : "Outflows: ";
+              return direction + number;
             },
           },
           // followCursor: true,
