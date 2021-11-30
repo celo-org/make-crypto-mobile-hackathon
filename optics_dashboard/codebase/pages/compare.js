@@ -66,6 +66,18 @@ export default function Health(props) {
             <option value="eth">Ethereum</option>
             <option value="poly">Polygon</option>
           </Select>
+          <Spacer p={1} />
+          <Select
+            maxW={"20%"}
+            onChange={(e) => {
+              setTimeframe(e.target.value);
+            }}
+            defaultValue="7days"
+          >
+            <option value="24hours">Last 24 hours</option>
+            <option value="7days">Last 7 days</option>
+            <option value="1month">Last month</option>
+          </Select>
         </Flex>
         <Text>Average transaction fee</Text>
         <Stack spacing={3} mt={4}>

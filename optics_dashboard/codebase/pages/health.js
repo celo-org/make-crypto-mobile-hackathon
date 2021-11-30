@@ -100,8 +100,12 @@ export default function Health(props) {
         <Heading>Health</Heading>
         <Text>
           Check the latest 24 hour activity of key contracts that power Optics.
-          All contracts monitored are from
-          <a href="https://github.com/celo-org/optics-monorepo">
+          All contracts monitored are from <span> </span>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/celo-org/optics-monorepo"
+          >
             Celo&apos;s Optics repo on Github.
           </a>
           <br />
