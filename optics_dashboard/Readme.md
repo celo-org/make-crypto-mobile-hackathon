@@ -12,7 +12,7 @@ This is a submission for Celo's Make Crypto Mobile Hackathon.
 
 - [Optics Dashboard](#optics-dashboard) (features and video demos)
 
-- [Technical docs](#technical-docs)
+- [Technical docs](#technical-documentation)
 
 ## Intro
 
