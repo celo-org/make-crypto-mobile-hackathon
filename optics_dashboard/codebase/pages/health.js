@@ -98,6 +98,17 @@ export default function Health(props) {
       <Nav />
       <Page>
         <Heading>Health</Heading>
+        <Text>
+          Check the latest 24 hour activity of key contracts that power Optics.
+          All contracts monitored are from{" "}
+          <a href="https://github.com/celo-org/optics-monorepo">
+            Celo's Optics repo on Github.
+          </a>
+          <br />
+          <br />
+        </Text>
+        <Text>Ethereum home activity</Text>
+        <ActivityBar data={props.homeStatus.eth} dateTime={dateTime} />
         <Text>Ethereum updater activity</Text>
         <ActivityBar data={props.updaterStatus.eth} dateTime={dateTime} />
         <Text>Ethereum replica 1667591279 activity</Text>
@@ -110,7 +121,13 @@ export default function Health(props) {
           data={props.replicaStatus.eth["1886350457"]}
           dateTime={dateTime}
         />
-        <Text>Polygon replica 6648936 activity</Text>
+        <br />
+        <br />
+        <br />
+        <br />
+        <Text>[Pending data from API] Polygon home activity</Text>
+        <ActivityBar data={props.homeStatus.poly} dateTime={dateTime} />
+        <Text>[Pending data from API] Polygon replica 6648936 activity</Text>
         <ActivityBar
           data={props.replicaStatus.poly["6648936"]}
           dateTime={dateTime}
@@ -126,6 +143,14 @@ export default function Health(props) {
 }
 
 export async function getStaticProps() {
+  const homeStatus = {
+    eth: await fetch(
+      `https://api.flipsidecrypto.com/api/v2/queries/b2861e12-d2e4-4a3d-98e0-614f0a973678/data/latest`
+    ).then((r) => r.json()),
+    poly: await fetch(
+      `https://api.flipsidecrypto.com/api/v2/queries/00cca4a3-76b3-4efc-81fa-a22e50277685/data/latest`
+    ).then((r) => r.json()),
+  };
   const updaterStatus = {
     eth: await fetch(
       `https://api.flipsidecrypto.com/api/v2/queries/6bc551bc-fc88-4457-baeb-bce7344413ca/data/latest`
@@ -151,6 +176,6 @@ export async function getStaticProps() {
     },
   };
   return {
-    props: { updaterStatus, replicaStatus }, // will be passed to the page component as props
+    props: { homeStatus, updaterStatus, replicaStatus }, // will be passed to the page component as props
   };
 }
