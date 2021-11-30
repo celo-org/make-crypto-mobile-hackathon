@@ -90,17 +90,21 @@ export default function Health(props) {
                   display="flex"
                   alignItems="center"
                 >
-                  {/* <ChakraNextImage
-                  width="2em"
-                  height="2em"
-                  src={
-                    entry.SYMBOL == "WETH"
-                      ? "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/eth.svg"
-                      : "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/" +
-                        entry.SYMBOL.toLowerCase() +
-                        ".svg"
-                  }
-                /> */}
+                  <Box
+                    bg="#18181c"
+                    alignItems="center"
+                    justifyContent="center"
+                    display="flex"
+                    borderRadius="full"
+                    width="2em"
+                    height="2em"
+                  >
+                    <ChakraNextImage
+                      width={"1.2em"}
+                      height={"1.2em"}
+                      src={props.icons[index]}
+                    />
+                  </Box>
                   <Text pl={2}>{index}</Text>
                   <Spacer />
                   {/* <Text>{formatter.format(props.bridges[index][originChain])}</Text> */}
@@ -121,8 +125,12 @@ export default function Health(props) {
 }
 
 export async function getStaticProps() {
+  const icons = {
+    Optics: "/celo.png",
+    Wormhole: "/wormhole.svg",
+  };
   const bridges = {
-    optics: {
+    Optics: {
       eth: await fetch(
         `https://api.flipsidecrypto.com/api/v2/queries/b0337f8d-66f1-4ab9-bfda-2dc62cce0f75/data/latest`
       ).then((r) => r.json()),
@@ -130,9 +138,17 @@ export async function getStaticProps() {
         `https://api.flipsidecrypto.com/api/v2/queries/99173a75-0c4d-48bf-bf5d-7bdcd8925521/data/latest`
       ).then((r) => r.json()),
     },
+    Wormhole: {
+      eth: await fetch(
+        `https://api.flipsidecrypto.com/api/v2/queries/ce647fce-60cb-48c6-828a-ccd19059ae0d/data/latest`
+      ).then((r) => r.json()),
+      poly: await fetch(
+        `https://api.flipsidecrypto.com/api/v2/queries/ce9fe72b-f2c6-48e4-ba35-842700dd6862/data/latest`
+      ).then((r) => r.json()),
+    },
   };
 
   return {
-    props: { bridges }, // will be passed to the page component as props
+    props: { bridges, icons }, // will be passed to the page component as props
   };
 }
