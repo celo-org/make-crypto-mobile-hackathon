@@ -4,12 +4,12 @@ Monitor the activity, metrics, and health of Celo's Optics cross-chain bridges i
 
 ### Live Demo: https://optics-dashboard.vercel.app/
 
-<br>
 This is a submission for Celo's Make Crypto Mobile Hackathon.
 
-<br>
 
-## About the project
+## Intro
+
+### Project details
 
 ##### Hackathon Track
 
@@ -27,14 +27,12 @@ Karl Lee, dev
 
 ### Problem
 
-As the team behind Wormhole bridge put it: 'The next frontier in blockchain technology is communication'.
+'The next frontier in blockchain technology is communication', according to the team behind Solana's Wormhole bridge.
 
-As DeFi apps, protocols, and financial products explode in crypto ecosystems, a major barrier arises.
+With DeFi apps, protocols, and financial products appearing in different crypto ecosystems, a major barrier arises.
+Capital flows across chains are restricted by limited communications between them.
 
-Capital flows across chains are restricted by limited communication abilities between them.
-
-Without communication, **crypto is forced to flow back to centralized exchanges or even to fiat off-ramps** in order to cross different chains.
-
+Without cross-chain communication, **crypto is forced to flow back to centralized exchanges or even to fiat off-ramps** in order to cross different chains.
 Decentralized finance cannot be so decentralized after all if we rely on centralized actors for bridging.
 
 <br>
@@ -43,9 +41,7 @@ Decentralized finance cannot be so decentralized after all if we rely on central
 
 Bridging assets across chains is often costly due to gas fees.
 
-According to Celo's docs, Optics is expected to cut '90% of gas costs' compared to a traditional cross-chain system.
-
-This is because Optics is a protocol that facilitates communication without header verification.
+According to Celo's docs, Optics is expected to cut '90% of gas costs' compared to a traditional cross-chain system. This is because Optics is a protocol that facilitates communication without header verification.
 
 <br>
 
@@ -63,19 +59,44 @@ There are currently:
 
 <br>
 
-### Optics Dashboard
+# Optics Dashboard
 
 Optics Dashboard serves several stakeholders:
 
 - Provides activity and trends for bridge operators and developers
 
-- Provides insights for chains looking to potentially integrate with Optics
+- Provides insights for blockchain teams that are looking to potentially integrate with Optics
 
-- Exposes opportunities for cross-chain apps, protocols, and DAOs who can integrate Optics for incentivize bridging via Optics
+- Exposes opportunities for cross-chain apps, protocols, and DAOs, that can integrate Optics to increase liquidity
 
 - Allows bridging users to monitor their transactions in one place
 
-#### URLs
+### Features
+#### Track key metrics with Overview
+From bridge balance to transaction count, see key metrics, visualized.
+
+https://user-images.githubusercontent.com/30199031/143970983-0b942621-6459-4f1b-b062-639edcba09cd.mp4
+
+#### Explore trends
+See the assets that are most popular with Optics users.
+
+https://user-images.githubusercontent.com/30199031/143971464-e60dc68c-8cc4-4cc2-a515-28fb41ffb497.mp4
+
+#### Check smart contract activity
+Monitor the key contracts that power Optics using the Health tab. See smart contract activity over the past 24 hours in one place.
+
+https://user-images.githubusercontent.com/30199031/143971971-39288007-be1f-43c5-8ad4-532224c992b0.mp4
+
+#### Search for bridging activity by address
+
+https://user-images.githubusercontent.com/30199031/143972669-19c0117d-b344-41ca-b388-b08877d626b5.mp4
+
+Want to see Optics activity for a specific address (including your own)? With Optics Dashboard you can see your bridging activity in seconds.
+
+#### Compare Optics fees with other cross-chain bridges
+This feature is currently under development.
+
+## URLs
 
 Demo: https://optics-dashboard.vercel.app/
 
@@ -85,7 +106,10 @@ Codebase: https://github.com/karlxlee/make-crypto-mobile-hackathon/tree/project/
 
 ### Next steps
 
-- Integrating pages to explore activity on a specific day or by a specific asset
+- Integrate bridge activity to and from Celo blockchain
+- Finish fee comparison feature
+- Explore activity on a specific day
+- Explore activity for a specific asset
 
 #### License
 
