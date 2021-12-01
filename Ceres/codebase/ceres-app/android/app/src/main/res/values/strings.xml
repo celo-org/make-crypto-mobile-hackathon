@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ceres</string>
+    <string name="facebook_app_id">497742440814144</string>
+    <string name="fb_login_protocol_scheme">fb497742440814144</string>
+</resources>

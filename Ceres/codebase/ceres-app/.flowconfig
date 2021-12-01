@@ -1,0 +1,9 @@
+nonstrict-import=warn
+deprecated-type=warn
+unsafe-getters-setters=warn
+unnecessary-invariant=warn
+signature-verification-failure=warn
+deprecated-utility=error
+untyped-type-import
+[version]
+^0.122.0

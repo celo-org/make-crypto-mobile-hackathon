@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splashscreen_bg">#ffffff</color>
+    <color name="status">#ffffff</color>
+    <color name="primary">#005CFF</color>
+    <color name="notifications">#005CFF</color>
+</resources>
