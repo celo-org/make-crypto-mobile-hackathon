@@ -10,7 +10,10 @@ import {
   Box,
   Spacer,
   HStack,
-  Tooltip,
+  Stat,
+  StatLabel,
+  StatNumber,
+  StatHelpText,
 } from "@chakra-ui/react";
 import ChakraNextImage from "@/components/ChakraNextImage";
 import dynamic from "next/dynamic";
@@ -30,8 +33,22 @@ export default function Address(props) {
       <Page>
         <Heading>{props.address}</Heading>
         <Text>Address</Text>
+        <Text>New transactions can take over 3 hours to propagate.</Text>
+        {/* <HStack>
+          <Stat borderWidth={1} borderRadius="md" p={6}>
+            <StatLabel>Volume bridged to date</StatLabel>
+            <Text fontSize="2xl">$0.00</Text>
+            <StatHelpText>Feb 12 - Feb 28</StatHelpText>
+          </Stat>
+          <Stat borderWidth={1} borderRadius="md" p={6}>
+            <StatLabel>Number of bridge transactions to date</StatLabel>
+            <Heading fontSize="2xl">$0.00</Heading>
+            <StatHelpText>Feb 12 - Feb 28</StatHelpText>
+          </Stat>
+        </HStack> */}
         <Box borderWidth={1} borderRadius="md" p={4}>
           <BarChart
+            key={props.address}
             currency
             title={"User volume on Ethereum"}
             data={props.volume && props.volume.eth}
@@ -39,6 +56,7 @@ export default function Address(props) {
         </Box>
         <Box borderWidth={1} borderRadius="md" p={4}>
           <BarChart
+            key={props.address}
             currency
             title={"User volume on Polygon"}
             data={props.volume && props.volume.poly}

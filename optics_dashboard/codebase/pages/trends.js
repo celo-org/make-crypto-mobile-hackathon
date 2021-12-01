@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import Page from "@/components/Page";
 import Nav from "@/components/Nav";
+import Link from "next/link";
 import {
   Heading,
   Text,
@@ -86,8 +87,10 @@ export default function Trends(props) {
                       width="2em"
                       height="2em"
                       src={
-                        entry.SYMBOL == "WETH"
-                          ? "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/eth.svg"
+                        ["WETH", "WMATIC"].includes(entry.SYMBOL)
+                          ? "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/" +
+                            entry.SYMBOL.substring(1).toLowerCase() +
+                            ".svg"
                           : "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/" +
                             entry.SYMBOL.toLowerCase() +
                             ".svg"
@@ -117,12 +120,13 @@ export default function Trends(props) {
                       width="2em"
                       height="2em"
                       src={
-                        entry.SYMBOL &&
-                        (entry.SYMBOL == "WETH"
-                          ? "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/eth.svg"
+                        ["WETH", "WMATIC"].includes(entry.SYMBOL)
+                          ? "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/" +
+                            entry.SYMBOL.substring(1).toLowerCase() +
+                            ".svg"
                           : "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/svg/color/" +
                             entry.SYMBOL.toLowerCase() +
-                            ".svg")
+                            ".svg"
                       }
                     />
                     <Text pl={2}>{entry.SYMBOL && entry.SYMBOL}</Text>
@@ -130,6 +134,59 @@ export default function Trends(props) {
                     <Text>
                       {entry.VOLUME && formatter.format(entry.VOLUME)}
                     </Text>
+                  </Box>
+                ))}
+            </Stack>
+          </GridItem>
+          <GridItem colSpan={{ sm: 2, md: 1, lg: 1 }}>
+            <Text>Top addresses receiving funds</Text>
+            <Stack spacing={3} mt={4}>
+              {props.topUsers &&
+                props.topUsers["inflow"][chain][timeframe].map((entry) => (
+                  <Box
+                    key={entry.USER}
+                    p={6}
+                    borderWidth={1}
+                    borderRadius="md"
+                    display="flex"
+                    alignItems="center"
+                  >
+                    <Link href={"/address/" + entry.USER}>
+                      <a>
+                        <Text pl={2} as="u">
+                          {entry.USER}
+                        </Text>
+                      </a>
+                    </Link>
+                    <Spacer />
+                    <Text>{formatter.format(entry.VOLUME)}</Text>
+                  </Box>
+                ))}
+            </Stack>
+          </GridItem>
+          <GridItem colSpan={{ sm: 2, md: 1, lg: 1 }}>
+            <Text>Top addresses sending funds</Text>
+            <Stack spacing={3} mt={4}>
+              {props.topUsers &&
+                props.topUsers["outflow"][chain][timeframe].map((entry) => (
+                  <Box
+                    key={entry.USER}
+                    p={6}
+                    borderWidth={1}
+                    borderRadius="md"
+                    display="flex"
+                    alignItems="center"
+                  >
+                    <Link href={"/address/" + entry.USER}>
+                      <a>
+                        <Text pl={2} as="u">
+                          {entry.USER}
+                        </Text>
+                      </a>
+                    </Link>
+
+                    <Spacer />
+                    <Text>{formatter.format(entry.VOLUME)}</Text>
                   </Box>
                 ))}
             </Stack>
@@ -213,7 +270,66 @@ export async function getStaticProps() {
     },
   };
 
+  const topUsersRes = {
+    eth: await fetch(
+      "https://api.flipsidecrypto.com/api/v2/queries/4b10d0e1-72b5-44f1-beb3-d8fdd6371a55/data/latest"
+    ).then((r) => r.json()),
+  };
+
+  const topUsers = {
+    inflow: {
+      eth: {
+        "24hours": topUsersRes.eth
+          .filter(
+            (entry) => entry.LABEL == "24hours" && entry.DIRECTION == "inflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+        "7days": topUsersRes.eth
+          .filter(
+            (entry) => entry.LABEL == "7days" && entry.DIRECTION == "inflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+        "1month": topUsersRes.eth
+          .filter(
+            (entry) => entry.LABEL == "1month" && entry.DIRECTION == "inflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+      },
+    },
+    outflow: {
+      eth: {
+        "24hours": topUsersRes.eth
+          .filter(
+            (entry) => entry.LABEL == "24hours" && entry.DIRECTION == "outflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+        "7days": topUsersRes.eth
+          .filter(
+            (entry) => entry.LABEL == "7days" && entry.DIRECTION == "outflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+        "1month": topUsersRes.eth
+          .filter(
+            (entry) => entry.LABEL == "1month" && entry.DIRECTION == "outflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+      },
+    },
+  };
+
   return {
-    props: { topInflows, topOutflows }, // will be passed to the page component as props
+    props: { topInflows, topOutflows, topUsers }, // will be passed to the page component as props
   };
 }
