@@ -43,11 +43,11 @@ Decentralized finance cannot be so decentralized after all if we rely on central
 
 
 
-### The role of Optics by Celo
+### Why Optics? (A protocol designed by Celo)
 
 Bridging assets across chains is often costly due to gas fees.
 
-According to Celo's docs, Optics is expected to cut '90% of gas costs' compared to a traditional cross-chain system. This is because Optics is a protocol that facilitates communication without header verification.
+According to [Celo's documentation](https://docs.celo.org/celo-codebase/protocol/optics), Optics is expected to cut '90% of gas costs' compared to a traditional cross-chain system. This is because Optics is a protocol that facilitates communication without header verification.
 
 
 
@@ -59,9 +59,25 @@ While security is always a key issue for cross-chain bridges, there is also a la
 
 For Optics, we are currently lacking:
 
-- Official or community dashboards for monitoring activity on Optics
-- Analytics to indicate the most intensive uses of Optics and potential integrations with DeFi apps and protocols that could help exploit these opportunities
-- A service for bridge users to monitor their cross-chain transactions in one place
+- Official or community dashboard for monitoring activity on Optics
+- Analytics for Optics
+- A way for individual users to track their bridging activity
+
+### Motivation behind the project
+
+Insights and analytics into cross-chain bridging seem to be far and few between. How much crypto are users bridging? Which currencies are bridged the most? Who are the most intensive users of bridges?
+
+Could trends in bridging activity indicate new opportunities for traders, devs, and protocols?
+
+This project was an opportunity to draw out and discover insights into Optics usage that were unavailable.
+
+I wanted to combine and apply my previous experience of designing front-ends with crypto-driven data to a more complex, multi-chain application.
+
+Previous projects: 
+- LUNAtic score calculator for Terra users: https://github.com/karlxlee/lunatic-score-calculator
+- PolyDAO analytics: https://github.com/karlxlee/polydao-analytics
+- Previous hackathon wins: https://gitcoin.co/karlxlee
+
 
 <br>
 
@@ -132,9 +148,18 @@ Codebase: https://github.com/karlxlee/make-crypto-mobile-hackathon/tree/project/
 
 ## Technical documentation
 
-Optics Dashboard is built using:
-- [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/) for the front-end
-- [Flipside Crypto](https://flipsidecrypto.com/) for the back-end
+Optics Dashboard needed to fulfil several technical needs:
+- Fetch the latest blockchain data
+- Visualize many data points in a useful way to stakeholders
+- Provide a speedy user interface
+- Allows for fast changes and improvements in both the frontend and backend
+
+ 
+ 
+For these reasons, the technology chosen for this app was:
+- Fast and modular front-end using [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/)
+- Effective visualization library using [ApexCharts](https://apexcharts.com/)
+- Flexible and easily-editable backend using [Flipside Crypto](https://flipsidecrypto.com/)
 
 ![optics-dashboard-architecture](https://user-images.githubusercontent.com/30199031/144093768-5a06a55f-c0dc-4ef3-8fef-d6ab0feb1da4.png)
 
