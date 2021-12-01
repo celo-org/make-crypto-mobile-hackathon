@@ -146,7 +146,7 @@ Codebase: https://github.com/karlxlee/make-crypto-mobile-hackathon/tree/project/
 ### Next steps
 
 - Integrate bridge activity to and from Celo blockchain
-- Finish fee comparison feature
+- Extend fee comparison feature to more bridges
 - Explore activity on a specific day
 - Explore activity for a specific asset
 
