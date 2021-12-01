@@ -29,8 +29,9 @@ In the near future, we will finish the Cash In Cash Out and make it 100% automat
 #### URLs
 0) [APK](https://drive.google.com/file/d/1zA0u2V1vOxy4H85zkH0ftIoN0N2qbA7F/view?usp=sharing)
 1) [APP on Play Store](https://play.google.com/store/apps/details?id=br.com.ceres.app)
-2) [Video](https://youtu.be/5vjkJDdEoT4)
-3) [DevPost](https://devpost.com/software/ceres-yield-aggregator-for-the-people)
+2) [Our Public repository](https://github.com/ailsoncgt/defiforthepeople)
+3) [Video](https://youtu.be/5vjkJDdEoT4)
+4) [DevPost](https://devpost.com/software/ceres-yield-aggregator-for-the-people)
 
 #### Presentation
 [Sergio´s story](https://docs.google.com/presentation/d/1sk-I4jDRz6c_dwLrkRTlVehWEM5I7vY4l6NKLnHvTc8/edit?usp=sharing)
