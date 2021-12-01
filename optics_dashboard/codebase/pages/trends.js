@@ -142,6 +142,7 @@ export default function Trends(props) {
             <Text>Top addresses receiving funds</Text>
             <Stack spacing={3} mt={4}>
               {props.topUsers &&
+                props.topUsers["inflow"][chain] &&
                 props.topUsers["inflow"][chain][timeframe].map((entry) => (
                   <Box
                     key={entry.USER}
@@ -168,6 +169,7 @@ export default function Trends(props) {
             <Text>Top addresses sending funds</Text>
             <Stack spacing={3} mt={4}>
               {props.topUsers &&
+                props.topUsers["outflow"][chain] &&
                 props.topUsers["outflow"][chain][timeframe].map((entry) => (
                   <Box
                     key={entry.USER}
