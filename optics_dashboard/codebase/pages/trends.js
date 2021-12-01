@@ -66,7 +66,7 @@ export default function Trends(props) {
           </Select>
         </Flex>
         <Grid
-          templateRows="repeat(2, 1fr)"
+          templateRows="repeat(2, minmax(75px, auto))"
           templateColumns="repeat(2, 1fr)"
           gap={4}
         >
@@ -271,10 +271,12 @@ export async function getStaticProps() {
         }),
     },
   };
-
   const topUsersRes = {
     eth: await fetch(
       "https://api.flipsidecrypto.com/api/v2/queries/4b10d0e1-72b5-44f1-beb3-d8fdd6371a55/data/latest"
+    ).then((r) => r.json()),
+    poly: await fetch(
+      "https://api.flipsidecrypto.com/api/v2/queries/d6fb7d97-1f0e-472b-b0fa-525545a2d7bd/data/latest"
     ).then((r) => r.json()),
   };
 
@@ -303,6 +305,29 @@ export async function getStaticProps() {
             return b.VOLUME - a.VOLUME;
           }),
       },
+      poly: {
+        "24hours": topUsersRes.poly
+          .filter(
+            (entry) => entry.LABEL == "24hours" && entry.DIRECTION == "inflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+        "7days": topUsersRes.poly
+          .filter(
+            (entry) => entry.LABEL == "7days" && entry.DIRECTION == "inflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+        "1month": topUsersRes.poly
+          .filter(
+            (entry) => entry.LABEL == "1month" && entry.DIRECTION == "inflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+      },
     },
     outflow: {
       eth: {
@@ -321,6 +346,29 @@ export async function getStaticProps() {
             return b.VOLUME - a.VOLUME;
           }),
         "1month": topUsersRes.eth
+          .filter(
+            (entry) => entry.LABEL == "1month" && entry.DIRECTION == "outflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+      },
+      poly: {
+        "24hours": topUsersRes.poly
+          .filter(
+            (entry) => entry.LABEL == "24hours" && entry.DIRECTION == "outflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+        "7days": topUsersRes.poly
+          .filter(
+            (entry) => entry.LABEL == "7days" && entry.DIRECTION == "outflow"
+          )
+          .sort(function (a, b) {
+            return b.VOLUME - a.VOLUME;
+          }),
+        "1month": topUsersRes.poly
           .filter(
             (entry) => entry.LABEL == "1month" && entry.DIRECTION == "outflow"
           )
