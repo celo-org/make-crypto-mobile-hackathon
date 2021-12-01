@@ -112,7 +112,9 @@ https://user-images.githubusercontent.com/30199031/143971464-e60dc68c-8cc4-4cc2-
 <br>
 
 #### Check smart contract activity
-Monitor the key contracts that power Optics using the Health tab. See smart contract activity over the past 24 hours in one place.
+Bridges can enter failure cases due to unexpected circumstances or errors. One indicator of an error and a disruption in bridge usage would be that bridge smart contracts stop sending regular updates.
+
+The health tab allows operators to monitor the key contracts that power Optics. See smart contract activity over the past 24 hours in one place. N.B. the blockchain data source has a lag period of a few hours currently, but should see better future performance.
 
 https://user-images.githubusercontent.com/30199031/143971971-39288007-be1f-43c5-8ad4-532224c992b0.mp4
 
