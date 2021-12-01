@@ -27,7 +27,8 @@ We started, but were not able to implement the Cash In Cash Out in BRL. We devel
 In the near future, we will finish the Cash In Cash Out and make it 100% automatic, creating a seamless experience to exchange BRL to cUSD, and vice versa. We also plan to integrate with Kresko to show synthetic assets.
 
 #### URLs
-1) [APP](https://play.google.com/store/apps/details?id=br.com.ceres.app)
+0) [APK](https://drive.google.com/file/d/1zA0u2V1vOxy4H85zkH0ftIoN0N2qbA7F/view?usp=sharing)
+1) [APP on Play Store](https://play.google.com/store/apps/details?id=br.com.ceres.app)
 2) [Video](https://youtu.be/5vjkJDdEoT4)
 3) [DevPost](https://devpost.com/software/ceres-yield-aggregator-for-the-people)
 
