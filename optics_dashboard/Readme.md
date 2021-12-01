@@ -6,6 +6,8 @@ Monitor the activity, metrics, and health of Celo's Optics cross-chain bridges i
 
 This is a submission for Celo's Make Crypto Mobile Hackathon.
 
+Video: https://www.youtube.com/watch?v=srCR1F83uKM
+
 ## Contents
 
 - [Intro](#intro)
@@ -15,6 +17,7 @@ This is a submission for Celo's Make Crypto Mobile Hackathon.
 - [Technical docs](#technical-documentation)
 
 ## Intro
+![optics-dashboard-cover](https://user-images.githubusercontent.com/30199031/144307033-60a80b05-3f7e-4f3c-88a8-f8c55b6f7619.png)
 
 ### Project details
 
