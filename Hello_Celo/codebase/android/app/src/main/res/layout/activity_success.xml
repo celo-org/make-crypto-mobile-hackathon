@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_padding"
+        tools:text="Success" />
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_above="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        app:tint="@color/teal_700"
+        android:src="@drawable/ic_baseline_check_24"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_padding"
+        tools:text="Here is the success message"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/default_padding"
+        tools:text="OK"
+        />
+
+
+
+</RelativeLayout>
