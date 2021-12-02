@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1060423468449",
+    "project_id": "crazyapp-65a8b",
+    "storage_bucket": "crazyapp-65a8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060423468449:android:f926c1a4b8a6822699f7e0",
+        "android_client_info": {
+          "package_name": "tech.crazynft.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060423468449-sm2fjtieg715pje56mcca5kf31qmho17.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.crazynft.app",
+            "certificate_hash": "dde6dba0feed945c4f56fe23e0099716bd5226e7"
+          }
+        },
+        {
+          "client_id": "1060423468449-9nl3v4coruh70q4c4ok415d2v446fg7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9NxBqfsnCglJZjQPEGmd8OdV9NbckwF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060423468449-9nl3v4coruh70q4c4ok415d2v446fg7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
