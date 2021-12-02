@@ -180,6 +180,10 @@ export async function getStaticProps() {
     },
   };
   return {
-    props: { homeStatus, updaterStatus, replicaStatus }, // will be passed to the page component as props
+    props: { homeStatus, updaterStatus, replicaStatus },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 seconds
+    revalidate: 10, // In seconds
   };
 }
