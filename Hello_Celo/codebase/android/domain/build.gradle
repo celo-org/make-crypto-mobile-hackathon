@@ -1,0 +1,41 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+repositories {
+    google()
+    mavenCentral()
+    maven {
+        url "https://dl.bintray.com/celo/celo"
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: kotlin_version
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
+
+    implementation 'org.apache.commons:commons-math3:3.6.1'
+    implementation 'org.web3j:core:4.6.3'
+//    implementation "org.ethereum:ethereumj-core:1.12.0-RELEASE"
+
+    api group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'
+    // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+    api "io.ktor:ktor-client-core:$ktor_version"
+    api "io.ktor:ktor-client-java:$ktor_version"
+
+    def spongyCastleVersion = '1.58.0.0'
+    api "com.madgag.spongycastle:core:$spongyCastleVersion"
+    api "com.madgag.spongycastle:prov:$spongyCastleVersion"
+//    implementation "com.madgag.spongycastle:pkix:$spongyCastleVersion"
+//    implementation "com.madgag.spongycastle:pg:$spongyCastleVersion"
+
+    // https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+    testImplementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.36.0.3'
+    testImplementation(group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.32')
+    testImplementation "junit:junit:4.10"
+
+
+}

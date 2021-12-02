@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_with_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:text="@string/username_explainer"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:hint="@string/username_titlecase" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginTop="@dimen/default_padding_half"
+        android:layout_marginRight="@dimen/default_padding"
+        android:text="@string/add_photo_titlecase" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/default_padding_half"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/add_titlecase"
+        android:src="@drawable/ic_baseline_check_24"
+        android:tint="@color/white"
+        app:backgroundTint="?attr/colorSecondaryVariant"
+        />
+
+</LinearLayout>

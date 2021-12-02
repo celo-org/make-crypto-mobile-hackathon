@@ -1,0 +1,12 @@
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url  "https://dl.bintray.com/celo/celo"
+        }
+    }
+}
+
+rootProject.name = "Hello Celo"
+include ':domain',':app'
