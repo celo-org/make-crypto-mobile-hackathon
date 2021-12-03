@@ -40,13 +40,14 @@ const Nav = (props) => {
         alignItems="center"
         maxW="container.lg"
       >
-        <Tabs colorScheme="white" index={index}>
-          <TabList borderWidth={0}>
+        <Tabs colorScheme="white" index={index} my={{ base: "0.5em", md: "0" }}>
+          <TabList borderWidth={0} display="flex" flexWrap="wrap">
             <Box
               display="flex"
               alignItems="center"
               justifyContent="center"
-              width={"80px"}
+              width={{ base: "100%", md: "80px" }}
+              mt={{ base: "1em", md: "0" }}
             >
               <ChakraNextImage
                 src="/celo.png"
@@ -68,6 +69,8 @@ const Nav = (props) => {
         </Tabs>
         <Spacer />
         <form
+          pt={{ base: "1em", md: "0" }}
+          w="100%"
           onSubmit={(e) => {
             searchUser(e);
           }}
