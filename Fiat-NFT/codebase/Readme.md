@@ -5,7 +5,7 @@ Fiat-NFT
 I worked alone
 
 #### Hackathon Track
-DeFi Track
+DeFi Track and India Track
 
 ##### Region location
 India
