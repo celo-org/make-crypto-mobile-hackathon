@@ -381,5 +381,6 @@ export async function getStaticProps() {
 
   return {
     props: { topInflows, topOutflows, topUsers }, // will be passed to the page component as props
+    revalidate: 60,
   };
 }

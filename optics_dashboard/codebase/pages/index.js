@@ -152,5 +152,6 @@ export async function getStaticProps(context) {
       txCount,
       userCount,
     },
+    revalidate: 60,
   };
 }

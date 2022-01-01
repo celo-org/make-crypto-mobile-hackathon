@@ -129,9 +129,9 @@ export default function Health(props) {
         <br />
         <br />
         <br />
-        <Text>[Pending data from API] Polygon home activity</Text>
+        <Text>Polygon home activity</Text>
         <ActivityBar data={props.homeStatus.poly} dateTime={dateTime} />
-        <Text>[Pending data from API] Polygon replica 6648936 activity</Text>
+        <Text>Polygon replica 6648936 activity</Text>
         <ActivityBar
           data={props.replicaStatus.poly["6648936"]}
           dateTime={dateTime}
