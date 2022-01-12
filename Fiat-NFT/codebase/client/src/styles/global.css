@@ -1,0 +1,318 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Lato, sans-serif;
+}
+
+h1 {
+	font-family: Lato, sans-serif;
+}
+
+p {
+	color: #ff0000;
+	font-size: 17px;
+	line-height: 1.5em;
+}
+
+.myst {
+	margin-left: 60px;
+	margin-right: 30px;
+	color: #000000;
+}
+h3 {
+	color: rgb(194, 194, 194);;
+}
+
+
+p + h3 {
+	margin-top: 40px;
+}
+
+.tryguy {
+	background-color: #ffffff;
+	height: 150vh;
+	object-fit: contain;
+}
+
+.suggest {
+	background-color: #2a2929;
+}
+
+.link {
+	color: #00988f;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	margin: 40px;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.content {
+	margin: 20px 0;
+	position: relative;
+}
+
+input[type='text'],
+select,
+textarea {
+	border: 1px solid #e2e2e2;
+}
+
+textarea {
+	resize: none;
+}
+
+button:focus,
+select:focus,
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	border-color: #00988f;
+}
+
+h3 small {
+	font-size: 15px;
+	margin-left: 10px;
+	color: #969696;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+.success {
+	color: #00988f;
+}
+
+button,
+.button {
+	background: white;
+	box-sizing: border-box;
+	border-radius: 4px;
+	border: 1px solid #e2e2e2;
+	font-size: 16px;
+	height: 60px;
+	padding: 14px 20px;
+	cursor: pointer;
+	color: black;
+	transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+button:hover,
+.button:hover {
+	background: #f5f5f5;
+}
+
+button.primary,
+.button.primary {
+	background: #00988f;
+	color: #ff7259;
+	padding: 14px 20px;
+	font-size: 16px;
+	border-radius: 4px;
+	border: none;
+	display: inline-block;
+	text-decoration: none;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+
+button.secondary {
+	background: tomato;
+	color: white;
+	padding: 14px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 4px;
+}
+
+button.secondary:hover {
+	background: white;
+}
+
+button.small {
+	height: 34px;
+	padding: 4px 15px;
+}
+
+button.full {
+	width: 100%;
+	font-weight: bold;
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+
+
+.fa-star,
+.fa-map-marker-alt {
+	color: #00988f;
+}
+
+small i + span {
+	margin-left: 10px;
+}
+
+/* forms */
+
+form input {
+	width: 100%;
+	height: 50px;
+	font-size: 16px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	border: 1px solid #e2e2e2;
+}
+
+form input[type='file'] {
+	padding: 13px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 8px;
+	color: #8a8a8a;
+}
+
+form .group + .group {
+	margin-top: 30px;
+}
+
+form .group + button {
+	margin-top: 30px;
+}
+
+form textarea {
+	width: 100%;
+	border-radius: 4px;
+	font-size: 16px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	height: 100px;
+}
+
+select {
+	width: 100%;
+	height: 50px;
+	background: white;
+	font-size: 16px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	border: 1px solid #e2e2e2;
+	cursor: pointer;
+}
+
+label.checkbox input {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	margin-top: 10px;
+}
+
+form.small label {
+	color: black;
+}
+
+form.small input {
+	margin-bottom: 2px;
+	height: 34px;
+	padding: 10px;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+form.small select {
+	height: 34px;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+h2 + form {
+	margin-top: 50px;
+}
+
+form .rating {
+	cursor: pointer;
+	font-size: 14px;
+	margin: 10px 0;
+}
+
+/* filters */
+
+.filters {
+	padding: 10px 50px;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.filters button {
+	height: 33px;
+	font-size: 14px;
+	padding: 7px 12px;
+	background: white;
+	border: 1px solid #e2e2e2;
+	margin-right: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.filters button:hover {
+	background-color: tomato;
+	border-color: tomato;
+	color: white;
+}
+
+
+.filters select {
+	height: 34px;
+	width: auto;
+	font-size: 14px;
+	background: white;
+	border: 1px solid #e2e2e2;
+	cursor: pointer;
+	border-radius: 3px;
+	min-width: 100px;
+	margin-right: 10px;
+	box-sizing: border-box;
+}
+
+.filters .search {
+	min-width: 250px;
+}
+
+.filters input {
+	height: 34px;
+	padding: 10px;
+	font-size: 14px;
+	border-radius: 3px;
+	border: 1px solid #e2e2e2;
+	width: 100px;
+	margin-right: 10px;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+
+.filters .search input:focus {
+	border-color: #00988f;
+}

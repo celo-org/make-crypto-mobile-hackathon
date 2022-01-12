@@ -1,0 +1,31 @@
+.map {
+	width: 100%;
+	height: calc(100vh - 110px);
+}
+
+.pin {
+	width: 100px;
+	height: 64px;
+	margin-top: -64px;
+	margin-left: -50px;
+	background-image: url('https://res.cloudinary.com/dsko6ntfj/image/upload/v1579740416/airbnb/pin.png');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: 25px 44px;
+	text-align: center;
+}
+
+.pin label {
+	background: white;
+	margin: 0 auto;
+	padding: 5px 8px;
+	border-radius: 4px;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+	height: 20px;
+}
+
+.pin.selected label {
+	background: #00988f;
+	color: white;
+	font-weight: bold;
+}
