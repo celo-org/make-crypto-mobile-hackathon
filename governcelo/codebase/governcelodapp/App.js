@@ -4,43 +4,20 @@ import * as React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import CIP from './CIP';
-import CGP from './CGP';
+import Proposals from './Proposals';
+import NewProposal from './NewProposal';
 
 const Stack = createStackNavigator();
-const Drawer = createDrawerNavigator();
 
-function firstScreenStack({ navigation }) {
-  return (
-    <CIP/>
-  );
-}
 
-function secondScreenStack({ navigation }) {
-  return (
-    <CGP/>
-  );
-}
-
-function App() {
+const App = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator
-        drawerContentOptions={{
-          activeTintColor: '#e91e63',
-          itemStyle: { marginVertical: 5 },
-        }}>
-        <Drawer.Screen
-          name="Improvement Proposals"
-          options={{ drawerLabel: 'Improvement Proposals' }}
-          component={firstScreenStack} />
-        <Drawer.Screen
-          name="Governance Proposals"
-          options={{ drawerLabel: 'Governance Proposals' }}
-          component={secondScreenStack} />
-      </Drawer.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="Proposals" component={Proposals} options={{ headerShown: false }}/>
+        <Stack.Screen name="New Proposal" component={NewProposal} />
+      </Stack.Navigator>      
     </NavigationContainer>
   );
 }

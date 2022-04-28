@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Dimensions, TouchableOpacity } from 'react-native';
 import { Octokit } from "@octokit/core";
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 export default class CIP extends React.Component{
 
@@ -17,17 +18,21 @@ export default class CIP extends React.Component{
         owner: 'celo-org',
         repo: 'celo-proposals'
       });
-
+      
+      
       this.setState({listofPRs_data: listofPRs_.data});
     } catch (error) {
+      
       console.log("listofPRserror", error);
     }
+
+    
     
   };
 
   render(){
     return (
-      <View style={styles.container}>
+      <View style={styles.containercip}>
         <StatusBar style="auto" translucent/>
         <FlatList
           style={styles.flatliststyle}
@@ -40,7 +45,10 @@ export default class CIP extends React.Component{
                 <Text>{item.body}</Text>
               </View>
             );
-          }}/>        
+        }}/>
+        <TouchableOpacity style={styles.fab} onPress={() => this.props.navigation.navigate('New Proposal')}>
+          <FontAwesome5 name={'pen'} size={20} color="#ffffff"/>
+        </TouchableOpacity>
         
       </View>
     );
@@ -49,7 +57,7 @@ export default class CIP extends React.Component{
 }
 
 const styles = StyleSheet.create({
-  container: {
+  containercip: {
     flex: 1,
     backgroundColor: '#dddddd',
     alignItems: 'center',
@@ -76,5 +84,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 17,
     marginVertical: 9
+  },
+  fab: {
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 35,
+    position: "absolute",
+    backgroundColor: '#999999',
+    bottom: '5.7%',
+    right: '9.4%',
+    width: 55,
+    height: 55
   }
 });
