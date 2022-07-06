@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, Dimensions, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Dimensions, TouchableOpacity, Alert } from 'react-native';
 import { Octokit } from "@octokit/core";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import * as SecureStore from 'expo-secure-store';
+import LogoutModal from './OAuth/LogoutModal';
+import LoggedoutModal from './OAuth/LoggedoutModal';
 
 export default class CIP extends React.Component{
 
@@ -10,7 +13,33 @@ export default class CIP extends React.Component{
     listofPRs_data: []
   };
 
+  funcnotloggedin = async () => {
+    Alert.alert(
+      "", 
+      "Log in to make a proposal", 
+      [ 
+        {
+          text: "DISMISS",
+          onPress: () => {},
+          style: "cancel"
+        }
+      ],
+      {cancelable: true}
+    );
+  }
+
+  ifloggedin = async () => {
+    let retrievedpatoken = await SecureStore.getItemAsync("patoken");
+    if (retrievedpatoken != null && retrievedpatoken.length > 0 ) {
+      this.props.navigation.navigate('New Proposal');
+    }
+    else{
+      this.funcnotloggedin();
+    }
+  };
+
   componentDidMount = async () => {
+    this._mounted = true;
     const octokit = new Octokit();
 
     try {
@@ -19,20 +48,21 @@ export default class CIP extends React.Component{
         repo: 'celo-proposals'
       });
       
-      
       this.setState({listofPRs_data: listofPRs_.data});
     } catch (error) {
       
       console.log("listofPRserror", error);
     }
-
-    
     
   };
 
+  componentWillUnmount = async () => {
+    this._mounted = false;
+  }
+
   render(){
     return (
-      <View style={styles.containercip}>
+      <View style={styles.container}>
         <StatusBar style="auto" translucent/>
         <FlatList
           style={styles.flatliststyle}
@@ -46,7 +76,13 @@ export default class CIP extends React.Component{
               </View>
             );
         }}/>
-        <TouchableOpacity style={styles.fab} onPress={() => this.props.navigation.navigate('New Proposal')}>
+        {this.props.propdenymodal && this._mounted ? <LogoutModal/> : <></> }
+        {this.props.proploggedoutmodal && this._mounted ? <LoggedoutModal/> : <></> }
+        <TouchableOpacity 
+          style={styles.fab} 
+          onPress={
+            () => {this.ifloggedin()}
+          }>
           <FontAwesome5 name={'pen'} size={20} color="#ffffff"/>
         </TouchableOpacity>
         
@@ -57,7 +93,7 @@ export default class CIP extends React.Component{
 }
 
 const styles = StyleSheet.create({
-  containercip: {
+  container: {
     flex: 1,
     backgroundColor: '#dddddd',
     alignItems: 'center',
@@ -92,7 +128,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     backgroundColor: '#999999',
     bottom: '5.7%',
-    right: '9.4%',
+    right: '4.7%',
     width: 55,
     height: 55
   }

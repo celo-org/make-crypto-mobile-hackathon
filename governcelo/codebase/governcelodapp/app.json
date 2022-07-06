@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "governcelodapp",
-    "slug": "governcelodapp",
+    "name": "Governcelo",
+    "slug": "Governcelo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,16 +16,17 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "scheme": "com.celo.governcelo",
+    "scheme": "org.celo.governcelo",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "org.celo.governcelo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.celo.governcelo",
+      "package": "org.celo.governcelo",
       "versionCode": 1
     },
     "web": {

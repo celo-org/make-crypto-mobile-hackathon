@@ -1,7 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
-import {P_A_TOKEN} from '@env'
+import { CLIENT_ID, CLIENT_SECRET } from '@env';
+import * as SecureStore from 'expo-secure-store';
+import { Buffer } from 'buffer';
+import { Octokit } from "@octokit/core";
+import SnackBar from 'react-native-snackbar-component';
 
 export default class NewProposal extends React.Component{
 
@@ -14,21 +18,52 @@ export default class NewProposal extends React.Component{
     owner_state: "",
     updaterefstr_state: "",
     defaultbranch_state: "",
-    newbranchname: ""
+    newbranchname: "",
+    showlogout: false
   };
 
   componentDidMount = async () => {
     
   };
+
+  validate = async () => {
+    let retrievedpatoken = await SecureStore.getItemAsync("patoken");
+    if (retrievedpatoken != null && retrievedpatoken.length > 0 ){
+      try {
+        const octokit = new Octokit();
+        let basicAuth = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
+        let response = await octokit.request('POST /applications/{client_id}/token', {
+          headers: {
+            authorization: `basic ${basicAuth}`
+          },
+          client_id: CLIENT_ID,
+          access_token: retrievedpatoken
+        });
+        if(response.status === 200){
+          this.createbranch(retrievedpatoken);
+        }
+      } 
+      catch (error) {
+        SecureStore.deleteItemAsync("patoken");
+        
+        let retrievedpatoken = await SecureStore.getItemAsync("patoken");
+        if (retrievedpatoken == null) {
+          this.setState({showlogout: true});
+          if (this.state.showlogout) {
+            setTimeout(() => {
+              this.setState({showlogout: false});
+            }, 5000);
+          }
+        }
+      }
+    }
+  }
   
-  createbranch = async () => {
-    const { Octokit } = require("@octokit/core");
+  createbranch = async (retrievedpatoken_) => {
     
     const octokit = new Octokit({
-      auth: P_A_TOKEN
+      auth: retrievedpatoken_
     });
-    
-    this.setState({octokit_state: octokit})
 
     
     let user = await octokit.request('GET /user', {
@@ -292,10 +327,16 @@ export default class NewProposal extends React.Component{
           multiline
           numberOfLines={10}
           textAlignVertical={'top'}/>
-        <TouchableOpacity onPress={()=> this.createbranch()} style={styles.checkprbutton}>
+        <TouchableOpacity onPress={()=> this.validate()} style={styles.checkprbutton}>
           <Text style={styles.txtcheckpr}>MAKE PR</Text>
         </TouchableOpacity>     
-        
+        <SnackBar
+          visible={this.state.showlogout} 
+          textMessage="Governcelo has been denied authorization. Please log in" 
+          messageStyle = {{marginRight: 7}}
+          actionHandler={()=>{this.setState({showlogout: false})}} 
+          accentColor="#fcc16b"
+          actionText="OK"/>
       </View>
     );
   }
