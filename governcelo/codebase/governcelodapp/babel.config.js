@@ -1,7 +1,7 @@
 module.exports = function(api) {
   api.cache(true);
   return {
-    presets: ['babel-preset-expo'],
+    presets: ['babel-preset-expo', '@babel/preset-flow'],
     plugins: [
       [
         "module:react-native-dotenv", {
@@ -11,7 +11,8 @@ module.exports = function(api) {
           "whitelist": null,
           "safe": false,
           "allowUndefined": true
-        }]
+        }],
+      'react-native-reanimated/plugin'
     ]
   };
 };

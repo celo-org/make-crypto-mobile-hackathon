@@ -3,6 +3,7 @@ import { SafeAreaView, View, StyleSheet, Image, Text, TouchableOpacity } from 'r
 import { DrawerItemList, getDrawerStatusFromState, DrawerItem } from '@react-navigation/drawer';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { Octokit } from "@octokit/core";
+import {Feather} from '@expo/vector-icons';
 import * as SecureStore from 'expo-secure-store';
 import { CLIENT_ID, CLIENT_SECRET } from '@env';
 import { Buffer } from 'buffer';
@@ -85,14 +86,26 @@ export default class SidebarMenu extends React.Component{
   logout = async () => {
     let retrievedpatoken = await SecureStore.getItemAsync("patoken");
     if (retrievedpatoken != null && retrievedpatoken.length > 0 ){
-      SecureStore.deleteItemAsync("patoken"); 
-      this.setState({loggedin: false});
-      this.setState({profilepicurl: "", username: ""});
-      this.setState({logindisabled: false});
-      let retrievedpatoken2 = await SecureStore.getItemAsync("patoken");
-      if (retrievedpatoken2 == null) {
-        this.props.navigation.closeDrawer();
-        this.props.loggedout_parent(true);
+      const octokit = new Octokit();
+      let basicAuth = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
+      let logoutresponse = await octokit.request('DELETE /applications/{client_id}/token', {
+        headers: {
+          authorization: `basic ${basicAuth}`
+        },
+        client_id: CLIENT_ID,
+        access_token: retrievedpatoken
+      });
+      
+      if(logoutresponse.status === 204){
+        SecureStore.deleteItemAsync("patoken"); 
+        this.setState({loggedin: false});
+        this.setState({profilepicurl: "", username: ""});
+        this.setState({logindisabled: false});
+        let retrievedpatoken2 = await SecureStore.getItemAsync("patoken");
+        if (retrievedpatoken2 == null) {
+          this.props.navigation.closeDrawer();
+          this.props.loggedout_parent(true);
+        }
       }
     }
   }
@@ -124,7 +137,7 @@ export default class SidebarMenu extends React.Component{
         <View style={{marginTop: 10}}>
           <DrawerItemList {...this.props} />
           {this.state.loggedin ?
-           <DrawerItem label="Log Out" onPress={() => this.logout()}/>
+           <DrawerItem icon={() => <Feather name={'log-out'} size={20} style={{color: '#808080'}} />} label="Log Out" onPress={() => this.logout()}/>
           : <></> }
           
         </View>

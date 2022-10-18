@@ -1,17 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Text, Modal } from 'react-native';
 
-export default class LogoutModal extends React.Component{
-
-  state = {
-  };
-
+export default class CIPSuccessModal extends React.Component{
   
-
-  componentDidMount = async () => {
-    
-  };
-
   render(){
     return (
 			<View style={styles.centeredView}>
@@ -22,7 +13,7 @@ export default class LogoutModal extends React.Component{
 				>
 					<View style={styles.centeredView}>
 						<View style={styles.modalView}>
-							<Text>Governcelo has been denied authorization. Please log in</Text>
+							<Text style={{color: '#55bf7d'}}>Proposal made successfuly</Text>
 						</View>
 					</View>
 				</Modal>
@@ -45,6 +36,7 @@ const styles = StyleSheet.create({
     padding: 10,
     width: '80%',
     alignItems: "center",
+    flexDirection: "column",
     shadowColor: "#000000",
     shadowOffset: {
       height: 2

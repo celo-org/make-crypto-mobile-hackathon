@@ -6,6 +6,7 @@ import * as SecureStore from 'expo-secure-store';
 import { Buffer } from 'buffer';
 import { Octokit } from "@octokit/core";
 import SnackBar from 'react-native-snackbar-component';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export default class NewProposal extends React.Component{
 
@@ -19,7 +20,10 @@ export default class NewProposal extends React.Component{
     updaterefstr_state: "",
     defaultbranch_state: "",
     newbranchname: "",
-    showlogout: false
+    showlogout: false,
+    makeproposaldisabled: false,
+    showproposalnotmade: false,
+    proposalsuccess: false
   };
 
   componentDidMount = async () => {
@@ -27,6 +31,7 @@ export default class NewProposal extends React.Component{
   };
 
   validate = async () => {
+    this.setState({makeproposaldisabled: true});
     let retrievedpatoken = await SecureStore.getItemAsync("patoken");
     if (retrievedpatoken != null && retrievedpatoken.length > 0 ){
       try {
@@ -42,6 +47,9 @@ export default class NewProposal extends React.Component{
         if(response.status === 200){
           this.createbranch(retrievedpatoken);
         }
+        else{
+          this.setState({makeproposaldisabled: false, showproposalnotmade: true});
+        }
       } 
       catch (error) {
         SecureStore.deleteItemAsync("patoken");
@@ -51,10 +59,18 @@ export default class NewProposal extends React.Component{
           this.setState({showlogout: true});
           if (this.state.showlogout) {
             setTimeout(() => {
-              this.setState({showlogout: false});
+              this.setState({makeproposaldisabled: false, showlogout: false});
             }, 5000);
           }
         }
+      }
+    }
+    else if (retrievedpatoken == null) {
+      this.setState({showlogout: true});
+      if (this.state.showlogout) {
+        setTimeout(() => {
+          this.setState({makeproposaldisabled: false, showlogout: false});
+        }, 5000);
       }
     }
   }
@@ -159,11 +175,12 @@ export default class NewProposal extends React.Component{
         this.funccommitblob_step0(octokit, owner, refstr)
       }
       else{
-        
+        this.setState({makeproposaldisabled: false, showproposalnotmade: true});
       }
       
     } catch (error) {
       console.log("createbrancherror", error);
+      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
     }
     
   }
@@ -189,10 +206,12 @@ export default class NewProposal extends React.Component{
           repo: 'make-crypto-mobile-hackathon',
           ref: refstr_
         })
+        this.setState({makeproposaldisabled: false, showproposalnotmade: true});
       }
       
     } catch (error) {
       console.log("commitbloberror", error);
+      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
     }
     
   }
@@ -228,11 +247,13 @@ export default class NewProposal extends React.Component{
           repo: 'make-crypto-mobile-hackathon',
           ref: updaterefs_refstr
         })
+        this.setState({makeproposaldisabled: false, showproposalnotmade: true});
       }
       
 
     } catch (error) {
       console.log("committreeerror", error);
+      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
     }
     
   }
@@ -264,11 +285,13 @@ export default class NewProposal extends React.Component{
           repo: 'make-crypto-mobile-hackathon',
           ref: this.state.updaterefstr_state
         })
+        this.setState({makeproposaldisabled: false, showproposalnotmade: true});
       }
       
 
     } catch (error) {
       console.log("commit_error", error);
+      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
     }
 
     
@@ -293,16 +316,18 @@ export default class NewProposal extends React.Component{
           repo: 'make-crypto-mobile-hackathon',
           ref: this.state.updaterefstr_state
         })
+        this.setState({makeproposaldisabled: false, showproposalnotmade: true});
       }
     } catch (error) {
       console.log("updaterefserror", error);
+      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
     }
   }
 
   //PR after commit is made
   funcmakePR = async (octokit_PR) => {
     try {
-      await octokit_PR.request('POST /repos/{owner}/{repo}/pulls', {
+      let proposal = await octokit_PR.request('POST /repos/{owner}/{repo}/pulls', {
         owner: this.state.owner_state,
         repo: "make-crypto-mobile-hackathon",
         title: "test title",
@@ -310,8 +335,22 @@ export default class NewProposal extends React.Component{
         base: this.state.defaultbranch_state,  
         head: this.state.newbranchname
       });
+
+      if (proposal.status === 201) {
+        this.setState({proposalsuccess: true});
+        setTimeout(() => {
+          this.setState({makeproposaldisabled: false});
+          this.setState({proposalsuccess: false});
+        }, 5000);
+      }
+      else{
+        this.setState({makeproposaldisabled: false, showproposalnotmade: true});
+      }
+      
+      
     } catch (error) {
       console.log("makePRerror", error);
+      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
     }
   }
 
@@ -327,16 +366,39 @@ export default class NewProposal extends React.Component{
           multiline
           numberOfLines={10}
           textAlignVertical={'top'}/>
-        <TouchableOpacity onPress={()=> this.validate()} style={styles.checkprbutton}>
-          <Text style={styles.txtcheckpr}>MAKE PR</Text>
-        </TouchableOpacity>     
+        {this.state.proposalsuccess ?
+          <TouchableOpacity disabled={true} style={styles.styleproposalsuccess}>
+            <FontAwesome5 name="check" size={24} color="#55bf7d" />
+          </TouchableOpacity>
+        : 
+          <TouchableOpacity disabled={this.state.makeproposaldisabled} onPress={() => this.validate()} style={styles.makeprbutton}>
+            <Text style={styles.txtmakepr}>MAKE PROPOSAL</Text>
+          </TouchableOpacity> 
+        }
         <SnackBar
           visible={this.state.showlogout} 
           textMessage="Governcelo has been denied authorization. Please log in" 
           messageStyle = {{marginRight: 7}}
-          actionHandler={()=>{this.setState({showlogout: false})}} 
+          actionHandler={()=>{
+            this.setState({makeproposaldisabled: false, showlogout: false});
+          }} 
           accentColor="#fcc16b"
           actionText="OK"/>
+        <SnackBar
+          visible={this.state.showproposalnotmade} 
+          textMessage="The proposal could not be made. Please try again." 
+          messageStyle = {{marginRight: 7}}
+          actionHandler={()=>{
+            this.setState({showproposalnotmade: false});
+          }} 
+          accentColor="#fcc16b"
+          actionText="OK"/>
+        <SnackBar
+          visible={this.state.proposalsuccess} 
+          textMessage="Proposal made successfuly"
+          actionHandler={()=>{}}
+          accentColor="#55bf7d"
+          actionText="OK" />
       </View>
     );
   }
@@ -369,15 +431,23 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     width: '70%'
   },
-  checkprbutton: {
+  makeprbutton: {
     backgroundColor: "#55bf7d",
     borderRadius: 5,
-    paddingHorizontal: 60,
+    paddingHorizontal: 35,
     paddingVertical: 10,
     marginVertical: 5
   },
-  txtcheckpr: {
+  txtmakepr: {
     color: '#ffffff',
     fontSize: 13
+  },
+  styleproposalsuccess: {
+    borderRadius: 5, 
+    borderColor: "#55bf7d", 
+    borderWidth: 1, 
+    marginVertical: 5,
+    paddingHorizontal: 75,
+    paddingVertical: 5
   }
 });

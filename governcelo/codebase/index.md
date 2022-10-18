@@ -20,4 +20,4 @@ Resume to terminal/cli and run:
 
 ```yarn```
 
-```expo run:android```
+```npx expo run:android```
