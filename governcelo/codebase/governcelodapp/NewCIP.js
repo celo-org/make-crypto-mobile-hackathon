@@ -9,6 +9,8 @@ import SnackBar from 'react-native-snackbar-component';
 import { FontAwesome5, AntDesign } from '@expo/vector-icons';
 import { List } from 'react-native-paper';
 import CIPSuccessModal from './CIP/CIPSuccessModal';
+import NetInfo from "@react-native-community/netinfo";
+import ForkModal from './CIP/ForkModal';
 
 export default class NewCIP extends React.PureComponent{
 
@@ -75,15 +77,23 @@ export default class NewCIP extends React.PureComponent{
         }
       } 
       catch (error) {
-        SecureStore.deleteItemAsync("patoken");
-        
-        let retrievedpatoken = await SecureStore.getItemAsync("patoken");
-        if (retrievedpatoken == null) {
-          this.setState({showlogout: true});
-          if (this.state.showlogout) {
-            setTimeout(() => {
-              this.setState({makeproposaldisabled: false, showlogout: false});
-            }, 5000);
+        if (error.toString() === "HttpError: Network request failed") {
+          this.setState({netfork: true, netforkmsg: "Weak Connection", makeproposaldisabled: false});
+          setTimeout(() => {
+            this.setState({netfork: false, netforkmsg: ""});
+          }, 3000);
+        }
+        else{
+          SecureStore.deleteItemAsync("patoken");
+          
+          let retrievedpatoken = await SecureStore.getItemAsync("patoken");
+          if (retrievedpatoken == null) {
+            this.setState({showlogout: true});
+            if (this.state.showlogout) {
+              setTimeout(() => {
+                this.setState({makeproposaldisabled: false, showlogout: false});
+              }, 5000);
+            }
           }
         }
       }
@@ -103,29 +113,42 @@ export default class NewCIP extends React.PureComponent{
     const octokit = new Octokit({
       auth: retrievedpatoken_
     });
+    let owner = "";
 
-    
-    let user = await octokit.request('GET /user', {
-      accept: 'application/vnd.github.v3+json'
-    });
-    let emails = await octokit.request('GET /user/emails', {
-      accept: 'application/vnd.github.v3+json'
-    })
-    
-    emails.data.forEach(email_ => {
-      if (email_.visibility === "public" && email_.primary) {
-        this.setState({emailaddress: email_.email})
-      } 
-      else if (email_.visibility === "public" && !email_.email.endsWith("@users.noreply.github.com") && ( this.state.emailaddress.endsWith("@users.noreply.github.com") || this.state.emailaddress.length == 0)){
-        this.setState({emailaddress: email_.email})
-      }
-      else if (email_.email.endsWith("@users.noreply.github.com") && this.state.emailaddress.length == 0){
-        this.setState({emailaddress: email_.email})
-      }
-    });
+    try {
+      let user = await octokit.request('GET /user', {
+        accept: 'application/vnd.github.v3+json'
+      });
+      let emails = await octokit.request('GET /user/emails', {
+        accept: 'application/vnd.github.v3+json'
+      })
+      
+      emails.data.forEach(email_ => {
+        if (email_.visibility === "public" && email_.primary) {
+          this.setState({emailaddress: email_.email})
+        } 
+        else if (email_.visibility === "public" && !email_.email.endsWith("@users.noreply.github.com") && ( this.state.emailaddress.endsWith("@users.noreply.github.com") || this.state.emailaddress.length == 0)){
+          this.setState({emailaddress: email_.email})
+        }
+        else if (email_.email.endsWith("@users.noreply.github.com") && this.state.emailaddress.length == 0){
+          this.setState({emailaddress: email_.email})
+        }
+      });
 
-    let owner = user.data.login;
-    this.setState({owner_state: user.data.login})
+      owner = user.data.login;
+      this.setState({owner_state: user.data.login})
+    }
+    catch (error) {
+      this.setState({makeproposaldisabled: false});
+      if (error.toString() === "HttpError: Network request failed") {
+        this.setState({netfork: true, netforkmsg: "Weak Connection"});
+        setTimeout(() => {
+          this.setState({netfork: false, netforkmsg: ""});
+        }, 3000);
+      }
+      return;
+    }
+
 
     //get a repo
     try {
@@ -172,12 +195,26 @@ export default class NewCIP extends React.PureComponent{
 
 
         } catch (error) {
-          console.log("defbrancherror", error);
+          this.setState({makeproposaldisabled: false});
+          if (error.toString() === "HttpError: Network request failed") {
+            this.setState({netfork: true, netforkmsg: "Weak Connection"});
+            setTimeout(() => {
+              this.setState({netfork: false, netforkmsg: ""});
+            }, 3000);
+          }
+          return;
         }
       }
 
     } catch (error) {
-      console.log("repoerror", error);
+      this.setState({makeproposaldisabled: false});
+      if (error.toString() === "HttpError: Network request failed") {
+        this.setState({netfork: true, netforkmsg: "Weak Connection"});
+        setTimeout(() => {
+          this.setState({netfork: false, netforkmsg: ""});
+        }, 3000);
+      }
+      return;
     }
     
 
@@ -202,8 +239,16 @@ export default class NewCIP extends React.PureComponent{
       }
       
     } catch (error) {
-      console.log("createbrancherror", error);
-      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
+      this.setState({makeproposaldisabled: false});
+      if (error.toString() === "HttpError: Network request failed") {
+        this.setState({netfork: true, netforkmsg: "Weak Connection"});
+        setTimeout(() => {
+          this.setState({netfork: false, netforkmsg: ""});
+        }, 3000);
+      }
+      else{
+        this.setState({showproposalnotmade: true});
+      }
     }
     
   }
@@ -233,8 +278,16 @@ export default class NewCIP extends React.PureComponent{
       }
       
     } catch (error) {
-      console.log("commitbloberror", error);
-      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
+      this.setState({makeproposaldisabled: false});
+      if (error.toString() === "HttpError: Network request failed") {
+        this.setState({netfork: true, netforkmsg: "Weak Connection"});
+        setTimeout(() => {
+          this.setState({netfork: false, netforkmsg: ""});
+        }, 3000);
+      }
+      else{
+        this.setState({showproposalnotmade: true});
+      }
     }
     
   }
@@ -275,8 +328,16 @@ export default class NewCIP extends React.PureComponent{
       
 
     } catch (error) {
-      console.log("committreeerror", error);
-      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
+      this.setState({makeproposaldisabled: false});
+      if (error.toString() === "HttpError: Network request failed") {
+        this.setState({netfork: true, netforkmsg: "Weak Connection"});
+        setTimeout(() => {
+          this.setState({netfork: false, netforkmsg: ""});
+        }, 3000);
+      }
+      else{
+        this.setState({showproposalnotmade: true});
+      }
     }
     
   }
@@ -313,8 +374,16 @@ export default class NewCIP extends React.PureComponent{
       
 
     } catch (error) {
-      console.log("commit_error", error);
-      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
+      this.setState({makeproposaldisabled: false});
+      if (error.toString() === "HttpError: Network request failed") {
+        this.setState({netfork: true, netforkmsg: "Weak Connection"});
+        setTimeout(() => {
+          this.setState({netfork: false, netforkmsg: ""});
+        }, 3000);
+      }
+      else{
+        this.setState({showproposalnotmade: true});
+      }
     }
 
     
@@ -342,50 +411,87 @@ export default class NewCIP extends React.PureComponent{
         this.setState({makeproposaldisabled: false, showproposalnotmade: true});
       }
     } catch (error) {
-      console.log("updaterefserror", error);
-      this.setState({makeproposaldisabled: false, showproposalnotmade: true});
+      this.setState({makeproposaldisabled: false});
+      if (error.toString() === "HttpError: Network request failed") {
+        this.setState({netfork: true, netforkmsg: "Weak Connection"});
+        setTimeout(() => {
+          this.setState({netfork: false, netforkmsg: ""});
+        }, 3000);
+      }
+      else{
+        this.setState({showproposalnotmade: true});
+      }
     }
   }
 
   //PR after commit is made
   funcmakePR = async (octokit_PR) => {
-    
     try {
-      let repo = await octokit_PR.request('GET /repos/{owner}/{repo}', {
-        owner: 'celo-org',
-        repo: 'celo-proposals'
+      const celo = await octokit_PR.request('GET /users/{username}', {
+        username: 'celo-org'
       });
-      if (repo.status === 200) {
+      if (celo.status === 200 && celo.data.id === 37552875){
         try {
-          let proposal = await octokit_PR.request('POST /repos/{owner}/{repo}/pulls', {
+          let repo = await octokit_PR.request('GET /repos/{owner}/{repo}', {
             owner: 'celo-org',
-            repo: "celo-proposals",
-            title: this.state.title,
-            body: this.state.simplesummary,
-            base: repo.data.default_branch,
-            head: this.state.forkedrepo.split('/')[0]+":"+this.state.newbranchname
+            repo: 'celo-proposals'
           });
-    
-          if (proposal.status === 201) {
-            this.setState({proposalsuccess: true});
-            setTimeout(() => {
+          if (repo.status === 200) {
+            try {
+              let proposal = await octokit_PR.request('POST /repos/{owner}/{repo}/pulls', {
+                owner: 'celo-org',
+                repo: "celo-proposals",
+                title: this.state.title,
+                body: this.state.simplesummary,
+                base: repo.data.default_branch,
+                head: this.state.forkedrepo.split('/')[0]+":"+this.state.newbranchname
+              });
+        
+              if (proposal.status === 201) {
+                this.setState({proposalsuccess: true});
+                setTimeout(() => {
+                  this.setState({makeproposaldisabled: false});
+                  this.setState({proposalsuccess: false});
+                }, 5000);
+              }
+              else{
+                this.setState({makeproposaldisabled: false, showproposalnotmade: true});
+              }
+              
+              
+            } catch (error) {
               this.setState({makeproposaldisabled: false});
-              this.setState({proposalsuccess: false});
-            }, 5000);
+              if (error.toString() === "HttpError: Network request failed") {
+                this.setState({netfork: true, netforkmsg: "Weak Connection"});
+                setTimeout(() => {
+                  this.setState({netfork: false, netforkmsg: ""});
+                }, 3000);
+              }
+              else{
+                this.setState({showproposalnotmade: true});
+              }
+            }
           }
-          else{
-            this.setState({makeproposaldisabled: false, showproposalnotmade: true});
+        } 
+        catch (error) {
+          this.setState({makeproposaldisabled: false});
+          if (error.toString() === "HttpError: Network request failed") {
+            this.setState({netfork: true, netforkmsg: "Weak Connection"});
+            setTimeout(() => {
+              this.setState({netfork: false, netforkmsg: ""});
+            }, 3000);
           }
-          
-          
-        } catch (error) {
-          console.log("makePRerror", error);
-          this.setState({makeproposaldisabled: false, showproposalnotmade: true});
         }
       }
-    } 
+    }
     catch (error) {
-      console.log("prdefaultbrancherror",error);
+      this.setState({makeproposaldisabled: false});
+      if (error.toString() === "HttpError: Network request failed") {
+        this.setState({netfork: true, netforkmsg: "Weak Connection"});
+        setTimeout(() => {
+          this.setState({netfork: false, netforkmsg: ""});
+        }, 3000);
+      }
     }
     
   }
@@ -537,21 +643,37 @@ export default class NewCIP extends React.PureComponent{
                 }
               } 
               catch (error) {
-                this.setState({forkedrepo: ""});
-                this.alertcreatefork();
+                if (error.toString() === "HttpError: Network request failed") {
+                  this.setState({netfork: true, netforkmsg: "Weak Connection"});
+                  setTimeout(() => {
+                    this.setState({netfork: false, netforkmsg: ""});
+                  }, 3000);
+                }
+                else{
+                  this.setState({forkedrepo: ""});
+                  this.alertcreatefork();
+                }
               }
             }
           } 
           catch (error) {
-            SecureStore.deleteItemAsync("patoken");
-            
-            let retrievedpatoken = await SecureStore.getItemAsync("patoken");
-            if (retrievedpatoken == null) {
-              this.setState({showlogout: true});
-              if (this.state.showlogout) {
-                setTimeout(() => {
-                  this.setState({showlogout: false});
-                }, 5000);
+            if (error.toString() === "HttpError: Network request failed") {
+              this.setState({netfork: true, netforkmsg: "Weak Connection"});
+              setTimeout(() => {
+                this.setState({netfork: false, netforkmsg: ""});
+              }, 3000);
+            }
+            else{
+              SecureStore.deleteItemAsync("patoken");
+              
+              let retrievedpatoken = await SecureStore.getItemAsync("patoken");
+              if (retrievedpatoken == null) {
+                this.setState({showlogout: true});
+                if (this.state.showlogout) {
+                  setTimeout(() => {
+                    this.setState({showlogout: false});
+                  }, 5000);
+                }
               }
             }
           }
@@ -600,55 +722,97 @@ export default class NewCIP extends React.PureComponent{
   createfork = async () => {
     let retrievedpatoken = await SecureStore.getItemAsync("patoken");
     if (retrievedpatoken != null && retrievedpatoken.length > 0 ){
-      try {
-        const octokit = new Octokit();
-        let basicAuth = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
-        let response = await octokit.request('POST /applications/{client_id}/token', {
-          headers: {
-            authorization: `basic ${basicAuth}`
-          },
-          client_id: CLIENT_ID,
-          access_token: retrievedpatoken
-        });
-        if (response.status === 200) {
-          const octokituser = new Octokit({
-            auth: retrievedpatoken
-          });
-          let createfork = await octokituser.request('POST /repos/{owner}/{repo}/forks', {
-            owner: 'celo-org',
-            repo: 'celo-proposals'
-          });
-          
-          if (createfork.status === 202) {
-            this.setState({forkedrepo: createfork.data.full_name});
-            Alert.alert(
-              "", 
-              "celo-proposals forked successfuly. Submit your proposal", 
-              [ 
-                {
-                  text: "DISMISS",
-                  onPress: () => {},
-                  style: "cancel"
+      NetInfo.fetch().then(async (state) => {
+        if (state.isConnected) {
+          if (state.isInternetReachable){
+            try {
+              this.setState({forkmodal: true});
+              const octokit = new Octokit();
+              let basicAuth = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
+              let response = await octokit.request('POST /applications/{client_id}/token', {
+                headers: {
+                  authorization: `basic ${basicAuth}`
+                },
+                client_id: CLIENT_ID,
+                access_token: retrievedpatoken
+              });
+              if (response.status === 200) {
+                const celo = await octokit.request('GET /users/{username}', {
+                  username: 'celo-org'
+                });
+                if (celo.status === 200 && celo.data.id === 37552875) {
+                  const octokituser = new Octokit({
+                    auth: retrievedpatoken
+                  });
+                  let createfork = await octokituser.request('POST /repos/{owner}/{repo}/forks', {
+                    owner: 'celo-org',
+                    repo: 'celo-proposals'
+                  });
+                  
+                  if (createfork.status === 202) {
+                    this.setState({forkedrepo: createfork.data.full_name, forkmodal: false});
+                    Alert.alert(
+                      "", 
+                      "celo-proposals forked successfully. Submit your proposal", 
+                      [ 
+                        {
+                          text: "DISMISS",
+                          onPress: () => {},
+                          style: "cancel"
+                        }
+                      ],
+                      {cancelable: true}
+                    );
+                  }
+                  else{
+                    this.setState({forkmodal: false});
+                  }
                 }
-              ],
-              {cancelable: true}
-            );
+                else{
+                  this.setState({forkmodal: false});
+                }
+              }
+              else{
+                this.setState({forkmodal: false});
+              }
+            } 
+            catch (error) {
+              this.setState({forkmodal: false});
+              if (error.toString() === "HttpError: Network request failed") {
+                this.setState({netfork: true, netforkmsg: "Weak Connection"});
+                setTimeout(() => {
+                  this.setState({netfork: false, netforkmsg: ""});
+                }, 3000);
+              }
+              else {
+                SecureStore.deleteItemAsync("patoken");
+                
+                let retrievedpatoken = await SecureStore.getItemAsync("patoken");
+                if (retrievedpatoken == null) {
+                  this.setState({showlogout: true});
+                  if (this.state.showlogout) {
+                    setTimeout(() => {
+                      this.setState({showlogout: false});
+                    }, 5000);
+                  }
+                }
+              }
+            }
           }
-        }
-      } 
-      catch (error) {
-        SecureStore.deleteItemAsync("patoken");
-          
-        let retrievedpatoken = await SecureStore.getItemAsync("patoken");
-        if (retrievedpatoken == null) {
-          this.setState({showlogout: true});
-          if (this.state.showlogout) {
+          else{
+            this.setState({netfork: true, netforkmsg: "No Server Connection"});
             setTimeout(() => {
-              this.setState({showlogout: false});
-            }, 5000);
+              this.setState({netfork: false, netforkmsg: ""});
+            }, 3000);
           }
         }
-      }
+        else {
+          this.setState({netfork: true, netforkmsg: "No Internet"});
+          setTimeout(() => {
+            this.setState({netfork: false, netforkmsg: ""});
+          }, 3000);
+        }
+      });
     }
     else if (retrievedpatoken == null) {
       this.setState({showlogout: true});
@@ -728,7 +892,7 @@ export default class NewCIP extends React.PureComponent{
                   <Text style={{alignSelf: 'flex-end', color: '#ff0000'}}>*</Text>
                   : <></>}
                   <Text>{this.state.category}</Text>
-                  <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+                  <View style={{flexDirection: 'row', justifyContent: 'space-around', marginTop: 5}}>
                     <TouchableOpacity onPress={() => this.setState({category: "Ring 0"})} style={styles.ringstyle}><Text>0</Text></TouchableOpacity>
                     <TouchableOpacity onPress={() => this.setState({category: "Ring 1"})} style={styles.ringstyle}><Text>1</Text></TouchableOpacity>
                     <TouchableOpacity onPress={() => this.setState({category: "Ring 2"})} style={styles.ringstyle}><Text>2</Text></TouchableOpacity>
@@ -980,7 +1144,7 @@ export default class NewCIP extends React.PureComponent{
               <SnackBar
                 visible={this.state.showlogout} 
                 textMessage="Governcelo has been denied authorization. Please log in" 
-                messageStyle = {{marginRight: 7}}
+                messageStyle = {{marginRight: 14}}
                 actionHandler={()=>{
                   this.setState({makeproposaldisabled: false, showlogout: false});
                 }} 
@@ -989,7 +1153,7 @@ export default class NewCIP extends React.PureComponent{
               <SnackBar
                 visible={this.state.showproposalnotmade} 
                 textMessage="The proposal could not be made. Please try again." 
-                messageStyle = {{marginRight: 7}}
+                messageStyle = {{marginRight: 14}}
                 actionHandler={()=>{
                   this.setState({showproposalnotmade: false});
                 }} 
@@ -998,16 +1162,24 @@ export default class NewCIP extends React.PureComponent{
               <SnackBar
                 visible={this.state.requiredfields} 
                 textMessage="Fields marked with '*' are required" 
-                messageStyle = {{marginRight: 7}}
+                messageStyle = {{marginRight: 14}}
                 actionHandler={()=>{
                   this.setState({requiredfields: false});
                 }} 
+                accentColor="#fcc16b"
+                actionText="OK"/>
+              <SnackBar
+                visible={this.state.netfork} 
+                textMessage={this.state.netforkmsg}
+                messageStyle = {{marginRight: 14}}
+                actionHandler={() => this.setState({netfork: false, netforkmsg: ""})}
                 accentColor="#fcc16b"
                 actionText="OK"/>
             </View>
           }
         />
         {this.state.proposalsuccess ? <CIPSuccessModal/> : <></>}
+        {this.state.forkmodal ? <ForkModal/> : <></>}
       </View>
     );
   }

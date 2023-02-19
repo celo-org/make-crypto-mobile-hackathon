@@ -1,8 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, AppState, TouchableOpacity, Image, Linking } from 'react-native';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import { Octicons } from '@expo/vector-icons';
+import { StyleSheet, Text, View, AppState, TouchableOpacity, Image, Linking, ActivityIndicator } from 'react-native';
+import { Octicons, FontAwesome5 } from '@expo/vector-icons';
 import * as Clipboard from 'expo-clipboard';
 import axios from 'axios';
 import {CLIENT_ID} from '@env';
@@ -10,26 +9,42 @@ import * as SecureStore from 'expo-secure-store';
 import BackgroundTimer from 'react-native-background-timer';
 import LoginModal from './LoginModal';
 import SnackBar from 'react-native-snackbar-component';
+import NetInfo from "@react-native-community/netinfo";
 
 export default class LoginPage extends React.Component{
 
-  state = {
-    view2visible: false,
-    view3visible: false,
-    getcodedisabled: false,
-    copied: "",
-    onlyurl: "",
-    expiry: 0,
-    usercode: "",
-    showcheckinglogin: false,
-    view1timerchecked: false,
-    view2timerchecked: false,
-    ifshowsnackbar: false,
-    snackbarmessage: "",
-    snackbartimeexpired: false,
-    snackbardevicecode: false,
-    snackbardenied: false
-  };
+  constructor(props){
+    super(props);
+    this.state = {
+      view2visible: false,
+      view3visible: false,
+      getcodedisabled: false,
+      copied: "",
+      onlyurl: "",
+      expiry: 0,
+      usercode: "",
+      showcheckinglogin: false,
+      view1timerchecked: false,
+      view2timerchecked: false,
+      ifshowsnackbar: false,
+      snackbarmessage: "",
+      snackbartimeexpired: false,
+      snackbardevicecode: false,
+      snackbardenied: false,
+      connection: false,
+      connectionmsg: "",
+      fetching: false,
+      polling: false,
+      pollingmsg: "",
+      polling2: false,
+      pollingmsg2: "",
+      connected: false,
+      reachable: false,
+      endtime: 0,
+      snackbardenied2: false,
+      snackbartimeexpired2: false
+    };
+  }
 
   componentDidMount = async () => {
     this._mounted = true;
@@ -40,6 +55,34 @@ export default class LoginPage extends React.Component{
       SecureStore.setItemAsync("remoun_t", "true"); 
       
       this.funcafterremoun_tset();
+
+      this.remountinfo = setInterval(async () => {
+        if (await SecureStore.getItemAsync("varaccessdenied") == "accessdenied") {
+          this.setState({polling2: false, pollingmsg2: ""});
+          this.setState({snackbardenied2: true});
+          SecureStore.deleteItemAsync("varaccessdenied");
+          clearInterval(this.remountinfo);
+        }
+        if (await SecureStore.getItemAsync("varexpiredtoken") == "expiredtoken") {
+          this.setState({polling2: false, pollingmsg2: ""});
+          this.setState({snackbartimeexpired2: true});
+          SecureStore.deleteItemAsync("varexpiredtoken");
+          clearInterval(this.remountinfo);
+        }
+        
+        if(await SecureStore.getItemAsync("maintainnet") == "netmaintain"){
+          this.setState({polling2: true, pollingmsg2: "Maintain an internet connection until you are logged in"});
+        }
+        else{
+          if(await SecureStore.getItemAsync("varweakconnection") == "weakconnection"){
+            this.setState({polling2: true, pollingmsg2: "Weak connection"});
+          }
+          else{
+            this.setState({polling2: false, pollingmsg2: ""});
+          }
+        }
+        
+      }, Math.trunc(Number(await SecureStore.getItemAsync("intervaltim_e"))/2));
       
     }
     else if (authstatus == null) {
@@ -86,7 +129,27 @@ export default class LoginPage extends React.Component{
       this.setState({getcodedisabled: true});
 
       if (this.state.getcodedisabled) {
-        this.funcrequest();
+        
+        NetInfo.fetch().then(state => {
+          if (state.isConnected) {
+            if (state.isInternetReachable) {
+              this.funcrequest();
+              this.setState({fetching: true});
+            }
+            else {
+              this.setState({getcodedisabled: false, connection: true, connectionmsg: "No Server Connection"});
+              setTimeout(() => {
+                this.setState({connection: false, connectionmsg: ""});
+              }, 3000);
+            }
+          }
+          else {
+            this.setState({getcodedisabled: false, connection: true, connectionmsg: "No Internet"});
+            setTimeout(() => {
+              this.setState({connection: false, connectionmsg: ""});
+            }, 3000);
+          }
+        })
       }
       
     }
@@ -124,7 +187,10 @@ export default class LoginPage extends React.Component{
         let setintervaltime = ((response.data.interval * 1000) + 500).toString();
         SecureStore.setItemAsync("intervaltim_e", setintervaltime);
         
-        this.setState({expiry: Math.trunc(response.data.expires_in / 60)});
+        this.setState({
+          expiry: Math.trunc(response.data.expires_in / 60),
+          endtime: (new Date().getTime())/1000 + (response.data.expires_in + (response.data.interval * 2))
+        });
         
       }
       else{
@@ -133,7 +199,18 @@ export default class LoginPage extends React.Component{
 
     } 
     catch (error) {
-      console.log("error", error);
+      this.setState({getcodedisabled: false, fetching: false});
+
+      if (error.toString() === "AxiosError: Network Error") {
+        this.setState({connection: true, connectionmsg: "Weak connection"});
+      }
+      else {
+        this.setState({connection: true, connectionmsg: "Cannot Fetch Code"});
+      }
+
+      setTimeout(() => {
+        this.setState({connection: false, connectionmsg: ""});
+      }, 3000);
     }
 
     let retrieveduser_code = await SecureStore.getItemAsync("user_code");
@@ -143,7 +220,7 @@ export default class LoginPage extends React.Component{
     if (retrieveduser_code != null && retrieveduser_code.length > 0
       && retrieveddevice_code != null && retrieveddevice_code.length > 0
       && retrievedverification_uri != null && retrievedverification_uri.length > 0) {
-        
+        this.setState({fetching: false});
         this.funcstarttimer(retrieveduser_code, retrieveddevice_code, retrievedverification_uri);
         
     }
@@ -156,6 +233,29 @@ export default class LoginPage extends React.Component{
     if (authstatus == null) {
       SecureStore.setItemAsync("oauthstatus", "pending");
       
+      this.unsubnet = NetInfo.addEventListener(async (state) => {
+        this.setState({connected: state.isConnected, reachable: state.isInternetReachable});
+        if (!state.isConnected || !state.isInternetReachable) {
+          this.setState({polling: true, pollingmsg: "Maintain an internet connection until you are logged in"});
+          let afterremountnet = await SecureStore.getItemAsync("remoun_t");
+          if(afterremountnet != null && afterremountnet == "true"){
+            
+            SecureStore.setItemAsync("maintainnet", "netmaintain");
+          }
+        }
+        else {
+          this.setState({polling: false, pollingmsg: ""});
+          let afterremountnet = await SecureStore.getItemAsync("remoun_t");
+          if(afterremountnet != null && afterremountnet == "true"){
+            let netmaintained = await SecureStore.getItemAsync("maintainnet");
+            if (netmaintained != null && netmaintained == "netmaintain") {
+              
+              SecureStore.deleteItemAsync("maintainnet");
+            }
+          }
+        }
+      });
+
       this.funcvarinterval(usercode_p, devicecode_p, verificationuri_p);
       
       this.funcusercode();
@@ -168,165 +268,179 @@ export default class LoginPage extends React.Component{
 
   funcvarinterval = async (usercode_p0, devicecode_p0, verificationuri_p0) => {    
     
-    
-    
-    this.varinterval = BackgroundTimer.setInterval(() => {
-      this.funcpoll(usercode_p0, devicecode_p0, verificationuri_p0);
-      
-    }, Number(await SecureStore.getItemAsync("intervaltim_e")));    
+    let setIntervalms = Number(await SecureStore.getItemAsync("intervaltim_e"));
+    let polltimeoutms = Math.trunc((setIntervalms - 1750)/2);
+
+    this.varinterval = BackgroundTimer.setInterval(async () => {
+      let funcpollremount = await SecureStore.getItemAsync("remoun_t");
+      let funcpollweakconnection = await SecureStore.getItemAsync("varweakconnection");
+      this.funcpoll(usercode_p0, devicecode_p0, verificationuri_p0, polltimeoutms, funcpollremount, funcpollweakconnection);
+
+      if (this.state.endtime - (new Date().getTime())/1000 <= 0) {
+        BackgroundTimer.clearInterval(this.varinterval);
+
+        this.deleteoauthvars();
+        this.setState({polling: false, pollingmsg: ""});
+        
+        this.unsubnet();
+        this.setState({usercode: "", snackbartimeexpired: true});
+        if (funcpollremount != null && funcpollremount === "true"){
+          if (funcpollweakconnection != null) {
+            SecureStore.deleteItemAsync("varweakconnection");
+          }
+          if (await SecureStore.getItemAsync("maintainnet") != null) {
+            SecureStore.deleteItemAsync("maintainnet");
+          }
+          SecureStore.setItemAsync("varexpiredtoken", "expiredtoken");
+        }
+      }
+    }, setIntervalms);
   }
 
-  funcpoll = async (usercode_p1, devicecode_p1, verificationuri_p1) => {
+  funcpoll = async (usercode_p1, devicecode_p1, verificationuri_p1, polltimeoutms, funcpollremount, funcpollweakconnection) => {
     
     this.funcsetinterval();
-    
-    
-    
+
+    const controller = new AbortController();
+
+    const reqTimeout = setTimeout(() => {
+      controller.abort();
+    }, polltimeoutms);
+
     try {
-      const pollresponse = await axios.post("https://github.com/login/oauth/access_token", {
+      await axios.post("https://github.com/login/oauth/access_token", {
         client_id: CLIENT_ID,
         device_code: devicecode_p1,
         grant_type: "urn:ietf:params:oauth:grant-type:device_code"
       }, {
+        timeout: polltimeoutms,
         headers: {
           "Accept": "application/json" 
+        },
+        signal: controller.signal
+      })
+      .then((pollresponse) => {
+        clearTimeout(reqTimeout);
+
+        if (pollresponse.data.hasOwnProperty('access_token')) {
+          BackgroundTimer.clearInterval(this.varinterval);
+          
+          if (AppState.currentState === "active") {
+            this.setState({usercode: ""});
+          }
+          
+          this.deleteoauthvars();
+          
+          this.unsubnet();
+          SecureStore.setItemAsync("patoken", pollresponse.data.access_token);
+          this.setState({polling: false, pollingmsg: ""});
+          if (funcpollremount != null && funcpollremount === "true" && funcpollweakconnection != null){
+            SecureStore.deleteItemAsync("varweakconnection");
+          }
+          
+          this.props.navigation.navigate('Proposals');
+          
         }
+        else if (pollresponse.data.hasOwnProperty('error') && pollresponse.data.error === "slow_down") {
+          
+          BackgroundTimer.clearInterval(this.varinterval);
+          
+          let newpollinterval = (pollresponse.data.interval + 1) * 1000;
+          
+          SecureStore.setItemAsync("slowdowninterval", newpollinterval.toString());
+          this.setState({polling: false, pollingmsg: ""});
+          if (funcpollremount != null && funcpollremount === "true" && funcpollweakconnection != null){
+            SecureStore.deleteItemAsync("varweakconnection");
+          }
+          
+          setTimeout(() => {
+            SecureStore.deleteItemAsync("slowdowninterval"); 
+            this.funcvarinterval(usercode_p1, devicecode_p1, verificationuri_p1);
+          }, newpollinterval);
+          
+  
+        }
+        else if (pollresponse.data.hasOwnProperty('error') && pollresponse.data.error === "expired_token"){
+          BackgroundTimer.clearInterval(this.varinterval);
+          
+          this.deleteoauthvars();
+          this.setState({polling: false, pollingmsg: ""});
+          
+          this.unsubnet();
+          if (AppState.currentState === "active") {
+            this.setState({usercode: ""});
+            this.setState({snackbartimeexpired: true});
+          }
+          if (funcpollremount != null && funcpollremount === "true"){
+            if (funcpollweakconnection != null) {
+              SecureStore.deleteItemAsync("varweakconnection");
+            }
+            SecureStore.setItemAsync("varexpiredtoken", "expiredtoken");
+          }
+        }
+        else if (pollresponse.data.hasOwnProperty('error') && pollresponse.data.error === "incorrect_device_code"){
+          BackgroundTimer.clearInterval(this.varinterval);
+          
+          this.deleteoauthvars();
+          this.setState({polling: false, pollingmsg: ""});
+          if (funcpollremount != null && funcpollremount === "true" && funcpollweakconnection != null){
+            SecureStore.deleteItemAsync("varweakconnection");
+          }
+          
+          this.unsubnet();
+          if (AppState.currentState === "active") {
+            this.setState({usercode: ""});
+            this.setState({snackbardevicecode: true});
+          }
+        }
+        else if (pollresponse.data.hasOwnProperty('error') && pollresponse.data.error === "access_denied"){
+          BackgroundTimer.clearInterval(this.varinterval);
+  
+          this.deleteoauthvars();
+          this.setState({polling: false, pollingmsg: ""});
+          
+          this.unsubnet();
+          if (AppState.currentState === "active") {
+            this.setState({usercode: ""});
+            this.setState({snackbardenied: true});
+          }
+          if (funcpollremount != null && funcpollremount === "true"){
+            if (funcpollweakconnection != null) {
+              SecureStore.deleteItemAsync("varweakconnection");
+            }
+            SecureStore.setItemAsync("varaccessdenied", "accessdenied");
+          }
+        }
+        else{
+          this.setState({polling: false, pollingmsg: ""});
+          if (funcpollremount != null && funcpollremount === "true" && funcpollweakconnection != null){
+            SecureStore.deleteItemAsync("varweakconnection");
+          }
+        }
+
       });
       
       
-      if (pollresponse.data.hasOwnProperty('access_token')) {
-        BackgroundTimer.clearInterval(this.varinterval);
-        
-        if (AppState.currentState === "active") {
-          this.setState({usercode: ""});
-        }
-        
-        SecureStore.deleteItemAsync("oauthstatus");
-        SecureStore.deleteItemAsync("user_code");
-        SecureStore.deleteItemAsync("device_code");
-        SecureStore.deleteItemAsync("verification_uri");
-        SecureStore.deleteItemAsync("intervaltim_e");
-        
-        let afterremoun_tset = await SecureStore.getItemAsync("remoun_t");
-        let retrievedfirsttimerchec_k = await SecureStore.getItemAsync("firsttimerchec_k");
-        let retrievedsecondtimerchec_k = await SecureStore.getItemAsync("secondtimerchec_k");
-        if (afterremoun_tset != null){
-          SecureStore.deleteItemAsync("remoun_t"); 
-        }
-        if (retrievedfirsttimerchec_k != null) {
-          SecureStore.deleteItemAsync("firsttimerchec_k"); 
-        }
-        if (retrievedsecondtimerchec_k != null) {
-          SecureStore.deleteItemAsync("secondtimerchec_k"); 
-        }
-        
-        
-        SecureStore.setItemAsync("patoken", pollresponse.data.access_token);
-        
-        this.props.navigation.navigate('Proposals');
-        
-      }
-      else if (pollresponse.data.hasOwnProperty('error') && pollresponse.data.error === "slow_down") {
-        
-        BackgroundTimer.clearInterval(this.varinterval);
-        
-        let newpollinterval = (pollresponse.data.interval + 1) * 1000;
-        
-        SecureStore.setItemAsync("slowdowninterval", newpollinterval.toString());
-        
-        setTimeout(() => {
-          SecureStore.deleteItemAsync("slowdowninterval"); 
-          this.funcvarinterval(usercode_p1, devicecode_p1, verificationuri_p1);
-        }, newpollinterval);
-        
 
-      }
-      else if (pollresponse.data.hasOwnProperty('error') && pollresponse.data.error === "expired_token"){
-        BackgroundTimer.clearInterval(this.varinterval);
-        
-        SecureStore.deleteItemAsync("oauthstatus");
-        SecureStore.deleteItemAsync("user_code");
-        SecureStore.deleteItemAsync("device_code");
-        SecureStore.deleteItemAsync("verification_uri");
-        SecureStore.deleteItemAsync("intervaltim_e");
-        
-        let afterremoun_tset = await SecureStore.getItemAsync("remoun_t");
-        let retrievedfirsttimerchec_k = await SecureStore.getItemAsync("firsttimerchec_k");
-        let retrievedsecondtimerchec_k = await SecureStore.getItemAsync("secondtimerchec_k");
-        if (afterremoun_tset != null){
-          SecureStore.deleteItemAsync("remoun_t"); 
-        }
-        if (retrievedfirsttimerchec_k != null) {
-          SecureStore.deleteItemAsync("firsttimerchec_k"); 
-        }
-        if (retrievedsecondtimerchec_k != null) {
-          SecureStore.deleteItemAsync("secondtimerchec_k"); 
-        }
-        
-        
-        if (AppState.currentState === "active") {
-          this.setState({usercode: ""});
-          this.setState({snackbartimeexpired: true});
-        }
-      }
-      else if (pollresponse.data.hasOwnProperty('error') && pollresponse.data.error === "incorrect_device_code"){
-        BackgroundTimer.clearInterval(this.varinterval);
-        
-        SecureStore.deleteItemAsync("oauthstatus");
-        SecureStore.deleteItemAsync("user_code");
-        SecureStore.deleteItemAsync("device_code");
-        SecureStore.deleteItemAsync("verification_uri");
-        SecureStore.deleteItemAsync("intervaltim_e");
-        
-        let afterremoun_tset = await SecureStore.getItemAsync("remoun_t");
-        let retrievedfirsttimerchec_k = await SecureStore.getItemAsync("firsttimerchec_k");
-        let retrievedsecondtimerchec_k = await SecureStore.getItemAsync("secondtimerchec_k");
-        if (afterremoun_tset != null){
-          SecureStore.deleteItemAsync("remoun_t"); 
-        }
-        if (retrievedfirsttimerchec_k != null) {
-          SecureStore.deleteItemAsync("firsttimerchec_k"); 
-        }
-        if (retrievedsecondtimerchec_k != null) {
-          SecureStore.deleteItemAsync("secondtimerchec_k"); 
-        }
-          
-        if (AppState.currentState === "active") {
-          this.setState({usercode: ""});
-          this.setState({snackbardevicecode: true});
-        }
-      }
-      else if (pollresponse.data.hasOwnProperty('error') && pollresponse.data.error === "access_denied"){
-        BackgroundTimer.clearInterval(this.varinterval);
-
-        SecureStore.deleteItemAsync("oauthstatus");
-        SecureStore.deleteItemAsync("user_code");
-        SecureStore.deleteItemAsync("device_code");
-        SecureStore.deleteItemAsync("verification_uri");
-        SecureStore.deleteItemAsync("intervaltim_e");
-        
-        let afterremoun_tset = await SecureStore.getItemAsync("remoun_t");
-        let retrievedfirsttimerchec_k = await SecureStore.getItemAsync("firsttimerchec_k");
-        let retrievedsecondtimerchec_k = await SecureStore.getItemAsync("secondtimerchec_k");
-        if (afterremoun_tset != null){
-          SecureStore.deleteItemAsync("remoun_t"); 
-        }
-        if (retrievedfirsttimerchec_k != null) {
-          SecureStore.deleteItemAsync("firsttimerchec_k"); 
-        }
-        if (retrievedsecondtimerchec_k != null) {
-          SecureStore.deleteItemAsync("secondtimerchec_k"); 
-        }
-        
-        
-        if (AppState.currentState === "active") {
-          this.setState({usercode: ""});
-          this.setState({snackbardenied: true});
-        }
-      }
     }
     catch (error) {
-      console.log("pollerror", error);
+      if (error.toString() == "AxiosError: timeout of "+polltimeoutms+"ms exceeded" || error.toString() == "CanceledError: canceled") {
+        this.setState({polling: true, pollingmsg: "Weak connection"});
+        if (funcpollremount != null && funcpollremount === "true"){
+          SecureStore.setItemAsync("varweakconnection", "weakconnection");
+        }
+      }
+      else{
+        if (!this.state.connected || !this.state.reachable) {
+          
+        }
+        else {
+          this.setState({polling: false, pollingmsg: ""});
+          if (funcpollremount != null && funcpollremount === "true" && funcpollweakconnection != null){
+            SecureStore.deleteItemAsync("varweakconnection");
+          }
+        }
+      }
     }
       
 
@@ -365,10 +479,35 @@ export default class LoginPage extends React.Component{
     
   }
 
+  deleteoauthvars = async () => {
+    SecureStore.deleteItemAsync("oauthstatus");
+    SecureStore.deleteItemAsync("user_code");
+    SecureStore.deleteItemAsync("device_code");
+    SecureStore.deleteItemAsync("verification_uri");
+    SecureStore.deleteItemAsync("intervaltim_e");
+    
+    let afterremoun_tset = await SecureStore.getItemAsync("remoun_t");
+    let retrievedfirsttimerchec_k = await SecureStore.getItemAsync("firsttimerchec_k");
+    let retrievedsecondtimerchec_k = await SecureStore.getItemAsync("secondtimerchec_k");
+    let delnetmaintained = await SecureStore.getItemAsync("maintainnet");
+    if (afterremoun_tset != null){
+      SecureStore.deleteItemAsync("remoun_t"); 
+    }
+    if (retrievedfirsttimerchec_k != null) {
+      SecureStore.deleteItemAsync("firsttimerchec_k"); 
+    }
+    if (retrievedsecondtimerchec_k != null) {
+      SecureStore.deleteItemAsync("secondtimerchec_k"); 
+    }
+    if (delnetmaintained != null) {
+      SecureStore.deleteItemAsync("maintainnet");
+    }
+  }
+
   funccopied = async () => {
     let retrieveduser_code = await SecureStore.getItemAsync("user_code");
     if (AppState.currentState === "active" && retrieveduser_code != null && retrieveduser_code.length != 0) {
-      Clipboard.setString(retrieveduser_code);
+      Clipboard.setStringAsync(retrieveduser_code);
       this.setState({copied: "copied!"});
       setTimeout(() => {
         this.setState({copied: ""});
@@ -505,6 +644,31 @@ export default class LoginPage extends React.Component{
       this.setState({ifshowsnackbar: true});
       this.setState({snackbarmessage: "Log-in was interrupted. You will need to start all over"});
     }
+
+    SecureStore.deleteItemAsync("oauthstatus");
+    SecureStore.deleteItemAsync("user_code");
+    SecureStore.deleteItemAsync("device_code");
+    SecureStore.deleteItemAsync("verification_uri");
+    SecureStore.deleteItemAsync("intervaltim_e");
+
+    let remoun_tinterrupt = await SecureStore.getItemAsync("remoun_t");
+    if (remoun_tinterrupt != null && remoun_tinterrupt === "true"){
+      clearInterval(this.remountinfo);
+      let netmaintainedintr = await SecureStore.getItemAsync("maintainnet");
+      if (netmaintainedintr != null) {
+        SecureStore.deleteItemAsync("maintainnet");
+      }
+      SecureStore.deleteItemAsync("remoun_t");
+    }
+
+    let retrievedfirsttimerchec_k = await SecureStore.getItemAsync("firsttimerchec_k");
+    let retrievedsecondtimerchec_k = await SecureStore.getItemAsync("secondtimerchec_k");
+    if (retrievedfirsttimerchec_k != null) {
+      SecureStore.deleteItemAsync("firsttimerchec_k"); 
+    }
+    if (retrievedsecondtimerchec_k != null) {
+      SecureStore.deleteItemAsync("secondtimerchec_k"); 
+    }
   }
 
   showstillrunning = async () => {
@@ -527,10 +691,12 @@ export default class LoginPage extends React.Component{
     this._mounted = false;
     this.setState({usercode: ""});
     this.setState({onlyurl: ""});
-    this.setState({expiry: 0});
+    this.setState({expiry: 0, endtime: 0});
     
     let retrievedfirsttimerchec_k = await SecureStore.getItemAsync("firsttimerchec_k");
     let retrievedsecondtimerchec_k = await SecureStore.getItemAsync("secondtimerchec_k");
+    let remoun_tunmount = await SecureStore.getItemAsync("remoun_t");
+    
     if (retrievedfirsttimerchec_k != null) {
       SecureStore.deleteItemAsync("firsttimerchec_k");
       SecureStore.setItemAsync("firsttimerchec_k", "2");
@@ -545,6 +711,9 @@ export default class LoginPage extends React.Component{
     else{
       SecureStore.setItemAsync("secondtimerchec_k", "2");
     }
+    if (remoun_tunmount != null && remoun_tunmount === "true"){
+      clearInterval(this.remountinfo);
+    }
     SecureStore.deleteItemAsync("mountedfortimer");
     SecureStore.setItemAsync("mountedfortimer", "falsse");
     
@@ -558,7 +727,7 @@ export default class LoginPage extends React.Component{
           <View style={{ marginBottom: '10%'}}></View>
           : 
           <View style={{ marginBottom: '10%'}}>
-            <View style={{ paddingHorizontal: '5%', alignItems: 'center', justifyContent: 'center', flexDirection: 'row' }}>
+            <View style={{ paddingHorizontal: '5%', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row' }}>
               <Image source={require("./../assets/circle-solid.png")} style={{ resizeMode: 'center', width: 8, height: 8 }}/>
               <Text style={{paddingHorizontal: '5%', fontSize: 15}}>Before you continue, make sure you are logged in to GitHub from your browser.</Text>
             </View>
@@ -582,11 +751,11 @@ export default class LoginPage extends React.Component{
           <View>
             {this.state.view2visible ? 
             <View style={styles.viewstep2}>
-              <View style={{ paddingHorizontal: '5%', alignItems: 'center', justifyContent: 'center', flexDirection: 'row' }}>
+              <View style={{ paddingHorizontal: '5%', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row' }}>
                 <Image source={require("./../assets/circle-solid.png")} style={{ resizeMode: 'center', width: 8, height: 8 }}/>
                 <Text style={{paddingHorizontal: '5%', fontSize: 15}}>You will get a one time code that authorizes Governcelo.</Text>
               </View>
-              {this.state.view3visible ? <></>
+              {this.state.view3visible || this.state.getcodedisabled ? <></>
               :
               <TouchableOpacity
                 style={styles.buttonstep2}
@@ -635,34 +804,74 @@ export default class LoginPage extends React.Component{
             </View>
             : <></>}
           </View>
-        :<></>}
+        : this.state.fetching ?
+            (
+            <View style={{ marginBottom: '10%', alignSelf: 'center', justifyContent: 'center', marginTop: '14%'}}>
+              <ActivityIndicator size="large" color="#55bf7d"/>
+            </View>) 
+          : (<></>)}
         
         <SnackBar
           visible={this.state.ifshowsnackbar} 
           textMessage={this.state.snackbarmessage} 
-          messageStyle = {{marginRight: 7}}
+          messageStyle = {{marginRight: 14}}
           actionHandler={()=>{this.props.navigation.navigate('Proposals')}} 
           accentColor="#fcc16b"
           actionText="OK"/>
         <SnackBar
           visible={this.state.snackbartimeexpired} 
           textMessage="Your code has expired. You will need to start all over" 
-          messageStyle = {{marginRight: 7}}
+          messageStyle = {{marginRight: 14}}
+          actionHandler={()=>{this.props.navigation.navigate('Proposals')}} 
+          accentColor="#fcc16b"
+          actionText="OK"/>
+        <SnackBar
+          visible={this.state.snackbartimeexpired2} 
+          textMessage="Your code has expired. You will need to start all over" 
+          messageStyle = {{marginRight: 14}}
           actionHandler={()=>{this.props.navigation.navigate('Proposals')}} 
           accentColor="#fcc16b"
           actionText="OK"/>
         <SnackBar
           visible={this.state.snackbardevicecode} 
           textMessage="Please restart the Log-in" 
-          messageStyle = {{marginRight: 7}}
+          messageStyle = {{marginRight: 14}}
           actionHandler={()=>{this.props.navigation.navigate('Proposals')}} 
           accentColor="#fcc16b"
           actionText="OK"/>
         <SnackBar
           visible={this.state.snackbardenied} 
           textMessage="You have denied Governcelo authorization" 
-          messageStyle = {{marginRight: 7}}
+          messageStyle = {{marginRight: 14}}
           actionHandler={()=>{this.props.navigation.navigate('Proposals')}} 
+          accentColor="#fcc16b"
+          actionText="OK"/>
+        <SnackBar
+          visible={this.state.snackbardenied2} 
+          textMessage="You have denied Governcelo authorization" 
+          messageStyle = {{marginRight: 14}}
+          actionHandler={()=>{this.props.navigation.navigate('Proposals')}} 
+          accentColor="#fcc16b"
+          actionText="OK"/>
+        <SnackBar
+          visible={this.state.connection} 
+          textMessage={this.state.connectionmsg}
+          messageStyle = {{marginRight: 14}}
+          actionHandler={() => this.setState({connection: false, connectionmsg: ""})}
+          accentColor="#fcc16b"
+          actionText="OK"/>
+        <SnackBar
+          visible={this.state.polling} 
+          textMessage={this.state.pollingmsg}
+          messageStyle = {{marginRight: 14}}
+          actionHandler={() => this.setState({polling: false, pollingmsg: ""})}
+          accentColor="#fcc16b"
+          actionText="OK"/>
+        <SnackBar
+          visible={this.state.polling2} 
+          textMessage={this.state.pollingmsg2}
+          messageStyle = {{marginRight: 14}}
+          actionHandler={() => this.setState({polling2: false, pollingmsg2: ""})}
           accentColor="#fcc16b"
           actionText="OK"/>
       </View>
@@ -695,8 +904,6 @@ const styles = StyleSheet.create({
   arrowdown: {
     marginLeft: 5,
     color: '#fcc16b'
-  },
-  viewstep2: {
   },
   buttonstep2: {
     alignSelf: 'flex-end',

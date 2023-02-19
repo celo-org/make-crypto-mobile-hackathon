@@ -1,12 +1,12 @@
 import React from 'react';
-import { SafeAreaView, View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, StyleSheet, Image, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { DrawerItemList, getDrawerStatusFromState, DrawerItem } from '@react-navigation/drawer';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { Octokit } from "@octokit/core";
-import {Feather} from '@expo/vector-icons';
+import {Feather, FontAwesome5} from '@expo/vector-icons';
 import * as SecureStore from 'expo-secure-store';
 import { CLIENT_ID, CLIENT_SECRET } from '@env';
 import { Buffer } from 'buffer';
+import NetInfo from "@react-native-community/netinfo";
  
 export default class SidebarMenu extends React.Component{
   constructor(props) {
@@ -18,19 +18,66 @@ export default class SidebarMenu extends React.Component{
     loggedin: false,
     profilepicurl: "",
     username: "",
-    showdenied: false
+    showdenied: false,
+    connected: false,
+    reachable: false,
+    validating: false,
+    profilefetched: false,
+    loggingout: false
   }
 
   componentDidMount = async () => {
+
+    let retrievedpatoken = await SecureStore.getItemAsync("patoken");
+    if (retrievedpatoken != null && retrievedpatoken.length > 0 ){
+      this.setState({loggedin: true});
+    }
+    else{
+      this.setState({logindisabled: false});
+    }
     
+    this.unsubscribe = NetInfo.addEventListener(state => {
+      this.setState({connected: state.isConnected, reachable: state.isInternetReachable});
+
+      if (this.state.connected) {
+        if (this.state.reachable) {
+          if (!this.state.validating) {
+            this.validate();
+          }
+        }
+        else{
+          if (getDrawerStatusFromState(this.props.navigation.getState()) === "open"){
+            
+          }
+        }
+      }
+      else{
+        if (getDrawerStatusFromState(this.props.navigation.getState()) === "open"){
+          
+        }
+      }
+    });
+
     this.props.navigation.addListener('state', () => {
       if (getDrawerStatusFromState(this.props.navigation.getState()) === "open") {
-        this.validate();
+        NetInfo.fetch().then(state => {
+          this.setState({connected: state.isConnected, reachable: state.isInternetReachable});
+          if (state.isConnected) {
+            if (state.isInternetReachable) {
+              if (!this.state.validating) {
+                this.validate();
+              }
+            }
+          }
+
+        });
+        
       }
     });
   }
 
   validate = async () => {
+    this.setState({validating: true});
     let retrievedpatoken = await SecureStore.getItemAsync("patoken");
     if (retrievedpatoken != null && retrievedpatoken.length > 0 ){
       try {
@@ -46,17 +93,27 @@ export default class SidebarMenu extends React.Component{
         if(response.status === 200){
           this.profileview(retrievedpatoken);
         }
+        else{
+          this.setState({validating: false, profilefetched: false});
+        }
       } 
       catch (error) {
-        SecureStore.deleteItemAsync("patoken"); 
-        this.setState({loggedin: false});
-        this.setState({profilepicurl: "", username: ""});
-        this.setState({logindisabled: false});
-        
-        let retrievedpatoken = await SecureStore.getItemAsync("patoken");
-        if (retrievedpatoken == null) {
-          this.props.navigation.closeDrawer();
-          this.props.iflogindenied_parent(true);
+        console.log("fetchprofile",error);
+        if (error.toString() === "HttpError: Network request failed") {
+          this.setState({validating: false, profilefetched: false});
+        }
+        else{
+          SecureStore.deleteItemAsync("patoken"); 
+          this.setState({loggedin: false});
+          this.setState({profilepicurl: "", username: ""});
+          this.setState({logindisabled: false});
+          
+          let retrievedpatoken = await SecureStore.getItemAsync("patoken");
+          if (retrievedpatoken == null) {
+            this.props.navigation.closeDrawer();
+            this.props.iflogindenied_parent(true);
+            this.setState({validating: false, profilefetched: false});
+          }
         }
       }
     }
@@ -64,6 +121,7 @@ export default class SidebarMenu extends React.Component{
       this.setState({loggedin: false});
       this.setState({profilepicurl: "", username: ""});
       this.setState({logindisabled: false});
+      this.setState({validating: false, profilefetched: false});
     }
   }
 
@@ -79,33 +137,62 @@ export default class SidebarMenu extends React.Component{
     if (user.status === 200) {
       this.setState({profilepicurl: user.data.avatar_url, username: user.data.login});
       this.setState({loggedin: true});
+      this.setState({validating: false, profilefetched: true});
+    }
+    else{
+      this.setState({validating: false, profilefetched: false});
     }
     
   }
 
   logout = async () => {
-    let retrievedpatoken = await SecureStore.getItemAsync("patoken");
-    if (retrievedpatoken != null && retrievedpatoken.length > 0 ){
-      const octokit = new Octokit();
-      let basicAuth = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
-      let logoutresponse = await octokit.request('DELETE /applications/{client_id}/token', {
-        headers: {
-          authorization: `basic ${basicAuth}`
-        },
-        client_id: CLIENT_ID,
-        access_token: retrievedpatoken
-      });
-      
-      if(logoutresponse.status === 204){
-        SecureStore.deleteItemAsync("patoken"); 
-        this.setState({loggedin: false});
-        this.setState({profilepicurl: "", username: ""});
-        this.setState({logindisabled: false});
-        let retrievedpatoken2 = await SecureStore.getItemAsync("patoken");
-        if (retrievedpatoken2 == null) {
-          this.props.navigation.closeDrawer();
-          this.props.loggedout_parent(true);
+    await this.setState({loggingout: true});
+    if (this.state.loggingout) {
+      if (this.state.connected && this.state.reachable) {
+        try {
+          let retrievedpatoken = await SecureStore.getItemAsync("patoken");
+          if (retrievedpatoken != null && retrievedpatoken.length > 0 ){
+            const octokit = new Octokit();
+            let basicAuth = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
+            let logoutresponse = await octokit.request('DELETE /applications/{client_id}/token', {
+              headers: {
+                authorization: `basic ${basicAuth}`
+              },
+              client_id: CLIENT_ID,
+              access_token: retrievedpatoken
+            });
+            
+            if(logoutresponse.hasOwnProperty('status') && logoutresponse.status === 204){
+              SecureStore.deleteItemAsync("patoken"); 
+              this.setState({loggedin: false, profilefetched: false});
+              this.setState({profilepicurl: "", username: ""});
+              this.setState({logindisabled: false});
+              let retrievedpatoken2 = await SecureStore.getItemAsync("patoken");
+              if (retrievedpatoken2 == null) {
+                this.setState({loggingout: false});
+                this.props.navigation.closeDrawer();
+                this.props.loggedout_parent(true);
+              }
+            }
+            else{
+              this.setState({loggingout: false});
+            }
+          }
+          else{
+            this.setState({loggingout: false});
+          }
         }
+        catch (error) {
+          if (error.toString() === "HttpError: Network request failed") {
+            this.setState({loggingout: false});
+          } 
+          else {
+            this.setState({loggingout: false});
+          }
+        }
+      }
+      else{
+        this.setState({loggingout: false});
       }
     }
   }
@@ -115,14 +202,28 @@ export default class SidebarMenu extends React.Component{
       <SafeAreaView style={{flex: 1, marginTop: 30}}>
         
         <View style={styles.profile}>
-          {this.state.loggedin ? 
-          <View>
-            <Image
-              source={{uri: this.state.profilepicurl}}
-              style={styles.profilepicture}
-            />
-            <Text style={styles.username}>{this.state.username}</Text>
-          </View>
+          {this.state.loggedin ?
+            this.state.connected ? 
+              (this.state.reachable ?
+                (this.state.validating ?
+                  (<ActivityIndicator style={{marginVertical: 54}} color="#55bf7d"/>) 
+                : (this.state.profilefetched ? 
+                    (
+                      <View>
+                        <Image
+                          source={{uri: this.state.profilepicurl}}
+                          style={styles.profilepicture}
+                        />
+                        <Text style={styles.username}>{this.state.username}</Text>
+                      </View>
+                    ) 
+                  : (<Text style={{color: "#fcc16b", marginVertical: 54.5}}>Weak Connection</Text>)
+                  )
+                ) 
+              : (<Text style={{color: "#fcc16b", marginVertical: 54.5}}>No Server Connection</Text>) 
+              ) 
+            : (<Text style={{color: "#fcc16b", marginVertical: 54.5}}>No Internet</Text>) 
+          
           : 
           <TouchableOpacity
             disabled={this.state.logindisabled}
@@ -137,7 +238,14 @@ export default class SidebarMenu extends React.Component{
         <View style={{marginTop: 10}}>
           <DrawerItemList {...this.props} />
           {this.state.loggedin ?
-           <DrawerItem icon={() => <Feather name={'log-out'} size={20} style={{color: '#808080'}} />} label="Log Out" onPress={() => this.logout()}/>
+            <DrawerItem 
+              icon={() => <Feather name={'log-out'} size={20} style={{color: '#808080'}} />} 
+              label="Log Out" 
+              onPress={() => {
+                if (!this.state.loggingout) {
+                  this.logout()
+                }
+              }}/> 
           : <></> }
           
         </View>

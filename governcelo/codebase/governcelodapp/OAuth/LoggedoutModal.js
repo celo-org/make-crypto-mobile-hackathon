@@ -36,8 +36,7 @@ const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22
+    alignItems: "center"
   },
   modalView: {
     backgroundColor: "white",

@@ -48,7 +48,7 @@ export default class Proposals extends React.Component {
   render() {
     return (
       <Drawer.Navigator
-        screenOptions={{ itemStyle: { marginVertical: 5 } }} 
+        screenOptions={{ itemStyle: { marginVertical: 5 }, sceneContainerStyle: {backgroundColor: "#ffffff"} }} 
         initialRouteName="Improvement Proposals"
         drawerContent={
           (props) => <SidebarMenu 

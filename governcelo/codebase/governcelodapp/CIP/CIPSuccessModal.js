@@ -13,7 +13,7 @@ export default class CIPSuccessModal extends React.Component{
 				>
 					<View style={styles.centeredView}>
 						<View style={styles.modalView}>
-							<Text style={{color: '#55bf7d'}}>Proposal made successfuly</Text>
+							<Text style={{color: '#55bf7d'}}>Proposal made successfully</Text>
 						</View>
 					</View>
 				</Modal>
