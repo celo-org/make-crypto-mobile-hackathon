@@ -44,7 +44,7 @@ export default class CGP extends React.Component{
   ifloggedin = async () => {
     let retrievedpatoken = await SecureStore.getItemAsync("patoken");
     if (retrievedpatoken != null && retrievedpatoken.length > 0 ) {
-      this.props.navigation.navigate('New Proposal');
+      this.props.navigation.navigate('NewCGP');
     }
     else{
       this.funcnotloggedin();
