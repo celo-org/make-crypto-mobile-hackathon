@@ -7,6 +7,7 @@ import * as SecureStore from 'expo-secure-store';
 import { CLIENT_ID, CLIENT_SECRET } from '@env';
 import { Buffer } from 'buffer';
 import NetInfo from "@react-native-community/netinfo";
+import ConnectWallet from './ConnectWallet';
 
 export default class SidebarMenu extends React.Component {
 	constructor(props) {
@@ -98,7 +99,6 @@ export default class SidebarMenu extends React.Component {
 				}
 			}
 			catch (error) {
-				console.log("fetchprofile", error);
 				if (error.toString() === "HttpError: Network request failed") {
 					this.setState({ validating: false, profilefetched: false });
 				}
@@ -233,11 +233,7 @@ export default class SidebarMenu extends React.Component {
 							<Text style={{ marginLeft: 5 }}>LOG IN</Text>
 						</TouchableOpacity>
 					}
-					<TouchableOpacity
-						onPress={() => { }}
-						style={styles.connectwallet}>
-						<Text style={{ color: "#55bf7d" }}>CONNECT WALLET</Text>
-					</TouchableOpacity>
+					<ConnectWallet/>
 				</View>
 				<View style={styles.line}></View>
 				<View style={{ marginTop: 10 }}>

@@ -18,6 +18,6 @@ Put client ID as the value of ```CLIENT_ID``` and client secret as the value of 
 
 Resume to terminal/cli and run:
 
-```yarn```
+```npm install```
 
 ```npx expo run:android```
