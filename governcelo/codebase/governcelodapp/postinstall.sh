@@ -1,1 +1,0 @@
-rn-nodeify --install 'crypto,buffer,react-native-randombytes,vm,stream,http,https,os,url,fs,process' --hack

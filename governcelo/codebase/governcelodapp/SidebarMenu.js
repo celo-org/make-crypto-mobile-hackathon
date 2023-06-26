@@ -7,7 +7,8 @@ import * as SecureStore from 'expo-secure-store';
 import { CLIENT_ID, CLIENT_SECRET } from '@env';
 import { Buffer } from 'buffer';
 import NetInfo from "@react-native-community/netinfo";
-import ConnectWallet from './ConnectWallet';
+import Connection from './Web3/Connection';
+import AccountAddress from './Web3/AccountAddress';
 
 export default class SidebarMenu extends React.Component {
 	constructor(props) {
@@ -227,13 +228,14 @@ export default class SidebarMenu extends React.Component {
 						:
 						<TouchableOpacity
 							disabled={this.state.logindisabled}
-							onPress={() => { this.props.navigation.navigate('Log In') }}
+							onPress={() => { this.props.navigation.navigate('Sign In') }}
 							style={styles.loginbutton}>
 							<FontAwesome5 name={'github'} size={20} style={{ marginRight: 5 }} />
-							<Text style={{ marginLeft: 5 }}>LOG IN</Text>
+							<Text style={{ marginLeft: 5 }}>SIGN IN</Text>
 						</TouchableOpacity>
 					}
-					<ConnectWallet/>
+					<AccountAddress/>
+					<Connection/>
 				</View>
 				<View style={styles.line}></View>
 				<View style={{ marginTop: 10 }}>
@@ -241,7 +243,7 @@ export default class SidebarMenu extends React.Component {
 					{this.state.loggedin ?
 						<DrawerItem
 							icon={() => <Feather name={'log-out'} size={20} style={{ color: '#808080' }} />}
-							label="Log Out"
+							label="Sign Out"
 							onPress={() => {
 								if (!this.state.loggingout) {
 									this.logout()

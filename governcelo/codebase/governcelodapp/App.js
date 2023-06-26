@@ -21,7 +21,7 @@ export default class App extends React.Component {
 					<Stack.Screen name="Proposals" component={Proposals} options={{ headerShown: false }} />
 					<Stack.Screen name="NewCIP" component={NewCIP} options={{ title: 'New Proposal' }} />
 					<Stack.Screen name="NewCGP" component={NewCGP} options={{ title: 'New Proposal' }} />
-					<Stack.Screen name="Log In" component={LoginPage} />
+					<Stack.Screen name="Sign In" component={LoginPage} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		);

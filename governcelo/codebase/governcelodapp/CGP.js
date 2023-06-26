@@ -29,7 +29,7 @@ export default class CGP extends React.Component{
   funcnotloggedin = async () => {
     Alert.alert(
       "", 
-      "Log in to make a proposal", 
+      "Sign in to make a proposal", 
       [ 
         {
           text: "DISMISS",

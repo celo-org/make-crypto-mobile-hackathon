@@ -729,7 +729,7 @@ export default class LoginPage extends React.Component{
           <View style={{ marginBottom: '10%'}}>
             <View style={{ paddingHorizontal: '5%', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row' }}>
               <Image source={require("./../assets/circle-solid.png")} style={{ resizeMode: 'center', width: 8, height: 8 }}/>
-              <Text style={{paddingHorizontal: '5%', fontSize: 15}}>Before you continue, make sure you are logged in to GitHub from your browser.</Text>
+              <Text style={{paddingHorizontal: '5%', fontSize: 15}}>Log in to GitHub from a preferred browser.</Text>
             </View>
             
             {this.state.view2visible ? <></>
@@ -753,7 +753,7 @@ export default class LoginPage extends React.Component{
             <View style={styles.viewstep2}>
               <View style={{ paddingHorizontal: '5%', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row' }}>
                 <Image source={require("./../assets/circle-solid.png")} style={{ resizeMode: 'center', width: 8, height: 8 }}/>
-                <Text style={{paddingHorizontal: '5%', fontSize: 15}}>You will get a one time code that authorizes Governcelo.</Text>
+                <Text style={{paddingHorizontal: '5%', fontSize: 15}}>Get a one time code that authorizes Governcelo.</Text>
               </View>
               {this.state.view3visible || this.state.getcodedisabled ? <></>
               :
@@ -800,7 +800,7 @@ export default class LoginPage extends React.Component{
             <View style={{ paddingHorizontal: '5%'}}>
               <Text style={{ alignSelf: 'center', marginTop: '17%'}}>Use this code at </Text>
               <Text style={{ alignSelf: 'center'}}><Text style={{color: '#0000ff'}}>{this.state.onlyurl}</Text> ONLY</Text>
-              {this.state.expiry > 0 ? <Text style={{ alignSelf: 'center'}}>This code expires after {this.state.expiry} minutes</Text> : <></>}
+              {this.state.expiry > 0 ? <Text style={{ alignSelf: 'center'}}>This code expires in {this.state.expiry} minutes</Text> : <></>}
             </View>
             : <></>}
           </View>
